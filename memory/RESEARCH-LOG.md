@@ -82,3 +82,47 @@ Watching for: pullback entry in Energy (XLE / XOM / CVX) or Industrials (CAT / D
 
 ### Kill switch status
 All clear. No switches active.
+
+---
+
+## 2026-05-27 (Run 2) — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 2 — no positions entered)
+
+### Market context
+- WTI / Brent: WTI July '26 contract ~$89.45/bbl (-4.73% on Barchart today); WTI Feb '27 ~$78.22 (prior entry used far contract). Near-month oil notably weak today.
+- S&P 500 futures: ESM26 +0.10–+0.15% premarket; range 7,537–7,566; market near ATH
+- VIX: ~17.01 (+0.42); trending down from ~18+ in early May; neutral/mildly elevated
+- Today's catalysts: Equity markets at/near ATH; sector rotation favoring Energy/Industrials; oil weakness a headwind for XLE; rate-cut speculation still active (Fed on hold at 3.50–3.75%)
+- Earnings before open: BMO Financial Q2 2026 BMO (before open, conf call 8:15 AM ET); MRVL Q1 FY2027 AMC today — avoid MRVL and semiconductor correlates for new buys
+- Economic calendar: JOLTS Job Openings 10:00 AM ET; FRED shows possible Fed release (Beige Book or scheduled H.15). No FOMC rate decision today — last decision was April 29 (held at 3.50–3.75%); minutes released May 20. Next CPI June 10, Jobs June 5.
+- Sector momentum: **Leading** — Energy (XLE), Industrials (XLI); **Lagging** — Technology (XLK), Financials (XLF); Consumer Staples (XLP) strong (+9.78% YTD per TotalRealReturns); Healthcare weakening
+
+### Currently-held positions check
+- None
+
+### Trade ideas (0-3 candidates)
+None identified. Rationale:
+- OVV considered (Energy, leading sector, strong Q1 beat on May 11): catalyst is 2 weeks stale — earnings play-out already priced; no fresh entry catalyst clears buy-side gate item 6
+- APA considered: Goldman PT raise to $34 (from $31) is analyst revision, not a fundamental catalyst; stock in pullback amid broader energy weakness; insufficient R:R with near-month WTI down 4.73% today
+- Market still at ATH — no dip/setup entry identified
+- MRVL AMC today → semiconductor sector uncertainty bleeds into tomorrow's tech tone; avoid new tech-adjacent exposure
+- JOLTS at 10 AM still unresolved; react at market-open routine if dip appears in leading-sector names
+
+### Risk factors for today
+- WTI -4.73% today: if sustained, XLE could give back recent gains; Energy thesis weakens
+- MRVL AMC earnings: miss risk would pressure semi/AI names and could drag broader market in after-hours
+- BMO Q2 earnings BMO: mixed result could pressure financial sector
+- Market breadth at ATH remains narrow; reversal risk elevated if any catalyst disappoints
+
+### Decision
+**HOLD** — Zero candidates pass buy-side gate. No trade plan for market-open routine.
+Watching for: (1) dip in XLE / XOM / CVX / OVV if JOLTS data surprises to upside (rate-cut delay → energy sector underperform, creates a lower entry), (2) MRVL after-hours results — if strong, could create a tech-sector setup for tomorrow. Will reassess for 2026-05-28 pre-market.
+
+### Kill switch status
+All clear. No switches active.
