@@ -45,3 +45,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Pre-launch baseline so Day 1's daily-summary routine has prior equity to compute Day P&L against.
 **Active kill switches:** none.
+
+---
+
+### 2026-05-27 — EOD Snapshot (Day 1, Wednesday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0 (0.00%) | **Phase P&L:** $0 (0.00%) | **SPY today:** +0.61%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** First live trading day. No positions opened; account holds full $10,000 starting capital in cash. SPY gained +0.61% today while we held cash — we trail by 0.61% on Day 1, which is acceptable as no qualifying setups were identified today.
+**Active kill switches:** none.
