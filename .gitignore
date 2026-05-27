@@ -1,6 +1,15 @@
+# NEVER commit credentials
 .env
 .env.*
-*.log
+!env.template
+
+# Manual pause flag is local-state, not version-controlled
+memory/PAUSED.flag
+
+# OS / editor noise
 .DS_Store
+Thumbs.db
+*.log
 __pycache__/
-PAUSED.flag
+.vscode/
+.idea/
