@@ -42,3 +42,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Continue research; no qualifying setups found today — patient start to Phase 1.
+
+---
+## 2026-05-27 20:38 UTC
+Week ending 2026-05-27 (launch day — partial week)
+Portfolio: $10,000.00 (+0.00% week, +0.00% phase)
+vs SPY: -0.51% week, -0.51% phase (SPY WTD confirmed +0.51%)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: Confirmed launch-day review; SPY +0.51% WTD (not +1% as estimated); full cadence Thu May 28
+Graduation: 3/7 criteria met

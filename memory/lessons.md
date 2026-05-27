@@ -69,3 +69,9 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: SPY has gained ~8 consecutive weeks entering June 2026.
 **Insight**: Extended momentum runs revert. Entering the portfolio into a late-cycle run requires exceptional selectivity — only the highest-conviction, fundamentally-supported setups. Buying "because the market is going up" violates the philosophy explicitly.
 **Rule change**: None. Strategy already prohibits thesis-free trades. Flagging for heightened discipline.
+
+## 2026-05-27 — Always pull live SPY data for weekly review; never estimate
+
+**Context**: First weekly review estimated SPY WTD at ~+1.00%. Confirmed live data (Perplexity/Investing.com) shows +0.51% — nearly 2x overestimate.
+**Insight**: Memory of "roughly +1%" is unreliable when the actual figure is +0.51%. The weekly review template already requires perplexity.sh query; just execute it every time without exception.
+**Rule change**: None. The process is correct; execution was lazy. Pull live data, always.

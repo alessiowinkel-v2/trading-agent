@@ -153,3 +153,89 @@ Kill switch checks: all clear — no triggers were possible with no capital depl
 **Graduation criteria met: 3/7**
 
 Days running counter: **0** (launches Monday 2026-06-02 as Day 1)
+
+---
+
+## Week ending 2026-05-27 — Confirmed Review (second run, live data)
+
+> Prior entry above was written during the setup session with estimated data. This entry uses confirmed live Alpaca + Perplexity data. SPY WTD corrected from ~+1.00% estimate to confirmed +0.51%.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Monday open) | $10,000.00 (pre-launch; bot created 2026-05-27T15:19Z) |
+| Ending portfolio (Wed close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (WTD through Wed) | +0.51% (SPY: 745.64 → 749.47) |
+| Bot vs S&P | -0.51% |
+| Max intraweek drawdown | 0.00% |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades this week |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Note**: Today is Wednesday May 27, not Friday. The weekly review routine triggered on launch day (Wednesday). Week is not complete — Thu May 28 and Fri May 29 still ahead. This review covers the one partial trading session since launch.
+
+### Process review (per trade made this week)
+No trades placed. Bot initialized mid-day Wednesday May 27.
+
+- **Pre-market research (run 1)**: Completed; identified no qualifying setups. JOLTS data risk, AMC earnings noise, market at ATH — correct HOLD decision.
+- **Market-open (run 1)**: HALTED — research log wasn't committed before market-open fired. Correct behavior per framework (halt, notify, don't trade blind).
+- **Pre-market research (run 2)**: Completed; confirmed no new qualifying setups (WTI -4.73% weakens Energy thesis; no fresh catalyst clears buy-side gate item 6).
+- **EOD snapshot**: Filed correctly for 2026-05-27.
+
+No trade-by-trade review possible — no trades.
+
+### Self-grades (be HARSH)
+- Process discipline: **C** — Market-open fired before research was committed (sequencing failure). Halt was correct behavior, but the root cause (wrong execution order) is a process flaw. Two separate sessions created overlapping log entries.
+- Documentation quality: **C** — Logs filed, format matches template. But: (1) weekly review written twice for same date, (2) SPY estimate in prior review was 2x actual, (3) lessons.md filename inconsistency with all references unresolved.
+- Risk management: **A** — No positions, no losses, 0.00% drawdown. Kill switches all clear. Capital 100% preserved. No violations possible.
+- Outcome (weighted least): **D** — 0% vs SPY +0.51% WTD. Opportunity cost is real even in paper; benchmark moved while we held 100% cash.
+- **Overall: C** — Structural foundation solid. Real deductions for sequencing failure and documentation gaps. No grade inflation for "at least we didn't lose."
+
+### What worked (3-5 bullets)
+- Capital 100% preserved; no impulsive trades on launch day
+- Kill-switch halt fired correctly on first market-open attempt (missing research log)
+- Both pre-market sessions correctly concluded HOLD — no thesis forced
+- All memory files functional and committed to main
+- Sector momentum analysis complete with specific tickers evaluated and rejected with documented reasons
+
+### What didn't work (3-5 bullets)
+- Market-open routine ran before pre-market research was committed → sequencing failure → halt
+- Two sessions same day created duplicate RESEARCH-LOG entries and overlapping log noise
+- Weekly review triggered Wednesday instead of Friday — routine cadence misaligned
+- SPY estimate (+1.00%) in first review was nearly 2x actual confirmed figure (+0.51%)
+- `lessons.md` filename (lowercase) inconsistent with all documentation references (`LESSONS.md` uppercase)
+
+### Key lessons (added to lessons.md)
+- **Always pull live SPY data before publishing weekly review**: estimates drift by up to 2x. Use perplexity.sh every time, never rely on memory.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Filename fix**: Rename `memory/lessons.md` → `memory/LESSONS.md`. All CLAUDE.md and TRADING-STRATEGY.md references use uppercase. No functional impact; reduces confusion.
+2. **Sequencing guard**: Market-open routine must verify a same-day RESEARCH-LOG entry exists before proceeding. Suggest explicit check: if today's date not found in RESEARCH-LOG.md → halt and request pre-market run first.
+3. **Weekly review cadence**: Routine fired on a Wednesday (not Friday). For mid-week launches, the first full weekly review should run on the following Friday, not launch day. Suggest rule: "If bot launches mid-week, run abbreviated launch-day summary; full weekly review runs Friday."
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (Day 1 — launched today)
+- [ ] Max drawdown under 15%: ✅ (0.00%)
+- [ ] Matched or beat SPY: ❌ (0.00% vs SPY +0.51% WTD)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked; market-open halt fired correctly)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries to review)
+- [ ] Memory files functional: ✅ (all readable, no corruption)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown yet)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **1** (Day 1 = 2026-05-27; full cadence resumes Thu 2026-05-28)
