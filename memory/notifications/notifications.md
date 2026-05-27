@@ -11,6 +11,16 @@ Fallback when ClickUp isn't configured. Routines append entries here so you have
 ## 2026-05-27 15:30 UTC
 Market-open 2026-05-27: HALTED — no pre-market research entry found in RESEARCH-LOG.md. Run the pre-market routine first, then re-run market-open. No trades placed.
 
+## 2026-05-27 15:31 UTC
+EOD 2026-05-27
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: +0.61% today, -0.61% phase vs benchmark
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: scan for qualifying setups; first live trades since launch
+
 ## 2026-05-27 15:33 UTC
 Week ending 2026-05-27
 Portfolio: $10,000 (+0.00% week, +0.00% phase)
