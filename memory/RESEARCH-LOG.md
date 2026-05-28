@@ -126,3 +126,49 @@ Watching for: (1) dip in XLE / XOM / CVX / OVV if JOLTS data surprises to upside
 
 ### Kill switch status
 All clear. No switches active.
+
+---
+
+## 2026-05-28 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 2 — no positions entered)
+
+### Market context
+- WTI / Brent: WTI near-month futures (CLK26/CLN26) ~$92/bbl per Barchart; FRED WTI spot last print $112.25 (2026-05-18, stale — next release today). Brent: no live quote available. Oil picture complex — near-month futures and spot diverge sharply; elevated vs historical norms. Iran supply-risk overhang remains.
+- S&P 500 futures: ESM26 ~+0.04% to +0.10%; range 7,507–7,530 (Investing.com); essentially flat premarket. Market near ATH.
+- VIX: ~17.01 (last confirmed close 2026-05-26, per FRED); trending down from ~20+ in early May. Neutral/mildly elevated.
+- Today's catalysts: **⚠️ MAJOR DATA DAY — PCE (April) + Q1 2026 GDP second estimate at 8:30 AM ET.** PCE is the Fed's preferred inflation gauge. Both releases simultaneous. Fed speakers: Logan, Cook, Hammack also scheduled. AMC earners from yesterday: SNOW +30–32% AH (massive beat), MRVL +3% AH (beat + raise), CRM (results unclear). BMO Financial Q2 beat (reported May 27 BMO, adj EPS +40% YoY) — already priced.
+- Earnings before open: None confirmed major.
+- Economic calendar: **PCE April + Q1 GDP second estimate, 8:30 AM ET (both simultaneously).** Fed speakers throughout day. No FOMC rate decision; last hold at 3.50–3.75% on April 29. Next Jobs: June 5. Next CPI: June 10.
+- Sector momentum (YTD through ~May 26): **Leading** — Energy (XLE +30.24% YTD), Technology (XLK +28.76% YTD), Industrials (XLI +12.68% YTD), Consumer Staples (XLP +8.27% YTD); **Lagging** — Financials (XLF −4.84% YTD). Quant-rotation framework separately flags XLP/XLI/XLE/XLB as "leading quadrant," XLK mixed (high returns but not in leading rotation quadrant per one source — conflicting).
+
+### Currently-held positions check
+- None
+
+### Trade ideas (0-3 candidates)
+**ZERO candidates.** Reasons:
+1. **PCE + GDP at 8:30 AM ET** — strategy explicitly prohibits trading on/before major macro releases (functionally equivalent to CPI day). This alone is a hard stop on any buy.
+2. SNOW +30–32% gap-up from overnight: chasing a gap is not a thesis; buy-side gate item 6 requires a documented catalyst, and momentum-chasing violates investment philosophy.
+3. Market at/near ATH; adding exposure into an ATH + major data release = poor risk/reward.
+4. No open positions to manage; no forced action required.
+
+### Risk factors for today
+- **PCE hotter than expected** → rate-cut timeline extends → equity selloff, bond yields spike, rate-sensitive sectors (XLRE, XLU) hit hardest
+- **PCE cooler than expected** → bull fuel short-term; risk of late-cycle complacency into overstretched ATH
+- **GDP second estimate revised down** → growth concerns compound with inflation; stagflation narrative could resurface
+- **Fed speakers hawkish tone** (Logan, Cook, Hammack) → compounds PCE reaction
+- **SNOW/MRVL gap-up** opens tech/semi sector higher; if fade develops, tech sector could give back materially intraday
+- **Oil price confusion**: FRED spot ($112/bbl, stale May 18) vs near-month futures (~$92/bbl) — 20-point discrepancy must resolve before Energy thesis can be sized accurately
+- Market breadth at ATH remains narrow; reversal risk elevated
+
+### Decision
+**HOLD** — Zero candidates pass buy-side gate. PCE day = no trading per strategy rules.
+Watching for: Post-PCE reaction to identify setups for **Friday 2026-05-29 or next week**. If PCE is benign/cooling, leading-sector names (XLE/XOM/CVX, CAT/DE/XLI) could set up for entry on any pullback. Will also track SNOW post-gap behavior — if it holds +20%+ from prior close through Friday, a thesis on cloud-data AI infrastructure could be worth building.
+
+### Kill switch status
+All clear. No switches active.
