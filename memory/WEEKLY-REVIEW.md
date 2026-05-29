@@ -239,3 +239,100 @@ No trade-by-trade review possible — no trades.
 **Graduation criteria met: 3/7**
 
 Days running counter: **1** (Day 1 = 2026-05-27; full cadence resumes Thu 2026-05-28)
+
+---
+
+## Week ending 2026-05-29
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday close — May 22) | $10,000.00 (bot launched 2026-05-27; May 22 is prior-week baseline) |
+| Ending portfolio (Friday May 29 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week | ~+1.20% (Perplexity synthesis; SPY May 22 close ~$748.94 → May 29 ~$754.60; data sources conflict, range +0.76–1.20%) |
+| Bot vs S&P | -1.20% this week (est.) |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Cumulative phase since launch (May 27): Bot +0.00% vs SPY approx +0.43% (SPY $751.38 May 27 close → ~$754.60 May 29). Cumulative since inception (May 22 baseline): Bot 0.00% vs SPY ~+1.71%.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades this week |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Note**: First proper Friday weekly review. Bot launched Wed May 27 (Day 1). Week covered May 27–29 in this review (May 25 = Memorial Day closed; May 26 = no bot activity, not yet launched).
+
+### Process review (per trade made this week)
+No trades placed. All three active trading days ran full documentation cadence. Each produced a documented HOLD decision.
+
+**May 27 (Day 1 — Wednesday):**
+- 2 pre-market sessions (carryover sequencing from launch). Decision: HOLD. Rationale: ATH, JOLTS at 10:00 AM ET, AMC earnings noise (CRM/MRVL/SNOW), no candidate with documented 2:1 R:R catalyst. Buy-side gate item 6 not satisfied for any name.
+- EOD snapshot filed. SPY +0.61%.
+- Verdict: Correct HOLD. Minor: duplicate research sessions added log noise.
+
+**May 28 (Day 2 — Thursday):**
+- 1 pre-market session. Decision: HOLD. Rationale: PCE + Q1 GDP second estimate at 8:30 AM ET = strategy explicitly prohibits trading on/before major macro releases. Hard gate, no exceptions. SNOW +30% gap-up correctly rejected (chasing gap ≠ thesis).
+- EOD snapshot filed. SPY -0.07%.
+- Verdict: Correct HOLD. Clean execution of PCE-day rule.
+
+**May 29 (Day 3 — Friday):**
+- 1 pre-market session. Decision: HOLD. Rationale: PCE landed at +3.8% YoY (hottest since May 2023) → "higher for longer" locked in → compressed multiples. Market at/near ATH. XLE/XOM/OVV blocked by negative near-term technicals (MACD negative, below 50-day MA). No earnings catalyst; low-impact data day.
+- EOD snapshot filed. SPY close unavailable from Perplexity (same-day latency) — noted honestly in log.
+- Verdict: Correct HOLD. No setup cleared all 9 buy-side gate checks this week.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — All HOLD decisions documented with specific gate reasoning. PCE-day rule applied correctly. EOD snapshots filed 3/3 days. Deductions: May 27 duplicate research sessions (sequencing issue); May 26 (first post-Memorial Day trading day) had no coverage because bot launched the following day.
+- Documentation quality: **B-** — Research log and EOD snapshots complete for 3 days. Gaps: May 29 SPY close filed as "unavailable" (data latency), May 26 has no entry, prior session left two redundant "week ending 2026-05-27" reviews cluttering the file.
+- Risk management: **A** — 0.00% drawdown. Kill switches checked daily; none fired, none missed. No rule violations. PDT count 0. Full capital preserved.
+- Outcome (weighted least): **D** — 0.00% vs SPY +1.20% this week. Cumulative approximately -1.71% vs SPY since inception (prior week -0.51%, this week -1.20%). The S&P extended its longest winning streak since 2023. Every HOLD day is a day the benchmark moves further ahead.
+- **Overall: C+** — Process is sound and disciplined. Each HOLD was correct given the available setup quality and gate criteria. But a C+ is honest: three days of market action, zero participation, widening benchmark gap. "Correct process in a rising market" is not the same as "good outcome." The HOLDs were right; a week-3 repeat would be a concern.
+
+### What worked (3-5 bullets)
+- PCE prohibition applied without hesitation on May 28 — no trade on the Fed's preferred inflation day
+- All HOLD decisions backed by specific buy-side gate failures, not vague caution
+- EOD snapshot cadence established and consistent (3/3 days)
+- Energy (XLE/XOM/OVV), Cloud-AI (SNOW), Healthcare candidates all evaluated and correctly rejected with data-specific reasons
+- No impulsive buys at ATH just to "be invested"
+
+### What didn't work (3-5 bullets)
+- Zero capital deployed vs SPY +1.20% week; cumulative lag growing (-1.71% vs SPY since inception)
+- May 26 had no bot activity — first post-Memorial Day trading day entirely missed due to launch timing
+- SPY daily close unavailable from Perplexity on May 29; EOD snapshot filed with data gap
+- Oil price data unreliable across sources (FRED spot vs near-month futures diverge by $20+/bbl), blocking Energy thesis from being accurately sized
+- Weekly review was written twice for "week ending 2026-05-27" (Wednesday launch day), creating WEEKLY-REVIEW.md clutter
+
+### Key lessons (added to lessons.md)
+- Perplexity cannot retrieve same-day closing prices reliably — need alpaca.sh quote SPY as EOD fallback
+- PCE +3.8% YoY (hottest since May 2023) → higher-for-longer locked in → prefer Energy, Industrials, Consumer Staples for new longs vs growth/rate-sensitive sectors
+- Three consecutive HOLD sessions in a bull run is correct process; a fourth consecutive zero-position week warrants user-level review of candidate screening
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **SPY fallback data**: `perplexity.sh` unreliable for same-day closes. Add `alpaca.sh quote SPY` as fallback for EOD SPY column. No strategy change — operational fix only.
+2. **WTI reference price**: FRED spot WTI is 10+ days stale; near-month futures (e.g., CLN26) are the real-time reference for Energy sector analysis. Suggest adding to TRADING-STRATEGY.md: "Use WTI near-month futures as canonical oil price, not FRED spot data." Flagging for user approval.
+3. **Extended HOLD alert**: Suggest that if the bot runs 2+ consecutive full weeks with 0 positions while SPY outperforms by 1%+, agent flags to user for review of gate calibration. No rule change; transparency mechanism only.
+4. **Naming inconsistency (carried over)**: `memory/lessons.md` is lowercase; all references in CLAUDE.md and TRADING-STRATEGY.md use `LESSONS.md`. Suggest rename. Flagged in prior two reviews — no action yet.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (3/30 trading days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00% drawdown)
+- [ ] Matched or beat SPY: ❌ (0.00% vs SPY; behind ~1.71% cumulative since inception)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trades placed — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all files readable, no corruption)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **3** (Day 1 = 2026-05-27; Day 3 = 2026-05-29)

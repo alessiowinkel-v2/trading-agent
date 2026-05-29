@@ -76,3 +76,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Weekend — no trading. Monday pre-market research scan planned.
+
+---
+## 2026-05-29 20:41 UTC
+Week ending 2026-05-29
+Portfolio: $10,000 (0.00% week, 0.00% phase)
+vs SPY: -1.20% week (SPY ~+1.20%), -1.71% cumulative since inception
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0) — 0/3 weekly slots used
+Best: N/A  Worst: N/A
+Overall grade: C+
+Key takeaway: 3 correct HOLDs (PCE day, ATH, no qualifying catalyst) but benchmark extends lead; zero-deployment week 2 is a concern
+Graduation: 3/7 criteria met — Day 3 of 30 needed
