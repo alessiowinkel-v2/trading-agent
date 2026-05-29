@@ -172,3 +172,48 @@ Watching for: Post-PCE reaction to identify setups for **Friday 2026-05-29 or ne
 
 ### Kill switch status
 All clear. No switches active.
+
+---
+
+## 2026-05-29 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 3 — no positions entered)
+
+### Market context
+- WTI / Brent: WTI ~$89-92/bbl (near-month futures CLK26 ~$92, spot oilprice.com ~$89); Brent ~$106/bbl (Fortune May 6 reference — stale). Iran tensions keeping oil elevated. Crude inventories in freefall (Oilprice, May 28).
+- S&P 500 futures: ESM26 ~7,545.75, +5.75 pts (+0.08%); essentially flat premarket. Market near ATH (S&P 500 closed April at ~7,209 before recent rally).
+- VIX: 16.29 (down from 17.01 prior day; FRED/YCharts confirmed). Declining trend from ~20+ in early May. Calm environment.
+- Today's catalysts: Schwab confirms "no major data or earnings" on May 29. Low-impact Census Bureau Advance Economic Indicators (Trade/Retail/Wholesale) at 8:30 AM ET. PCE April 2026 already printed yesterday (May 28): +3.8% YoY (hottest since May 2023, highest since March +3.5%), monthly +0.40% below FactSet consensus of +0.53%. Core PCE +3.3% YoY. Market reaction: "higher for longer" narrative reinforced; June Fed hold locked in. Iran geopolitical tensions ongoing — oil-price tailwind, equity headwind (rate and uncertainty premium). Bloomberg notes S&P 500 heading for longest weekly rally since 2023.
+- Earnings before open: None confirmed for May 29. DLTR (Dollar Tree) reported May 28 BMO (yesterday) — Q1 net sales +7.2%, comps +3.5%, EPS $1.76 — already priced in. Best Buy, Costco, Gap: no confirmed earnings before market open today per research.
+- Economic calendar: No FOMC, no CPI, no major jobs data. Only Advance Trade/Retail/Wholesale at 8:30 AM ET (low impact). No Fed speakers listed for today. Next major: Jobs June 5, CPI June 10.
+- Sector momentum (week ending May 22, source: KCFA): Health Care +3.44%, Utilities +3.25%, Real Estate +3.18%, Consumer Discretionary +2.28%, Financials +1.71%, Industrials +0.49%, Materials +0.28%, Consumer Staples -0.96%. YTD leaders: Energy (XLE +30%), Technology (XLK +29%), Industrials (XLI +11%), Real Estate +11%, Materials +10%.
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas (0-3 candidates)
+**ZERO candidates.** Reasons:
+1. **PCE +3.8% YoY** (hottest since May 2023) → June Fed hold effectively confirmed → "higher for longer" = no near-term rate catalyst for equities, especially rate-sensitive sectors.
+2. **Market at/near ATH** — adding new longs near an ATH into a rising-rate-expectations environment is poor risk/reward without an exceptional setup.
+3. **Energy (XLE/XOM/OVV)**: WTI elevated on Iran tensions, but XLE showing near-term bearish technicals (negative MACD, below 50-day MA per Tickeron). No OPEC meeting or inventory catalyst today. Oil fundamentals (Iran overhang) support price but don't provide a tradeable entry without a pullback-then-recovery setup.
+4. **No earnings catalysts today** — no overnight results to create an asymmetric setup.
+5. **Low-impact data day** — no reason to rush. Strategy explicitly favors patience on no-catalyst days.
+
+### Risk factors for today
+- PCE "hot" print reaction may bleed into Friday equity sentiment (bond yields higher, growth multiples compressed)
+- Iran tensions: any escalation = oil spike + equity selloff; de-escalation = oil drops, XLE underperforms
+- Week ending Friday — if it's the longest winning streak since 2023, profit-taking risk elevated
+- Consumer Staples last-week underperformance (-0.96%) may signal rotation away from defensives
+- DLTR after-hours reaction from May 28 results (EPS $1.76, comps +3.5%) could ripple into consumer sector sentiment
+
+### Decision
+**HOLD** — Zero candidates pass buy-side gate. No trade plan for market-open routine.
+Watching for: (1) If oil holds above $90 and XLE bounces above its 50-day MA with volume, energy thesis could materialize for next week; (2) If PCE reaction causes a controlled 1-2% pullback in leading names (Health Care, Industrials), that creates a lower-risk entry point vs chasing ATH; (3) DLTR stock reaction today — if it gaps down on concerns about multi-price strategy (Barchart article noted structural problems), that's not a buy but worth monitoring as a consumer health signal.
+
+### Kill switch status
+All clear. No switches active.
