@@ -336,3 +336,93 @@ No trades placed. All three active trading days ran full documentation cadence. 
 **Graduation criteria met: 3/7**
 
 Days running counter: **3** (Day 1 = 2026-05-27; Day 3 = 2026-05-29)
+
+---
+
+## Week ending 2026-06-01
+
+> **Note**: Routine triggered Monday June 1, not Friday. Week contains 1 trading day (June 1 only); prior Friday's review (May 29) is already filed above. Reviewing Day 4 activity.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday May 29 close) | $10,000.00 |
+| Ending portfolio (Mon June 1 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (May 29 → June 1) | +0.34% (per EOD log; Investing.com shows −0.03% — data source conflict noted) |
+| Bot vs S&P this week | −0.34% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY ~+1.02% |
+| Max intraweek drawdown | 0.00% |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. One trading day (June 1, Monday).
+
+**June 1 (Day 4 — Monday):**
+- Pre-market research: Complete. Correct HOLD. Primary blockers: (1) WTI −1.73% on the day undercuts Energy entry timing; (2) ISM Manufacturing PMI at 10:00 AM ET was unknown pre-entry — strategy prohibits entering before sector-relevant macro prints; (3) S&P at 21st record close with narrow breadth; (4) Five major data prints in five sessions (JOLTS, ADP, ISM Services, Jobless Claims, NFP) = elevated macro uncertainty all week.
+- XOM watch setup documented with specific entry conditions (WTI hold above $87 + ISM ≥52.7).
+- EOD snapshot: Filed. SPY +0.34%.
+- Kill switches: all clear.
+- Verdict: Correct HOLD. Every blocker was data-specific and rule-based, not vague caution.
+
+No bad-process winners or losers to dissect.
+
+### Self-grades (be HARSH)
+- Process discipline: **B+** — Pre-market research complete with rigorous HOLD rationale. XOM candidate framework documented with clear entry conditions. EOD filed. Deduction: weekly review firing on Monday rather than Friday is a cadence failure — 4 trading days in and the Friday routine still hasn't run on a Friday.
+- Documentation quality: **B** — Research log, EOD snapshot, and now this review all complete. Deduction: SPY data conflict (EOD log shows +0.34%, Investing.com shows −0.03%) unresolved — data sourcing inconsistency persists. `lessons.md` still lowercase vs all references using `LESSONS.md`.
+- Risk management: **A** — 0.00% drawdown. Kill switches checked; none fired; none missed. PDT count 0. Full capital intact.
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.34% today; −1.02% cumulative vs SPY since phase launch. Four trading days; four zero-trade days. Every day SPY moves further ahead.
+- **Overall: C+** — Process is disciplined and each HOLD was defensible. But "correctly not losing" is not performance. The cumulative SPY gap is widening. A fourth consecutive zero-position week would be a process concern, not a process strength.
+
+### What worked (3-5 bullets)
+- WTI downmove correctly blocked an Energy entry that would have required chasing a falling-input trade
+- ISM Manufacturing timing rule applied cleanly — no pre-data entry despite a watchlist candidate (XOM)
+- XOM candidate framework documented with specific entry conditions for follow-up (WTI >$87 AND ISM ≥52.7)
+- EOD snapshot cadence maintained (4/4 trading days since launch)
+- All kill switches checked and clear; no violations
+
+### What didn't work (3-5 bullets)
+- Weekly review routine fired on Monday (not Friday) — cadence remains misaligned; prior three reviews were also mis-timed
+- Cumulative benchmark gap: −1.02% vs SPY since phase launch with 0 positions taken
+- SPY data source conflict (EOD log vs Investing.com) unresolved; two sources giving different figures for same day
+- `lessons.md` filename inconsistency still unresolved after 4 reviews flagging it
+- Four consecutive trading days with zero deployment; XOM watch candidate not yet actionable
+
+### Key lessons (added to lessons.md)
+- Weekly review cadence (Friday 4:30 PM ET) has not fired on a Friday in 4 reviews — the trigger is firing at wrong times. This is a scheduling/orchestration gap, not a process gap.
+- SPY data from Investing.com via Perplexity and from EOD snapshot are diverging (−0.03% vs +0.34% for June 1). Need to standardize on a single source. Alpaca `quote SPY` is the most direct and should be canonical.
+- After 4 trading days with 0 positions and SPY +1.02%, the next week must either produce 1+ qualifying entry or explicitly flag to user for gate calibration review.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Weekly review scheduling**: Review has fired Wednesday (launch), Wednesday (duplicate), Friday (correct), Monday — 1/4 on schedule. Suggest checking cron/trigger configuration. No strategy change; orchestration fix only.
+2. **SPY canonical source**: `bash scripts/alpaca.sh quote SPY` returns real-time price with bid/ask; Investing.com via Perplexity returns potentially incomplete intraday data. Suggest adopting Alpaca quote as primary SPY reference, using prior day's close from TRADE-LOG.md for day-over-day comparison. No strategy change; data hygiene fix.
+3. **4-week zero-position alert**: If week 3 also produces 0 trades while SPY outperforms, user should review whether the buy-side gate (particularly item 6 — documented catalyst) is being applied at the right stringency level. Not changing the gate; flagging for transparency.
+4. **Filename fix (repeated)**: Rename `memory/lessons.md` → `memory/LESSONS.md`. Still unresolved after 4 reviews.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (4/30 days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00%)
+- [ ] Matched or beat SPY: ❌ (0.00% vs SPY; −1.02% cumulative since launch)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches clear; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries to review — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable, no corruption)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **4** (Day 1 = 2026-05-27; Day 4 = 2026-06-01)

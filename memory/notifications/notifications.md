@@ -99,3 +99,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: scan pre-market for fresh setups; deploy capital only if clear thesis + catalyst emerge
+
+---
+## 2026-06-01 20:39 UTC
+Week ending 2026-06-01 (review fired Mon — cadence still off)
+Portfolio: $10,000.00 (0.00% week / 0.00% phase)
+vs SPY: -0.34% week / -1.02% phase (since May 27 launch)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C+
+Key takeaway: 4th straight zero-position day; HOLD was correct (WTI -1.73%, ISM pre-data, ATH breadth); XOM watchlisted for Tue/Wed if oil+ISM conditions clear
+Graduation: 3/7 criteria met

@@ -99,3 +99,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: Three research sessions encountered a $20+/bbl discrepancy between FRED WTI spot ($112/bbl, stale from May 18) and WTI near-month futures (CLN26 ~$89-92/bbl). This gap blocked Energy thesis from being accurately sized.
 **Insight**: FRED spot WTI is published with ~10-day delay. WTI near-month futures (front-month active contract on CME) are the correct real-time price reference for Energy sector analysis.
 **Rule change**: Flag for user to add to TRADING-STRATEGY.md: "Use WTI near-month futures as canonical oil price, not FRED spot data." Flagging for user approval only.
+
+## 2026-06-01 — Weekly review cadence still not firing on Fridays
+
+**Context**: Four reviews run since launch (2026-05-27, 2026-05-27 duplicate, 2026-05-29, 2026-06-01). Only one fired on a Friday (May 29). The June 1 review fired Monday morning.
+**Insight**: The scheduling/trigger for the weekly review routine is misconfigured. This is not a process failure by the agent but an orchestration issue. The agent should flag when a "Friday weekly review" fires on a non-Friday.
+**Rule change**: None. Flag to user: check the cron/trigger schedule for the weekly review routine.
+
+## 2026-06-01 — Standardize SPY price source to avoid data conflicts
+
+**Context**: EOD snapshot for June 1 reported SPY +0.34%; Investing.com via Perplexity reported −0.03% for the same day. These figures are irreconcilable and create noise in phase tracking.
+**Insight**: Multiple sources for SPY daily price produce conflicting data, especially for same-day or recently completed sessions. Alpaca's `bash scripts/alpaca.sh quote SPY` returns bid/ask in real time; TRADE-LOG.md prior close provides the reference. This is the most direct and reliable combination.
+**Rule change**: Flag to user: adopt Alpaca quote as primary SPY reference for EOD snapshots and weekly reviews.
+
+## 2026-06-01 — Four zero-position trading days: next week is a test
+
+**Context**: Bot has run 4 trading days (May 27–June 1) with 0 positions opened. SPY has gained ~+1.02% since launch. Each correct HOLD is individually defensible; four in a row in a bull run raises the question of gate calibration.
+**Insight**: "Patience > activity" is a rule for avoiding bad trades, not all trades. If week 3 also produces 0 positions, the user should review whether the buy-side gate (especially item 6, documented catalyst) is being applied correctly vs over-conservatively. The correct answer may still be HOLD — but it needs explicit user-level validation after a third consecutive zero week.
+**Rule change**: None. Flag to user for gate calibration review if week 3 is also zero trades.
