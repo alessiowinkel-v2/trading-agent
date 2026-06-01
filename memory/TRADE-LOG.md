@@ -81,3 +81,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 3, end of first trading week. No positions, no trades. Account holds full $10,000 cash. SPY daily return unavailable (Perplexity could not retrieve 2026-05-29 close data). Cumulative phase P&L is flat at 0.00%. Strategy remains in patient observation mode — no qualifying setups identified this week (0/3 weekly trade slots used).
 **Active kill switches:** none.
+
+---
+
+### 2026-06-01 — EOD Snapshot (Day 4, Monday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.34%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 4, start of second trading week. No positions, no trades. Account holds full $10,000 cash. SPY gained +0.34% while we held cash, widening cumulative relative gap. Phase P&L flat at 0.00%. No qualifying setups identified; patience remains correct posture (0/3 weekly trade slots used).
+**Active kill switches:** none.
