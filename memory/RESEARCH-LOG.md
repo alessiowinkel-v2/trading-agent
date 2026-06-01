@@ -217,3 +217,57 @@ Watching for: (1) If oil holds above $90 and XLE bounces above its 50-day MA wit
 
 ### Kill switch status
 All clear. No switches active.
+
+---
+
+## 2026-06-01 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 4 / Week 2 open — fully in cash)
+
+### Market context
+- WTI / Brent: WTI front-month CLN26 (July) ~$87.36/bbl, **-1.73%** on the session (Oilprice.com, Coinbase Futures). Brent: no live quote available (last reliable reference ~$106, stale). Oil declining today despite Iran tensions ongoing — near-month futures pricing supply/demand softness vs spot overhang.
+- S&P 500 futures: ESM26 ~7,590–7,600, roughly flat to slightly negative (-5 pts / -0.07%). S&P 500 closed May 29 at 7,563.63 — its **21st record close**. Breadth lagging new ATHs (TradingView/Reuters).
+- VIX: **15.92** as of June 1 open (Investing.com historical data), up from 15.32 on May 29. Still in calm zone; low fear environment.
+- Today's catalysts: **ISM Manufacturing PMI (May) at 10:00 AM ET** — consensus ~52.6–53.3; prior 52.7. Employment sub-index (46.4 in April, contractionary) and Prices sub-index are key Fed-watchers' focus. This opens a "five labor-market datapoints in five sessions" week: JOLTS (Tue), ADP + ISM Services (Wed), Jobless Claims (Thu), **Jobs/NFP (Fri June 5)**. Jobs Friday is the week's biggest risk event.
+- Earnings before open: **SAIC (BMO)**. HPE and CRDO appear to be AMC.
+- Economic calendar: No FOMC. No CPI. ISM Manufacturing 10:00 AM ET is the day's headline print. Next major: Jobs June 5, CPI June 10.
+- Sector momentum (trailing 6-month, Charles Schwab / Investing.com): **Energy +35.3% (Leading)**, **Industrials +13.1% (Leading)**, **Technology +18.7% (Lagging rotation quadrant — strong returns but not leading current rotation)**.
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas (0-3 candidates)
+**ZERO candidates.** Reasons:
+1. **WTI oil -1.73% today** — entering Energy (XOM/CVX/XLE) while the sector's primary input is falling is momentum-against. Today is a poor entry timing for the sector with the strongest momentum thesis.
+2. **ISM at 10:00 AM ET** — market-open entries at 9:45 AM are blind to this print. ISM could print below 50 (contraction surprise) or well above 53 (expansion). The direction of the print determines whether Industrials/Energy set up or reverse. Entering before a sector-relevant unknown is avoidable risk.
+3. **ATH + narrow breadth** — S&P 500 at its 21st record close with lagging breadth. Low-conviction entries at ATH extend risk without proportional reward.
+4. **Five data points in five sessions (Jun 1–5)**: elevated macro uncertainty all week. Any single data miss could reverse the narrow ATH rally. This is not the week for new entries without exceptional conviction.
+5. No open positions requiring protective action.
+
+**Watch — XOM (potential entry Tue/Wed):**
+- Thesis: XOM is the primary US beneficiary of elevated WTI ($87+), Iran supply tensions, and OPEC+ discipline. Trailing 6-month Energy sector momentum is the strongest in the S&P 500. XOM's FCF generation at $85+ oil supports buybacks and dividend (no earnings in next 5 trading days — Q2 expected late July).
+- Catalyst needed: WTI stabilizes/rebounds above $87 after today's decline AND ISM Manufacturing ≥52.7 (confirms industrial demand floor). If both conditions hold into Tuesday, entry qualifies.
+- Stop level (illustrative): 7–10% below entry. If XOM entry ~$115 → stop $106.35–$107.00.
+- Target: $130+ (2:1 R:R min vs 7% stop).
+- Size: Max 15% of $10,000 = $1,500 → ~13 shares at $115.
+- Blocker to resolve: Confirm no earnings for XOM within 5 trading days of any planned entry date.
+
+### Risk factors for this week
+- **Jobs/NFP Friday June 5**: Single biggest event of the week. Soft print = growth scare + rate uncertainty. Hot print = stagflation narrative (PCE already hot). Either direction can disrupt.
+- **ISM Employment subindex (46.4 in April)**: If May prints worse → factory job losses → bond yields down, equities mixed/negative
+- **WTI continuing to decline**: Further oil weakness removes the Energy catalyst entirely
+- **ATH breadth divergence**: If breadth doesn't improve this week, narrow leadership = reversal risk elevated
+- **SAIC earnings (BMO)**: Potential read-through for defense/government IT spending; low direct impact unless significant miss
+
+### Decision
+**HOLD** — Zero candidates pass buy-side gate today. WTI falling and ISM unknown pre-entry are the primary blockers.
+Watching for: (1) WTI holds $87+ after today's session; (2) ISM Manufacturing May ≥52.7 with improving Employment sub-index; (3) If both hold, draft XOM entry plan for Tuesday premarket. (4) If oil stabilizes AND ISM is strong, CAT (Caterpillar) as alternative Industrials vehicle is also worth profiling mid-week.
+**NOT watching this week:** Technology (lagging rotation, hot PCE = compressed multiples), rate-sensitive sectors (XLRE, XLU).
+
+### Kill switch status
+All clear. No switches active. Daily drawdown: 0% ($10,000 vs $10,000). Weekly drawdown: 0% (Week 2 open). Total drawdown: 0%.
