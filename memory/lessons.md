@@ -117,3 +117,15 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: Bot has run 4 trading days (May 27–June 1) with 0 positions opened. SPY has gained ~+1.02% since launch. Each correct HOLD is individually defensible; four in a row in a bull run raises the question of gate calibration.
 **Insight**: "Patience > activity" is a rule for avoiding bad trades, not all trades. If week 3 also produces 0 positions, the user should review whether the buy-side gate (especially item 6, documented catalyst) is being applied correctly vs over-conservatively. The correct answer may still be HOLD — but it needs explicit user-level validation after a third consecutive zero week.
 **Rule change**: None. Flag to user for gate calibration review if week 3 is also zero trades.
+
+## 2026-06-02 — Conditional trade plans require decision documentation
+
+**Context**: June 2 pre-market identified XOM as a legitimate buy candidate, conditional on JOLTS (10:00 AM ET). Pre-market research was excellent — all 9 gate checks documented. But neither the JOLTS result nor the XOM decision (execute, defer, or abort) was documented in TRADE-LOG or EOD snapshot. The EOD says "no trades" with no explanation.
+**Insight**: A conditional trade plan that produces no decision record is worse than a simple HOLD entry. The plan creates an expectation; the missing follow-through hides whether the process worked. Every conditional entry must produce a decision document by EOD: data result, condition met/failed, action taken.
+**Rule change**: Flag to user: market-open routine must log the triggering data result and the resulting decision when a conditional plan exists. This is a documentation process requirement, not a strategy change.
+
+## 2026-06-02 — stockanalysis.com is the reliable historical SPY source
+
+**Context**: SPY daily closes have diverged across sources in every weekly review (Perplexity text estimates, EOD log +0.34% for Jun 1, Barchart -0.23%, Investing.com -0.03%). This review used stockanalysis.com historical data via Perplexity search, which returned internally consistent data matching prior confirmed reference points (May 27 $751.38, confirmed in multiple sessions).
+**Insight**: stockanalysis.com historical ETF data is the most reliable reference for confirmed closes. When the Alpaca quote is unavailable for prior-day SPY, use stockanalysis.com as the primary lookup via Perplexity: "site:stockanalysis.com SPY history". Alpaca quote (bid/ask mid) is the correct real-time reference for today's close.
+**Rule change**: Flag to user: adopt stockanalysis.com + Alpaca quote as the canonical SPY data combination for all reviews going forward.

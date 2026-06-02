@@ -426,3 +426,101 @@ No bad-process winners or losers to dissect.
 **Graduation criteria met: 3/7**
 
 Days running counter: **4** (Day 1 = 2026-05-27; Day 4 = 2026-06-01)
+
+---
+
+## Week ending 2026-06-02
+
+> **Note**: Routine triggered Tuesday June 2 — not Friday. Fifth consecutive non-Friday trigger (cadence misconfigured). Week covers June 1–June 2 (2 trading days since prior Friday May 29). June 1 was partially reviewed in "week ending 2026-06-01" entry; that entry is retained; this review stands as the complete Friday-window record through today.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday May 29 close) | $10,000.00 |
+| Ending portfolio (Tuesday June 2 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (May 29 → June 2) | +0.23% (SPY $758.08 → ~$759.84; stockanalysis.com + Alpaca quote) |
+| Bot vs S&P this week | −0.23% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY +1.13% ($751.38 → ~$759.84) |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+**SPY daily confirmation** (stockanalysis.com, reconciled):
+- May 27 close: $751.38 | May 28: $755.15 | May 29: $758.08 | Jun 1: $760.28 (+0.29%) | Jun 2 est.: ~$759.84 (−0.06%, Alpaca quote)
+- Note: Prior EOD snapshots logged June 1 as +0.34%; correct figure is +0.29%. Discrepancy due to stale Perplexity data — corrected here.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**XOM watch still active**: Entry conditions partially met (WTI +5.49% Jun 1, ISM Mfg 54.0 beat). JOLTS Jun 2 outcome undocumented (see process review). Next evaluation window: Wed June 4 post-ISM Services + ADP, and Thu June 5 pre-NFP.
+
+### Process review (per trade made this week)
+
+**June 1 (Day 4 — Monday)**: Previously reviewed in "week ending 2026-06-01" entry. Summary: Correct HOLD. ISM Manufacturing at 10:00 AM blocked 9:45 AM entry per strategy rule. No process deficiencies beyond what was noted in that entry.
+
+**June 2 (Day 5 — Tuesday):**
+- Pre-market research: Outstanding. First real trade candidate in 5 sessions. XOM fully documented: all 9 buy-side gate checks passed, entry/stop/target/R:R calculated, specific JOLTS timing blocker correctly flagged. This is exactly what buy-side gate item 6 requires.
+- Was the thesis followed? Yes — XOM thesis is sound (WTI elevated, ISM beat, sector momentum leading, no near-term earnings). Entry conditions (WTI >$87 AND ISM ≥52.7) were both confirmed met going into June 2.
+- Was sizing appropriate? Yes — 9 shares × ~$156 = ~$1,404 = 14.0% of equity (within the 15% limit).
+- Was the stop respected? N/A — trade not executed.
+- Critical documentation gap: Pre-market research correctly deferred entry to 10:10 AM post-JOLTS. The JOLTS result (April 2026 job openings) and the resulting decision (execute or defer to Wednesday) are not documented anywhere — not in TRADE-LOG, not in EOD snapshot. The EOD snapshot says "no trades" but gives no reason. This is the most significant process failure of the week.
+- In hindsight, would I make this trade again? The thesis is valid; the conditional structure was correct. But I cannot evaluate the execution decision without knowing the JOLTS result.
+- Don't confuse outcome with process: Having a good pre-market plan and zero follow-through documentation is still a process failure, regardless of whether the JOLTS outcome justified deferral.
+
+### Self-grades (be HARSH)
+- Process discipline: **B−** — Pre-market research for June 2 was genuinely strong (first real candidate, complete gate documentation, timing risk correctly identified). Deduction for: (1) market-open decision not documented, (2) routine again fired Tuesday not Friday, (3) EOD snapshot missing decision rationale.
+- Documentation quality: **C** — Pre-market excellent, EOD snapshot filed, but the most important document of the week — the JOLTS result and XOM deferral/execution decision — is completely absent. A conditional trade plan that produces no follow-through record is a first-order documentation failure.
+- Risk management: **A** — 0.00% drawdown. All kill switches checked and clear. No rule violations. PDT count 0. Full capital intact.
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.23% this week; −1.13% phase. Five consecutive zero-position trading days; first legitimate buy candidate emerged but not executed (or not documented as executed).
+- **Overall: C** — Slight regression from last week's C+. The pre-market process improved materially (first real candidate); the documentation gap at market-open erases some of that credit. Six trading days in, -1.13% vs SPY, one conditional candidate pending. Week 3 is the stress test.
+
+### What worked (3-5 bullets)
+- First complete buy candidate identified (XOM) with all 9 gate checks documented and explicit entry conditions — correct process improvement vs prior weeks
+- JOLTS timing risk correctly identified in pre-market and used to structure a conditional entry rather than a blind 9:45 AM order
+- ISM Manufacturing confirmation (54.0 beat) strengthened Energy thesis — sector momentum research compounding across sessions
+- EOD snapshot cadence maintained (5/5 trading days since launch)
+- All kill switches checked and clear; no violations
+
+### What didn't work (3-5 bullets)
+- JOLTS outcome and XOM decision (execute/defer) not documented anywhere — critical gap in the most important routine of the week
+- Weekly review triggered Tuesday (again) — 0/5 reviews have fired on a Friday since launch
+- SPY data conflict compounded further: EOD log had Jun 1 at +0.34%, now corrected to +0.29% via stockanalysis.com; sources continue to diverge
+- Five consecutive zero-position sessions; phase gap vs SPY now -1.13%
+- `lessons.md` filename still lowercase (vs LESSONS.md in all references) — flagged in 4 prior reviews with no fix
+
+### Key lessons (added to lessons.md)
+- When a conditional trade plan exists (e.g., "enter after JOLTS at 10:00"), the market-open routine MUST document the data release result and the decision taken (execute, defer, or abort) before the session ends — otherwise the conditional plan is an unfalsifiable claim
+- stockanalysis.com historical SPY data (accessible via Perplexity) is the most reliable source for confirmed closes; adopt as primary reference over Perplexity's text-synthesis estimates which diverge by up to 2×
+- SPY intraday Alpaca quote ($759.84 on Jun 2) + prior confirmed close from stockanalysis.com = reliable EOD snapshot reference; this combination should be standard going forward
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Market-open documentation requirement**: When pre-market research contains a conditional entry (data-dependent), the market-open routine must log: (a) the data release result, (b) whether the condition was met, (c) what action was taken. Without this, conditional plans are phantom entries. No strategy change — documentation process clarification only.
+2. **Weekly review scheduling (repeated, 5th flag)**: Review has now triggered Tue, Wed, Wed, Mon, Tue — never on a Friday. Orchestration is clearly misconfigured. Suggest user check the cron/trigger schedule.
+3. **XOM entry still potentially live**: XOM entry conditions are met (WTI >$87, ISM 54.0). If JOLTS on June 2 was in-line or better, entry was justified. Recommend user verify whether XOM entry should be taken Wednesday June 4 post-ISM Services + ADP. Entry window closes if NFP (Friday June 5) creates too much uncertainty.
+4. **Cumulative lag alert (-1.13% vs SPY)**: Five zero-position trading days in a +1.13% SPY run. Per prior lessons, user-level review of gate calibration is warranted if week 3 also produces 0 trades. This is that week — recommend user explicitly confirm whether XOM (or another candidate) clears the bar or the gate is being applied correctly.
+5. **lessons.md rename (5th flag)**: Still lowercase. Still causes tool confusion. Rename to LESSONS.md or update all references. No functional change.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (5/30 days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00%)
+- [ ] Matched or beat SPY: ❌ (0.00% vs SPY; −1.13% phase since launch)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries to review — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; lessons.md lowercase naming note persists)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **5** (Day 1 = 2026-05-27; Day 5 = 2026-06-02)
