@@ -271,3 +271,67 @@ Watching for: (1) WTI holds $87+ after today's session; (2) ISM Manufacturing Ma
 
 ### Kill switch status
 All clear. No switches active. Daily drawdown: 0% ($10,000 vs $10,000). Weekly drawdown: 0% (Week 2 open). Total drawdown: 0%.
+
+---
+
+## 2026-06-02 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin account; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 5 / Week 2, Tuesday)
+
+### Market context
+- WTI / Brent: WTI front-month CLN26 (July) ~$92 area. Rallied strongly on June 1 (+4.80 pts / +5.49%), confirming support above $87. Brent: ~$118/bbl range (EIA Q1 2026 reference). Oil prices recovering from last week's dip — Energy sector primary catalyst intact.
+- S&P 500 futures: ESM26 ~7,595 (-18 pts / -0.24% premarket). Slight pullback from June 1 close; not alarming. S&P 500 near ATH (21st record close as of May 29).
+- VIX: Last close 15.32 (May 29, per FRED). Calm zone; no fear signal.
+- Today's catalysts: **JOLTS Job Openings (April 2026) at 10:00 AM ET** — key Fed-watcher labor market print. JOLTS is the first of 5 sequential data prints leading to NFP on Friday June 5. Yesterday's ISM Manufacturing May 2026 confirmed at **54.0** (beat vs consensus 53.3 and prior 52.7); New Orders subindex surged to 56.8 from 54.1 — strongest manufacturing expansion since May 2022.
+- Earnings before open: No major BMO reporters today. XOM Q1 already reported May 1; next XOM earnings ~Aug 7, 2026.
+- Economic calendar: JOLTS 10:00 AM ET today (April data); ISM Services Wed June 4; ADP Wed; Jobless Claims Thu; NFP/Jobs Fri June 5 (biggest event of the week). No FOMC; no CPI this week (CPI scheduled June 10).
+- Sector momentum: **Energy (XLE) LEADING** — strongest trailing 6-month sector. **Industrials (XLI) LEADING**. **Consumer Staples (XLP) LEADING**. Technology, Communication Services, Consumer Discretionary: lagging rotation per Charles Schwab/Investing.com. AI capex narrative still dominant for tech narrative but sector rotation away from tech into Energy/Industrials/Staples is confirmed.
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas (1 candidate)
+
+**CANDIDATE: XOM (ExxonMobil Corporation, NYSE)**
+
+**Thesis**: XOM is the highest-quality US beneficiary of elevated WTI crude oil ($92+), Iran supply tensions, and OPEC+ production discipline. Energy sector has the strongest trailing 6-month momentum in the S&P 500. XOM's FCF generation at $85+ oil funds $20B in 2026 buybacks and a growing dividend, providing downside cushion. Both entry conditions from yesterday's watch list are now confirmed met: WTI rallied +5.49% on June 1 (above $87 floor) and ISM Manufacturing May printed 54.0 with New Orders accelerating to 56.8 — confirming industrial demand floor.
+
+**Catalyst**: (1) WTI +5.49% on June 1 — direct revenue/FCF tailwind for upstream operations; (2) ISM Manufacturing May 54.0 beat — confirms manufacturing expansion = sustained industrial oil demand; (3) Analyst consensus: 20 analysts at Buy, average target $163.65; TD Cowen reiterated Buy with $172 target on May 8; (4) Q1 2026 already reported (May 1) — no earnings overhang for >60 days.
+
+**Risk**: (1) JOLTS today at 10:00 AM — weak print (job openings falling) signals labor market softening → growth scare → oil demand revision → XOM pullback; (2) NFP Friday June 5 — if jobs miss, same growth-scare channel; (3) OPEC+ production discipline breaks → supply surge → WTI below $85 removes thesis; (4) Geopolitical de-escalation (Iran/US deal) → supply premium unwound.
+
+**Sector momentum**: WITH US — Energy is the leading S&P 500 sector by 6-month momentum.
+
+**Buy-side gate (all 9 checks)**:
+1. ✅ Total positions after fill: 1 ≤ 6
+2. ✅ Trades this week incl. this one: 1 ≤ 3
+3. ✅ Position cost ~$1,404 (9 shares × ~$156) = 14.0% ≤ 15%
+4. ✅ $1,404 ≤ $10,000 cash
+5. ✅ Daytrade count: 0; no intraday intent
+6. ✅ Catalyst documented above
+7. ✅ XOM is a common stock (NYSE)
+8. ✅ No earnings within 5 trading days (next ~Aug 7)
+9. ✅ No kill switches active
+
+**Stop level**: $145.00 (~7% below $156 estimated entry). Use 10% trailing stop GTC order on Alpaca per strategy. Tighten to 7% trail at +15% gain (~$179); tighten to 5% trail at +20% gain (~$187).
+
+**Target**: $178+ (2:1 R:R vs $11 risk per share at ~$156 entry). Analyst consensus $163.65; TD Cowen $172. Initial target: $172 (TD Cowen), stop to 7% trail at that point.
+
+**Exit plan**: Win: WTI continues above $90; ISM/NFP confirm expansion; hold to $172-178 with tightening stops. Loss: WTI drops below $85 on sustained supply surprise OR XOM breaks -7% from entry → close immediately. Also exit if NFP prints major miss Friday and XOM gaps down.
+
+**TIMING RISK — JOLTS AT 10:00 AM ET**: Market-open routine executes at 9:45 AM, which is 15 minutes BEFORE JOLTS. Entering XOM at 9:45 is blind to this labor market print. Recommendation to market-open routine: **Do NOT enter XOM at 9:45 AM on June 2. Wait for JOLTS (10:00 AM ET), observe 5-10 minute absorption, then enter at ~10:10-10:15 AM ET if JOLTS is in-line or above consensus.** If JOLTS prints materially weak (job openings significantly below consensus), defer XOM entry to Wednesday post-ISM Services.
+
+### Decision
+**TRADE PLAN — XOM BUY** (conditional on JOLTS outcome at 10:00 AM ET).
+- If JOLTS ≥ consensus (or moderate miss): Enter XOM at ~10:10 AM ET, ~9 shares, ~$156/share, 10% trailing stop GTC.
+- If JOLTS significant miss: Defer to Wednesday June 4 post-ISM Services.
+- Do NOT enter at 9:45 AM — JOLTS timing blocker.
+Secondary watch: CAT (Caterpillar) as Industrials backup. Profile mid-week if XOM deferred.
+
+### Kill switch status
+All clear. No switches active. Daily drawdown: 0% ($10,000 vs $10,000 yesterday). Weekly drawdown: 0% (Week 2, 0/3 trades used). Total drawdown: 0%.
