@@ -122,3 +122,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: continue observation; no qualifying setups identified this week (0/3 slots used)
+
+---
+## 2026-06-02 20:39 UTC
+Week ending 2026-06-02 (partial — Tue trigger, cadence gap)
+Portfolio: $10,000 (+0.00% week, +0.00% phase)
+vs SPY: −0.23% week, −1.13% phase (SPY $758.08→$759.84)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: XOM conditional entry plan documented but decision/outcome undocumented — first real candidate, execution record missing
+Graduation: 3/7 criteria met
