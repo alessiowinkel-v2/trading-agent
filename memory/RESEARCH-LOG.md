@@ -335,3 +335,92 @@ Secondary watch: CAT (Caterpillar) as Industrials backup. Profile mid-week if XO
 
 ### Kill switch status
 All clear. No switches active. Daily drawdown: 0% ($10,000 vs $10,000 yesterday). Weekly drawdown: 0% (Week 2, 0/3 trades used). Total drawdown: 0%.
+
+---
+
+## 2026-06-03 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $20,000 (margin account, cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 6 / Week 2, Wednesday)
+
+### JOLTS retroactive (June 2 trigger result — MUST document)
+- **JOLTS April 2026 (released June 2):** 7.618M job openings (+731K MoM), vs consensus ~6.860M → **MASSIVE BEAT (+758K vs consensus, +11%)**
+- Job openings rate: 4.6%. Hires: 5.1M (↓). Quits: 3.0M (stable). Layoffs: 1.7M (stable).
+- This was the XOM entry trigger from June 2 plan: "If JOLTS ≥ consensus → Enter XOM at ~10:10 AM ET"
+- **JOLTS beat consensus by ~758K. Entry condition was MET on June 2.**
+- EOD snapshot for June 2 shows no trade was placed. This is a process failure — market-open routine did not document the JOLTS result or its trade decision. Flagged per LESSONS.md entry 2026-06-02.
+
+### Market context
+- WTI / Brent: WTI near-month ~$95/bbl in premarket (Kalshi market pricing June 3 settlement above $94.99 likely; premarket catalysts cite WTI at $95.39 on supply concerns). CME Aug 2026 (CL Q6) shows $87.46 — this is a deferred contract, not front-month. Front-month (July, CLN26) trading ~$93-95 range per market commentary. Oil supply jitters driving energy rally.
+- S&P 500 futures: ESM26 ~7,620 (-3.50 pts / -0.05%). Essentially flat premarket. S&P 500 closed with 9th straight day of gains on June 2 — extended run but no reversal signal yet.
+- VIX: 15.77-16.05 (FRED June 1 close: 16.05; Cboe spot: 15.77). Calm zone, no fear signal.
+- Today's catalysts: (1) **ADP May 2026 at 8:15 AM ET** — forecast +75K private payrolls, prior +109K. Important risk event BEFORE market open. (2) **ISM Services May 2026 at 10:00 AM ET** — forecast 53.8, prior 53.6. Releases 15 min after market-open routine executes. (3) Dollar strength (DXY ~99.33) may cap equity upside. (4) ASML +4.72%, Rio Tinto +3.19% in European premarket — materials/semis strength. (5) WTI at ~$95 — direct Energy tailwind.
+- Earnings before open: No major BMO reporters today. Market scan showed no significant U.S. BMO reporters for June 3, 2026. Next XOM earnings ~Aug 7, 2026.
+- Economic calendar: **ADP 8:15 AM ET** (biggest near-term risk); **ISM Services 10:00 AM ET**; NFP Friday June 5 (week's main event); no FOMC; no CPI this week (CPI June 10).
+- Sector momentum: Energy (WITH — LEADING sector, only two sectors in green on June 1 were tech and energy). Industrials (WITH — LEADING). Consumer Staples (WITH — LEADING). Materials (improving). Technology (mixed — AI capex narrative strong but sector rotation toward Energy/Industrials). Consumer Discretionary, Financials, Communications (LAGGING).
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas (1 candidate)
+
+**CANDIDATE: XOM (ExxonMobil Corporation, NYSE) — Day 3 of watch**
+
+**Thesis**: WTI crude at ~$95/bbl (highest since plan was first identified), Energy sector the leading S&P 500 sector, JOLTS April massively beat consensus (7.618M vs 6.860M = labor market robust, no growth-scare). XOM FCF generation at $90+ oil funds $20B+ in 2026 buybacks and growing dividend — downside cushion. Two consecutive labor data beats (JOLTS massive beat) remove the primary risk factor from the original thesis. The thesis is strengthening, not weakening.
+
+**Catalyst**: (1) WTI ~$95/bbl — well above $87 floor, direct FCF and revenue tailwind; (2) JOLTS massive beat (+758K vs consensus) — confirms labor market health, removes growth-scare tail risk; (3) Analyst consensus Buy, 20 analysts, avg target $163.65; TD Cowen Buy/$172; (4) Energy sector the top-performing S&P 500 sector; (5) No earnings for ~65 days (next ~Aug 7).
+
+**Risk**: (1) ADP today at 8:15 AM ET — if significantly misses +75K consensus → growth scare → oil demand revision → XOM selloff; (2) ISM Services at 10:00 AM ET — if print misses 53.8 → same risk channel; (3) NFP Friday June 5 — single largest weekly risk; (4) Dollar strength (DXY ~99.33) can suppress oil prices; (5) OPEC+ production surprise → supply surge → WTI below $85 removes thesis.
+
+**Sector momentum**: WITH US — Energy is the leading S&P 500 sector.
+
+**Entry price reference**: XOM closed Jun 2 at ~$149.56; premarket Jun 3 ~$146-$149 range. Use actual quote at time of entry. Better than the ~$156 estimate from Jun 2 plan.
+
+**Buy-side gate (all 9 checks)**:
+1. ✅ Total positions after fill: 1 ≤ 6
+2. ✅ Trades this week incl. this one: 1 ≤ 3 (0 placed so far)
+3. ✅ Position cost: 9 shares × $150 = $1,350 = 13.5% ≤ 15% (or 10 shares = $1,500 = 15.0% — at limit, use 9)
+4. ✅ $1,350 ≤ $10,000 cash
+5. ✅ Daytrade count: 0; no intraday intent
+6. ✅ Catalyst documented above
+7. ✅ XOM is a common stock (NYSE)
+8. ✅ No earnings within 5 trading days (next ~Aug 7)
+9. ✅ No kill switches active
+
+**R:R check (marginal pass)**: At $150 entry, 7% stop = $10.50 risk. TD Cowen target $172 = $22 gain. R:R = 2.1:1. Marginally passes 2:1 minimum. Do NOT use tighter stop. If WTI sustains above $90, XOM upside extends beyond $172 toward $180+.
+
+**Stop level**: 10% trailing stop GTC. At $150 entry, initial effective stop ~$135. Tighten to 7% trail at +15% gain (~$172); tighten to 5% trail at +20% gain (~$180).
+
+**Target**: $172 (TD Cowen) as initial target. If WTI holds above $90, extend to $180 with tightening stops.
+
+**Exit plan**: Win: WTI stays above $90; ADP/ISM/NFP confirm expansion; hold to $172 then tighten stops. Loss: WTI drops below $85 on sustained basis OR XOM breaks -7% from entry → close immediately. Also exit if NFP Friday prints major miss and XOM gaps below stop.
+
+**TIMING RISK — ADP AT 8:15 AM ET, ISM AT 10:00 AM ET**:
+- ADP releases at 8:15 AM — BEFORE market open. Market-open routine can observe ADP result.
+- ISM Services releases at 10:00 AM — 15 min AFTER market-open routine (9:45 AM). Same timing problem as JOLTS yesterday.
+- **Recommendation to market-open routine**:
+  1. Check ADP result (8:15 AM) — if ADP ≥ +50K (not a disaster): proceed to watchlist
+  2. Do NOT enter XOM at 9:45 AM — wait for ISM at 10:00 AM
+  3. If ISM ≥ 53.0 (in-line or moderate miss acceptable): enter XOM at ~10:10 AM ET
+  4. If ISM significantly misses AND ADP is weak: defer to Thursday post-NFP preview
+
+### Risk factors for today
+1. ADP at 8:15 AM — miss could pressure oil and XOM
+2. ISM Services at 10:00 AM — second data event, same timing problem as JOLTS yesterday
+3. NFP Friday June 5 — XOM held into NFP carries data risk; plan entry, tighten stop before Friday
+4. Dollar strength (DXY ~99) — headwind for commodities and oil-denominated earnings
+5. S&P 500 at 9th straight gain day — extended run, any weak data could trigger profit-taking
+
+### Decision
+**TRADE PLAN — XOM BUY** (conditional on ADP + ISM Services, do NOT enter at 9:45 AM).
+- ADP ≥ +50K AND ISM ≥ 53.0: Enter XOM at ~10:10 AM ET, 9 shares, 10% trailing stop GTC.
+- ADP misses significantly (< +25K) OR ISM < 52.0: Defer XOM to Thursday or post-NFP.
+- Do NOT enter at 9:45 AM — data timing blocker (same lesson as JOLTS yesterday).
+- This is the third session with XOM as the candidate. JOLTS beat proves thesis intact. The failure to execute June 2 is a process issue (market-open routine documentation failure), not a thesis failure.
+
+### Kill switch status
+All clear. Daily drawdown: 0% ($10,000 vs $10,000). Weekly drawdown: 0% (Week 2, 0/3 trades used). Total drawdown: 0%.
