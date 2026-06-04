@@ -117,3 +117,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 6. No positions, no trades. Account holds full $10,000 cash. 0 of 3 weekly trade slots used. SPY fell -0.57% today; holding cash outperformed on the day (+0.57% relative). Cumulative phase P&L remains flat at 0.00%. Still in patient observation mode — no qualifying setups identified, patience remains the correct posture.
 **Active kill switches:** none.
+
+---
+
+### 2026-06-04 — EOD Snapshot (Day 7, Thursday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** -0.02%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 7. No positions, no trades. XOM thesis remains intact (WTI $92+, ADP +122K beat, Energy sector leading) and all 9 buy-side gate checks pass, but entry deferred due to NFP timing block — Non-Farm Payrolls prints Friday June 5 at 8:30 AM ET. Holding full $10,000 cash; 0 of 3 weekly trade slots used (Week 2). SPY fell -0.02% today; holding cash marginally outperformed on the day.
+**Active kill switches:** none.
