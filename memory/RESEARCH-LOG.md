@@ -424,3 +424,75 @@ All clear. No switches active. Daily drawdown: 0% ($10,000 vs $10,000 yesterday)
 
 ### Kill switch status
 All clear. Daily drawdown: 0% ($10,000 vs $10,000). Weekly drawdown: 0% (Week 2, 0/3 trades used). Total drawdown: 0%.
+
+---
+
+## 2026-06-04 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (4x margin, not used)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+- Weekly trades placed: 0/3
+
+### Market context
+- WTI: ~$92.40–$92.56/bbl (CME CLQ6 Aug futures); Brent ~$103/bbl
+- S&P 500 futures (ESM26): ~7,545, down ~0.35% premarket — slight negative bias
+- VIX: ~16.06–16.56 (moderate; not alarming)
+- Today's catalysts: (1) ADP May 2026 released June 3 — **+122,000** private sector jobs (massive beat vs ~65K consensus; prior month April +109K); (2) US-Iran peace talks crumbled per news, raising oil risk premium; (3) Exxon SVP forecast oil to $150–160/bbl in coming weeks; (4) AI/semiconductor and Energy sector remain dominant market themes
+- Earnings before open: Ciena (CIEN) confirmed pre-market; Medtronic (MDT) possibly pre-market; 31 total reports (mostly time TBD), no major market-moving earnings today
+- Economic calendar: 7:30 AM Productivity SAAR Q/Q Final (low impact); 8:30 AM Initial Jobless Claims (moderate); **NFP Employment Situation on FRIDAY June 5, 8:30 AM ET — largest labor data event of the month**
+- Sector momentum: Energy, Industrials, Materials leading S&P 500; Technology, Communication Services, Consumer Discretionary lagging; Utilities/Real Estate improving; Health Care weakening
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Kill switch check (Step 3)
+- KS-1 Daily drawdown: 0% ($10,000 today vs $10,000 yesterday) — CLEAR
+- KS-2 Weekly drawdown: 0% ($10,000 vs $10,000 prior Friday) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 start) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- All kill switches: CLEAR
+
+### Trade ideas
+
+**XOM (ExxonMobil) — Day 4 of watch — DEFERRED**
+
+**Buy-side gate rechecked (all 9):**
+1. ✅ Positions after fill: 1 ≤ 6
+2. ✅ Trades this week: 1 ≤ 3
+3. ✅ 9 shares × ~$150 = $1,350 = 13.5% ≤ 15%
+4. ✅ $1,350 ≤ $10,000 cash
+5. ✅ Daytrade count: 0
+6. ✅ Catalyst documented: WTI $92/bbl, ADP +122K, Energy sector leading
+7. ✅ XOM is a common NYSE stock
+8. ✅ No earnings within 5 days (next ~Aug 7)
+9. ✅ No kill switches active
+
+**Thesis update**: XOM thesis strengthening — WTI holds above $92 (well above $87 thesis floor), ADP +122K demolished the 65K consensus (removes primary labor-market downside risk), US-Iran peace talks collapse raises oil risk premium, Energy sector the leading S&P 500 sector. All fundamental drivers intact and improving.
+
+**Thesis risk update**: NFP (Employment Situation) releases TOMORROW Friday June 5, 8:30 AM ET. This is the largest monthly labor market print. If NFP significantly misses, oil demand outlook deteriorates, WTI could drop, XOM would sell off. Entering today means holding through NFP gap risk.
+
+**TIMING BLOCK — NFP TOMORROW**: Strategy rule "Day before major releases (CPI, jobs)" applies. NFP is a "major jobs release." Entering XOM today would expose the position to an overnight gap on the NFP print before the market-open routine can react. A surprise NFP miss of -100K+ could gap XOM down 3-5%, cutting through the 7% stop before any protective action.
+
+**ADP context**: ADP May 2026 = +122K (beat +65K consensus). Prior month April = +109K. Two consecutive solid ADP prints suggest labor market is healthy — this RAISES the probability that NFP is also solid. However, ADP and NFP frequently diverge; prior ADP beats have not prevented NFP misses.
+
+**Decision**: HOLD — defer XOM entry to Monday June 9 (post-NFP). If NFP Friday is a solid beat (≥ +100K), enter XOM early Monday at the market-open routine using the 9-share, 10% trailing stop plan. If NFP misses significantly (< +50K), re-evaluate — thesis may still hold if WTI stays above $90.
+
+**Recommendation for market-open routine June 4**: DO NOT enter XOM today. NFP timing block applies.
+
+### Risk factors this session
+1. **NFP Friday June 5** — largest monthly catalyst; currently the top risk for any position
+2. S&P 500 futures slightly negative (-0.35%) — mild risk-off tone in premarket
+3. Initial Jobless Claims (8:30 AM) — if spike above 250K, secondary negative signal
+4. Dollar strength potential (DXY headwind for oil/Energy)
+
+### Decision
+**HOLD — No trades today.** NFP timing block is the primary reason. XOM thesis remains intact and all 9 gate checks pass, but entry today would expose a new position to the biggest labor data release of the month overnight. Correct action is patience: let NFP print Friday, assess Saturday/Monday, enter if confirmed.
+
+0 of 3 weekly trade slots used (Week 3). 7 consecutive trading days at $10,000 cash. Strategy note from lessons.md applies: if Week 3 is also 0 positions in a rising market, flag for user-level review of gate calibration.
+
+### Kill switch status
+All clear. No active kill switches. Daily drawdown: 0%. Weekly drawdown: 0% (Week 3, 0/3 slots used). Total drawdown: 0%.
