@@ -145,3 +145,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: continue patient observation; no setups yet — await catalyst before deploying capital
+
+---
+## 2026-06-04 19:39 UTC
+EOD 2026-06-04
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: -0.02% today, ~+0.29% phase (cumulative est.)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: NFP prints 8:30 AM ET — no trades until data clears. If NFP ≥+100K and WTI holds 0+, enter XOM at market-open (9 shares, 10% trail, ~13.5% of equity).
