@@ -129,3 +129,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 7. No positions, no trades. XOM thesis remains intact (WTI $92+, ADP +122K beat, Energy sector leading) and all 9 buy-side gate checks pass, but entry deferred due to NFP timing block — Non-Farm Payrolls prints Friday June 5 at 8:30 AM ET. Holding full $10,000 cash; 0 of 3 weekly trade slots used (Week 2). SPY fell -0.02% today; holding cash marginally outperformed on the day.
 **Active kill switches:** none.
+
+---
+
+### 2026-06-05 — EOD Snapshot (Day 8, Friday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 8, end of Week 3. No positions, no trades. NFP timing block (hard rule: no new positions day of major jobs release) prevented XOM entry today. Portfolio holds full $10,000 cash; 0 of 3 weekly trade slots used this week. SPY daily return unavailable from Perplexity. Phase P&L flat at 0.00%. XOM thesis deferred to Monday June 9 — entry contingent on NFP ≥ +80K and WTI holding above $90. FLAG: 8 consecutive trading days fully in cash; gate calibration flagged for user review if XOM continues to defer into CPI week (June 10).
+**Active kill switches:** none.
