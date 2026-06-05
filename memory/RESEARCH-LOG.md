@@ -496,3 +496,62 @@ All clear. Daily drawdown: 0% ($10,000 vs $10,000). Weekly drawdown: 0% (Week 2,
 
 ### Kill switch status
 All clear. No active kill switches. Daily drawdown: 0%. Weekly drawdown: 0% (Week 3, 0/3 slots used). Total drawdown: 0%.
+
+---
+
+## 2026-06-05 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (fully in cash)
+
+### Market context
+- WTI / Brent: WTI ~$93.40 (Jun 4 CME close, +$0.36/+0.39%); Brent ~$103–$106/bbl; oil bid on geopolitical premium (US-Iran talks collapsed) and Exxon SVP $150–160/bbl forecast
+- S&P 500 futures: ESM26 ~7,545, down ~26.5 pts (-0.35%) premarket — mild risk-off; markets waiting on NFP at 8:30 AM ET
+- VIX: ~16.06–16.11 (Jun 3 close); moderate, not alarming
+- Today's catalysts: **NFP (May 2026) at 8:30 AM ET is the dominant catalyst** — consensus ~85K (prior April: +115K; ADP May: +122K beat). Market will reprice Fed path and rate-sensitive/cyclical sectors on print. Secondary: Broadcom (AVGO) earnings post-close today (AI/semiconductor sentiment for Mon open).
+- Earnings before open: None (Digrin: 0 before open; 6 time-TBD reports, no major movers)
+- Economic calendar: **Jun 5 8:30 AM ET — Employment Situation (NFP, May 2026)**; CPI May → Jun 10; PPI May → Jun 11; FOMC → Jun 16–17. Heavy macro week ahead.
+- Sector momentum: Energy, Industrials, Materials, Consumer Staples **LEADING**. Technology and semis powering index-level returns but losing relative-strength leadership vs value/cyclicals. Healthcare weakening. Real Estate/Utilities improving. Lagging: Technology, Communications, Consumer Discretionary, Financials.
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Kill switch check (Step 3)
+- KS-1 Daily drawdown: 0% ($10,000 vs $10,000 yesterday EOD) — CLEAR
+- KS-2 Weekly drawdown: 0% ($10,000 vs $10,000 prior Friday) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 start) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- **All kill switches: CLEAR**
+
+### Trade ideas
+
+**XOM (ExxonMobil) — Day 5 of watch — HARD TIMING BLOCK**
+
+- **Thesis**: WTI above $93 (well above $87 thesis floor), Brent ~$103–$106, US-Iran talks collapsed adding geopolitical risk premium, Exxon SVP projecting $150–160/bbl. Permian/Guyana expansion on track, Q1 2026 results solid. Energy sector leading S&P 500 by relative strength. Mizuho raised PT to $175.
+- **Catalyst**: WTI structural bid; geopolitical premium; strong ADP May (+122K vs +65K consensus) removes primary labor-market downside risk for energy demand.
+- **Risk**: NFP miss today → oil demand outlook deteriorates → WTI gap down; CPI June 10 / FOMC June 16-17 add near-term macro uncertainty; strong dollar (DXY) headwind for oil.
+- **Sector momentum**: WITH us — Energy is the leading sector.
+- **Stop level**: 10% trailing stop on entry; tighten to 7% at +15%, 5% at +20%
+- **Target**: $175 Mizuho PT; 2:1 R:R satisfied at ~$165 with entry ~$150
+- **Exit plan**: Stop triggered OR thesis breaks (WTI falls below $85, or major demand-destruction catalyst)
+- **Buy-side gate**: All 9 checks PASS — but gate check #9 applies: **NFP is printing TODAY at 8:30 AM ET (June 5)**. Strategy rule "Day before / day of major releases (CPI, jobs)" = **no new positions today.** This is a hard timing block, not a discretionary call.
+- **Decision**: DEFERRED to Monday June 9 (post-NFP). If NFP prints ≥ +80K and WTI holds above $90, enter XOM Monday at market-open routine (9:45 AM ET). If NFP misses badly (< +50K), re-evaluate but thesis may still hold if WTI stays bid.
+
+**Post-NFP watch for Monday**: Also watch AVGO earnings post-close today — if AVGO beats, AI/semiconductor sentiment lifts Monday open, creating possible rotation back INTO tech and OUT of Energy. Would not change XOM thesis but worth monitoring for any gap-up in entry price.
+
+### Risk factors for today
+1. **NFP (8:30 AM ET)** — primary market-moving event; any print outside ±50K of consensus could generate outsized market reaction
+2. Mild premarket risk-off (-0.35% SPY futures) suggests nervous tone heading into print
+3. CPI June 10, PPI June 11 — even if NFP clears, next two weeks remain data-heavy; entry timing into XOM must account for CPI timing block (no new trades day of/before CPI)
+4. Broadcom (AVGO) earnings post-close — AI sentiment read-through
+
+### Decision
+**HOLD — No trades today.** NFP timing block is a hard rule violation if overridden. XOM thesis remains intact and all 9 buy-side checks pass on fundamentals, but entering today exposes a new position to an NFP overnight gap before the market-open routine can react.
+
+**FLAG FOR USER REVIEW**: This is Day 8 of paper trading and Week 3 of the evaluation period. Portfolio has held $10,000 cash for all 8 trading days (0/3 weekly trade slots used in Week 3). Market has moved (SPY net positive over the period). The XOM thesis has been flagged as a valid setup for 5 consecutive pre-market sessions. If NFP clears Monday and the CPI/FOMC calendar forces another deferral, this gate calibration warrants a user-level review to confirm: (a) the patience rule is working correctly, (b) the timing-block rule is not being applied too broadly, and (c) the goal of beating SPY is feasible from a fully-cash starting position this late into Week 3.
+
+Weekly trade slots: 0/3 used (Week 3). Total drawdown: 0%.
