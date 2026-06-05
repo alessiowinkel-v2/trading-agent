@@ -156,3 +156,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: NFP prints 8:30 AM ET — no trades until data clears. If NFP ≥+100K and WTI holds 0+, enter XOM at market-open (9 shares, 10% trail, ~13.5% of equity).
+
+---
+## 2026-06-05 19:39 UTC
+EOD 2026-06-05
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: unavailable today, trailing phase (8 days cash)
+Cash: $10,000.00 (100%)
+Trades today: none (NFP timing block)
+Open positions: 0
+Active kill switches: none
+Tomorrow: Mon Jun 9 — assess NFP + WTI; enter XOM if NFP ≥ +80K & WTI > $90
+FLAG: 8 trading days fully in cash — gate calibration review recommended
