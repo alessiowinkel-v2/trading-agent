@@ -129,3 +129,27 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: SPY daily closes have diverged across sources in every weekly review (Perplexity text estimates, EOD log +0.34% for Jun 1, Barchart -0.23%, Investing.com -0.03%). This review used stockanalysis.com historical data via Perplexity search, which returned internally consistent data matching prior confirmed reference points (May 27 $751.38, confirmed in multiple sessions).
 **Insight**: stockanalysis.com historical ETF data is the most reliable reference for confirmed closes. When the Alpaca quote is unavailable for prior-day SPY, use stockanalysis.com as the primary lookup via Perplexity: "site:stockanalysis.com SPY history". Alpaca quote (bid/ask mid) is the correct real-time reference for today's close.
 **Rule change**: Flag to user: adopt stockanalysis.com + Alpaca quote as the canonical SPY data combination for all reviews going forward.
+
+## 2026-06-05 — NFP timing blocks earn their keep
+
+**Context**: SPY fell −2.71% in the week ending June 5, with −2.58% on NFP Friday alone. The pre-NFP-day block (Jun 4) and NFP-day block (Jun 5) prevented any new positions. Portfolio held 0.00% drawdown.
+**Insight**: Timing blocks (NFP day + day before, PCE day, CPI day) feel frustrating when the market is trending up, but protect capital when macro prints disappoint. One NFP miss week can offset 2-3 weeks of benchmark drift. The blocks are working as designed.
+**Rule change**: None. Process confirmed correct.
+
+## 2026-06-05 — Cash IS a position in high-event-density weeks
+
+**Context**: Week of June 1–5 had JOLTS (Tue), ADP + ISM Services (Wed), Jobless Claims (Thu), and NFP (Fri). Every session had a blocking data event. The cumulative effect was 0 valid entry windows for 5 consecutive days.
+**Insight**: When a week contains 4+ material macro prints, "cash" is the explicit position — not a failure to act. The research value came from building the XOM thesis with each print, not from placing a trade. Do not force an entry just because the week is ending.
+**Rule change**: None. Strategy already covers this. Flagging the pattern as confirmed behavior.
+
+## 2026-06-05 — Phase P&L can turn in one week; track both directions
+
+**Context**: Cumulative phase return vs SPY was −1.13% as of June 2 (bot behind). By June 5, it was +1.84% (bot ahead). A single −2.71% SPY week reversed 2+ weeks of accumulated relative underperformance.
+**Insight**: Relative performance tracking is volatile at short time horizons. Do not over-adjust strategy after 2–3 bad relative weeks, nor declare victory after 1 good relative week. The 90-day assessment is what matters.
+**Rule change**: None.
+
+## 2026-06-05 — Perpetual deferral is a strategy failure, not a virtue
+
+**Context**: XOM thesis has been valid since June 2 (9+ pre-market sessions). Every day has produced a different blocking reason. Each individual block was defensible; the cumulative pattern of never executing a valid thesis is itself a problem.
+**Insight**: If a thesis clears all 9 buy-side gate checks repeatedly but keeps hitting timing blocks, eventually the thesis ages out and the original catalyst is gone. There must be a deadline — if XOM is not entered by June 13 post-CPI, either execute with explicit reasoning or formally close the thesis with documented explanation. Open-ended deferral is not patience; it is avoidance.
+**Rule change**: Flag to user: add a "thesis expiry" concept to TRADING-STRATEGY.md — if a setup clears the gate 3+ times but is blocked by timing each time, it must be executed or formally abandoned within 10 trading days of first qualifying, or the catalyst is assumed stale.

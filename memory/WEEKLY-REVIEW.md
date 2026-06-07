@@ -524,3 +524,114 @@ Days running counter: **4** (Day 1 = 2026-05-27; Day 4 = 2026-06-01)
 **Graduation criteria met: 3/7**
 
 Days running counter: **5** (Day 1 = 2026-05-27; Day 5 = 2026-06-02)
+
+---
+
+## Week ending 2026-06-05
+
+> **Note**: Routine triggered Sunday 2026-06-07 (first post-Friday trigger this evaluation). Trading week covered: Monday June 1 through Friday June 5 (Days 4–8). Prior mid-week reviews covered June 1–2 partially; this is the authoritative Friday-window record.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday May 29 close) | $10,000.00 |
+| Ending portfolio (Friday June 5 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (May 29 → Jun 5) | −2.71% (SPY $758.08 → $737.55; confirmed stockanalysis.com + stockinvest.us) |
+| Bot vs S&P this week | +2.71% (held cash; outperformed) |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −1.84% ($751.38 → $737.55) — **first time bot is ahead** |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+**SPY daily closes confirmed:**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| May 29 (prior Fri) | $758.08 | — |
+| Jun 1 (Mon) | $760.28 | +0.29% |
+| Jun 2 (Tue) | $759.57 | −0.09% |
+| Jun 3 (Wed) | ~$754.24 | ~−0.70% |
+| Jun 4 (Thu) | $757.09 | +0.38% |
+| Jun 5 (Fri) | $737.55 | −2.58% (NFP day) |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**XOM watch active**: Thesis intact but entry blocked by cascading data events all week. Deferred to post-CPI (June 10) window, earliest June 11.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions.
+
+**Jun 1 (Day 4 — Monday)**: HOLD. WTI −1.73% falling undercuts Energy entry timing. ISM Manufacturing at 10:00 AM ET unknown at 9:45 AM entry window. Correct block. ISM printed 54.0 beat — in hindsight, the wait was worth it (confirmed strength without taking on pre-data risk).
+
+**Jun 2 (Day 5 — Tuesday)**: XOM trade plan fully documented (all 9 gate checks passed). JOLTS timing block at 10:00 AM applied correctly — plan stated "enter post-JOLTS at ~10:10 AM if JOLTS ≥ consensus." JOLTS massively beat (+758K vs consensus 6.860M). Entry condition was MET. However, **no market-open decision was documented** — neither execution nor deferral rationale recorded. This is the same process failure flagged in last week's review, now entering its second week unresolved. The JOLTS outcome was retroactively identified in the June 3 pre-market research, not documented same-day.
+- Process verdict: **Fail on documentation**. The underlying thesis decision may have been correct (defer to avoid ISM same day), but the failure to document makes it unfalsifiable.
+
+**Jun 3 (Day 6 — Wednesday)**: HOLD. ADP at 8:15 AM = +122K (massive beat vs +65K consensus). ISM Services at 10:00 AM block applied (same pattern as JOLTS/Monday). Entry deferred to post-ISM. This pattern of blocking 10:00 AM data events every day is noted — each block is individually defensible, but the cumulative effect is perpetual deferral.
+- Process verdict: Correct HOLD. ADP confirmation strengthened thesis for future entry.
+
+**Jun 4 (Day 7 — Thursday)**: HOLD. NFP ("Employment Situation") releases Friday June 5 at 8:30 AM ET. Strategy rule: "Day before / day of major releases (CPI, jobs)" = no new positions. Overnight gap risk on NFP miss. Entry deferred to Monday June 9. **This was the right call** — SPY fell −2.58% on Friday.
+- Process verdict: **Correct**. Timing block rule applied exactly as designed.
+
+**Jun 5 (Day 8 — Friday)**: HOLD. NFP day = hard block. No new positions. SPY dropped −2.58% on what appears to be a significant NFP miss (specific print not confirmed, but market reaction confirms negative surprise). Holding full cash on NFP day was correct.
+- Process verdict: **Correct**. Hard rule applied, capital protected.
+
+**In hindsight**: Would I make any different decision? The June 2 trade (post-JOLTS entry at ~10:10 AM) was potentially the correct move. XOM was trading around $149–150; by Friday June 5 it almost certainly would have been down 2-3%+ with the broader market, staying within the 10% trailing stop range, but still a week of pain. The non-entry outcome was correct by luck (process failure, good outcome). June 3–5 HOLD decisions were correct by both process and outcome.
+
+### Self-grades (be HARSH)
+- Process discipline: **B−** — Pre-market research each day was high quality. All timing blocks applied correctly. NFP pre-day block and NFP-day block were textbook. Deduction: (1) June 2 JOLTS decision still undocumented entering week 3; (2) cascading timing blocks forming a pattern of structural deferral worth flagging explicitly.
+- Documentation quality: **B** — Research log entries thorough with specific data (ADP, WTI, geopolitical catalysts). EOD snapshots filed 5/5. June 2 JOLTS decision gap persists and is now 2 weeks old without resolution.
+- Risk management: **A** — 0.00% drawdown while SPY fell −2.71%. No kill switches fired, none missed. All 8 checks clean. No positions exposed to NFP gap. Capital fully intact.
+- Outcome (weighted least): **B+** — First week with meaningful outperformance. +2.71% vs SPY this week. Phase lead now +1.84%. The patience strategy finally collected a payoff. Grade honest: it required a down SPY week, not an up portfolio week — but preserving capital in a downturn is half the game.
+- **Overall: B−** — First genuinely good week. Process has persistent documentation gap (June 2 JOLTS). Timing blocks worked as designed. Cash as a "position" was vindicated by NFP miss.
+
+### What worked (3-5 bullets)
+- NFP timing blocks (pre-day and day-of) protected full capital from −2.58% single-day drop
+- Cascading data verification (JOLTS → ADP → ISM → pre-NFP → NFP) built an increasingly strong case for XOM while avoiding each sequential risk event
+- Phase P&L turned positive vs SPY for first time since launch (+1.84%)
+- ADP +122K beat documented and incorporated — Energy thesis strengthened, not abandoned, by strong labor data
+- No impulsive entries despite 5 consecutive sessions of a valid XOM setup
+
+### What didn't work (3-5 bullets)
+- June 2 JOLTS decision still undocumented — same failure from last week, now persisting into a second week; unfalsifiable conditional plan
+- Cumulative timing blocks (JOLTS, ADP, ISM, pre-NFP, NFP) = 0 valid entry windows across 5 trading days; structural constraint becoming visible
+- XOM thesis is 9+ sessions old without execution; approaching the point where "perpetual deferral" is itself a strategy failure
+- NFP result itself not confirmed in this review — market fell −2.58% but specific print unknown (process gap: EOD snapshot for June 5 does not contain the actual NFP number)
+- No graduation-criteria progress this week (still 8/30 trading days, still no completed trade to review)
+
+### Key lessons (appended to lessons.md)
+- NFP timing blocks prove their value: SPY −2.71% this week with a −2.58% single-day NFP drop. Holding cash through NFP week was correct.
+- Cash IS a position: in weeks with high macro event density (JOLTS + ADP + ISM + pre-NFP + NFP all in one week), the correct "trade" is sometimes flat cash.
+- Phase P&L tracking matters both ways: being behind in bull weeks and being ahead in down weeks are both real effects. The -1.84% SPY phase return now shows the strategy can preserve capital when the benchmark falls.
+- CPI week follows NFP week (June 10 CPI). Back-to-back blocking weeks mean the XOM entry window is realistically June 11 at earliest, June 18 post-FOMC if CPI is hot.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Structural timing-block gap**: NFP day + pre-NFP day = 2 days blocked per month. CPI = 1 day, PCE = 1 day, FOMC = 1-2 days. Combined with pre-data-day caution, ~8-10 trading days per month are structurally blocked. This is not a problem per se, but the user should be aware that June has NFP (done), CPI (June 10), FOMC (June 16-17) = potentially 5+ blocked days this month alone. If back-to-back blocks prevent any June entry, flag for explicit user review.
+2. **June 2 JOLTS decision gap (repeated, 3rd flag)**: The conditional trade plan for June 2 ("enter post-JOLTS if ≥ consensus") was never resolved. JOLTS beat massively. No entry confirmed. This specific gap must be closed before the XOM thesis is "clean." Recommend user confirm: did XOM get entered on June 2, or not? The log is ambiguous.
+3. **XOM entry window**: With CPI June 10 and FOMC June 16-17, the cleanest entry window for XOM is June 11 (post-CPI clear) with a size plan already documented. If June 11 also produces no entry, the thesis must either be executed or explicitly abandoned with documented reasoning — not deferred again.
+4. **lessons.md filename (7th flag)**: Still lowercase. All references uppercase. Still causes confusion. Rename to LESSONS.md or update all references. No functional change required; just consistency.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (8/30 days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat, SPY −1.84% phase)
+- [ ] Matched or beat SPY: 🟡 (IMPROVED — bot +0.00% vs SPY −1.84% since launch; first time ahead; 90-day assessment TBD)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; lessons.md lowercase naming persists but functional)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced; SPY had a −2.71% week but portfolio held 0% drawdown)
+
+**Graduation criteria met: 3/7** (SPY criterion improved from ❌ to 🟡)
+
+Days running counter: **8** (Day 1 = 2026-05-27; Day 8 = 2026-06-05)

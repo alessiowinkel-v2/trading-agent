@@ -170,5 +170,17 @@ Tomorrow: Mon Jun 9 — assess NFP + WTI; enter XOM if NFP ≥ +80K & WTI > $90
 FLAG: 8 trading days fully in cash — gate calibration review recommended
 
 ---
+## 2026-06-07 20:40 UTC
+Week ending 2026-06-05
+Portfolio: $10,000 (+0.00% week, +0.00% phase)
+vs SPY: +2.71% week, +1.84% phase (SPY -2.71% week on NFP miss)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: B-
+Key takeaway: Cash preserved capital through -2.71% NFP week; first time phase-positive vs SPY
+Graduation: 3/7 criteria met (SPY beat upgraded to yellow)
+
+---
 ## 2026-06-10 13:46 UTC
 Market-open 2026-06-10: NO TRADES. Two hard blockers: (1) no pre-market research entry for today, (2) CPI May 2026 day — strategy prohibits new positions. Portfolio 0,000 cash, all kill switches clear. Pre-market research required before any trade can execute.
