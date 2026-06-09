@@ -141,3 +141,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 8, end of Week 3. No positions, no trades. NFP timing block (hard rule: no new positions day of major jobs release) prevented XOM entry today. Portfolio holds full $10,000 cash; 0 of 3 weekly trade slots used this week. SPY daily return unavailable from Perplexity. Phase P&L flat at 0.00%. XOM thesis deferred to Monday June 9 — entry contingent on NFP ≥ +80K and WTI holding above $90. FLAG: 8 consecutive trading days fully in cash; gate calibration flagged for user review if XOM continues to defer into CPI week (June 10).
 **Active kill switches:** none.
+
+---
+
+### 2026-06-09 — EOD Snapshot (Day 9, Monday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 9, start of Week 3. No positions, no trades. XOM deferred from Friday pending NFP ≥ +80K and WTI above $90; additionally, CPI (May) prints tomorrow June 10 — "day before major release" timing block independently prevents any new entry today. Portfolio holds full $10,000 cash; 0 of 3 weekly trade slots used (Week 3). SPY return unavailable from Perplexity. Phase P&L flat at 0.00%. XOM entry earliest June 11 post-CPI, contingent on benign print and WTI above $90.
+**Active kill switches:** none.
