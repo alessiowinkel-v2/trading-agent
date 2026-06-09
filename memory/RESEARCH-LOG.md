@@ -558,6 +558,71 @@ Weekly trade slots: 0/3 used (Week 3). Total drawdown: 0%.
 
 ---
 
+## 2026-06-09 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (fully in cash)
+- **NOTE: June 8 (Monday) routines appear to have not run — no EOD snapshot or pre-market research log entry exists for June 8. Documentation gap; the June 5 entry was the last recorded. Today is Day 10 of the evaluation period.**
+
+### Market context
+- WTI / Brent: WTI ~$89–98/bbl (Iran-Israel war escalation; Israel struck Iran on June 8, oil surged; one broadcast reported WTI approaching $98 intraday); Brent ~$100+/bbl with active Hormuz risk premium. Active 2026 Iran war is the primary geopolitical support for oil — Hormuz was briefly closed March 2026, oil hit $103/bbl in March.
+- S&P 500 futures: +0.25% premarket (+18 pts to ~7,434) — mild positive; Nasdaq futures +0.51%; chip/AI rebound story
+- VIX: 18.92 (June 8 close from Cboe); 21.51 (June 5 FRED close on NFP day) — elevated vs pre-NFP baseline (~16), settling but not low
+- Today's catalysts: (1) Iran-Israel war escalation June 8 pushed oil sharply higher — key XOM catalyst; (2) NY Fed Williams put rate cut "back on table," supporting risk sentiment; (3) chip/AI rebound (Nasdaq +0.51%); (4) NFP May reported June 5: **+172K vs +85K consensus** — strong beat validates labor demand, oil demand thesis intact
+- Earnings before open: ASO (~$0.91), SJM (~$2.64), SAIL (~$0.04), UNFI (~$0.76) — all small caps, no thesis impact. After close: CASY, CBRL, CHWY.
+- Economic calendar: **CPI (May 2026) → TOMORROW June 10 at 8:30 AM ET**; PPI (May 2026) → Thursday June 11 at 8:30 AM ET; FOMC decision → Wednesday June 17. This is the heaviest macro week of the month. Note: Dallas Fed paper documents that the 2026 Iran war could add 0.40–1.25 pp to PCE inflation — CPI print may be hot.
+- Sector momentum: Energy (XLE), Industrials, Consumer Staples, Materials LEADING. Technology, Communications, Consumer Discretionary, Financials LAGGING (though chip names rebounding today on AI sentiment — does not change sector ranking). Healthcare weakening.
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Kill switch check (Step 3)
+- KS-1 Daily drawdown: 0% ($10,000 vs $10,000 last equity June 8) — CLEAR
+- KS-2 Weekly drawdown: 0% ($10,000 vs $10,000 prior Friday June 6 / Week 2 close) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 start) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- **All kill switches: CLEAR**
+
+### Trade ideas
+
+**XOM (ExxonMobil) — Day 10 of watch — CPI TIMING BLOCK**
+
+- **Thesis**: WTI ~$89–98 and rising (Iran war provides structural geopolitical premium; Hormuz risk not resolved; oil hit $103 in March, pulled back, now re-rallying on June 8 Israel strikes). Brent ~$100+. XOM last close ~$152, analyst consensus Buy, average PT $165–170. Permian/Guyana production expansion intact. Energy sector is the leading S&P 500 sector. NFP beat (+172K) confirms robust labor demand and validates energy consumption growth thesis.
+- **Catalyst**: Iran-Israel war escalation (June 8 Israel strikes on Iran), active Hormuz risk premium, strong NFP (+172K vs +85K), Energy sector leadership.
+- **Risk**: (1) CPI tomorrow could come in hot (Iran war inflation) → Fed repricing → demand-destruction narrative for oil; (2) Ceasefire/de-escalation → oil premium collapses (partial thesis break); (3) PPI June 11 adds second macro uncertainty this week; (4) FOMC June 17 adds a third; (5) XOM price has drifted up from $150 to ~$152–156 during deferral period.
+- **Sector momentum**: WITH us — Energy is the leading sector.
+- **Stop level**: 10% trailing stop (GTC order) on entry. Tighten to 7% at +15%, 5% at +20%.
+- **Target**: $165–170 analyst consensus; 2:1 R:R satisfied at ~$167 with entry ~$152–155.
+- **Exit plan**: Trailing stop triggered OR thesis breaks (WTI falls below $85 with no recovery, OR ceasefire that materially removes Hormuz risk premium AND demand outlook deteriorates).
+- **Entry sizing**: 9 shares × ~$152 = $1,368 = 13.7% of equity ✓ (under 15% limit)
+- **Buy-side gate check**: (1) positions ≤ 6 ✓ (2) weekly trades ≤ 3 ✓ (0/3 used) (3) ≤15% equity ✓ (4) ≤ cash ✓ (5) PDT ok ✓ (6) catalyst documented ✓ (7) stock not option ✓ (8) no earnings next 5 days ✓ (next XOM earnings ~late July) (9) no kill switch ✓ — ALL PASS but BLOCKED BY TIMING RULE
+- **HARD TIMING BLOCK**: Today (June 9) is the **day before CPI** (June 10). Strategy rule "Day before / day of major releases (CPI, jobs)" = no new positions today. Non-negotiable.
+- **Decision**: DEFERRED to **Friday June 12** (first clear window post-CPI June 10 and post-PPI June 11). If CPI/PPI do not materially damage oil/energy thesis, enter XOM at market-open routine Friday June 12 at 9:45 AM ET: 9 shares, 10% trailing stop GTC order.
+- **CPI scenario analysis for Friday decision**:
+  - CPI hot (YoY ≥ 3.8%): May be oil-driven (Iran war). Energy thesis strengthened. Enter Friday.
+  - CPI in-line (~3.5%): Neutral. Enter Friday as planned.
+  - CPI cold (YoY ≤ 3.0%): Signals demand destruction. Reassess WTI level before entering. If WTI holds above $90, still enter. If WTI drops below $87, abort.
+  - CPI cold + WTI drops below $87: ABORT XOM thesis, look for new setup.
+
+### Risk factors for today
+1. **Iran-Israel escalation** — oil is moving on geopolitical news; positive for XOM thesis but volatile
+2. **CPI tomorrow (June 10)** — primary market-moving risk this week; could move Energy both ways depending on inflation narrative vs demand narrative
+3. **VIX still elevated (18.92)** — below NFP-spike high of 21.51 but above pre-event baseline; uncertainty persists
+4. **June 8 documentation gap** — no EOD snapshot or pre-market research for June 8; today's first routine since June 5
+
+### Decision
+**HOLD — No trades today.** CPI timing block (day before CPI June 10) is a hard rule. XOM thesis is the strongest it has been — Iran war escalation is a direct positive catalyst. But entering today exposes the position to a potential gap on tomorrow's CPI print. Correct action: wait for CPI to pass.
+
+**FLAG FOR USER REVIEW**: Day 10 of evaluation, 0 positions taken. XOM entry has been sequentially blocked by: JOLTS June 3 → NFP June 5 → CPI June 10 (today's block). All blockages were correct rule applications. The thesis has strengthened each time it was deferred. First clean entry window: **Friday June 12**. If CIP and PPI do not break the thesis, entry on Friday is the plan. User should confirm this approach is correct or advise if the timing-block rule should be modified for situations where multiple consecutive macro releases are blocking a validated setup.
+
+Week 3 trade slots: 0/3 used. Total drawdown: 0%.
+
+---
+
 ## 2026-06-10 — Pre-market Research
 
 ### Account snapshot
