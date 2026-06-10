@@ -555,3 +555,65 @@ All clear. No active kill switches. Daily drawdown: 0%. Weekly drawdown: 0% (Wee
 **FLAG FOR USER REVIEW**: This is Day 8 of paper trading and Week 3 of the evaluation period. Portfolio has held $10,000 cash for all 8 trading days (0/3 weekly trade slots used in Week 3). Market has moved (SPY net positive over the period). The XOM thesis has been flagged as a valid setup for 5 consecutive pre-market sessions. If NFP clears Monday and the CPI/FOMC calendar forces another deferral, this gate calibration warrants a user-level review to confirm: (a) the patience rule is working correctly, (b) the timing-block rule is not being applied too broadly, and (c) the goal of beating SPY is feasible from a fully-cash starting position this late into Week 3.
 
 Weekly trade slots: 0/3 used (Week 3). Total drawdown: 0%.
+
+---
+
+## 2026-06-10 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000 (non-marginable)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (fully in cash)
+- balance_asof: 2026-06-09 (Alpaca API confirmed)
+
+### Kill switch check (Step 3)
+- KS-1 Daily drawdown: 0% ($10,000 vs last_equity $10,000) — CLEAR
+- KS-2 Weekly drawdown: 0% (Week 4 opens at $10,000 vs $10,000 prior Friday) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 starting capital) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- **All kill switches: CLEAR**
+
+### Market context
+- **WTI crude**: ~$90.95/bbl (July 2026 CME futures, CLN6) — Robinhood prediction market suggests settlement between $89–$91. Down from ~$93.40 on June 5; thesis floor of $87 not breached. Brent price not directly returned by sources.
+- **S&P 500 futures**: ESM26 ~7,369.75, down ~23 pts / -0.31% premarket — mild risk-off ahead of CPI print.
+- **VIX**: 20.09 (Cboe spot, as of June 10 morning) — ELEVATED. Up from ~18.92 close on June 8 and ~16 earlier in June. Market expressing heightened CPI uncertainty.
+- **CPI May 2026**: **RELEASING TODAY at 8:30 AM ET** — Hard timing block in effect. April CPI was hot (+0.6% MoM, +3.8% YoY). Market anxiety driving VIX spike ahead of print. Consensus not confirmed but hot April print sets a high bar.
+- **PPI May 2026**: Scheduled June 11, 8:30 AM ET — another timing block tomorrow.
+- **FOMC**: June 16–17 — meeting this coming Monday–Tuesday; another timing block.
+- **Earnings before open**: CHWY (Chewy), GHM (Graham), CPB (Campbell's) — none are holdings, none affect current thesis.
+- **Sector momentum**: Energy, Industrials, Materials, Consumer Staples LEADING. Technology, Communications Services, Consumer Discretionary, Financials LAGGING. Consistent with prior sessions.
+- **AI/Tech note**: Barchart snippet flagged tech-led drop on June 9 (ESM26 -0.36%, NQM26 -1.15%), rotation from tech into value/cyclicals accelerating. Supportive for Energy relative to index.
+
+### Currently-held positions check
+- None (fully in cash) — no individual ticker research required.
+
+### XOM thesis status (Day 12 of watch, Week 4)
+- **Thesis**: WTI ~$91 (above $87 thesis floor); Permian/Guyana expansion intact; Energy sector leading S&P 500 by relative strength. Q1 2026 results announced May 1 (next earnings Q2, ~early August — >5 trading days out, gate check passes).
+- **Note on EIA projection**: Zacks (Feb 2026) cited EIA WTI 2026 forecast of $53.42. Actual July 2026 CME futures = $90.95 — oil has dramatically outperformed that EIA projection. Thesis is based on current market price, not the stale forecast.
+- **Catalyst**: Geopolitical premium persisting; US-Iran talks breakdown; Energy sector relative strength leadership.
+- **Risk**: (1) Hot CPI today → Fed hawkishness → dollar strength → oil headwind. (2) CPI + PPI + FOMC all within 7 days creates multi-layer uncertainty. (3) VIX elevated at 20 — volatility environment has worsened since June 5.
+- **Buy-side gate**: All 9 fundamental checks PASS. However: **Hard timing block in effect** (CPI today, PPI tomorrow, FOMC June 16-17).
+- **Timing block calendar analysis**:
+  - June 10: CPI (today) — NO ENTRY
+  - June 11: PPI (tomorrow) — NO ENTRY
+  - June 12: Clear. Earliest possible entry IF CPI and PPI both print benign.
+  - June 13: Clear (Friday — also valid if June 12 is too close to PPI reaction).
+  - June 16: FOMC day 1 — timing block.
+  - June 17: FOMC day 2 — timing block.
+  - June 18: **First clean entry window post-CPI/PPI/FOMC.**
+
+### Trade candidates
+- **XOM**: 0 candidates to action today. DEFERRED. See timing block calendar above.
+  - If CPI prints ≤ +0.3% MoM (cool/in-line): XOM thesis strengthens (relief rally, WTI likely bid), target June 12 or 13 entry at market-open routine.
+  - If CPI prints ≥ +0.5% MoM (hot): Fed hawkishness risk, dollar bid, potential WTI headwind. Re-evaluate thesis before entry; may need to wait until post-FOMC June 18 for clarity.
+  - If CPI misses dramatically (deflation signal): energy demand outlook re-rated lower; consider aborting XOM thesis entirely.
+- **No other candidates identified.**
+
+### Decision
+**HOLD — No trades today.** CPI releasing at 8:30 AM ET is a hard timing block (strategy rule: no new positions day of major CPI/jobs release). VIX elevated at 20.09 adds further caution. Patience is the correct posture.
+
+**FLAG FOR USER REVIEW**: Day 12 of paper trading (Week 4). Portfolio has held $10,000 cash for all 12 trading days. The XOM thesis has been flagged as a valid setup for 9 consecutive pre-market sessions but blocked by sequential macro timing events (ADP, JOLTS, NFP, now CPI/PPI/FOMC). If the timing-block rules continue to prevent entry through June 18 (Day 17), this warrants explicit user confirmation that: (a) applying timing blocks on day-before and day-of is the intended strictness, (b) waiting 3.5 weeks before first trade is acceptable given the evaluation window, and (c) the strategy goal of beating SPY remains feasible from a cash starting position this late in.
+
+Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0%. Active kill switches: none.
