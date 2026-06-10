@@ -760,9 +760,85 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0%. Active kill switches:
 
 ---
 
-## 2026-06-10 — Pre-market Routine ABORTED (PAUSED flag)
+## 2026-06-10 — Pre-market Routine ABORTED (PAUSED flag) [Run 1]
 
-- `memory/PAUSED.flag` detected at routine start (contents: "test")
+- `memory/PAUSED.flag` detected at routine start (contents: "test") — ran on claude/* branch
 - Per protocol: no trades executed, no research run, no account queried
-- Routine exits immediately after this log note and commit
 - **User action required**: Remove `memory/PAUSED.flag` and commit/push to re-enable trading routines
+
+---
+
+## 2026-06-10 — Pre-market Research [Run 2 — full research]
+
+**PAUSED.flag note**: Root `/PAUSED.flag` exists (content: "test") but is at wrong location — protocol specifies `memory/PAUSED.flag`. That path is absent on main. Treating as **NOT paused** (per protocol). User should either move flag to `memory/PAUSED.flag` or delete the root-level file. Full research proceeds.
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin account; we operate cash-only)
+- Daytrade count: 0/3
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-06-09 (Alpaca API confirmed)
+
+### Kill switch check
+- KS-1 Daily drawdown: 0% ($10,000 vs last_equity $10,000) — CLEAR
+- KS-2 Weekly drawdown: 0% (Week 4 opens at $10,000 vs $10,000 prior Friday) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 starting capital) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- **All kill switches: CLEAR**
+
+### Market context
+- **WTI**: ~$90.86/bbl (Oilprice.com 09:39 ET) / $89.07 (CME front-month); range $89–91. Above XOM thesis floor of $87. Iran war creating supply disruption premium.
+- **Brent**: Prediction markets imply above $88 (95% confidence). Brent well above $88.
+- **S&P 500 futures**: ESM26 down ~1.1% as of 7:45 AM ET (Bloomberg); ESM26 ~7,348 (Investing.com — down from prior close ~7,379.50). Risk-off on Iran war + hot CPI headline.
+- **VIX**: 21.71 (GuruFocus, June 10, 2026 — confirmed elevated. Up from 20.09 yesterday).
+- **CPI May 2026 (RELEASED TODAY 8:30 AM ET)**: Headline +4.2% YoY / **+0.5% MoM** (up from 3.8% April). Core +2.9% YoY / **+0.2% MoM** (down from 0.4% April — softer than expected). Energy drove headline (+3.9% in May = >60% of monthly increase). **Assessment: MIXED** — hot headline, benign core. Energy-driven headline inflation less likely to prompt Fed hawkishness; core trajectory favorable. Prior log "hot" trigger was ≥0.5% MoM — triggered at exactly 0.5%. However, core being 0.2% MoM changes the calculus.
+- **Today's catalysts**: (1) US-Iran war escalation — Tehran targeting US forces in Bahrain; US struck command center in Iran. Wikipedia confirms "2026 Iran war" with "largest ever supply disruption of global oil market." (2) CPI hot headline print. (3) S&P 500 sinking on war fear — 247wallst headline "SPY Sinks on Fear of War." Nasdaq down ~1.6% premarket.
+- **Earnings before open**: CHWY (Chewy), FFIV (F5), SFM (Sprouts Farmers), RITM — none are holdings.
+- **Economic calendar**: PPI May 2026 — **June 11, 8:30 AM ET** (tomorrow, timing block). FOMC June 16-17 (timing blocks).
+- **Sector momentum**: Energy (XLE) — LEADING (inflation hedge, Iran war premium, Schwab confirmed outperformance since Iran war started). Defense/Industrials — POSITIVE (defense spending tailwind). Technology (XLK) — LAGGING (NQ -1.6% premarket, weakening vs. S&P 500). Consistent with prior sessions.
+
+### Currently-held positions check
+- None (fully in cash). No individual ticker research required.
+
+### XOM thesis status — Day 13 of watch, **THESIS EXPIRY CLOCK ACTIVE**
+- **Thesis**: WTI ~$90 (above $87 floor); Permian/Guyana expansion intact; Energy sector leading; Iran war creating structural supply disruption premium. Q1 2026 results announced May 1; next earnings Q2 early August (>5 trading days out — gate check passes).
+- **Catalyst**: Iran war supply disruption (1.1M+ bpd offline per market data); Energy sector relative strength; geopolitical risk premium re-expanding.
+- **Risk**: (1) CPI headline hot at +0.5% MoM — if market prices hawkish Fed, dollar bid could pressure oil. (2) Iran ceasefire rumors (StoneX) could instantly remove geopolitical premium. (3) VIX 21.71 elevated — broader market risk-off could drag XOM.
+- **Sector momentum**: Energy strongly leading — with us ✓
+- **Buy-side gate**: All 9 gate checks PASS. Hard timing blocks prevent entry today and tomorrow.
+- **CPI result interpretation**: Core +0.2% MoM is benign (Morningstar: "Energy-Driven Inflation Is Contained, for Now"). Fed looks through energy-driven headline inflation. This argues for the EARLIER entry scenario (June 12-13) rather than the post-FOMC June 18 scenario.
+- **⚠️ THESIS EXPIRY DEADLINE — LESSONS.md**: "If XOM is not entered by June 13 post-CPI, either execute with explicit reasoning or formally close the thesis with documented explanation." Trading days from first qualifying (June 2): Today = Day 7. Day 10 = **June 13 (Friday)**. Market-open routines on June 12 and June 13 MUST either execute XOM or formally abandon the thesis. Deferring to June 18 is NOT permitted under the 10-day rule.
+
+### Entry window calendar
+| Date | Status | Reason |
+|------|--------|--------|
+| June 10 (today) | ❌ BLOCKED | CPI day + day-before-PPI |
+| June 11 | ❌ BLOCKED | PPI day (8:30 AM ET) |
+| June 12 | ✅ **TARGET** | Post-CPI, post-PPI. Enter if WTI >$90 + PPI benign. Day 9 of thesis clock. |
+| June 13 | ✅ **HARD DEADLINE** | Last valid day under 10-trading-day rule. Enter or formally abandon. |
+| June 16-17 | ❌ BLOCKED | FOMC days |
+| June 18+ | ❌ POST-EXPIRY | Past 10-day thesis clock (Day 13+). Fresh thesis would be needed. |
+
+### Trade candidates
+- **XOM**: 0 candidates to action TODAY. Entry blocked by CPI timing block (and day-before-PPI).
+  - **June 12 target entry plan**: ~$1,450 (15% of $10,000 equity). ~9-10 shares at ~$130-145 (verify price at entry). Stop: 7-10% below entry. Target: +15-20% (2:1 R:R minimum). Market-open routine June 12 must evaluate fresh WTI + PPI result before executing.
+  - **June 13 fallback**: Execute regardless (with full gate checks) or FORMALLY ABANDON thesis.
+- **No other candidates identified.** Iran war does NOT suggest buying defense names — thesis would be "AI hype/meme momentum" territory without specific fundamental analysis.
+
+### Risk factors for today
+- Iran war escalating — geopolitical situation is rapidly evolving; ceasefire could instantly collapse XOM thesis premium
+- VIX at 21.71 — elevated volatility environment
+- S&P 500 risk-off sentiment could drag energy despite sector strength
+- Hot CPI headline (+0.5% MoM) if market prices hawkish Fed: dollar bid + oil headwind
+- PPI tomorrow — if also hot, June 12 entry may need to be reconsidered
+
+### Decision
+**HOLD — No trades today.** CPI day timing block. Day-before-PPI timing block also in effect. Both hard rules independently prevent entry.
+
+**⚠️ CRITICAL FLAG — THESIS EXPIRY**: XOM MUST be executed OR formally abandoned by June 13 EOD. The 10-trading-day rule from LESSONS.md is now in effect. June 12 market-open routine must treat this as a decision point, not another research session. Entry plan is documented above; gate checks will be re-run against live data at market open June 12.
+
+**FLAG FOR USER**: Root `/PAUSED.flag` (content: "test") exists at wrong location. Protocol says `memory/PAUSED.flag`. Please clarify intent: (a) move flag to `memory/PAUSED.flag` to activate pause, (b) delete root flag if it was accidental. Current behavior: NOT paused (per protocol).
+
+Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switches: none.

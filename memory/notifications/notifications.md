@@ -226,3 +226,7 @@ Open positions: 0
 Active kill switches: Root PAUSED.flag present ('test'); memory/PAUSED.flag absent
 Notes: CPI day timing block. No entries. XOM window reopens tomorrow.
 Tomorrow: Evaluate XOM entry post-CPI — requires benign print + WTI > $90
+
+---
+## 2026-06-10 19:39 UTC
+Pre-market 2026-06-10: HOLD. CPI +4.2% YoY (hot headline, benign core +0.2%). Iran war, VIX 21.71, SPY -1.1%. XOM thesis expiry JUNE 13 — must execute or abandon. Root /PAUSED.flag (wrong path) — clarify intent.
