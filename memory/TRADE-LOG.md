@@ -144,7 +144,19 @@ No positions yet. Bot launches on the next trading day.
 
 ---
 
-### 2026-06-09 — EOD Snapshot (Day 9, Monday)
+### 2026-06-08 — EOD Snapshot (Day 9, Monday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** ~+1.01% (intraday est., close unconfirmed)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 9, start of Week 4. No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained an estimated +1.01% intraday (close unconfirmed) while we held cash, widening the cumulative relative gap. XOM entry window now open per Day 8 plan (NFP block lifted, entry contingent on WTI > $90 and NFP ≥ +80K) — morning-session research routine will evaluate the setup Tuesday Jun 9. FLAG: 9 consecutive trading days in full cash; entry discipline correct but XOM thesis review is overdue.
+**Active kill switches:** none.
+
+---
+
+### 2026-06-09 — EOD Snapshot (Day 10, Tuesday)
 **Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable
 
 | Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
