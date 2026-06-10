@@ -182,6 +182,17 @@ Key takeaway: Cash preserved capital through -2.71% NFP week; first time phase-p
 Graduation: 3/7 criteria met (SPY beat upgraded to yellow)
 
 ---
+## 2026-06-08 19:33 UTC
+EOD 2026-06-08
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: ~+1.01% today (est.), flat phase
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0 (none)
+Active kill switches: none
+Tomorrow: Research XOM entry (WTI >0, NFP >=+80K gate); 0/3 weekly slots used — first trade opportunity of Week 4
+
+---
 ## 2026-06-09 10:16 UTC
 PUSH FAILED: pre-market 2026-06-09 committed locally (7f924f7) but git push returns 403 — credential mismatch. Research complete: HOLD, XOM CPI timing block, next window Fri Jun 12.
 
