@@ -165,3 +165,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 9, start of Week 3. No positions, no trades. XOM deferred from Friday pending NFP ≥ +80K and WTI above $90; additionally, CPI (May) prints tomorrow June 10 — "day before major release" timing block independently prevents any new entry today. Portfolio holds full $10,000 cash; 0 of 3 weekly trade slots used (Week 3). SPY return unavailable from Perplexity. Phase P&L flat at 0.00%. XOM entry earliest June 11 post-CPI, contingent on benign print and WTI above $90.
 **Active kill switches:** none.
+
+---
+
+### 2026-06-10 — EOD Snapshot (Day 11, Wednesday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (S&P futures ~-0.9% intraday est.)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 11. No positions, no trades. CPI (May) printed today June 10 — "day of major macro release" timing block prevented any new entries. Portfolio holds full $10,000 cash; 0 of 3 weekly trade slots used (Week 4). SPY June 10 close unavailable from Perplexity; S&P futures suggested ~-0.9% intraday. Root-level PAUSED.flag present (content: "test"); standard memory/PAUSED.flag absent after upstream commits. XOM entry window reopens June 11 post-CPI, contingent on benign print and WTI above $90.
+**Active kill switches:** Root-level PAUSED.flag present (content: "test") — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. No trades in any case (timing block + no positions).
