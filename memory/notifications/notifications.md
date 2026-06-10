@@ -210,3 +210,7 @@ Tomorrow: CPI (May) at 8:30 AM ET — timing block, NO new trades Jun 10; XOM en
 ---
 ## 2026-06-10 13:46 UTC
 Market-open 2026-06-10: NO TRADES. Two hard blockers: (1) no pre-market research entry for today, (2) CPI May 2026 day — strategy prohibits new positions. Portfolio $10,000 cash, all kill switches clear. Pre-market research required before any trade can execute.
+
+---
+## 2026-06-10 19:31 UTC
+PAUSED flag active — pre-market routine aborted. Remove memory/PAUSED.flag to re-enable trading.
