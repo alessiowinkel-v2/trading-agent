@@ -558,6 +558,81 @@ Weekly trade slots: 0/3 used (Week 3). Total drawdown: 0%.
 
 ---
 
+## 2026-06-08 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (fully in cash)
+
+### Kill switch check
+- KS-1 Daily drawdown: 0% ($10,000 vs $10,000 last EOD) — CLEAR
+- KS-2 Weekly drawdown: 0% ($10,000 vs $10,000 prior Friday Jun 5) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 start) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- **All kill switches: CLEAR**
+
+### Market context
+- WTI / Brent: WTI $90.54 (Jun 5 close, -2.69% on Friday); CME Jul '26 ~$90.25 — right at $90 thesis floor. Brent ~$97.44 (Jun 5 morning).
+- S&P 500 futures: ~$7,416 (+0.21% premarket) — partial recovery from Friday's biggest-2026-selloff.
+- VIX: 15.40 (Jun 4 FRED close); 21.51 (Jun 5 Cboe spot) — significant spike on Friday, elevated going into today.
+- Today's catalysts: Inflation-data week begins. May CPI (Wed Jun 10) and PPI (Thu Jun 11) are dominant near-term catalysts. Post-NFP "higher for longer" rate narrative still reverberating from Friday selloff. SpaceX IPO preview (Morningstar analyst note circulating). MDT earnings premarket.
+- Earnings before open: MDT (Medtronic confirmed PMO). Others time-TBD: GHM, CPB, AVO, MTN, ASO, SJM, SAIL, UNFI, CASY. No major market-movers for Energy sector.
+- Economic calendar: CPI May → Wed Jun 10 8:30 AM ET; PPI May → Thu Jun 11 8:30 AM ET; FOMC Jun 16–17. **TIMING BLOCKS in effect: Tue Jun 9 (day before CPI) through Thu Jun 11 (day of PPI) — no new entries during this window. Today Jun 8 is the last clean window this week.**
+- Sector momentum: Energy, Industrials, Materials, Consumer Staples LEADING. Technology LAGGING (hardest hit Friday on rate-hike fears from strong NFP). Healthcare weakening. Real Estate/Utilities improving.
+
+### NFP May 2026 result (released Jun 5)
+**Actual: +172,000** vs +85,000 consensus; prior month revised up to +179K; unemployment 4.3% unchanged.
+- Market reaction: Tech-led selloff, S&P ~-2% intraday ("biggest 2026 selloff"); higher-for-longer rate fears. Partial recovery today (+0.21% premarket).
+- Energy read-through: Strong NFP → strong economy → strong oil demand. Net positive for XOM thesis. Tech selloff is sector-specific, not demand-destruction.
+- Conditional trigger from Jun 5 plan ("NFP ≥ +80K"): **MET: +172K.**
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas
+
+**1. XOM (ExxonMobil) — QUALIFIED CANDIDATE (Day 6 of watch)**
+- **Thesis**: WTI at $90.25–$90.54 (above $90 floor), geopolitical risk premium from US-Iran talks collapse, Exxon SVP projecting $150–160/bbl oil. Permian/Guyana production expansion on track. Q1 2026 solid (reported May 1). Energy sector leading S&P 500 by relative strength. NFP +172K confirms robust oil demand outlook. XOM last close ~$150.24 (Jun 7, Robinhood data).
+- **Catalyst**: NFP +172K clears the Jun 5 conditional entry trigger. WTI >$90 condition met. Today is the last valid entry window this week before CPI/PPI timing blocks (Tue–Thu).
+- **Risk**: WTI dipped -2.69% Friday to $90.54 — barely above the $90 floor; further decline invalidates thesis. CPI Wednesday could extend rate-hike selloff. Elevated VIX (21.51 Jun 5). Strong dollar from "higher for longer" is modest WTI headwind.
+- **Sector momentum**: WITH US — Energy is the leading sector.
+- **Size**: 9 shares × ~$152 entry ≈ $1,368 (13.7% of equity) — within 15% cap.
+- **Stop level**: 10% trailing GTC from entry (~$136.80 if entry $152).
+- **Target**: $183 (2:1 R:R on ~$15.20/share risk). NOTE: Mizuho analyst PT $175 gives only 1.51:1 at a 10% stop — below the 2:1 minimum. The $183 target requires WTI reaching ~$100–105/bbl, achievable given geopolitical premium and trajectory. Market-open routine must assess this at execution.
+- **Exit plan**: (a) 10% trailing stop triggers; (b) Tighten to 7% at +15%, to 5% at +20%; (c) Manual cut if WTI falls below $85; (d) Reassess at +30% if fundamentals deteriorate.
+- **Buy-side gate (all 9)**: (1) 1 position ≤ 6 ✓; (2) 1 trade this week ≤ 3 ✓; (3) $1,368 ≤ 15% × $10K ✓; (4) $1,368 ≤ $10K cash ✓; (5) 0 daytrades ✓; (6) Catalyst documented ✓; (7) Stock not option ✓; (8) Next earnings ~Aug 7 2026 (>5 trading days) ✓; (9) No active kill switches ✓.
+- **R:R FLAG**: Mizuho PT $175 gives 1.51:1 R:R at 10% trailing stop — below 2:1 minimum. A $183 target (2:1) requires ~WTI $100–105. This is a yellow flag; market-open routine must independently assess WTI level at open.
+
+### Risk factors for today
+1. VIX elevated (21.51 Jun 5 close) — heightened market fear post-NFP selloff
+2. WTI right at $90 floor ($90.25–$90.54) — small further dip invalidates thesis entry condition
+3. CPI Wednesday Jun 10 — entering today means holding through CPI; hot print could extend rate-hike selloff
+4. "Higher for longer" FOMC narrative adding uncertainty; Jun 17 meeting now more hawkish-leaning
+5. Friday selloff hangover — could see continued risk-off early in session
+
+### Decision
+**CONDITIONAL CANDIDATE — XOM for execution at market-open routine (9:45 AM ET today).**
+
+All 9 buy-side gate checks pass. Jun 5 conditional triggers (NFP ≥ +80K, WTI > $90) are both met. Today is the last valid entry window this week.
+
+Market-open routine MUST verify all four before executing:
+1. WTI still > $90 at 9:45 AM ET
+2. XOM pre-market bid > $145 (no halt/liquidity issue)
+3. No breaking adverse news on XOM or Energy sector
+4. SPY not gapping down > 1% at open (if broad selloff extends, reconsider)
+
+If all four confirm → enter 9 shares XOM at 9:45 AM ET, immediately place 10% trailing stop GTC order.
+If any condition fails → HOLD; re-evaluate after CPI clears (Thu Jun 12 earliest).
+
+**FLAG**: 9 consecutive trading days fully in cash. If XOM again fails to execute today, user should explicitly confirm gate calibration — the "no new positions day before major release" rule effectively eliminates Tuesday from CPI/PPI weeks, which recurs monthly.
+
+Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0%.
+
+---
+
 ## 2026-06-09 — Pre-market Research
 
 ### Account snapshot
