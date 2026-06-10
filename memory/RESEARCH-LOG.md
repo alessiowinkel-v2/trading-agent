@@ -757,3 +757,12 @@ Week 3 trade slots: 0/3 used. Total drawdown: 0%.
 **FLAG FOR USER REVIEW**: Day 12 of paper trading (Week 4). Portfolio has held $10,000 cash for all 12 trading days. The XOM thesis has been flagged as a valid setup for 9 consecutive pre-market sessions but blocked by sequential macro timing events (ADP, JOLTS, NFP, now CPI/PPI/FOMC). If the timing-block rules continue to prevent entry through June 18 (Day 17), this warrants explicit user confirmation that: (a) applying timing blocks on day-before and day-of is the intended strictness, (b) waiting 3.5 weeks before first trade is acceptable given the evaluation window, and (c) the strategy goal of beating SPY remains feasible from a cash starting position this late in.
 
 Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0%. Active kill switches: none.
+
+---
+
+## 2026-06-10 — Pre-market Routine ABORTED (PAUSED flag)
+
+- `memory/PAUSED.flag` detected at routine start (contents: "test")
+- Per protocol: no trades executed, no research run, no account queried
+- Routine exits immediately after this log note and commit
+- **User action required**: Remove `memory/PAUSED.flag` and commit/push to re-enable trading routines
