@@ -168,3 +168,7 @@ Open positions: 0
 Active kill switches: none
 Tomorrow: Mon Jun 9 — assess NFP + WTI; enter XOM if NFP ≥ +80K & WTI > $90
 FLAG: 8 trading days fully in cash — gate calibration review recommended
+
+---
+## 2026-06-10 13:46 UTC
+Market-open 2026-06-10: NO TRADES. Two hard blockers: (1) no pre-market research entry for today, (2) CPI May 2026 day — strategy prohibits new positions. Portfolio 0,000 cash, all kill switches clear. Pre-market research required before any trade can execute.
