@@ -230,3 +230,14 @@ Tomorrow: Evaluate XOM entry post-CPI — requires benign print + WTI > $90
 ---
 ## 2026-06-10 19:39 UTC
 Pre-market 2026-06-10: HOLD. CPI +4.2% YoY (hot headline, benign core +0.2%). Iran war, VIX 21.71, SPY -1.1%. XOM thesis expiry JUNE 13 — must execute or abandon. Root /PAUSED.flag (wrong path) — clarify intent.
+
+---
+## 2026-06-11 19:35 UTC
+EOD 2026-06-11
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: +1.61% today, ~+2.2% phase est.
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none (root PAUSED.flag='test' — non-standard, no effect)
+Tomorrow: Friday — evaluate XOM or other setup if WTI >0 and no macro blocks
