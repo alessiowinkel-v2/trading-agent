@@ -842,3 +842,89 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0%. Active kill switches:
 **FLAG FOR USER**: Root `/PAUSED.flag` (content: "test") exists at wrong location. Protocol says `memory/PAUSED.flag`. Please clarify intent: (a) move flag to `memory/PAUSED.flag` to activate pause, (b) delete root flag if it was accidental. Current behavior: NOT paused (per protocol).
 
 Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switches: none.
+
+---
+
+## 2026-06-11 — Pre-market Research
+
+**Note**: Root-level `PAUSED.flag` (content: "test") persists at wrong location. Protocol specifies `memory/PAUSED.flag` — that path is absent. NOT paused per protocol. See prior log for flag history; user action still required.
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; we operate cash-only)
+- Daytrade count: 0/3
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-06-10
+
+### Kill switch check
+- KS-1 Daily drawdown: 0% ($10,000 vs last_equity $10,000) — CLEAR
+- KS-2 Weekly drawdown: 0% (Week 4, $10,000 vs $10,000) — CLEAR
+- KS-3 Total drawdown: 0% ($10,000 vs $10,000 starting) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- KS-5 Activity: 0 trades today / 0 trades this week — CLEAR
+- **All kill switches: CLEAR**
+
+### Market context
+- **WTI**: ~$90.26/bbl (Investing.com Jun 11 data); CME front-month CLN6 $91.24 (-0.07%); range $89.40–$92.51 on Jun 10. Above XOM thesis floor of $87. Iran war supply disruption (Strait of Hormuz still severely constrained — 20%+ global oil supply affected) continues to support price. No confirmed ceasefire.
+- **Brent**: No reliable live quote; Iran war has historically kept Brent at premium to WTI. Supply disruption intact.
+- **S&P 500 futures**: ESM26 signals mixed due to PPI release timing. Pre-PPI Barchart data showed +0.08% on Jun 11. CME (stale, Jun 10) showed +0.32%. Barchart 1-month shows 7,247 vs period open 7,436.75 — suggests meaningful pullback intraday. S&P futures broadly lower on hot PPI print.
+- **VIX**: 22.22 (Cboe spot, Jun 10 close). FRED: 19.87 (Jun 9), 18.92 (Jun 8). VIM26 futures: 19.20. Elevated; Iran war + inflation regime keeping it above 18. Trending slightly down week-over-week but still above comfort zone.
+- **PPI May 2026 (RELEASED TODAY 8:30 AM ET)**: Actual **6.4% YoY** vs prior **6.0% YoY** per Investing.com. MoM consensus was +0.7% (after April's +1.4% surge). Perplexity confirms **stocks fell after hotter-than-expected producer prices**. Context: April PPI was +1.4% MoM / +6.0% YoY — already very hot. May continuing to accelerate to +6.4% YoY is a hawkish signal. However, energy components are driving headline inflation (Iran war supply shock); Fed historically looks through energy-driven PPI spikes. ASSESSMENT: **HOT — bearish for risk assets broadly; neutral-to-supportive for Energy specifically** (energy driving the inflation means WTI stays elevated).
+- **Today's catalysts**: (1) Hot PPI print — primary catalyst, market risk-off. (2) Iran war ongoing — Hormuz restricted, no ceasefire in sight; oil supply disruption premium intact. (3) Initial jobless claims (Jun 11 release). (4) Adobe (ADBE) earnings after close — tech sentiment indicator. (5) World Cup 2026 begins (consumer sentiment color, not market driver).
+- **Earnings before open**: Lovesac (LOVE), MH McGraw Hill (MH), Hooker Furnishings (HOFT) — none are holdings, none are thesis-relevant.
+- **Economic calendar**:
+  - TODAY Jun 11: PPI May 2026 (8:30 AM ET — timing block, released) ← BLOCKING
+  - TODAY Jun 11: Initial Jobless Claims (8:30 AM ET, secondary)
+  - Jun 12: No major scheduled US macro releases. Michigan Consumer Sentiment (preliminary, secondary). **VALID ENTRY WINDOW**
+  - Jun 13: No major scheduled US macro releases. **VALID ENTRY WINDOW — THESIS HARD DEADLINE**
+  - Jun 16-17: FOMC meeting (rate decision June 17) ← BLOCKING both days
+  - Jun 18: FOMC press conference aftermath
+- **Sector momentum**: Energy (XLE) — YTD +20-22%, LEADING; Iran war supply disruption continues to support. Industrials — POSITIVE. Technology — mixed: led on June 1 (+2.50%) but under pressure from hot inflation data (rate sensitivity). Consumer Defensive (XLP) — elevated. Energy remains the strongest structural sector; thesis-consistent.
+
+### Currently-held positions check
+- None (fully in cash). No individual ticker research required.
+
+### XOM Thesis — Day 8 of 10-day clock (**Day 9 tomorrow → TARGET ENTRY**, Day 10 = HARD DEADLINE)
+
+- **Thesis**: XOM is a fundamentals-driven Energy major positioned to benefit from the Iran war oil supply disruption (Strait of Hormuz restricted, 20%+ global supply affected). Permian + Guyana production expansion intact (record Q1 Guyana output 900k+ bpd gross). Golden Pass LNG Train 1 first cargo completed — LNG optionality adds diversification.
+- **Q1 2026 results**: $4.2B GAAP, $8.8B adjusted earnings, $2.7B free cash flow. Strong fundamentals confirmed.
+- **Current price**: $150.62 (StockTitan, Jun 10 close). NOTE: Price has risen ~5-10% since original thesis was drafted at $130-145.
+- **Catalyst**: Iran war structural supply disruption (not cyclical demand), Energy sector leading YTD. Supply constraints unlikely to resolve near-term (talks show no progress).
+- **Risk**: (1) PPI hot print → hawkish Fed → dollar strength → WTI headwind. (2) Ceasefire surprise could instantly collapse geopolitical premium 10-20%/bbl. (3) WTI falls below $90 → thesis floor breached. (4) Broader risk-off (S&P -3%+ today) drags energy despite sector strength. (5) XOM-specific: EIA longer-term WTI forecast at ~$53 (bearish baseline) if war resolves.
+- **Sector momentum**: Energy — LEADING ✓
+- **Buy-side gate for June 12 entry** (to be confirmed at market open):
+  - Gate 1: 0 + 1 = 1 position after fill ≤ 6 ✓
+  - Gate 2: 0 + 1 = 1 trade this week ≤ 3 ✓
+  - Gate 3: 9 shares × ~$150 = ~$1,350 = 13.5% ≤ 15% ✓ (use 9 shares, NOT 10 — 10 would be 15.1%)
+  - Gate 4: $1,350 ≤ $10,000 cash ✓
+  - Gate 5: Daytrade count 0/3; not a day trade (swing entry) ✓
+  - Gate 6: Catalyst documented ✓
+  - Gate 7: Stock (XOM, NYSE-listed common stock) ✓
+  - Gate 8: Q2 earnings ~early August — >5 trading days from June 12 ✓
+  - Gate 9: No kill switches active ✓
+  - **All 9 checks pass** (contingent on WTI > $90 and price confirmed at market open)
+- **Entry plan for June 12 market-open routine**:
+  - **SIZE**: 9 shares (13.5% of equity at ~$150) — respects 15% hard cap
+  - **ORDER TYPE**: Trailing stop market — set trail_percent "10" per Alpaca format
+  - **CONFIRMATION REQUIRED**: WTI still above $90 at 9:45 AM. XOM quote bid/ask spread normal (not halted/illiquid). Market not down >3% (KS-1). Sector not collapsing.
+  - **STOP**: 7-10% below entry (trailing stop order placed simultaneously)
+  - **TARGET**: $172-$181 (+15 to +20%), min 2:1 R:R on 10% stop
+  - **EXIT PLAN — WIN**: Tighten trail to 7% at +15% ($173). Tighten trail to 5% at +20% ($181).
+  - **EXIT PLAN — LOSS**: Hard cut at -7% ($139.10 at $150 entry). Trailing stop should execute first.
+  - **PPI concern**: Hot PPI print is a headwind. If WTI has fallen below $90 overnight or XOM opens down >3%, hold and reassess rather than chasing. Do NOT chase a falling open.
+- **June 13 — HARD DEADLINE**: Execute OR formally abandon thesis with documented explanation. Deferral to June 16+ is not permitted (FOMC block June 16-17; thesis clock expired Day 10).
+
+### Trade candidates
+- **XOM**: BLOCKED TODAY (PPI day timing block). Target entry June 12 market-open, all gate checks pass contingent on fresh price confirmation. HARD DEADLINE June 13.
+- **No other candidates identified.** Market risk-off from hot PPI is not a reason to rotate into a new thesis without documented conviction.
+
+### Decision
+**HOLD — No trades today.** PPI day timing block (hard rule: "Day before / day of major releases"). 
+
+⚠️ **CRITICAL — THESIS EXPIRY**: XOM is Day 8 of 10. June 12 = Day 9 (TARGET). June 13 = Day 10 (HARD DEADLINE). Market-open routine June 12 is a DECISION POINT — not another research session. Entry plan documented above. Gate checks to be re-run live at 9:45 AM ET.
+
+⚠️ **PPI HEADWIND**: May PPI +6.4% YoY (HOT) is a near-term headwind. Thesis survives because energy drives the PPI print — this means WTI support, not XOM harm. But must confirm WTI >$90 at June 12 market open before executing.
+
+Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switches: none.
