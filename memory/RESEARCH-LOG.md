@@ -928,3 +928,73 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 ⚠️ **PPI HEADWIND**: May PPI +6.4% YoY (HOT) is a near-term headwind. Thesis survives because energy drives the PPI print — this means WTI support, not XOM harm. But must confirm WTI >$90 at June 12 market open before executing.
 
 Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switches: none.
+
+---
+
+## 2026-06-12 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3
+- Open positions: 0
+- Open orders: 0
+
+### Kill switch check
+- KS-1 Daily drawdown: 0% — CLEAR
+- KS-2 Weekly drawdown: 0% — CLEAR
+- KS-3 Total drawdown: 0% — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- KS-5 Activity: 0 trades — CLEAR
+- **All kill switches: CLEAR**
+
+### Market context
+- **WTI**: ~$86.21/bbl (oilprice.com, June 12 live). CME Jun 2026 range $83.69–$85.44 corroborates. FRED last confirmed close: $95.00 on June 8. WTI has fallen ~$9/bbl from the June 8 close; market appears to be pricing in partial Hormuz reopening from May 28 US-Iran deal. **BELOW $90 thesis floor for XOM.**
+- **Brent**: ~$86–89 range implied by CME/Kalshi data (Kalshi Jun 12 market set threshold at $88.99 for 5PM EDT). Brent at $101 on June 3, declining trend.
+- **S&P 500 futures**: ~+0.02% to +1.73% premarket (Barchart/Markets Insider). Market mildly positive after SPY +1.61% yesterday (June 11) despite hot PPI print.
+- **VIX**: 19.44 intraday (Cboe), declining from 22.22 June 10 close and 22.22 June 9 FRED close. Positive trend.
+- **Today's catalysts**: (1) Michigan Consumer Sentiment preliminary (June) at 10:00 AM ET — actual 46.1 vs 44.8 prior, slight improvement, secondary; (2) OPEC monthly oil report release (energy sector focused); (3) Iran/Hormuz situation: US-Iran deal to re-open strait signed ~May 28 but Iran military still announced closure on June 11 — mixed signals, market pricing partial reopening; (4) Continuation of hot PPI digestion (June 11 actual 6.4% YoY vs prior 6.0% — energy-driven inflation).
+- **Earnings before open**: None noteworthy. Sofgen Pharma (PROCF) only — not relevant.
+- **Economic calendar**: Michigan Sentiment prel. (10:00 AM ET) — secondary, not a blocking event. No major US macro releases. **CLEAN entry window from macro standpoint.** Next block: FOMC June 16-17 (rate decision June 17).
+- **Sector momentum**: Energy (XLE): ~$57.12 on June 11, off recent highs as WTI declines. AI/tech leading week of June 8-12. Energy remains structurally positive YTD but near-term under pressure from Hormuz-reopening news.
+
+### Currently-held positions check
+- No open positions.
+
+### XOM Thesis — Day 9 of 10 (HARD DEADLINE IS MONDAY JUNE 15)
+
+⚠️ **WTI BELOW THESIS FLOOR**: WTI at ~$86.21 vs $90 minimum threshold. Entry condition NOT met today.
+
+**Thesis status re-assessment:**
+- Original thesis: Iran war structural supply disruption (Hormuz blockage) keeps WTI above $90; XOM benefits via higher realized oil price and premium sector momentum.
+- **New information**: US-Iran negotiators reached a deal ~May 28 to re-open Hormuz and extend ceasefire. Iran military still announced closure on June 11, but market is pricing in gradual reopening (WTI fell ~$9 from June 8 close).
+- **Risk level elevated**: If Hormuz reopens sustainably, WTI reverts toward $70-80 range; supply disruption premium fades; XOM thesis loses its primary catalyst.
+- **Thesis NOT yet abandoned**: The strait is NOT confirmed fully open. Iran still has leverage. Prior spikes recurred (ceasefire cycle since April). Monday June 15 is the last window to see if WTI recovers.
+- **XOM stock price**: ~$146-155 range based on June 11 data (Kraken $146.71, Google Finance open $152.30). Digrin June 2026 avg $152.06. Stock holding relatively well vs oil drop — suggests some market skepticism on full Hormuz reopening.
+- **DECISION FOR MONDAY JUNE 15**: If WTI recovers above $90 at 9:45 AM ET → execute with 9-share plan. If WTI remains below $90 → FORMALLY ABANDON XOM thesis (Day 10 expired, Hormuz thesis structurally weakened, FOMC block starts immediately after).
+
+**Buy-side gate June 15 (conditional check):**
+- Gate 1–5, 7–9: all pass (same as June 11 log)
+- Gate 6: Catalyst — **CONDITIONAL** on WTI >$90 confirming supply thesis intact
+- Entry plan: 9 shares × ~$150 = ~$1,350 (13.5%), trailing stop "10"% as string
+
+### Trade candidates
+- **XOM**: BLOCKED TODAY — WTI at $86 below $90 floor. Entry condition fails. **HARD DEADLINE MONDAY JUNE 15.** If WTI still below $90 at Monday 9:45 AM → formally abandon.
+- **Other candidates**: ZERO. No new setup with documented catalyst. Market is clean on macro but no conviction thesis identified outside XOM. Patience is correct.
+
+### Risk factors for today
+1. WTI may continue declining if Hormuz reopening confirms → XOM thesis further weakens
+2. Michigan Consumer Sentiment miss (consensus 46.0) could pressure consumer discretionary
+3. FOMC week begins Monday — markets may reduce risk ahead of June 16-17 meeting
+4. Root-level PAUSED.flag (content: "test") present — non-standard location (standard is memory/PAUSED.flag), not triggering standard kill switch per prior sessions' assessment
+
+### Decision
+**HOLD** — WTI below $90 thesis floor. Zero qualifying candidates today. 
+
+⚠️ **FINAL DECISION POINT**: Monday June 15 = XOM Day 10 (HARD DEADLINE). Entry or formal abandonment required. No further deferrals permissible. FOMC block starts June 16, making June 15 the last possible entry window for the XOM thesis.
+
+- Weekly trade slots: 0/3 used (Week 5)
+- Total drawdown: 0.00%
+- Phase P&L: $0.00 (0.00%)
+- Active kill switches: none
