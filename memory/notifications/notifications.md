@@ -252,3 +252,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none (Root PAUSED.flag at /PAUSED.flag is non-standard)
 Tomorrow: Weekend — no trades. Week 5 plan: evaluate XOM entry Monday if WTI >0 and no blocking macro events.
+
+---
+## 2026-06-14 20:35 UTC
+Week ending 2026-06-12
+Portfolio: $10,000.00 (+0.00% week, +0.00% phase)
+vs SPY: -0.55% week, +1.30% phase (SPY -1.30% phase)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: June 8 market-open gap = 3rd straight week undocumented conditional; WTI fell to $86 on June 12, blocking XOM entry (thesis floor breach). June 15 = XOM execute-or-abandon deadline.
+Graduation: 3/7 criteria met

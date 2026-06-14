@@ -635,3 +635,124 @@ No trades placed. Five trading days, five documented HOLD decisions.
 **Graduation criteria met: 3/7** (SPY criterion improved from ❌ to 🟡)
 
 Days running counter: **8** (Day 1 = 2026-05-27; Day 8 = 2026-06-05)
+
+---
+
+## Week ending 2026-06-12
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday June 5 close) | $10,000.00 |
+| Ending portfolio (Friday June 12 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jun 5 → Jun 12) | +0.55% (SPY $737.55 → $741.64; Perplexity/SSGA official close) |
+| Bot vs S&P this week | −0.55% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −1.30% ($751.38 → $741.64); bot leads by +1.30% |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+**SPY daily closes (confirmed):**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| Jun 5 (prior Fri) | $737.55 | — |
+| Jun 8 (Mon) | ~est. +1.01% intraday (unconfirmed) | — |
+| Jun 9–11 (Tue–Thu) | — | — |
+| Jun 12 (Fri) | $741.64 (SSGA official) | +1.70% per EOD log |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**XOM status**: Thesis reached Day 9 of 10-day clock; WTI fell to $86.21 on June 12 (below $90 floor). Monday June 15 is final decision point — execute if WTI recovers above $90, formally abandon if not.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five HOLD decisions.
+
+**Jun 8 (Day 9 — Monday):**
+- Pre-market research: Complete. XOM identified as conditional candidate. NFP +172K (released Jun 5) cleared the ≥80K trigger. Four explicit verifications required at 9:45 AM: WTI > $90, XOM bid > $145, no breaking news, SPY not gapping down > 1%.
+- Market-open decision: **UNDOCUMENTED** — EOD snapshot shows no trade, but no rationale recorded. This is the same failure as June 2 (JOLTS). Third consecutive week. At 9:45 AM, WTI was right at $90.25–$90.54 (marginal); VIX was elevated at 21.51 from NFP day. Likely conclusion: WTI marginal pass or fail, SPY potentially gapping down. No way to falsify without documentation.
+- Process verdict: **Fail** on documentation. Market-open conditional decision gaps are now a pattern, not an incident.
+
+**Jun 9 (Day 10 — Tuesday):**
+- CPI prints tomorrow (June 10) → "day before major release" block applied.
+- Decision: HOLD. Deferred to June 12 (first clean window post-CPI/PPI).
+- Process verdict: **Correct** — clean rule application.
+
+**Jun 10 (Day 11 — Wednesday):**
+- CPI May 2026 day. Released: Headline +4.2% YoY / +0.5% MoM (hot headline); Core +0.2% MoM (benign). Hard timing block in effect.
+- VIX 20–21, S&P futures down ~1.1% premarket.
+- Decision: HOLD — CPI day timing block.
+- Process verdict: **Correct**.
+
+**Jun 11 (Day 12 — Thursday):**
+- PPI May 2026 day. Released: 6.4% YoY (hot, vs 6.0% prior). Energy-driven. Hard timing block.
+- XOM Day 8 of 10-day clock. Full entry plan for June 12 documented in advance (9 shares × ~$150, 10% trailing stop, target $172–$181, gate checks all pass contingent on live price).
+- Decision: HOLD — PPI day timing block. Excellent advance preparation for next day.
+- Process verdict: **Correct**. Pre-planning quality was strong.
+
+**Jun 12 (Day 13 — Friday):**
+- First clean macro day: no major scheduled US release. FOMC starts Monday June 16.
+- WTI: ~$86.21/bbl (oilprice.com). Below $90 thesis floor. US-Iran deal on Hormuz (signed ~May 28) being priced in. Market pricing partial reopening of the strait.
+- Gate 6 check: **Catalyst FAILS** — the XOM thesis is explicitly conditional on WTI >$90 as the supply-disruption confirmation. At $86, the original thesis floor is breached.
+- Decision: HOLD — WTI below thesis floor. Entry condition not met. Plan: June 15 final decision point (WTI recovers → execute; WTI stays below → formally abandon thesis per 10-day rule).
+- Process verdict: **Correct** — do not chase falling oil into an XOM entry against the stated thesis conditions.
+
+**In hindsight**: Would I make any different decision? June 9–11 are clean rules, no regrets. June 12 is also correct — entering XOM with WTI at $86 when the thesis explicitly required WTI >$90 would have been thesis drift. The June 8 decision is the only uncertain day; given the marginal WTI level (~$90.25) and elevated VIX (21.51), a conservative pass at 9:45 AM may have been justified — but this cannot be confirmed or challenged without documentation.
+
+### Self-grades (be HARSH)
+- Process discipline: **B−** — Three timing blocks applied cleanly; June 12 WTI-floor rejection correct and well-reasoned. Hard deduction: June 8 market-open gap is the third consecutive week of the same failure. This is now a pattern, not an incident, and warrants systemic escalation.
+- Documentation quality: **C+** — Research log entries complete and detailed for all 5 days; EOD snapshots filed 5/5. But the June 8 gap degrades this to C+ — the same failure for 3 weeks without resolution is a documentation failure, not bad luck.
+- Risk management: **A** — 0.00% drawdown. All kill switches checked and clear. WTI floor correctly blocked entry per buy-side gate 6. No positions exposed to CPI/PPI volatility.
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.55% this week. Phase lead +1.30% maintained only because SPY is net-negative phase. 13 trading days, 0 trades. XOM thesis may expire Monday.
+- **Overall: C** — Regression from last week's B−. Correct decisions on 4 of 5 days. The recurring documentation gap is the primary drag. Thirteen days in cash with no executed trade is approaching the edge of "discipline" vs "inability to execute."
+
+### What worked (3-5 bullets)
+- CPI, PPI timing blocks correctly applied — no positions exposed to hot inflation prints
+- June 12 WTI floor breach correctly identified and blocked entry — this is the thesis discipline working as intended
+- 10-day thesis expiry clock tracked and enforced; no indefinite deferral
+- June 11 advance planning for June 12 was specific and actionable (gate checks pre-run, size/stop/target documented)
+- Phase lead maintained (+1.30% vs SPY) through cash preservation in a volatile macro environment
+
+### What didn't work (3-5 bullets)
+- June 8 market-open decision undocumented for the 3rd consecutive week — this is now a systemic failure, not an isolated gap; user escalation required
+- XOM thesis has been live since June 2 (10+ sessions); WTI has fallen ~$9/bbl since June 5, potentially invalidating the thesis permanently
+- 13 trading days, 0 trades — "patience > activity" is now indistinguishable from structural inability to execute
+- SPY rebounded +0.55% this week while we held cash — outperformance requires either catching upside or protecting against downside, not just avoiding one
+- Geopolitical oil premium (the thesis driver) reversed in days as Hormuz signals shifted — highlights the volatility risk in geopolitical-premium theses
+
+### Key lessons (added to lessons.md)
+- WTI below thesis floor is a correct gate-6 rejection, not a "close enough" judgment call — the $90 floor was set with reasoning; honor it
+- Recurring market-open documentation gaps become systemic: June 2, June 8, now three weeks without resolution — this is a process breakdown requiring user-level fix, not agent-level workaround
+- Geopolitical oil premiums can reverse in days: the Iran war supply premium that drove XOM's catalyst (WTI at $93–98) unwound by ~$9/bbl in one week on Hormuz reopening signals; such premiums are fragile thesis drivers
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Market-open documentation failure (5th flag, now escalated to systemic)**: June 2, June 8 — same failure, third straight week. The conditional trade plan at market-open produces no decision record. This requires either (a) a process fix ensuring the market-open routine logs the triggering data result and action taken, or (b) user confirmation that manual review at each market open is acceptable. Cannot be fixed by the agent alone; needs user-level action.
+2. **XOM June 15 hard deadline**: WTI at $86.21 on June 12 — below $90 thesis floor. Monday June 15 is the final decision point. If WTI ≥ $90 at 9:45 AM → execute with documented entry. If WTI < $90 → formally abandon the thesis, log the abandonment, and identify a new setup for the post-FOMC window (June 18+). FOMC starts June 16, making June 15 the last valid entry window for any active thesis.
+3. **New thesis needed post-FOMC**: If XOM is abandoned, the portfolio has no candidate for the post-FOMC window (June 18+). With 13 days in cash, the user should review whether any sector warrants attention. Possible candidates: AI/tech (NQ recovery), Industrials (if ISM still expanding), Consumer Staples (defensive rotation). No unilateral action — flagging that the pipeline is empty.
+4. **Structural June timing blocks**: NFP (June 5) + CPI (June 10) + PPI (June 11) + FOMC (June 16-17) = 5 blocked days in a 21-trading-day month (~24% blocked). This month has had more blocking events than open windows. If July repeats this pattern, the strategy should explicitly address "blocked-month behavior" so the agent doesn't default to indefinite deferral.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (13/30 days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat while SPY −1.30% phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY −1.30% phase; bot +1.30% ahead — but only because SPY is negative phase, not because bot earned returns)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; lessons.md lowercase naming persists but functional)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **13** (Day 1 = 2026-05-27; Day 13 = 2026-06-12)

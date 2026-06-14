@@ -153,3 +153,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: XOM thesis has been valid since June 2 (9+ pre-market sessions). Every day has produced a different blocking reason. Each individual block was defensible; the cumulative pattern of never executing a valid thesis is itself a problem.
 **Insight**: If a thesis clears all 9 buy-side gate checks repeatedly but keeps hitting timing blocks, eventually the thesis ages out and the original catalyst is gone. There must be a deadline — if XOM is not entered by June 13 post-CPI, either execute with explicit reasoning or formally close the thesis with documented explanation. Open-ended deferral is not patience; it is avoidance.
 **Rule change**: Flag to user: add a "thesis expiry" concept to TRADING-STRATEGY.md — if a setup clears the gate 3+ times but is blocked by timing each time, it must be executed or formally abandoned within 10 trading days of first qualifying, or the catalyst is assumed stale.
+
+## 2026-06-12 — WTI below thesis floor is a correct gate-6 rejection
+
+**Context**: XOM entry plan required WTI >$90. On June 12 (the first clean macro window after CPI/PPI), WTI was $86.21 — below the documented floor. Entry was blocked by gate 6 (catalyst condition fails).
+**Insight**: When a thesis is explicitly conditional on a specific price level for the underlying commodity, finding the commodity below that level is not "close enough." The floor was set based on FCF economics and supply/demand reasoning; entering below it means paying for a thesis that no longer exists. Honor the floor, don't drift to "well, it's only $4 below."
+**Rule change**: None. Buy-side gate 6 already covers this. Confirming it works as designed.
+
+## 2026-06-12 — Recurring market-open documentation gaps are systemic, not isolated
+
+**Context**: June 2 (JOLTS conditional), June 8 (NFP/WTI conditional) — both produced conditional trade plans in pre-market research; neither documented what happened at market open. This is the third consecutive week with the same gap.
+**Insight**: A one-time documentation gap is an oversight. Three consecutive weeks of the same gap is a systemic process failure. The market-open routine clearly does not have a requirement to log: (a) triggering data result, (b) condition met/failed, (c) action taken. Until this is fixed at the process level, conditional trade plans are unfalsifiable.
+**Rule change**: Flag to user (5th escalation): market-open routine must log the decision record when a conditional plan exists. Cannot be fixed by the agent — requires process/orchestration change.
+
+## 2026-06-12 — Geopolitical oil premiums can reverse in days; do not treat them as structural
+
+**Context**: The Iran war thesis drove WTI from ~$87 (June 1) to $93–98 (June 8–9) on supply disruption fears. By June 12, WTI had fallen to $86 on US-Iran deal signals and partial Hormuz reopening pricing. A ~$9/bbl swing in 3 trading days.
+**Insight**: Geopolitical premiums are fragile thesis drivers. When the primary thesis catalyst is geopolitical (supply disruption risk premium rather than fundamental demand), the thesis can evaporate overnight on a ceasefire rumor or a diplomatic signal. Build in a wider safety margin for geopolitical-driven entries, or require confirmation that the supply disruption is structural (e.g., confirmed physical damage to infrastructure, not just political tension).
+**Rule change**: Flagging for user: consider whether future geopolitical-premium theses should require WTI above a higher floor ($92–95 vs $90) to provide more buffer before the thesis breaks. No unilateral change.
