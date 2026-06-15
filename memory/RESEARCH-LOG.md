@@ -998,3 +998,77 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 - Total drawdown: 0.00%
 - Phase P&L: $0.00 (0.00%)
 - Active kill switches: none
+
+---
+
+## 2026-06-15 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3
+- Open positions: 0
+- Open orders: 0
+
+### Kill switch check
+- KS-1 Daily drawdown: 0% — CLEAR
+- KS-2 Weekly drawdown: 0% — CLEAR
+- KS-3 Total drawdown: 0% — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- KS-5 Activity: 0 trades — CLEAR
+- Root-level PAUSED.flag (content: "test") present — non-standard location; memory/PAUSED.flag absent; no standard KS triggered (consistent with all prior sessions)
+- **All standard kill switches: CLEAR**
+
+### Market context
+- **WTI**: ~$80.73/bbl (CME Group, June 15 00:30 CT). Down from $86.21 on June 12. Barchart confirms continued decline: July WTI fell -3.23% Friday and -2.58% Thursday on US-Iran interim deal signals and partial Hormuz reopening. Lines.com prediction market assigned 82.5% probability WTI closes ABOVE $80 today — meaning ~17.5% chance it falls below $80. Price is now well below the $90 XOM thesis floor and declining.
+- **Brent**: EIA forecasts $105 average June/July (from Polymarket context) — appears stale/forecast, not live quote. Brent direction consistent with WTI downward trend.
+- **S&P 500 futures**: ESM26 +1.21% premarket (~7,524, +89.75 pts). Barchart shows +0.46% morning session. Broadly positive open expected. Q1 2026 S&P 500 earnings beat rate at 84% of reporters, EPS growth ~28.4% YoY.
+- **VIX**: ~17.68 (Cboe live), declining from 19.44 on June 11 and 22.22 on June 10. Calming trend — market fear receding.
+- **Today's catalysts**:
+  - Empire State Manufacturing Survey (June) at 7:30 AM ET — forecast 13.2 vs prior 19.6 (expected decline; still positive territory but decelerating). Secondary indicator; not a timing block.
+  - AI infrastructure spending continues to dominate equity narrative: J.P. Morgan calling AI-driven supercycle driving 13-15% above-trend earnings growth. DELL highlighted with $51B AI server backlog.
+  - US-Iran deal for Hormuz reopening is the primary macro negative for oil; WTI continues to price in reduced supply disruption premium.
+- **Earnings before open**: No major S&P 500 names before the open today. Week of June 15 most-anticipated: Kroger (KR), Progressive (PGR), Accenture (ACN), Jabil (JBL) — specific dates within week not confirmed.
+- **Economic calendar this week**:
+  - June 15: Empire State Manufacturing 7:30 AM ET (secondary)
+  - June 16-17: FOMC meeting — rate decision **June 17** (BLOCKING — strategy: "Day of FOMC announcement")
+  - June 17: Retail Sales advance estimate (possibly same day as FOMC — double block)
+  - June 18-19: Post-FOMC, next clean entry window
+- **Sector momentum**: Leading quadrant — Energy, Consumer Staples, Industrials, Materials. Lagging — Technology, Communications, Consumer Discretionary, Financials. Note: this contradicts the AI/tech-driven premarket tone today; the sector rotation data may be slightly stale (week-over-week basis, not real-time today).
+
+### ⚠️ XOM THESIS — FORMALLY ABANDONED (Day 10, Hard Deadline)
+
+**Decision: XOM thesis CLOSED. Entry will not occur.**
+
+- WTI at $80.73 today vs $90 thesis floor — $9.27 below floor and declining.
+- WTI was $86 on June 12, $93-98 on June 8-9. Supply disruption premium has almost entirely unwound.
+- US-Iran interim deal (Hormuz) is being priced as structural reopening, not a temporary ceasefire.
+- This is Day 10 of the thesis window (first qualified June 2). Hard deadline reached. No further deferral permissible per lessons.md 2026-06-05 entry.
+- FOMC announcement June 17 would have independently blocked any Monday entry from carrying cleanly through the week.
+- **Thesis tombstone**: Initiated June 2; primary catalyst was Iran-driven WTI supply disruption premium. Catalyst evaporated via US-Iran deal signed ~May 28. WTI fell ~$15/bbl from peak to today. Thesis never passed gate-6 on any day with a clean macro window. Formally closed June 15, 2026.
+
+### Trade candidates
+- **XOM**: FORMALLY CLOSED. See above.
+- **New candidates**: ZERO.
+  - No new thesis with documented catalyst and fundamentals available today.
+  - FOMC on Wednesday June 17 creates 2-trading-day holding risk for any position entered today (announcement day is a hard block on trading).
+  - Q1 earnings season wind-down; most S&P 500 names have already reported. No clear catalyst for any individual sector name today beyond AI-capex narrative.
+  - AI/tech premarket strength today is momentum-driven ("AI hype"), not a fundamentals thesis per strategy philosophy.
+  - Consumer Staples / Industrials leading sectors warrant research for post-FOMC entry (earliest June 18), but specific candidates not yet identified.
+  - Empire State Manufacturing likely to show deceleration (13.2 vs 19.6) — mildly negative for Industrials sub-sector entry today.
+  - Per lessons.md 2026-05-27: "Boring is good — if a thesis is 'AI hype' or 'meme momentum,' it's not a thesis."
+
+### Decision
+**HOLD — No trades today. Zero qualifying candidates.**
+
+- XOM thesis formally expired and abandoned.
+- FOMC announcement Wednesday June 17 — strategy blocks trading that day.
+- Post-FOMC research plan: Starting June 16 pre-market, begin screening Consumer Staples (KR post-earnings if clean) and Industrials (specific names with near-term catalyst) for potential June 18-19 entry.
+- Market tone positive (+1.21% futures, VIX declining) but "market is going up" is not a thesis.
+
+**Weekly trade slots**: 0/3 used (Week 5, start)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative lag vs SPY**: SPY has appreciated meaningfully since bot launch (May 27 $751.38 → June 12 $737.76 close shows a dip, but overall 14 trading days in cash = significant opportunity cost)
+**Active kill switches**: none (standard)
