@@ -201,3 +201,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 13, end of Week 4. No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained +1.70% today (close $737.76); we trail by that margin on the day. Cumulative phase P&L remains flat at 0.00% while SPY has appreciated meaningfully over 13 days. Root-level PAUSED.flag (content: "test") persists — non-standard location, no standard KS triggered. XOM thesis remains a candidate for Week 5 entry; entry contingent on WTI >$90 and no blocking macro events.
 **Active kill switches:** none (standard). Root-level PAUSED.flag present (non-standard, does not trigger standard KS).
+
+---
+
+### 2026-06-15 — EOD Snapshot (Day 14, Monday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** ~+0.13% (est.)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 14, start of Week 5. No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained an estimated ~+0.13% today (sources diverge; StockAnalysis Jun 12 close $750.81 → Investing.com Jun 15 close $751.80). Cumulative phase P&L remains flat at 0.00% while SPY has risen materially over 14 days. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. XOM thesis remains active candidate for Week 5 entry; contingent on WTI >$90 and no blocking macro events.
+**Active kill switches:** none (standard). Root-level PAUSED.flag present (non-standard location; does not trigger standard KS).
