@@ -1072,3 +1072,92 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative lag vs SPY**: SPY has appreciated meaningfully since bot launch (May 27 $751.38 → June 12 $737.76 close shows a dip, but overall 14 trading days in cash = significant opportunity cost)
 **Active kill switches**: none (standard)
+
+---
+
+## 2026-06-16 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (4x margin account, using cash only)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Kill switch status
+- KS-1 Daily drawdown: 0% (equity $10,000 vs last_equity $10,000) — CLEAR
+- KS-2 Weekly drawdown: 0% (week start $10,000) — CLEAR
+- KS-3 Total drawdown: 0% (vs $10,000 starting) — CLEAR
+- KS-4 Position breach: no positions — CLEAR
+- KS-5 Activity: 0 trades today / 0 this week — CLEAR
+- KS-6 API errors: 0 — CLEAR
+- Root-level PAUSED.flag (content: "test") present again post-pull — non-standard location, memory/PAUSED.flag absent; no standard KS triggered (consistent with all prior sessions)
+- **All standard kill switches: CLEAR**
+
+### Market context
+- **WTI**: ~$80.43/bbl (CME CLN26, last updated 00:37 CT June 16). Declining — was $86 June 12, $93-98 early June. US-Iran interim deal driving structural unwind of geopolitical premium.
+- **Brent**: ~$82.50/bbl (est., directionally consistent with WTI decline).
+- **S&P 500 futures (ESM26)**: ~7,524 (+1.21% / +89.75 pts) premarket. Yesterday June 15: S&P 500 "best day since April" per market close headlines; index +1.68% Monday on broad risk-on. Nasdaq 100 +3.06%.
+- **VIX**: ~16.19 (Cboe, June 16). Prior closes: June 12: 17.68; June 11: 19.44; June 10: 22.22. Fear declining; market calming.
+- **Today's catalysts**:
+  - US-Iran framework agreement on Hormuz is the primary overnight driver — oil down, equities broadly up.
+  - SpaceX IPO debut mentioned as additional positive for risk sentiment.
+  - AI infrastructure capex narrative continues to dominate tech/semi leadership.
+  - Empire State Manufacturing (June) at 8:30 AM ET — forecast 13.2 vs prior 19.6 (decelerating; secondary indicator, not a timing block).
+  - FOMC meeting begins today June 16 (day 1 of 2-day meeting).
+- **Earnings before open today (June 16)**: WLY (John Wiley), LZB (La-Z-Boy), KMX (CarMax), SWBI (Smith & Wesson). None relevant to our strategy universe.
+- **Economic calendar**:
+  - June 16: Empire State Manufacturing 8:30 AM ET (secondary)
+  - **June 17: FOMC rate decision 2:00 PM ET — HARD BLOCK (strategy: "Day of FOMC announcement")**
+  - June 18: KR (Kroger) Q1 earnings before open; Retail Sales advance estimate
+  - June 19+: Post-FOMC entry window opens
+- **FOMC preview**: Rate hold virtually certain (97.8% probability per prediction markets). Current target range: 3.50–3.75%. Key watch: language bias shift — neutral vs easing framing. Statement tone matters more than the decision itself.
+- **Sector momentum (June 14-15 data)**:
+  - Leading: Semiconductors, Banks/Financials, Housing
+  - Lagging: Energy, Utilities, Consumer Staples
+  - **Note**: Consumer Staples now confirmed lagging (contradicts yesterday's Perplexity data). Energy consistent with WTI decline. AI/semi leadership is momentum-driven.
+  - Broader trend: S&P 500 YTD +9.08%; equal-weight outperforming mega-cap (rotation broadening)
+
+### Currently-held positions check
+- No open positions to review.
+
+### Trade candidates
+
+**ZERO qualifying candidates today.**
+
+**Timing blocks (cumulative):**
+1. **Day of FOMC meeting (June 16-17)**: FOMC begins today. Strategy hard-blocks trading on June 17 (announcement day). Any position entered today must survive through June 17 announcement — effectively requires holding through an unknown statement/press conference. Spirit of the block applies to today as well.
+2. **KR earnings June 18 before open**: KR was the post-FOMC Consumer Staples candidate flagged in June 15 research. KR earnings are June 18 — within 5 trading days of today (gate 8 violation). Cannot enter KR ahead of earnings. Post-report entry (June 19+) possible IF thesis develops after seeing results.
+3. **No thesis with documented catalyst**: No specific stock has a fundamental thesis + specific catalyst documented today. "Market is going up" and "FOMC will be neutral" are not theses.
+
+**Sector disqualifications:**
+- Energy: WTI $80.43, well below any viable thesis floor. Lagging sector confirmed.
+- Consumer Staples: Now a lagging sector per June 14-15 data.
+- Semiconductors/AI tech: Leadership is AI capex hype narrative, not a fundamentals thesis per strategy.
+- Financials/Banks: Leading sector, but FOMC language unknown until June 17 — entering banks before the FOMC statement is a directional bet on rate language.
+
+**Post-FOMC candidate pipeline (for June 18-19 evaluation, NOT pre-committed):**
+- **KR (Kroger)**: Reports June 18 before open. If beats EPS ($1.58 est.) and provides positive guidance, could set up an entry June 19. Sector is lagging but KR-specific catalyst (post-earnings) could override sector headwind. Needs full thesis evaluation post-report.
+- **Financials (sector screen)**: If FOMC language is neutral-to-dovish (signals eventual 2026 cuts), bank stocks may see multiple re-rating. No specific name today — screen needed.
+- **Nothing else**: Do not manufacture candidates. Zero is correct.
+
+### Decision
+**HOLD — No trades. Zero qualifying candidates.**
+
+- FOMC June 17 = hard block tomorrow; today's entries carry that risk.
+- KR within 5 trading days of earnings (June 18) = gate 8 block.
+- Consumer Staples now lagging sector; no non-KR Consumer Staples thesis.
+- Semiconductors/AI = momentum/hype thesis (prohibited by strategy philosophy).
+- Financials = unknown until FOMC language revealed June 17.
+
+**Post-FOMC action plan**: On June 17 post-announcement (or June 18 pre-market):
+1. Read FOMC statement for language shift (neutral vs easing)
+2. If dovish surprise: screen Financials for entry thesis
+3. Read KR earnings if reported June 18 before open → build thesis if beats
+4. Begin industrials screen for specific name with earnings >5 trading days out
+
+**Weekly trade slots**: 0/3 used (Week 5, Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: SPY has materially outpaced since launch (May 27 → June 15: SPY gained on most days while we were 100% cash for 14 trading days). Opportunity cost real but 90-day window is what matters.
+**Active kill switches**: none (standard). Root-level PAUSED.flag (non-standard) present.
