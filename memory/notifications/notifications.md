@@ -287,3 +287,15 @@ Open positions: 0
 Active kill switches: none
 Note: root-level PAUSED.flag (content: 'test') persists — non-standard location, no standard KS triggered
 Tomorrow: XOM thesis eligible (WTI >0 check); 0/3 weekly slots open
+
+---
+## 2026-06-17 19:34 UTC
+EOD 2026-06-17
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: +0.04% today (close ~$750.61)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+  Root-level PAUSED.flag (non-standard, no standard KS triggered)
+Tomorrow: Evaluate XOM thesis (Week 5, 0/3 slots used); entry contingent on WTI >$90
