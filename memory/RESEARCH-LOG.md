@@ -1160,4 +1160,80 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: SPY has materially outpaced since launch (May 27 → June 15: SPY gained on most days while we were 100% cash for 14 trading days). Opportunity cost real but 90-day window is what matters.
+
+---
+
+## 2026-06-17 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin account — cash-only discipline applies)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Market context
+- **WTI**: ~$75.24/bbl (CME, June 17 pre-market, down -1.07%). Continued decline from $82 Jun 16 and $96+ early June. US-Iran peace deal removing the geopolitical supply-risk premium. XOM thesis floor (WTI >$90) definitively broken.
+- **Brent**: No fresh quote; estimated ~$77-79/bbl (directionally consistent with WTI, ~$2-4 premium).
+- **S&P 500 futures (ESM26)**: ~7,587-7,612 premarket (Investing.com 10:00 AM EDT). Yesterday's S&P 500 closed -0.6% at 7,511.35 (tech-driven selloff). Futures suggest modest pre-FOMC bounce.
+- **VIX**: 16.21 spot / 16.41 (Cboe futures). Fear continuing to decline (was 22.22 June 10). Low-volatility environment.
+- **Yesterday (June 16)**: S&P -0.6%, Nasdaq 100 -1.9%, Dow +0.6% to fresh record (51,999.67). Philly Semiconductor Index -5.7% (Nvidia -2.4%, MSFT -1.5%). JPMorgan +3.7%, SpaceX +4.8%. Pronounced rotation: chips out, banks in.
+- **Today's catalysts**:
+  - **FOMC rate decision 2:00 PM ET — HARD BLOCK** (strategy rule: "Day of FOMC announcement"). Rate hold 97% probability (CME FedWatch). Focus: Kevin Warsh's FIRST press conference (2:30 PM ET) and updated dot plot. Gap between Fed dot plot (implied cuts) and market pricing (leaning toward potential hikes) is a wildcard.
+  - US-Iran peace deal: Structural oil supply-risk unwind. WTI continuing multi-day slide.
+  - JBL (Jabil) reported BMO today — EPS $3.08 est.; result will be in market data post-open.
+  - KMX (CarMax) reported BMO today — EPS ~$1.02 est.
+  - Retail Sales (May) at 8:30 AM ET.
+- **Earnings today**: Jabil (JBL) BMO, CarMax (KMX) BMO, Nidec (NJDCY) BMO. Smith & Wesson (SWBI) AMC.
+- **Tomorrow June 18**: Accenture (ACN) BMO, Kroger (KR) BMO, Progressive (PGR) monthly operating update.
+- **Economic calendar**:
+  - 8:30 AM ET: US Retail Sales (May)
+  - 2:00 PM ET: **FOMC rate decision** (hold expected, 3.50%-3.75% unchanged)
+  - 2:30 PM ET: Fed Chair Kevin Warsh press conference (debut)
+  - Dot plot (SEP) also released at 2:00 PM ET
+- **Sector momentum** (Schwab, updated ~June 16 — NOTE: Energy data reflects Iran-war period, now stale):
+  - Trailing 6-month leaders: Energy +35.3% (stale — was Iran premium; WTI now $75), IT +18.7%, Industrials +13.1%, Consumer Staples +9.9%
+  - Trailing 6-month laggards: Health Care -4.5%, Financials -1.0%
+  - **Current dynamics (post-Iran deal)**: Energy sector pivoting LAGGING (supply surge incoming, WTI in freefall from $96 to $75 in 2 weeks). Financials IMPROVING (bank strength, possible Warsh dovish surprise catalyst). Tech/Semi rotation mixed — large-cap AI intact, chip hardware taking correction.
+
+### Currently-held positions check
+- No open positions.
+
+### Trade candidates
+
+**ZERO candidates. Two independent hard blocks prevent any trade today:**
+
+1. **FOMC announcement day (primary block)**: Strategy rule explicitly bars trading on "Day of FOMC announcement." Decision 2:00 PM ET, Warsh press conf 2:30 PM ET. Any position entered today must absorb unknown FOMC statement + dot plot + new-chair language risk. This is not a close call.
+
+2. **KR within 5 trading days of earnings**: KR (the strongest post-FOMC Consumer Staples candidate from prior sessions) reports June 18 BMO — that is 1 trading day away. Buy-side gate check #8 (no earnings within next 5 trading days) blocks KR entry today or tomorrow.
+
+3. **ACN within 5 trading days of earnings**: Accenture reports June 18 BMO — also blocked for same reason.
+
+4. **JBL (Jabil)**: Reported BMO today. No prior thesis documented; cannot enter post-earnings without a full thesis write-up in a future session. Possible candidate for June 18-19 evaluation AFTER reading earnings results.
+
+5. **XOM / Energy sector**: WTI $75.24 — thesis floor was WTI >$90. Thesis dead. Not a candidate.
+
+6. **Financials (sector screen)**: JPMorgan +3.7% yesterday; banks clearly the rotation winner. But: (a) FOMC block today, (b) no specific name with documented thesis. Earliest entry June 18 post-FOMC if Warsh is neutral/dovish.
+
+**Post-FOMC pipeline (June 18-19 evaluation, NOT pre-committed):**
+- **KR (Kroger)**: Reports June 18 BMO. If beats EPS ($1.34 est. per today's data) and raises guidance → build entry thesis June 18 pre-market for June 19 execution. Sector mid-tier but stock-specific catalyst possible.
+- **Financials screen**: If Warsh dot plot is neutral-to-dovish (implies 2026 cuts still possible), run a screen on large-cap banks for specific thesis. JPMorgan (JPM) at 3.7% yesterday is a lead candidate but needs earnings-gate check.
+- **JBL (Jabil)**: Evaluate post-report in June 18 session if EPS beat is confirmed and next earnings >5 trading days out.
+
+### Risk factors for today
+- FOMC language risk (2:00 PM ET): If Warsh signals hawkish tone or removes easing language, broad market selloff possible; banks could reverse yesterday's gains.
+- Energy: WTI freefall — any position in energy names (if we had any) would be under pressure. We hold none.
+- Tech correction continuing: Philly Semi -5.7% yesterday; if AI capex narrative shifts, further tech rotation possible. We hold none.
+
+### Decision
+**HOLD — No trades. FOMC announcement day hard block.**
+
+- FOMC hard block eliminates any new entry regardless of thesis quality.
+- Zero candidates even setting aside the FOMC block.
+- Post-FOMC action plan: June 18 pre-market routine evaluates KR earnings (BMO), JBL post-earnings, and Financials screen for first Week 5 trade opportunity.
+
+**Weekly trade slots**: 0/3 used (Week 5, Day 3)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: SPY continues to outpace since launch; 15 trading days in full cash. Opportunity cost real. Post-FOMC window (June 18+) is the first clean entry opportunity in this setup.
 **Active kill switches**: none (standard). Root-level PAUSED.flag (non-standard) present.
