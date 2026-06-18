@@ -1237,3 +1237,77 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: SPY continues to outpace since launch; 15 trading days in full cash. Opportunity cost real. Post-FOMC window (June 18+) is the first clean entry opportunity in this setup.
 **Active kill switches**: none (standard). Root-level PAUSED.flag (non-standard) present.
+
+---
+
+## 2026-06-18 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin — cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Market context
+- **WTI**: ~$74.70/bbl (front-month CLN26, MarketWatch 1:34 AM ET, down -$2.09 on day). Oilprice.com shows $75.44-75.60/bbl range. Continued slide from Iran war peak (~$96-98 early June). US-Iran peace deal structural. XOM thesis floor ($90) dead.
+- **Brent**: ~$76.42-77/bbl (estimated, ~$2-3 premium to WTI consistent).
+- **S&P 500 futures (ESM26)**: +0.06% to +0.83% premarket (range across sources, CME showing 7,555.00, +62.25). Recovering from yesterday's FOMC-driven -1.21% SPY close.
+- **VIX**: ~17.10 spot (Cboe, 7:29 AM Jun 18), down -7.27% (-1.34) from yesterday close of 18.44. Fear declining post-FOMC despite hawkish signal.
+- **FOMC outcome (June 16-17)**: Held at 3.50%-3.75% (unanimous). KEY: Dot plot HAWKISH — median year-end 2026 target now 3.8% (was 3.4% in March). Dot distribution: 8 unchanged, 1 cut, 9 expect ≥1 hike. Warsh withheld his own dot (18 vs 19 dots). Dropped forward guidance and easing language entirely. Market now pricing possible rate hike by Oct 2026. S&P closed -1.21%, Nasdaq -0.99%. 2-year yield +8.4 bps, 10-year +2.7 bps.
+- **Today's major events**:
+  - **Quadruple/Triple Witching (HARD CAUTION)**: Standard June quad-witching moved from Friday June 19 (Juneteenth) to TODAY (Thursday June 18). ~$5.7T+ in notional options/futures expire simultaneously. Elevated intraday volatility expected especially 3:00-4:00 PM ET witching hour.
+  - **Markets CLOSED FRIDAY June 19** (Juneteenth federal holiday). This is the last trading day of the week and the month's third week.
+  - KR (Kroger) Q1 2026 reports BMO today. Estimate: EPS $1.58-1.59, revenue ~$45.39B. Call at 8:00 AM ET. Results unconfirmed pre-open.
+  - ACN (Accenture) Q1 2026 reports BMO today. Results unconfirmed pre-open.
+- **Economic calendar**: Retail Sales (May) released yesterday June 17 at 8:30 AM ET — **+0.9% MoM** (beat +0.5% est., prior +0.4%). Strong consumer despite Iran war headwinds. No major macro releases today.
+- **Sector momentum** (updated assessment):
+  - Technology/Semiconductors: Clear YTD momentum leader. S&P Momentum Index QTD +35.78% (Jun 12 ref). Tech ~35% of S&P 500; semis ~18% of S&P. Dominant market driver.
+  - Energy: Was +35.3% 6-month (Iran war premium). Now rapidly fading with WTI in freefall. No longer a momentum play.
+  - Financials: -1.0% 6-month (Schwab table). JPM +0.47% YTD, BAC +2.87%, WFC -9.2%. Rate hike signal mixed for banks — higher NIM over time but growth uncertainty weighs.
+  - Consumer Staples: +9.9% 6-month but "weak revenue growth, price pressures." Defensive attribute useful in hawkish rate environment.
+  - Industrials: +13.1% 6-month. Not screened specifically.
+
+### Currently-held positions check
+- No open positions.
+
+### Trade candidates
+
+**ZERO candidates. Three independent constraints prevent any new entry today:**
+
+1. **Quadruple/Triple Witching (primary caution)**: Largest quarterly options/futures expiration event of the year, moved to TODAY from Friday due to Juneteenth. ~$5.7T+ in notional derivatives expire simultaneously. Historically creates erratic intraday price action, wide bid-ask spreads, and unusual volume patterns. Entry into triple witching day means immediately sitting inside extreme short-term volatility that has nothing to do with a stock's fundamental thesis. This is not a listed hard block in TRADING-STRATEGY.md but violates the "don't trade when conditions distort your edge" principle embedded in the FOMC/CPI timing rules. Poor execution conditions.
+
+2. **Pre-long weekend + hawkish FOMC aftermath**: Last trading day before a 3-day weekend (Friday Juneteenth). Any position entered today holds through Monday June 23. Market just received a hawkish FOMC signal — possible H2 2026 rate hike — and has not finished digesting it. One session of recovery does not resolve macro uncertainty. Hawkish rates are a headwind for high-multiple growth and mixed for banks.
+
+3. **No pre-built thesis for KR or ACN (secondary)**:
+   - KR (Kroger) reports BMO TODAY. Results not yet confirmed at this pre-market writing. Buy-side gate check #6 (specific catalyst documented in today's research log) is satisfied here in principle, but we have no completed entry checklist from a prior session. Gate #8 (no earnings within 5 trading days) clears since next KR earnings is Q2 ~Sep 10, 2026. However, triple witching condition (reason 1) independently blocks regardless.
+   - ACN (Accenture) same situation. No pre-built thesis, reports today.
+
+**Post-Juneteenth pipeline (June 23 pre-market evaluation — NOT pre-committed):**
+- **KR (Kroger)**: After long weekend, verify Q1 2026 results (beat/miss vs $1.58-1.59 EPS, guidance raised/maintained/lowered). If beat + guidance raised: build full entry checklist for June 23 market-open execution. Consumer Staples defensiveness is compelling in hawkish rate environment. MUST resolve P/E concern: trailing 40.58x on a grocery stock is unusual; need to understand earnings seasonality. Next earnings Sep 10 — gate #8 clears.
+- **ACN (Accenture)**: After long weekend, verify Q1 results and forward guidance. IT sector momentum intact. If beat + raised guidance: evaluate for June 23. Next earnings ~December — gate #8 clears.
+- **Energy**: Dead. WTI $74.70, XOM thesis floor was $90. Do not revisit without structural WTI recovery above $90.
+- **Technology/Semis screen**: If hawkish rate path doesn't derail the semiconductor capex cycle, a specific large-cap name (e.g., semiconductor equipment or AI infrastructure) with documented catalyst is possible for the week of June 23. No candidate today — thesis requires research session.
+- **Financials**: Possible rate hike by Oct 2026 theoretically widens NIM but banks are lagging badly YTD. No specific name with documented thesis and clear near-term catalyst. Not a priority vs. Consumer Staples or IT.
+
+### Kill switch check (with fresh data)
+- Equity today: $10,000.00 | Yesterday close: $10,000.00 → **KS-1 daily: 0.00% drawdown — CLEAR**
+- Prior Friday (June 12 close): $10,000.00 → **KS-2 weekly: 0.00% drawdown — CLEAR**
+- Starting capital: $10,000.00 → **KS-3 total: 0.00% drawdown — CLEAR**
+- Positions: 0 → **KS-4 position breach: N/A — CLEAR**
+- Trades today: 0, trades this week: 0 → **KS-5 activity: CLEAR**
+- API calls: 0 failures → **KS-6: CLEAR**
+
+### Decision
+**HOLD — No trades. Triple/Quadruple Witching day + pre-long weekend + no pre-built thesis.**
+
+- FOMC block lifted (decision was yesterday June 17). Post-FOMC window technically open.
+- But triple witching creates poor execution environment regardless of thesis quality.
+- Zero candidates even without the execution concern.
+- Next clean window: **Monday June 23**, after verifying KR/ACN results and building full entry checklists over the weekend.
+
+**Weekly trade slots**: 0/3 used (Week 5, Day 4 — last trading day of week)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: SPY closed -1.21% yesterday; holding cash outperformed on the day (+1.21% relative). Cumulative gap narrowing slightly. 17 trading days in full cash overall.
+**Active kill switches**: none (standard). Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
