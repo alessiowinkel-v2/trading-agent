@@ -1311,3 +1311,74 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: SPY closed -1.21% yesterday; holding cash outperformed on the day (+1.21% relative). Cumulative gap narrowing slightly. 17 trading days in full cash overall.
 **Active kill switches**: none (standard). Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
+
+---
+
+## 2026-06-19 — Pre-market Research (Juneteenth — US markets CLOSED)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin — cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Market context
+- **WTI**: ~$74-78/bbl (Barchart CLN26 last seen at ~$76; down ~$2.90 -3.78% last session). Continued slide from Iran war peak (~$96-98 early June). US-Iran peace deal structural. XOM thesis floor ($90) dead by ~$14-16.
+- **Brent**: ~$78-82/bbl (estimated; normal $2-4 premium over WTI).
+- **S&P 500**: Closed June 17 at 7,420.10 (-1.21%). June 18 (triple witching) recovered ~+0.72%, est. close ~7,474. Markets closed today (Juneteenth federal holiday). Year-to-date +11.3% through May; 23 all-time highs in 2026.
+- **VIX**: June 18 close 16.40 (-11.06% from 18.44 June 17). Fear declining significantly post-triple-witching.
+- **Today's catalysts**: No market activity — Juneteenth holiday. US equity markets closed.
+- **Earnings before open**: None (holiday).
+- **Economic calendar**: No US data today. **Key event next week: PCE (May) releases Thursday June 25 at 8:30 AM ET**. Latest data: April PCE +3.8% YoY (highest since May 2023), Core PCE +3.3% YoY — both well above Fed's 2% target. Trading Economics forecasting ~4.0% YoY for May PCE. This is a hard timing block for Tue June 24 (day before) and Thu June 25 (day of). **Only Monday June 23 is a clean entry window next week.**
+- **FOMC macro context**: Warsh held rates at 3.50-3.75% June 17 (unanimous). Hawkish dot plot — median 2026 year-end now 3.8% (was 3.4% in March). 9 of 19 dots expect ≥1 hike. Dropped forward guidance and easing language. Market now pricing possible rate hike by Oct 2026.
+- **Sector momentum**: Technology/AI remains dominant (IT margins 29.1% vs 25.4% YoY, market "hyper-focused on AI build-out boom"). Energy fading (WTI ~$76 vs $96-98 peak). Consumer Staples defensive but weak revenue growth. Industrials margin compression QoQ. Financials lagging YTD on rate uncertainty.
+
+### KR (Kroger) — Q1 FY2026 results (reported June 18 BMO)
+- Adj EPS: $1.58 vs. $1.59 consensus → **missed by $0.01** (essentially in-line, not a beat)
+- Revenue: $46.1B vs. $45.59B estimate → beat
+- Identical sales ex-fuel: +1.0% (at low end of guidance range)
+- Gross margin: 22.7% vs. 23.0% YoY → slight compression (OG&A rate increased 16 bps)
+- eCommerce: +19% (strong)
+- Full-year FY2026 guidance: **REAFFIRMED** (EPS $5.10-$5.30, ID sales 1.0-2.0%) — **NOT raised**
+- **Verdict**: Entry condition NOT met. Prior session required "beat + raised guidance." Got in-line EPS + reaffirmed guidance. No catalytic event to drive the stock. Trailing P/E ~38x for a grocery stock remains unexplained. **Not a candidate.**
+
+### ACN (Accenture) — Q3 FY2026 results (reported June 18 BMO)
+- EPS: $3.80 vs. $3.70 consensus → beat by $0.10 (+2.7%)
+- Revenue: $18.72B vs. $18.78B estimate → slight miss (-$60M)
+- Guidance raised to 3-4% local currency growth (4-5% ex-US federal headwind)
+- Adj EPS FY2026 guide: $13.78-$13.90
+- **But**: Share price fell ~13.3% to ~$143.50 on earnings day (June 18) — catastrophic reaction despite EPS beat
+- No pre-built thesis from prior sessions; no understanding of why the market reacted so negatively
+- **Verdict**: Gap-down catch-a-falling-knife with no thesis. Street clearly expected something better (revenue miss + federal business headwind + possible valuation reset). No candidate. Would need a full recovery thesis before considering in a future session.
+
+### Kill switch check (with fresh data)
+- Equity today: $10,000.00 | Yesterday close: $10,000.00 → **KS-1 daily: 0.00% — CLEAR**
+- Prior Friday (June 12): $10,000.00 → **KS-2 weekly: 0.00% — CLEAR**
+- Starting capital: $10,000.00 → **KS-3 total: 0.00% — CLEAR**
+- Positions: 0 → **KS-4 position breach: N/A — CLEAR**
+- Trades today: 0, trades this week: 0 → **KS-5: CLEAR**
+- API calls: 0 failures → **KS-6: CLEAR**
+
+### Trade candidates
+**ZERO candidates.**
+
+1. **KR**: Entry condition (beat + raised guidance) not met. Guidance reaffirmed only. Gross margin compression. Expensive P/E (~38x) unexplained for a grocery stock. **SKIP.**
+2. **ACN**: -13.3% gap-down on earnings day. No pre-built recovery thesis. Revenue slight miss. Street disappointed despite EPS beat. **SKIP.**
+3. **Energy (XOM/sector)**: WTI ~$76 vs. $90 thesis floor. Dead. Not revisiting without structural WTI recovery above $90.
+4. **Technology/AI**: Dominant momentum sector but no specific stock with documented catalyst and full entry checklist. Would need a dedicated research session to identify and vet a name.
+
+### Monday June 23 pipeline (NOT pre-committed — requires full evaluation at market open)
+- **ACN recovery thesis?** Evaluate: is the -13% a one-day overreaction or a fundamental reset? Requires reading the earnings call transcript and understanding the US federal business headwind impact. Do NOT enter without a complete thesis and checklist.
+- **Large-cap Tech screen**: AI/semiconductor infrastructure names with documented catalysts. Need specific name, next earnings check, sector momentum confirmation. No candidate pre-identified today.
+- **KR revisit?** Very low priority. The valuation concern (38x P/E for grocery) is unresolved. Reaffirmed guidance is not a catalyst. Would need a specific secondary event (analyst upgrade, sector re-rating) to justify revisiting.
+- **Caution: PCE Thursday June 25** — any position entered Monday June 23 holds through a hot PCE print. PCE April was +3.8% YoY. If May comes in hot (forecast ~4.0%), stocks could sell off sharply. Size any new position conservatively and ensure stop is in place before Thursday.
+
+### Decision
+**HOLD — No trades. Markets closed (Juneteenth). Zero candidates even for Monday June 23.**
+
+**Weekly trade slots**: 0/3 used (Week 5 ends June 19 = Juneteenth; Week 6 starts June 23)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: SPY at ~7,474 (est. June 18 close) vs. our $10,000 flat. SPY +11.3% YTD (through May). Bot holds 0.00% phase return after 17 trading days. Opportunity cost real but no clean entry has presented itself post-FOMC.
+**Active kill switches**: none. Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
