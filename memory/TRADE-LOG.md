@@ -249,3 +249,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 17, Week 5 (Thursday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained approximately +0.72% today (Barchart close-to-close; sources diverge between +0.72%–+0.90%). Cumulative phase P&L flat at 0.00% while SPY has risen materially over 17 trading days. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. Friday Jun 19 is the final trade window of Week 5 (XOM thesis still eligible, contingent on WTI >$90 and no blocking macro events).
 **Active kill switches:** none (standard). Root-level PAUSED.flag present (non-standard location; does not trigger standard KS).
+
+---
+
+### 2026-06-19 — EOD Snapshot (Juneteenth Holiday — no market, Week 5 end)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** N/A (market closed — Juneteenth federal holiday)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Juneteenth (US federal holiday) — NYSE and NASDAQ closed, no trading session. Portfolio unchanged at $10,000.00 cash. Week 5 concluded with 0 of 3 weekly trade slots used (17 consecutive trading days fully in cash). SPY's last close was Jun 18 at $746.74 (+0.78%). Next trading day: Monday June 22 (Day 18, start of Week 6). XOM thesis remains eligible; entry contingent on WTI >$90 and no blocking macro events.
+**Active kill switches:** none (standard). Root-level PAUSED.flag present (non-standard location; does not trigger standard KS).
