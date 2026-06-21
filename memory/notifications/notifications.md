@@ -323,3 +323,15 @@ Active kill switches: none (standard)
   Note: Root PAUSED.flag='test' persists (non-std location)
 Week 5 end: 0/3 trades placed all week
 Tomorrow: Monday Jun 22 = Day 18 (Week 6); XOM thesis eligible if WTI >90 and no macro blocks
+
+---
+## 2026-06-21 20:36 UTC
+Week ending 2026-06-21 (4 trading days + Juneteenth)
+Portfolio: $10,000 (+0.00% week, +0.00% phase)
+vs SPY: -0.67% week, +0.62% phase (SPY: $741.75 → $746.74 week; $751.38 launch)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: Correct decisions all 4 days (XOM abandoned, FOMC/witching blocked) — but 17 days in cash, pipeline empty entering Week 6
+Graduation: 3/7 criteria met
