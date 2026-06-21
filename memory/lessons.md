@@ -171,3 +171,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: The Iran war thesis drove WTI from ~$87 (June 1) to $93–98 (June 8–9) on supply disruption fears. By June 12, WTI had fallen to $86 on US-Iran deal signals and partial Hormuz reopening pricing. A ~$9/bbl swing in 3 trading days.
 **Insight**: Geopolitical premiums are fragile thesis drivers. When the primary thesis catalyst is geopolitical (supply disruption risk premium rather than fundamental demand), the thesis can evaporate overnight on a ceasefire rumor or a diplomatic signal. Build in a wider safety margin for geopolitical-driven entries, or require confirmation that the supply disruption is structural (e.g., confirmed physical damage to infrastructure, not just political tension).
 **Rule change**: Flagging for user: consider whether future geopolitical-premium theses should require WTI above a higher floor ($92–95 vs $90) to provide more buffer before the thesis breaks. No unilateral change.
+
+## 2026-06-21 — Honoring hard thesis deadlines prevents worse outcomes
+
+**Context**: XOM thesis reached Day 10 on June 15. WTI was $80.73 — $9 below the $90 floor. Thesis was formally abandoned. WTI continued falling to ~$74 by June 18. Had we entered XOM on June 15, we would have been down ~7%+ within days.
+**Insight**: The 10-day thesis expiry rule works. When you set a deadline, honor it. The temptation to say "maybe next week" is always present; the rule prevents it. A thesis that has been deferring for 10+ sessions due to timing blocks is an old thesis — the catalyst has either played out or evaporated.
+**Rule change**: None. This confirms the lessons.md 2026-06-05 "perpetual deferral" entry. Expiry rule is working correctly.
+
+## 2026-06-21 — FOMC dot plot changes the macro regime; update sector screening accordingly
+
+**Context**: Warsh FOMC June 17: held at 3.50–3.75% but hawkish shift — median dot raised to 3.8%, 9/19 dots expect ≥1 hike in 2026, easing language dropped. Market now pricing possible Oct 2026 rate hike.
+**Insight**: A single FOMC meeting can change the rate regime for months. The sector priority list (Energy, Industrials, Staples) was calibrated for "hold steady / higher for longer is fine." In a possible-hike environment, Financials/banks (NIM expansion) become more viable; long-duration growth and rate-sensitive sectors (XLRE, XLU) face additional compression. Update sector screening after each FOMC.
+**Rule change**: Flag for user: sector priority list should be reviewed after each FOMC meeting with material language shift. No unilateral change.
+
+## 2026-06-21 — Build the post-block pipeline during the block, not after
+
+**Context**: Week of June 15–18 (FOMC week): all individual decisions were correct but the pipeline was empty when the block cleared. Entered the week with KR and ACN as potential candidates; both failed entry conditions. Exited the week with zero candidates.
+**Insight**: Blocking periods (CPI week, FOMC week, NFP week) are research windows. The first session after a block should be executing a pre-built candidate, not starting research from scratch. If the blocking period ends with no candidates, the first clean session adds days to an already-long cash streak.
+**Rule change**: Flag for user: consider requiring the agent to screen for 2–3 post-block candidates during each blocking period (i.e., run a sector screen on the day of the block event, when no trade can be placed anyway). No strategy change — operational improvement only.

@@ -756,3 +756,121 @@ No trades placed. Five trading days, five HOLD decisions.
 **Graduation criteria met: 3/7**
 
 Days running counter: **13** (Day 1 = 2026-05-27; Day 13 = 2026-06-12)
+
+---
+
+## Week ending 2026-06-21
+
+> Trading days this week: Mon Jun 15 – Thu Jun 18 (4 days). Fri Jun 19 = Juneteenth federal holiday (market closed). Review runs Sun Jun 21.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Jun 12 close) | $10,000.00 |
+| Ending portfolio (last trading day Jun 18 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jun 12 → Jun 18) | +0.67% (SPY $741.75 → $746.74; Twelvedata/Investing.com confirmed) |
+| Bot vs S&P this week | −0.67% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −0.62% ($751.38 → $746.74); bot leads by +0.62% |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+**SPY daily closes confirmed (Twelvedata/Investing.com):**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| Jun 12 (prior Fri) | $741.75 | — |
+| Jun 15 (Mon) | $754.83 | +1.76% |
+| Jun 16 (Tue) | $750.33 | −0.58% |
+| Jun 17 (Wed) | $740.96 | −1.25% |
+| Jun 18 (Thu) | $746.74 | +0.78% |
+| Jun 19 (Fri) | CLOSED | Juneteenth holiday |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**XOM status**: Thesis formally abandoned June 15 (Day 10 hard deadline). WTI $80.73 — $9 below the $90 floor. Tombstone logged in research. No replacement thesis identified yet.
+
+### Process review (per trade made this week)
+
+No trades placed. Four trading days, four HOLD decisions.
+
+**Jun 15 (Day 14 — Monday):**
+- XOM thesis hard deadline reached (Day 10). WTI $80.73 vs $90 floor. Formally abandoned with tombstone documentation.
+- New candidates: ZERO. FOMC week begins (announcement June 17 = hard block). KR/ACN earnings within 5 trading days block Consumer Staples entry. "Market is going up" is not a thesis.
+- Process verdict: **Correct** — deadline honored, formal closure documented. No vague "maybe next week."
+
+**Jun 16 (Day 15 — Tuesday):**
+- FOMC day 1 (announcement tomorrow = hard block). KR earnings within 5 trading days. Financials/banks leading but FOMC language unknown. Zero candidates.
+- SPY −0.58% on the day.
+- Process verdict: **Correct** — rule-based HOLD with documented reasons.
+
+**Jun 17 (Day 16 — Wednesday):**
+- FOMC announcement day (HARD BLOCK, non-negotiable). Warsh held at 3.50–3.75% (unanimous). Hawkish dot plot: median year-end 3.8% (vs 3.4% in March), 9 of 19 dots expect ≥1 hike, easing language dropped entirely. SPY −1.25%.
+- Cash fully preserved through hawkish FOMC surprise.
+- Process verdict: **Correct** — hard block applied; timing was vindicated by −1.25% SPY close.
+
+**Jun 18 (Day 17 — Thursday):**
+- Last trading day of week (Jun 19 Juneteenth). Quadruple/triple witching (moved from Fri due to holiday). FOMC block lifted but poor execution conditions from witching. Pre-long-weekend (3-day) risk. KR and ACN results reviewed over the Juneteenth weekend — neither met entry conditions.
+- KR: in-line EPS ($1.58 vs $1.59 est.), guidance reaffirmed only (not raised). **Not a candidate.**
+- ACN: EPS beat but −13.3% gap-down on earnings day (revenue slight miss + US federal business headwind). No pre-built recovery thesis. **Not a candidate.**
+- SPY +0.78% on the day.
+- Process verdict: **Correct** — triple witching condition correctly blocked entry; no pre-built thesis regardless.
+
+**In hindsight**: Would I make any different decision? June 15 XOM abandonment was correct — WTI continued falling to ~$74 by June 18. Entering XOM on any day this week would have been entering a falling oil market below thesis floor. FOMC block saved capital from −1.25% intraday. All four decisions were correct. The structural problem is not this week's decisions — it is that the pipeline is now empty entering Week 6.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — Thesis deadline honored with proper documentation (improvement). FOMC/witching blocks applied correctly (no new instances of market-open documentation gap since no conditional plans existed). Deduction: pipeline is empty for Week 6 after 17 days in cash; no pre-built candidates despite 2 weeks of FOMC prep time.
+- Documentation quality: **B** — Research logs complete for all 4 trading days, EOD snapshots filed 4/4, XOM tombstone documented. Deduction: sector research for post-FOMC regime still thin; no new thesis built despite having clean pre-market sessions June 15–18.
+- Risk management: **A** — 0.00% drawdown. Kill switches checked; none fired. No positions exposed to FOMC hawkish surprise or triple witching volatility. Full capital preserved through worst SPY day of the week (−1.25%).
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.67% this week. Phase lead narrowed from +1.30% (Week ending Jun 12) to +0.62%. Seventeen consecutive trading days, 0 executed trades.
+- **Overall: C** — All individual decisions were defensible. The weekly grade cannot be better than C with 17 trading days and 0 positions. The "correct process" grade is capped by the mission failure: the strategy is supposed to beat SPY over 90 days, and 17 days with 0 exposure means we need the market to cooperate indefinitely or eventually place some trades.
+
+### What worked (3-5 bullets)
+- XOM thesis abandoned at hard deadline with full documentation — first time a thesis expiry was honored correctly; no open-ended deferral
+- FOMC hard block (June 17) preserved capital from −1.25% SPY close on hawkish Warsh dot plot
+- KR and ACN correctly rejected on entry-condition failures (not forced just to deploy capital)
+- Triple witching execution condition correctly blocked an otherwise "clean" June 18 session
+- Phase lead maintained (+0.62%) despite SPY gaining +0.67% this week
+
+### What didn't work (3-5 bullets)
+- 17 consecutive trading days, 0 trades — pipeline completely empty entering Week 6; no identified candidates
+- Post-FOMC sector research inadequate: entered the FOMC week without pre-built candidates; exited with none either
+- ACN −13.3% gap-down on earnings highlights danger of assuming "beat + raised guidance" will produce a positive reaction — street expectations matter as much as results
+- Hawkish FOMC regime shift (possible Oct 2026 hike) not yet incorporated into sector screening; Energy thesis is dead, and no replacement sector has been researched
+- Root-level PAUSED.flag (content: "test") at non-standard location persists since early June; user has not resolved it despite multiple flags
+
+### Key lessons (added to lessons.md)
+- Hard thesis deadlines work: honoring the XOM Day-10 deadline prevented the temptation to defer again. WTI fell to $74 that same week — we would have entered at $80+ and taken a 7%+ loss.
+- FOMC hawkish dot plot changes the rate regime for months: post-June-17, the macro environment is no longer "higher for longer is fine" — it is "potential rate hike by Oct 2026." Sectors to reconsider: banks/financials benefit from NIM expansion; long-duration growth names face multiple compression.
+- Post-block pipelines must be built during the block: by the time CPI/FOMC/etc. clears, the research window is over. Identify candidates DURING the blocking period so the first clean session can execute, not research.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Rate regime update**: FOMC June 17 = hawkish shift. Warsh median dot now 3.8%, easing language removed, 9/19 dots expect hike. Prior sector priority (Energy, Industrials, Staples) was calibrated for "hold steady." In a possible-hike environment, Financials/banks may be the better leading sector. Flagging for user to confirm sector priority is still correct.
+2. **Triple witching as explicit timing block**: TRADING-STRATEGY.md has no mention of quadruple/triple witching days. June 18 was correctly blocked but only because of judgment. Suggest user considers adding "quadruple/triple witching day (3rd Friday of March, June, Sep, Dec — or nearest trading day if holiday)" as an explicit timing block. No unilateral change.
+3. **17-day zero-trade gate calibration review**: Per prior lessons, the user should explicitly review whether any candidate clears the bar for Week 6. Specifically: (a) Has the sector priority list been updated for post-FOMC regime? (b) Is there any name in the current macro environment that satisfies all 9 gate checks? If the answer is still zero after a deliberate review, that is an acceptable answer — but it should be deliberate, not passive.
+4. **Pipeline pre-building**: Before each known blocking period (FOMC, CPI, NFP week), the agent should run a full sector screen 3–4 days in advance so candidates are ready when the block clears. Currently doing this reactively (screening post-block). Suggest formalizing: "Pre-block candidate research" session during the block period.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (17/30 trading days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat, SPY −0.62% phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY −0.62% phase; bot +0.62% ahead — only because SPY is net-negative from launch day, not because bot earned returns)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; root-level PAUSED.flag non-standard location persists)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **17** (Day 1 = 2026-05-27; Day 17 = 2026-06-18; Jun 19 = Juneteenth holiday)
