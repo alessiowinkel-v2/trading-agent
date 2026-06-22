@@ -339,3 +339,14 @@ Graduation: 3/7 criteria met
 ---
 ## 2026-06-22 13:48 UTC
 Market-open 2026-06-22: NO TRADE. GNRC gapped to ask $302.89 (+8.6% vs $279 reference) — exceeds >5% skip threshold set in pre-market research. Spread also abnormally wide ($26.18). Timing block also active (09:45 ET < 10:00 ET). All kill switches clear. 0/3 weekly slots used. Re-evaluate GNRC for later this week if price retraces toward $279–$285.
+
+---
+## 2026-06-22 19:35 UTC
+EOD 2026-06-22
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: -0.23% today (outperformed +0.23%), phase SPY up materially
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: Day 19, Week 6 — XOM thesis eligible (WTI >0 check needed); pre-market research to assess entry conditions
