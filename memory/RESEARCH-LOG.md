@@ -1382,3 +1382,103 @@ Weekly trade slots: 0/3 used (Week 4). Total drawdown: 0.00%. Active kill switch
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: SPY at ~7,474 (est. June 18 close) vs. our $10,000 flat. SPY +11.3% YTD (through May). Bot holds 0.00% phase return after 17 trading days. Opportunity cost real but no clean entry has presented itself post-FOMC.
 **Active kill switches**: none. Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
+
+---
+
+## 2026-06-22 — Pre-market Research (Day 18, Week 6)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (4× margin — cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+- Open orders: 0
+
+### Kill switch check
+- KS-1 Daily drawdown: $10,000 vs $10,000 (Jun 18 last close) = 0.00% — **CLEAR**
+- KS-2 Weekly drawdown: $10,000 vs $10,000 (Jun 13 prior-Friday close) = 0.00% — **CLEAR**
+- KS-3 Total drawdown: $10,000 vs $10,000 starting = 0.00% — **CLEAR**
+- KS-4 Position breach: 0 positions — **N/A CLEAR**
+- KS-5 Activity: 0 trades today, 0 this week — **CLEAR**
+- KS-6 API: 0 errors — **CLEAR**
+- **All kill switches: CLEAR**
+
+### Market context
+- **WTI**: $75.33–75.41/bbl (CME CLQ6/Aug 2026 contract, 03:57 CT June 22). Continued decline from ~$76 last week; US-Iran peace deal driving structural supply-premium unwind. Well below the $90 XOM thesis floor; energy sector thesis remains dead.
+- **Brent**: Not confirmed; estimated $78–82 range (WTI + typical $2–4 premium). June Brent contract ($98) in one source is expired, not current.
+- **S&P 500 futures**: Mixed open. Dow/S&P slightly negative (ESM26 ~$7,566, -0.06% to -0.19%); Nasdaq futures rising (+0.98% NQM26 per Barchart). Divergence: old-economy stocks selling off, tech rising. Range for SPX futures: $7,513–$7,580.
+- **VIX**: 17.50 (+4.29% from 16.78 prior close, 9:55 AM UTC as of Cboe data). Slight fear uptick. Still in low-to-moderate territory (52-week low 13.38). Not alarming but trending up today.
+- **Today's catalysts**: (1) AI infrastructure capex remains dominant market tailwind — tech/semiconductors leading; (2) US-Iran diplomatic stall: CAC 40 down, TSX lower on uncertainty; Ibovespa near flat; (3) Geopolitical risk premium in oil dissipating — WTI bearish near term; (4) ACN -17–18% today (see below) creating sector concern for IT services; (5) SNBR -45.9%, ADTX +234% (penny stock noise).
+- **Earnings before open (Jun 22)**: Minor names — Alimentation Couche-Tard (ANCTF), Americas Car-Mart, OFS Credit (OCCI). None market-moving for our strategy universe.
+- **Economic calendar this week**:
+  - Mon Jun 22: CLEAN — no major data
+  - Tue Jun 23: CLEAN — no confirmed major data
+  - Wed Jun 24: **TIMING BLOCK (day before PCE)** + PAYX BMO + DRI BMO + MU AMC (key AI sentiment data)
+  - Thu Jun 25: **TIMING BLOCK (day of PCE)** — PCE May 2026 at 8:30 AM ET; core PCE forecast 3.3% YoY (same as April). Prior: Core PCE Apr 3.3%, Headline PCE ~3.77%
+  - Fri Jun 27: CLEAN
+  - Next CPI: July 14; Next FOMC: ~July 29
+- **Sector momentum**: Technology STRONG (dominant; semiconductors up +16% in May, AI capex boom powering entire sector; Goldman Sachs raised S&P 500 2026 target to 8000 from 7600). Energy WEAK (oil $75, sector fading from Iran-war peak). Financials SLIGHTLY NEGATIVE (trailing 6-month -1% per Schwab) but hawkish FOMC regime creates NIM expansion potential for banks. Industrials MIXED (underperforming tech; AI infrastructure sub-sector is exception). Consumer Staples WEAK (revenue pressure). 
+
+### Currently-held positions check
+No open positions.
+
+### ACN update (special note — continued decline)
+- ACN closed June 18 (earnings day) at ~$126 (down ~19% from ~$156 pre-earnings close on June 17)
+- ACN today: ~$128 (down another -17.5% from ~$156 "prior close" per Kraken/TradingEconomics data) — possible data artifact where prior close reflects some partial recovery
+- In any case, ACN now trades near its 52-week low of $125.60
+- JPMorgan lowered PT to $179 from $201 on June 21
+- **Status: STILL NOT A CANDIDATE.** No pre-built recovery thesis. Structural US federal budget headwind unclear. Catching a falling knife rule applies. Will not revisit without understanding earnings call transcript and quantifying federal budget exposure.
+
+### Trade candidates
+
+**Candidate 1: GNRC (Generac Holdings) — AI Data Center Power**
+
+**Buy-side gate (all 9 must pass):**
+1. Total positions after fill ≤ 6: 0+1=1 ✓
+2. Trades this week ≤ 3: 0+1=1 ✓
+3. Position cost ≤ 15% equity: 5 shares × $279 = $1,395 = 13.95% ✓
+4. Position cost ≤ cash: $1,395 ≤ $10,000 ✓
+5. PDT: daytrade_count=0; this is swing trade, not day trade ✓
+6. Catalyst documented: see below ✓
+7. Instrument is a stock (NYSE: GNRC) ✓
+8. No earnings within 5 trading days: next GNRC earnings est. July 29–Aug 3 ✓
+9. No kill switch active ✓
+**All 9 checks: PASS**
+
+**Full entry checklist:**
+- **Thesis**: Generac manufactures physical power generation equipment for data centers and utilities. AI data center construction is creating a structural C&I power equipment supercycle — GNRC already has confirmed backlog with hyperscale customers. This is real physical infrastructure demand, not AI sentiment speculation. Q1 FY2026 EPS $1.24 vs $0.99 consensus = +27% beat; FY2026 guidance raised to mid-to-high teens revenue growth from mid-teens. C&I segment (data center primary driver) growing +30% YoY.
+- **Catalyst**: Q2 FY2026 (ending June 30) is the management-guided quarter for hyperscaler pilot-to-contract conversions. Revenue growth Q2 guided at ~9–10% YoY (C&I driven). UBS raised PT to $335 from $305 on June 11, 2026, citing data center backlog acceleration. 13/21 analysts rate Buy/Outperform with mean target $281–$335 range. Earnings beat +27% on April 29 drove +16.5% stock reaction.
+- **Risk**: (a) P/E 87.50 prices perfection — pilot delays or any Q2 miss would trigger re-rating; (b) PCE hot print June 25 could compress growth-multiple industrials; (c) MU AMC June 24 could shift AI sentiment (bearish MU = read-through to data center buildout); (d) FOMC hawkish regime compresses long-duration growth multiples; (e) Industrial sector underperforming tech; (f) Stock up ~89% YTD — late entry, much good news priced in.
+- **Sector momentum**: Industrial (AGAINST us broadly) but AI infrastructure sub-theme (NEUTRAL/WITH us). Net: NEUTRAL with upside catalyst window.
+- **Size**: 5 shares × ~$279 = $1,395 ≈ 14% of equity (≤15% ✓)
+- **Stop level**: 7% below entry → $279 × 0.93 = $259.47 → GTC trailing stop at $259. Total dollar risk: 5 × $20 = $100 (1% of portfolio).
+- **Target**: 2:1 R:R → entry $279 + 2×$20 = $319 (+14.3%). UBS target $335 (+20%) provides upside validation. Mean analyst target $281–$335.
+- **Exit plan**: Win — tighten trail to 7% at +15% (~$321), to 5% at +20% (~$335). Hold through Q2 earnings July 29–30. Loss — GTC trailing stop at $259 auto-triggers. Manual close if thesis breaks (confirmed hyperscaler conversion delays OR PCE/MU drives stock below $255 on fundamentals reset). Sector stop: if 2 failed data-center/industrial trades materialize, exit sector entirely per TRADING-STRATEGY.md.
+
+### Risk factors for today
+- VIX +4.29% uptick (slight risk-off but not alarming at 17.50)
+- Mixed premarket: Dow/S&P slightly down, Nasdaq up — tech-vs-industrial divergence unfavorable for GNRC entry today
+- Only 2 clean trade windows this week (Mon Jun 22, Tue Jun 23) before PCE timing blocks
+- PCE (May) Thursday June 25 — forecast core 3.3% (in-line with April). Risk: hot print could trigger growth/industrial selloff. Any position entered today must survive Thursday with stop intact.
+- MU AMC June 24 — key AI sentiment read-through. Bullish MU = validates GNRC AI thesis. Bearish MU = potential GNRC headwind.
+- 87.50x P/E concentration risk: GNRC is priced for perfection; any deviation from guidance trajectory punished severely.
+- Root-level PAUSED.flag (content: "test") persists at non-standard location (not memory/PAUSED.flag); no standard KS triggered. Non-standard flag noted for user.
+
+### Decision
+**TRADE — GNRC identified as candidate. Market-open routine to validate live quote and execute if confirmed.**
+
+GNRC passes all 9 buy-side gate checks. Fundamental thesis is real (physical infrastructure, not AI hype), catalyst is time-bound (Q2 ends June 30), R:R is achievable (stop $259, target $319, UBS $335). Primary risk is valuation at 87.50x P/E and Thursday PCE exposure.
+
+Market-open routine instructions:
+- Pull fresh GNRC quote at 9:45 AM ET (after 15-min open volatility period)
+- If GNRC is NOT gapping up >5% from $279 (i.e., quote ≤ $293), entry is valid
+- If gapping up >5%, skip — stop math no longer achieves 2:1 R:R
+- Place: BUY 5 shares GNRC, market/limit order; simultaneously enter GTC trailing stop at 10% (per strategy default, tighten to 7% at +15%, 5% at +20%)
+- Log entry in TRADE-LOG.md immediately after fill
+
+**Weekly trade slots**: 0/3 used (Week 6, Day 18)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: SPY ~$756 (estimated from ES futures ~7,560) vs our $10,000 flat. Phase return gap widening — 18 trading days fully in cash. GNRC entry would begin closing the deployment gap.
+**Active kill switches**: none (standard). Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
