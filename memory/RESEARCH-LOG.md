@@ -1482,3 +1482,83 @@ Market-open routine instructions:
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: SPY ~$756 (estimated from ES futures ~7,560) vs our $10,000 flat. Phase return gap widening — 18 trading days fully in cash. GNRC entry would begin closing the deployment gap.
 **Active kill switches**: none (standard). Root-level PAUSED.flag (content: "test") in non-standard location; memory/PAUSED.flag absent; no standard KS triggered.
+
+---
+
+## 2026-06-23 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin account, cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 19, Week 6)
+
+### Kill switch check
+- KS-1 (daily drawdown >3%): $10,000 → $10,000 = 0% — CLEAR
+- KS-2 (weekly drawdown >7% vs prior Friday close Jun 18): 0% — CLEAR
+- KS-3 (total drawdown >15% vs $10,000 start): 0% — CLEAR
+- KS-4 (position >18% equity): no positions — CLEAR
+- KS-5 (>3 trades today / >8 this week): 0/3, 0/8 — CLEAR
+- KS-6 (API errors): API responding normally — CLEAR
+- All kill switches: CLEAR
+
+### Market context
+- **WTI**: $73.46/bbl (Jun 23 settle, down -0.54%; daily range $72.50–$74.30). Continues falling — well below $90 XOM thesis floor. Energy thesis permanently dead.
+- **Brent**: Not confirmed today; estimated $75–78 (typical WTI + $2–4 premium). Jun 1 article cited $96.42 (expired Brent contract, not current).
+- **S&P 500 futures**: 7,549.50, -0.28%. Dow futures +0.27%; Nasdaq 100 futures -0.24%. Mixed/slightly negative — Dow old-economy up slightly, tech fading.
+- **VIX**: 17.28 (June 22 close), up +2.98% from prior close 16.78. Intraday range Jun 22: 16.49–17.92. Moderate; not alarming. 52-week range 13.38–35.30.
+- **Today's macro data**: S&P Global Flash PMI (manufacturing + services) at 9:45 AM ET — key activity read, NOT a timing-block event. NOTE: TradingEconomics showed apparent "actuals" for GDP (0.5% vs 1.6% est), Core PCE (0.2% vs 0.3% est), Durable Goods (+7.9% vs -4.3% est) listed for today at 12:30 PM (= 8:30 AM ET). However, NY Fed economic calendar and Bradesco Bank calendar BOTH place these releases on **June 25 (Thursday)**, not today. Data confusion in Perplexity sources; applying conservative interpretation: GDP/PCE/Durable Goods are June 25 releases.
+- **Today's catalysts**: (1) INTC rose on Apple-as-foundry-customer reports — US semiconductor manufacturing thesis; (2) SpaceX IPO liquidity drain concern (mega-cap equity unlocks from SPCX, OpenAI, Anthropic absorbing capital); (3) US-Iran Strait of Hormuz negotiations ongoing — geopolitical risk premium; (4) FedEx (FDX) reports Q4 FY2026 AMC tonight at 5:00 PM ET (EPS estimate $5.91, rev $24.18B) — global economic activity barometer; (5) Cerebras (CBRS) reports AMC tonight — first major AI IPO, AI capex sentiment.
+- **Earnings before open**: No significant BMO earners today (Carnival CCL at 10 AM ET is during market hours; not before open). Korn Ferry (KFY) at 12 PM ET. FDX and CBRS are both AMC.
+- **Economic calendar**:
+  - TODAY (Jun 23): Flash PMI 9:45 AM ET — minor, no timing block
+  - Wed Jun 24: **TIMING BLOCK (day before PCE)** + MU Q3 FY2026 AMC 4:30 PM EDT (key AI capex read)
+  - Thu Jun 25: **TIMING BLOCK (PCE day)** — GDP 3rd est + Core PCE + Durable Goods + Jobless Claims all at 8:30 AM ET
+  - Fri Jun 26: CLEAN
+- **Sector momentum**: Tech/Semiconductors DOMINANT (+44% QTD for S&P Momentum index; semiconductors ~8% of S&P). Energy WEAK (WTI $73). Industrials broadly UNDERPERFORMING (AI infrastructure sub-sector exception). June so far negative for broad market after strong April/May. Momentum factor significantly outperforming value.
+
+### Currently-held positions check
+No open positions. No held tickers to check.
+
+**GNRC carry-forward check (candidate from June 22 research)**:
+- June 22 research set skip rule: "If GNRC > $293 at 9:45 AM ET, skip — gapping up >5% from $279 baseline."
+- June 22 close: **$295.54** (+$16.39, +5.87% on the day). Market-open routine on June 22 did not execute (EOD shows 0 positions — possible the routine saw it at open ~$279 and order wasn't filled before intraday rally, or routine didn't run).
+- June 23 current: **$295.93**, daily range $281.86–$296.89 (new 52-WEEK HIGH $296.89).
+- **GNRC is now $295.93, well above our $293 skip threshold.** Per yesterday's own rule, SKIP at current price.
+- Thesis integrity: UNCHANGED. Q2 FY2026 guided 9-10% CNI growth; Belvidere IL facility acquired for large-megawatt generator packaging; data center power backlog confirmed. Q1 FY2026: EPS $5.25 vs $4.12 est (+27% beat). FY2026 guidance raised to mid-to-high teens revenue growth.
+- Entry re-evaluation: At $296, stop at $275 (7% below), target $338 (2:1 R:R). UBS PT $335 still within range. But: (a) buying at 52-week high after +6% gap = chasing; (b) MU reports AMC June 24 = binary AI capex event before June 25 PCE block; (c) better to enter post-PCE (June 26) on confirmed thesis.
+
+### Trade candidates
+**ZERO candidates for today.**
+
+GNRC remains the strongest thesis candidate but price has deteriorated relative to June 22 entry analysis:
+- $295.93 > $293 skip threshold set yesterday → do not initiate today
+- 52-week high = elevated risk of mean reversion
+- MU (Micron) Q3 FY2026 reports AMC June 24 — AI capex validation event before PCE
+- June 26 (Friday) is the next clean, post-catalyst entry window if thesis confirmed
+
+No other candidates were identified in today's research. Technology sector is strongest but requires specific fundamental thesis — insufficient research to responsibly propose a new name.
+
+### Risk factors for today
+- S&P futures -0.28% (slight headwind for any long entry)
+- VIX elevated from prior close (+2.98%) — mild risk-off drift
+- FDX AMC tonight: negative print would signal economic slowdown → risk-off
+- Cerebras (CBRS) AMC tonight: negative AI capex signals → direct GNRC thesis risk
+- MU AMC June 24: most important AI capex data point of the week
+- June 25 timing block (GDP + PCE) limits tradeable windows
+- 19 consecutive trading days in cash — SPY has risen materially from baseline; opportunity cost is real but discipline over FOMO
+- Macro calendar data confusion (GDP/PCE timing) — conservative interpretation applied
+
+### Decision
+**HOLD** — No trades today.
+
+GNRC thesis is intact but entry price has moved above skip threshold ($295.93 > $293). Discipline requires honoring yesterday's own skip rule. Will re-evaluate post-MU results (June 24 AMC) and post-PCE (June 25). Target entry window: **June 26 (Friday)** if MU beats and GNRC pulls back toward $280-288 range.
+
+If GNRC gaps DOWN significantly today (toward $280-285) during the session, market-open routine may revisit entry using fresh stop math at that level.
+
+**Weekly trade slots**: 0/3 used (Week 6, Day 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Cumulative vs SPY**: ~19 trading days in cash; SPY has appreciated from $10,000 baseline. GNRC entry remains the primary deployment path.
+**Active kill switches**: none.
