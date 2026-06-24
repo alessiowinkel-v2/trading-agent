@@ -1562,3 +1562,105 @@ If GNRC gaps DOWN significantly today (toward $280-285) during the session, mark
 **Phase P&L**: $0.00 (0.00%)
 **Cumulative vs SPY**: ~19 trading days in cash; SPY has appreciated from $10,000 baseline. GNRC entry remains the primary deployment path.
 **Active kill switches**: none.
+
+---
+
+## 2026-06-24 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin account, cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 20, Week 6)
+
+### Kill switch check
+- KS-1 (daily drawdown >3%): $10,000 → $10,000 = 0% — CLEAR
+- KS-2 (weekly drawdown >7% vs prior Friday close): 0% — CLEAR
+- KS-3 (total drawdown >15% vs $10,000 start): 0% — CLEAR
+- KS-4 (position >18% equity): no positions — CLEAR
+- KS-5 (>3 trades today / >8 this week): 0/3, 0/8 — CLEAR
+- KS-6 (API errors): API responding normally — CLEAR
+- All kill switches: CLEAR
+
+### Market context
+- **WTI**: $73.13/bbl (Aug 2026 contract, Jun 23 settle). CME real-time shows CLN26 (Jul) $77.54, CLQ26 (Aug) $76.54. Sources diverge; Jun 23 Yahoo settle is $73.13. Still well below $90 XOM thesis floor — energy thesis dead (confirmed).
+- **Brent**: Estimated ~$79–80 (no confirmed Jun 24 settle; Jun 22 open was $80.57 per Forbes/Fortune). WTI+Brent spread ~$3–7.
+- **S&P 500 futures**: +0.10% (~7,445–7,449 range at ~6AM ET). Headline near-flat; BUT September ESU26 contract -1.26% this morning on renewed AI/memory chip concerns. CNBC/Barchart confirm "September E-mini S&P fell -1.41%... Nasdaq 100 futures down -2.47%" separately. Divergence between front-month (+0.10%) and Sep (-1.26%) reflects contract roll, but Nasdaq weakness is real.
+- **VIX**: Closed 19.49 on June 23 (up +12.79% from 17.28). Intraday June 23 range: 18.61–20.54. Opened today at 19.13, current ~19.27. Elevated and rising — meaningfully above prior week's ~17.
+- **Today's macro data**: BEA International Transactions and Investment Position, Q1 2026 at 8:30 AM ET — minor, no timing block. No GDP/PCE/CPI/jobs today. MU Q3 FY2026 earnings at 4:30 PM ET (after close) — AI capex signal.
+- **Tomorrow's macro data (June 25)**: **TIMING BLOCK** — GDP 3rd Estimate + Corporate Profits at 8:30 AM ET. Core PCE implicit in GDP revisions. June 24 is day-before a major release. → **Day-before-major-release timing block applies today.**
+- **Today's catalysts**:
+  - Global tech/AI selloff ongoing (June 23): SK Hynix shifting HBM→DRAM production raised concerns about memory oversupply → Nasdaq 100 fell ~2%+, memory chip stocks most impacted.
+  - IBM upgraded to Buy (JPMorgan) on quantum computing executive order; IBM up ~3-4% premarket.
+  - NVIDIA shareholders meeting June 24 — governance/strategy updates possible.
+  - MU (Micron) Q3 FY2026 results tonight 4:30 PM ET. Q3 guidance: $33.5B rev, $19.15 EPS. Street expects $34.8B rev / $19.63-$20.98 EPS; buy-side whisper $36-37B. Q4 guidance is the key re-rate: street wants $41B+ — below $38B = sell-the-news signal even on Q3 beat.
+  - GNRC/Jefferies: June 22 Buy upgrade to $338 still fresh; GNRC down ~7% from 52-week high this week (~$275 premarket from ~$296 close June 22).
+- **Earnings before open (June 24)**: Paychex (PAYX), Trip.com (TCOM), H.B. Fuller (FUL), Jefferies (JEF), MillerKnoll (MLKN), Darden Restaurants (DRI), McCormick (MKC), TD Synnex (SNX), Worthington Steel (WS) — none are holdings, none affect our thesis.
+- **Sector momentum** (trailing 6-month, Charles Schwab):
+  - Information Technology: +18.7% — DOMINANT, driven almost entirely by semiconductors; SOX up 74% over 2 years
+  - Energy: +35.3% (Iran war premium still priced, but WTI at $73 is retreating from highs)
+  - Industrials: +13.1% — solid
+  - Materials: +13.6% — solid
+  - Consumer Staples: +9.9% — defensive outperformance
+  - Real Estate: +10.1%
+  - Communication Services: -1.0% (AI spending concerns)
+  - Financials: -1.0% (big banks lagging; JPM +0.47%, WFC -9.20% YTD)
+  - Health Care: -4.5% — weakest sector
+  - Utilities: +2.3% — lagging
+  - S&P Momentum Index QTD: +44.12% — extreme concentration in semiconductors
+  - **GNRC sector context**: Industrials (+13.1%) provides tailwind. AI/Data center power is a tech-adjacent demand driver; tech selloff = indirect headwind for sentiment on AI capex names.
+
+### Currently-held positions check
+No open positions. No held tickers to check.
+
+**GNRC carry-forward (primary candidate since June 22):**
+- June 23 close: ~$293-296 (stockchase $293.96 / prior research $295.93 — sources diverged)
+- June 24 premarket: Robinhood shows today's session range $272.02–$283.84, current ~$275.42; CNN shows opened $280.75, down ~$18 → ~$262. Data conflicted; best estimate is GNRC premarket ~$270-$278, down ~6-9% from June 22-23 highs.
+- Alpaca extended-hours quote (8 PM ET June 23): bid $256.50 / ask $302.33 — spread too wide, useless for pricing.
+- Key facts today: (1) GNRC now BELOW $293 skip threshold from June 22 research; (2) week-long tech/AI sentiment headwind from SK Hynix HBM news; (3) fundamentals entirely intact — Q1 beat 35%, raised guidance mid-to-high teens growth, Belvidere facility for large-MW data center generators, Jefferies PT $338.
+- **Entry blocker today**: Day-before-major-release rule (GDP June 25). Per TRADING-STRATEGY.md, no new trades day before/day of major releases (CPI, jobs, GDP). June 24 = day before GDP = BLOCKED.
+
+### Trade candidates
+**ZERO candidates for today.**
+
+1. **GNRC** — thesis intact, price improvement from June 22-23, BUT blocked:
+   - **Timing block**: June 24 is day before GDP 3rd estimate (June 25, 8:30 AM ET). Strategy prohibits new trades the day before major macro releases.
+   - **Secondary block**: VIX at 19.49 (+12.79% spike yesterday) = elevated volatility; entering a long in volatile tape adds execution risk.
+   - **Thesis**: GNRC is a data center power infrastructure beneficiary. Growing backlog, Enercon acquisition, Belvidere IL facility for large-MW generator packaging. Q1 FY2026: EPS $5.25 est → wait... Q1 adj EPS $1.80 beat $1.33 (+35%). Full-year guidance raised to mid-to-high teens revenue growth, CNI segment mid-to-high 20% growth. Jefferies PT $338 (Buy, June 22).
+   - **Risk**: Tech/AI capex sentiment reversal; MU Q4 guidance disappointment tonight; GDP miss tomorrow triggers risk-off.
+   - **Entry plan for June 26 (Friday — clean window)**:
+     - MU results (tonight) must be: Q3 beat + Q4 guidance ≥$38B (confirms AI capex)
+     - GDP 3rd estimate (June 25) must clear without market-moving surprise
+     - GNRC premarket at 9:45 AM ET on June 26: enter if $260–$285 range
+     - Skip if GNRC > $290 on June 26 (chasing after recovery)
+     - Entry $275 (est): Stop $255.75 (7% below), Target $313.50 (2:1 R:R minimum), Jefferies PT $338
+     - Size: 15% of equity = $1,500 → ~5 shares at $275 = $1,375 (13.75% equity, within limit)
+   - **Week constraint check**: 0/3 weekly trades used → entry on June 26 is valid
+
+### Risk factors for today
+- VIX 19.49 (+12.79% spike from Jun 22): elevated, rising — risk-off
+- Nasdaq futures -2.47% (Sep contract): tech weakness bleeding into Wednesday open
+- SK Hynix HBM→DRAM shift: memory sector headwind, indirect sentiment drag on AI capex names
+- MU earnings tonight 4:30 PM ET: binary event for AI capex thesis; Q4 guide below $38B = sell-the-news even on Q3 beat
+- GDP 3rd estimate Thursday (June 25): timing block for tomorrow
+- 20 consecutive trading days fully in cash; SPY has risen meaningfully since inception
+- GNRC thesis is compelling but requires confirmation from MU results before commitment
+
+### Decision
+**HOLD** — No trades today.
+
+June 24 is explicitly blocked by two factors: (1) day-before-major-release rule (GDP June 25), (2) elevated VIX (19.49, +12.79%). GNRC thesis is intact; price pullback to ~$275 from ~$296 is actually more attractive than last week's analysis, but the execution window is wrong.
+
+**Target entry window: June 26 (Friday)**, contingent on:
+- MU Q3 beat + Q4 guidance ≥$38B tonight
+- GDP 3rd estimate clears without major market disruption
+- GNRC 9:45 AM June 26 price ≤ $290
+
+If all three conditions met: market-open routine executes GNRC entry at 9:45 AM ET Friday.
+If MU Q4 guide disappoints (<$38B) → AI capex thesis at risk; re-evaluate entirely.
+
+**Weekly trade slots**: 0/3 used (Week 6, Day 20)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
