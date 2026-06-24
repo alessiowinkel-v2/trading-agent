@@ -361,3 +361,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: No blocking events — XOM thesis eligible if WTI >0; review pre-market research before any entry (Day 20, Week 6, 0/3 weekly slots used)
+
+---
+## 2026-06-24 19:34 UTC
+EOD 2026-06-24
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: -1.45% today | Phase SPY: materially negative from start
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: 0/3 weekly slots used; XOM thesis eligible if WTI >0 — war fears may provide that catalyst; pre-market check Thursday 6/25
