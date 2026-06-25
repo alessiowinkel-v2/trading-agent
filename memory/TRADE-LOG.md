@@ -297,3 +297,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 20, Week 6 (Wednesday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY fell -1.45% today (Investing.com close $733.58; Perplexity consensus; market declined on war fears with oil near $90/barrel). Holding cash outperformed on the day (+1.45% relative). 20 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-06-25 — EOD Snapshot (Day 21, Thursday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** -0.38%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 21, Week 6 (Thursday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used (Week 6). SPY fell -0.38% today (Investing.com close $730.46; megacap tech retreat drove S&P lower while Dow held up). Holding cash outperformed on the day (+0.38% relative). 21 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. No active kill switches. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. Friday Jun 26 is the final trade window of Week 6 (0/3 slots remain).
+**Active kill switches:** none.
