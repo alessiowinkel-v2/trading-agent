@@ -1664,3 +1664,94 @@ If MU Q4 guide disappoints (<$38B) → AI capex thesis at risk; re-evaluate enti
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-06-25 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin account — cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+- Weekly trade slots used: 0/3 (Week 6, Day 21)
+
+### Market context
+- **WTI**: ~$69.80/bbl (Aug 2026, CLQ26 down -4.13%); range $69.05–$70.21. US-Iran agreement opened Strait of Hormuz → supply surge. WELL BELOW $90 XOM thesis floor — energy thesis remains dead.
+- **Brent**: Estimated ~$72–75 (not confirmed for June 25; WTI+Brent spread ~$3–5).
+- **S&P 500 futures**: +0.46–0.49% premarket; Sep E-mini ~7,464–7,487. Modest recovery after two down days. MU blowout driving AI/tech sentiment higher.
+- **VIX**: June 24 close 18.63 (down -4.41% from 19.49). Early June 25 premarket ~18.06. Below 20 key level — volatility calming.
+- **Today's catalysts**:
+  - **MU (Micron) Q3 FY2026 — MONSTER BEAT**: Q3 EPS $25.11 vs $20.49 est (+22.5%); Revenue $41.46B vs $35.69B est (+16.2%); Gross margin 84.9% vs ~81% guided. Q4 guide: Revenue $49-51B (vs $43.5B street), EPS $30-32 (vs $25 street), GM ~86%. MU surged +14.6% AH to ~$1,199. AI capex supercycle definitively confirmed.
+  - **GDP 3rd Estimate + PCE/Personal Income (May 2026)**: Released 8:30 AM ET today. 2nd estimate was Q1 GDP +1.6% annualized; PCE price index 4.5% (core 4.4%). Final numbers TBD at time of this research.
+  - **Initial Jobless Claims**: Also 8:30 AM ET today.
+  - **FedEx (FDX)**: Headwinds from muted package demand, trade policy — macro read; not a trade target.
+  - **GNRC**: New hyperscaler global supply agreement confirmed (undisclosed hyperscaler, June 2026). Supports data center thesis. Premarket Jun 25 ~$287.95 (high $288.80, low $270.15).
+- **Earnings before open (June 25)**: Acuity Brands (AYI), BlackBerry (BB), Commercial Metals (CMC), Darden Restaurants (DRI), McCormick (MKC), TD Synnex (SNX), Winnebago (WGO). None are holdings; none affect our thesis.
+- **Economic calendar**: DAY-OF MAJOR RELEASE — GDP 3rd estimate + PCE/Personal Income at 8:30 AM ET. Strategy timing block applies TODAY. Market-open routine at 9:45 AM ET will have 75 minutes post-release to assess.
+- **Sector momentum (week of June 22)**:
+  - Industrials (XLI): **Leading** — tailwind for GNRC
+  - Consumer Staples (XLP): **Leading** — flight-to-safety
+  - Materials (XLB): **Leading**
+  - Energy (XLE): **Leading** YTD (+22%) but WTI falling on Iran deal
+  - Real Estate (XLRE), Utilities (XLU): **Improving**
+  - Technology (XLK): **Lagging** (cooling from AI run; MU beat may reverse this)
+  - Financials (XLF), Communications (XLC), Consumer Discretionary (XLY): **Lagging**
+  - Healthcare (XLV): **Weakening**
+
+### Currently-held positions check
+No open positions. No held tickers to monitor.
+
+**GNRC — primary candidate carry-forward:**
+- Jun 24 close: ~$284.04. Jun 25 premarket: ~$287.95 (up ~+1.4%).
+- New developments overnight: (1) MU monster Q4 guide ($49-51B) → AI capex confirmed; (2) GNRC hyperscaler global supply agreement now confirmed (previously "in final stages of vendor approval"). Both are significant thesis validators.
+- CEO insider sale (June 1, 5,000 shares at $272.18) is minor — routine at ~$1.36M vs $153M total stake.
+- Consensus "Moderate Buy" with average PT $278.65 (below current). Jefferies PT $338 is the outlier bull case.
+- Entry plan: Friday June 26, market-open routine at 9:45 AM ET.
+
+### Trade ideas
+**Zero candidates for TODAY.** (Pre-market research routine — no trades placed here regardless.)
+
+**GNRC — elevated conviction carry-forward to Friday June 26:**
+- **Thesis**: GNRC is the leading US data center power infrastructure play. Q1 FY2026: EPS +35% beat, raised full-year guidance to mid-to-high teens revenue growth and CNI segment mid-to-high 20% growth. New Belvidere IL facility for large-MW generator packaging. Hyperscaler global supply agreement confirmed June 2026. MU's monster Q4 guide ($49-51B) validates the AI capex supercycle driving GNRC's backlog.
+- **Catalyst**: MU Q4 guidance > $38B threshold (CONFIRMED: $49-51B, far above threshold); hyperscaler deal; Industrials sector leading; VIX falling.
+- **Risk**: GDP/PCE surprise today triggers risk-off; hyperscaler revenue conversion delayed; GNRC price > $290 at 9:45 AM Friday = skip.
+- **Sector**: Industrials — Leading. With us.
+- **Stop**: 7% below entry. Entry $280 est → stop $260.40; entry $288 → stop $267.84.
+- **Target**: Jefferies PT $338 = 17–21% above current. 2:1 R:R easily met.
+- **Size**: 15% cap = $1,500 → ~5 shares at $288 = $1,440 (14.4% equity). Within limits.
+- **Exit plan**: Stop triggers cut; +15% → tighten trail to 7%; +20% → 5%; thesis breaks → cut.
+- **Gate checks (pre-Friday)**:
+  - Positions after fill ≤ 6: ✅ (0+1=1)
+  - Weekly trades ≤ 3: ✅ (0+1=1)
+  - Position ≤ 15% equity: ✅ (~14.4%)
+  - Cash covers position: ✅ ($10,000 >> $1,440)
+  - PDT count OK: ✅ (0)
+  - Catalyst documented: ✅
+  - Stock (not option): ✅
+  - No earnings within 5 trading days: ✅ (Q2 expected late July)
+  - No kill switch: ✅
+
+### Risk factors for today
+- GDP 3rd estimate + PCE at 8:30 AM ET — key macro event; GDP Q1 2nd estimate was +1.6% (below 2% consensus), Core PCE 4.4% — inflation still elevated. Downside surprise on GDP or upside surprise on PCE could trigger risk-off.
+- GNRC at $287.95 premarket → approaching $290 skip threshold. MU euphoria could push GNRC above $290 Friday morning (skip trigger).
+- VIX now at 18.06 (declining) — calming, but still above sub-17 comfort zone.
+- 21 consecutive trading days in cash; SPY has risen materially since Day 1 (now ~7,472 vs ~$733 last week).
+
+### Decision
+**HOLD today.** Pre-market research routine — no trades placed here.
+
+**GDP/PCE timing block**: Today (June 25) is a MAJOR MACRO RELEASE day (GDP + PCE + Jobless Claims at 8:30 AM ET). Strategy rule: no new trades day-of major releases.
+
+**GNRC entry conviction: HIGH** — all three conditions from June 24 plan now partially met:
+1. ✅ **MU Q4 guide ≥$38B**: CONFIRMED AND FAR EXCEEDED ($49-51B guide). AI capex definitively confirmed.
+2. ⏳ **GDP/PCE clears without major disruption**: Pending — releases at 8:30 AM ET today. Market-open routine (9:45 AM ET) will assess impact.
+3. ⏳ **GNRC ≤ $290 at 9:45 AM Friday**: Currently $287.95 premarket — in range, but MU euphoria could push higher.
+
+**If GDP/PCE data is benign today (GDP close to 1.6%, Core PCE stable or declining), market-open routine on June 26 should execute GNRC.**
+
+**Weekly trade slots**: 0/3 used (Week 6)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
