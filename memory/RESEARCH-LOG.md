@@ -1755,3 +1755,88 @@ No open positions. No held tickers to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-06-26 — Pre-market Research (Day 22, Week 6 — Friday)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000.00
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Market context
+- **WTI**: ~$71.44–71.52/bbl (Aug 2026 CLQ26 June 25 close $71.44; still well below $90 XOM floor)
+- **Brent**: ~$74–76 est (June 26 price unconfirmed; June 12 reading was $89.94 — now materially lower on Iran deal supply resumption)
+- **S&P 500 futures**: Divergent sources. ES=F June 26 premarket showing ~7,369 (-0.73%) per Yahoo; WSJ settlement June 25 was 7,423.25; Business Insider showed 7,448.50 (+0.27%) from prior session. Net read: muted-to-slightly-negative open expected.
+- **VIX**: 20.26 (+7.25% from prior close of 18.89) — SIGNIFICANT SPIKE above 20. Risk-off signal. PCE data digestion driving elevated uncertainty.
+- **Today's catalysts**:
+  - **PCE aftermath** (released June 25): Headline PCE +4.1% YoY (highest since Apr 2023, in line with est); Core PCE +3.4% YoY (highest since Oct 2023, in line); monthly +0.3%. Consumer spending +0.7% (above est); income +0.7%. GDP 3rd estimate: +2.1% (better than 1.6% est, prior 2nd was 1.6%). Jobless claims: 215k (below 223k est, positive). Net: growth OK, but inflation still hot → ~80% chance Fed hikes in September (CME FedWatch).
+  - **U Michigan Sentiment Final** (today, 10:00 AM EDT): prior 48.9. Releases AFTER planned 9:45 AM trade window — minor timing risk.
+  - AI supercycle: Confirmed by MU's monster Q3 beat ($41.46B rev, +16% est; Q4 guide $49-51B). AI capex narrative intact.
+  - Market is +45.23% YTD on S&P 500 Momentum Index; sector rotation into defensive/cyclical ongoing.
+- **Earnings before open**: Apogee Enterprises (APOG, $907M cap, est $0.45 EPS) — not relevant to our thesis.
+- **Economic calendar**: No CPI/PPI/FOMC today. U Michigan at 10:00 AM. No pre-market blocking release (PCE was yesterday).
+- **Sector momentum (week of Jun 22)**:
+  - Leading: Industrials (XLI), Consumer Staples (XLP), Materials (XLB), Energy (XLE)
+  - Improving: Real Estate (XLRE), Utilities (XLU)
+  - Lagging: Technology (XLK), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF)
+  - Weakening: Healthcare (XLV)
+
+### Currently-held positions check
+No open positions. No held tickers to monitor.
+
+**GNRC premarket update:**
+- Premarket June 26: ~$290.00 (per Investing.com, up +$5.86 +2.06% from $284.14 June 25 close). CNBC/CNN show June 25 close at $295.16, which would mean GNRC is DOWN premarket. Sources diverge on June 25 close ($284-$295 range). Official close TBD; premarket ~$290 is the firm data point.
+- AT the $290 skip threshold set in yesterday's plan.
+- Year-to-date: +89%. Near 52-week high of $296.44.
+- P/E ~86 (high multiple — more sensitive to rate hike narrative).
+- Thesis intact: AI/data center power demand, Belvidere IL facility, hyperscaler supply deal confirmed.
+
+### Trade ideas
+**Zero candidates for TODAY** (pre-market research routine — no trades placed here regardless).
+
+**GNRC — CONDITIONAL carry-forward for market-open routine:**
+
+**Status: ELEVATED RISK — downgrade conviction from HIGH to MODERATE due to hawkish inflation environment.**
+
+- **Thesis**: GNRC is the leading US data center power infrastructure play. Q1 FY26 EPS beat +35%; full-year 2026 CNI revenue guided mid-to-high 20% growth. Belvidere IL facility expansion + hyperscaler global supply agreement confirmed. MU's Q4 guide ($49-51B) confirms AI capex supercycle driving GNRC's backlog.
+- **Catalyst**: AI capex definitively confirmed; Industrials sector Leading; hyperscaler deal.
+- **Risk factors — ELEVATED TODAY**:
+  1. PCE 4.1% headline = HAWKISH. Yesterday's condition "GDP/PCE clears without major disruption" is PARTIALLY MET (GDP better at 2.1%, but PCE inflation NOT benign). Inflation driving rate-hike expectations compresses GNRC's ~86x P/E multiple.
+  2. VIX spiked to 20.26 (+7.25%) → risk-off sentiment. Not extreme, but elevated above 20 = caution zone.
+  3. GNRC at $290 premarket = AT skip threshold. If market-open price is ≥$290, skip entirely.
+  4. S&P futures slightly negative.
+  5. U Michigan at 10 AM (post-entry, minor risk).
+- **Sector**: Industrials — Leading. Still a tailwind.
+- **Stop**: 7% below entry. Entry $287 est → stop $266.91.
+- **Target**: $338 (Jefferies PT). ~17-18% upside at $287 entry. 2:1 R:R met.
+- **Size**: 15% cap = $1,500 → ~5 shares at $287 = $1,435 (~14.4% equity). Within limits.
+- **Exit plan**: Stop triggers cut; +15% → tighten trail to 7%; +20% → 5%; thesis breaks (rate hike confirmed, sector rotates out of Industrials) → cut.
+
+**REVISED gate criteria for market-open routine (tightened due to hawkish PCE):**
+- ✅ Positions ≤ 6: (0+1=1)
+- ✅ Weekly trades ≤ 3: (0+1=1)
+- ✅ Position ≤ 15%: (~14.4%)
+- ✅ Cash covers: ($10,000 >> $1,435)
+- ✅ PDT OK: (0)
+- ✅ Catalyst: documented
+- ✅ Stock only: confirmed
+- ✅ No earnings within 5 days: (Q2 GNRC expected late July)
+- ✅ No kill switch: none active
+- **NEW CONDITION**: SKIP if GNRC ≥ $289 at 9:45 AM ET (tightened from $290 due to hawkish PCE compressing high-multiple tolerance)
+- **NEW CONDITION**: SKIP if VIX ≥ 21 at 9:45 AM ET (risk-off too elevated)
+
+### Decision
+**HOLD today.** Pre-market research routine — no trades placed here.
+
+**Conviction**: MODERATE (downgraded from HIGH). Hawkish PCE data (4.1% headline) partially breaks the "macro environment clear" precondition from June 25 plan. GDP improvement (+2.1%) is a partial offset. GNRC at skip threshold.
+
+**Market-open routine instruction**: Execute GNRC ONLY if (a) GNRC < $289 AND (b) VIX < 21 at 9:45 AM ET. If either fails, stand down — do not chase. Next opportunity: Week 7 (Jun 29) with reset conditions.
+
+**Weekly trade slots**: 0/3 used (Week 6 — final day)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
