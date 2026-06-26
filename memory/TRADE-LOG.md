@@ -309,3 +309,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 21, Week 6 (Thursday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used (Week 6). SPY fell -0.38% today (Investing.com close $730.46; megacap tech retreat drove S&P lower while Dow held up). Holding cash outperformed on the day (+0.38% relative). 21 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. No active kill switches. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. Friday Jun 26 is the final trade window of Week 6 (0/3 slots remain).
 **Active kill switches:** none.
+
+---
+
+### 2026-06-26 — EOD Snapshot (Day 22, Friday — end of Week 6)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.09%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 22, end of Week 6 (Friday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY rebounded +0.09% today (Yahoo Finance close $734.19; Investing.com shows +0.14%/$734.30 — sources slightly diverge). Holding cash was marginally negative on the day (-0.09% relative). 22 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. Week 6 concludes with 0/3 trade slots used — patience remains correct posture given SPY's recent -3% pullback. No kill switches triggered. Week 7 starts Monday Jun 29 with 3/3 weekly trade slots available.
+**Active kill switches:** none.
