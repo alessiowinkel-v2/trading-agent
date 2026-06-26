@@ -383,3 +383,7 @@ Trades today: none
 Open positions: 0 (21 consecutive days cash-only)
 Active kill switches: none
 Tomorrow: Week 6 final window (0/3 slots remain); XOM thesis still eligible if WTI >90 and no macro blocks
+
+---
+## 2026-06-26 13:47 UTC
+Market-open 2026-06-26: NO TRADE. GNRC ask $295.84 exceeds $289 skip threshold AND pre-10AM time block. VIX 20.26 (elevated). Next window: Mon Jun 29. All kill switches clear. Account: $10,000 cash, 0 positions.
