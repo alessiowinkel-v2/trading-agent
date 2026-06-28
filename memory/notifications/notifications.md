@@ -398,3 +398,16 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Weekend. Week 7 opens Mon Jun 29 with 3/3 trade slots. Re-evaluate XOM/setup.
+
+---
+## 2026-06-28 20:38 UTC
+Week ending 2026-06-26
+Portfolio: $10,000 (+0.0% week, +2.3% phase lead vs SPY)
+vs SPY: +1.7% week (SPY -1.7%), +2.3% phase lead since launch
+Max drawdown this week: 0%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: GNRC at entry threshold Jun 26, blocked by VIX 20.26 + hot PCE; W7 make-or-break
+Action needed: Market-open routine still not firing (4 consecutive weeks); orchestration fix required
+Graduation: 3/7 criteria met (22/30 days)

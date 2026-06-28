@@ -874,3 +874,125 @@ No trades placed. Four trading days, four HOLD decisions.
 **Graduation criteria met: 3/7**
 
 Days running counter: **17** (Day 1 = 2026-05-27; Day 17 = 2026-06-18; Jun 19 = Juneteenth holiday)
+
+---
+
+## Week ending 2026-06-28
+
+> Trading days this week: Mon Jun 22 – Fri Jun 26 (5 days). Review runs Sat Jun 28. Week 6.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior trading day Jun 18 close — Jun 19 = Juneteenth) | $10,000.00 |
+| Ending portfolio (Friday Jun 26 close — Alpaca confirmed) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jun 18 → Jun 26) | −1.68% (SPY $746.74 → $734.19; daily source: EOD snapshots + Yahoo Finance) |
+| Bot vs S&P this week | +1.68% (held cash; outperformed) |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −2.29% ($751.38 → $734.19); bot leads by +2.29% |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Max intraweek SPY drawdown | −2.18% (Jun 18 $746.74 → Jun 25 $730.46) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A |
+
+**SPY daily closes (source: EOD snapshots, Yahoo Finance/Investing.com):**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| Jun 18 (prior last trading day) | $746.74 | — |
+| Jun 22 (Mon) | ~$745.01 | −0.23% |
+| Jun 23 (Tue) | ~$734.78 | −1.29% |
+| Jun 24 (Wed) | ~$733.58 | −1.45% |
+| Jun 25 (Thu) | ~$730.46 | −0.38% |
+| Jun 26 (Fri) | ~$734.19 | +0.09% |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**GNRC status**: Valid candidate identified Jun 22; thesis confirmed by MU beat Jun 24 and hyperscaler deal Jun 25. Skip thresholds (GNRC < $289, VIX < 21) not simultaneously met on Jun 26 — VIX at 20.26 on PCE aftermath. Entry deferred to Week 7 (Jun 29+).
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five HOLD decisions.
+
+**Jun 22 (Day 18 — Monday):**
+- Pre-market research: Complete. GNRC identified — first real candidate since XOM abandonment. All 9 buy-side gate checks passed. Thesis: AI data center power infrastructure; Q1 FY2026 EPS +35% beat; raised guidance to mid-to-high teens revenue growth; Belvidere IL facility; Jefferies PT $338. Market-open entry condition: GNRC ≤ $293 at 9:45 AM ET.
+- Market-open outcome: **UNDOCUMENTED.** GNRC opened ~$279 (within threshold) and closed $295.54 (+5.87%). EOD snapshot shows 0 positions. No record of what happened at 9:45 AM — whether GNRC was below $293 at entry time and trade was skipped anyway, or routine failed to execute.
+- Process verdict: **Fail on documentation.** Identical failure pattern to June 2, June 8, June 12, June 26. 4th consecutive week. This is now unambiguously systemic, not incidental.
+
+**Jun 23 (Day 19 — Tuesday):**
+- GNRC at $295.93 (above $293 skip threshold set in prior session). Per prior session's own rule: skip if >$293. Correctly honored.
+- MU (Micron) AMC June 24 = AI capex read-through pending. PCE timing block June 24-25 ahead.
+- Process verdict: **Correct** — skip rule honored without exception. Clean.
+
+**Jun 24 (Day 20 — Wednesday):**
+- GNRC pulled back to ~$275 premarket — back below threshold. But: day-before-major-release rule (GDP Jun 25) in effect. VIX 19.49 (+12.79% spike from SK Hynix HBM news). Both factors independently block entry.
+- MU Q3/Q4 results after close: EPS $25.11 vs $20.49 (+22.5%); Q4 rev guide $49-51B vs $43.5B est — AI capex definitively confirmed.
+- Process verdict: **Correct** — timing block applied; confirmed MU as thesis validator per prior plan.
+
+**Jun 25 (Day 21 — Thursday):**
+- PCE/GDP day (hard timing block). GDP 3rd estimate: +2.1% (beat 1.6% est). PCE May: +4.1% headline, +3.4% core (hot; highest since Oct 2023). Jobless claims: 215K (below 223K est). GNRC hyperscaler global supply agreement officially confirmed. GNRC premarket ~$287.95 (in range).
+- Process verdict: **Correct** — hard block applied. Thesis strengthened; conviction upgraded to HIGH pending Friday's entry conditions.
+
+**Jun 26 (Day 22 — Friday — last trading day of week):**
+- PCE aftermath: VIX spiked to 20.26 (+7.25%). S&P futures slightly negative. Hot PCE (4.1%) driving rate-hike probability to ~80% for Sep 2026. GNRC premarket at ~$290 — at/above revised skip threshold ($289 under hawkish PCE calibration).
+- Entry conditions set: GNRC < $289 AND VIX < 21. If either fails, stand down.
+- EOD snapshot: 0 positions. **Decision at 9:45 AM undocumented.** Whether GNRC was above $289 or VIX above 21 at exactly 9:45 is unknown.
+- Process verdict: **Partial fail** — conditions were set correctly and the framework was principled. But the market-open decision is undocumented again (same as June 22). Cannot confirm whether entry was skipped for the right reason or simply not executed.
+
+**In hindsight**: Would I make different decisions? June 23–25 are clean; no regrets. June 26 skip was likely correct given VIX 20.26 at open and GNRC at $290 — high-multiple stock in a hawkish inflation environment is correctly cautious. June 22 is the real cost: GNRC was ~$279 at open, within the $293 threshold, and the opportunity passed without a documented decision.
+
+### Self-grades (be HARSH)
+- Process discipline: **C+** — Timing blocks applied correctly June 23-25 (3/5 days clean). Hard deductions: market-open documentation gap on June 22 AND June 26 — same failure, 4th consecutive week. If June 22 open was a valid entry and was skipped, we need the reason documented. If it was executed and failed to log, we need to know that. Either way: fail.
+- Documentation quality: **C** — Research log complete 5/5 days; EOD snapshots filed 5/5. Market-open decision gaps on two days (not one) degraded this to C. The market-open record is the most important document when a conditional plan exists. Its absence for the 4th consecutive week can no longer be overlooked.
+- Risk management: **A** — 0.00% drawdown. All kill switches checked and clear. GNRC skip conditions (VIX > 20 caution, price at threshold) were appropriate risk management. Capital preserved through SPY -1.68% week and max SPY drawdown of -2.18%.
+- Outcome (weighted least): **B** — +1.68% vs SPY this week. Phase lead extended to +2.29%. Second outperformance week in a row (after FOMC week). Capital preservation during PCE/hawkish-environment volatility is genuine value. Grade is B not A because the bot still holds 0 real positions after 22 trading days.
+- **Overall: C** — Fourth consecutive week of market-open documentation failure. This is the dominant fact of the week. Process was defensible on 3/5 days, correct on 5/5 timing blocks this week, but a recurring structural failure on the most operationally critical step prevents a grade above C.
+
+### What worked (3-5 bullets)
+- Day-before-GDP block (Jun 24) and PCE-day block (Jun 25) applied cleanly — no positions exposed to hawkish PCE print
+- GNRC skip rule ($293 threshold) honored on Jun 23 — disciplined even when the thesis was compelling
+- MU monster beat ($49-51B Q4 guide) confirmation loop worked as designed: thesis validated before entry
+- Capital preserved through SPY -1.68% week including -2.18% max intraweek drawdown
+- VIX-based entry condition (< 21 on Jun 26) appropriately flagged elevated execution risk in PCE aftermath
+
+### What didn't work (3-5 bullets)
+- Market-open documentation gap on Jun 22 AND Jun 26 — 4th consecutive week, 6th total incident; systemic, not isolated
+- GNRC ~$279 at open Jun 22 (within $293 threshold) likely represented a valid entry; opportunity passed without a decision record
+- 22 consecutive trading days, 0 trades — GNRC has been the leading candidate for 5 days without execution
+- VIX spike to 20.26 on PCE day (Jun 26) degraded entry conditions for the one clean macro day of the week
+- SPY daily data sourcing inconsistency persists (EOD log and Yahoo Finance diverge slightly Jun 23); no single canonical source yet adopted
+
+### Key lessons (added to lessons.md)
+- GNRC open vs close divergence: On Jun 22, GNRC opened ~$279 (below $293 threshold) and closed at $295.54. The opportunity existed at the right price for at minimum the 9:45 AM entry window. This is the cost of the market-open documentation gap — not just a missing log entry, but a potentially missed trade.
+- Four consecutive market-open documentation failures constitute a systemic breakdown: The pre-market research process is excellent; the market-open execution process is broken. These are two separate routines and only one is functioning.
+- High-multiple stocks (GNRC P/E ~86) require tighter entry conditions in hawkish rate environments: PCE 4.1% YoY driving ~80% Sep rate hike probability. Skip conditions (VIX < 21, price below threshold) are appropriate — do not lower the bar when rates are moving against the valuation.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Market-open documentation failure (6th escalation — systemic)**: June 22 and June 26 both had conditional trade plans that produced no decision record. This is the most important unresolved issue since launch. Recommend: add a mandatory first step to every market-open routine: "Before any order — log: (a) the data result for any pending conditional plan, (b) condition met Y/N, (c) intended action and reason." Cannot be fixed by the agent alone.
+2. **GNRC Week 7 entry window**: Next major blocks are CPI (Jul 14), FOMC (Jul 29), PCE (Jul 30). Jun 29 – Jul 11 is a 9-trading-day clean window. Recommend entry on Mon Jun 29 if: GNRC ≤ $295 at 9:45 AM ET, VIX < 20, no breaking negative news on GNRC or AI capex. Skip threshold recalibrated from hawkish-PCE $289 to post-confirmation $295 (MU beat and hyperscaler deal are now known positives). Size: 5 shares (~$1,425–$1,475; ~14-15% equity). Stop: 7% trailing GTC.
+3. **Phase performance honesty**: Bot is +2.29% ahead of SPY phase return, but this is entirely because SPY fell 2.29% since launch — not because the bot generated alpha. Capital preservation in three down-SPY periods (NFP week, CPI/PPI week, hawkish FOMC, PCE week) is genuine value. But to graduate, the strategy must eventually demonstrate it can capture upside too.
+4. **22-day zero-trade flag**: By strategy design, patience > activity. But 22 days with no execution while a validated candidate existed for 5 days is approaching the same pattern as XOM (perpetual deferral). The GNRC thesis has concrete fundamentals; it is not geopolitical-premium-based. The 10-day expiry clock on the GNRC thesis started June 22 — Day 10 is July 5 (or the nearest trading day). Entry OR formal abandonment required by then.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (22/30 days elapsed)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat, SPY −2.29% phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY −2.29% phase; bot +2.29% ahead — but only because SPY is net-negative from launch, not because bot earned returns)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; lessons.md lowercase naming persists; functional)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced; max intraweek SPY −2.18%, portfolio 0%)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **22** (Day 1 = 2026-05-27; Day 22 = 2026-06-26)

@@ -189,3 +189,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: Week of June 15–18 (FOMC week): all individual decisions were correct but the pipeline was empty when the block cleared. Entered the week with KR and ACN as potential candidates; both failed entry conditions. Exited the week with zero candidates.
 **Insight**: Blocking periods (CPI week, FOMC week, NFP week) are research windows. The first session after a block should be executing a pre-built candidate, not starting research from scratch. If the blocking period ends with no candidates, the first clean session adds days to an already-long cash streak.
 **Rule change**: Flag for user: consider requiring the agent to screen for 2–3 post-block candidates during each blocking period (i.e., run a sector screen on the day of the block event, when no trade can be placed anyway). No strategy change — operational improvement only.
+
+## 2026-06-28 — Market-open documentation failure cost a real entry
+
+**Context**: GNRC cleared all 9 gate checks on June 22. Pre-market set $293 as the entry threshold. GNRC opened at approximately $279 — well within range. No market-open routine executed; no decision record was created. The opportunity was missed not due to a strategy rule but due to process failure.
+**Insight**: The gap between "pre-market plan" and "market-open execution" is where trades actually happen or don't. A pre-market research entry without a corresponding market-open decision record is unfalsifiable — we can never know if the entry would have been correct. When GNRC subsequently never returned to $279, the opportunity cost became permanent.
+**Rule change**: Flag to user (6th escalation): the market-open routine must produce a timestamped log entry for every session where a conditional trade plan exists: (a) triggering data result, (b) condition met/failed, (c) action taken. This is a systemic process failure that has now recurred 4 consecutive weeks. Cannot be fixed by the agent — requires orchestration change.
+
+## 2026-06-28 — Four consecutive market-open failures is systemic, not incidental
+
+**Context**: June 2 (JOLTS conditional), June 8 (NFP/WTI conditional), June 22 (GNRC conditional), June 25–26 (GNRC/VIX conditional) — four consecutive weeks with conditional trade plans that produced zero market-open decision records.
+**Insight**: One missed documentation is an oversight. Two is a pattern. Four in a row is a broken process. The agent cannot self-fix this; it requires the orchestration layer (cron trigger, session initialization) to guarantee a market-open routine fires every day a conditional plan exists. Without it, every gate-passing thesis is silently skipped, and the trade log says "HOLD" with no audit of whether the entry condition was reached.
+**Rule change**: None (cannot change strategy unilaterally). Flagging as a critical process gap requiring user intervention in the scheduling/trigger configuration.
+
+## 2026-06-28 — High-multiple stocks require tighter entry conditions in hawkish rate regimes
+
+**Context**: GNRC was P/E ~86× at the time of analysis. PCE came in at 4.1% headline (hottest since 2023), driving ~80% Sep 2026 rate hike probability. The stock fell from ~$295 (June 23) to ~$279 (June 22 open) to a ~$290 PCE-day spike before pulling back. The $293 threshold was set before the PCE print confirmed the macro picture.
+**Insight**: High-multiple growth stocks (P/E > 60×) compress faster than the market in hawkish environments because their valuation is disproportionately sensitive to the risk-free rate. When PCE confirms a hawkish regime, the correct response is to tighten entry thresholds (not loosen them) and require a larger margin of safety. A $293 threshold on a $86× P/E stock with PCE at 4.1% is aggressive, not conservative.
+**Rule change**: Flag for user: consider adding a screen condition for hawkish-rate environments — stocks with P/E > 50× require entry price ≥ 5% below the initial threshold set, or the thesis must explicitly include rate-sensitivity analysis. No unilateral change.
