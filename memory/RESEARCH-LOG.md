@@ -1840,3 +1840,63 @@ No open positions. No held tickers to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-06-29 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000
+- Daytrade count: 0/3
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: WTI ~$76/barrel (down from $90+ in early June); Brent ~$72. Strait of Hormuz supply fears easing on US-Iran diplomatic progress. Markets price 80% probability WTI closes higher today. WTI fell >4% Friday on tanker exits.
+- **S&P 500 futures**: +0.67% (~7,451). Markets believe US-Iran conflict will not escalate to full-scale war; risk-on sentiment returning. Week is end-of-Q2 (quarter ends tomorrow Jun 30) — window dressing possible.
+- **VIX**: 18.41 (Jun 26 close, -2.54% from prior day). Intraday range today 18.25-18.60. 4.5-month low. Well below 21 threshold — risk environment constructive.
+- **Today's catalysts**: (1) US-Iran resolution "in sight" — JPMorgan raised SPX target to 7,800, Blue Sky scenario. (2) AI supercycle continues; nearly half S&P 500 weight AI-related. (3) Sticky inflation (May CPI 4.2% y/y, PCE 4.1%) — Fed rate hike risk in September (25% probability Jul 29, FOMC holds at 3.50-3.75%). (4) Quarter-end rebalancing (Q2 ends Jun 30). No major US data releases today (clean day).
+- **Earnings before open**: DRI (small miss), SNX (big beat: $4.85 vs $4.18E), AYI (slight beat), CMC (slight miss), WGO (miss). None relevant to our universe. Major week earnings: NKE/STZ (Tue), AVGO (this week — no buy within 5 days).
+- **Economic calendar**: Chicago PMI 62.7 (beat vs 60E). JOLTs Job Openings 2PM (7.618M prior, 7.28M est). CB Consumer Confidence 2PM (93.1 prior, 94.2 est). No CPI/PPI/FOMC today. June Jobs report Friday July 3.
+- **Sector momentum**: LEADING — Information Technology (AI-driven, 29.1% margins, highest revenue surprise +5.8%), Materials (+4.4% revenue surprise), Financials. LAGGING — Energy (margins 6.6% vs 9.6% 5-year avg; largest QoQ decline; oil price -16% since early June), Communication Services (strongest margin contraction), Consumer Discretionary (+0.4% revenue surprise only). **Key shift vs last week**: Energy has rotated from "Leading" to "Lagging." IT is now the clear sector leader. Industrials trend mixed/neutral.
+
+### Currently-held positions check
+No open positions. No held tickers to monitor.
+
+### Trade ideas
+
+**Zero new candidates identified for today.**
+
+**GNRC — Conditional carry-forward (MODERATE conviction, gates TIGHTENED):**
+
+- **Thesis**: GNRC is the leading US data center power infrastructure company. Q1 FY26 EPS beat +35%; full-year CNI revenue guided mid-to-high 20% growth. Hyperscaler global supply agreement confirmed. AI capex supercycle accelerating (JPMorgan confirms record capex, AI-related large caps returned +47% since March 30). Data center power demand structurally supports GNRC backlog regardless of short-term oil price.
+- **Catalyst**: AI capex supercycle broadly confirmed across Q1/Q2 earnings season; IT sector now the clearest sector leader; US-Iran easing reduces oil volatility narrative.
+- **Risk (ELEVATED)**:
+  1. 86x P/E compressed by rate hike risk — Sep hike probability 25%, persistent CPI 4.2% and PCE 4.1%.
+  2. Energy and Industrials sectors both now LAGGING in margin terms — sector tailwind weaker than prior weeks.
+  3. GNRC at/above skip threshold ($289) for multiple consecutive days — high probability market-open will find price ≥$289.
+  4. Stock near 52-week high ($296.44) after +89% YTD — limited margin of safety.
+  5. Quarter-end window dressing today/tomorrow may inflate price artificially.
+- **Sector**: Mixed. IT leading (primary thesis driver), but GNRC sits in Industrials; Industrials margins declining QoQ.
+- **Stop**: 7% below entry. Entry ~$285-290 → stop ~$265-270.
+- **Target**: $338 (Jefferies PT). ~17% upside at $287. 2:1 R:R met.
+- **Size**: 15% cap = $1,500 → ~5 shares at $287 = $1,435 (~14.4% equity).
+- **Exit plan**: -7% hard stop; +15% tighten trail to 7%; +20% to 5%; thesis breaks (Fed hike confirmed, IT rotation reverses) → cut.
+
+**Gate conditions for market-open routine (unchanged from June 26):**
+- SKIP if GNRC ≥ $289 at 9:45 AM ET
+- SKIP if VIX ≥ 21 at 9:45 AM ET
+- All buy-side gate checks still apply
+
+### Decision
+**HOLD** (pre-market routine — no trades placed here regardless).
+
+**Conviction**: MODERATE-LOW (tracking lower due to sector shift; Energy/Industrials now lagging vs IT leading). GNRC's AI data center power thesis remains structurally valid but sector tailwind is weaker. High probability market-open routine will skip on price grounds (GNRC near/at $289+ since Jun 26).
+
+**Alternative for future weeks**: If GNRC continues to be blocked by price, consider direct IT/semiconductor exposure (MU post-earnings pullback, if one occurs). Do NOT chase at current AI stock levels (+47% from March lows). Wait for sector rotation or pullback entry.
+
+**Weekly trade slots**: 0/3 used (Week 7 — Day 1)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
