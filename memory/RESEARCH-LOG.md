@@ -1900,3 +1900,92 @@ No open positions. No held tickers to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-06-30 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000
+- Daytrade count: 0/3
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): Day P&L $0.00 (0.00%) — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday ($10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting ($10,000) = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0 trades today / 0 this week (0/3 slots used, Week 7) — CLEAR
+- All kill switches: NONE ACTIVE
+
+### Market context
+- **WTI / Brent**: WTI ~$70-72/barrel (prediction markets resolve above $69.99; Jun 10 was $89.40 — has fallen sharply on US-Iran diplomatic progress). Brent ~$80-82 estimated (Jun 1 reference: $96.42; no Jun 30 precise quote). **WTI well below $90 XOM thesis threshold.**
+- **S&P 500 futures**: ~+0.11% at 7,508 (consensus range 7,505-7,508). Muted positive open. Quarter-end (Q2 ends today); window dressing possible.
+- **VIX**: Jun 29 close $17.65 (-4.13% day). Jun 30 intraday range 17.49-19.45, opened 18.60. Well below 21 threshold — risk environment constructive.
+- **Today's catalysts**: ⚠️ Perplexity SSL error (exit code 35) on this query — fallback to adjacent data. Quarter-end (Q2 2026 final day); window dressing effects possible. No major geopolitical escalations noted. US-Iran tensions continuing to de-escalate (oil falling as result). S&P 500 futures flat/slightly positive.
+- **Earnings before open**: No noteworthy pre-open earnings. After close: NKE, STZ, PRGS — none relevant to our universe.
+- **Economic calendar**: No new PCE/CPI/FOMC/jobs releases today. Most recent PCE (Jun 25): headline 4.1% y/y (highest since Apr 2023), core 3.4% y/y (highest since Oct 2023) — still elevated. GDP Q1 final: +2.1% (up from 1.6% estimate). Next PCE: July 30. FOMC hold at 3.50-3.75% (Sep hike probability remains ~25%).
+- **Sector momentum — MAJOR REVERSAL vs Jun 29 research**:
+  - LEADING: Energy (XLE, +22% YTD), Consumer Staples (XLP), Industrials (XLI), Materials (XLB)
+  - WEAKENING: Healthcare (XLV)
+  - LAGGING: Technology (XLK), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF)
+  - IMPROVING: Real Estate (XLRE), Utilities (XLU)
+  - **Key shift**: Technology flipped from LEADING to LAGGING — market now questioning AI capex ROI. Energy flipped from LAGGING to LEADING (+22% YTD, sticky-inflation hedge). Industrials now LEADING.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas
+
+**Zero new candidates identified.**
+
+**GNRC — Conditional carry-forward (MODERATE conviction, gates partially pass as of research time):**
+
+- **Thesis**: GNRC is the leading US data center power infrastructure company. Q1 FY26 net sales +12% y/y; CNI segment +28% y/y; raised FY26 guidance to mid-to-high teens net sales growth; expanded data center backlog with unnamed hyperscaler. Industrials sector now LEADING (+22% context from Energy rotation supporting cyclicals broadly).
+- **Catalyst**: Q1 beat + raised guidance (Apr 29); data center power demand remains structural; new Belvidere, IL facility for large-MW generator capacity; Enercon acquisition expanding CNI reach.
+- **Risk (ELEVATED)**:
+  1. Technology sector now LAGGING — market questioning AI capex ROI. GNRC's 87x P/E is directly tied to AI data center growth narrative; re-rating risk if capex skepticism spreads.
+  2. Safety recalls: portable generators (fire/burn hazard, Apr 16) + pressure washers (CO hazard, May 14) — regulatory overhang.
+  3. Median analyst PT $278.50 (below current price $282.71) — consensus target already exceeded.
+  4. Q2 2026 quarterly-end window dressing may artificially support price today; risk of reversal post-close.
+  5. Sticky PCE (4.1%) → Fed hike risk in Sep → high-multiple compression.
+  6. Stock near 12-month high ($296.44); limited upside margin of safety at entry.
+- **Sector**: Industrials = LEADING ✓ (improved from prior week). But AI/data center thesis driver (Technology sentiment) = LAGGING ✗.
+- **Stop**: 7% below entry. ~$282 entry → stop ~$262.
+- **Target**: $335 (Jefferies PT). ~18.5% upside from $282. R:R ~2.6:1 ✓.
+- **Size**: 15% cap = $1,500 → ~5 shares at $282.71 = $1,413 (14.1% equity).
+- **Exit plan**: -7% hard stop; +15% tighten trail to 7%; +20% to 5%; thesis breaks (Fed hike confirmed, AI capex permanently stalls, recall escalation) → cut.
+
+**Buy-side gate check (pre-market prices):**
+- ✅ Positions after fill ≤ 6: (1 ≤ 6)
+- ✅ Trades this week ≤ 3: (1 ≤ 3; Week 7, 0 used)
+- ✅ Position cost ≤ 15% equity: ($1,413 / $10,000 = 14.1%)
+- ✅ Cash covers: ($10,000 >> $1,413)
+- ✅ PDT OK: (0 day trades)
+- ✅ Catalyst: documented (Q1 beat + raised guidance + data center backlog)
+- ✅ Stock only: confirmed
+- ✅ No earnings within 5 days: (GNRC Q2 expected late July/August)
+- ✅ No kill switch: none active
+- **GATE CONDITION (price)**: GNRC opened at $282.71 — below $289 threshold → PASS at research time
+- **GATE CONDITION (VIX)**: ~17.65-18.60 — below 21 → PASS
+- **CAUTION**: Quarter-end window dressing may inflate price; re-check at 9:45 AM ET
+
+### Decision
+**HOLD** (pre-market routine — no trades placed here).
+
+**Conviction**: MODERATE (net unchanged vs Jun 26, sector picture mixed: Industrials now LEADING is better for GNRC the company; Technology now LAGGING is worse for AI capex narrative / multiple support).
+
+**Market-open routine instruction**: Execute GNRC ONLY if:
+  (a) GNRC < $289 at 9:45 AM ET (avoid chasing quarter-end window dressing)
+  (b) VIX < 21 at 9:45 AM ET
+  (c) No material negative news between now and 9:45 AM
+If any condition fails, stand down — do not chase.
+
+**Note on perplexity fallback**: One query ("Top stock market catalysts today") failed with SSL exit code 35. Fallback: used data from adjacent successful queries to infer catalyst picture. No additional WebSearch fallback required given sufficient context.
+
+**Weekly trade slots**: 0/3 used (Week 7 — Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
