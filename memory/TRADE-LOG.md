@@ -345,3 +345,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 24, Week 7 (Tuesday, Q2 quarter-end). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY rallied +1.65% today (Investing.com close $741.00; SPX index +1.18% to $7,440.43 — sources diverge between the two measures). Holding cash underperformed materially on the day (-1.65% relative). 24 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00% while SPY is up meaningfully since launch. Pre-market research flagged GNRC as a conditional candidate (Industrials leading, but Technology/AI-capex sentiment now lagging, WTI well below XOM's $90 threshold) — no record of a market-open or midday execution decision in today's logs, and live Alpaca state confirms zero open positions and zero orders, so no trade was placed. No kill switches triggered. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-01 — EOD Snapshot (Day 25, Wednesday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.78%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 25, Week 7 (Wednesday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained +0.78% today (Investing.com close $746.77; figure verified as internally consistent with confirmed 6/30 close of $741.00 and prior chain of daily changes). Holding cash underperformed on the day (-0.78% relative). 25 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00% while SPY has risen materially since launch. GNRC conditional candidate remains carried forward pending Friday Jul 3 expiry per LESSONS.md 10-day rule. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. No kill switches triggered.
+**Active kill switches:** none.

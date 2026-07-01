@@ -433,3 +433,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: re-evaluate GNRC (price <$289, VIX <21) if no negative news; 24 days fully in cash
+
+---
+## 2026-07-01 19:39 UTC
+EOD 2026-07-01
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: +0.78% today, phase SPY up materially
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: research GNRC expiry (Fri Jul 3 deadline), scan Week 7 setups (0/3 slots used)
