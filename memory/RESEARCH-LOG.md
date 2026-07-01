@@ -1989,3 +1989,59 @@ If any condition fails, stand down — do not chase.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-01 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $0.00 vs yesterday's $10,000 close = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jun 26, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 7, Day 3) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (content "test") persists — non-standard location (not `memory/PAUSED.flag`), does not trigger the standard kill switch per protocol.
+
+### Market context
+- **WTI / Brent**: WTI ~$70.31-71.29, Brent ~$72.56-73.44 (sources diverge slightly). Well below the $90 floor XOM thesis required (thesis already formally expired June 15 per LESSONS).
+- **S&P 500 futures**: ~7,545.50, -0.04% (essentially flat premarket).
+- **VIX**: ~16.45-16.98, down from yesterday's 17.65 close. Low/constructive.
+- **Today's catalysts**: Broadcom (AVGO) sold off 12-14% despite beating on revenue ($22.2B) and 143% AI-chip growth YoY — punished for not raising AI revenue outlook, reigniting AI-capex-ROI skepticism. Palo Alto Networks (PANW) posted a record quarter (+60% YoY security ARR), stock +40% YTD. JPMorgan raised 2026 S&P target to 7,800 (from 7,200) on US-Iran diplomatic progress. Fed funds futures now pricing a possible September hike; new Fed Chair Kevin Warsh speaks today 9:30 AM ET. ADP employment report 8:15 AM ET; S&P final PMI 9:45 AM ET.
+- **Earnings before open**: GIS (General Mills), MSM (MSC Industrial Direct) — neither in our tradeable universe/thesis set.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs release today. Most recent CPI (May, released Jun 10): 4.2% y/y, 0.5% m/m, in line. Next CPI (June data) releases July 14. Next FOMC July 30-31. Today's only data points are ADP (8:15am) and Fed Chair Warsh remarks (9:30am) — moderate-importance, not a hard block per strategy rules.
+- **Sector momentum** (consistent with recent weeks): LEADING — Consumer Staples (XLP), Energy (XLE), Industrials (XLI), Materials (XLB). WEAKENING — Healthcare (XLV). LAGGING — Technology (XLK), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF). IMPROVING — Real Estate (XLRE), Utilities (XLU). Today's Broadcom reaction reinforces Tech/AI-capex skepticism.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.**
+
+**GNRC — carried-forward conditional candidate, now FAILS gate (recommend formal expiry):**
+- Last quote available: bid $272.92 / ask $314.87 (timestamp 2026-06-30 20:00 UTC, i.e. yesterday's post-close tape; spread is abnormally wide — not a reliable premarket read, but directionally price has moved well above the $289 entry threshold set on Jun 30).
+- **Gate check**: price condition (< $289) — FAILS on best available data. Do not chase.
+- **Thesis update**: GNRC's data-center power narrative leans on the same AI-capex-ROI confidence that Broadcom's guidance disappointment undermined today. This is a fresh negative data point layered on top of the safety-recall overhang and 87x P/E already flagged as risks on Jun 30.
+- **Expiry clock**: GNRC first cleared the buy-side gate on Jun 22 — today is trading day 8 of the 10-day thesis-expiry window (LESSONS.md 2026-06-05/06-21 rule). Window closes Fri Jul 3.
+- **Recommendation**: Do not carry GNRC forward past this week. If price/thesis conditions haven't cleanly re-aligned by Friday's close, formally abandon per the expiry rule rather than let it drift into an 11th, 12th day.
+
+### Risk factors for today
+- AI-capex-ROI skepticism (Broadcom reaction) is a live, spreading risk across the Tech/high-multiple growth cohort — avoid initiating anything with AI-capex-dependent multiples this week.
+- Fed Chair Warsh speaks 9:30 AM ET — headline risk around hawkish-tilt commentary; avoid trading in the 30 min around this if any candidate were live (moot today, zero candidates).
+- No blocking macro data (no CPI/PPI/FOMC/jobs today).
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate. GNRC fails on price; recommend formal expiry by Friday if unresolved. 25th consecutive trading day fully in cash (Week 7, Day 3).
+
+**Weekly trade slots**: 0/3 used (Week 7 — Day 3)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
