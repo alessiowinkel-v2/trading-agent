@@ -2045,3 +2045,60 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-02 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs yesterday's $10,000 close = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jun 26, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 7, Day 4) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (content "test") persists — non-standard location (not `memory/PAUSED.flag`), does not trigger the standard kill switch per protocol.
+
+### Market context
+- **WTI / Brent**: WTI ~$67.74-70.31, Brent ~$70.65-72.85 (sources diverge). Brent down ~1% on the day, lowest since late Feb, on continued US-Iran peace negotiations and Strait of Hormuz shipping recovery. Still well below the $90 XOM thesis floor (thesis formally expired June 15).
+- **S&P 500 futures**: ~7,536-7,554, roughly flat to slightly positive (+0.01% to +0.14%), one source shows -0.27% — mixed/cautious tone starting Q3 as investors await Fed remarks. Wednesday cash close: SPX -0.22%, Dow -0.03%, Nasdaq -1.54% (tech-led selloff).
+- **VIX**: ~16.59, up slightly (+0.85%) from 16.45 prior close. Still low/constructive.
+- **Today's catalysts**: US-Iran resolution optimism continues to support a bullish "Blue Sky" macro case (JPMorgan S&P target 7,800). Counterweight: Fed funds futures now pricing a possible September hike after Warsh's inflation-focused tone; May PCE was hottest in ~3 years. AI-capex-ROI skepticism is spreading beyond semis: GNRC (see below) sold off hard on its own earnings day, echoing Tuesday's Broadcom reaction — a second data point in the same week that beating estimates isn't enough for high-multiple AI-infrastructure names right now. Micron's blowout results (revenue +350% YoY) show the divergence is selective, not sector-wide capitulation.
+- **Earnings before open**: Sodexo (SDXAY), Lindsay (LNN), Park Aerospace (PKE), ASOS (ASOMY), Americas Car-Mart (CRMT), BitMine (BMNG), KION Group — none in our tradeable universe.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs release today. Most recent CPI (May, released Jun 10): 4.2% y/y, 0.5% m/m. Next CPI (June data) releases July 14; no FOMC meeting today. Fed Chair Warsh remarks are the main scheduled macro event — moderate headline risk, not a hard timing block per strategy rules.
+- **Sector momentum**: Unchanged from recent weeks. LEADING — Energy (XLE), Consumer Staples (XLP), Industrials (XLI), Materials (XLB) — all near/at all-time highs, "Great Rotation" into defensives/cyclicals. LAGGING — Technology (XLK), Communication Services (XLC), Consumer Discretionary (XLY), Financials (XLF). WEAKENING — Healthcare (XLV). IMPROVING — Real Estate (XLRE), Utilities (XLU).
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.**
+
+**GNRC — carried-forward conditional candidate, recommend formal expiry (do not chase):**
+- **What happened**: GNRC beat Q1 EPS by 35% ($1.80 vs $1.33 est.) on July 1 but sold off **-7.3% to -7.7%**, closing ~$270.17-273.40, down from ~$292.81 prior close. Barclays raised PT to $285 (still only Equal Weight). Market narrative: "AI trade reversal hits infrastructure stocks as investors reassess data center boom" — the same AI-capex-ROI skepticism that hit Broadcom on June 30 is now hitting GNRC on its own earnings beat.
+- **Live quote check**: `alpaca.sh quote GNRC` returns ask $287.18 / bid $256.69 (timestamp 2026-07-01T20:00 UTC — stale, post-close tape). Spread is ~10.6% (abnormally wide) — not a tradeable premarket read, consistent with the illiquid/wide-spread pattern flagged yesterday.
+- **Gate check on price alone**: at $270-287, price is now technically below the $289 threshold set June 30. But per LESSONS.md (2026-06-28): stocks with P/E > 50x require entry ≥5% below the original threshold in a hawkish-rate regime — GNRC's P/E is ~91.8x, so the effective bar is ~$274.55. Achievable execution price (near the ask, ~$287) does not clear even the original threshold reliably given the wide spread.
+- **Thesis update — this is a broken catalyst, not a discount**: the drop happened ON GNRC's own earnings day despite a beat. That is a direct signal the market is repricing AI-infrastructure-capex-adjacent names downward, not offering a buying dip. Chasing this now would mean entering the exact stock whose catalyst (data-center power demand narrative) is being actively reassessed by the market. This mirrors the Sell-Side Rule logic ("price hit but thesis materially damaged = exit") applied to an entry decision.
+- **Expiry clock**: GNRC first cleared the buy-side gate June 22. Today (July 2) is day 9 of the 10-trading-day expiry window (LESSONS.md 2026-06-05/06-21 rule). Window closes Friday July 3.
+- **Recommendation**: Do not enter GNRC tomorrow even if price holds below $289. The earnings-day selloff is new negative information about the catalyst, not confirmation the setup improved. Formally abandon at Friday's close per the expiry rule.
+
+### Risk factors for today
+- AI-capex-ROI skepticism is now a two-name pattern (AVGO June 30, GNRC July 1) — avoid any new entries with AI-infrastructure-adjacent, high-multiple exposure this week.
+- Fed Chair Warsh remarks — headline risk around hawkish-tilt commentary; moot today given zero candidates.
+- No blocking macro data (no CPI/PPI/FOMC/jobs today).
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate. GNRC's post-earnings selloff is a broken catalyst, not a discount — recommend formal expiry by Friday rather than chasing the dip. 26th consecutive trading day fully in cash (Week 7, Day 4).
+
+**Weekly trade slots**: 0/3 used (Week 7 — Day 4)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
