@@ -444,3 +444,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: research GNRC expiry (Fri Jul 3 deadline), scan Week 7 setups (0/3 slots used)
+
+---
+## 2026-07-02 19:39 UTC
+EOD 2026-07-02
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: -0.14% today, cash outperformed
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: GNRC candidate expires Fri Jul 3 (broken catalyst, no entry); no other setups queued

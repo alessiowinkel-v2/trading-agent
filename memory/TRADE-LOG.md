@@ -357,3 +357,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 25, Week 7 (Wednesday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY gained +0.78% today (Investing.com close $746.77; figure verified as internally consistent with confirmed 6/30 close of $741.00 and prior chain of daily changes). Holding cash underperformed on the day (-0.78% relative). 25 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00% while SPY has risen materially since launch. GNRC conditional candidate remains carried forward pending Friday Jul 3 expiry per LESSONS.md 10-day rule. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-02 — EOD Snapshot (Day 26, Thursday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** -0.14%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 26, Week 7 (Thursday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY fell -0.14% today (Barchart/SSGA close $745.76); holding cash outperformed on the day (+0.14% relative). 26 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. GNRC conditional candidate's earnings-day selloff (-7.3%) was judged a broken catalyst, not a discount — no entry taken; 10-trading-day expiry window closes Friday July 3. No new candidates identified in today's pre-market research. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered.
+**Active kill switches:** none.
