@@ -2102,3 +2102,61 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-03 — Pre-market Research
+
+### ⚠️ MARKET CLOSED TODAY — Independence Day (observed)
+July 4, 2026 falls on Saturday; NYSE/Nasdaq are closed Friday July 3, 2026 (observed holiday). Confirmed via multiple sources (FINRA, Nasdaq holiday schedule, Yahoo Finance) — no regular trading session today. This routine is research/logging only per protocol; no market-open or midday routine will find a live session today regardless of any candidate.
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs yesterday's $10,000 close = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jun 26, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 7, Day 5 — final day) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (content "test") persists — non-standard location (not `memory/PAUSED.flag`), does not trigger the standard kill switch per protocol. Now over a week unresolved; flagging again for user cleanup.
+
+### Market context
+- **WTI / Brent**: WTI ~$68.18-68.76, Brent ~$71.11-72.26 (sources diverge slightly, consistent internally). Well below the $90 XOM thesis floor (thesis formally expired June 15).
+- **S&P 500 futures**: ~7,549-7,553, +0.28% to +0.32% premarket — modest positive tone into the holiday.
+- **VIX**: ~16.59-16.64, roughly flat vs yesterday. Low/constructive.
+- **Today's catalysts**: AI enthusiasm continues (Marvell +33% on Jensen Huang trillion-dollar comment, Phili Semi Index +5.9%); US-Iran ceasefire announcement reinforcing the "Blue Sky" bullish macro case (JPMorgan S&P target 7,800); Energy sector strong on oil price gains YTD; broader rotation into industrials/consumer defensive/energy beyond pure AI trade. None of this is actionable today — market closed.
+- **Earnings before open**: None scheduled (confirmed no notable BMO reports July 3; next pre-market earners PEP Jul 9, DAL Jul 10).
+- **Economic calendar**: June jobs report released early (Thursday Jul 2, ahead of holiday): +57K jobs vs +110K expected — a miss, reducing July 29 FOMC hike odds from ~29% to ~18%. No CPI/PPI/FOMC today. Next CPI June 14, FOMC minutes Jul 8, PPI Jul 15. Market closed today for Independence Day (observed).
+- **Sector momentum**: Mixed read across sources this week — one shows Tech/Communications still leading on AI momentum; the more consistent multi-week view (matches recent sessions) shows LEADING: Consumer Staples (XLP), Industrials (XLI), Materials (XLB), Energy (XLE); LAGGING: Technology (XLK), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF); WEAKENING: Healthcare (XLV); IMPROVING: Real Estate (XLRE), Utilities (XLU). Treating the consistent multi-week trend as primary; note the conflicting single-source Tech-leadership read as a possible early rotation signal to watch next week.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified. Market is closed today — moot regardless.**
+
+**GNRC — 10-day expiry window closes today; FORMALLY ABANDONED.**
+- **What happened since Jul 1**: GNRC fell a second consecutive day on Jul 2, down another ~6.3-7.3% to close ~$252.66-253.04 (from ~$270-273 on Jul 1, ~$292.81 on Jun 30). Two straight down days on an earnings beat, despite Barclays/other analysts raising price targets to $285-300.
+- **Gate check**: price is now far below the original $289 threshold, but per the Jun 28/Jul 1/Jul 2 lessons.md rule, a price drop driven by broken-catalyst dynamics (AI-capex-ROI repricing, not company-specific news) is a falling knife, not a discount. Two consecutive down days after a beat is stronger evidence the market is repricing the whole AI-infrastructure-capex cohort downward, not offering an entry.
+- **Expiry clock**: GNRC first cleared the buy-side gate June 22. Today, July 3, is trading day 10 of the 10-trading-day window — but the market is closed today, so it isn't actually a trading day. Regardless, the thesis is now further damaged (2nd consecutive post-earnings-beat selloff), not improved. **Formally abandoning GNRC as of this entry** — do not carry forward into Week 8. If AI-infrastructure/data-center-power thesis re-emerges later with a fresh catalyst, it would need to be re-underwritten from scratch, not resumed from this thread.
+- **Pipeline note**: Per the 2026-06-21 lessons.md rule ("build the post-block pipeline during the block, not after"), Week 8 pre-market research (Monday Jul 6) should screen 2-3 fresh candidates from scratch rather than resuming GNRC. No blocking macro events are known for early Week 8 (FOMC minutes Jul 8 is informational, not a rate decision).
+
+### Risk factors for today
+- Moot — market closed, no execution risk today.
+- Carrying into Monday: AI-capex-ROI skepticism is now a three-name pattern (AVGO Jun 30, GNRC Jul 1, GNRC again Jul 2) — avoid new entries with AI-infrastructure-adjacent, high-multiple exposure until this repricing stabilizes.
+- Jobs miss (+57K vs +110K) lowers near-term hike odds (dovish for rates) but could also signal labor-market softening — watch for downstream sector rotation effects into Week 8.
+
+### Decision
+**HOLD — market closed today, no trading session.** Zero candidates for Week 8. GNRC formally abandoned after a second consecutive post-earnings-beat selloff confirms broken catalyst, not discount. Week 7 closes with 0/3 trade slots used, 27th consecutive day fully in cash (counting today as a non-trading day; 26 actual trading days elapsed).
+
+**Weekly trade slots**: 0/3 used (Week 7 — final day, market closed)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
