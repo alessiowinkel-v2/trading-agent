@@ -367,5 +367,17 @@ No positions yet. Bot launches on the next trading day.
 |--------|--------|-------|-------|---------|----------------|------|
 | — | — | — | — | — | — | — |
 
+---
+
+### 2026-07-03 — EOD Snapshot (Independence Day observed — no market, Week 7 end)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** N/A (market closed — Independence Day observed holiday)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** July 4th observed holiday — NYSE/NASDAQ closed, no trading session. Alpaca account confirms `balance_asof: 2026-07-02` (no new session), equity unchanged at $10,000.00 cash, zero positions, zero orders. Week 7 concludes with 0 of 3 weekly trade slots used. GNRC candidate formally abandoned per this morning's research (second consecutive post-earnings selloff — broken catalyst, not a discount). Next trading day: Monday July 6 (start of Week 8) — pre-market research should screen fresh candidates from scratch.
+**Active kill switches:** none (standard). Root-level `PAUSED.flag` (non-standard location, content "test") persists unresolved for over a week; does not trigger standard KS but flagging again for user cleanup.
+
 **Notes:** Day 26, Week 7 (Thursday). No positions, no trades. Account holds full $10,000 cash; 0 of 3 weekly trade slots used. SPY fell -0.14% today (Barchart/SSGA close $745.76); holding cash outperformed on the day (+0.14% relative). 26 consecutive trading days fully in cash; cumulative phase P&L flat at 0.00%. GNRC conditional candidate's earnings-day selloff (-7.3%) was judged a broken catalyst, not a discount — no entry taken; 10-trading-day expiry window closes Friday July 3. No new candidates identified in today's pre-market research. Root-level PAUSED.flag (content: "test") persists — non-standard location, memory/PAUSED.flag absent; no standard KS triggered.
 **Active kill switches:** none.
