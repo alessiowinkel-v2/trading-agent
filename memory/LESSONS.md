@@ -207,3 +207,27 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: GNRC was P/E ~86× at the time of analysis. PCE came in at 4.1% headline (hottest since 2023), driving ~80% Sep 2026 rate hike probability. The stock fell from ~$295 (June 23) to ~$279 (June 22 open) to a ~$290 PCE-day spike before pulling back. The $293 threshold was set before the PCE print confirmed the macro picture.
 **Insight**: High-multiple growth stocks (P/E > 60×) compress faster than the market in hawkish environments because their valuation is disproportionately sensitive to the risk-free rate. When PCE confirms a hawkish regime, the correct response is to tighten entry thresholds (not loosen them) and require a larger margin of safety. A $293 threshold on a $86× P/E stock with PCE at 4.1% is aggressive, not conservative.
 **Rule change**: Flag for user: consider adding a screen condition for hawkish-rate environments — stocks with P/E > 50× require entry price ≥ 5% below the initial threshold set, or the thesis must explicitly include rate-sensitivity analysis. No unilateral change.
+
+## 2026-07-03 — Broken-catalyst-vs-discount reasoning validated a second time
+
+**Context**: GNRC beat Q1 EPS by 35% on Jul 1 but sold off −7.3–7.7%, then fell another −6.3–7.3% on Jul 2 (two consecutive post-earnings-beat selloffs). Both days, the agent explicitly declined to buy the dip, reasoning it was a broken catalyst (AI-capex-ROI skepticism spreading, same pattern as Broadcom Jun 30) rather than a discount.
+**Insight**: Two consecutive down days on an earnings beat is strong, falsifiable evidence the market is repricing the thesis, not offering a bargain. This confirms the 2026-06-28 lesson under live conditions — a good beat that the market still sells is information, not noise.
+**Rule change**: None. Confirms existing sell-side logic ("thesis materially damaged = exit") applies equally to entry decisions. Buy-side gate already covers this via catalyst documentation (item 6).
+
+## 2026-07-03 — Market-open documentation gap obscured a genuinely live entry window
+
+**Context**: On Jun 30, pre-market research set explicit entry conditions for GNRC (price < $289, VIX < 21, no negative news at 9:45 AM ET). GNRC opened pre-market at $282.71 — inside the valid window. No market-open decision (execute or skip, and why) was ever logged. This is the same gap first flagged June 2, now recurring across a 3rd distinct week (Jun 2/8, Jun 22/26, Jun 30) over a month unresolved.
+**Insight**: This is not a hypothetical near-miss — GNRC was actually tradeable at the documented threshold. Whether the eventual outcome (GNRC fell ~13% over the next two days) would have made this a stopped-out loser or a win is unknowable, and that unknowability is the real cost: it means the market-open execution layer cannot be audited, learned from, or improved regardless of outcome.
+**Rule change**: Flag to user (7th+ escalation): market-open routine must log the triggering condition check and decision every day a conditional plan exists. Cannot be fixed by the agent alone — requires an orchestration-level guarantee that the routine fires and writes a record.
+
+## 2026-07-03 — Passive phase-lead narrows on SPY rallies, confirming it isn't earned alpha
+
+**Context**: Phase lead vs SPY (bot flat since May 27 launch, SPY down from its launch-day level) narrowed from +2.29% (week of Jun 28) to +0.88% this week, entirely because SPY rallied +1.45% while the bot held 100% cash with zero offsetting risk avoided.
+**Insight**: The 2026-06-05 lesson ("phase P&L can turn in one week") is confirmed operating in both directions now — the lead shrinks on up-SPY weeks just as it grew on down-SPY weeks. It has never been a function of agent-generated returns, only of where SPY happens to sit relative to the arbitrary May 27 launch date.
+**Rule change**: None. Restating for emphasis: the mission ("beat SPY over 90 days") cannot be satisfied by a lead that is purely a launch-date artifact — the bot needs to actually execute trades and generate real returns before the 90-day mark, not just avoid losses.
+
+## 2026-07-05 — Renamed lessons.md to LESSONS.md
+
+**Context**: File naming inconsistency (`memory/lessons.md` lowercase vs `LESSONS.md` referenced everywhere in CLAUDE.md and TRADING-STRATEGY.md) was flagged in 8 consecutive weekly reviews starting 2026-05-27, with no action taken.
+**Insight**: This was a pure filesystem/naming fix, not a strategy change, and within the agent's authority to correct directly rather than defer indefinitely to the user.
+**Rule change**: None — renamed the file this session. All future sessions should reference `memory/LESSONS.md`.

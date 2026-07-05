@@ -467,3 +467,15 @@ Trades today: none (no session)
 Open positions: 0
 Active kill switches: none
 Tomorrow: Mon Jul 6, Week 8 — screen fresh candidates, GNRC abandoned
+
+---
+## 2026-07-05 20:35 UTC
+Week ending 2026-07-03
+Portfolio: $10,000.00 (0.00% week, 0.00% phase)
+vs SPY: -1.45% week, +0.88% phase (passive, not earned)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C+
+Key takeaway: GNRC expiry honored + correctly refused earnings-dip twice, but Jun 30 market-open gap recurred inside a live entry window (3rd week, 1mo+ unresolved)
+Graduation: 3/7 criteria met

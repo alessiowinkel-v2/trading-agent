@@ -996,3 +996,125 @@ No trades placed. Five trading days, five HOLD decisions.
 **Graduation criteria met: 3/7**
 
 Days running counter: **22** (Day 1 = 2026-05-27; Day 22 = 2026-06-26)
+
+---
+
+## Week ending 2026-07-03
+
+> Trading days this week: Mon Jun 29 – Thu Jul 2 (4 days). Fri Jul 3 = Independence Day observed holiday (market closed). Review runs Sun Jul 5. Week 7.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Jun 26 close) | $10,000.00 |
+| Ending portfolio (last trading day Jul 2 close — Alpaca confirmed) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jun 26 → Jul 2) | +1.45% (SPY $734.19 → $744.80; Yahoo Finance/Macrotrends confirmed) |
+| Bot vs S&P this week | −1.45% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −0.88% ($751.38 → $744.80); bot leads by +0.88% (passive — SPY still below launch-day level, not agent-generated alpha) |
+| Max intraweek drawdown | 0.00% (100% cash) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A |
+
+**SPY daily closes (source: Yahoo Finance/Macrotrends, cross-checked against EOD log):**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| Jun 26 (prior Fri) | $734.19 | — |
+| Jun 29 (Mon) | ~$736.53–$740.64 (sources diverge) | +0.32–0.89% |
+| Jun 30 (Tue) | ~$741.29–$748.02 (sources diverge) | +0.65–1.65% |
+| Jul 1 (Wed) | ~$745.00–$749.44 | +0.50–0.78% |
+| Jul 2 (Thu) | $744.80 (Macrotrends confirmed) | −0.14% to −0.62% depending on source |
+| Jul 3 (Fri) | CLOSED | Independence Day observed |
+
+Note: daily SPY source divergence persists (Yahoo vs Investing.com vs Barchart) — same unresolved issue flagged in 7+ prior reviews. Week-level bookend (Jun 26 → Jul 2) is more reliable than daily deltas; used for the headline stat above.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**GNRC status: FORMALLY ABANDONED (Jul 3).** 10-day expiry clock (started Jun 22) closed this week. Two consecutive post-earnings-beat selloffs (Jul 1: −7.3–7.7%; Jul 2: another −6.3–7.3%, closing ~$252.66–253.04, down from ~$292.81 on Jun 26) confirmed a broken catalyst, not a discount. Tombstoned in research log; will not carry into Week 8.
+
+### Process review (per trade made this week)
+
+No trades placed. Four trading days, four HOLD decisions (Jul 3 was a holiday research-only entry).
+
+**Jun 29 (Day 23 — Monday):**
+- GNRC carried forward as conditional candidate, but conviction downgraded to MODERATE-LOW: sector shift (Energy rotated Leading→Lagging, IT now clear leader) weakened the Industrials-adjacent thesis tailwind; GNRC at/above the $289 skip threshold for multiple consecutive days made a market-open fill unlikely.
+- No new candidates identified. Zero market-open decision documented (GNRC's actual 9:45 AM price was never logged) — pre-market judged a skip as "high probability" but did not confirm it.
+- Process verdict: **Correct HOLD in substance, but the market-open check was never actually recorded** — a milder version of the recurring documentation gap.
+
+**Jun 30 (Day 24 — Tuesday, Q2 quarter-end):**
+- Pre-market set explicit, falsifiable entry conditions: GNRC < $289 AND VIX < 21 AND no negative news at 9:45 AM ET. GNRC opened pre-market at $282.71 — **inside the valid entry window.**
+- Market-open outcome: **UNDOCUMENTED.** EOD snapshot itself states plainly: "no record of a market-open or midday execution decision in today's logs... so no trade was placed" — confirmed via live Alpaca state (zero positions, zero orders), but the *reason* the trade wasn't taken (price moved back above threshold? VIX spiked? news? or the routine simply didn't run?) is not recorded.
+- Process verdict: **Fail on documentation.** This is the same systemic gap first flagged June 2 — now recurring in a third distinct week (Jun 2/8, Jun 22/26, and now Jun 30), over a month unresolved despite 6+ prior escalations. Credit: the EOD snapshot self-flagged the gap in real time this time, which is new — prior weeks the gap was only caught retroactively in the Friday review.
+
+**Jul 1 (Day 25 — Wednesday):**
+- GNRC's tradeable quote (bid $272.92 / ask $314.87, stale post-close tape, ~14% spread) failed the price gate outright. Broadcom's earnings-day selloff (−12–14% despite a beat, on AI-capex-ROI skepticism) flagged as a fresh negative read-through for GNRC's own AI-infrastructure narrative.
+- Decision: HOLD, recommend formal GNRC expiry by Friday if unresolved.
+- Process verdict: **Correct.** Good forward-looking risk-flagging (AVGO reaction correctly used as a leading indicator for GNRC).
+
+**Jul 2 (Day 26 — Thursday):**
+- GNRC beat Q1 EPS by 35% ($1.80 vs $1.33 est.) but sold off −7.3–7.7% on its own earnings day — the AI-capex-ROI skepticism thesis from Jul 1 was directly confirmed. Explicitly reasoned as "a broken catalyst, not a discount" and declined to chase the dip.
+- Decision: HOLD, recommend formal expiry Friday regardless of price.
+- Process verdict: **Correct — and the highest-quality reasoning of the week.** This is exactly the discipline the strategy calls for: a stock beating estimates and still falling is a signal to stay away, not a bargain.
+
+**Jul 3 (Day 27 — Friday, Independence Day observed, market closed):**
+- GNRC fell a second consecutive day (~$252.66–253.04, down another 6–7% from Jul 1). 10-day expiry window formally closed; GNRC tombstoned with explicit reasoning (two consecutive post-earnings-beat selloffs = broken catalyst, not a discount) and explicitly excluded from Week 8 carry-forward.
+- Process verdict: **Correct.** Clean, deliberate closure — no "maybe next week" drift.
+
+**In hindsight**: Would I make any different decision? Jul 1–3 are unambiguously correct — chasing GNRC's earnings-day selloff would have caught a stock that fell another 6–7% the very next day. Jun 29 is defensible but under-documented. Jun 30 is the one real regret: GNRC was inside the valid entry window at pre-market ($282.71 < $289) and no decision — execute or skip — was ever recorded. Whether that specific fill would have been a winner or a loser by Jul 2 is unknowable precisely because of the gap, which is the whole point of the complaint: the strategy cannot learn from an entry it can't confirm happened or didn't.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — GNRC's 10-day expiry was honored a second time (after XOM in June), and the Jul 1–2 refusal to buy an earnings-day selloff was the sharpest thesis discipline shown all phase. Hard deduction: the Jun 30 market-open documentation gap recurred inside an actual valid entry window — this is not a hypothetical miss, GNRC was tradeable at the pre-market price and no decision was logged either way.
+- Documentation quality: **B−** — Pre-market research and the GNRC tombstone are excellent, detailed, and well-reasoned. The Jun 30 EOD snapshot self-flagging its own gap in real time (rather than only being caught in this Friday review) is a genuine, if small, improvement. Still capped at B− because the underlying gap — now 6+ incidents across 3 distinct weeks over more than a month — remains unresolved.
+- Risk management: **A** — 0.00% drawdown. All kill switches checked daily, none fired, none missed. GNRC's earnings-day selloff was correctly treated as thesis-breaking rather than a buying opportunity, which is exactly what "cut losers, don't confuse conviction with hope" is supposed to produce on the buy side too.
+- Outcome (weighted least): **C** — 0.00% vs SPY +1.45% this week — the first week in over a month where SPY rallied and we simply gave up ground with no offsetting risk-avoidance story (unlike NFP week or the FOMC week, this was not a week the market "should have" punished us for missing). Phase lead narrowed from +2.29% (week of Jun 28) to +0.88% — confirming the passive-lead thesis flagged repeatedly: it shrinks whenever SPY rises and has nothing to do with agent-generated returns.
+- **Overall: C+** — The GNRC decision quality this week (expiry discipline, refusing to buy the earnings dip) is the best thesis-level judgment shown since launch. But it is offset by the same execution-layer failure recurring for the third distinct week running, and by 26 consecutive trading days with zero executed trades — six days short of the 30-day graduation threshold with no completed trade to show for it.
+
+### What worked (3-5 bullets)
+- GNRC 10-day expiry rule honored a second time (after XOM) — thesis-deadline discipline is now a confirmed pattern, not a one-off
+- Correctly refused to buy GNRC's post-earnings selloff twice (Jul 1 and Jul 2) — the stock fell a further ~13% combined across both days after the "broken catalyst, not discount" call, directly validating the reasoning
+- Sector-rotation surveillance caught a real, developing pattern (AVGO Jun 30 → GNRC Jul 1 → GNRC again Jul 2 — AI-capex-ROI skepticism spreading across three separate names in one week) and used it to inform the GNRC decision rather than treating each selloff in isolation
+- All kill switches checked daily; none fired, none missed; full capital preserved through a volatile earnings week for the thesis name
+- Jun 30 EOD snapshot self-flagged its own market-open documentation gap in real time — first time this has been caught same-day rather than only in the Friday review
+
+### What didn't work (3-5 bullets)
+- Market-open documentation gap recurred Jun 30 inside an actual valid GNRC entry window ($282.71 pre-market, below the $289 threshold) — no execute/skip decision was ever logged; this is the 6th+ total incident and the 3rd distinct week (following Jun 2/8 and Jun 22/26), now unresolved for over a month despite repeated escalation
+- 26 consecutive trading days, 0 executed trades since launch — four days short of the 30-day graduation milestone with no trade history to evaluate
+- Phase lead vs SPY narrowed from +2.29% to +0.88% this week purely because SPY rallied while the bot held cash — reconfirms the lead is passive (an artifact of SPY still sitting below its May 27 launch level), not earned alpha
+- Root-level `PAUSED.flag` (content "test", non-standard location) remains unresolved — first flagged early June, still present after roughly a month and 3+ prior escalations
+- Pipeline is empty entering Week 8 — GNRC is formally closed and no replacement candidate has been identified yet, repeating the same post-abandonment gap seen after XOM in June
+
+### Key lessons (added to LESSONS.md)
+- Broken-catalyst-vs-discount reasoning validated a second time: GNRC fell a further ~13% combined across the two days following the "don't chase the earnings dip" call — two consecutive post-earnings-beat selloffs is strong, falsifiable evidence of thesis breakage, not a buying signal. Confirms the 2026-06-28 lesson under real market conditions.
+- The market-open documentation gap is not merely a paperwork issue: on Jun 30 it obscured a live, in-range entry ($282.71 < $289 threshold). Whether it would have won or lost by Jul 2 is unknowable — and that unknowability, not the missed trade itself, is the actual cost, because it means the process cannot be audited or improved.
+- A passive phase-lead vs SPY tightens and loosens with SPY's own moves, not with agent skill. It narrowed by 1.41 points this single week on a SPY rally with zero bot participation either way — restating the 2026-06-05 lesson, now observed operating in the "against us" direction too.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Market-open documentation gap (7th+ escalation, unresolved 5+ weeks)**: Recurred Jun 30 inside a genuinely valid GNRC entry window with zero decision record. This is now confirmed across 3 distinct weeks (Jun 2/8, Jun 22/26, Jun 30) and cannot be fixed by the agent alone — it requires an orchestration-level guarantee that a market-open routine actually executes and logs its decision (data checked, condition met Y/N, action taken) every day a conditional plan exists.
+2. **Root-level `PAUSED.flag` cleanup**: Non-standard file (content "test") at repo root, distinct from `memory/PAUSED.flag`, has persisted unresolved for roughly a month across 3+ prior flags. Recommend deleting it or relocating it to the standard path if a pause was intended — the ambiguity itself is a small risk.
+3. **26-day zero-trade run — distinguish gate calibration from execution failure**: Per the 2026-06-01/06-05 lessons, extended zero-trade stretches warrant a user-level gate review. This week's evidence suggests the buy-side gate itself is working well (GNRC expiry, dip-refusal were high-quality decisions) — the more likely bottleneck is the unresolved execution-layer gap in item 1. Recommend addressing item 1 before concluding the gate thresholds need loosening.
+4. **Filename fix — DONE this review**: `memory/lessons.md` renamed to `memory/LESSONS.md` this session, resolving the inconsistency flagged in 8 consecutive prior reviews (first raised 2026-05-27).
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without intervention: ❌ (26/30 trading days elapsed — 4 trading days from this milestone)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat, SPY −0.88% phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY −0.88% phase; bot +0.88% ahead — passively, because SPY sits below its launch-day level, not because the bot has generated any return; lead narrowed this week as SPY rallied)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed — though the market-open documentation gap means "no missed trades" cannot be fully verified for Jun 30)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable; `lessons.md` → `LESSONS.md` naming inconsistency resolved this review after 8 prior flags)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **26** (Day 1 = 2026-05-27; Day 26 = 2026-07-02; Jul 3 = Independence Day observed holiday)
