@@ -2160,3 +2160,52 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-06 — Pre-market Research (Day 27, Monday — start of Week 8)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs Jul 2 close $10,000 = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jun 26, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 8, Day 1) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (content "test") persists — non-standard location (not `memory/PAUSED.flag`), does not trigger the standard kill switch per protocol. Now over a week unresolved (created Jun 29); flagging again for user cleanup.
+
+### Market context
+- **WTI / Brent**: WTI ~$68.41-68.92, Brent ~$71.70-72.30 (sources diverge slightly, internally consistent). Modest gains (+0.13-0.45%) over the last two sessions. Still well below the $90 XOM thesis floor (thesis formally expired June 15) — no Energy commodity-driven thesis active.
+- **S&P 500 futures**: ~7,547-7,557, +0.25% to +0.38% — modest positive premarket tone.
+- **VIX**: ~16.15, down ~2.65% from prior close (16.59 Jul 1). Low/constructive, no stress signal.
+- **Today's catalysts**: AI data-center capex story continues (Google/Amazon/MSFT/Meta ~$725B 2026 capex, +77% YoY) benefiting AVGO/NVDA/Dell/HPE/memory names — but this is the same high-multiple AI-infrastructure cohort flagged as a repricing risk after AVGO (Jun 30) and GNRC (Jul 1, Jul 2) both sold off hard on earnings beats. KOSPI -5% on memory-stock momentum crack. US-Iran resolution still supportive of the "Blue Sky" macro case (JPMorgan S&P target 7,800). ISM Services PMI (Jun) 54.5, signals solid but not overheating activity.
+- **Earnings before open**: No noteworthy reports in our tradeable universe (small names only: Park Aerospace, Saratoga Investment, BitMine). PepsiCo (PEP) reports Thursday Jul 9 — not actionable today.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs data today. FOMC minutes (June meeting) release Wednesday Jul 8 — informational, not a rate decision, but headline-risk-adjacent; no blocking condition today. Next CPI (June data) July 14, next NFP August 7.
+- **Sector momentum**: Consistent with recent multi-week trend (primary read) — LEADING: Consumer Staples (XLP), Industrials (XLI), Materials (XLB), Energy (XLE). LAGGING: Technology (XLK), Communication Services (XLC), Consumer Discretionary (XLY), Financials (XLF). WEAKENING: Healthcare (XLV). IMPROVING: Real Estate (XLRE), Utilities (XLU). One conflicting single-source read (Tech/Comms as "strongest") noted but discounted — the multi-week consistent trend and today's KOSPI/AI-repricing evidence both argue against fresh Tech exposure.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.** No specific ticker in this session's research cleared a documented catalyst tied to today's news (no earnings, no macro print, no commodity-threshold event in our universe). Sector leadership (Staples/Industrials/Materials/Energy) is unchanged from prior weeks with no fresh entry trigger — screening a leader without a dated catalyst would violate buy-side gate item 6. AI-infrastructure-adjacent high-multiple names (Tech/Comms) remain avoid-list given the now three-name repricing pattern (AVGO, GNRC x2).
+
+### Risk factors for today
+- AI-capex-ROI repricing risk continues to spread (KOSPI -5% overnight on memory-stock momentum crack) — avoid any new high-multiple Tech/Comms exposure this week.
+- FOMC minutes Wednesday (Jul 8) — informational release, watch for hawkish-tilt language that could pressure rate-sensitive sectors (XLRE, XLU) currently marked "Improving."
+- No blocking macro data today (no CPI/PPI/FOMC/jobs).
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate — no dated catalyst for any specific ticker today. 27th consecutive trading day fully in cash. Week 8 opens with 3/3 weekly trade slots available.
+
+**Weekly trade slots**: 0/3 used (Week 8 — Day 1)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
