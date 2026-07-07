@@ -393,3 +393,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 27, start of Week 8 (Monday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 27 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. GNRC candidate formally abandoned July 3 (broken catalyst, two consecutive post-earnings selloffs). No new candidates identified yet this week; today's pre-market research should screen fresh setups from scratch per July 3 note. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 3+ weeks — flagging again for user cleanup. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-07 — EOD Snapshot (Day 28, Tuesday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (query ran ~15:38 ET, ~22 min before close; Alpaca `balance_asof` still 07/06 confirming session not yet settled; sources conflicted — Investing.com/WSJ showed SPX +0.72% while Yahoo/Barchart intraday prints implied SPY roughly flat-to-down vs 07/06's $751.28 close)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 28, Week 8 (Tuesday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 28 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 3+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
