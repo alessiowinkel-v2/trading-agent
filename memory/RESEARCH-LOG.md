@@ -2209,3 +2209,53 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-07 — Pre-market Research (Day 28, Tuesday — Week 8)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3 (rolling 5-day) — no trades placed to date
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs Jul 6 close $10,000 = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jul 3, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 8, Day 2) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (non-standard location, content "test") not re-verified this session — prior sessions confirmed it does not trigger the standard kill switch (`memory/PAUSED.flag` absent). Unresolved for 5+ weeks; flagging again for user cleanup.
+
+### Market context
+- **WTI / Brent**: WTI ~$68.71-69.42, Brent ~$72.81-73.11 (sources converge closely). Both up ~1.1-1.3% on the day but down ~22% over the trailing month. Still far below the $90 XOM thesis floor (expired June 15) — no Energy commodity-price thesis active.
+- **S&P 500 futures**: ~7,557-7,581, mixed/slightly negative (-0.14% to -0.31% per most recent snapshots; one stale CNN snapshot showed positive from Monday). Modest negative-to-flat premarket tone.
+- **VIX**: ~15.57 spot (prev. close), intraday ranging 15.56-16.50. Low/constructive, no stress signal.
+- **Today's catalysts**: SpaceX (SPCX) forced inclusion into Nasdaq-100 — flagged by research as a major mechanical/passive-flow event ($4.3-10B forced buying into a thin 3-5% float), NOT a fundamentals catalyst. Explicitly rejected as a candidate: this is index-mechanics/momentum speculation, not a thesis, and violates the "boring is good, not AI hype/meme momentum" philosophy plus first-30-min volatility rule (research itself flags "opening chaos," "do not chase the opening spike"). AI capex story continues (Google/Amazon/MSFT/Meta ~$725B 2026 capex) but this is the same high-multiple cohort already flagged as repricing-risk (AVGO, GNRC x2) — still avoid. Samsung Q2 beat but stock fell on guidance — not our universe. SK Hynix $29B US listing — IPO, out of scope (no IPOs in first 90 days rule) and not our universe regardless.
+- **Earnings before open**: None noteworthy (Penguin Solutions, Enerpac, Kura Sushi — not in our universe/not material). Next relevant: PEP Thursday Jul 9.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs data today. FOMC minutes (June meeting) release Wednesday Jul 8 — informational, headline-risk-adjacent, no blocking condition today. Next CPI Aug 12, next PPI Aug 13, next jobs report Aug 7 (July data, per BLS schedule — confirms fresh cadence, all pushed to August).
+- **Sector momentum**: Consistent with the established multi-week trend — LEADING: Energy (XLE, +23.3% cited), Materials (XLB, +17.4%), Consumer Staples (XLP, +15.6%), Industrials (XLI). LAGGING: Technology (XLK, -3.3%), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF, -6.9%, Fed-pause-driven). WEAKENING: Healthcare (XLV, post-rally consolidation). IMPROVING: Real Estate (XLRE), Utilities (XLU, yield-seeking). No change in leadership structure from prior sessions — no fresh rotation signal.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.** No ticker in today's research clears a documented, dated catalyst (buy-side gate item 6). SPCX's Nasdaq-100 inclusion is a real, large mechanical event but is explicitly not a fundamentals thesis and is excluded on philosophy grounds (meme/momentum-adjacent, first-hour-chaos setup) — not merely absence of catalyst. Leading sectors (Energy, Materials, Staples, Industrials) are unchanged from prior weeks with no new dated trigger; screening a sector leader today without a fresh catalyst would fail gate item 6, same reasoning as prior sessions.
+
+### Risk factors for today
+- SPCX Nasdaq-100 inclusion may cause outsized QQQ/Nasdaq-100 intraday distortion — irrelevant to our universe/positions but noting for awareness (no QQQ or Nasdaq-100 exposure held).
+- AI-capex-ROI repricing risk (AVGO, GNRC x2 pattern) continues — avoid high-multiple Tech/Comms exposure.
+- FOMC minutes Wednesday — informational, watch for hawkish-tilt language affecting XLRE/XLU ("Improving" sectors).
+- WTI/Brent up modestly today but still down sharply over the trailing month — no Energy commodity thesis floor cleared.
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate — no dated fundamental catalyst for any specific ticker today. 28th consecutive trading day fully in cash (excluding the Jul 3 holiday). Week 8 continues with 3/3 weekly trade slots available (0 used).
+
+**Weekly trade slots**: 0/3 used (Week 8 — Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
