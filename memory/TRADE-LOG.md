@@ -405,3 +405,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 28, Week 8 (Tuesday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 28 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 3+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-08 — EOD Snapshot (Day 29, Wednesday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** -0.48%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 29, Week 8 (Wednesday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. Pre-market research flagged a fresh US-Iran military escalation (CENTCOM strikes, ceasefire broken) as the dominant overnight catalyst but rejected it on thesis-quality grounds — WTI ($70.41) far below the $90-95 floor required for any Energy commodity thesis, and the pattern matches the fragile, reversible war-premium spike documented in LESSONS.md from June that fully round-tripped within days. SPY fell -0.48% today (Yahoo/Barchart/Investing.com converge on $741.00 close vs $747.71 prior close), with 247wallst attributing the drop to the same ceasefire-end news; holding cash outperformed on the day (+0.48% relative). 29 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 3+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
