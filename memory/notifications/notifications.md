@@ -502,3 +502,7 @@ Open positions: 0
 Active kill switches: none
 Note: root-level PAUSED.flag (test) persists 3+ wks, needs cleanup
 Tomorrow: fresh pre-market screen, Week 8 3/3 slots open
+
+---
+## 2026-07-08 10:10 UTC
+No trades — but flagging: US struck 80+ Iran targets overnight (Jul 7), Strait of Hormuz threatened, WTI +2.7-5%, June 17 ceasefire broken. Portfolio unaffected (0 positions, $10,000 cash). WTI still ~$70, far below any Energy entry threshold — correctly held off.
