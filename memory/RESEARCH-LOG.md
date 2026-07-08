@@ -2259,3 +2259,52 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-08 — Pre-market Research (Day 29, Wednesday — Week 8)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs Jul 7 close $10,000 = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jul 3, $10,000) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 8, Day 3) — CLEAR
+- All kill switches: NONE ACTIVE
+- Note: root-level `PAUSED.flag` (non-standard location, content "test") still present (created Jun 29, now 3+ weeks unresolved). Not `memory/PAUSED.flag`, so no standard kill switch triggers. Flagging again for user cleanup.
+
+### Market context
+- **WTI / Brent**: WTI ~$70.41 (+2.71%), Brent ~$74.06 (+2.88%) as of query time; some sources show intraday spikes to +5% in Asian trading. **Major overnight catalyst**: US CENTCOM struck 80+ Iranian targets (air defense, IRGC vessels, coastal radar) on July 7 in retaliation for Iranian attacks on three commercial vessels (including a Qatari LNG carrier) in the Strait of Hormuz. Treasury also revoked the June 21 license that had allowed Iran to sell oil internationally (grace period to July 17). This breaks the June 17 US-Iran interim ceasefire. Still well below the expired XOM thesis floor ($90) and even further below the $92-95 "higher safety margin" floor flagged in the June 12 LESSONS.md entry for geopolitical-premium theses.
+- **S&P 500 futures**: ~7,540-7,580, mixed/slightly negative (-0.15% to -0.03% across most sources); Nasdaq-100 futures notably weaker (-0.6% to -1.8%) on AI-chip profit-taking (Micron, AMD, Intel). Dow futures modestly positive.
+- **VIX**: ~16.13, up +3.6% from prior close (15.57) — still in the low/moderate 15-25 band, muted relative to the scale of the overnight Iran escalation.
+- **Today's catalysts**: US-Iran military escalation (see above) is the dominant overnight story — a real geopolitical shock but explicitly the type of fragile, reversible catalyst flagged in LESSONS.md (2026-06-12): a prior Iran-driven WTI spike to $93-98 in early June fully reversed within days on ceasefire signals. Weak June NFP (+57K vs +110K est., released Jul 2) continues to support a Fed-pause narrative. AI chip names under profit-taking pressure (Micron, AMD, Intel) — same high-multiple repricing pattern previously flagged (AVGO, GNRC x2) — remains avoid-list. Pending federal tariff decision on imported polysilicon (solar/First Solar). Costco (COST) June sales results due today (data release, not earnings).
+- **Earnings before open**: None material in our universe (Levi Strauss, AZZ, Helen of Troy, Rail Vision — none screened as candidates). No blocking earnings-driven timing issues today.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs data today. June CPI prints July 14, June PPI July 15, next FOMC meeting July 29-30. No blocking macro releases today.
+- **Sector momentum**: Consistent with the established multi-week trend — LEADING: Energy (XLE, boosted further by today's oil spike), Consumer Staples (XLP, at all-time highs, flight-to-safety), Industrials (XLI), Materials (XLB). LAGGING: Technology (XLK, cooling on AI-capex-ROI concerns), Communication Services (XLC), Consumer Discretionary (XLY), Financials (XLF). IMPROVING: Real Estate (XLRE), Utilities (XLU). No change in leadership structure — this is the same rotation pattern that has held for several weeks, now reinforced by the oil-driven Energy pop.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.** The Iran military escalation is a real, dated catalyst but fails buy-side gate discipline on the merits: (1) WTI at $70.41 remains far below the previously-required $90 floor for any Energy commodity thesis, let alone the $92-95 higher-safety-margin floor recommended after the June geopolitical whipsaw; (2) the underlying catalyst is a war-driven supply-fear premium, the exact pattern LESSONS.md (2026-06-12, 2026-06-21) documents as fragile and reversible within days — the last comparable Iran spike (WTI $87→$93-98 over Jun 1-9) fully round-tripped by June 18; (3) entering a position the morning after a fresh military escalation, before market reaction has stabilized, violates "boring is good" — this is event-driven momentum, not a fundamentals thesis. No other ticker in today's research clears a documented, dated catalyst (buy-side gate item 6). Sector leaders (Energy, Staples, Industrials, Materials) are otherwise unchanged from prior sessions with no fresh company-specific trigger.
+
+### Risk factors for today
+- **US-Iran military escalation** — active, unresolved, and could move oil/equities sharply intraday in either direction (further escalation vs. de-escalation signal). Strait of Hormuz risk (~20% of global oil traffic) is the key tail risk to monitor. VIX (16.13) has not yet repriced this fully — watch for a larger VIX move as the session progresses.
+- AI-capex-ROI repricing risk continues (Micron/AMD/Intel profit-taking) — avoid high-multiple Tech/Comms exposure.
+- No blocking macro data today, but elevated headline risk from the Iran situation argues for added caution on any new entries, not just the Energy sector.
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate. The Iran escalation is a dated catalyst but fails on thesis-quality grounds (WTI far below floor, fragile war-premium pattern, event-driven not fundamentals-driven). 29th consecutive trading day fully in cash. Week 8 continues with 3/3 weekly trade slots available (0 used).
+
+**Weekly trade slots**: 0/3 used (Week 8 — Day 3)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
