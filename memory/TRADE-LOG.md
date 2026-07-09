@@ -417,3 +417,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 29, Week 8 (Wednesday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. Pre-market research flagged a fresh US-Iran military escalation (CENTCOM strikes, ceasefire broken) as the dominant overnight catalyst but rejected it on thesis-quality grounds — WTI ($70.41) far below the $90-95 floor required for any Energy commodity thesis, and the pattern matches the fragile, reversible war-premium spike documented in LESSONS.md from June that fully round-tripped within days. SPY fell -0.48% today (Yahoo/Barchart/Investing.com converge on $741.00 close vs $747.71 prior close), with 247wallst attributing the drop to the same ceasefire-end news; holding cash outperformed on the day (+0.48% relative). 29 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 3+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-09 — EOD Snapshot (Day 30, Thursday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.23%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 30, Week 8 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. Pre-market research flagged an accelerating US-Iran oil spike (WTI +4.37% to $73.52, Brent +7.11% to $79.43) but rejected it for the 4th straight session — still far below the $90-95 Energy-thesis floor. AI semiconductor selloff (MU/AMD/INTC down 4-5.5%) continues, remains avoid not dip-buy. SPY gained +0.23% today (Yahoo/CNBC converge on $747.35 close vs $745.40 prior close); holding cash underperformed on the day (-0.23% relative). 30 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 4+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
