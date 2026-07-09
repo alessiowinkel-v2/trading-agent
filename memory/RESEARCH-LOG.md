@@ -2308,3 +2308,52 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-09 — Pre-market Research (Day 30, Thursday — Week 8)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin) / $10,000 non-marginable
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Kill switch check
+- KS-1 (daily drawdown): $10,000 vs Jul 8 close $10,000 = 0.00% — CLEAR
+- KS-2 (weekly drawdown): vs prior Friday (Jul 3, holiday, $10,000 carried) = 0.00% — CLEAR
+- KS-3 (total drawdown): vs starting $10,000 = 0.00% — CLEAR
+- KS-4 (position breach): no positions — CLEAR
+- KS-5 (activity): 0/3 trades this week (Week 8, Day 4) — CLEAR
+- All kill switches: NONE ACTIVE
+- Root-level `PAUSED.flag` (non-standard location, content "test") not re-checked this session — prior sessions confirmed `memory/PAUSED.flag` (the standard path) is absent, so no kill switch triggers regardless. `memory/PAUSED.flag` confirmed absent this session too.
+
+### Market context
+- **WTI / Brent**: WTI ~$73.52 (+4.37%), Brent ~$79.43 (+7.11%) — a sharp acceleration from yesterday's $70.41/$74.06. Driven by the continuing US-Iran escalation (CENTCOM strikes, broken ceasefire, revoked oil-export license). Still meaningfully below the $90 XOM-thesis floor and further below the $92-95 higher-safety-margin floor recommended for geopolitical-premium theses (LESSONS.md 2026-06-12). Same fragile war-premium pattern that fully round-tripped in early June — no Energy commodity thesis clears the floor.
+- **S&P 500 futures**: ~7,553, roughly flat (+0.02%); Nasdaq-100 futures +0.23%, Dow futures -0.11%. Muted/mixed premarket tone despite the oil spike.
+- **VIX**: ~16.90, up 4.77% from yesterday's 16.13 close. Still in the low/moderate 15-25 band — rising but not a stress signal.
+- **Today's catalysts**: AI semiconductor names (Micron -5.5%, AMD -4.3%, Intel -5.3%) extending the overvaluation-driven selloff flagged repeatedly in LESSONS.md (AVGO, GNRC pattern) — remains avoid, not a dip-buy. Iran conflict continues to lift oil; expected to pressure airlines/homebuilders, not help oil producers directly per today's research (net negative framing, not a producer-margin thesis). Dow at record high (52,900) on defensive/cyclical strength while Nasdaq lags — same bifurcated tape as recent sessions. Weak June jobs report continues to support a Fed-pause narrative. Jobless claims in-line (218K vs 215K est.) — no surprise. NY Fed's Williams speaks 9:00 AM ET; existing home sales 10:00 AM ET — neither is a blocking release.
+- **Earnings before open**: PepsiCo (PEP), Progressive (PGR), WD-40 (WDFC) — none in our universe/no clear catalyst fit. AVXL, WSHP — not in universe. No blocking earnings-timing issues today.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs data today. Next: June CPI July 14, June PPI July 15, June PCE July 30, July jobs report Aug 7. No blocking macro releases today.
+- **Sector momentum**: Unchanged from prior sessions — LEADING: Energy (XLE, boosted further by today's oil spike), Consumer Staples (XLP, at all-time highs), Industrials (XLI), Materials (XLB). LAGGING: Technology (XLK, cooling further on the chip selloff), Communication Services (XLC), Consumer Discretionary (XLY), Financials (XLF). WEAKENING: Healthcare (XLV). IMPROVING: Real Estate (XLRE), Utilities (XLU). No rotation signal — same multi-week leadership structure, reinforced by today's oil move.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0-3 candidates)
+
+**Zero new candidates identified.** Today's research surfaced two generic "hot stock" mentions (Cardinal Health CAH, EnerSys ENS) from a single low-quality listicle source with no dated, company-specific catalyst attached (buy-side gate item 6 fails) — "hitting fresh highs" is a technical observation, not a thesis, and CAH sits in Healthcare which today's sector scan flags as "weakening," not leading. The Iran-driven oil spike is a real, dated catalyst but fails on thesis-quality grounds for the fourth consecutive session: WTI ($73.52) remains far below the $90 floor (and further below the $92-95 recommended floor for geopolitical premiums), and today's own research frames the conflict as a net negative for airlines/homebuilders rather than a producer-margin tailwind — weakening any Energy angle further. AI semiconductor selloff (MU/AMD/INTC) is a continuation of the AI-capex-ROI repricing already on the avoid-list, not a discount. No other ticker in today's research clears a documented, dated catalyst.
+
+### Risk factors for today
+- **US-Iran military escalation** — active and accelerating (Brent +7% today vs +2.9% yesterday). Watch for further Strait of Hormuz risk or a sudden de-escalation signal, either of which could move oil sharply. VIX (16.90) is repricing gradually, not spiking — no panic signal yet.
+- AI-capex-ROI repricing risk continues to widen (Micron/AMD/Intel down 4-5.5% today) — avoid high-multiple Tech/Comms exposure; watch for spillover into broader Nasdaq-100.
+- No blocking macro data today, but elevated and worsening headline risk from the Iran situation argues for continued caution on any new entries.
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate. Oil spike is a dated catalyst but fails on thesis-quality grounds (same reasoning as Jul 7-8, now a 4th consecutive day, with the floor gap actually widening in relative terms as the news react in equities stays muted). 30th consecutive trading day fully in cash. Week 8 continues with 3/3 weekly trade slots available (0 used).
+
+**Weekly trade slots**: 0/3 used (Week 8 — Day 4)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
