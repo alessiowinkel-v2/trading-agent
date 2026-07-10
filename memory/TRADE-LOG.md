@@ -429,3 +429,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 30, Week 8 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. Pre-market research flagged an accelerating US-Iran oil spike (WTI +4.37% to $73.52, Brent +7.11% to $79.43) but rejected it for the 4th straight session — still far below the $90-95 Energy-thesis floor. AI semiconductor selloff (MU/AMD/INTC down 4-5.5%) continues, remains avoid not dip-buy. SPY gained +0.23% today (Yahoo/CNBC converge on $747.35 close vs $745.40 prior close); holding cash underperformed on the day (-0.23% relative). 30 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 4+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-10 — EOD Snapshot (Day 31, Friday — end of Week 8)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.85%
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 31, end of Week 8 (Friday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used, 0 total trades since launch. Pre-market research found zero candidates — Energy leads sectors but WTI (~$72) remains well below the $90-95 floor needed to revive the abandoned XOM/Energy thesis; semiconductor data was internally contradictory across sources and Technology stayed in the lagging quadrant, so no actionable stock-level catalyst existed today (buy-side gate item 6 not met). SPY gained +0.85% today (Yahoo close $753.72 vs prior confirmed close $747.35); holding cash underperformed on the day (-0.85% relative). 31 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 5+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
