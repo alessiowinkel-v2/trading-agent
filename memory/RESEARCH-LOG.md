@@ -2357,3 +2357,51 @@ No open positions. Nothing to monitor.
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-10 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (4x margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0 (Day 31 / Week 8, Friday)
+
+### Market context
+- WTI / Brent: WTI ~$71.78–73.54/bbl (sources diverge), Brent ~$76.05–76.30/bbl. Oil down sharply from June's Iran-premium highs (WTI down ~15% over the past month per TradingEconomics) — still far below the $90–95 floor any Energy/XOM thesis required.
+- S&P 500 futures: ~7,570–7,590 range, roughly flat to slightly negative (-0.14% one source); no strong directional signal.
+- VIX: ~15.84–16.90, calm zone, trending down.
+- Today's catalysts: AI capex/semiconductor rally (MU, INTC) continuing from July 9; inflation (PCE) still running hot, markets pricing possible Sept Fed hike; US-Iran resolution narrative supporting a "risk-on" tone; JPMorgan raised 2026 S&P target to 7,800. Conflicting reports on semis — some sources show a rally, others show the Philly semi ETF down ~11% this month; noisy/inconsistent, treat as a mixed signal not a clean catalyst.
+- Earnings before open: DAL (Delta Air Lines) reports BMO today — no position, no relevance.
+- Economic calendar: **No CPI/PPI/FOMC/jobs today.** Next CPI (June data) prints Tue July 14; PPI Wed July 15; next FOMC meeting July 29. Clean macro day.
+- Sector momentum: **Leading** — Energy (XLE), Consumer Staples (XLP), Industrials (XLI), Materials (XLB) — at/near highs. **Lagging** — Technology (XLK, ~10% off recent peak), Communications (XLC), Consumer Discretionary (XLY), Financials (XLF). **Weakening** — Healthcare (XLV). **Improving** — Real Estate (XLRE), Utilities (XLU).
+
+### Currently-held positions check
+- None (fully in cash)
+
+### Trade ideas (0 candidates)
+**ZERO candidates.** Reasons:
+1. No specific stock-level catalyst identified today with a documented 2:1+ R:R setup — Energy shows relative-strength leadership, but WTI at ~$72 is well below any level that would revive the XOM thesis (formally abandoned per the 10-day expiry rule on 2026-06-15); leading-sector status alone is not a thesis (buy-side gate item 6 requires a specific catalyst).
+2. Semiconductor/AI-capex signal is internally contradictory across sources (rally vs. -11% monthly ETF decline) — not tradeable without resolving which read is accurate, and Technology remains in the lagging quadrant regardless.
+3. Market near highs with a clean macro calendar — no forced entry; no held positions requiring action.
+4. 30 consecutive trading days fully in cash since launch (May 27); this is Day 31. Flagging again per the ongoing pattern, but the correct response remains patience absent a real catalyst, not manufacturing one.
+
+### Risk factors for today
+- Sharp WTI decline (-15% over the past month) could continue; any Energy-sector long candidate needs oil to stabilize first
+- Inconsistent semiconductor data across sources — risk of acting on a stale/wrong read if revisited later this week
+- Market near highs with narrow-ish breadth (Mag 7 down on the month per one source) — mean-reversion risk elevated on any negative catalyst
+- CPI (July 14) and PPI (July 15) next week — early sessions next week will face pre-CPI timing blocks
+
+### Decision
+**HOLD** — Zero candidates pass buy-side gate. No trade plan for market-open routine.
+Watching for: WTI stabilization/rebound (no active thesis while oil sits near $72, well below the ~$90 floor that supported the prior Energy thesis); resolution of the conflicting semiconductor rally-vs-selloff data; any pullback in leading sectors (Energy/Staples/Industrials/Materials) with a specific company-level catalyst.
+
+### Kill switch status
+All clear. Daily drawdown: 0.00% ($10,000 vs $10,000 yesterday EOD). Weekly drawdown: 0.00%. Total drawdown: 0.00%. No positions, no position-size breach possible. Root-level `PAUSED.flag` (non-standard location, content "test") still present as of this session — persists unresolved for 5+ weeks; does not trigger a KS since `memory/PAUSED.flag` remains absent. Flagging again for user cleanup.
+
+**Weekly trade slots**: 0/3 used (Week 8 — Day 5)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
