@@ -541,3 +541,15 @@ Open positions: 0
 Active kill switches: none
 Tomorrow: pre-market research from scratch (Week 9 Monday); no active thesis, WTI still ~$72 vs $90-95 Energy floor
 Note: root-level PAUSED.flag (non-standard path, content "test") unresolved 5+ weeks — please clean up or confirm intent
+
+---
+## 2026-07-12 20:37 UTC
+Week ending 2026-07-10
+Portfolio: $10,000 (0.00% week, 0.00% phase)
+vs SPY: -1.3% week, -0.3 to -0.5% phase (bot now trailing, first time since Jun 5)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: B-
+Key takeaway: 5th straight 0-trade week; well-reasoned HOLDs but half the 90-day window is gone with zero P&L data either way
+Graduation: 3/7 criteria met (30-day mark hit but held back — unexplained PAUSED.flag)

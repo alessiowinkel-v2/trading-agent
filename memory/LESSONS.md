@@ -231,3 +231,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: File naming inconsistency (`memory/lessons.md` lowercase vs `LESSONS.md` referenced everywhere in CLAUDE.md and TRADING-STRATEGY.md) was flagged in 8 consecutive weekly reviews starting 2026-05-27, with no action taken.
 **Insight**: This was a pure filesystem/naming fix, not a strategy change, and within the agent's authority to correct directly rather than defer indefinitely to the user.
 **Rule change**: None — renamed the file this session. All future sessions should reference `memory/LESSONS.md`.
+
+## 2026-07-10 — Mechanical/passive-flow events are not fundamentals catalysts
+
+**Context**: SPCX's forced Nasdaq-100 inclusion (Jul 7) was a real, large ($4.3-10B) mechanical buying event but was correctly rejected as a trade candidate — it's index-mechanics-driven, not company-fundamentals-driven.
+**Insight**: Large dollar flows alone don't make something a thesis. Passive-flow/index-mechanics events belong in the same "not a thesis" bucket as meme momentum and AI hype, even when the flow size is large and the catalyst is genuinely dated.
+**Rule change**: None. Buy-side gate item 6 (documented catalyst) already covers this; confirming correct application under a new catalyst type.
+
+## 2026-07-10 — Passive phase-lead vs SPY has now reversed to bot-behind
+
+**Context**: Bot's cumulative phase P&L vs SPY was +0.88% ahead as of the Jul 3 review (SPY still below its May 27 launch close of $751.38). By Jul 10, SPY closed back above $751.38, flipping the comparison to bot ~0.3-0.5% behind for the first time since the week of Jun 5.
+**Insight**: The 2026-06-05 and 2026-07-03 lessons about the passive lead being an artifact of SPY's position relative to the launch date, not earned alpha, are now confirmed operating in both directions across a full cycle (behind → ahead → behind). With 31 trading days and 0 trades, the bot has generated zero information about its own edge — only about SPY's path.
+**Rule change**: None. Restating for emphasis given half the 90-day window has now elapsed with zero trades in either direction.
+
+## 2026-07-10 — Same-day EOD arithmetic must be checked against its own cited prices, not just cross-checked against other sources
+
+**Context**: The Jul 8 EOD snapshot logged a day change of −0.48% while citing $747.71 (prior close) and $741.00 (today's close) — those two figures imply roughly −0.90%, not −0.48%. This is distinct from the long-standing cross-source divergence problem: the entry's own numbers don't agree with each other.
+**Insight**: Cross-checking SPY closes against multiple external sources doesn't catch an error where the stated percentage simply wasn't computed from the two prices given in the same entry.
+**Rule change**: Flag for user: EOD routine should derive the day-change percentage directly from the two closing prices it cites, as a final arithmetic check, before committing the entry. Operational fix only.

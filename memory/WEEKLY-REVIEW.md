@@ -1118,3 +1118,110 @@ No trades placed. Four trading days, four HOLD decisions (Jul 3 was a holiday re
 **Graduation criteria met: 3/7**
 
 Days running counter: **26** (Day 1 = 2026-05-27; Day 26 = 2026-07-02; Jul 3 = Independence Day observed holiday)
+
+---
+
+## Week ending 2026-07-10
+
+> Trading days this week: Mon Jul 6 – Fri Jul 10 (5 days, Days 27–31). Review runs Sun Jul 12 (routine fired late again — 2nd non-Friday trigger in recent weeks).
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Monday Jul 6 open) | $10,000.00 |
+| Ending portfolio (Friday Jul 10 close — Alpaca confirmed, `balance_asof: 2026-07-10`) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jul 2 close $744.80 → Jul 10 close) | +1.2% to +1.36% depending on source (Yahoo $753.72 vs Macrotrends/Robinhood $754.94); Perplexity multi-source consensus states +1.3% ("second straight winning week"). Using **+1.3%** as primary. |
+| Bot vs S&P this week | **−1.3%** |
+| Phase P&L since launch (May 27, SPY $751.38) | Bot 0.00% vs SPY **+0.3% to +0.5%** (SPY has now closed back above its May 27 launch level for the first time since early June) — **bot is now trailing SPY on a cumulative phase basis**, reversing the passive lead reported every week since 2026-06-05 |
+| Max intraweek drawdown | 0.00% (100% cash all 5 days, confirmed via daily EOD snapshots) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+**SPY daily closes this week (source: EOD log chain, Yahoo/Barchart/Investing.com/Macrotrends — cross-source divergence persists, unresolved for 10+ reviews):**
+| Date | Close | Day Chg |
+|------|-------|---------|
+| Jul 2 (prior last trading day) | $744.80 | — |
+| Jul 3 | CLOSED (Independence Day observed) | — |
+| Jul 6 (Mon) | ~$751.28 | +0.87% |
+| Jul 7 (Tue) | ~$747.71 | −0.48% |
+| Jul 8 (Wed) | ~$741.00 | −0.48% (as logged; the two cited closes imply closer to −0.90% — same-day internal arithmetic inconsistency, flagging as a fresh documentation-quality issue) |
+| Jul 9 (Thu) | ~$747.35 | +0.23% (note: Jul 9 entry's "prior close" of $745.40 doesn't match Jul 8's logged $741.00 — chain has a ~$4.40 internal gap) |
+| Jul 10 (Fri) | ~$753.72 (Yahoo) / $754.94 (Macrotrends) | +0.85% to +1.02% |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Pipeline status**: Zero active candidates entering Week 9. No conditional plans existed at any point this week (no ticker cleared even a partial gate check), so — unlike prior weeks — there was no market-open documentation gap to fail this week, because there was nothing conditional to document.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions, all with specific dated reasoning (buy-side gate item 6 never satisfied):
+
+**Jul 6 (Day 27 — Monday):** HOLD. Zero candidates — no dated catalyst for any name; sector leadership (Staples/Industrials/Materials/Energy) unchanged with no fresh trigger. AI-infrastructure cohort (AVGO, GNRC x2) still avoid-list post-repricing. Verdict: **Correct**, clean reasoning.
+
+**Jul 7 (Day 28 — Tuesday):** HOLD. SPCX forced Nasdaq-100 inclusion (a real, large mechanical/passive-flow event) explicitly rejected as a candidate — correctly identified as index-mechanics/momentum, not a fundamentals thesis, and flagged as violating both the "boring is good" philosophy and the first-30-minutes volatility rule. Verdict: **Correct — this is exactly the discipline the philosophy calls for.**
+
+**Jul 8 (Day 29 — Wednesday):** HOLD. Fresh US-Iran military escalation (CENTCOM strikes, broken ceasefire) explicitly evaluated and rejected: WTI ($70.41) far below the $90 floor (and further below the $92-95 higher-safety-margin floor recommended after June's geopolitical whipsaw), and the catalyst pattern-matched the fragile, reversible war-premium spike documented in LESSONS.md (2026-06-12/06-21) that fully round-tripped within days in June. Verdict: **Correct — applies an existing hard-won lesson under new but structurally identical conditions.**
+
+**Jul 9 (Day 30 — Thursday):** HOLD. Oil spike accelerating (Brent +7.1%) but same reasoning applied a second day; two low-quality "hot stock" listicle mentions (CAH, ENS) explicitly rejected for lacking a dated, company-specific catalyst — "hitting new highs" is a technical observation, not a thesis. Verdict: **Correct.**
+
+**Jul 10 (Day 31 — Friday):** HOLD. Clean macro day (no CPI/PPI/FOMC/jobs), market near highs, but zero stock-level catalyst; Energy sector leadership explicitly separated from a tradeable thesis (WTI ~$72, still well below the abandoned XOM floor); semiconductor data flagged as internally contradictory across sources and explicitly not traded on an unresolved read. Verdict: **Correct — refused to force a trade to end a 30-day streak.**
+
+**In hindsight**: Would I make any different decision this week? No. Every HOLD cites a specific, falsifiable reason (price floor not met, catalyst type explicitly wrong-shaped, data unreliable) rather than generic caution. The Jul 8/9 Iran-oil reasoning is the standout: it reused a hard lesson from a nearly identical June setup instead of re-litigating it from scratch.
+
+### Self-grades (be HARSH)
+- Process discipline: **A−** — All five HOLDs individually well-reasoned and gate-consistent. SPCX and Iran-oil rejections in particular show the buy-side gate discipline maturing — recognizing "real event, wrong catalyst type" rather than either forcing a trade or hand-waving a generic skip. No process failures this week. Held back from a full A only because zero candidates for a 5th straight week (and now 31st straight trading day) raises a standing question of whether the screening universe/methodology itself needs a look, independent of any single day's reasoning being sound.
+- Documentation quality: **B** — Pre-market and EOD logs complete 5/5 days, reasoning specific and well-sourced. Deduction for a fresh, self-contained issue: the Jul 8 EOD entry's own daily % change doesn't arithmetically match the two closing prices it cites (logged −0.48% vs. an implied −0.90%), and the Jul 9 entry's stated "prior close" doesn't match Jul 8's logged close (~$4.40 gap). These are internal-consistency errors, not just cross-source divergence — a new and more concerning variant of the long-standing SPY sourcing problem, because it means the same day's own two numbers don't add up.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked daily and clear, no positions, no breaches. Root-level `PAUSED.flag` (content "test", non-standard path) re-verified as still inert and still unresolved.
+- Outcome (weighted least): **C−** — 0.00% vs SPY +1.3% this week is the largest single-week gap conceded to the benchmark since the Jun 30/Jul 1 rally week, and it flipped the cumulative phase comparison from bot-ahead to bot-behind for the first time in five weeks. This is not a process failure (every HOLD was individually correct), but "correct process, zero trades, benchmark pulls ahead" is the exact pattern flagged as a standing risk since the first week of June.
+- **Overall: B−** — The best-reasoned zero-trade week yet on a per-decision basis (SPCX and Iran-oil rejections were genuinely sharp), but it is the 5th consecutive week and 31st consecutive trading day with zero executed trades, and the passive phase-lead the bot had been coasting on has now reversed. A strategy whose only recorded value so far is "avoided errors" cannot indefinitely defer the test of whether it can also capture a return — half of the 90-day evaluation window (46 of ~90 calendar days) has now elapsed with $0.00 of realized or unrealized P&L in either direction.
+
+### What worked (3-5 bullets)
+- SPCX Nasdaq-100 mechanical-inclusion event correctly identified and rejected as "not a fundamentals thesis" rather than chased as momentum — a clean, textbook application of the philosophy
+- Iran-oil escalation (Jul 8-9) correctly reasoned through using a specific prior lesson (June's fragile war-premium round-trip) rather than treated as a fresh, isolated decision
+- Zero forced trades despite reaching the 30-consecutive-trading-day mark — the streak itself was explicitly acknowledged and explicitly not treated as a reason to lower the bar
+- No market-open documentation gaps this week (there were no conditional plans to fail to document) — though this is an absence-of-opportunity-to-fail, not a fix to the underlying process gap that recurred in 4+ prior weeks
+- All kill switches checked daily; capital fully preserved
+
+### What didn't work (3-5 bullets)
+- Cumulative phase P&L flipped from bot +0.88% ahead (last review) to bot ~0.3-0.5% behind SPY — the "passive lead" lessons (2026-06-05, 2026-07-03) predicted exactly this reversal, and it has now happened
+- 31 consecutive trading days, 0 executed trades — 5th consecutive week with 0 trades; roughly half the 90-day evaluation window elapsed with no realized performance data of any kind to evaluate
+- Fresh same-day internal-consistency error in the Jul 8 EOD snapshot (stated day-change % doesn't match its own two cited closing prices) — a new documentation-quality issue distinct from the long-flagged cross-source divergence problem
+- Root-level `PAUSED.flag` (content "test") remains unexplained and unresolved since at least Jun 18 (git history) — now 3+ weeks with no clarification of its origin or intent
+- Weekly review again fired on a non-Friday (Sunday Jul 12) — cadence misalignment persists, flagged repeatedly since launch
+
+### Key lessons (added to LESSONS.md)
+- Mechanical/passive-flow events (index inclusion, forced fund buying) are not fundamentals catalysts even when the dollar flows are large — treat them the same as meme momentum and exclude on philosophy grounds, not just on absence-of-thesis grounds.
+- The passive phase-lead vs SPY is now confirmed to swing in both directions with no bot participation: it went from behind, to ahead (Jun 5), back to essentially flat, and now behind again (Jul 10) — purely tracking where SPY sits relative to the arbitrary May 27 launch price. Zero trades means zero information about the strategy's actual edge.
+- A single day's logged percentage change can be internally inconsistent with its own two cited closing prices (Jul 8) — this is a distinct failure mode from cross-source divergence and should be checked (does the delta between "yesterday's close" and "today's close" as stated actually equal the stated % change?) before an EOD entry is committed.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Zero-trade half-window checkpoint**: 46 of ~90 calendar days elapsed (31 trading days), 0 trades placed, 0 realized or unrealized P&L in either direction. Every individual HOLD decision reviewed to date has been defensible on its own terms, so this is not obviously a broken gate — but the user should explicitly decide whether the current buy-side gate calibration (particularly item 6's bar for "specific catalyst") is set at the intended stringency for a 90-day evaluation, or whether it is structurally too conservative to ever fire. No unilateral change; flagging because half the window is now gone.
+2. **Root-level `PAUSED.flag` origin (repeated, now unresolved for 3+ weeks / since ≥Jun 18 per git history)**: content is still just "test." Recommend the user either explain its origin (was this an intentional test of the kill-switch path?) or delete it. Its unexplained presence is the reason this review does not mark the "30 days without manual intervention" graduation criterion as a clean ✅ this week (see below).
+3. **EOD snapshot arithmetic check**: Jul 8's entry contains a same-day internal inconsistency (stated % change doesn't match its own two cited prices). Suggest the EOD routine compute the day change directly from the two closes it cites rather than stating a percentage from a separate mental calculation, to eliminate this class of error going forward. Operational fix only, not a strategy change.
+4. **Weekly review cadence (repeated)**: Fired Sunday Jul 12, not Friday Jul 10. Same orchestration gap flagged in nearly every prior review since launch.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (31 trading days elapsed with no *standard* kill-switch trigger or logged human intervention — but the unexplained root-level `PAUSED.flag`, present since at least Jun 18 with no documented origin, is exactly the kind of artifact a manual test-and-abandon would leave behind. Not marking a clean ✅ until the user confirms nothing manual actually happened.)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY +0.3-0.5% phase — technically within the 2% "matched" band, but this is a zero-trade artifact, not earned performance; note this is the first week the raw comparison is bot-behind rather than bot-ahead)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed; no conditional plans existed this week so no documentation-gap risk either)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable, no corruption; note the Jul 8 EOD internal-arithmetic issue above)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **31** (Day 1 = 2026-05-27; Day 31 = 2026-07-10)
