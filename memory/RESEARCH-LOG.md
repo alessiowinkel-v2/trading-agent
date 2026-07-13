@@ -2405,3 +2405,51 @@ All clear. Daily drawdown: 0.00% ($10,000 vs $10,000 yesterday EOD). Weekly draw
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-13 — Pre-market Research (Day 32, Monday — start of Week 9)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (4x margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: WTI ~$71.41–73.77 (sources diverge intraday), +3.3% on the day; Brent ~$78.42–78.93, +3.2–3.8%. Renewed US-Iran tensions disrupting Strait of Hormuz shipping are reviving the Middle East risk premium — same fragile geopolitical-spike pattern documented repeatedly in LESSONS.md (June round-trip, Jul 8-10 fade). Still below the $90 XOM-thesis floor (and further below the $92-95 safety-margin floor for geopolitical premiums).
+- **S&P 500 futures**: ~7,580, down ~35 pts (-0.46%); Nasdaq futures -0.67 to -0.91%, Dow futures -0.36%. Pullback following last week's chip-led rally.
+- **VIX**: ~15.84-16.28, calm zone, below 20. No stress signal.
+- **Today's catalysts**: Q2 earnings season kicks off — major banks (JPM, GS, WFC, C, BAC) report tomorrow (Tue), not today. Fed Chair Warsh testifies before Congress this week (date TBD, adds volatility risk). US-Iran conflict remains the dominant swing factor for oil/risk sentiment. Sector-rotation narrative: money reportedly rotating back into Tech/Consumer Discretionary this week after early-July semiconductor selloff, but multiple sources (MarketWatch, BofA/Fortune) explicitly warn this "momentum trade" is stretched and due for a "violent unwind"/"snapback" — chasing it now is speculation, not a documented company-level catalyst.
+- **Earnings before open**: No noteworthy reports today (Fastenal the only minor before-open print). Big bank earnings start tomorrow (Tue Jul 14) — not actionable today, and any bank thesis built now would need 5-day earnings-proximity screening regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs today. June CPI prints tomorrow (Tue Jul 14, 8:30am ET), June PPI Wed Jul 15. Next FOMC Jul 29. Philly Fed manufacturing survey and pending home sales today — neither blocking.
+- **Sector momentum**: Reversal in progress — Technology and Consumer Discretionary surged Jul 9 (Tech +1.7%) after a sharp early-July semiconductor drawdown (-11.4% over 2 sessions), while Energy fell (-1.4%) on the oil pullback before this weekend's Iran-driven bounce. This directly contradicts the multi-week LEADING/LAGGING structure (Energy/Staples/Industrials leading, Tech lagging) that had held since early June — treat current week's rotation as unconfirmed/noisy, not yet an established regime change, especially with explicit "snapback" warnings from BofA and MarketWatch on the same trade.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. No specific, dated, company-level catalyst identified today (buy-side gate item 6 fails for every angle considered). The Tech/Consumer Discretionary rotation is a sector-wide narrative directly flagged by multiple sources as a stretched, unwind-prone momentum trade — chasing it now would be exactly the kind of "AI hype / momentum" entry the strategy explicitly rules out as "not a thesis."
+2. Oil/Energy: WTI (~$72-74) remains well below the $90 floor (and the $92-95 geopolitical safety margin) required to revive the abandoned XOM thesis; today's Iran-driven spike is the same fragile pattern that has round-tripped multiple times since June.
+3. Banks: real earnings catalyst (JPM/GS/WFC/C/BAC) exists but reports tomorrow, not today — nothing to act on yet; will reassess post-print.
+4. Clean macro day (no CPI/PPI/FOMC/jobs) but CPI/PPI print Tue/Wed — next 1-2 sessions carry elevated pre-print risk per existing timing-block discipline.
+5. 31 consecutive trading days fully in cash since launch (May 27); today is Day 32, start of Week 9. Restating per ongoing pattern: correct response remains patience absent a real, dated, stock-level catalyst, not manufacturing one to break the streak.
+
+### Risk factors for today
+- US-Iran escalation reaccelerating (oil +3-4% today) — could spike further or reverse sharply on any ceasefire/diplomatic signal; same volatility profile as the June and Jul 8-10 episodes.
+- Sector rotation into Tech/Consumer Discretionary flagged by BofA and MarketWatch as an extreme/stretched momentum trade at risk of a "violent unwind" this month — elevated whipsaw risk in either direction.
+- CPI (Tue) and PPI (Wed) both land this week — pre-print positioning risk into Monday/Tuesday close.
+- Fed Chair Warsh congressional testimony this week is an explicit "wild card" per research — headline risk on any hawkish/dovish surprise.
+
+### Decision
+**HOLD.** Zero candidates pass the buy-side gate. No trade plan for market-open routine. Watching for: bank earnings reaction starting tomorrow (JPM/GS/WFC/C/BAC), whether the Tech/Consumer Discretionary rotation holds or unwinds as multiple sources warn, and WTI/Brent stabilization vs. further Iran-driven spike.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 10 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 10 close): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 9, Day 1) — CLEAR. Root-level `PAUSED.flag` (non-standard location, content "test") still present as of this session (created Jul 12) — persists unresolved for 5+ weeks; `memory/PAUSED.flag` (the standard path) remains absent, so no kill switch triggers. Flagging again for user cleanup.
+
+**Weekly trade slots**: 0/3 used (Week 9 — Day 1)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
