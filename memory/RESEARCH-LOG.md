@@ -2453,3 +2453,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 10 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-14 — Pre-market Research
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; field not returned by account endpoint, but 0 trades placed since launch confirms 0)
+- Open positions: 0 (Day 33 / Week 9, Tuesday)
+
+### Market context
+- **WTI / Brent**: Sharp geopolitical spike — WTI ~$74-79/bbl (Investing.com: $79.26, +1.43%; Barchart Aug '26 CLQ26: +4.87% to ~$74-77), Brent ~$79-81/bbl (Investing.com $78.96 +3.88%; TradingEconomics: Brent hit $80.87 Jul 13, +6.39%). Driver: escalating US-Iran conflict — Trump announced US will reimpose a blockade on Iranian vessels in the Strait of Hormuz and seek payment on other cargo. Still well below the $90-95 floor required to revive the abandoned XOM/Energy thesis (per 2026-06-21/2026-07-10 lessons on fragile geopolitical premiums).
+- **S&P 500 futures**: ESU26 ~7,577, down ~0.57% (-43.5 pts) premarket; mixed/conflicting prints across sources (some show +0.44%), net a modest pullback from Monday's close (~$7,589-7,626 range).
+- **VIX**: 15.03 (Jul 13 close, -5.11% on the day) — calm, sub-16 despite the oil spike; notable divergence between equity-vol complacency and commodity volatility.
+- **Today's catalysts**: (1) **June CPI at 8:30 AM ET** — the dominant catalyst, final major inflation read before the Jul 28-29 FOMC; consensus expects a "benign" print given the recent oil pullback (though the new Iran spike complicates the read-through). (2) **Five major bank earnings pre-market**: JPMorgan (EPS est. $5.58), Bank of America ($1.12), Citigroup ($2.73), Goldman Sachs ($14.47), Wells Fargo (~7:00 AM ET, EPS est. $1.72) — first wave of Q2 earnings season, ~22% EPS growth expected sector-wide. JPM also announced a $50B buyback + dividend hike after clearing the Fed stress test. (3) Market pricing ~77% odds of a rate hike by year-end on oil-driven inflation concern — a notable hawkish shift from the "benign CPI" base case.
+- **Earnings before open**: JPM, BAC, C, GS, WFC (all major banks, pre-market open) — plus Ericsson, Fastenal, Regions Financial. None are current or recent watchlist candidates.
+- **Economic calendar**: **CPI (June) 8:30 AM ET — today.** PPI (June) tomorrow Jul 15, 8:30 AM ET. Next FOMC Jul 28-29. June jobs report already printed Jul 2 (57K nonfarm, 4.2% unemployment). Prior (May) CPI was +0.5% MoM / +4.2% YoY headline, +2.9% YoY core.
+- **Sector momentum**: Choppy/narrow. Week of Jul 6-10: Energy (+3.5%) and Technology (+2.9%) led, only 5 of 11 sectors advanced. This directly reverses the Jul 5 week's rotation (Healthcare/Consumer Defensive led, Tech lagged -2.95%). Two consecutive weeks of opposite-sector leadership in a row — treat current momentum readings as noisy/unconfirmed, not a stable regime, consistent with last session's read.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Hard timing block: CPI prints today at 8:30 AM ET.** Strategy rule explicitly prohibits new positions on the day of a major macro release (CPI, jobs, FOMC). This alone rules out any entry today regardless of thesis quality.
+2. **Bank earnings (JPM/BAC/C/GS/WFC) are a real, dated catalyst** but results only land pre-market today — no post-print reaction data exists yet to act on, and CPI timing block applies independently even if a bank thesis existed.
+3. **Energy/XOM**: WTI's Iran-driven spike to ~$74-79 remains well below the $90-95 floor required to revive the formally-abandoned thesis. This is the same fragile, reversible geopolitical-premium pattern documented repeatedly since June (Jun 12, Jul 8-10) — a spike, not a structural move.
+4. **Sector rotation whipsaw**: two consecutive weeks of opposite sector leadership (Healthcare/Staples → Tech/Energy) is noise, not a tradeable signal per the strategy's "sector momentum" gate.
+5. 32 consecutive trading days fully in cash since launch (May 27); today is Day 33, Week 9 Day 2. Correct posture remains patience — CPI day is an automatic HOLD by rule, independent of any candidate quality.
+
+### Risk factors for today
+- CPI surprise (hot or cold) — hot print + oil spike compounds into a stronger case for a year-end hike (already ~77% priced), risking a broad selloff; cold print could fuel a relief rally that a flat-footed cash position simply rides passively.
+- Bank earnings misses/beats could set the tone for the rest of Q2 earnings season and move Financials sharply in either direction.
+- US-Iran/Strait of Hormuz escalation could deepen (further oil spike, broader risk-off) or reverse sharply on any de-escalation signal — same volatility profile as prior episodes.
+- VIX (15.03) sits well below what the oil/geopolitical backdrop might suggest — a "calm before repricing" risk if CPI or Iran headlines surprise negatively.
+
+### Decision
+**HOLD.** CPI day is a hard timing block — no trades regardless of setup quality. Watching for: CPI print reaction and bank earnings results to inform post-block candidate screening tomorrow (PPI day, so likely still blocked); Iran/oil trajectory; whether Energy or Tech leadership actually holds this week.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 13 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 10 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 9, Day 2) — CLEAR. Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) still present as of this session — persists unresolved for 5+ weeks; `memory/PAUSED.flag` (standard path) remains absent, so no kill switch triggers. Flagging again for user cleanup.
+
+**Weekly trade slots**: 0/3 used (Week 9 — Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
