@@ -2501,3 +2501,50 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 13 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-15 — Pre-market Research (Day 34, Wednesday)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: Sharp continued spike — WTI ~$79.80-79.86 (Investing.com), Brent ~$84.73-84.89 (Oilprice.com/Investing.com), some sources show Brent briefly topping $86 intraday. Driver: US struck Iranian targets, Washington reinstated a naval blockade on Iranian ports, Iran reportedly closed/threatened the Strait of Hormuz — a sharp escalation from the de-escalation reported just yesterday (Jul 14, Trump had abandoned a cargo-fee blockade plan). WTI has risen from ~$72-74 (Jul 13-14) to ~$79-80 today, closing the gap toward the $90-95 XOM/Energy-thesis floor but still $10-15 below it. Per repeated LESSONS.md entries (Jun 12, Jul 8-10), geopolitical premiums are fragile and prone to round-trip — still not actionable, watching closely given the pace of the move.
+- **S&P 500 futures**: ~7,607.50, modestly higher (+0.21%); other contract reads mixed/flat (-0.06% to +0.41% across sources) as markets digest bank earnings and Iran headlines.
+- **VIX**: Sources conflict — most converge ~16-17 (Cboe official 16.43, prior close 17.16; FRED 17.16 for Jul 13; Investing.com 17.16) with one outlier at 20.95 (likely stale/mismatched). Treating VIX as calm zone (~16-17), sub-20, despite the oil spike — notable divergence between equity-vol complacency and commodity volatility.
+- **Today's catalysts**: (1) Escalating US-Iran conflict driving oil surge (dominant catalyst). (2) June FOMC minutes released today — internal debate on hawkish tilt vs. softer policy after weak June jobs. (3) **PPI (June) at 8:30 AM ET — hard macro timing block, same treatment as CPI day.** (4) Fed Chair Warsh testifies before Congress today — headline risk. (5) Q2 earnings continue: BlackRock, JNJ, Morgan Stanley, ASML, Elevance Health, Cintas, Thermo Fisher pre-market.
+- **Earnings before open**: JNJ, ASML, BLK, MS, ELV, CTAS, TMO — none are current watchlist candidates. Bank earnings (JPM/BAC/C/GS/WFC) reported yesterday and "generally impressed" per Schwab; Financials/BLK/MS today extend that theme.
+- **Economic calendar**: **PPI (June) 8:30 AM ET today** — consensus 6.3% YoY (prev 6.2%), 0.1% MoM (prev 0%). CPI already printed yesterday (soft, -0.4% MoM per one source). Next FOMC Jul 29. This is a hard timing-block day per strategy (macro print day, analogous to CPI).
+- **Sector momentum**: Technology remains 3M-momentum leader (35.3%, +3.8pp on week) but "losing velocity." **Financials breaking out** — surged +5.7pp to 9.7% 3M momentum, "accelerating," coincides with strong bank earnings this week. Materials also breaking out (+4.6pp to 6.6%). Energy momentum fell -2.2pp to just 0.4%, moving inversely to the broader market despite the oil spike. Utilities last (-4.5%).
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Hard timing block: PPI prints today at 8:30 AM ET.** Treating this identically to CPI-day blocks per existing practice — no new entries today regardless of setup quality.
+2. **Energy/XOM**: WTI's sharp move to ~$79-80 is the fastest single-session acceleration yet toward the $90-95 floor, but remains $10-15 below it. This is the same fragile Iran-driven geopolitical-premium pattern that has round-tripped repeatedly since June (documented Jun 12, Jul 8-10) — a spike, not a confirmed structural move. Energy's own sector momentum reading (0.4%, falling) does not support a sector-momentum tailwind despite the oil price action.
+3. **Financials breakout** is a real, developing signal (bank earnings + momentum acceleration) but no single-stock catalyst has been screened/documented yet today, and PPI timing block applies regardless. Flagging as the top candidate to screen properly once the macro block clears (post-PPI, non-earnings-adjacent names).
+4. 33 consecutive trading days fully in cash since launch (May 27); today is Day 34, Week 10 Day 1. Correct posture remains patience — PPI day is an automatic HOLD by rule, independent of candidate quality.
+
+### Risk factors for today
+- US-Iran escalation is accelerating faster than prior episodes (blockade + reported Strait of Hormuz closure) — real tail risk of a larger, less-reversible supply shock this time, but also matches the pattern of prior spikes that fully reversed within days.
+- PPI surprise (hot, given oil spike risk to input costs) could compound with FOMC-minutes hawkish read and Warsh testimony for a volatile session.
+- Financials sector breakout risk both ways: further acceleration on continued earnings beats, or reversal if BLK/MS disappoint today.
+- VIX calm (~16-17) despite oil and geopolitical stress — potential complacency risk if any of today's three catalysts (PPI, FOMC minutes, Warsh testimony) surprises negatively.
+
+### Decision
+**HOLD.** PPI day is a hard timing block — no trades regardless of setup quality. Watching for: PPI print reaction, FOMC minutes tone, Warsh testimony headlines, further WTI/Brent trajectory (fastest move yet toward the Energy-thesis floor), and whether the Financials breakout produces a screenable single-stock candidate once the macro block clears.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 14 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 10 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 10, Day 1) — CLEAR. Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) confirmed still present at repo root — persists unresolved for 5+ weeks; `memory/PAUSED.flag` (standard path) remains absent, so no kill switch triggers. Flagging again for user cleanup.
+
+**Weekly trade slots**: 0/3 used (Week 10 — Day 1)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
