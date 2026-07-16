@@ -477,3 +477,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 34, Week 9 (Wednesday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 34 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00%. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 6+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-16 — EOD Snapshot (Day 35, Thursday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (sources conflict — investing.com/convextrade show $754.81 flat vs. stated prior close, twelvedata shows Jul 15 close as $754.73; no consistent confirmed Jul 16 close obtained)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 35, Week 9 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 35 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00%. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 7+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
