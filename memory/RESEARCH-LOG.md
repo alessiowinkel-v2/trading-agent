@@ -2548,3 +2548,52 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 14 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-16 — Pre-market Research (Day 35, Thursday)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: WTI ~$80.00-80.42, Brent ~$85.06-85.91 (Investing.com, Oilprice.com). Both up modestly (~+0.5-1%) on the day. Still well below the $90-95 floor required to revive the abandoned XOM/Energy thesis. Prices have stabilized in the high-$70s/low-$80s range over the past few sessions after the Iran-driven spike — no fresh escalation headline today.
+- **S&P 500 futures**: ~7,621 (+0.08%), modestly positive premarket; one source (Barchart, dated yesterday) showed -0.06%. Net: roughly flat to slightly higher.
+- **VIX**: Conflicting reads — most sources converge on prior close ~16.50 (Cboe, FRED, Investing.com, Businessinsider all cite Jul 15 close 16.50, down from 17.16 on Jul 13/14). One Marketwatch snapshot showed 20.95 but appears to be a stale/mismatched quote (dated Feb in underlying metadata) — not treated as current. Effective read: VIX calm, ~16-17.
+- **Today's catalysts**: Q2 earnings season fully underway — **TSM, UNH, GE Aerospace, Abbott Labs, Fifth Third Bancorp, Simply Good Foods** all reporting before the open; **Netflix, Intuitive Surgical** after the close. TSM guidance is a bellwether for the broader AI/semiconductor trade (semis down ~11.4% MTD in July per momentum data). No CPI/PPI/FOMC/jobs release today — first clean macro day since Jul 13.
+- **Earnings before open**: ABT ($1.28 est), GE, TSM ($3.80 est), UNH, SMPL ($0.35 est), FITB ($0.84 est). None are current watchlist candidates; all excluded from consideration today under gate item 8 (no buying into a same-day earnings print).
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today. Retail Sales (+0.9% actual vs +0.5% consensus, beat), Initial Jobless Claims (215K vs 220K consensus, beat), Philly Fed (15.0 vs 13.0 consensus, beat), Industrial Production, Pending Home Sales (-0.5%, miss) all released 8:30-10:00 AM. June CPI (3.5% YoY, down from 4.2%) and PPI (-0.3% MoM) already confirmed benign this week — FOMC hold probability for Jul 28-29 now 83.4%. No hard timing block today.
+- **Sector momentum**: Noisy/conflicting. Week of Jul 6-10 leaders were Energy (+3.5%) and Technology (+2.9%), but a sector rotation map now classifies Energy, Staples, Industrials, and Materials as "Leading" while Technology and Communications sit in the "Lagging" quadrant despite their recent weekly gains — driven by an 11.4% MTD semiconductor selloff and a broader "momentum factor" unwind (momentum ETFs -6.6% in July, consistent with seasonal July weakness). Energy's own momentum has "slowed" as oil retreated from the Iran-spike highs. Treating current sector signals as unstable/whipsawing per repeated recent lessons, not a tradeable trend.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **No documented single-stock catalyst clears gate item 6.** Today's dated catalysts are earnings prints (TSM, UNH, GE, ABT, FITB, SMPL) — but gate item 8 explicitly excludes buying into a stock's own earnings-day print, and NFLX/ISRG report after today's close (still inside the "no earnings within 5 trading days" window for any thesis built around them now).
+2. **Energy/XOM**: WTI ($80.00-80.42) remains $10-15 below the $90-95 floor required to revive the formally-abandoned thesis; Energy's own momentum reading is "slowing," not accelerating — no fresh case to reopen this thesis.
+3. **Financials breakout (flagged Jul 15 for post-PPI screening)**: Macro block has cleared, but no specific non-earnings-day financial ticker has been screened or documented yet — flagging again as the top candidate to properly screen next session (most large banks already reported this week; a name reporting later or already past earnings would be needed).
+4. **Momentum/semiconductor trade is actively unwinding** (-11.4% MTD) — the opposite of a signal to chase Technology despite its long-run composite momentum lead; today is not a dip-buy setup per LESSONS.md "broken catalyst vs. discount" framework without a specific company-level thesis.
+5. 34 consecutive trading days fully in cash since launch (May 27); today is Day 35, Week 10 Day 2. First clean macro day since Jul 13 (no CPI/PPI/FOMC/jobs) — correct posture is to use it for proper single-stock screening (e.g., a Financials name) for a potential Week 10 entry, not to force a trade today pre-market.
+
+### Risk factors for today
+- TSM guidance could swing the whole AI/semiconductor complex sharply in either direction given the active momentum unwind — no position exposure, but relevant for near-term Technology sector screening.
+- UNH earnings carry read-through for healthcare cost trends broadly.
+- Retail Sales/Jobless Claims beats this morning are modestly hawkish (resilient consumer, tight labor) — could pressure the "benign CPI/PPI" rate-cut narrative built earlier this week.
+- Momentum-factor unwind (semis -11.4% MTD) could broaden into other high-multiple Tech/Comms names; avoid chasing residual Tech momentum until this stabilizes.
+- VIX data conflict (16.5 vs. an apparent stale 20.95 print) — worth re-confirming with a fresh Alpaca/Cboe check before midday if volatility genuinely spiked.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate today — all dated catalysts are today's own earnings reports (excluded by gate item 8), and no non-earnings single-stock thesis has been built and documented yet. First clean macro day since Jul 13; will use it to screen a specific Financials candidate (per Jul 15 flag) for potential Week 10 entry, pending fresh documentation before any trade.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 15 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 10 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 10, Day 2) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-15. Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) still present at repo root as of this session — persists unresolved for 5+ weeks; `memory/PAUSED.flag` (standard path) remains absent, so no kill switch triggers. Flagging again for user cleanup.
+
+**Weekly trade slots**: 0/3 used (Week 10 — Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
