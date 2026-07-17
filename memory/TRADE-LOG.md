@@ -489,3 +489,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 35, Week 9 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used. 35 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00%. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 7+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-17 — EOD Snapshot (Day 36, Friday — end of Week 9)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (query ran mid-session ~7PM UTC/3PM ET before close; Investing.com/stockanalysis confirmed Jul 16 close at $750.72/-0.54%, but no confirmed Jul 17 close obtained — intraday-only prints of ~$745.53, -0.69%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 36, end of Week 9 (Friday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used, 0 total trades since launch. 36 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 8+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
