@@ -2597,3 +2597,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 15 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-17 — Pre-market Research (Day 36, Friday — end of Week 10)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: WTI ~$79.51-79.90 (Investing.com, FT.com, TradingEconomics converge), Brent ~$84.84-85.09, both up modestly (~+0.7-1.2%) on the day. Continuing to consolidate in the high-$70s/low-$80s range for the third+ straight session. Still $10-15 below the $90-95 floor required to revive the formally-abandoned XOM/Energy thesis.
+- **S&P 500 futures**: Notably red — ~7,509-7,518, down ~0.79-0.90% (60-68 pts) premarket. This is a larger-than-typical premarket move, driven by fresh US-Iran escalation headlines (Iran threatening retaliation if Trump strikes key facilities).
+- **VIX**: Data conflicted across sources again (15.80 to 20.95), but multiple sources (Cboe spot 17.96 +7.35%, YCharts 16.73 prior close) point to a genuine uptick from the mid-teens calm this week toward ~17-18. The MarketWatch 20.95 print carries a stale date tag in underlying metadata (same pattern flagged Jul 16) — not treated as current. Net read: VIX modestly elevated, not calm, consistent with the risk-off premarket tone.
+- **Today's catalysts**: (1) Escalating US-Iran conflict — dominant catalyst, driving both the oil bid and the equity futures selloff. (2) Heavy Q2 earnings day: Netflix, UnitedHealth, GE Aerospace, Prologis, State Street, Citizens Financial, Truist Financial, U.S. Bancorp, Abbott Labs all reporting today. (3) Econ data: Import/Export Price Index, Housing Starts, Industrial Production, and University of Michigan Consumer Sentiment (Prelim) — no CPI/PPI/FOMC/jobs data today (those already printed Jul 14/15; next FOMC Jul 29).
+- **Earnings before open**: Sources conflict on specifics, but no current watchlist tickers are among the reporters. Financials names reporting today (State Street, Citizens Financial, Truist) are excluded from any same-day entry by gate item 8 regardless of quality.
+- **Economic calendar**: No hard CPI/PPI/FOMC/jobs timing block today — first genuinely clean macro-print day of the week. Import/Export Price Index, Housing Starts, Industrial Production (9:15 AM), Michigan Consumer Sentiment (10:00 AM) are all released but none are hard-block-tier per strategy.
+- **Sector momentum**: Data internally contradictory yet again — one composite view shows Technology +7.51% WTD (leading), Consumer Discretionary +5.21%, Financials +3.22%; a separate momentum-map view shows Consumer Staples/Industrials/Materials/Energy "Leading" and Technology/Financials "Lagging," with same-day Bloomberg sector prints showing Industrials -1.53% and Tech -1.05%. Treating sector signals as unstable/whipsawing — consistent with the repeated recent lesson not to trust a single-session or single-source read.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **No documented single-stock catalyst clears gate item 6.** Today's dated catalysts are earnings prints (NFLX, UNH, GE, STT, CFG, TFC, USB, ABT) — gate item 8 excludes buying into a stock's own earnings-day print for all of them.
+2. **Financials breakout thesis remains unscreened for a third consecutive session** (first flagged Jul 15, repeated Jul 16, still no specific non-earnings-day ticker identified or vetted). This is drifting toward the "perpetual deferral" pattern documented in LESSONS.md (2026-06-05) — flagging explicitly rather than letting it recur silently. If no concrete candidate is screened by early next week, treat the thesis as stale per the 10-day expiry convention.
+3. **Energy/XOM**: WTI ($79.51-79.90) remains well below the $90-95 floor; no change to the standing rejection.
+4. **Risk-off premarket tone** (SPX futures -0.8-0.9%, VIX ticking up, fresh Iran escalation headlines) argues for added caution even if a candidate existed — not a day to lean into new risk.
+5. 35 consecutive trading days fully in cash since launch (May 27); today is Day 36, end of Week 10. Correct posture remains patience.
+
+### Risk factors for today
+- Fresh US-Iran escalation (Iran threatening retaliation against potential US strikes) is driving both the oil bid and a real premarket equity selloff — largest premarket futures drop in recent sessions. Watch for further headline escalation vs. a walk-back.
+- VIX genuinely ticking up (~17-18 vs. mid-teens this week) — first sign of real volatility pickup after weeks of calm.
+- Heavy Friday earnings slate (NFLX, UNH, GE, banks/insurers) could set risk tone into the weekly close regardless of our zero exposure.
+- Sector momentum data remains contradictory across sources — do not act on any single-source sector read.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. Premarket risk-off tone (Iran escalation, futures down ~0.8-0.9%, VIX ticking up) reinforces caution even absent a specific thesis. Watching for: Iran headline trajectory, whether the futures selloff extends into the cash session, and finally screening a specific Financials candidate next week before the thesis goes stale.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 16 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 10 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 10, Day 5/Friday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-16. Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) — not re-verified this session (out of scope for standard `memory/PAUSED.flag` check); `memory/PAUSED.flag` (standard path) remains absent, so no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 10 — Day 5, Friday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
