@@ -1225,3 +1225,97 @@ No trades placed. Five trading days, five documented HOLD decisions, all with sp
 **Graduation criteria met: 3/7**
 
 Days running counter: **31** (Day 1 = 2026-05-27; Day 31 = 2026-07-10)
+
+---
+
+## Week ending 2026-07-17
+
+> Trading days this week: Mon Jul 13 – Fri Jul 17 (5 days, Days 32–36). Review runs Sun Jul 19 (routine fired late again — 3rd non-Friday trigger in recent weeks).
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Monday Jul 13 open) | $10,000.00 |
+| Ending portfolio (Friday Jul 17 close — Alpaca confirmed, `balance_asof: 2026-07-17`) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jul 10 close ~$753.72–754.94 → Jul 17 close $743.29) | −1.55% (sources converge in a narrow −1.5% to −1.6% band: barchart −1.54%, capitalinsightbd −1.55%, chartrow/FRED −1.6%) |
+| Bot vs S&P this week | **+1.55%** |
+| Phase P&L since launch (May 27, SPY $751.38) | Bot 0.00% vs SPY **−1.08%** (SPY $743.29 vs $751.38) — bot is passively **ahead +1.08%** again, reversing last week's bot-behind reading for the 4th time this phase |
+| Max intraweek drawdown | 0.00% (100% cash all 5 days, confirmed via daily EOD snapshots) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Pipeline status**: A Financials/bank-earnings breakout thesis was flagged Jul 15 as the top candidate to screen and repeated, still unscreened, on Jul 16 and Jul 17 — three consecutive sessions with no specific ticker, entry, stop, or target ever documented. This is a fresh failure mode distinct from the market-open documentation gap: no conditional plan existed to fail to document, because the plan itself was never built past a one-line flag.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions:
+
+**Jul 13 (Day 32 — Monday):** HOLD. No dated company-level catalyst; Tech/Consumer Discretionary rotation explicitly flagged by BofA/MarketWatch as a stretched, unwind-prone momentum trade and correctly declined rather than chased. Iran-driven oil spike still well below the $90 XOM-thesis floor. Verdict: **Correct.**
+
+**Jul 14 (Day 33 — Tuesday):** HOLD. June CPI + five major bank earnings (JPM/BAC/C/GS/WFC) pre-market. CPI hard timing block applied cleanly, independent of setup quality. Verdict: **Correct — textbook rule application.**
+
+**Jul 15 (Day 34 — Wednesday):** HOLD. PPI hard timing block applied. Financials sector breakout (bank-earnings-driven momentum acceleration) correctly identified as a real, developing signal — but no single-stock candidate was screened or documented; flagged as "top candidate to screen once the macro block clears." Verdict: **Correct HOLD on the day, but this is where the pipeline-building obligation starts and isn't met.**
+
+**Jul 16 (Day 35 — Thursday):** HOLD. First clean macro day since Jul 13 (no CPI/PPI/FOMC/jobs) — explicitly earmarked to screen the Financials candidate flagged the day before. That screening did not happen; today's own earnings reporters (TSM/UNH/GE/etc.) were correctly excluded by gate item 8, but no non-earnings Financials name was evaluated either. The Jun 21 lesson ("build the pipeline during the block, not after") is being violated in reverse here: the block cleared, and the pipeline still wasn't built. Verdict: **Correct HOLD on substance, but the promised follow-through did not occur.**
+
+**Jul 17 (Day 36 — Friday):** HOLD. Fresh US-Iran escalation drove S&P futures down ~0.8–0.9% premarket and VIX up to ~17–18 (first real volatility pickup after weeks of calm). Financials thesis unscreened for a third consecutive session — explicitly called out as "drifting toward the perpetual deferral pattern" documented in LESSONS.md (2026-06-05), with an implicit deadline into next week. Verdict: **Correct HOLD given the risk-off tone, but the Financials thesis is now tracing the same unscreened-candidate arc that preceded both the XOM (June) and GNRC (June–July) cycles before those saw any actual documentation gap.**
+
+**In hindsight**: No different trade decision would have been made this week — every HOLD is individually well-reasoned, and the week's real risk event (Friday's Iran-driven selloff) would have been unwelcome to hold through. The one genuine process gap is not a documentation failure (no conditional plan existed to fail to log) but an execution-pipeline failure: a real, dated catalyst (bank earnings / Financials breakout) was identified Jul 15 and never converted into an actual gate-checked candidate across three sessions.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — every day's HOLD was correctly reasoned and gate-consistent; CPI and PPI hard blocks were applied without hesitation. Deduction: the Financials breakout was flagged as "top candidate to screen" on three consecutive days and never actually screened — this is the precursor pattern to the "perpetual deferral" failure mode already documented twice this phase (XOM, GNRC), just one step earlier in its lifecycle.
+- Documentation quality: **B+** — logs are thorough, specific, and (unlike the Jul 8–10 window) internally arithmetically consistent this week; no same-day percentage/price mismatches spotted. No conditional plans existed, so there was no opportunity for the recurring market-open documentation gap to fire — a genuinely clean week for that specific failure mode.
+- Risk management: **A** — 0.00% drawdown against a −1.55% SPY week; zero positions exposed to Friday's Iran-driven risk-off move; all kill switches checked daily, none fired, none missed.
+- Outcome (weighted least): **B+** — +1.55% vs SPY this week; phase comparison flips back to bot-ahead (+1.08%). Per repeated lessons (2026-06-05, 2026-07-03, 2026-07-10), this is a passive artifact of SPY dropping back below the May 27 launch price, not earned return — restating for the fourth time this phase.
+- **Overall: B−** — Individual decisions were sound and the week avoided a real downturn without effort. But 36 consecutive trading days and 0 trades, combined with a real catalyst (Financials/bank earnings) identified and then left unscreened for three straight sessions, is a self-inflicted gap distinct from timing blocks or legitimate thesis-quality rejections. The bot is good at not making bad trades; it has not yet demonstrated it can build and execute a good one.
+
+### What worked (3-5 bullets)
+- CPI (Jul 14) and PPI (Jul 15) hard timing blocks applied without hesitation, protecting against a week that ultimately saw the S&P fall −1.55% with a sharp Friday selloff
+- The Tech/Consumer Discretionary "stretched, unwind-prone momentum" warning (Jul 13) was heeded rather than chased
+- Friday's Iran-escalation risk-off tone (futures −0.8–0.9%, VIX ticking to ~17–18) was explicitly used to reinforce caution rather than ignored
+- Zero forced trades to break the now 36-day streak
+- No market-open documentation gaps this week (no conditional plans existed to fail to document)
+
+### What didn't work (3-5 bullets)
+- Financials/bank-earnings breakout — a real, dated catalyst — was flagged Jul 15 as the "top candidate to screen" and then simply re-flagged, still unscreened, on Jul 16 and Jul 17. Three consecutive sessions of acknowledging a thesis without doing the work to evaluate a specific ticker.
+- 36 consecutive trading days, 0 executed trades — now 6 trading days past the nominal 30-day graduation threshold with zero trade history to evaluate that criterion against.
+- Root-level `PAUSED.flag` (content "test", non-standard location) still present, still unexplained, now 5+ weeks unresolved.
+- Sector-momentum data sources directly contradicted each other multiple times this week (Jul 17: one view shows Technology leading +7.51% WTD, another shows Technology lagging −1.05% the same day) — the whipsaw is being logged as expected noise rather than investigated for a root cause.
+- Phase P&L vs SPY flipped again (bot-behind → bot-ahead) purely because SPY fell — the passive-lead pattern recurring for a 4th+ time, still with zero agent-generated return in either direction.
+
+### Key lessons (added to LESSONS.md)
+- Flagging a candidate as "top thing to screen next session" is not the same as screening it — a thesis can go stale from simple neglect just as easily as from a timing block. The fix is to produce an actual gate-checked writeup (ticker, entry, stop, target) the first available session after flagging it, not to keep restating the flag.
+- The passive phase-lead vs SPY has now reversed direction a 4th time this phase (behind → ahead → behind → ahead), still tracking only where SPY sits relative to the May 27 launch price, confirming zero trades still means zero information about the strategy's actual edge.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Root-level `PAUSED.flag` (repeated, 5+ weeks unresolved)**: content is still just "test," non-standard location. Recommend the user either explain its origin or delete it — its continued unexplained presence is why "30+ consecutive trading days without intervention" cannot be marked a clean ✅ below despite 36 days now numerically clearing that bar.
+2. **Pipeline-neglect gap (new pattern)**: consider requiring that any candidate flagged as "top thing to screen next session" produce an actual gate-checked pass/fail writeup within one session of being raised, rather than permitting a recurring one-line re-flag. Operational suggestion only, not a strategy change.
+3. **36 days, 0 trades — recommend an explicit decision**: this week's Financials thesis shows the buy-side gate is not the sole bottleneck — a real catalyst existed and was simply not worked up into a candidate. Recommend the user decide whether the current pace (0 trades through 36 of ~90 days) matches intent for this evaluation window.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (36 trading days numerically clear the 30-day bar, but the unexplained root-level `PAUSED.flag` — present and unresolved for 5+ weeks — keeps this from a clean ✅ until the user confirms no manual intervention occurred)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY −1.08% phase — technically "ahead," but this is a zero-trade artifact of SPY's position vs the launch date, not earned performance)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed; no conditional plans existed this week so no documentation-gap risk either)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable, no corruption; no internal-arithmetic errors spotted this week)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **36** (Day 1 = 2026-05-27; Day 36 = 2026-07-17)

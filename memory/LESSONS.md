@@ -249,3 +249,9 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: The Jul 8 EOD snapshot logged a day change of −0.48% while citing $747.71 (prior close) and $741.00 (today's close) — those two figures imply roughly −0.90%, not −0.48%. This is distinct from the long-standing cross-source divergence problem: the entry's own numbers don't agree with each other.
 **Insight**: Cross-checking SPY closes against multiple external sources doesn't catch an error where the stated percentage simply wasn't computed from the two prices given in the same entry.
 **Rule change**: Flag for user: EOD routine should derive the day-change percentage directly from the two closing prices it cites, as a final arithmetic check, before committing the entry. Operational fix only.
+
+## 2026-07-17 — Re-flagging a candidate is not the same as screening it
+
+**Context**: A Financials/bank-earnings breakout thesis was identified Jul 15 as "the top candidate to screen once the macro block clears." It was then repeated, still unscreened, on Jul 16 and Jul 17 — three consecutive sessions with no specific ticker, entry, stop, or target ever documented.
+**Insight**: This is a distinct failure mode from the long-standing market-open documentation gap (which fails to log a decision on an existing conditional plan). Here, the conditional plan itself was never built past a one-line flag — the thesis went stale from neglect, not from a timing block or a legitimate gate-6 rejection.
+**Rule change**: Flag for user: consider requiring that any candidate flagged as "top thing to screen next session" produce an actual gate-checked pass/fail writeup (ticker, entry, stop, target) within one session of being raised, rather than permitting a recurring one-line re-flag. No unilateral change — operational suggestion only.
