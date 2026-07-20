@@ -501,3 +501,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 36, end of Week 9 (Friday). No positions, no trades, no orders (confirmed live via Alpaca). Account holds full $10,000 cash; 0 of 3 weekly trade slots used, 0 total trades since launch. 36 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 8+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-20 — EOD Snapshot (Day 37, Monday — start of Week 10)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (query ran mid-session ~10:22 AM CDT/~11:22 AM ET, well before close; Barchart intraday showed S&P +0.17%; last confirmed close remains Jul 17 at ~$743.29)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 37, start of Week 10 (Monday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-17). Pre-market research found zero candidates: no dated single-stock catalyst cleared the gate (JNJ excluded by same-day-earnings rule), WTI (~$81-83) still $7-9 below the $90-95 XOM/Energy floor despite an Iran-driven bounce, and the Financials thesis was formally closed after 3+ sessions without a screened ticker. 37 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 9+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
+**Active kill switches:** none.
