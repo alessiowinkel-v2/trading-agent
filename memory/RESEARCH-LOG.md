@@ -2645,3 +2645,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 16 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-20 — Pre-market Research (Day 37, Monday — start of Week 11)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: Sources conflict sharply again — one Bloomberg citation shows $90.54/$93.09 but is a stale Jun 5 print mislabeled as current; discounting that, converging recent reads put WTI ~$81-83 (Investing.com $81.44, Businessinsider $82.49, Oilprice.com $82.44) and Brent ~$88-90 (Businessinsider $88.10, Oilprice.com implied similar). This is up from the $79-80 range seen Jul 16-17 but still $7-9 below the $90-95 WTI floor required to revive the abandoned XOM/Energy thesis. Driver continues to be US-Iran tension (Strait of Hormuz fee threat from Trump), now with counterbalancing reports of potential peace talks/ceasefire — the same fragile, reversible pattern documented repeatedly since June.
+- **S&P 500 futures**: Roughly flat to modestly positive (~7,496-7,504, +0.02-0.09%) per most current sources; one stale Barchart snapshot showed -1.02% but did not match today's date pattern. Net: no strong directional signal premarket.
+- **VIX**: ~18.3-18.9 (Cboe spot 18.28, Investing.com 18.53), continuing the uptick from mid-teens calm earlier this week toward Friday's 18.77 close. Second consecutive session of genuinely elevated (not calm) volatility — first sustained VIX rise in weeks.
+- **Today's catalysts**: (1) Q2 earnings season in full swing — JNJ headlines today's pre-market slate. (2) US-Iran Strait of Hormuz tension remains the dominant geopolitical driver, now with competing ceasefire/peace-talk headlines. (3) June FOMC minutes due Wednesday (Jul 22) — market awaiting hawkish/dovish signal. (4) Continued AI-capex debate weighing on big tech sentiment following last week's Nasdaq retreat. (5) Rotation narrative: small-caps and Financials (eSLR deregulation) flagged as broadening leadership away from mega-cap tech.
+- **Earnings before open**: JNJ (large-cap pharma, not a candidate), AMC, Dynex Capital (DX), Schwab (SCHW) reportedly pre-market per some sources (though other sources place SCHW/JPM/UNH on different days — earnings-calendar sources contradicted each other significantly today). None are current watchlist candidates; gate item 8 excludes any thesis on a same-day reporter regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today — June prints already confirmed (CPI -0.4% MoM, PPI -0.3% MoM, June jobs +57K, both Jul 11/15). Leading Indicators (10:00 AM ET) is the only scheduled release, not hard-block tier. First clean macro day of the week; FOMC minutes Wed and July jobs report Fri Jul 25 are the next scheduled events.
+- **Sector momentum**: Most granular data available is a week-old (week ended Jul 10: Energy +3.5%, Technology +2.9% led; Healthcare -1.67%, Industrials -1.61% lagged). More current commentary (Jul 18-20) reports Energy up 4.7% on the week on Iran tensions, with Financials/Real Estate described as "improving" quadrant. Signals remain internally contradictory across sources session to session — treating as unstable per repeated LESSONS.md guidance, not a tradeable trend on its own.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Financials thesis status (per 2026-07-17 lesson)
+The Financials/bank-earnings breakout thesis was flagged Jul 15, re-flagged Jul 16 and Jul 17 without ever producing a specific ticker, entry, stop, or target — exactly the "re-flagging is not screening" failure mode documented in LESSONS.md (2026-07-17). No new screening was done this session either (earnings-calendar sources were too contradictory today to even confirm which banks report when). Per the lesson's own guidance ("if no concrete candidate is screened by early next week, treat the thesis as stale"), this thesis is now **formally closed** rather than carried forward as another one-line re-flag. If a fresh Financials catalyst emerges, it should be screened as a new thesis with a full gate writeup in one session, not deferred again.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. No documented single-stock catalyst clears gate item 6 today. JNJ and other pre-market reporters are excluded by gate item 8 (same-day earnings).
+2. Energy/XOM: WTI (~$81-83) remains $7-9 below the $90-95 floor. Improved from last week but the move is Iran-driven and already showing signs of reversal (competing peace-talk headlines) — same fragile pattern as prior spikes that round-tripped. No change to standing rejection.
+3. Financials thesis formally closed this session (see above) — no ticker was ever screened past a one-line flag across 3+ sessions.
+4. VIX genuinely elevated for a second session (~18.3-18.9 vs mid-teens earlier in week) — modest caution warranted even absent a specific setup.
+5. 36 consecutive trading days fully in cash since launch (May 27); today is Day 37, start of Week 11. Correct posture remains patience — no forced trade.
+
+### Risk factors for today
+- US-Iran Strait of Hormuz tension vs. competing ceasefire/peace-talk headlines — two-sided catalyst risk, watch for resolution either direction.
+- VIX uptick (two sessions running) — first sustained volatility increase after weeks of calm; monitor for further escalation vs. mean-reversion.
+- FOMC minutes Wednesday could move rate expectations sharply; avoid new entries that would be caught by a hawkish surprise.
+- Earnings-calendar source data was unusually contradictory today (conflicting report dates/times across providers) — do not trust a single source for any earnings-adjacent gate-item-8 check this week without cross-verification.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. Financials thesis formally closed after 3+ sessions without a screened ticker (see above). Watching for: WTI trajectory relative to the $90-95 floor, Iran ceasefire headline resolution, Wednesday's FOMC minutes, and VIX direction.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 17 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 17 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 11, Day 1) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-17. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 11 — Day 1)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
