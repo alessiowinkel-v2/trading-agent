@@ -2696,3 +2696,49 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 17 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+## 2026-07-21 — Pre-market Research (Day 38, Tuesday — Week 11)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: Sources converge closely today — WTI ~$81.9-82.3 (Investing.com $82.12, OilPriceAPI $81.93, Businessinsider $81.98, FT $79.90 Jul 14 stale), Brent ~$88.0-89.8 (Investing.com $88.50/$89.78, OilPriceAPI $88.39, TradingEconomics $88.41, one stale Bloomberg citation showing $90.54/$93.09 dated Jun 5, correctly discounted as stale per the recurring pattern). Net: WTI ~$82, Brent ~$88-89 — still **$8-13 below the $90-95 WTI floor** required to revive the XOM/Energy thesis, despite a modest continued grind up from last week's $79-80.
+- **S&P 500 futures**: Modestly positive, ~7,522-7,526 (+0.5-0.56%), consistent across Investing.com and Businessinsider. One stale/mismatched Barchart print (-0.20%) discounted. Net: mild bullish premarket tone.
+- **VIX**: Genuinely conflicting again — Cboe/FRED/ycharts converge on Monday's (Jul 20) confirmed close of **18.65-18.77**, continuing the moderate-elevated (not calm) trend from last week. A MarketWatch print of 20.95 carries a stale metadata date (2026-02-05, same recurring artifact flagged repeatedly since mid-July) and is discounted. Treating VIX as ~18.7 — third consecutive session in the high-teens, off the mid-teens calm of two weeks ago but not alarming.
+- **Today's catalysts**: (1) AI/semiconductor rally — NVDA (+6.2% premarket), AVGO (+7.8% premarket on raised Q3 guidance), Marvell/Intel also up — explicitly AI-hype-driven, not a fundamentals thesis per LESSONS (2026-07-10 mechanical-flow lesson; AI hype excluded by TRADING-STRATEGY.md philosophy). (2) Tesla-Panasonic Cybertruck battery supply partnership (+3.2% premarket) — single-day corporate news, no watchlist ticker, not screened. (3) Shopify workforce restructuring reallocating severance to AI infra (+3.7%) — not a current candidate. (4) Fed messaging: sources reference "Wednesday Fed minutes" but the next scheduled FOMC meeting is Jul 28-29 — this appears to be source confusion/noise, not a confirmed same-week Fed event; treating with skepticism per standing practice of not trusting single-source macro claims.
+- **Earnings before open**: GM, 3M (MMM), Northrop Grumman (NOC), Genuine Parts (GPC), Danaher (DHR), Novartis (NVS), plus Texas Instruments (TXN), Lockheed Martin (LMT), Coca-Cola (KO) per other sources (~22 companies reporting before open per Earnings Whispers). None are current watchlist tickers; gate item 8 would exclude same-day reporters regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today — June prints already confirmed (CPI 3.5% YoY Jul 14, PPI Jul 15, jobs +57K Jul 2). Today's releases are State Employment/Unemployment (Monthly, 10:00 AM ET), Usual Weekly Earnings (10:00 AM ET), ADP weekly, and jobless claims (12:30 PM ET) — none are hard-block tier. Next FOMC Jul 28-29; next PCE Jul 30. Clean macro day.
+- **Sector momentum**: Multiple sources now converge — **Energy leading**, +1.1% Monday and +3.9% for the week (strongest weekly Energy gain since late September per MarketWatch), followed by Industrials and Information Technology. Consumer Staples the lone decliner (-0.2%). This is the most internally consistent sector read in several sessions (contrast with the whipsawing/contradictory data flagged Jul 17 and Jul 20). Energy sector strength is a positive signal for the standing XOM thesis, but per the 2026-06-12 lesson ("honor the floor, don't drift"), sector momentum alone does not override the unmet $90-95 WTI commodity-price gate condition.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: Sector momentum has turned genuinely favorable (Energy leading, +3.9% WTD, most consistent read in weeks) — but WTI (~$82) remains $8-13 below the documented $90-95 floor. Per the 2026-06-12 lesson, a favorable sector tailwind does not substitute for the specific commodity-price condition the thesis was built on. No change to standing rejection; noting the sector shift for continued monitoring.
+2. **AI/semiconductor premarket movers (NVDA, AVGO, TSLA, SHOP)**: All are single-day pops on hype/guidance-raise/restructuring news, not documented, gate-checked theses. NVDA/AVGO momentum is explicitly the "AI hype" pattern the strategy philosophy excludes. None screened past headline level today.
+3. **Financials**: Thesis remains formally closed (per 2026-07-20 entry) — no new financials catalyst surfaced today.
+4. All ~22 pre-market earnings reporters (GM, MMM, NOC, GPC, DHR, NVS, TXN, LMT, KO) are excluded by gate item 8 regardless of quality.
+5. 37 consecutive trading days fully in cash since launch (May 27); today is Day 38, Week 11 Tuesday. Correct posture remains patience.
+
+### Risk factors for today
+- Energy sector momentum genuinely strengthening — watch for WTI approaching the $90 floor over coming sessions; if it clears, XOM thesis becomes live again pending a fresh gate-6 writeup.
+- AI/semiconductor premarket strength (NVDA +6.2%, AVGO +7.8%) could set a risk-on tone for the broader tape; do not chase it into a thesis-free entry.
+- VIX continuing in the high-teens (~18.7) for a third session — moderate elevation, not extreme; monitor for further movement.
+- Conflicting/confused reporting on "Wednesday Fed minutes" vs. the actual Jul 28-29 FOMC date — do not treat this week as a confirmed FOMC-adjacent blocking week without independent confirmation.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. Energy sector momentum is turning favorable but the WTI commodity floor ($90-95) remains unmet by $8-13; AI/semiconductor premarket strength is hype-driven, not a thesis. Watching for: WTI trajectory toward the $90 floor, confirmation (or denial) of any Fed-minutes event this week, and VIX direction.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 20 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 17 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 11, Day 2) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-20. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 11 — Day 2)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
