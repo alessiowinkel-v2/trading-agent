@@ -2742,3 +2742,50 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 20 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+## 2026-07-22 — Pre-market Research (Day 39, Wednesday — Week 11)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: Genuine upward move — sources converge on WTI ~$85-88.5 (Investing.com streaming $85.33, Investing.com futures $88.54, Oilprice.com $84.89) and Brent ~$91.2-92.2 (Investing.com $92.20, TradingEconomics $91.29 confirmed Jul 21 close, up 2.26% on the day). This is up sharply from last week's $81-83 WTI / $88-90 Brent — closest WTI has come to the $90-95 XOM/Energy floor in weeks. Driver is renewed Middle East supply-route tension ("mayhem" per Asia markets coverage), not a fundamental demand shift — same fragile geopolitical-premium pattern flagged repeatedly since June. One stale Bloomberg citation ($90.54/Jun 5) correctly discounted.
+- **S&P 500 futures**: Modestly negative, ~7,520 (-0.29% to -0.34%) per Reuters/Businessinsider, on caution ahead of Big Tech earnings (Tesla, Alphabet both report today) and chip-stock softness. Contrasts with overnight Asia/Europe strength on a semiconductor rebound — net premarket tone is cautious/mixed, not a clear risk-off signal.
+- **VIX**: Sources converge in the ~17-18.7 range (Cboe spot 17.05, down -8.58% from Jul 20's 18.65 close; Investing.com 17.58; FRED confirmed Jul 20 close 18.65). One MarketWatch print of 20.95 carries stale Feb 2026 metadata — same recurring artifact flagged repeatedly since mid-July, discounted. Net: VIX genuinely cooling back toward mid-teens after last week's high-teens uptick — no longer a caution flag on its own.
+- **Today's catalysts**: (1) Semiconductor/AI rebound driving US/European/Asian equities, chip names +5.45% Tue per one source — explicitly the AI-hype pattern the strategy excludes as a thesis. (2) Oil/Middle East tension pushing Brent above $92, reviving inflation-premium concerns. (3) Big Tech earnings — Tesla and Alphabet both report today, framed as the key test for the recent tech rebound. (4) Fed's July 28-29 meeting is the next scheduled rate catalyst, not this week.
+- **Earnings before open**: BOH, AZN, ARLP, BKR, BMRC, HBT (explicitly pre-market timed 6:45-8:30 AM ET per EarningsWhispers), plus GEV, IBM, MOH, PM, LUV, NEE, GD reporting today per broader calendars (timing unconfirmed for several). None are current watchlist tickers; gate item 8 excludes same-day reporters regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today — June prints already confirmed (CPI Jul 14, PPI Jul 15, state employment Jul 21). Next FOMC meeting Jul 28-29. Clean macro day domestically.
+- **Sector momentum**: Contradictory across sources again (recurring pattern). One read: Energy led the week at +3.9%, Industrials/Info Tech strong early-week, Consumer Staples the lone Monday decliner. A different "momentum status" snapshot flips this: Consumer Staples/Industrials/Materials/Energy leading, Technology/Communications/Consumer Discretionary/Financials lagging. Treating as unstable per standing practice — not a tradeable signal on its own.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI (~$85-88.5) is the closest it has been to the $90-95 floor in weeks, but still $1.5-5 below it. Per the 2026-06-12 lesson ("honor the floor, don't drift"), a near-miss is not a clear catalyst. The move is geopolitical-premium-driven (Middle East supply-route tension), the same fragile catalyst type that has round-tripped repeatedly since June — no change to standing rejection. Watching closely: if WTI clears $90 on confirmed (not single-source) data, this thesis goes live again pending a fresh gate-6 writeup.
+2. **AI/semiconductor rebound (chips +5.45% Tue)**: Hype/rotation-driven bounce, not a fundamentals catalyst — excluded by strategy philosophy, consistent with the 2026-07-10 lesson on mechanical/passive-flow and hype-driven moves.
+3. **Tesla/Alphabet earnings today**: Excluded by gate item 8 (same-day reporters) and by the standing "earnings are volatility, not edge" lesson regardless of gate status.
+4. All other pre-market reporters (BOH, AZN, ARLP, BKR, BMRC, HBT, GEV, IBM, MOH, PM, LUV, NEE, GD) excluded by gate item 8.
+5. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+6. 38 consecutive trading days fully in cash since launch (May 27); today is Day 39, Week 11 Wednesday. Correct posture remains patience.
+
+### Risk factors for today
+- WTI approaching the $90 floor — closest in weeks; monitor closely over coming sessions for a confirmed (multi-source) break above $90, which would reopen the XOM thesis for a fresh gate writeup.
+- Middle East tension is the driver of the oil move — same reversible pattern as prior spikes (Jun 8-9, Jun 21) that gave back gains within days on diplomacy headlines. Do not treat as structural.
+- Tesla/Alphabet earnings today could move broad market sentiment (AI-capex narrative) regardless of our zero exposure — watch for spillover volatility, not an entry signal.
+- Sector momentum data internally contradictory across sources again — do not act on any single-source sector read.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. WTI is closer to the $90-95 floor than it has been in weeks but has not cleared it — honoring the floor per the 2026-06-12 lesson. Watching for: confirmed WTI break above $90, Tesla/Alphabet earnings market reaction, and Fed's Jul 28-29 meeting approaching.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 21 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 17 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 11, Day 3) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-21. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 11 — Day 3)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
