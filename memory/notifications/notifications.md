@@ -653,3 +653,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: continue watching WTI vs $90 floor; no candidates yet
+
+---
+## 2026-07-23 19:39 UTC
+EOD 2026-07-23
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, phase -- (SPY up materially since May 27 launch)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: Watch WTI (~$86-90) for a durable break above $90 -- Fri close decides if XOM/Energy thesis reopens next week. Day 40 in cash.
