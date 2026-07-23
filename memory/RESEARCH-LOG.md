@@ -2788,4 +2788,53 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 21 EOD $10,000 = 0.00% — CLEA
 **Weekly trade slots**: 0/3 used (Week 11 — Day 3)
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
+
+## 2026-07-23 — Pre-market Research (Day 40, Thursday — Week 11)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $10,000 (per current Alpaca account payload; margin/cash-only discipline maintained regardless)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+
+### Market context
+- **WTI / Brent**: Sharp single-day spike, sources converging in the $86.5-90.2 WTI / $93.4-98.3 Brent range (oilprice.com $86.55/+2.62%, businessinsider Jul 22 $87.14/$94.29, investing.com streaming $89.69/$98.22/+3.3-4.4%, investing.com $90.18/$98.30). This is the first session where multiple sources place WTI at or above the $90 floor set for the (formally abandoned, 2026-06-21) XOM/Energy thesis. Driver: fresh US-Iran/Middle East escalation, Brent briefly above $96, oil at 6-week highs. Same fragile geopolitical-premium pattern flagged repeatedly since June (Jun 8-9 spike to $93-98 fully round-tripped to $74 by Jun 18) — a single sharp daily move (+2.6% to +4.5%) on war-escalation headlines is not the "confirmed, structural, multi-session" break the 2026-06-12 lesson calls for before treating it as a live catalyst.
+- **S&P 500 futures**: Modestly negative, ~7,513-7,520 (-0.34% to -0.38%) per Investing.com/Businessinsider, on Big Tech earnings caution (Tesla, Alphabet already reported) and the oil spike. One outlier print at 7,498.96 (-0.14%) broadly consistent. Net: mild risk-off tone.
+- **VIX**: Converging in the 17.0-17.6 range (Cboe spot 17.44, FRED confirmed Jul 21 close 17.05, investing.com 17.56) — continuing to cool from last week's high-teens uptick back toward calmer levels, despite the oil/geopolitical headline flow. One stale MarketWatch print (20.95, Feb 2026 metadata) discounted per the recurring artifact pattern.
+- **Today's catalysts**: (1) US-Iran/Middle East escalation driving oil to 6-week highs — the dominant cross-asset driver today. (2) AI capex — Alphabet's raised 2026 capex guidance (reported Wed after close) lifting chipmakers in Asia/Korea; Intel earnings today are the next sector test. (3) ECB policy decision scheduled today (non-US, secondary relevance). (4) European flash PMIs and US durable goods data. None constitute a documented, gate-6-eligible single-stock catalyst for a new candidate today.
+- **Earnings before open**: GM (BMO, consensus EPS $3.20, revenue $47.01B) and Intel (INTC, "make-or-break" per one source) are the two most-cited BMO reporters; broader calendars also list OFG, PEBO, GD, NOC, ALLY. None are current watchlist tickers; gate item 8 excludes same-day reporters regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today — June prints already confirmed (CPI -0.4% m/m / +3.5% y/y Jul 14, PPI -0.3% Jul 15, jobs +57K). Next CPI release Aug 12; next FOMC meeting not this week. European flash PMIs and US durable goods are today's scheduled releases — not hard-block tier. Clean domestic macro day.
+- **Sector momentum**: Partially convergent — Energy cited as the clear weekly leader (+3.9%, new record close) in one source, consistent with the oil spike; a separate source shows Materials leading a broader "all 11 sectors up" week; a third shows Consumer Discretionary leading with Energy notably absent from the top of a live intraday snapshot (Info Tech +1.64%, Energy -1.05% intraday). Treating as unstable/contradictory per standing practice — Energy's weekly strength is directionally consistent with the oil move but not a clean single-source confirmation.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### XOM/Energy thesis status
+WTI touching/crossing the $90 floor for the first time since the thesis was formally abandoned (2026-06-21, WTI $80.73, later falling to ~$74). Per the 2026-07-17/07-20 lesson ("re-flagging is not screening" / "a fresh catalyst should be screened as a new thesis, not a resurrection"), this would need a full fresh gate-6 writeup (thesis, catalyst, risk, stop, target, exit plan) — not simply reopening the old June plan. Per the 2026-06-12 lesson, geopolitical-premium spikes require a wider safety margin and confirmation the disruption is structural before being treated as a genuine catalyst; today's move is a single-day, war-headline-driven spike identical in shape to the Jun 8-9 spike that fully reversed within days. **Not screening a candidate today** — flagging for close monitoring. If WTI (multi-source) holds at or above $90 through Friday's close (i.e., survives more than one session), a fresh XOM/Energy gate-6 writeup should be built next week.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. XOM/Energy: WTI touching the $90 floor today, but on a single-session geopolitical spike with no confirmation of durability (see thesis status above). No gate-6 writeup attempted — premature given the pattern of prior fake-outs.
+2. GM/INTC (today's BMO earnings): excluded by gate item 8 regardless of merit.
+3. AI capex/chipmaker strength (Asia-led, on Alphabet capex guidance): hype/momentum-adjacent, not a company-specific fundamentals catalyst — excluded by strategy philosophy.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. 39 consecutive trading days fully in cash since launch (May 27); today is Day 40, Week 11 Thursday. Correct posture remains patience.
+
+### Risk factors for today
+- Oil/Middle East escalation is the dominant driver today — watch for further escalation vs. a walk-back/ceasefire headline, the same two-sided pattern seen repeatedly since June. Do not chase the spike into a thesis-free entry.
+- If WTI holds above $90 into Friday's close (confirmed, multi-source), the XOM/Energy thesis becomes live again pending a fresh gate-6 writeup next week — track this explicitly rather than re-flagging without screening.
+- GM and Intel earnings today could move broad market sentiment (autos, semis) regardless of our zero exposure.
+- Sector momentum data remains contradictory across sources — do not act on any single-source sector read.
+- Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) persists unresolved for 10+ weeks — flagging again for user cleanup; does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. WTI touched/crossed the $90 floor today for the first time since the XOM thesis was abandoned, but on an unconfirmed single-day geopolitical spike — treating per the 2026-06-12 lesson as not yet structural. Watching for: WTI holding above $90 through Friday's close, Middle East escalation trajectory, and GM/Intel earnings market reaction.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 22 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 17 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 11, Day 4) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-21. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 11 — Day 4)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
