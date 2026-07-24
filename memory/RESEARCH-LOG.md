@@ -2838,3 +2838,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 22 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+## 2026-07-24 — Pre-market Research (Day 41, Friday — end of Week 11)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+- Open orders: 0
+
+### Market context
+- **WTI / Brent**: Sharp reversal from yesterday's spike. Most current-dated sources (Investing.com, last_updated 2026-07-24) show WTI ~$72.27 (prev close $72.08), Brent ~$76.46. Other live feeds (oilprice.com, crudeoilprices.today) converge in the $70-72 WTI range. This is a ~$15-18/bbl round-trip down from Thursday's $86.5-90.2 WTI spike logged in yesterday's entry — the exact fragile-geopolitical-premium pattern flagged repeatedly since June (Jun 8-9 spike to $93-98 fully reversed within days). Confirms the decision NOT to chase Thursday's near-floor print was correct; the XOM/Energy $90 floor is now further away than at any point this week. No change to standing rejection.
+- **S&P 500 futures**: Modestly positive per most sources, ~7,570-7,580 (Investing.com +0.56% to 7,571.25; Businessinsider 7,580.25 mixed). Bounce attempt after Thursday's -1.2% S&P selloff (close ~7,408.30 per one source) driven by Tesla (-14.5%) and Alphabet (-6.5%) post-earnings reactions.
+- **VIX**: Sources conflict sharply (recurring pattern) — cleanest recent reads cluster ~17-20 (Investing.com 19.31 as of Jul 21; Businessinsider intraday range 17.25-18.91). One MarketWatch print (20.95) carries stale Feb-2026 metadata, discounted per the standing recurring-artifact pattern. Net: moderate, elevated vs. mid-teens baseline, consistent with Thursday's tech-earnings selloff, not extreme.
+- **Today's catalysts**: (1) Intel surged after-hours Thursday on a strong revenue outlook / 18A yield improvement / data-center AI demand beat — the standout single-stock mover into today's open. (2) Broader "Magnificent Seven" earnings volatility continues — Tesla -14.5%, Alphabet -6.5% on AI-capex-ROI skepticism (same pattern as the 2026-06-28/07-03 GNRC/Broadcom "broken catalyst" lesson). (3) Oil's sharp reversal (see above) easing the inflation-premium narrative that was building Thursday. (4) Fed's Jul 28-29 meeting is the next scheduled macro catalyst (Monday is the day-before-FOMC-week runway, not a blocking day itself today). (5) Section 122 tariff-expiry risk noted as a background watch item, not today-specific.
+- **Earnings before open**: Data was thin/inconsistent across sources — no clean today-specific BMO list surfaced beyond generic screeners. No current watchlist tickers implicated; gate item 8 would exclude same-day reporters regardless.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today. Last confirmed CPI (May print, released Jul 14/Jun 10 depending on source dating) +0.5% m/m / +4.2% y/y; June jobs +57K, unemployment 4.2%. Next FOMC meeting Jul 28-29 (following week) — no domestic blocking event today.
+- **Sector momentum**: Contradictory across sources yet again (recurring pattern) — one read shows Energy leading at +3.9% (stale dating, doesn't match today's oil reversal), another shows Materials leading a broad "all 11 sectors up" week. Treating as unstable/unreliable per standing practice — not a tradeable signal.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### XOM/Energy thesis status — closing the loop from yesterday
+Yesterday's entry flagged WTI touching the $90 floor on a single-day spike, explicitly not screening a candidate and watching for confirmation into Friday's close. That confirmation did not arrive — WTI has instead round-tripped back to ~$70-72 by this morning, a sharper and faster reversal than the Jun 8-9 precedent. This closes the loop cleanly: the spike was not structural. No fresh gate-6 writeup warranted. Thesis remains dormant pending a genuinely durable (multi-session, multi-source) move back toward $90+.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI's round-trip from ~$90 (Thu) to ~$70-72 (Fri) confirms the spike was geopolitical-premium noise, not a structural break. No screening warranted — see thesis status above.
+2. **Intel (INTC) post-earnings pop**: Genuine fundamentals beat (AI/data-center demand, 18A yield progress) but a single-day post-earnings price reaction is momentum, not a vetted thesis with documented entry/stop/target discipline. Per the 2026-06-28/07-03 lessons, chasing a post-earnings pop without independent gate-6 work is exactly the pattern to avoid — and the mirror-image (chasing an earnings-day mover in either direction) is equally undisciplined.
+3. **Tesla/Alphabet post-earnings selloff**: Two large-cap decliners on AI-capex-ROI skepticism. This is "broken catalyst" territory per the 2026-07-03 lesson (a beat/miss the market keeps selling is information, not a discount) — not a buy-the-dip signal, and not our sector/name focus regardless.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. 40 consecutive trading days fully in cash since launch (May 27); today is Day 41, end of Week 11 (Friday). Correct posture remains patience.
+
+### Risk factors for today
+- AI-capex-ROI skepticism is now hitting mega-cap tech broadly (Tesla, Alphabet) after Intel's beat pushed the other direction — sector-level narrative is genuinely mixed/volatile heading into next week's FOMC. Do not read either move as a clean signal.
+- Oil's fast round-trip (~$90 to ~$70-72 in about a day) is the sharpest reversal of this pattern yet — reinforces treating any future spike toward the $90 floor with maximum skepticism until multi-session confirmation exists.
+- VIX data remains contradictory across sources (recurring, long-standing issue) — do not act on any single-source VIX read.
+- FOMC (Jul 28-29) is now one trading week out — expect tightening research/entry discipline into next week per the pre-block-day rules.
+- Root-level `PAUSED.flag` (non-standard location, content "test", created Jul 12) persists unresolved for 10+ weeks — flagging again for user cleanup; does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. Oil's sharp reversal off the $90 floor confirms yesterday's caution was correct; Intel's earnings pop and the Tesla/Alphabet selloff are earnings-day volatility, not documented theses. Watching for: any renewed, multi-session (not single-day) move in WTI toward $90+, and sector/tone stabilization ahead of the Jul 28-29 FOMC.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 23 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 17 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 11, Day 5/Friday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, balance_asof 2026-07-23. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 11 — Day 5, Friday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
