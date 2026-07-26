@@ -1319,3 +1319,98 @@ No trades placed. Five trading days, five documented HOLD decisions:
 **Graduation criteria met: 3/7**
 
 Days running counter: **36** (Day 1 = 2026-05-27; Day 36 = 2026-07-17)
+
+---
+
+## Week ending 2026-07-24
+
+> Trading days this week: Mon Jul 20 – Fri Jul 24 (5 days, Days 37–41). Review runs Sunday Jul 26 (routine fired late again — same non-Friday cadence gap flagged in nearly every prior review since launch).
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (Monday Jul 20 open) | $10,000.00 |
+| Ending portfolio (Friday Jul 24 close — Alpaca confirmed, `balance_asof: 2026-07-24`) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jul 17 close ~$743.29 → Jul 24 close, SPX 7,411.98) | −0.6% (Fidelity/Dorsey Wright/marketsday converge on SPX −0.6% to −0.61%, second consecutive weekly decline) |
+| Bot vs S&P this week | **+0.6%** |
+| Phase P&L since launch (May 27, SPY $751.38) | Bot 0.00% vs SPY **~−1.35%** (SPX 7,411.98 ⇒ SPY-equivalent ~$741.20) — bot passively ahead again |
+| Max intraweek drawdown | 0.00% (100% cash all 5 days, confirmed via daily EOD snapshots and live Alpaca — 0 positions, 0 orders, `balance_asof: 2026-07-24`) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Pipeline status**: Financials/bank-earnings thesis (flagged Jul 15–17) formally closed Jul 20 per its own 3-session "screen it or drop it" rule — a genuine self-correction, not another re-flag. XOM/Energy watched closely all week as WTI approached, briefly touched, then round-tripped away from the $90 floor (see process review) but no gate-6 writeup was attempted at any point — correctly, since no multi-session confirmation ever arrived. Zero active candidates entering Week 12.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions:
+
+**Jul 20 (Day 37 — Monday):** HOLD. Financials/bank-earnings thesis — flagged Jul 15, re-flagged without a screened ticker Jul 16 and Jul 17 — formally closed this session per its own 3-session rule instead of being re-flagged a 4th time. WTI (~$81-83) still $7-9 below the XOM floor. Verdict: **Correct — this is the fix for the exact failure mode the 2026-07-17 lesson identified, applied one session after being written.**
+
+**Jul 21 (Day 38 — Tuesday):** HOLD. Energy sector momentum turned genuinely favorable (+3.9% WTD, most internally consistent sector read in weeks) but WTI (~$82) remained $8-13 below the $90-95 floor. AI/semiconductor premarket strength (NVDA +6.2%, AVGO +7.8%) correctly excluded as hype, not a fundamentals catalyst. Verdict: **Correct — sector tailwind alone was not treated as a substitute for the commodity-price gate condition, per the 2026-06-12 lesson.**
+
+**Jul 22 (Day 39 — Wednesday):** HOLD. WTI closed the gap to $85-88.5, closest to the $90 floor in weeks, but still short. Tesla/Alphabet earnings correctly excluded by gate item 8. Verdict: **Correct — a near-miss on the floor was not treated as "close enough."**
+
+**Jul 23 (Day 40 — Thursday):** HOLD. WTI spiked to $86.5-90.2 on fresh Iran/Middle East escalation — the first session multiple sources placed it at or above the $90 floor. Explicitly not screened as a live candidate; flagged as an unconfirmed single-day geopolitical spike matching the shape of the Jun 8-9 spike that fully reversed, with a plan to watch for confirmation into Friday's close rather than resurrect the old XOM plan wholesale. Verdict: **Correct, and the highest-stakes decision of the week — a same-day chase here would have bought the exact top of the round-trip described below.**
+
+**Jul 24 (Day 41 — Friday):** HOLD. Confirmation never arrived — WTI round-tripped ~$15-18/bbl back down to ~$70-72 by Friday morning, a sharper reversal than the June precedent. The research log explicitly closed the loop on Thursday's watch item rather than letting it linger unresolved. Intel's post-earnings pop and the Tesla/Alphabet post-earnings selloff were both correctly declined as single-day earnings-reaction chases, not vetted theses (per the 2026-06-28/07-03 "broken catalyst" lessons). Verdict: **Correct.**
+
+**In hindsight**: No different decision would have been made this week. The Jul 23/24 pair is the strongest evidence yet that the discipline is working as intended under real pressure — WTI genuinely touched the entry-thesis floor for the first time in over a month, and the process correctly demanded multi-session confirmation instead of chasing the print, which would have been a same-day top.
+
+### Self-grades (be HARSH)
+- Process discipline: **A−** — Every HOLD this week was specific and falsifiable, and the Financials-thesis closure (Jul 20) shows the process correcting its own previously-diagnosed failure mode within one session rather than repeating it a 4th time. The WTI $90-floor near-touch (Jul 23) was handled exactly per the 2026-06-12 lesson: no writeup attempted on an unconfirmed single-day spike. Held back from a full A only because the underlying pattern — zero trades, 41 straight days — continues regardless of how well each day's non-trade is reasoned.
+- Documentation quality: **A−** — Logs are thorough, internally consistent, and each day's WTI figures are cross-checked against multiple sources with stale prints explicitly discounted. No same-day arithmetic mismatches this week (unlike Jul 8). One new, self-inflicted issue: several research-log entries (Jul 21–24) state the root-level `PAUSED.flag` has been "unresolved for 10+ weeks," but `git log --follow` shows it was first committed 2026-06-26 — under 5 weeks before this review, not 10+. That figure was carried forward and inflated across sessions without being re-derived — the same class of error as the Jul 8 EOD mismatch (a stated figure not checked against its own source).
+- Risk management: **A** — 0.00% drawdown against a −0.6% SPY week; zero exposure through the WTI spike-and-reverse round-trip that would have hurt a chased Energy position; all kill switches checked daily, none fired, none missed.
+- Outcome (weighted least): **C** — +0.6% vs SPY this week (SPY fell, cash outperformed) is a fine single-week number, but it is happenstance, not earned — restating the standing lesson that a passive lead means nothing about the strategy's actual edge. More consequential: 41 trading days and roughly 58 calendar days have now elapsed since launch — over 60% of a typical 90-calendar-day evaluation window — with $0.00 of realized or unrealized P&L generated by any agent decision, up or down.
+- **Overall: B−** — This was the best-reasoned week of the phase on a per-decision basis: a genuine self-correction (Financials thesis closure) plus the cleanest real-time test yet of "honor the floor, don't chase an unconfirmed spike" (WTI Jul 23–24), with no chasing and no forced trade. But the majority-of-window threshold crossed this week (41/~64 expected trading days, ~64% of calendar days) with zero trades is now a fact that a strong process grade cannot offset — the mission ("beat SPY") has not been tested at all, and there are fewer trading days left in the window than have already elapsed.
+
+### What worked (3-5 bullets)
+- Financials thesis (flagged Jul 15, re-flagged without progress Jul 16-17) was formally closed Jul 20 per its own 3-session rule — a genuine self-correction rather than a 4th re-flag, directly acting on the prior week's own lesson
+- WTI's approach to, brief touch of, and sharp reversal away from the $90 XOM/Energy floor (Jul 22-24) was handled with textbook discipline: no writeup attempted on an unconfirmed single-day spike, and the loop was explicitly closed when confirmation failed to arrive
+- AI/semiconductor premarket pops (NVDA, AVGO) and single-day earnings reactions (Intel pop, Tesla/Alphabet selloff) were consistently declined as momentum/earnings-day noise, not theses
+- Zero forced trades despite reaching 41 consecutive trading days
+- All kill switches checked daily; capital fully preserved; live Alpaca confirms 0 positions, 0 orders all five days
+
+### What didn't work (3-5 bullets)
+- 41 consecutive trading days, 0 executed trades — roughly 58 of 90 calendar days (≈64%) elapsed since launch with zero realized or unrealized P&L from any agent action; the "beat SPY" mission remains completely untested
+- Root-level `PAUSED.flag` (content "test", non-standard location) still present and unexplained; this week's research-log entries additionally overstated its age ("10+ weeks") against what git history actually shows (first committed 2026-06-26, ~4-5 weeks)
+- Weekly review again fired on a non-Friday (Sunday Jul 26) — cadence misalignment persists, flagged in nearly every prior review since launch
+- Sector-momentum data sources continued to contradict each other on 4 of 5 days this week — logged as expected noise each time rather than prompting any change in how that input is weighted
+- The passive phase-lead vs SPY flipped direction again (bot-behind last review → bot-ahead this review) purely because SPY fell — the same artifact restated for a 5th+ time this phase
+
+### Key lessons (added to LESSONS.md)
+- Zero-trade streak has now cleared the majority-of-window threshold: 41 trading days / ~58 calendar days elapsed (≈64% of a 90-day window) with $0.00 of agent-generated P&L in either direction. Individual HOLDs remain well-reasoned, but at this pace the graduation criteria requiring actual trade history (matched/beat SPY through real action, handled a 5%+ drawdown) may not be satisfiable within the window at all.
+- A cited "unresolved for N weeks" figure needs to be re-derived from the actual source (git history / file mtime) each time it's repeated, not carried forward from a prior session's phrasing — the PAUSED.flag age claim ("10+ weeks") drifted well past what git log actually shows, the same failure class as the Jul 8 EOD arithmetic mismatch.
+- Honoring an unmet commodity-price floor through a single-day spike-and-reverse (WTI touching $90 then falling to $70-72 within 24 hours) is exactly the scenario the 2026-06-12 lesson was written for — treating this as validation, not luck.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Majority-of-window checkpoint (escalated)**: 41 trading days / ~58 calendar days elapsed, 0 trades, 0 P&L. This is now past the halfway point of a 90-day window on a calendar basis. Recommend the user explicitly decide this week whether the current buy-side gate calibration is intended to be this conservative for the remainder of the window, or whether it needs a second look — there are now fewer trading days left than have already elapsed.
+2. **Root-level `PAUSED.flag` (repeated, now with a corrected timeline)**: content is still just "test." Git history shows it was first committed 2026-06-26 (not "10+ weeks" as recently mis-stated in research logs — recommend the user note the correct origin point when addressing this). Recommend explaining its origin or deleting it.
+3. **Weekly review cadence (repeated)**: Fired Sunday Jul 26, not Friday Jul 24. Same orchestration gap flagged in nearly every prior review since launch.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (41 trading days numerically clear the 30-day bar, but the unexplained root-level `PAUSED.flag` keeps this from a clean ✅ until the user confirms no manual intervention occurred)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY ~−1.35% phase — technically "ahead," but this is a zero-trade artifact of SPY's position vs the launch date, not earned performance)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all readable, no corruption; one figure — PAUSED.flag age — found to be miscalibrated and corrected this review)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **41** (Day 1 = 2026-05-27; Day 41 = 2026-07-24)

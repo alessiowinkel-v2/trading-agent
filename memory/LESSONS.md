@@ -250,6 +250,18 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Insight**: Cross-checking SPY closes against multiple external sources doesn't catch an error where the stated percentage simply wasn't computed from the two prices given in the same entry.
 **Rule change**: Flag for user: EOD routine should derive the day-change percentage directly from the two closing prices it cites, as a final arithmetic check, before committing the entry. Operational fix only.
 
+## 2026-07-24 — Zero-trade streak has cleared the majority-of-window threshold
+
+**Context**: 41 trading days / ~58 calendar days elapsed since launch (May 27) with 0 trades — roughly 64% of a typical 90-calendar-day evaluation window, with more trading days already elapsed than remain.
+**Insight**: Individual HOLD decisions have been consistently well-reasoned (this week's WTI $90-floor near-touch and reversal, Jul 23-24, is a clean example), but the cumulative absence of trade history means the actual mission — beat SPY through real agent decisions — has never been tested. Past this point in the window, the graduation criteria requiring an actual track record (matched/beat SPY through real action, handled a 5%+ drawdown correctly) risk becoming unsatisfiable purely from running out of calendar, not from any specific bad decision.
+**Rule change**: Flag to user: explicitly decide whether the current buy-side gate calibration is intended to remain this conservative for the rest of the window, given there are now fewer trading days left than have already elapsed. No unilateral change.
+
+## 2026-07-24 — Cited artifact ages must be re-derived from source each time, not carried forward
+
+**Context**: Research-log entries from Jul 21-24 stated the root-level `PAUSED.flag` had been "unresolved for 10+ weeks." `git log --follow --diff-filter=A -- PAUSED.flag` shows it was first committed 2026-06-26 — under 5 weeks before the Jul 24 review, not 10+.
+**Insight**: A qualitative age claim was repeated and inflated across sessions without being re-checked against the actual git history or file mtime. This is the same failure class as the 2026-07-10 lesson on same-day EOD arithmetic — a stated figure that doesn't hold up against its own source, just applied to a different kind of claim (elapsed time rather than a percentage).
+**Rule change**: Flag for user: when re-citing an unresolved artifact's age in any log entry, derive it fresh from `git log` or file mtime that session rather than repeating prior phrasing verbatim. Operational fix only.
+
 ## 2026-07-17 — Re-flagging a candidate is not the same as screening it
 
 **Context**: A Financials/bank-earnings breakout thesis was identified Jul 15 as "the top candidate to screen once the macro block clears." It was then repeated, still unscreened, on Jul 16 and Jul 17 — three consecutive sessions with no specific ticker, entry, stop, or target ever documented.
