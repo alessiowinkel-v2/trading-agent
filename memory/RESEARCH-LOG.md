@@ -2888,4 +2888,53 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 23 EOD $10,000 = 0.00% — CLEA
 **Weekly trade slots**: 0/3 used (Week 11 — Day 5, Friday)
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
+
+## 2026-07-27 — Pre-market Research (Day 42, Monday — start of Week 12)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch)
+- Open positions: 0
+- Open orders: 0
+
+### Market context
+- **WTI / Brent**: Sharp reversal continues — most current-dated sources converge around WTI ~$71 (oilprice.com $71.10, crudeoilprices.today $70.42) and Brent ~$74-76 (oilprice.com $74.76, crudeoilprices.today $74.12). One Indian-market source explicitly frames today's move as oil "slides 5% after 48-hour US-Iran calm." This confirms Friday's round-trip was not a one-day blip — oil is now further from the $90-95 XOM/Energy floor than at any point in recent weeks. No change to standing rejection; thesis stays dormant.
+- **S&P 500 futures**: Modestly positive, ~7,571-7,580 (+0.15% to +0.56% depending on source/timestamp), a bounce attempt after last week's tech-led selloff (Alphabet -6.5%, Tesla -14.5% post-earnings) that gave the S&P its worst one-day drop in a month.
+- **VIX**: Sources scattered as usual (16.13-23.93 range across feeds with mismatched dates/metadata) — no single reliable current print. Directionally consistent with moderate elevation following last week's tech selloff, not extreme. Treating as unconfirmed per standing practice.
+- **Today's catalysts**: (1) **FOMC meeting Jul 28-29 (tomorrow/Wednesday)** — described by multiple sources as "the single biggest stock market catalyst" this week; today is the runway session ahead of it. (2) **Heaviest stretch of Big Tech earnings**: Microsoft and Meta report Wednesday, Apple and Amazon Thursday — AI capex/ROI skepticism is the live narrative after Alphabet/Tesla's post-earnings selloffs last week. (3) Middle East de-escalation (US-Iran 48-hour calm) driving the oil slide. (4) Durable goods orders due 8:30 AM ET today.
+- **Earnings before open**: One source lists AstraZeneca (AZN), Welltower (WELL), Nucor (NUE) reporting today; Nasdaq's own calendar shows no confirmed reports for the date. None are current watchlist tickers; gate item 8 excludes same-day reporters regardless.
+- **Economic calendar**: No CPI/PPI/NFP today (June prints already confirmed: CPI Jul 14, PPI Jul 15, jobs +57K). Durable goods orders at 8:30 AM ET today. FOMC meeting begins tomorrow (Jul 28), decision Wednesday (Jul 29) — both are hard timing blocks per strategy ("day before" / "day of FOMC announcement"); today itself is not blocked but sits immediately ahead of the block.
+- **Sector momentum**: Energy cited as last week's leader (+3.9%, record close) in one recap, but that read is now stale given today's sharp oil reversal — contradicts the current commodity move. A separate snapshot shows Info Tech/Consumer Discretionary/Industrials leading instead. Treating as unstable/contradictory per standing practice — not a tradeable signal.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI's continued slide to ~$71 (from ~$90 on Thursday to ~$70-72 Friday to ~$71 today) confirms last week's spike was pure geopolitical-premium noise that has now fully unwound on a de-escalation headline. Further from the floor than at any point in recent weeks — no screening warranted.
+2. **AZN/WELL/NUE (today's reporters)**: excluded by gate item 8 regardless of merit; none are watchlist names.
+3. **Big Tech earnings this week (MSFT/META Wed, AAPL/AMZN Thu)**: Same-day-earnings exclusion applies when they report; chasing into them beforehand on the "AI capex" narrative after last week's Alphabet/Tesla selloffs is momentum, not a vetted thesis.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. This is a high-event-density week (FOMC decision Wednesday + four mega-cap earnings Wed/Thu) — per the 2026-06-05 lesson, cash is the explicit position in weeks like this, not a failure to act. Expect tightened entry discipline through Wednesday regardless of what surfaces.
+6. 41 consecutive trading days fully in cash since launch (May 27) as of Friday's close; today is Day 42, start of Week 12. Correct posture remains patience, though the accumulated zero-trade streak (flagged 2026-07-24) remains an open item for user-level gate calibration review.
+
+### Risk factors for today
+- FOMC decision Wednesday is the dominant risk this week — no new entries tomorrow or Wednesday per the day-before/day-of block, regardless of any candidate that emerges.
+- Big Tech earnings Wed/Thu (MSFT, META, AAPL, AMZN) could drive broad volatility on AI-capex sentiment regardless of zero exposure — watch for spillover, not an entry signal.
+- Oil's continued slide on a de-escalation headline is reversible if Middle East tension flares again — same two-sided pattern seen repeatedly since June; do not chase either direction.
+- VIX data remains unreliable/contradictory across sources — do not act on any single-source VIX read.
+- **Correction to a repeated claim**: recent entries (through Jul 24) stated the root-level `PAUSED.flag` had been "unresolved for 10+ weeks." Re-derived fresh this session via `git log --follow --diff-filter=A -- PAUSED.flag`: first committed **2026-06-26**, making it ~4.5 weeks old today (Jul 27), not 10+. This is the same overstated-age failure mode flagged in the 2026-07-24 LESSONS.md entry, now confirmed recurring in the log text itself — future entries should derive this figure fresh each time rather than repeating prior phrasing. File still exists (non-standard root-level path, content "test") and does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. Oil has continued sliding away from the XOM/Energy floor on Middle East de-escalation; today's reporters and this week's Big Tech earnings are excluded by the same-day/momentum rules. This week's FOMC decision (Wednesday) makes cash the explicit position through mid-week per standing high-event-density guidance.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 24 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 24 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 12, Day 1/Monday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-24. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 12 — Day 1, Monday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
 **Active kill switches**: none.
