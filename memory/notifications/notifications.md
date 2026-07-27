@@ -687,3 +687,14 @@ Best: N/A  Worst: N/A
 Overall grade: B-
 Key takeaway: 41 trading days/0 trades - past halfway point of 90-day window w/ zero P&L data either way
 Graduation: 3/7 criteria met
+
+---
+## 2026-07-27 19:39 UTC
+EOD 2026-07-27
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, phase unavailable
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: FOMC day-before block in effect; no new entries Tue or Wed regardless of setup (decision Wed 7/29).

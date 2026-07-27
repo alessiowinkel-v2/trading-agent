@@ -561,3 +561,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 40, Week 11 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-21). 0 of 3 weekly trade slots used, 0 total trades since launch. Pre-market research found zero candidates: WTI spiked to $86.5-90.2 on fresh US-Iran/Middle East escalation — first session multiple sources placed it at/above the abandoned XOM/Energy $90 floor, but on a single-day geopolitical move with no confirmation of durability (same shape as the Jun 8-9 spike that fully reversed) — not screening per the 2026-06-12 lesson; GM/Intel earnings excluded by same-day-earnings gate; AI capex/chipmaker strength excluded as momentum, not fundamentals. Intraday market tone was risk-off (oil spike + Alphabet capex-guidance concerns per Barchart, S&P -1.34% mid-session) but with zero equity exposure this has no portfolio impact. 40 consecutive trading days fully in cash since launch (May 27) — cumulative phase P&L flat at 0.00% while SPY has risen materially from baseline over the same period. Root-level PAUSED.flag (non-standard location, content "test") persists unresolved for 10+ weeks — flagging again for user cleanup; does not trigger standard KS since memory/PAUSED.flag absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-27 — EOD Snapshot (Day 42, Monday — start of Week 12)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (Perplexity's cited "+0.87%" figure traces to a source dated 2026-07-24, not today; the only Jul-27-dated source is an intraday live-blog with internally inconsistent index-vs-ETF moves, +0.95% S&P vs +0.1% SPY — no confirmed Jul 27 close obtained)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 42, start of Week 12 (Monday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-24). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 42 consecutive trading days fully in cash while SPY has risen materially from baseline over the same period. Pre-market research found zero candidates (WTI slid further to ~$71 on US-Iran de-escalation, moving away from the $90-95 XOM/Energy floor; today's earnings reporters and this week's Big Tech earnings excluded by gate rules). FOMC decision Wednesday 7/29 makes this week's remaining Tue/Wed sessions hard timing blocks regardless of any candidate. Root-level PAUSED.flag (non-standard location, content "test") re-confirmed via `git log` as committed 2026-06-26 — ~4.4 weeks old, correcting prior entries' overstated "10+ weeks" claim; does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
+**Active kill switches:** none.
