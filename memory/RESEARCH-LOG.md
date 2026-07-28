@@ -2938,3 +2938,53 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 24 EOD $10,000 = 0.00% — CLEA
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
 **Active kill switches**: none.
+
+---
+
+## 2026-07-28 — Pre-market Research (Day 43, Tuesday — Week 12)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+
+### Market context
+- **WTI / Brent**: ~$71.10 / ~$74.76 (oilprice.com, most current-dated), corroborated by crudeoilprices.today ($70.42 / $74.12). Still well below the $90-95 XOM/Energy floor; last week's geopolitical spike/reversal round-trip continues to unwind. No change to standing rejection.
+- **S&P 500 futures**: Mixed across sources as usual — Investing.com UK +0.56% (7,571.25), Markets Insider -0.15% (7,580.25). No clean directional read; treating as noise.
+- **VIX**: Scattered 16.9-23.93 across mismatched-date sources; most current-dated prints cluster ~19-21. Directionally moderate, not extreme. Standing practice: do not act on any single-source VIX read.
+- **Today's catalysts**: **FOMC meeting begins today (Jul 28-29), decision tomorrow** — the dominant catalyst this week per every source. Heavy earnings slate today (Visa, Coca-Cola, Boeing, UPS, Mondelez, Barclays, Bloom Energy, NXP Semiconductor) — none are watchlist names. Mega-cap tech (MSFT, META Wed; AAPL, AMZN Thu) looms mid/late week on AI-capex sentiment. Oil/Middle East de-escalation continues to drive risk tone.
+- **Earnings before open**: Today's BMO reporters (Visa, KO, BA, UPS, MDLZ, BCS, BE, NXPI) — excluded by gate item 8 regardless of merit; none are watchlist tickers.
+- **Economic calendar**: No CPI/PPI/NFP today (June prints already confirmed). Conference Board Consumer Confidence + Case-Shiller/FHFA home-price data at 10:00 AM ET. **FOMC decision tomorrow (Jul 29)** is the hard block driving today's posture.
+- **Sector momentum**: Contradictory across sources again (stale Energy +3.9% headline vs. more current-dated Info Tech leadership per stocktitan) — not a tradeable signal, consistent with recurring pattern.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI ~$71, still far below the $90-95 floor — no screening warranted.
+2. **Today's BMO earnings reporters**: excluded by gate item 8; none are watchlist names regardless.
+3. **FOMC meeting today, decision tomorrow**: Per the 2026-07-27 entry, both Tue (today) and Wed (decision day) are treated as hard timing blocks — no new entries regardless of any candidate that surfaces, consistent with the strategy's "day of FOMC announcement" rule and the elevated pre-decision positioning risk.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. 42 consecutive trading days fully in cash since launch (May 27); today is Day 43, Week 12, Day 2. Correct posture remains patience through the FOMC block.
+
+### Risk factors for today
+- FOMC decision tomorrow is the dominant risk this week — no new entries today or tomorrow regardless of any candidate.
+- Big Tech earnings Wed/Thu (MSFT, META, AAPL, AMZN) could drive broad volatility on AI-capex sentiment regardless of zero exposure — watch for spillover, not an entry signal.
+- Oil's slide remains reversible if Middle East tension flares again — do not chase either direction on a single-session move.
+- VIX data remains unreliable/contradictory across sources — do not act on any single-source VIX read.
+- **Root-level `PAUSED.flag` correction**: re-derived fresh via `git log --follow` this session (per the 2026-07-24 lesson on not carrying forward prior age claims) — first and only commit is **2026-06-29** ("pre-market research 2026-06-29"), not 2026-06-26 as stated in the 2026-07-27 entry. That prior claim was itself off by 3 days. Age as of today: ~29 days (~4.1 weeks), not 4.4-4.5 weeks as previously stated. File still exists (non-standard root-level path, content "test") and does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. FOMC decision tomorrow makes both today and tomorrow hard timing blocks regardless of setup quality; oil remains well off the XOM/Energy floor; today's earnings reporters are excluded by the same-day-earnings gate and aren't watchlist names.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 27 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 24 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 12, Day 2/Tuesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-27. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 12 — Day 2, Tuesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
