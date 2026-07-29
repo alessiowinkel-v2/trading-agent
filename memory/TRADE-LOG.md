@@ -585,3 +585,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 43, Week 12 (Tuesday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-27). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 43 consecutive trading days fully in cash. Per pre-market research, today was a hard timing block (day before FOMC decision, per strategy's macro-event rule) — no trades expected or attempted regardless of any candidate. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test") persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-29 — EOD Snapshot (Day 44, Wednesday — Week 12, FOMC decision day)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (Perplexity query ran pre-close; only confirmed print is Jul 28 close $740.86/+0.24%, Jul 29 close not yet available from any source)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 44, Week 12 (Wednesday) — FOMC decision day, a hard timing block per strategy regardless of any candidate. No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-28). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 44 consecutive trading days fully in cash while SPY has risen materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test") persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. FOMC statement (2:00 PM ET) and MSFT/META earnings after close are the key inputs for tomorrow's research. No kill switches triggered.
+**Active kill switches:** none.
