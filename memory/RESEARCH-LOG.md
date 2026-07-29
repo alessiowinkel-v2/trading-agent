@@ -2987,4 +2987,55 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 27 EOD $10,000 = 0.00% — CLEA
 **Weekly trade slots**: 0/3 used (Week 12 — Day 2, Tuesday)
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
+
+---
+
+## 2026-07-29 — Pre-market Research (Day 44, Wednesday — Week 12, FOMC decision day)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-07-28
+
+### Market context
+- **WTI / Brent**: Sources scattered as usual across timestamps — most current-dated cluster around WTI ~$71-72 (investing.com $71.81, oilprice.com $71.10), though one Jul 29-dated Indian-market source describes oil "rebounding sharply overnight" on Iran tension (~+4%). No single reconciled current print; still well below the $90-95 XOM/Energy floor regardless of which figure is used. No change to standing rejection.
+- **S&P 500 futures**: Positive, ~7,571-7,580 (+0.15% to +0.56% depending on source/timestamp) — modest pre-FOMC drift, consistent with a market in wait-and-see mode.
+- **VIX**: Single most current-dated print shows 20.95 (+12.39%), elevated vs. recent multi-week readings in the 16-19 range — directionally consistent with pre-FOMC/pre-mega-cap-earnings hedging, but per standing practice (VIX sourcing has been unreliable for months) not acted on alone.
+- **Today's dominant catalyst — FOMC decision**: Policy statement at 2:00 PM ET, press conference 2:30 PM ET, concluding the Jul 28-29 meeting. Widely described as "the single biggest stock market catalyst" and "most critical single session of the year" per multiple sources. Current target range 3.50-3.75%; market pricing is split, with one source citing ~26% odds of a hike. This is a **hard timing block** per TRADING-STRATEGY.md ("day of FOMC announcement") — no new entries today regardless of any candidate.
+- **Earnings**: Microsoft and Meta report after today's close (Azure growth, AI capex commentary the focus); Costco, Qualcomm, Procter & Gamble, Humana, SoFi, Fiverr and ~230-260 other companies also report today across various calendars. None are current watchlist tickers; excluded by gate item 8 regardless.
+- **Economic calendar**: No CPI/PPI/NFP today (June prints already confirmed: CPI Jul 14, PPI Jul 15). BLS releases at 10:00 AM ET are regional/administrative (Metro area employment, state JOLTS annual) — not market-moving. FOMC decision is the whole story today.
+- **Sector momentum**: Contradictory across sources again — one recap has Energy +3.9% as weekly leader (record close), another shows Info Tech +7.51% leading, a third shows Energy/Materials/Industrials/Staples "Leading" on a momentum map while Tech/Comm/Discretionary/Financials lag; intraday heatmap shows Energy +1.04% vs. Tech -0.57% today. Treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Today is a hard FOMC-day block** per TRADING-STRATEGY.md ("day of FOMC announcement") — no new entries regardless of any setup quality. This overrides screening effort for today.
+2. **XOM/Energy**: oil data conflicts (flat ~$71 vs. one source citing an overnight Iran-driven rebound), but even the higher reads stay below the $90-95 floor — no screening warranted.
+3. **Today's ~230+ earnings reporters (MSFT, META, COST, QCOM, PG, HUM, SOFI, etc.)**: excluded by gate item 8 regardless of merit; none are watchlist names.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. 43 consecutive trading days fully in cash since launch (May 27); today is Day 44, Week 12, Day 3 (Wednesday). Correct posture remains patience through the FOMC block.
+
+### Risk factors for today
+- FOMC decision at 2:00 PM ET is the dominant event risk — expect elevated intraday volatility across the board regardless of zero exposure.
+- MSFT/META earnings after close, plus a heavy same-day reporter slate, could drive broad AI-capex-sentiment swings tomorrow — watch for spillover into tomorrow's research, not an entry signal today.
+- Oil data is genuinely conflicted this session (flat vs. overnight-spike reports) — do not act on either read without multi-session confirmation.
+- VIX single-source print (20.95) is the most elevated read in weeks — directionally plausible given FOMC + mega-cap earnings stacked today, but per standing practice not actionable alone.
+- Root-level `PAUSED.flag` (non-standard location, content "test") re-derived fresh via `git log --follow` this session: first committed **2026-06-29**, making it exactly 30 days (~4.3 weeks) old today. Still does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+
+### Decision
+**HOLD.** Today is FOMC decision day — a hard timing block per strategy regardless of any candidate. No new entries planned. Market-open routine will not execute trades today; will resume normal screening tomorrow once the decision and MSFT/META earnings reactions are known.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 28 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 24 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 12, Day 3/Wednesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-28. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 12 — Day 3, Wednesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
 **Active kill switches**: none.
