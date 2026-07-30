@@ -3039,3 +3039,52 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 28 EOD $10,000 = 0.00% — CLEA
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
 **Active kill switches**: none.
+
+---
+
+## 2026-07-30 — Pre-market Research (Day 45, Thursday — Week 12)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-07-29
+
+### Market context
+- **WTI / Brent**: Sources scattered $71-74 (oilprice.com $71.10/$74.76; crudeoilprices.today $70.42/$74.12) vs. one higher read (oilpriceapi $73.65/$78.27). Regardless of which figure is used, still well below the $90-95 XOM/Energy floor. No change to standing rejection.
+- **S&P 500 futures**: Roughly flat, ~7,461-7,465 (-0.01% to -0.05% per Yahoo/MarketWatch) — muted premarket tone, consistent with post-FOMC digestion ahead of today's GDP/PCE prints.
+- **VIX**: Single most current-dated print 20.95 (+12.39%, MarketWatch) — elevated vs. recent multi-week 16-19 range, consistent with FOMC-week/mega-cap-earnings positioning. Per standing practice, not acted on alone (VIX sourcing has been unreliable for months).
+- **Today's dominant catalyst — GDP + PCE**: FOMC held rates yesterday (Jul 29, no dot plot this meeting). Today's calendar is dominated by **Q2 GDP advance estimate** and **June Core PCE** (both 8:30 AM ET per TradingEconomics/Scotiabank), the Fed's preferred inflation gauge — a major macro print in the same class as CPI/PPI/NFP that TRADING-STRATEGY.md's timing-block rule is designed to cover. Treating today as a **hard timing block** (day of major economic release) — no new entries regardless of any candidate.
+- **Earnings before open**: Mastercard, Altria, Southern Co, Exelon — none are watchlist tickers; excluded by gate item 8 regardless. AAPL and AMZN report after today's close (MSFT/META already reported Jul 29 post-close per Jul 29 entry) — AI-capex sentiment and chip weakness remain the broader macro backdrop but not an entry signal today.
+- **Sector momentum**: Contradictory across sources again — one snapshot has Energy +3.9% WTD leading, another has Consumer Discretionary leading a +4.5% week, a third shows Info Tech +7.51% leading with Energy down intraday. Treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **GDP (advance) + Core PCE today**: both major, market-moving macro releases at 8:30 AM ET — hard timing block per strategy's "day of major macro release" rule, same class as CPI/PPI/NFP. Overrides screening effort for today regardless of setup quality.
+2. **XOM/Energy**: WTI $71-74, still far below the $90-95 floor — no screening warranted.
+3. **Today's BMO earnings reporters (MA, MO, SO, EXC)**: excluded by gate item 8; none are watchlist names.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. 44 consecutive trading days fully in cash since launch (May 27); today is Day 45, Week 12, Day 4 (Thursday). Correct posture remains patience through the macro-data block.
+
+### Risk factors for today
+- GDP/PCE prints at 8:30 AM ET are the dominant event risk today — expect elevated intraday volatility across the board regardless of zero exposure.
+- AAPL/AMZN earnings after close, on top of MSFT/META's Jul 29 post-close reports, keep AI-capex sentiment in focus — watch for spillover into tomorrow's research, not an entry signal today.
+- VIX single-source print (20.95) remains the most elevated read in weeks — directionally plausible given the FOMC/earnings/macro-data stack this week, but per standing practice not actionable alone.
+- Root-level `PAUSED.flag` (non-standard location, content "test") re-derived fresh via `git log --follow --diff-filter=A` this session: first committed **2026-06-30**, making it exactly 30 days old today. Still does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+
+### Decision
+**HOLD.** Today's GDP advance estimate + Core PCE release is a hard timing block per strategy regardless of any candidate. No new entries planned. Market-open routine will not execute trades today; normal screening resumes tomorrow once today's macro data and AAPL/AMZN earnings reactions are known.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 29 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 24 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 12, Day 4/Thursday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-29. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 12 — Day 4, Thursday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
