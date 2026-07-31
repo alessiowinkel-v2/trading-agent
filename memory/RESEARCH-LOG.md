@@ -3088,3 +3088,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 29 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-07-31 — Pre-market Research (Day 46, Friday — end of Week 12)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-07-30
+
+### Market context
+- **WTI / Brent**: ~$72.27 / ~$76.46 (investing.com, most current-dated), corroborated by oilpriceapi ($73.65/$78.27) and crudeoilprices.today ($70.42-73/$74.12). Still well below the $90-95 XOM/Energy floor. No change to standing rejection.
+- **S&P 500 futures**: Mixed across sources/timestamps as usual — investing.com UK +0.56% (7,571.25), CNBC +0.27% (7,492.75), Yahoo essentially flat -0.01% (7,464.75), Markets Insider -0.15% (7,580.25). Net read: modestly positive, low conviction.
+- **VIX**: Scattered 16.13-19.31 across mismatched-date sources; most current-dated prints cluster ~16-17. Directionally calm, not elevated. Standing practice: do not act on any single-source VIX read.
+- **Today's catalysts**: Employment Cost Index Q2 (8:30 AM ET), Chicago PMI (9:45 AM ET), Michigan consumer sentiment final + inflation expectations (10:00 AM ET). Heavy pre-market earnings slate: Exxon Mobil, Chevron, AbbVie, Linde, Eaton, Moderna, Colgate-Palmolive, Cboe, T. Rowe Price, Church & Dwight, and others. None are current watchlist tickers.
+- **Earnings before open**: XOM, CVX, ABBV, LIN, ETN, MRNA, CL, and a long tail of smaller names — excluded by gate item 8 regardless of merit. Notably **XOM reports today**, which independently excludes it from any entry consideration this session even if the oil floor had been cleared.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today — confirmed via NY Fed and BLS calendars. ECI, Chicago PMI, and Michigan sentiment are second-tier releases, not in the same class as the strategy's explicit hard-block list (CPI/PPI/jobs/FOMC). Not treating today as a hard timing block on that basis alone.
+- **Sector momentum**: Contradictory again across sources — one snapshot has Consumer Staples/Industrials/Materials/Energy "Leading" with Tech/Comm/Discretionary/Financials "Lagging"; another cites health care and financials as best mid-July performers. Treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI ~$72, still far below the $90-95 floor. XOM also reports earnings today — independently disqualified by gate item 8 this session regardless of oil price.
+2. **Today's pre-market earnings reporters (CVX, ABBV, LIN, ETN, MRNA, CL, etc.)**: excluded by gate item 8; none are watchlist names.
+3. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+4. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+5. 45 consecutive trading days fully in cash since launch (May 27); today is Day 46, end of Week 12. Correct posture remains patience — no thesis currently in the pipeline to execute.
+
+### Risk factors for today
+- Three second-tier macro prints (ECI, Chicago PMI, Michigan sentiment) could still move markets intraday despite not being hard-block-tier; no exposure means no direct portfolio risk today.
+- Heavy earnings slate (XOM, CVX especially) could move Energy-sector sentiment broadly; being flat means no thesis exposure to a beat/miss either way.
+- VIX data remains unreliable/contradictory across sources — do not act on any single-source VIX read.
+- Sector momentum signal remains internally contradictory across sources — not actionable.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists — does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. XOM/Energy stays rejected on both oil price and its own earnings today; today's pre-market earnings reporters are excluded by the same-day-earnings gate and aren't watchlist names; no other thesis is currently in the pipeline. Zero trades is the correct answer.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 30 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 24 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 12 — Day 5, Friday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-30. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 12 — Day 5, Friday, end of week)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
