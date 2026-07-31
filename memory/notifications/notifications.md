@@ -731,3 +731,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: resume normal screening after GDP/PCE + AAPL/AMZN earnings digest
+
+---
+## 2026-07-31 19:39 UTC
+EOD 2026-07-31
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: today unavailable, phase gap material (SPY up since May 27 launch)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: Week 13 opens Monday Aug 3 — fresh screen, XOM/Energy stays dormant until WTI clears $90-95

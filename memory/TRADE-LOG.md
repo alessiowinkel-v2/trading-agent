@@ -609,3 +609,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 45, Week 12 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-29). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 45 consecutive trading days fully in cash. Per pre-market research, today was a hard timing block (Q2 GDP advance estimate + Core PCE at 8:30 AM ET, same class as CPI/PPI/NFP) — no trades expected or attempted regardless of any candidate. No protective stops needed (no open positions). SPY rose +1.10% today while we held cash, widening the gap versus a flat 0.00% phase P&L. Root-level PAUSED.flag (non-standard location, content "test") persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. AAPL/AMZN earnings after today's close are a key input for tomorrow's research.
 **Active kill switches:** none.
+
+---
+
+### 2026-07-31 — EOD Snapshot (Day 46, Friday — end of Week 12)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (Perplexity's most current confirmed close remains Jul 28 at $740.86/+0.24%; no Jul 31 close obtained)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 46, end of Week 12 (Friday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-07-30). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 46 consecutive trading days fully in cash. Pre-market research found zero candidates: XOM/Energy rejected on both the WTI ~$72 (still below $90-95 floor) and its own same-day earnings; today's other pre-market earnings reporters (CVX, ABBV, LIN, ETN, MRNA, CL) excluded by gate item 8 and aren't watchlist names; Financials thesis remains formally closed. Root-level PAUSED.flag (non-standard location, content "test") persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup.
+**Active kill switches:** none.
