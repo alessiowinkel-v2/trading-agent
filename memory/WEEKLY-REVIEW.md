@@ -1414,3 +1414,98 @@ No trades placed. Five trading days, five documented HOLD decisions:
 **Graduation criteria met: 3/7**
 
 Days running counter: **41** (Day 1 = 2026-05-27; Day 41 = 2026-07-24)
+
+---
+
+## Week ending 2026-07-31
+
+> **Note**: Routine triggered Sunday 2026-08-02, not Friday. Same cadence gap flagged in nearly every prior review since launch. Trading week covered: Monday Jul 27 through Friday Jul 31 (Days 42–46, Week 12).
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Jul 24 close) | $10,000.00 |
+| Ending portfolio (Friday Jul 31 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (Jul 24 → Jul 31) | +1.10% (SPY $738.93 → $747.03; veloxmacro.com table, cross-checked arithmetically against WSJ's confirmed Jul 24 close of $738.93 — internally consistent) |
+| Bot vs S&P this week | −1.10% |
+| Phase P&L since launch (May 27) | Bot 0.00% vs SPY −0.58% ($751.38 → $747.03) — bot nominally "ahead," restating the standing artifact lesson (this is SPY's position vs. the launch date, not earned alpha) |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Pipeline status**: Zero active candidates entering Week 13. XOM/Energy remains dormant (WTI $70-74, still $16-25 below the $90-95 floor all week); Financials thesis remains formally closed (per 2026-07-20 entry). No new thesis was built during this week's high-event-density stretch to be ready for Week 13.
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions — this was a hard-timing-block-heavy week (FOMC + major macro prints):
+
+**Jul 27 (Day 42 — Monday):** HOLD. WTI continued its slide to ~$71 (from last week's brief $90 touch), confirming the spike was pure geopolitical noise, now fully unwound. No candidates surfaced. Week flagged in advance as high-event-density (FOMC decision Wed, four mega-cap earnings Wed/Thu) — cash correctly framed as the explicit position per the 2026-06-05 lesson. Verdict: **Correct.**
+
+**Jul 28 (Day 43 — Tuesday):** HOLD. Day-before-FOMC hard timing block per TRADING-STRATEGY.md — no new entries regardless of setup quality. Today's BMO earnings slate (V, KO, BA, UPS, MDLZ, BCS, BE, NXPI) excluded by gate item 8; none were watchlist names. Verdict: **Correct — clean rule application, no attempt to find a workaround.**
+
+**Jul 29 (Day 44 — Wednesday, FOMC decision day):** HOLD. Hard timing block, no screening attempted. MSFT/META reported after close. Verdict: **Correct.**
+
+**Jul 30 (Day 45 — Thursday):** HOLD. Q2 GDP advance estimate + Core PCE at 8:30 AM ET — correctly treated as the same class of hard block as CPI/PPI/NFP, not a lesser second-tier release. AAPL/AMZN earnings after close. Verdict: **Correct — the gate has now applied this same-class reasoning consistently across CPI, PPI, NFP, PCE, and GDP days.**
+
+**Jul 31 (Day 46 — Friday):** HOLD. XOM itself reported earnings today — an independent, gate-item-8 disqualifier for the one thesis in the pipeline, stacking on top of the still-unmet oil-price floor (WTI ~$72). No other dated company-specific catalyst cleared gate item 6. Verdict: **Correct**, and worth naming explicitly as a new pattern: a watchlist name's own earnings date is a second, independent gate check that must be re-verified every session it's considered, not just its commodity/price trigger.
+
+**In hindsight**: No different decision would have been made this week — every HOLD maps to an explicit, named rule (day-before-FOMC, FOMC day, GDP/PCE day, same-day earnings) rather than vague caution. The process itself was clean. The problem is not any single day's reasoning; it's the cumulative absence of a pipeline candidate ready to execute once this event-heavy stretch cleared.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — Every hard timing block (day-before-FOMC, FOMC day, GDP/PCE day) was applied without exception or workaround, and the GDP/PCE-day block correctly extended the "CPI/PPI/NFP-class" reasoning to a new release type for the first time. Held below B+ because the week ends with an empty pipeline yet again — the 2026-06-21 lesson ("build the post-block pipeline during the block, not after") was not acted on; no post-FOMC candidate was pre-screened during Tue/Wed's forced idle sessions.
+- Documentation quality: **C** — This is a real regression from last week's A−. The 2026-07-24 lesson required re-deriving the `PAUSED.flag` age fresh from git history each time rather than repeating stale phrasing. Every session this week did attempt that re-derivation — and got it wrong four different times (2026-06-26, 2026-06-29, 2026-06-29, 2026-06-30 across the five entries). Verified via `git log --diff-filter=A -- PAUSED.flag` this session: the actual and only commit adding the file is **2026-07-02**. None of this week's five "fresh" checks matched the true answer. The fix for a documentation-accuracy problem itself became a new, compounding documentation-accuracy problem.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked daily and clear, live Alpaca reconciliation (0 positions, 0 orders) confirmed every session, capital fully intact.
+- Outcome (weighted least): **D−** — 0.00% vs SPY +1.10% this week. More consequentially: 46 trading days / 65 calendar days elapsed since launch against a 90-calendar-day window that closes ~2026-08-25 — only ~25 calendar days (roughly 15-17 trading days) remain, and zero trades have been placed in either direction. This is no longer a "majority of the window" concern (flagged Jul 24); it is now a "most of the window is gone" concern.
+- **Overall: C−** — Individual rule application was clean and, on the GDP/PCE-day call, showed real judgment (extending an existing rule class correctly to a new release type). But a documentation fix that produces four wrong answers in five attempts is a genuine process failure, not a rounding error, and it lands in the same week the trading-days runway drops to roughly three weeks with $0 of realized or unrealized P&L generated by any agent decision. Both facts pull the grade down together.
+
+### What worked (3-5 bullets)
+- All three hard macro timing blocks this week (day-before-FOMC, FOMC day, GDP/PCE day) were applied with zero exceptions and zero attempts to work around them
+- The GDP/PCE-day block correctly generalized the existing CPI/PPI/NFP "major macro release" rule to a new release type rather than treating it as a lesser, non-blocking event
+- XOM's own same-day earnings (Jul 31) was correctly treated as an independent disqualifier stacking on top of the unmet oil-price floor — gate items 6 and 8 both re-checked, not just the headline commodity number
+- Oil price tracked consistently in the $70-74 range all week, correctly kept far below the $90-95 floor with zero "close enough" drift
+- Capital fully preserved; zero kill-switch triggers; live Alpaca state matched the memory files every session
+
+### What didn't work (3-5 bullets)
+- **PAUSED.flag age re-derivation failed four different ways in five attempts** — the exact fix mandated by the 2026-07-24 lesson (re-derive from git log, don't carry forward stale phrasing) was followed procedurally every session this week and still produced wrong answers every time (06-26, 06-29, 06-29, 06-30 vs. the true 07-02). This is a new, distinct failure from the one it was meant to fix.
+- 46 consecutive trading days, 0 trades, with only ~25 calendar days (~15-17 trading days) left in the 90-day window — the runway concern flagged 2026-07-24 has escalated from "majority elapsed" to "most of the window gone," and the core mission (beat SPY, handle a 5%+ drawdown) is close to going structurally untested
+- No post-FOMC candidate was pre-screened during Tuesday/Wednesday's forced-idle sessions, repeating the exact gap the 2026-06-21 lesson was written to close — the pipeline exited the week as empty as it entered
+- Weekly review fired Sunday Aug 2, not Friday Jul 31 — cadence misalignment persists, flagged in nearly every review since launch
+- Sector-momentum signal contradicted itself across sources on all 5 days this week — logged as expected noise each time without prompting any change to how much weight it's given
+
+### Key lessons (added to LESSONS.md)
+- Runway checkpoint escalated: 46 trading days / 65 calendar days elapsed since launch (May 27) against a 90-calendar-day window closing ~2026-08-25 — only ~25 calendar days (~15-17 trading days) remain, with $0 of agent-generated P&L in either direction. This is past "majority elapsed" and into "most of the window is gone."
+- Re-deriving a figure "fresh from source" is not automatically correct — it can still fail if the command or its output is misread. This week's PAUSED.flag age check was rerun five times and got it wrong four different ways; the actual and only commit adding the file is 2026-07-02 (verified via `git log --diff-filter=A -- PAUSED.flag`). A "fix" that itself introduces new errors needs its own verification step, not just a mandate to re-check.
+- A watchlist ticker's own earnings date is an independent, standing disqualifier (gate item 8) that must be checked every session alongside its primary thesis trigger (gate item 6) — confirmed cleanly this week with XOM on its own earnings day.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Runway checkpoint (escalated, most urgent yet)**: ~25 calendar days / ~15-17 trading days remain in the 90-day window with 0 trades placed. Recommend the user make an explicit call this week: accept the buy-side gate calibration as-is and let the mission likely go untested, loosen the gate for the remaining window with specific reasoning, or extend the evaluation window. There are now fewer degrees of freedom to act on this than at any prior checkpoint.
+2. **Root-level `PAUSED.flag` (repeated, now with a verified date)**: content is still just "test." Verified via `git log --diff-filter=A -- PAUSED.flag` this session — the only commit adding it is **2026-07-02** (~4 weeks old as of Jul 31), correcting this week's own five inconsistent claims (06-26/06-29/06-30). Recommend explaining its origin or deleting it; also recommend the user spot-check that the agent's "fresh from git log" claims are pasting actual command output rather than a remembered approximation.
+3. **Weekly review cadence (repeated)**: fired Sunday Aug 2, not Friday Jul 31. Same orchestration gap flagged in nearly every prior review since launch.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (46 trading days numerically clear the 30-day bar, but the unexplained root-level `PAUSED.flag` — now dated to 2026-07-02 — keeps this from a clean ✅ until the user confirms no manual intervention occurred)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY ~−0.58% phase — technically "ahead," but this is a zero-trade artifact of SPY's position vs. the launch date, not earned performance)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: 🟡 (downgraded from ✅ — this week's PAUSED.flag age re-derivation was itself wrong four times in five attempts; files are readable and uncorrupted, but a stated-figure-accuracy defect recurred in a new form)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 2/7**
+
+Days running counter: **46** (Day 1 = 2026-05-27; Day 46 = 2026-07-31)

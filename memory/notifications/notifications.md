@@ -742,3 +742,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Week 13 opens Monday Aug 3 — fresh screen, XOM/Energy stays dormant until WTI clears $90-95
+
+---
+## 2026-08-02 20:37 UTC
+Week ending 2026-07-31
+Portfolio: $10,000 (0.00% week, 0.00% phase)
+vs SPY: -1.10% week, +0.58% phase (artifact, SPY down since launch)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C-
+Key takeaway: 46 days/0 trades, ~25 cal days left in 90-day window - runway nearly gone
+Graduation: 2/7 criteria met
