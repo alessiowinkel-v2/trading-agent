@@ -3139,3 +3139,55 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 30 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-03 — Pre-market Research (Day 47, Monday — start of Week 13)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-07-31
+
+### Market context
+- **WTI / Brent**: Most current-dated cluster ~$73.65/$78.27 (oilpriceapi, last_updated 2026-08-01), corroborated by oilprice.com ($71.10/$74.76) and crudeoilprices.today ($70.42/$74.12). Still well below the $90-95 XOM/Energy floor. No change to standing rejection.
+- **S&P 500 futures**: Mixed/modestly positive across sources — Investing.com +0.56% (7,571.25), CNBC +0.27% (7,492.75), Markets Insider -0.15% (7,580.25). Net read: soft positive tone entering the week, likely on AI/cloud momentum (see below).
+- **VIX**: Single most current-dated print 20.95 (MarketWatch, dated 2026-07-29) — but this conflicts with the Jul 31 EOD entry's confirmed 15.99 close, so this print looks stale/mis-dated despite its "last_updated" tag. Per standing practice, not acting on any single-source VIX read; treating current vol regime as unconfirmed, likely still in the mid-teens.
+- **Today's dominant catalysts**: (1) AI/cloud rally carrying over from Amazon's blowout Q2 (AWS revenue +37% YoY to $42.2B), lifting S&P 500/Nasdaq/Dow and spilling into Nikkei/Asian chip names; (2) **ISM Manufacturing PMI** (10:00 AM ET) plus final S&P Global Manufacturing PMI and construction spending — the session's main scheduled macro print; (3) **Palantir earnings after today's close**, high-expectation AI/software name, not a watchlist ticker.
+- **Earnings before open**: Tyson Foods (TSN), Marriott (MAR) — neither is a watchlist name; excluded by gate item 8 regardless of merit.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs data today — confirmed via BLS/NY Fed calendars. Next CPI is Aug 12, next NFP is this Friday Aug 7, JOLTS is tomorrow (Tue Aug 4). ISM Manufacturing PMI is a second-tier release, not in the strategy's explicit hard-block list (CPI/PPI/jobs/FOMC) — not treating today as a hard timing block on that basis alone.
+- **Sector momentum**: Contradictory across sources as usual — one weekly recap has Consumer Discretionary leading, another has Tech +5.9%/Materials +1.7% with Energy -5.4% weakest, a live sector index shows S&P 500 Energy -1.52% today. Directionally consistent theme across sources: Energy remains weak, Tech/AI-adjacent names remain strong. Treating as unstable/non-tradeable per standing practice; directionally reinforces the standing Energy/XOM rejection.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI ~$73.65, still well below the $90-95 floor; sector momentum reads (where available) show Energy as the weakest sector, not a reason to revisit. No change to standing rejection.
+2. **AI/cloud rally (AMZN, PLTR, chip names)**: momentum/sentiment-driven, no company-specific fundamentals catalyst on a watchlist name; excluded as "AI hype," consistent with strategy philosophy ("boring is good").
+3. **Today's BMO earnings reporters (TSN, MAR)**: excluded by gate item 8; neither is a watchlist name.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- ISM Manufacturing PMI at 10:00 AM ET could move markets broadly; no exposure means no direct portfolio risk today.
+- Palantir earnings after close (AMC) — high-multiple AI name, no position, no direct risk, but a miss/beat could set AI-sector tone for tomorrow.
+- NFP (Fri Aug 7) and JOLTS (Tue Aug 4) are this week's blocking-tier events — Tuesday and the days immediately around Friday will be hard timing blocks per strategy regardless of any candidate.
+- VIX data remains unreliable/contradictory across sources (see above) — do not act on any single-source VIX read.
+- Root-level `PAUSED.flag` (non-standard location, content "test", first committed 2026-07-02 per `git log --diff-filter=A -- PAUSED.flag`) persists — does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+- **Runway**: Today is Day 47 / Week 13 — 47 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. This continues the runway concern escalated in the 2026-07-24 and 2026-07-31 LESSONS.md entries: most of the 90-calendar-day window is now gone with the graduation criteria's "actual track record" requirement still entirely untested. No unilateral gate change made; restating for user visibility per those entries.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. XOM/Energy stays rejected on oil price; today's AI/cloud rally and BMO earnings reporters are excluded as momentum/non-watchlist; no other thesis is currently in the pipeline. Zero trades is the correct answer.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Jul 31 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 31 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 13 — Day 1, Monday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-07-31. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 13 — Day 1, Monday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
