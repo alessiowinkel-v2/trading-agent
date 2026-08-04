@@ -765,3 +765,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: 47 days flat in cash, Week 13 Day 1; continue watching for a qualifying catalyst (Energy/XOM dormant, WTI still below floor)
+
+---
+## 2026-08-04 19:39 UTC
+EOD 2026-08-04
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, N/A phase
+Cash: $10,000.00 (100%)
+Trades today: none (JOLTS block day)
+Open positions: 0
+Active kill switches: none
+Tomorrow: pre-market scan for fresh candidates; NFP is Fri Aug 7 (block)
