@@ -3191,3 +3191,56 @@ All clear. KS-1 (daily drawdown): $10,000 vs Jul 31 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-04 — Pre-market Research (Day 48, Tuesday — Week 13)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-03
+
+### Market context
+- **WTI / Brent**: Contradictory across sources as usual. Most-cited cluster ~$71.10/$74.76 (oilprice.com, last_updated 2026-07-31) and ~$70.42/$74.12 (crudeoilprices.today, last_updated 2026-08-01), consistent with the standing sub-$90 read. One Chinese-language source (Sina Finance, dated 2026-08-04, describing Monday Aug 3's US session) cites a sharp same-day drop to WTI ~$78.59/Brent ~$83.46 on a Trump-announced cancellation of a planned Iran strike — internally that source's own levels are still well below the $90-95 XOM/Energy floor even if taken at face value. No change to standing rejection either way.
+- **S&P 500 futures**: Mixed/modestly positive across mismatched timestamps (Investing.com UK +0.56% at 7,571.25; CNBC +0.27% at 7,492.75; Bloomberg intraday 7,603.50). Net read: soft positive tone, consistent with reported Monday tech-led record close (Dow record, META +6%, AMZN +4.6% to $3T market cap, NVDA +3%, GOOGL/MSFT ~+5% each per Sina) on Iran de-escalation.
+- **VIX**: Wildly inconsistent across sources (20.95 MarketWatch "today", 23.93 Google Finance, 17.38/19.31 Investing.com, 15.99 MarketWatch Jul 31 close, 16.90 Cboe as of Jul 8). Per standing practice, not acting on any single-source VIX read; directionally still mid-teens-to-low-20s, not clearly elevated.
+- **Today's catalysts**: **JOLTS job openings** (this week's second blocking-tier jobs release, per Monday's research log — NFP is Friday Aug 7) plus durable/factory orders. Heavy BMO earnings slate: AMD, Caterpillar, Merck, Amgen, McDonald's, Prudential Financial, Booking Holdings, Arista Networks, Duke Energy, Pfizer, Marathon Petroleum. **SpaceX (SPCX)** reports its first-ever public-company earnings AMC today, tied to the largest insider lock-up expiration in its history — not a watchlist name regardless, and likely still inside its first-90-days-post-IPO exclusion.
+- **Earnings before open**: AMD, CAT, MRK, AMGN, MCD, PRU, BKNG, ANET, DUK, PFE, MPC, and others — none are watchlist names; excluded by gate item 8 regardless of merit.
+- **Economic calendar**: JOLTS job openings (consensus 7.25M vs prior 7.594M per IG) is today's release — jobs-data class, same tier as CPI/PPI/NFP per strategy's hard-block list. No CPI/PPI/FOMC today. This confirms the hard timing block flagged in yesterday's (2026-08-03) entry.
+- **Sector momentum**: Contradictory across sources yet again — one live snapshot has Tech/Industrials leading and Energy/Staples lagging; another sector-rotation guide has Staples/Industrials/Materials/Energy "Leading" and Tech/Comm/Discretionary/Financials "Lagging" — directly conflicting on Tech and Energy placement. Treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Hard timing block**: today is JOLTS day (jobs-data release), explicitly flagged as a blocking-tier event in yesterday's pre-market entry. No new trades regardless of any candidate.
+2. **XOM/Energy**: WTI reads still cluster well below the $90-95 floor across the majority of sources. No change to standing rejection.
+3. **Today's BMO earnings reporters (AMD, CAT, MRK, AMGN, MCD, PRU, BKNG, ANET, DUK, PFE, MPC)**: excluded by gate item 8; none are watchlist names.
+4. **SpaceX (SPCX) AMC earnings**: not a watchlist name; likely still within first-90-days-post-IPO exclusion regardless.
+5. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+6. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- JOLTS at 10:00 AM ET could move markets broadly on either a hot or cold print; no exposure means no direct portfolio risk today.
+- SpaceX's insider lock-up expiration (largest in financial history per Investing.com) could produce outsized volatility in that single name after its AMC earnings — no position, no direct risk.
+- Heavy earnings slate (AMD especially, AI-chip-adjacent) could move Tech/semis sentiment broadly; being flat means no thesis exposure either way.
+- VIX and sector-momentum data remain unreliable/contradictory across sources — do not act on any single-source read.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists — first commit verified fresh this session via `git log --diff-filter=A --follow -- PAUSED.flag`: **2026-07-05** (~4.4 weeks old as of today). Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+- **Runway**: Day 48 / Week 13 — 48 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. Continuing the runway concern escalated in the 2026-07-24 and 2026-07-31 LESSONS.md entries; restating for visibility, no unilateral gate change made.
+
+### Decision
+**HOLD.** Today is a hard timing block (JOLTS jobs-data release) — no trades regardless of any candidate. Zero candidates clear the buy-side gate independent of the block: XOM/Energy stays rejected on oil price; today's BMO earnings reporters and SpaceX's AMC report are excluded as non-watchlist/gate-8; no other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 3 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 31 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 13 — Day 2, Tuesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-03. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 13 — Day 2, Tuesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
