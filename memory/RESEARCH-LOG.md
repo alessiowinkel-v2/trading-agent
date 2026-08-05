@@ -3244,3 +3244,55 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 3 EOD $10,000 = 0.00% — CLEAR
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-05 — Pre-market Research (Day 49, Wednesday — Week 13)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-04
+
+### Market context
+- **WTI / Brent**: Contradictory across sources as usual, but consistently well below the $90-95 XOM/Energy floor. Most-cited cluster ~$70.42/$74.12 (crudeoilprices.today) and ~$71.10/$74.76 (Oilprice.com, last_updated Jul 31), with one higher outlier ~$73.65/$78.27 (OilPriceAPI, last_updated Aug 1) and a stale Bloomberg snippet ($90.54/$93.09) carrying an internally-inconsistent "06/05/2026" reference date — discarded as unreliable. No change to standing rejection.
+- **S&P 500 futures**: Modestly positive premarket — CNBC shows E-mini +12.5 to 7,477.75 vs prior close 7,428.78. Consistent with reported catalysts: Tuesday's (Aug 4) close was a record high (S&P 500 first close above 7,700, Dow above 54,000) on strong AI/industrial earnings (Palantir, Caterpillar) and Iran/Hormuz de-escalation hopes pushing oil and yields down.
+- **VIX**: Wildly inconsistent across sources as usual (20.95 MarketWatch tagged "today" but internally dated 2026-02-05 — discarded as mis-tagged/stale; 17.98 WSJ Jul 30; 15.99 MarketWatch Jul 31 close; 16.90 Cboe Jul 8). Per standing practice, not acting on any single-source VIX read; directionally still mid-teens, consistent with a market at record highs on de-escalation, not elevated.
+- **Today's catalysts**: Continued risk-on carryover from Tuesday's AI-earnings-driven record close (Palantir +29%, chip names broadly higher) and a second consecutive day of falling oil prices on U.S.-Iran Strait-of-Hormuz deal hopes. **ISM Services PMI** (10:00 AM ET) is today's scheduled U.S. macro print — second-tier release, not in the strategy's hard-block list (CPI/PPI/jobs/FOMC), consistent with how ISM Manufacturing PMI was treated on Aug 3.
+- **Earnings before open**: Eli Lilly (LLY), Novo Nordisk (NVO), Disney (DIS), Shopify (SHOP), Uber (UBER), CVS Health (CVS), Phillips 66 (PSX), McKesson (MCK), Cencora (COR), MetLife (MET), Allstate (ALL) — none are watchlist names; excluded by gate item 8 regardless of merit.
+- **Economic calendar**: ISM Services PMI (10:00 AM ET) today — second-tier, not a hard block. No CPI/PPI/FOMC/jobs data today. Next NFP is Fri Aug 7 (this week's blocking-tier event), next CPI Aug 12, PPI Aug 13, next FOMC Aug 26. Friday and the day immediately before will be hard timing blocks per strategy regardless of any candidate.
+- **Sector momentum**: Contradictory across sources yet again — one live heatmap snapshot shows Information Technology/Industrials leading, Energy lagging (-0.79%); a separate rotation framework has Consumer Staples/Industrials/Materials/Energy "Leading" and Technology/Communications/Discretionary/Financials "Lagging" — directly conflicting on both Tech and Energy placement. One same-day Marketwatch snapshot puts the S&P 500 Energy sector index at -1.52%. Treating as unstable/non-tradeable per standing practice; the one consistent thread (Energy weak) reinforces the standing XOM rejection.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI clusters ~$70-74, still well below the $90-95 floor; sector reads (where available) show Energy weak/lagging, not a reason to revisit. No change to standing rejection.
+2. **AI/earnings-driven rally (Palantir, Caterpillar, chip names)**: momentum/sentiment-driven off yesterday's record close, no company-specific fundamentals catalyst on a watchlist name; excluded as momentum-chasing, consistent with strategy philosophy ("boring is good").
+3. **Today's BMO earnings reporters (LLY, NVO, DIS, SHOP, UBER, CVS, PSX, MCK, COR, MET, ALL)**: excluded by gate item 8; none are watchlist names.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- ISM Services PMI at 10:00 AM ET could move markets broadly on either a hot or cold print; no exposure means no direct portfolio risk today.
+- Market sits at fresh record highs on a two-day de-escalation/earnings rally — a reversal in the Iran/Hormuz talks or a soft AI-earnings follow-through could unwind sentiment quickly; no position means no direct risk either way.
+- NFP (Fri Aug 7) is this week's blocking-tier event — tomorrow and Friday will be hard timing blocks per strategy regardless of any candidate.
+- VIX and sector-momentum data remain unreliable/contradictory across sources — do not act on any single-source read.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists. Re-derived directly from `git log --diff-filter=A --follow -- PAUSED.flag` this session (command output quoted, not paraphrased): first commit is **6af24aa, "EOD snapshot 2026-07-06," dated 2026-07-06** — ~30 days (~4.3 weeks) old as of today, not the Jul 2/5 dates cited in several recent entries. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup, and flagging per the 2026-07-31 LESSONS.md entry that this date has now been misreported multiple times in a row.
+- **Runway**: Day 49 / Week 13 — 49 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. Continuing the runway concern escalated in the 2026-07-24 and 2026-07-31 LESSONS.md entries; restating for visibility, no unilateral gate change made.
+
+### Decision
+**HOLD.** No candidates clear the buy-side gate. XOM/Energy stays rejected on oil price; today's AI/earnings-driven rally and BMO earnings reporters are excluded as momentum/non-watchlist; no other thesis is currently in the pipeline. Zero trades is the correct answer.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 4 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 31 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 13 — Day 3, Wednesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-04. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 13 — Day 3, Wednesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
