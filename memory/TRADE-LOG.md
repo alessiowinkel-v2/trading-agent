@@ -645,3 +645,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 48, Week 13 (Tuesday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-03). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 48 consecutive trading days fully in cash. Per pre-market research, today was a hard timing block (JOLTS job openings, jobs-data class per strategy's macro-event rule) — no trades expected or attempted regardless of any candidate; XOM/Energy stays rejected on oil price (WTI clustering well below $90-95 floor), today's heavy BMO earnings slate (AMD, CAT, MRK, AMGN, MCD, PRU, BKNG, ANET, DUK, PFE, MPC) and SpaceX's AMC debut earnings excluded as non-watchlist/gate-8. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-08-05 — EOD Snapshot (Day 49, Wednesday — Week 13)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (Perplexity returned no confirmed Aug 5 close — most current dated source is Jul 30 at $745.40; an Aug 5 Robinhood result had no snippet content)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 49, Week 13 (Wednesday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-04). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 49 consecutive trading days fully in cash while SPY has risen materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
+**Active kill switches:** none.
