@@ -3296,3 +3296,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 4 EOD $10,000 = 0.00% — CLEAR
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-06 — Pre-market Research (Day 50, Thursday — Week 13)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-05
+
+### Market context
+- **WTI / Brent**: Contradictory across sources as usual. Most-cited live feed (Oilprice.com, 11-min delay) shows WTI $71.10 / Brent $74.76, down ~3% on the day. Other recent snapshots cluster $68-74 WTI / $74-78 Brent. All readings remain well below the $90-95 XOM/Energy floor. No change to standing rejection.
+- **S&P 500 futures**: Modestly mixed/flat across sources — Yahoo E-mini ~7,465 (-0.01%), CNBC S&P FUT +0.27%, some contract-rollover noise on Investing.com. No strong directional signal.
+- **VIX**: ~15.8-16 (Cboe), consistent with a market near record highs and calm, not elevated. Standard caveat: cross-source VIX reads remain noisy; not acting on any single print.
+- **Today's catalysts**: Fed-speak, any fresh inflation/labor commentary, and a heavy earnings slate (Airbnb, DoorDash, Lyft, Datadog, ConocoPhillips, Trade Desk, MercadoLibre, DraftKings, etc.) are the cited drivers. Tariff/trade-policy headlines (new US tariff on India imports) add macro noise. AI/mega-cap earnings momentum continues to underpin sentiment.
+- **Earnings before open**: Darden (DRI), TD SYNNEX (SNX), Acuity Brands (AYI), Commercial Metals (CMC), Winnebago (WGO), Nano-X Imaging (NNOX), ConocoPhillips (COP). None are watchlist names; excluded by gate item 8 regardless of merit.
+- **Economic calendar**: Initial jobless claims + Q2 productivity/unit labor costs at 8:30 AM ET today — second-tier, not individually a hard block. However, **tomorrow (Fri Aug 7) is Nonfarm Payrolls** — per strategy's "day before/day of jobs data" rule, **today is a hard timing block** (day-before-NFP), consistent with the day-before/day-of blocking flagged in yesterday's entry. No trades regardless of any candidate today or tomorrow. Next CPI Aug 12, PPI Aug 13.
+- **Sector momentum**: Contradictory yet again — one live heatmap shows Technology/Industrials leading, Energy lagging; a rotation-model source has Consumer Staples/Industrials/Materials/Energy "leading" (but slowing) with Tech/Communications/Discretionary/Financials "lagging"; a same-day Bloomberg sector table shows Health Care/Discretionary/Real Estate leading and Industrials/Info Tech lagging. Three sources, three different rankings for the same day — treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Hard timing block**: today is the day before NFP (Fri Aug 7) — blocked per strategy regardless of any candidate.
+2. **XOM/Energy**: WTI clusters $68-74, still well below the $90-95 floor. No change to standing rejection.
+3. **Today's BMO earnings reporters (DRI, SNX, AYI, CMC, WGO, NNOX, COP)**: excluded by gate item 8; none are watchlist names.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- Tomorrow's NFP (Fri Aug 7) is this week's blocking-tier event — today and tomorrow are both hard timing blocks; no exposure means no direct portfolio risk from the print either day.
+- Heavy earnings slate today (Airbnb, DoorDash, Lyft, Datadog, ConocoPhillips, Trade Desk and more) could move sentiment broadly; being flat means no thesis exposure either way.
+- VIX and sector-momentum data remain unreliable/contradictory across sources — do not act on any single-source read.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists. Re-derived directly from `git log --diff-filter=A --follow -- PAUSED.flag` this session (command output quoted, not paraphrased): `commit e587977ea0bcfcd853b2539e203e14ce438727b6`, `Date: Tue Jul 7 10:09:11 2026 +0000`, message "pre-market research 2026-07-07" — first commit is **2026-07-07**, ~30 days (~4.3 weeks) old as of today. This differs from multiple prior sessions' re-derivations (dates ranging 2026-06-26 through 2026-07-06 have all been cited across recent entries) — consistent with the 2026-07-31 LESSONS.md entry that this fact keeps being misreported. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+- **Runway**: Day 50 / Week 13 — 50 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-calendar-day window closes ~2026-08-25 — roughly 19 calendar days (~13 trading days) remain. Continuing the runway concern escalated in the 2026-07-24 and 2026-07-31 LESSONS.md entries; restating for visibility, no unilateral gate change made.
+
+### Decision
+**HOLD.** Today is a hard timing block (day before NFP) — no trades regardless of any candidate. Zero candidates clear the buy-side gate independent of the block: XOM/Energy stays rejected on oil price; today's BMO earnings reporters are excluded as non-watchlist/gate-8; no other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 5 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 31 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 13 — Day 4, Thursday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-05. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 13 — Day 4, Thursday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
