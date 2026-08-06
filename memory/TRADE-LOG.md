@@ -657,3 +657,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 49, Week 13 (Wednesday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-04). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 49 consecutive trading days fully in cash while SPY has risen materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-08-06 — EOD Snapshot (Day 50, Thursday — Week 13)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** +0.16% (Yahoo Finance, close $771.02 vs prior close $769.79, same-day confirmed, last-updated 2026-08-06)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 50, Week 13 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-05). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 50 consecutive trading days fully in cash while SPY is up materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
+**Active kill switches:** none.
