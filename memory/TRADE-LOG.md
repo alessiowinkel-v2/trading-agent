@@ -669,3 +669,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 50, Week 13 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-05). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 50 consecutive trading days fully in cash while SPY is up materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-08-07 — EOD Snapshot (Day 51, Friday — end of Week 13)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** ~+0.4% (intraday only — no confirmed close obtained; sources at ~2:22-2:33 PM ET showed prev close $768.56 vs last trade $771.63-$772.89, i.e. +0.40% to +0.56%; not a same-day confirmed close)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 51, end of Week 13 (Friday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-06). 0 of 3 weekly trade slots used this week, 0 total trades since launch (May 27) — 51 consecutive trading days fully in cash while SPY is up materially from baseline over the same period. No protective stops needed (no open positions). Today was a hard timing block per pre-market research (NFP day) with zero candidates clearing the buy-side gate regardless. Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. Runway note: 90-day window closes ~2026-08-25, roughly 12 trading days remain with zero trades placed either direction — carried forward from research log for weekly review visibility. No kill switches triggered.
+**Active kill switches:** none.
