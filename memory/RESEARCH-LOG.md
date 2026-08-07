@@ -3347,3 +3347,53 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 5 EOD $10,000 = 0.00% — CLEAR
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-07 — Pre-market Research (Day 51, Friday — end of Week 13)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-06
+
+### Market context
+- **WTI / Brent**: Contradictory across sources as usual. Most-cited live feed (crudeoilprices.today) shows WTI $70.42 / Brent $74.12; a second live-ish feed (Oilprice.com, 11-min delay, dated Jul 31) shows WTI $71.10 / Brent $74.76. All current readings cluster $68-74 WTI, well below the $90-95 XOM/Energy floor. No change to standing rejection.
+- **S&P 500 futures**: Mixed across sources — Yahoo E-mini ~7,465 (-0.01%), CNBC S&P FUT +0.27%, Investing.com +0.56% (post contract-roll noise). No strong directional signal pre-NFP, as expected — market is waiting on the print.
+- **VIX**: Most-cited read ~20.95 (MarketWatch), but that figure's own page carries an internally inconsistent "last_updated 2026-02-05" tag alongside a "2026-07-30" date — discarded as mis-tagged per standing practice. Other recent reads cluster 16-18 (WSJ Jul 30 ~17.98, MarketWatch Jul 31 close 15.99). Treating as noisy/inconclusive; not acting on any single print.
+- **Today's catalysts**: **July Nonfarm Payrolls at 8:30 AM ET is the dominant catalyst** — consensus ~85-91k jobs added (vs 57k in June), unemployment rate seen ticking up to 4.3%. This is the first major data point after the Fed's 9-3 split vote on Jul 29 to hold rates at 3.50-3.75% (most divided decision since 2016), so the print carries extra weight for rate-path repricing. Secondary catalysts: continued AI/semis sentiment carryover, lower oil prices framed as supportive for equities, and a heavy Friday earnings slate.
+- **Earnings before open**: Vistra (VST), Take-Two Interactive (TTWO), PPL, Plains All American Pipeline (PAA), Emera (EMA), Oklo (OKLO), Fluor (FLR), Essent Group (ESNT), Construction Partners (ROAD), ACM Research (ACMR), Algonquin Power (AQN), and (per one source) Exxon Mobil (XOM)/Chevron (CVX). None are watchlist names, and XOM specifically is excluded today by gate item 8 (own earnings) even if the oil-price floor had been cleared, which it has not. All excluded by gate item 8.
+- **Economic calendar**: **Employment Situation / Nonfarm Payrolls (July) at 8:30 AM ET — hard block per strategy's "day of jobs data" rule.** No CPI/PPI/FOMC today (next CPI Aug 12, PPI Aug 13, FOMC Sep 15-16). No trades regardless of any candidate today.
+- **Sector momentum**: Contradictory yet again across sources — one live heatmap/momentum source has Information Technology and Industrials leading; a separate rotation framework has Consumer Staples/Industrials/Materials/Energy "leading" (Energy momentum flagged as slowing); a same-day-ish Bloomberg sector table (dated Aug 1-5) shows Health Care/Consumer Discretionary/Real Estate leading and Information Technology/Industrials lagging — directly conflicting with the first source on both Tech and Industrials placement. Treating as unstable/non-tradeable per standing practice.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **Hard timing block**: today is NFP day — blocked per strategy regardless of any candidate.
+2. **XOM/Energy**: WTI clusters $68-74, still well below the $90-95 floor; XOM also reports its own earnings today, an independent gate-8 exclusion. No change to standing rejection.
+3. **Today's BMO earnings reporters (VST, TTWO, PPL, PAA, EMA, OKLO, FLR, ESNT, ROAD, ACMR, AQN)**: excluded by gate item 8; none are watchlist names.
+4. Financials thesis remains formally closed (per 2026-07-20 entry) — no new catalyst surfaced today.
+5. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- NFP at 8:30 AM ET is today's dominant catalyst and could move markets sharply on either a hot or cold print (consensus ~85-91k vs prior 57k, unemployment rate seen at 4.3%); no exposure means no direct portfolio risk from the print.
+- VIX and sector-momentum data remain unreliable/contradictory across sources — do not act on any single-source read.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists. Re-derived directly from `git log --diff-filter=A --follow -- PAUSED.flag` this session (command output quoted verbatim, not paraphrased): `9fe31debe14a627ffcfcd5da6a9409d800e8ad34|2026-07-07|Log EOD notification 2026-07-07` — first commit is **2026-07-07**, 31 days (~4.4 weeks) old as of today. This matches the 2026-08-06 entry's re-derivation (also 2026-07-07), the first two consecutive sessions to agree — consistent with the 2026-07-31 LESSONS.md instruction to quote git output directly rather than paraphrase. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent — flagging again for user cleanup.
+- **Runway**: Day 51, end of Week 13 — 51 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-calendar-day window closes ~2026-08-25 — roughly 18 calendar days (~12 trading days) remain. Continuing the runway concern escalated in the 2026-07-24 and 2026-07-31 LESSONS.md entries; restating for visibility, no unilateral gate change made.
+
+### Decision
+**HOLD.** Today is a hard timing block (NFP day) — no trades regardless of any candidate. Zero candidates clear the buy-side gate independent of the block: XOM/Energy stays rejected on both oil price and its own earnings today; today's BMO earnings reporters are excluded as non-watchlist/gate-8; no other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 6 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Jul 31 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 13 — Day 5, Friday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-06. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 13 — Day 5, Friday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
