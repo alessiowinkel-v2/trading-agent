@@ -1509,3 +1509,101 @@ No trades placed. Five trading days, five documented HOLD decisions — this was
 **Graduation criteria met: 2/7**
 
 Days running counter: **46** (Day 1 = 2026-05-27; Day 46 = 2026-07-31)
+
+---
+
+## Week ending 2026-08-07
+
+> **Note**: Routine triggered Sunday 2026-08-09, not Friday. Same cadence gap flagged in nearly every prior review since launch. Trading week covered: Monday Aug 3 through Friday Aug 7 (Days 47–51, Week 13).
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Jul 31 close) | $10,000.00 |
+| Ending portfolio (Friday Aug 7 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Jul 31 → Aug 7) | +3.51% (SPY $747.03 → $773.26; stockanalysis.com + veloxmacro.com + FRED weekly-change series all confirm +3.5–3.6%, best week since April on cooling jobs data) |
+| Bot vs S&P this week | −3.51% |
+| Phase P&L since launch (May 27, SPY $751.38) | Bot 0.00% vs SPY +2.91% ($751.38 → $773.26) — bot now behind, and by more than the 2% graduation tolerance |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Live Alpaca confirmed (queried this session): equity $10,000.00, cash $10,000.00, 0 positions, 0 orders, `balance_asof` 2026-08-07.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+**Pipeline status**: Zero active candidates. XOM/Energy remains dormant (WTI $68-74 all week, still $16-22 below the $90-95 floor, and XOM itself reported earnings Aug 7 — an independent gate-8 exclusion that day regardless). Financials thesis remains formally closed (per 2026-07-20 entry). No new thesis was built during this week's two hard-block days (JOLTS Tue, day-before/day-of NFP Thu-Fri).
+
+### Process review (per trade made this week)
+
+No trades placed. Five trading days, five documented HOLD decisions:
+
+**Aug 3 (Day 47 — Monday):** HOLD. WTI ~$73.65, still below floor. AI/cloud rally (Amazon AWS beat) and BMO earnings (TSN, MAR) correctly excluded as momentum/non-watchlist. ISM Manufacturing PMI (second-tier) did not warrant a hard block. Verdict: **Correct.**
+
+**Aug 4 (Day 48 — Tuesday):** HOLD. JOLTS day — hard timing block (jobs-data class), applied regardless of candidate quality. Heavy BMO earnings slate (AMD, CAT, MRK, AMGN, MCD, and others) and SpaceX's AMC debut earnings excluded as non-watchlist/gate-8. Verdict: **Correct.**
+
+**Aug 5 (Day 49 — Wednesday):** HOLD. No hard block (ISM Services is second-tier). XOM/Energy stays rejected on oil price; AI/earnings-driven rally (Palantir +29%) correctly excluded as momentum-chasing, not a thesis. Verdict: **Correct**, though this was the one session with no hard block and no genuine screening effort beyond restating the standing XOM rejection — no fresh candidate was sourced.
+
+**Aug 6 (Day 50 — Thursday):** HOLD. Day-before-NFP — hard timing block, applied without exception. Heavy earnings slate (Airbnb, DoorDash, Lyft, and others) excluded as non-watchlist. Verdict: **Correct.**
+
+**Aug 7 (Day 51 — Friday):** HOLD. NFP day — hard timing block. XOM excluded twice over (oil price + its own earnings today). Verdict: **Correct.**
+
+**In hindsight**: Every HOLD maps to a named, falsifiable rule (JOLTS, day-before-NFP, NFP day, sub-floor oil price, non-watchlist earnings) rather than vague caution — process discipline on a day-by-day basis was clean. The problem, now in its 13th week, is structural: three of five sessions were hard-blocked before any screening could matter, and the two open sessions (Mon, Wed) produced no new candidate. The pipeline entered and exited the week identically empty, repeating the 2026-06-21 lesson ("build the post-block pipeline during the block, not after") for at least the third time.
+
+### Self-grades (be HARSH)
+- Process discipline: **B** — Every hard timing block (JOLTS, day-before-NFP, NFP day) and every gate check (oil-price floor, gate-8 earnings exclusions) was applied correctly and consistently, with zero attempts to rationalize an exception. Held below B+ because the two non-blocked sessions (Mon, Wed) did no active candidate-sourcing beyond re-confirming standing rejections — the same passive-restatement pattern flagged in the 2026-07-17 lesson ("re-flagging a candidate is not the same as screening it"), just with no candidate at all to re-flag this time.
+- Documentation quality: **B+** — Real, measurable improvement this week: the `PAUSED.flag`-age re-derivation, which produced four different wrong answers across the five sessions of the week ending 2026-07-31, converged on the same date (2026-07-07) in the last two sessions (Aug 6, Aug 7) with quoted git-log output rather than paraphrase. However, verifying that claim fresh this session (`git log --follow --diff-filter=A --format='%H|%ad|%s' -- PAUSED.flag`) shows the actual first (and only) commit adding the file is **fcc89a4, dated 2026-07-08**, titled "clean up duplicate notification entry (shell variable interpolation bug)" — the file was added incidentally inside an unrelated cleanup commit, not by an intentional pause action. So the week's two "converged" answers (07-07) were closer than prior weeks' scattered guesses (06-26 through 07-06) but still one day off the true date, and the file's origin is now known to be accidental, not a deliberate pause.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked and clear every session, live Alpaca reconciliation (0 positions, 0 orders) confirmed daily, capital fully intact.
+- Outcome (weighted least): **F** — 0.00% vs SPY +3.51% this week, the single largest one-week gap of the entire phase (S&P's best week since April, driven by cooling jobs data). Phase P&L flipped from a nominal +0.88%-ahead artifact three weeks ago to −2.91% behind today — outside the 2% graduation tolerance for the first time. With 51 trading days elapsed and ~18 calendar days (~12 trading days) left before the ~2026-08-25 window closes, the mission ("beat SPY through real agent decisions") is now closer to going structurally untested than tested.
+- **Overall: D** — Day-by-day process was clean and rule-following was exemplary; documentation is trending in the right direction. But this grade cannot be insulated from two compounding facts: (1) the worst single-week benchmark gap of the phase landed in the same week the runway dropped to roughly 12 trading days, and (2) for the third time, a forced-idle stretch (JOLTS/NFP block) produced zero pipeline-building. Clean process in a shrinking window that keeps ending with an empty pipeline is a downgrade from "correct but idle" to "running out of time to ever be tested."
+
+### What worked (3-5 bullets)
+- All three hard timing blocks this week (JOLTS, day-before-NFP, NFP day) applied with zero exceptions or attempted workarounds
+- XOM's own Aug 7 earnings correctly treated as an independent gate-8 exclusion stacking on the still-unmet oil-price floor — same pattern confirmed correct on 2026-07-31 with a different earnings date
+- `PAUSED.flag` age-reporting converged for the first time across two consecutive sessions using quoted git-log output, a real (if imperfect) improvement over the prior week's four-wrong-answers-in-five pattern
+- Capital fully preserved; zero kill-switch triggers; live Alpaca state matched memory files every session
+- Momentum/hype exclusions (AI/cloud rally, Palantir post-earnings pop) applied consistently without chasing a strong tape
+
+### What didn't work (3-5 bullets)
+- Worst single-week benchmark gap of the phase: SPY +3.51% vs bot 0.00%, flipping cumulative phase P&L from nominally ahead to −2.91% behind — outside the 2% graduation tolerance
+- Two non-blocked sessions (Mon, Wed) produced no new candidate-sourcing effort, just restated the standing XOM rejection — repeating the 2026-06-21 "build the pipeline during the block" gap for a third time with an entirely empty pipeline (not even a partial candidate)
+- `PAUSED.flag` age was still wrong in both of this week's "converged" answers (07-07 vs. the true 07-08) — closer than before, but the underlying verification method (quoting a git-log line) is still producing an off-by-one error the agent hasn't caught until this review
+- Runway is now critical: ~18 calendar days / ~12 trading days remain before the ~90-day window closes (~2026-08-25), with zero trades placed in either direction across the entire phase
+- Weekly review fired Sunday Aug 9, not Friday Aug 7 — same cadence misalignment flagged in nearly every review since launch
+
+### Key lessons (added to LESSONS.md)
+- Runway checkpoint escalated to critical: 51 trading days / 72 calendar days elapsed since launch (May 27) against a 90-calendar-day window closing ~2026-08-25 — only ~18 calendar days (~12 trading days) remain, and phase P&L just moved from nominally-ahead to −2.91% behind SPY in a single week, outside the 2% match tolerance. The mission is now at real risk of going untested purely from elapsed calendar time.
+- The root-level `PAUSED.flag`'s actual origin is now known: it was added incidentally inside commit `fcc89a4` ("clean up duplicate notification entry," 2026-07-08), not created deliberately as a pause action. Every prior git-log re-derivation (five distinct wrong dates across three weeks: 06-26, 06-29, 06-30, 07-05, 07-06, 07-07) missed both the correct date and the fact that the commit message itself explains the file wasn't an intentional kill-switch action — the file's provenance, not just its date, should have been checked from the start.
+- A "converged" answer across sessions is not the same as a "correct" answer — this week's two agreeing re-derivations (07-07) were still one day off the true 07-08. Convergence reduces variance, not necessarily error; the actual command output must be checked against the claim being made (in this case, the commit's own diff/message), not just repeated consistently.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Runway checkpoint (most urgent yet — decision needed this week)**: ~12 trading days remain. Phase P&L just moved outside the 2% SPY-matching tolerance for the first time. Recommend the user decide explicitly now: accept the current gate calibration and likely close the 90-day window with the "beat/match SPY" and "handle a 5%+ drawdown" criteria untested, loosen the gate for the remaining window with specific reasoning, or extend the evaluation window. Fewer trading days remain than in any prior checkpoint.
+2. **Root-level `PAUSED.flag`**: now confirmed via full commit history to have been added incidentally in commit `fcc89a4` (2026-07-08, "clean up duplicate notification entry"), content is just the string "test." This is very likely leftover test debris, not an intentional pause. Recommend the user delete it or confirm its purpose — it has cost several sessions' worth of (still slightly wrong) date re-derivation effort.
+3. **Weekly review cadence (repeated)**: fired Sunday Aug 9, not Friday Aug 7. Same orchestration gap flagged in nearly every prior review since launch.
+4. **Empty-pipeline pattern (repeated, 3rd occurrence)**: non-blocked sessions during high-event-density weeks continue to produce zero candidate-sourcing rather than building a ready-to-execute pipeline for when blocks clear. Suggest requiring at minimum one fully gate-checked (pass or fail) candidate writeup per non-blocked session, not just a restatement of standing rejections.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (51 trading days numerically clear the 30-day bar, but the unexplained root-level `PAUSED.flag` — now traced to an incidental commit rather than a deliberate action — keeps this from a clean ✅ until the user confirms no manual intervention occurred)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: ❌ (bot 0.00% vs SPY +2.91% phase — behind by more than the 2% tolerance for the first time)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: 🟡 (documentation converging but still inaccurate — this week's PAUSED.flag date, though consistent across two sessions, was still off by one day from the verified truth)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 2/7**
+
+Days running counter: **51** (Day 1 = 2026-05-27; Day 51 = 2026-08-07)

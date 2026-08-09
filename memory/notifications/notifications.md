@@ -809,3 +809,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: pre-market research, 12 trading days left in 90-day window, still 0 trades placed
+
+---
+## 2026-08-09 20:36 UTC
+Week ending 2026-08-07
+Portfolio: $10,000.00 (0.00% week, 0.00% phase)
+vs SPY: -3.51% week, -2.91% phase
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: D
+Key takeaway: Worst weekly SPY gap of the phase (+3.51%); runway now ~12 trading days with zero trades placed either direction
+Graduation: 2/7 criteria met
