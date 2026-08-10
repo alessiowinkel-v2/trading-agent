@@ -3397,3 +3397,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 6 EOD $10,000 = 0.00% — CLEAR
 **Total drawdown**: 0.00%
 **Phase P&L**: $0.00 (0.00%)
 **Active kill switches**: none.
+
+---
+
+## 2026-08-10 — Pre-market Research (Day 52, Monday — start of Week 14)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-07
+
+### Market context
+- **WTI / Brent**: WTI clusters $78.2-78.8, Brent $83.5-84.1 across live sources (Bloomberg, crudeoilprices.today, Trading Economics, Oilprice.com, Yahoo). Up from ~$73-74 two weeks ago but still well below the $90-95 XOM/Energy floor.
+- **S&P 500 futures**: Roughly flat (CNN/MarketWatch ES ~7,777, -0.03%; other reads +0.3-0.6%). No strong directional signal.
+- **VIX**: ~14.90 (last confirmed close Aug 7, consistent across Cboe/CNBC/WSJ/YCharts/TradingView) — low/calm.
+- **Today's catalysts**: Light Monday calendar. SPG earnings after close is the named catalyst; broader positioning ahead of this week's CPI/PPI.
+- **Earnings before open**: MNDY, LEGN, PERI, DNGDF/DNG.TO, Barrick Mining (B), Ferguson (FERG), JBS, Alcon (ALC), Kaspi.kz (KSPI), Camtek (CAMT), Axsome (AXSM). None are watchlist names.
+- **Economic calendar**: No CPI/PPI/FOMC/jobs release today. July CPI Wed Aug 12 8:30 AM ET, July PPI Thu Aug 13 8:30 AM ET, Retail Sales/Michigan sentiment Fri. ADP weekly employment Tue, jobless claims Thu. Today is clear of hard timing blocks.
+- **Sector momentum**: Information Technology, Consumer Discretionary, Materials leading (~+1.3-1.6%); Energy weakest (~-1.0 to -1.2%), Financials and Communication Services also negative. Unusually consistent across sources this week (a change from prior weeks' contradictory reads).
+
+### Active geopolitical catalyst — Strait of Hormuz (new, material, no position exposure)
+US-Iran standoff over Hormuz reopening is live and escalating in headlines, all dated today (2026-08-10): Iran near a routing deal with Oman but says that alone is insufficient, demanding sanctions relief/compensation/end to "hostile actions"; US has redirected 55 commercial vessels as of Aug 9 (up from 35 on Aug 2), disabled 2 ships, boarded 2; multiple unverified reports of tanker strikes near the strait. WTI ($78) is pricing in some premium but is nowhere near the $90-95 XOM entry floor. Per the 2026-06-12 LESSONS.md entry, geopolitical oil premiums are fragile and can reverse in days (diplomatic signal) or jump sharply (confirmed disruption) — not treating current levels as a floor-clearing catalyst. No candidate today regardless; watching for a clean, sustained floor-clear vs. a resolved/deflated situation.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI ~$78, still $12-17 below the $90-95 floor despite the Hormuz risk premium. Sector momentum is also actively against Energy this week (weakest sector), reinforcing rather than weakening the standing rejection.
+2. **Today's earnings reporters** (MNDY, LEGN, PERI, B, FERG, JBS, ALC, KSPI, CAMT, AXSM): excluded by gate item 8 / non-watchlist.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- Strait of Hormuz situation is fluid and headline-driven; could move oil sharply either direction intraday. Zero energy exposure means no direct portfolio risk either way today.
+- CPI (Wed) and PPI (Thu) land later this week — today and tomorrow are the only clear windows before the pre-CPI block begins.
+- Root-level `PAUSED.flag` (non-standard location, content "test") still present. Per the 2026-08-07 LESSONS.md conclusion, this is very likely test debris from an unrelated commit, not an intentional pause — not re-deriving its age again this session (prior sessions repeatedly mis-derived this and wasted effort); flagging once more for user cleanup/deletion. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent.
+- **Runway**: Day 52, start of Week 14 — 52 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. Per the 2026-08-07 LESSONS.md entry, ~18 calendar days (~12 trading days) remained as of last Friday, with phase P&L −2.91% behind the SPY graduation tolerance. Restating for visibility per prior escalations; no unilateral gate change made.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price despite the active Hormuz risk premium (floor not cleared, sector momentum against Energy); today's earnings reporters are non-watchlist/gate-8 exclusions; no other thesis is currently in the pipeline. No hard timing block today, but nothing to trade regardless.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 7 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 7 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 14 — Day 1, Monday, counter reset) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-07. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 14 — Day 1, Monday)
+**Total drawdown**: 0.00%
+**Phase P&L**: $0.00 (0.00%)
+**Active kill switches**: none.
