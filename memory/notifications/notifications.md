@@ -843,3 +843,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: July CPI 8:30 AM ET — soft caution day; no candidate in pipeline
+
+---
+## 2026-08-12 19:39 UTC
+EOD 2026-08-12
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: +0.35% today, -2.91% phase (as of last confirmed)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: pre-market scan; 8-9 trading days left in 90-day window, still 0 trades placed
