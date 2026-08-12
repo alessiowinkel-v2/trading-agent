@@ -3497,3 +3497,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 10 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (-2.91% behind SPY as of 2026-08-07); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-12 — Pre-market Research (Day 54, Wednesday — Week 14)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-11
+
+### Market context
+- **WTI / Brent**: WTI clusters $83.5-84.3 (MarketWatch $83.66, Oilprice.com $84.30, Investing.com $83.53, Trading Economics $83.70), Brent $89.4-90.0. Up modestly from Aug 10-11 levels ($78-84 range this week). Still $6-11 below the $90-95 XOM/Energy entry floor. Per the 2026-06-12 LESSONS.md entry, geopolitical premiums are fragile — not treating this as floor-clearing.
+- **S&P 500 futures**: Modestly higher, ~7,776-7,790 range (roughly +0.02% to +0.17%), consistent across sources. Market camped near highs ahead of CPI.
+- **VIX**: ~15.3-15.6 (Yahoo 15.55, CNBC 15.54, Cboe 15.29, WSJ 15.28) — calm, consistent across sources.
+- **Today's catalysts**: **July CPI at 8:30 AM ET is the dominant catalyst today** — the single biggest scheduled macro event of the week. Earnings: Cisco (CSCO) and Nebius (NBIS) report today, neither on watchlist. EIA crude oil inventories also due today. US-Iran/Hormuz tension remains a live secondary theme supporting the oil bid.
+- **Earnings before open**: No watchlist names reporting BMO today (CSCO/NBIS/CBRS timing mixed, none watchlist) — excluded by gate item 8/non-watchlist regardless.
+- **Economic calendar**: **July CPI + core CPI release 8:30 AM ET today** — this is a "day of major release" per strategy's timing rules. No FOMC/NFP today. July PPI tomorrow (Aug 13). Treating today as a hard timing block akin to the FOMC-day rule, absent a CPI-specific thesis (none exists).
+- **Sector momentum**: Energy and Industrials leading (~+0.2-1.2%), Utilities also strong; Communication Services and Consumer Discretionary weakest (~-0.4 to -0.9%); Technology roughly flat/mixed. Energy leadership is now favorable for a fourth consecutive week, but per standing lesson, sector momentum does not override the WTI price-floor gate condition.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $83.5-84.3 — still $6-11 below the $90-95 floor despite four straight weeks of favorable Energy sector momentum and an active Hormuz risk premium. Price floor remains the binding, unmet condition (gate item 6).
+2. **Today's earnings reporters** (CSCO, NBIS, CBRS and others): excluded by gate item 8/non-watchlist.
+3. **Timing**: today is July CPI day (8:30 AM ET) — a hard timing block per the "day of major release" rule, moot here since no candidate exists regardless.
+
+### Risk factors for today
+- July CPI at 8:30 AM ET is today's dominant event; a hot or cold surprise could move equities and rate expectations sharply. Zero open positions means no direct portfolio risk from the print itself.
+- Iran/Hormuz situation remains fluid; oil could still move sharply intraday on fresh headlines. Zero energy exposure means no direct risk either way.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists — per the 2026-08-07 LESSONS.md conclusion this is very likely test debris from an unrelated commit (`fcc89a4`, 2026-07-08), not an intentional pause. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent. Flagging again for user cleanup/deletion.
+- **Runway**: Day 54, Week 14 (Wednesday) — 54 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-day window closes ~2026-08-25 — roughly 9-10 trading days remain including today. Restating per prior escalations; no unilateral gate change made.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI still below the $90-95 floor despite favorable sector momentum and an active geopolitical premium); today's earnings reporters are non-watchlist/gate-8 exclusions; today is also a hard CPI-day timing block. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 11 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 7 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 14 — Day 3, Wednesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-11. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 14 — Day 3, Wednesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (-2.91% behind SPY as of 2026-08-07); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
