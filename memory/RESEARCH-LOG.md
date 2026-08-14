@@ -3593,3 +3593,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 12 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (-2.91% behind SPY as of 2026-08-07); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-14 — Pre-market Research (Day 56, Friday — end of Week 14)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-13
+
+### Market context
+- **WTI / Brent**: WTI clusters $81.2-82.8 across sources (MarketWatch $81.34, Bloomberg $81.22, Investing.com $82.75, crudeoilprices.today $82.81), Brent $87.0-88.5 (MarketWatch $87.11, Bloomberg $86.96, crudeoilprices.today $88.51). Broadly flat to yesterday's $81.5-84.3 cluster. Still $7-14 below the $90-95 XOM/Energy entry floor. One outlier source (crudeoilnow.com, dated Aug 11, showing WTI $93.26) is stale/inconsistent with every other same-day source and is disregarded per the standing practice of using the current-day cluster, not a single divergent print.
+- **S&P 500 futures**: Higher premarket, ~7,823-7,833 (+0.68% to +0.80%), consistent across CNN, Markets Insider, Investing.com. Market extending this week's gains toward fresh highs.
+- **VIX**: ~14.4-14.6 (Yahoo 14.42, Investing.com 14.55, MarketWatch 14.49, Cboe 14.62) — calm, consistent across sources, near multi-week lows.
+- **Today's catalysts**: **July retail sales (advance) + core retail sales at 8:30 AM ET** is today's dominant scheduled release, followed by **University of Michigan preliminary consumer sentiment at 10:00 AM ET**. July CPI (Aug 12) and July PPI (Aug 13) are both already out and came in tame/in-line — no CPI/PPI/NFP/FOMC today. Applied Materials (AMAT) reports after close; SEC 13F filing deadline is a passive/mechanical event, not a thesis. Broader backdrop: strong earnings season and AI/tech momentum continuing to support the tape, plus hopes of continued US-Iran diplomatic progress on Hormuz.
+- **Earnings before open**: Darden Restaurants (DRI), TD SYNNEX (SNX), Acuity Brands (AYI), Commercial Metals (CMC), Winnebago Industries (WGO), Nano-X Imaging (NNOX). None are watchlist names — excluded by gate item 8/non-watchlist.
+- **Economic calendar**: **July retail sales at 8:30 AM ET** (HIGH impact per capitalstreetfx — clearest read on consumer spending ahead of the Aug 28 Jackson Hole symposium) + **UMich consumer sentiment (prelim) at 10:00 AM ET**. Treating today as a soft timing caution (retail sales is a real market-moving print but not CPI/NFP/FOMC-tier), moot regardless since no candidate exists.
+- **Sector momentum**: Sources diverge by window. Same-session data (Bloomberg, StockTitan) shows Real Estate/Information Technology/Communication Services leading (+1.0% to +1.3%), with Energy negative (-0.30%) and Materials weakest (-0.70% to -0.81%) — Energy underperforming for the second straight session. A separate longer-horizon rotation model (Investing.com) still frames Energy as "Leading" alongside Consumer Staples/Industrials/Materials. Regardless of framing, sector momentum does not override the WTI price-floor gate condition (gate item 6), and the same-session data continues to weaken the case for Energy specifically.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $81.2-82.8 — still $7-14 below the $90-95 floor, essentially unchanged from yesterday. Same-session sector momentum has now been negative for Energy two sessions running, removing the supporting leg the thesis relied on for most of the summer. No entry.
+2. **Today's earnings reporters** (DRI, SNX, AYI, CMC, WGO, NNOX): excluded by gate item 8/non-watchlist.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- July retail sales (8:30 AM ET) is today's dominant scheduled print, with UMich sentiment following at 10:00 AM ET; a weak retail print could revive growth-slowdown concerns after a strong week for stocks. Zero open positions means no direct portfolio risk from either print.
+- Iran/Hormuz diplomatic talks reportedly hit a wall per Investing.com (Brent's 6-session, ~12% rally lost momentum on Aug 13); a fresh escalation or de-escalation headline could move oil sharply intraday. Zero energy exposure means no direct risk either way.
+- Root-level `PAUSED.flag` (non-standard location, content "test") persists — per the 2026-08-07 LESSONS.md conclusion this is very likely test debris from an unrelated commit, not an intentional pause. Does not trigger a kill switch since the standard `memory/PAUSED.flag` path remains absent. Flagging again for user cleanup/deletion.
+- **Runway**: Day 56, Week 14 (Friday, end of week) — 56 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-day window closes ~2026-08-25 — 6 trading days remain after today (Aug 17-21, 24-25). Restating per prior escalations; no unilateral gate change made.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI still $7-14 below the $90-95 floor) and now also on momentum (Energy negative two sessions running, first sustained break from the multi-week supportive trend); today's earnings reporters are non-watchlist/gate-8 exclusions; today carries a soft retail-sales-day timing caution, moot since no candidate exists. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 13 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 7 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 14 — Day 5, Friday, end of week) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-13. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 14 — Day 5, Friday, end of week)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (-2.91% behind SPY as of 2026-08-07); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
