@@ -1607,3 +1607,98 @@ No trades placed. Five trading days, five documented HOLD decisions:
 **Graduation criteria met: 2/7**
 
 Days running counter: **51** (Day 1 = 2026-05-27; Day 51 = 2026-08-07)
+
+---
+
+## Week ending 2026-08-14
+
+> **Note**: Routine triggered Sunday 2026-08-16 — not Friday. Week covers Monday Aug 10 through Friday Aug 14 (Days 52–56), the most recently completed trading week.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Aug 7 close) | $10,000.00 |
+| Ending portfolio (Friday Aug 14 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (SPY Aug 7 $773.26 → Aug 14 $776.34, confirmed) | +0.40% |
+| Bot vs S&P this week | −0.40% |
+| Phase P&L since launch (May 27, SPY $751.38 → $776.34) | Bot 0.00% vs SPY +3.32% — **behind by more than the 2% tolerance, and worse than last week's −2.91%** |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Live Alpaca confirmation: equity $10,000, cash $10,000, 0 positions, 0 orders, `balance_asof: 2026-08-14`.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. All five sessions ran full documentation cadence with a consistent, correctly-applied rejection reason.
+
+**Aug 10 (Day 52, Mon)**: Pre-market found zero candidates. XOM/Energy rejected — WTI ~$78, below the $90-95 floor. No timing block. Correct HOLD.
+
+**Aug 11 (Day 53, Tue)**: XOM/Energy rejected — WTI ~$82-84 despite a fresh Iran/Hormuz-driven surge and favorable Energy sector momentum; still below the floor. Per the 2026-06-12 lesson, geopolitical premiums are fragile — correctly not chased. Soft day-before-CPI caution was moot regardless. Correct HOLD.
+
+**Aug 12 (Day 54, Wed)**: Hard CPI-day timing block — no entry possible regardless of setup. WTI ~$83.5-84.3, still below floor. Correct HOLD.
+
+**Aug 13 (Day 55, Thu)**: XOM/Energy rejected on price (WTI $81.5-84.3) and, for the first time in ~4 weeks, on momentum — Energy turned mixed-to-negative. Soft PPI-day caution moot. Correct HOLD.
+
+**Aug 14 (Day 56, Fri)**: XOM/Energy rejected on both price (WTI $81.2-82.8) and now-negative momentum, second session running. Soft retail-sales-day caution moot. EOD snapshot explicitly discarded a Perplexity headline SPY figure that didn't match its own cited intraday sources — cited under honesty requirements rather than reported at face value. Correct HOLD, and a good catch.
+
+No trade-by-trade review possible — no trades. Every rejection this week was a specific, falsifiable data check (WTI vs. floor, momentum direction, timing block), not vague caution.
+
+### Self-grades (be HARSH)
+- Process discipline: **B+** — Every HOLD this week was gate-specific and consistent with the documented WTI floor even as oil traded within ~$6-9 of it. No forced trade despite a geopolitical spike (Aug 11) that has fooled the strategy before. Deduction: XOM/Energy has now been the *only* candidate framework screened for roughly 10 consecutive weeks — the research process has not built or maintained a second pipeline (Financials was closed in July; nothing has replaced it), so "zero candidates" this week partly reflects a narrow search, not just a genuinely quiet market.
+- Documentation quality: **B** — Research and EOD logs are consistent, specific, and this week included a strong honesty catch (Aug 14 rejecting a fabricated-looking SPY headline). Deduction: same-day SPY close data remains unreliable on multiple days across the phase (chronic, unresolved for months); WEEKLY-REVIEW.md itself has grown to 1,600+ lines with no rotation mechanism defined, unlike LESSONS.md's 500-line rule.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked daily, none fired, none missed, PDT count 0, full capital intact.
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.40% this week; cumulative phase now **−3.32%** vs SPY, outside the 2% "matched or beat" tolerance for the second consecutive week, and the gap widened rather than stabilized. With only ~6 trading days left in the 90-day window (closes ~Aug 25) and zero trades ever placed, this criterion is now very unlikely to close as anything but a failure.
+- **Overall: C** — Process discipline stayed genuinely sound this week — no rule was bent, no thesis was forced, and the Aug 14 data-honesty catch is a positive marker. But the mission ("beat SPY through real agent decisions," per the 2026-07-03 lesson) is now within one week of being unable to be tested at all, purely from a single-candidate research pipeline that never diversified. That is a process gap, not just a bad outcome — grading this above a C would understate how close the window is to closing on zero information about the agent's actual trading edge.
+
+### What worked (3-5 bullets)
+- No forced trades despite a real geopolitical WTI spike (Aug 11) that has previously fooled the strategy — the fragile-premium lesson held
+- Aug 14 EOD snapshot correctly rejected a headline SPY figure that didn't match its own cited sources, rather than reporting it at face value
+- CPI-day hard timing block applied cleanly with zero ambiguity
+- Full 5/5 day documentation cadence maintained; every rejection cited a specific, checkable number (WTI level, momentum direction)
+- Zero kill-switch violations; capital 100% preserved for the 12th consecutive week
+
+### What didn't work (3-5 bullets)
+- Zero trades in 56 consecutive trading days; phase P&L gap vs SPY widened to −3.32%, now two straight weeks outside the 2% graduation tolerance
+- The research pipeline has relied on a single candidate framework (XOM/WTI floor) for ~10 weeks with no second sector actively screened — "zero candidates" risks being a narrow-search artifact, not proof the market offered nothing
+- Root-level `PAUSED.flag` persists (see below) — this session traced its actual git history for the first time (see Key lessons) and it does not resolve cleanly
+- WEEKLY-REVIEW.md has grown past 1,600 lines with no rotation plan; TRADE-LOG.md is past 740 lines. Neither is unreadable yet, but both are trending toward the same context-budget problem LESSONS.md already has a rule for
+- Only ~6 trading days remain in the 90-day window with zero trades in either direction — the "handled a 5%+ drawdown" and "beat/matched SPY" graduation criteria are close to closing untestable by default
+
+### Key lessons (added to LESSONS.md)
+- Root-level `PAUSED.flag` is untracked by git (`git ls-files PAUSED.flag` returns nothing) even though `git log --all` shows a commit (`663e0964`, 2026-07-15, "pre-market research 2026-07-15") once added a file by that name — meaning the file on disk today is *not* the same persisted artifact prior sessions were dating, and could not survive a genuine fresh clone. It is very likely local session debris, not a deliberate or persisted pause action.
+- A single-candidate research pipeline sustained for ~10 weeks (XOM/WTI floor) means "no qualifying setups" is at risk of describing a narrow search rather than a quiet market — the process should maintain at least one live alternative-sector candidate at all times, not only immediately after a prior thesis formally closes.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Runway decision is now urgent, not advisory**: ~6 trading days remain. Recommend the user explicitly choose one of: (a) accept the mission goes untested on the "beat SPY" and "handle a 5%+ drawdown" criteria, (b) loosen buy-side gate calibration for the remaining window with specific reasoning, or (c) extend the 90-day evaluation window. This has been flagged with rising urgency since 2026-07-24; there is no longer enough runway left to defer the decision again.
+2. **Pipeline diversification**: consider requiring the pre-market routine to maintain a second, non-Energy candidate under active screen at all times (not just after a prior thesis formally closes), so "zero candidates" reflects the market rather than search breadth. Operational suggestion only — no gate-threshold change proposed.
+3. **Root-level `PAUSED.flag` cleanup**: now confirmed untracked by git and traceable only to an unrelated 2026-07-15 commit under the same filename. Recommend the user delete the local file directly; it does not appear to be a deliberate pause mechanism and has consumed several sessions' worth of (previously inconsistent) date-tracking effort for no functional purpose.
+4. **Weekly review scheduling (repeated)**: fired Sunday Aug 16, not Friday Aug 14. Same orchestration gap flagged in nearly every prior review since launch.
+5. **File size**: WEEKLY-REVIEW.md (1,600+ lines) and TRADE-LOG.md (740+ lines) have no rotation rule, unlike LESSONS.md's documented 500-line threshold. Suggest defining an equivalent archive convention before either file becomes a genuine context problem.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: ✅ (56 trading days; the root-level `PAUSED.flag` is confirmed untracked by git and not at the standard `memory/PAUSED.flag` path — it never represented an actioned kill switch or committed manual intervention)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: ❌ (bot 0.00% vs SPY +3.32% phase — behind by more than the 2% tolerance, second straight week, gap widening)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries yet — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all files readable; two files trending toward needing rotation, flagged above, but not yet a functional problem)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced)
+
+**Graduation criteria met: 4/7**
+
+Days running counter: **56** (Day 1 = 2026-05-27; Day 56 = 2026-08-14)
