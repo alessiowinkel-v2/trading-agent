@@ -3641,3 +3641,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 13 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (-2.91% behind SPY as of 2026-08-07); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-17 — Pre-market Research (Day 57, Monday — start of Week 15)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-14
+
+### Market context
+- **WTI / Brent**: WTI clusters $81.3-82.4 across sources (MarketWatch $82.12, Investing.com $81.71-81.72, Oilprice.com $82.43, crudeoilprices.today $81.72, oilpricelive.com $81.34), Brent $88.4-88.9 (crudeoilprices.today $88.38, TradingEconomics $88.61, Oilprice.com $88.85). Essentially flat to Friday's $81.2-82.8 cluster. Still $8-13 below the $90-95 XOM/Energy entry floor. One source (oilpricelive.com) flags stalled Strait-of-Hormuz reopening talks pushing WTI/Brent up >10% from last week's lows, but that is not reflected in today's own same-session price cluster — treating the headline as noise per the 2026-06-12 lesson on fragile geopolitical premiums, not as a floor-clearing signal.
+- **S&P 500 futures**: Roughly flat, ~7,805-7,823 (-0.22% to +0.15% across CNN, Barchart, MarketWatch, Yahoo). Market enters the week near record highs after last week's cooling-CPI/PPI-driven rally.
+- **VIX**: ~14.9-15.0 (Cboe 14.92, Yahoo 14.99) — up modestly from Friday's 14.25 close but still calm/low, no stress signal.
+- **Today's catalysts**: Cooling July CPI/PPI continuing to support "Fed done hiking" repricing; AI/semiconductor and data-center earnings strength still driving tech buying; broad risk sentiment constructive with indices near highs. No single dominant company-specific catalyst identified for today.
+- **Earnings before open**: H World Group (HTHT), BitFuFu (FUFU), Freightos (CRGO); InspireMD (NSPR) also cited pre-market by one source. None are watchlist/thesis names — excluded by gate item 8.
+- **Economic calendar**: No CPI/PPI/NFP/FOMC today — those already landed earlier this month (CPI Aug 12, PPI Aug 13, NFP Aug 7). Only scheduled US print is the **Empire State Manufacturing Index at 8:30 AM ET**, a regional/soft data point. FOMC minutes land Wednesday Aug 19 (not today) — flagging as this week's actual macro-tier event to watch, not today's.
+- **Sector momentum**: Directly contradictory across same-day sources — StockTitan's live heatmap shows Energy leading (+1.38%) with Health Care lagging (-0.63%), while a separate TradingView sector-quote screen shows Information Technology leading (+1.64%) and Energy down (-1.05%) in what appears to be the same session. No reliable same-day consensus on Energy direction today; treating sector momentum as unresolved/non-supportive either way pending a cleaner read, consistent with gate item 6 requiring a specific, checkable catalyst rather than a coin-flip data point.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $81.3-82.4 — still $8-13 below the $90-95 floor, unchanged from Friday. Sector momentum reading is contradictory across sources today (Energy shown both leading and lagging in same-day data), so even the momentum leg can't be called supportive. No entry.
+2. **Today's earnings reporters** (HTHT, FUFU, CRGO, NSPR): excluded by gate item 8/non-watchlist — no fundamentals thesis built for any of them.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today. AI/semiconductor momentum is real but is explicitly the "AI hype" pattern the strategy flags as not a thesis absent company-specific fundamentals and a dated catalyst.
+
+### Risk factors for today
+- FOMC minutes drop Wednesday (Aug 19) — this week's actual macro-tier event, not today's Empire State print. Zero open positions means no direct portfolio risk from either.
+- Sector momentum data for Energy is internally contradictory today (two sources, opposite signs, same session) — a reminder that a single source's sector read should not be treated as confirmed without cross-checking, a live example of exactly the kind of noise the WTI price-floor gate condition is designed to filter out.
+- Root-level `PAUSED.flag` (non-standard location, content "test") — per the 2026-08-16 LESSONS.md finding, this file is untracked by git (`git ls-files PAUSED.flag` returns nothing) and thus not a persisted artifact; does not trigger the standard kill switch since `memory/PAUSED.flag` (standard path) remains absent. Not re-verified fresh this session; carrying forward the 2026-08-16 conclusion since it already resolved (not just re-dated) the multi-week thread.
+- **Runway — most urgent point yet**: Day 57, Week 15 (Monday) — 56 consecutive trading days fully in cash since launch (May 27, through Aug 14), zero trades in either direction. 90-day calendar window closes ~2026-08-25 — today plus 6 more trading days remain (Aug 17, 18, 19, 20, 21, 24, 25 = 7 total including today). Per the Aug 14 weekly review, phase P&L is −3.32% behind SPY, outside the 2% graduation tolerance for two straight weeks, and the single-candidate (XOM/WTI-floor) pipeline has not been diversified despite being flagged in the last two weekly reviews and LESSONS.md (2026-08-16). Restating per prior escalations; no unilateral gate change made — this is now a one-week-remaining decision point for the user on runway/gate calibration per the Aug 14 review's "Strategy suggestions" #1.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI $8-13 below the $90-95 floor) and sector momentum is directly contradictory across today's own sources, not supportive; today's earnings reporters are non-watchlist/gate-8 exclusions; no CPI/PPI/FOMC/NFP today (FOMC minutes are Wednesday), so no timing block, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 14 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 14 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 15 — Day 1, Monday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-14. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 15 — Day 1, Monday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
