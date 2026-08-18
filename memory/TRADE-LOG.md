@@ -753,3 +753,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 57, start of Week 15 (Monday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-14). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 57 consecutive trading days fully in cash while SPY is up materially from baseline over the same period. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. Runway: 90-day window closes ~2026-08-25, 6 trading days remain (Aug 18-21, 24-25) with zero trades placed either direction since launch — 57/90 days elapsed with no trade is a strategy-effectiveness concern to raise at Friday's weekly review. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-08-18 — EOD Snapshot (Day 58, Tuesday — Week 15)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** -0.47% (Yahoo Finance historical table, close $768.96 vs prior close $772.67, same-day confirmed row with full OHLC, last-updated 2026-08-18)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 58, Week 15 (Tuesday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-08-17). 0 of 3 weekly trade slots used, 0 total trades since launch (May 27) — 58 consecutive trading days fully in cash while SPY fell today but remains up materially from baseline over the same period. Per pre-market research, zero candidates cleared the buy-side gate: XOM/Energy stays rejected on price (WTI $84.1-85.1, narrowest gap yet observed but still $5-11 below the $90-95 floor) and sector momentum read as contradictory/unresolved; today's earnings reporters (HD, BIDU, HSAI, AS, IQ, FN, KLAR, TOL) and the RDDT S&P 500 inclusion (mechanical passive-flow, not a fundamentals catalyst) are non-watchlist/gate exclusions. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard location, content "test", first committed 2026-07-05) persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) absent — flagging again for user cleanup. Runway: 90-day window closes ~2026-08-25, 5 trading days remain (Aug 19-21, 24-25) with zero trades placed either direction since launch — 58/90 days elapsed with no trade remains a strategy-effectiveness concern for Friday's weekly review. No kill switches triggered.
+**Active kill switches:** none.
