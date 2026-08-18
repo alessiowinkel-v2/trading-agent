@@ -3689,3 +3689,52 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 14 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-18 — Pre-market Research (Day 58, Tuesday — Week 15)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-17
+
+### Market context
+- **WTI / Brent**: WTI clusters $84.1-85.1 (Investing.com $84.14, crudeoilprices.today $85.05, Oilprice.com $85.06), Brent $88.9-91.4 (Yahoo $88.86, Oilprice.com $91.40, crudeoilprices.today $91.33). This is $5-11 below the $90-95 XOM/Energy entry floor — the narrowest gap observed in this thesis's ~11-week history (prior sessions ran $7-14 below). Still below floor; no entry.
+- **S&P 500 futures**: Roughly flat to slightly lower, -0.13% to -0.54% across sources (Yahoo -0.13%, Businessinsider -0.15%, Investing.com -0.45% to -0.48%, Barchart -0.54%), ~7,727-7,795. Market opens near record highs after a mostly-flat Monday.
+- **VIX**: ~15.0-15.9 (Yahoo 15.03, MarketWatch 14.98, Cboe 15.90, Investing.com 15.07) — up modestly from Friday's 14.25 close but still calm, no stress signal.
+- **Today's catalysts**: US Import/Export Price Indices at 8:30 AM ET (not a hard-block-tier print — CPI/PPI/NFP already landed Aug 7/12/13). Reddit (RDDT) joins the S&P 500 before today's open, replacing AvalonBay — forced index-fund buying estimated ~$2.9B; this is a mechanical/passive-flow event, not a fundamentals catalyst per the 2026-07-10 lesson, and RDDT is not a watchlist name regardless. Large earnings cluster (Home Depot, Baidu, Toll Brothers, Keysight, others) — none are watchlist/thesis tickers.
+- **Earnings before open**: Home Depot (HD), Baidu (BIDU), Hesai Group (HSAI), Amer Sports (AS), Iqiyi (IQ), Fabrinet (FN), Klarna (KLAR), others. None are watchlist names — excluded by gate item 8/non-watchlist.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today. Only US prints are Import/Export Prices (8:30 AM ET) and Industrial Production/Capacity Utilization (9:15 AM ET) — neither is hard-block tier per strategy. FOMC minutes land tomorrow, Wednesday Aug 19 — flagging as this week's actual macro-tier event, not today's.
+- **Sector momentum**: Contradictory again across same-day sources. StockTitan's live heatmap shows Energy leading intraday (broad market breadth weak, 126 advancers vs 367 decliners) while a longer-horizon Investing.com rotation model also frames Energy/Consumer Staples/Industrials/Materials as "Leading." A separate weekly recap flags Information Technology as the standout performer with a +7.1% weekly gain (reported for a different week window, not directly comparable). No clean same-day consensus that Energy momentum is durable; treating as unresolved per gate item 6's requirement for a specific, checkable catalyst rather than a coin-flip data point.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $84.1-85.1 — still $5-11 below the $90-95 floor. Gap has narrowed meaningfully (closest yet in this thesis's history) but has not cleared. Sector momentum reading remains contradictory/unresolved across today's own sources. No entry.
+2. **Today's earnings reporters** (HD, BIDU, HSAI, AS, IQ, FN, KLAR, TOL): excluded by gate item 8/non-watchlist.
+3. **RDDT S&P 500 inclusion**: mechanical/passive-flow event (forced index buying), not a company-fundamentals catalyst — excluded per the 2026-07-10 lesson on passive-flow events.
+4. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- Import/Export Price Indices (8:30 AM ET) and Industrial Production (9:15 AM ET) are today's scheduled prints — neither is CPI/PPI/FOMC/NFP tier, so no timing block, but a surprise could still move yields/dollar intraday. Zero open positions means no direct portfolio risk.
+- FOMC minutes drop tomorrow (Aug 19) — this week's actual macro-tier event. Zero open positions means no direct risk from either print.
+- **Correction on root-level `PAUSED.flag`**: the 2026-08-16 LESSONS.md entry concluded this file was untracked git debris that "could not survive a fresh clone." That conclusion is **wrong** — verified fresh this session, `git ls-files PAUSED.flag` returns the file (it IS tracked), and `git log --all --diff-filter=A --format='%H|%ad|%s' -- PAUSED.flag` shows it was committed in `9225051`, dated **2026-07-16**, message "EOD snapshot 2026-07-16" (content: "test"). It persists on every fresh clone. It still does **not** trigger a kill switch, since KILL-SWITCHES.md's manual switch is keyed to the standard path `memory/PAUSED.flag` (confirmed absent via `git ls-files memory/PAUSED.flag`, empty result), not the root path. Flagging for user cleanup: either delete the tracked root file or confirm intent. Not editing LESSONS.md unilaterally this session — flagging the correction here for the next weekly review.
+- **Runway**: Day 58, Week 15 (Tuesday) — 57 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-day calendar window closes ~2026-08-25 — 5 trading days remain after today (Aug 19-21, 24-25). Restating per prior escalations; no unilateral gate change made.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI $5-11 below the $90-95 floor, though the narrowest gap yet) and sector momentum remains contradictory/unresolved; today's earnings reporters and the RDDT index-inclusion flow are non-watchlist/gate-8/gate-6 exclusions; no CPI/PPI/FOMC/NFP today, so no hard timing block, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 17 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 14 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 15 — Day 2, Tuesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-17. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers. (Root-level `PAUSED.flag` persists, tracked but non-standard path — see risk factors above.)
+
+**Weekly trade slots**: 0/3 used (Week 15 — Day 2, Tuesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
