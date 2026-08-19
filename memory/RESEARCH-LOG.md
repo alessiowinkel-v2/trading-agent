@@ -3738,3 +3738,52 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 17 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-19 — Pre-market Research (Day 59, Wednesday — Week 15)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-18
+
+### Market context
+- **WTI / Brent**: WTI clusters $82.6-85.7 (Bloomberg $82.57, Investing.com $84.99-85.61, MarketWatch $85.74, CNBC $84.92), Brent $88.9-91.6 (Bloomberg $88.88, TradingEconomics $91.44, Investing.com $90.85). WTI still $4.3-7.4 below the $90-95 XOM/Energy entry floor — narrower than yesterday's $5-11 gap but not cleared. No entry.
+- **S&P 500 futures**: Mixed/roughly flat-to-lower, -0.55% to +0.01% across sources (Investing.com -0.55%, Yahoo -0.53%, Barchart +0.01% at 7,714.50); market near record highs after Tuesday's tech-led pullback.
+- **VIX**: ~15.7-15.9 (Yahoo 15.71, MarketWatch 15.80, Cboe 15.86) — up from Tuesday's 15.19 close but still calm, no stress signal.
+- **Today's catalysts**: **FOMC Minutes (July 28-29 meeting) release at 2:00 PM ET** — the meeting itself already happened (held rates 3.50-3.75%, 3-way dissent); this is the minutes release, not a new rate decision, so not a literal "day of FOMC announcement" per strategy, but still this week's key macro-tier event — flagging as an afternoon volatility risk. AI/semiconductor "crowded trade" unwind cited across sources (Philly Semi Index pulled back from a technical bull mark); oil/rate sensitivity reportedly rotating traders from tech into energy/health care Tuesday.
+- **Earnings before open**: Analog Devices (ADI), Target (TGT), TJX (TJX), Lowe's (LOW), Estée Lauder (EL), plus smaller names (WB, ZIM, VIK, YMM, OPRA, KC). None are watchlist/thesis names — excluded by gate item 8.
+- **Economic calendar**: No CPI/PPI/NFP today (CPI Aug 12, PPI Aug 13, NFP Aug 7 already landed). Only scheduled item is FOMC Minutes at 2:00 PM ET — not a hard-block tier print (CPI/PPI/FOMC-decision/NFP) per strategy, but the one macro event of the week.
+- **Sector momentum**: Contradictory again across same-day sources. MarketWatch/Fidelity snapshots show Energy leading (+1.1% to +1.8%); TradingView's snapshot shows Information Technology leading (+1.64%) with Industrials negative (-0.73%); Investing.com's rotation model frames Energy/Staples/Industrials/Materials as "Leading." No clean same-day consensus on Energy strength; treating as unresolved per gate item 6.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $82.6-85.7 — still $4.3-7.4 below the $90-95 floor. Gap continues to narrow (closest range yet in this thesis's ~12-week history) but has not cleared. Sector momentum reading remains contradictory/unresolved across today's own sources. No entry.
+2. **Today's earnings reporters** (ADI, TGT, TJX, LOW, EL): excluded by gate item 8/non-watchlist — no fundamentals thesis built for any of them.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today. AI/semiconductor pullback narrative is a risk-off signal, not a buy thesis.
+
+### Risk factors for today
+- FOMC Minutes (2:00 PM ET) is this week's macro-tier event — not a hard timing block (not CPI/PPI/FOMC-decision/NFP) but could move rate-sensitive sectors intraday. Zero open positions means no direct portfolio risk.
+- AI/semiconductor "crowded trade" unwind cited across multiple sources today — a reminder that the "AI hype" pattern the strategy explicitly excludes as a thesis is now showing on the downside too; not a reason to chase Energy/Health Care rotation without a specific company catalyst.
+- Sector momentum data is internally contradictory again today (Energy vs. Info Tech leading, depending on source) — consistent with the multi-week pattern; not treating any single source's read as confirmed.
+- **Runway — critical**: Day 59, Week 15 (Wednesday) — 58 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-day calendar window closes ~2026-08-25 — 4 trading days remain after today (Aug 20-21, 24-25). Per the Aug 14 weekly review, phase P&L was −3.32% behind SPY, outside the 2% graduation tolerance. This has been escalated in each of the last several weekly reviews and in LESSONS.md (2026-08-16); restating without unilateral gate change.
+- Root-level `PAUSED.flag` (non-standard path) not re-verified this session (pre-market timing priority on market data); prior sessions confirmed it does not trigger the standard kill switch since `memory/PAUSED.flag` (standard path) remains absent — carrying forward.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI $4.3-7.4 below the $90-95 floor, though the narrowest gap yet) and sector momentum remains contradictory/unresolved; today's earnings reporters are non-watchlist/gate-8 exclusions; no CPI/PPI/NFP today and today's FOMC Minutes release is not a hard timing block per strategy, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 18 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 14 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 15 — Day 3, Wednesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-18. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 15 — Day 3, Wednesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
