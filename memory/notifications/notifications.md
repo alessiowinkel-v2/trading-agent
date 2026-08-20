@@ -921,3 +921,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Day 60, Week 15 — 4 trading days left in 90-day window (Aug 20-21,24-25); still 0 candidates, phase lag critical
+
+---
+## 2026-08-20 19:39 UTC
+EOD 2026-08-20
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: ~-0.3 to -0.6% today (unconfirmed close), -3.32% phase (as of Aug 14 review)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: pre-market scan; 3 trading days left in 90-day window (Aug21,24,25), 60 days at zero trades, weekly review Fri
