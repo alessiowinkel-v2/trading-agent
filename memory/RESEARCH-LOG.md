@@ -3787,3 +3787,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 18 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-20 — Pre-market Research (Day 60, Thursday — Week 15)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-19
+
+### Market context
+- **WTI / Brent**: WTI clusters $84.2-85.9 (Investing.com 84.49/85.10, Bloomberg 84.40, CNBC 85.62, MarketWatch/oilpricelive 84.66), Brent $91.3-92.2 (Oilprice.com 91.83, TradingEconomics 91.86, Investing.com 91.86-92.23). WTI still $4.1-5.8 below the $90-95 XOM/Energy entry floor — roughly in line with recent sessions, not a new low or new high. No entry.
+- **S&P 500 futures**: Modestly higher premarket, +0.1% to +0.5% across sources (CNBC +12.5 pts/~fair value, MarketWatch/Yahoo/Bloomberg ~7,730-7,747, +0.16% to +0.48%), pointing to a flat-to-slightly-higher open near record highs.
+- **VIX**: ~15.1-15.4 (MarketWatch 15.13, Yahoo 15.26, Investing.com 15.39) — calm, continuing to ease off last week's modest bump. No stress signal.
+- **Today's catalysts**: Initial jobless claims (8:30 AM ET), Philadelphia Fed manufacturing survey, Conference Board Leading Index (10:00 AM ET), a 30-year TIPS auction, and FOMC Minutes (2:00 PM ET). Biggest stock-specific catalyst is **Walmart** earnings before the open (consumer-spending bellwether), plus Alibaba, Deere, Futu, NetEase pre-open and Ross Stores/Flowers Foods after close. None are watchlist/thesis tickers.
+- **Earnings before open**: Walmart (WMT), Alibaba (BABA), Deere (DE), Advance Auto Parts (AAP), NetEase (NTES), plus a long tail of smaller/ADR names (FUTU, ATHM, DQ, SCSC, AEG, HOV, JG, etc.). None are watchlist names — excluded by gate item 8/non-watchlist.
+- **Economic calendar**: No CPI or PPI today (next PPI print is Sep 10; no CPI scheduled). FOMC Minutes are on today's calendar per one source, though the underlying meeting and its minutes release were already covered in Aug 19 research — flagging as a likely stale/recycled date in that source rather than treating it as a fresh hard block; not CPI/PPI/FOMC-decision/NFP tier in either case. Initial jobless claims is the only jobs-adjacent print and is not hard-block tier per strategy.
+- **Sector momentum**: For the first time in several weeks, a clear same-day consensus: **Energy was the top-performing S&P 500 sector last week, its best week in almost four years**, with Technology/semiconductors also showing stock-level leadership (AI names driving index highs) and Financials/Real Estate/Consumer Discretionary improving. Utilities and Health Care lag. This resolves the "contradictory sector momentum" problem flagged in the last several sessions — Energy momentum is now genuinely supportive — but WTI itself still hasn't cleared the $90-95 XOM/Energy price floor, so gate item 6 (dated company-specific catalyst) remains unmet on price even with momentum now aligned.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $84.2-85.9 — still $4.1-5.8 below the $90-95 floor. Sector momentum has now turned clearly supportive (Energy's best week in ~4 years) but the price floor itself, set on FCF economics, has not cleared. Per the 2026-06-12 lesson, momentum alone doesn't override an unmet price floor — no entry.
+2. **Today's earnings reporters** (WMT, BABA, DE, AAP, NTES): excluded by gate item 8/non-watchlist — no fundamentals thesis built for any of them, despite Walmart being a genuine macro bellwether.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- FOMC Minutes / claims / Philly Fed are today's scheduled items — none are hard-block tier (CPI/PPI/FOMC-decision/NFP). Zero open positions means no direct portfolio risk regardless.
+- Walmart's earnings reaction could move consumer-discretionary/staples sentiment broadly; not actionable without a specific thesis ticker.
+- **Runway — critical, last full week**: Day 60, Week 15 (Thursday) — 59 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. 90-day calendar window closes ~2026-08-25 — only 3 trading days remain after today (Aug 21, 24, 25). Per the Aug 14 weekly review, phase P&L was −3.32% behind SPY, outside the 2% graduation tolerance. Energy sector momentum turning supportive this week is notable but does not change the gate-6 price-floor rejection. This is now effectively the final window for any trade to occur in Phase 1's evaluation period; restating without unilateral gate change — this is the top item for Friday's weekly review.
+- Root-level `PAUSED.flag` (non-standard path, content "test") confirmed still present via direct check this session (`ls -la PAUSED.flag`, `git ls-files PAUSED.flag` shows tracked). Does not trigger the standard kill switch since `memory/PAUSED.flag` (standard path) remains absent, confirmed via account/position checks showing normal trading status.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy stays rejected on price (WTI $4.1-5.8 below the $90-95 floor) even though sector momentum has turned clearly supportive this week; today's earnings reporters are non-watchlist/gate-8 exclusions; no CPI/PPI/NFP today, so no hard timing block, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 19 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 14 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 15 — Day 4, Thursday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-19. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 15 — Day 4, Thursday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
