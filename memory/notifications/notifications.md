@@ -932,3 +932,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: pre-market scan; 3 trading days left in 90-day window (Aug21,24,25), 60 days at zero trades, weekly review Fri
+
+---
+## 2026-08-21 19:39 UTC
+EOD 2026-08-21
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: ~+0.3-0.5% today (unconfirmed close), phase -3.32% (as of last review)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: Day 62 (Mon 8/24), 90-day window closes ~8/25; XOM/Energy gate still not cleared (WTI needs $90+)
