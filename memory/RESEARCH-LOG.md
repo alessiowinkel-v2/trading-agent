@@ -3835,3 +3835,51 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 19 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-21 — Pre-market Research (Day 61, Friday — end of Week 15)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-20
+
+### Market context
+- **WTI / Brent**: WTI clusters $86.17-86.50 (Investing.com 86.17, Oilprice.com 86.50, TradingEconomics 86.176, oilpriceapi.com 86.35 as of prior day), Brent $93.18-93.60 (Oilprice.com 93.60, TradingEconomics 93.18-93.27, oilpriceapi.com 93.31). This is the narrowest gap yet observed to the $90-95 XOM/Energy entry floor — roughly $3.5-3.8 below the $90 low end (vs $4.1-5.8 yesterday), though still $8.5-8.8 below the $95 high end. Floor still not cleared. No entry.
+- **S&P 500 futures**: Mixed/contradictory across sources, roughly -0.55% to +0.30% depending on feed and timestamp (Investing.com -0.55% at delayed quote, Markets Insider/Yahoo mixed intraday reads clustering 7,700-7,730); no clean same-source premarket consensus, treating as roughly flat.
+- **VIX**: ~15.7-16.0 (Yahoo/CNBC 15.72, TradingView 15.82, MarketWatch 15.83-16.01, Cboe 16.01) — up modestly from Wednesday's ~14.9 close but still calm, no stress signal.
+- **Today's catalysts**: Light macro day. S&P Global PMI Manufacturing/Services (preliminary, Aug) at 9:45 AM ET is the main scheduled US data point; BLS State Employment and Unemployment (state-level, July) at 10:00 AM ET. Initial jobless claims already landed Thursday (Aug 20). No CPI/PPI/FOMC-decision/NFP today — not a hard timing block. FOMC Minutes already released Aug 19 (covered in prior sessions).
+- **Earnings before open**: BJ's Wholesale Club (BJ), Ubiquiti (UI), KE Holdings (BEKE), Buckle (BKE), ZKH Group (ZKH), China Online Education (COE) — none are watchlist/thesis names, excluded by gate item 8.
+- **Economic calendar**: Next CPI is Sep 11, next PPI date not confirmed in sources but not today, next NFP is Sep 4. No hard-block tier release today.
+- **Sector momentum**: Clear consensus this week (resolving the prior weeks' contradictory reads): **Energy was the standout S&P 500 sector, +7.61% to +7.67% for the week** (MSN/Dow Jones Market Data, myweeklystock), its best week in ~4 years (carried from Aug 20 research); Utilities also positive (+1.58%); Consumer Discretionary/Cyclical (-1.41%) and Materials (-0.62%) weakest. Momentum for Energy is now unambiguously supportive.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $86.17-86.50 — narrowest gap yet to the $90-95 floor (~$3.5-3.8 below the $90 low end) and sector momentum is now unambiguously supportive (best week in ~4 years). Per the 2026-06-12 and 2026-08-20 lessons, momentum alone does not override an unmet price floor set on FCF economics — the floor itself has still not cleared. No entry.
+2. **Today's earnings reporters** (BJ, UI, BEKE, BKE, ZKH, COE): excluded by gate item 8/non-watchlist — no fundamentals thesis built for any of them.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- Light macro calendar (prelim PMIs, state employment data) — none hard-block tier. Zero open positions means no direct portfolio risk regardless.
+- WTI/XOM gap has now narrowed for several consecutive sessions with Energy momentum clearly supportive — this thesis is the closest it has been to clearing gate 6 in its ~12-week history. Worth flagging as the top candidate to watch Monday if WTI continues toward $90, but not close enough today.
+- **Runway — critical, final stretch**: Day 61, end of Week 15 (Friday) — 60 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. Per the Aug 20 entry, only Aug 21, 24, 25 remained as trading days before the 90-day window closes ~2026-08-25; today is the first of those three, two trading days (Aug 24-25) remain after today. Per the Aug 14 weekly review, phase P&L was −3.32% behind SPY, outside the 2% graduation tolerance. This has been escalated repeatedly in LESSONS.md and weekly reviews; restating without unilateral gate change.
+- Root-level `PAUSED.flag` (non-standard path, content "test") re-verified fresh this session: `git ls-files PAUSED.flag` shows it **is tracked** (contrary to the 2026-08-16 finding of untracked), and `git log --all --diff-filter=A --format='%H|%ad|%s' -- PAUSED.flag` shows the add commit is `096736bc182f6d9646340dafc3252185c5d29a8` dated **2026-07-21** ("pre-market research 2026-07-21") — a different date than every prior session's claim. Still does not trigger the standard kill switch since `memory/PAUSED.flag` (standard path) remains absent, confirmed via account check.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy has its narrowest-ever gap to the $90-95 floor and unambiguously supportive sector momentum, but the price floor itself has still not cleared; today's earnings reporters are non-watchlist/gate-8 exclusions; no CPI/PPI/NFP today, so no hard timing block, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 20 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 14 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 15 — Day 5, Friday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-20. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 15 — Day 5, Friday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
