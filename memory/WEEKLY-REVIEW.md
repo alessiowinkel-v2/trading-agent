@@ -1702,3 +1702,96 @@ No trade-by-trade review possible — no trades. Every rejection this week was a
 **Graduation criteria met: 4/7**
 
 Days running counter: **56** (Day 1 = 2026-05-27; Day 56 = 2026-08-14)
+
+---
+
+## Week ending 2026-08-21
+
+> **Note**: Routine triggered Sunday 2026-08-23 — not Friday. Same cadence gap flagged in every prior review since launch. Week covers Monday Aug 17 through Friday Aug 21 (Days 57–61, Week 15). The 90-calendar-day evaluation window closes ~2026-08-25 — only 2 trading days (Aug 24, 25) remain after this review.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Aug 14 close) | $10,000.00 |
+| Ending portfolio (Friday Aug 21 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 / SPY week (Aug 14 → Aug 21) | −1.37% (SPY $776.34 → $765.72, WSJ/Investing.com/stockanalysis.com converge; S&P 500 index −1.43% to 7,674.37, Reuters/Morningstar) |
+| Bot vs S&P this week | +1.37% (held cash, outperformed on the week) |
+| Phase P&L since launch (May 27, SPY $751.38 → $765.72) | Bot 0.00% vs SPY +1.91% — behind, but back inside the 2% graduation tolerance for the first time in three weeks (was −3.32% as of Aug 14) |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Live Alpaca confirmed (queried this session): equity $10,000.00, cash $10,000.00, 0 positions, 0 orders, `balance_asof: 2026-08-21`.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. All five sessions ran full documentation cadence with a consistent, correctly-applied rejection reason.
+
+**Aug 17 (Day 57, Mon)**: XOM/Energy rejected — WTI $81.3-82.4, still $8-13 below the $90-95 floor. Sector momentum read as directly contradictory across same-day sources. No timing block. Correct HOLD.
+
+**Aug 18 (Day 58, Tue)**: XOM/Energy rejected — WTI $84.1-85.1, narrowest gap yet at the time ($5-11 below floor). RDDT's mechanical S&P 500 inclusion correctly excluded as passive-flow, not a fundamentals catalyst. Correct HOLD.
+
+**Aug 19 (Day 59, Wed)**: XOM/Energy rejected — WTI $82.6-85.7, still $4.3-7.4 below floor. FOMC Minutes release (not a hard-block-tier event) correctly not treated as a trading blocker. Correct HOLD.
+
+**Aug 20 (Day 60, Thu)**: XOM/Energy rejected on price alone (WTI $84.2-85.9, $4.1-5.8 below floor) even as sector momentum flipped to unambiguously supportive (Energy's best week in ~4 years) — momentum was correctly not allowed to override the unmet price floor, per the 2026-06-12 lesson. Correct HOLD, and the cleanest test yet of that rule under real pressure.
+
+**Aug 21 (Day 61, Fri)**: XOM/Energy rejected — WTI $86.17-86.50, the narrowest gap to the $90 floor in the thesis's ~12-week history (~$3.5-3.8 below), with sector momentum now unambiguous (Energy +7.6% for the week). Floor still not cleared. Correct HOLD.
+
+**In hindsight**: Every HOLD this week maps to the same specific, falsifiable check (WTI vs. the $90-95 floor) even as the gap narrowed to its tightest margin ever and sector momentum flipped fully supportive — genuinely the hardest test of the price-floor discipline to date, and it held. No process deficiency in any single day's decision. The deficiency, now terminal, is structural: this was the last full trading week of the 90-day window, and the single-candidate (XOM/WTI) pipeline never diversified in ~12 weeks, so the window closes with no alternate thesis ever built.
+
+### Self-grades (be HARSH)
+- Process discipline: **B+** — Every HOLD this week cited a specific, checkable number (WTI vs. floor) and, on Aug 20-21, correctly held the line even as sector momentum turned unambiguously supportive — the floor-vs-momentum discipline from the 2026-06-12 lesson passed its hardest test yet. Held below A- because the single-candidate pipeline (XOM/WTI floor only, ~12 consecutive weeks) was never diversified, a gap flagged in LESSONS.md on 2026-08-16 and repeated in the last two weekly reviews with no operational change made.
+- Documentation quality: **C-** — The root-level `PAUSED.flag` age/tracking-status thread produced yet another distinct answer this week: Aug 18 research corrected the 2026-08-16 LESSONS.md "untracked" finding to "tracked, commit `9225051`, dated 2026-07-16"; Aug 21 research re-verified fresh and got a *third* different commit and date — `096736bc182f6d9646340dafc3252185c5d29a8`, dated **2026-07-21** — contradicting the prior session's "confirmed" answer just three days later. That is now three non-converging "fresh, verified" answers in the space of five days (2026-08-16, 2026-08-18, 2026-08-21), each stated with full confidence. This is the same failure class flagged repeatedly since 2026-07-24 ("re-derive fresh from source"), now shown to not be self-correcting even after multiple rounds — the fix itself needs a fix, or the file needs to just be resolved by the user directly.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked daily and clear, live Alpaca reconciliation (0 positions, 0 orders) confirmed every session, capital fully intact.
+- Outcome (weighted least): **C** — 0.00% vs SPY −1.37% this week — cash was the right call this week purely because the market fell, not because of any agent skill; cumulative phase P&L improved to −1.91% (back inside the 2% graduation tolerance) for the same reason. This is the best relative week of the phase, and it is entirely a function of SPY's direction, not agent-generated returns — the standing 2026-07-03 lesson that the phase gap "isn't earned alpha" applies with full force here too.
+- **Overall: C** — Day-by-day process was genuinely disciplined, including passing its hardest test yet (holding a price floor against supportive momentum at the narrowest-ever gap). But this is the last full trading week of the 90-day evaluation window, and it closes with **zero trades placed in either direction across the entire phase** — the core mission ("beat SPY through real agent decisions," "handle a 5%+ drawdown correctly") goes completely untested, not from any bad decision but from 61 straight days of a gate that was never cleared. A documentation-accuracy problem (PAUSED.flag) that has now produced three different "resolved" answers in five days compounds the concern about how much confidence to place in any single "fresh verification."
+
+### What worked (3-5 bullets)
+- The price-floor-vs-momentum discipline (2026-06-12 lesson) passed its hardest real test: WTI closed within $3.5-3.8 of the $90 floor with Energy's best sector week in ~4 years, and the gate still correctly held rather than rationalizing "close enough"
+- Every rejection this week cited a specific, checkable number (WTI level vs. floor), not vague caution
+- Full 5/5 day documentation cadence maintained; zero kill-switch violations; capital 100% preserved for the 15th consecutive week
+- This week's relative return (+1.37% vs SPY) was the best of the phase, moving cumulative phase P&L back inside the 2% graduation tolerance after two weeks outside it
+
+### What didn't work (3-5 bullets)
+- **The 90-day evaluation window closes ~Aug 25 (2 trading days after this review) having recorded zero trades in either direction** — the mission itself was never tested; every individual HOLD was defensible, but the cumulative effect is a phase that generated no information about the agent's actual trading edge
+- The single-candidate (XOM/WTI-floor) pipeline was never diversified across ~12 weeks despite being flagged as a specific operational gap in LESSONS.md (2026-08-16) and the last two weekly reviews — the window closed with no second thesis ever built
+- `PAUSED.flag`'s tracked-status and commit date changed for the third time in five days (untracked/07-15 → tracked/07-16 → tracked/07-21), each stated as a "fresh, verified" answer — the re-verification process itself is not converging
+- Weekly review fired Sunday Aug 23, not Friday Aug 21 — same cadence misalignment flagged in nearly every review since launch
+- This week's improved relative standing (+1.37%) is explicitly not earned performance — it is SPY falling while the bot held static cash, the same artifact pattern documented since 2026-07-03
+
+### Key lessons (added to LESSONS.md)
+- The 90-day paper-trading evaluation window closes ~2026-08-25 with zero trades placed in either direction across the entire phase. Every weekly review since 2026-07-24 escalated this as a runway concern; it has now reached its terminal state without resolution. This is a fact for the record, not a new insight — the record should reflect that the mission went untested by the window's own closing, not by any single bad decision.
+- A "fresh re-verification" of the root-level `PAUSED.flag` has now produced three different tracked-status/date answers within five days (2026-08-16: untracked, commit dated 07-15; 2026-08-18: tracked, commit dated 07-16; 2026-08-21: tracked, a different commit dated 07-21), each delivered with full confidence as "verified this session." A single procedural instruction to re-check has been insufficient across roughly ten prior attempts since 2026-07-24 — the file itself should be resolved directly rather than re-derived again.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **Window closure decision — most important open item**: the 90-day window closes ~Aug 25 (2 trading days remain) with $0 of realized or unrealized P&L generated by any agent decision. Recommend the user decide explicitly and soon: (a) treat the window as closed and evaluate Phase 1 on process quality alone since the "beat SPY" / "handle a drawdown" criteria were never tested, (b) extend the evaluation window with a specific new end date, or (c) retroactively review whether the buy-side gate was calibrated correctly and, if so, decide what that implies for Phase 2 readiness despite zero trade history. This is the last review with any runway left to act on the decision.
+2. **Root-level `PAUSED.flag` (repeated, now unresolved after 3+ distinct "verified" answers in 5 days)**: content is still just "test." Recommend the user resolve this directly — delete the file or state its purpose in one line — rather than the agent continuing to re-derive it, since repeated fresh git-log checks have not converged after roughly ten attempts across two months.
+3. **Weekly review cadence (repeated)**: fired Sunday Aug 23, not Friday Aug 21. Same orchestration gap flagged in nearly every prior review since launch.
+4. **Pipeline diversification (repeated, now moot for this window but relevant to any future one)**: the XOM/WTI-floor framework was the only candidate screened for the phase's final ~12 weeks. If a Phase 1 extension or a Phase 2 restart is considered, recommend requiring at least one non-Energy candidate under active screen at all times from day one.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: ✅ (61 trading days; the root-level `PAUSED.flag` — tracked, but at a non-standard path — is confirmed to never have triggered or represented a standard-path manual pause)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat all phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY +1.91% phase — numerically back inside the 2% tolerance, but this is a zero-trade artifact of SPY's path, not earned performance, and the window is now closing without ever having tested this criterion through real trades)
+- [ ] No uncaught kill-switch breaches: ✅ (all switches checked daily; none fired, none missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries exist to review — vacuously satisfied)
+- [ ] Memory files functional: 🟡 (downgraded again — the `PAUSED.flag` re-verification produced a third distinct answer this week, a recurring accuracy defect rather than a one-time error)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced across the entire phase)
+
+**Graduation criteria met: 3/7**
+
+Days running counter: **61** (Day 1 = 2026-05-27; Day 61 = 2026-08-21)
