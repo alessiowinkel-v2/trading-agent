@@ -3883,3 +3883,52 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 20 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (−3.32% behind SPY as of 2026-08-14 weekly review); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-08-24 — Pre-market Research (Day 62, Monday — start of Week 16)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-21 (prior Friday close — normal for Monday pre-market)
+
+### Market context
+- **WTI / Brent**: Sharp reversal overnight/today. WTI same-day (Aug 24) quotes cluster $84.32-85.65 (Investing.com $85.11-85.65 down ~2.2% from Friday's $87.06 close, oilprice.com $85.63 down 1.64%, stockmarketwatch $84.32 down 0.72% from $84.93), vs Friday's $86.17-87.06 range — the gap to the $90-95 XOM/Energy floor has widened back to roughly $4.4-5.7 below $90, undoing most of last week's narrowing (Friday was the narrowest-ever gap at ~$3.5-3.8). Brent similarly fell to ~$93 after "a sharp weekly rally, as investors took profits ahead of an expected US announcement on tougher sanctions against Iran" (TradingEconomics) — i.e., today's move is profit-taking/de-risking around a geopolitical headline, not a fresh fundamentals catalyst. No entry.
+- **S&P 500 futures**: Roughly flat to slightly negative, -0.15% to +0.15% across sources (MarketWatch -0.05%, Investing.com -0.15%, Bloomberg ~7,689); no clean directional consensus, treating as flat.
+- **VIX**: 15.13 (Friday close, -5.50% on the day) — calm, no stress signal.
+- **Today's catalysts**: Light macro Monday. Bond-yield pressure and Fed/Jackson Hole policy signals cited broadly as this week's overhang; **Nvidia earnings (Wed after close)** flagged repeatedly across sources as the week's single biggest catalyst/bellwether for AI trade sentiment. New US sanctions on Iran (announced/expected) is today's specific headline, driving oil's pullback. None of this is a company-specific, dated catalyst for any watchlist name.
+- **Earnings before open**: Sources disagree — one calendar lists DRI, SNX, AYI, CMC, WGO, NNOX; others list PDD, XPEV, NSSC, XYF as the pre-market names. None are watchlist/thesis tickers — excluded by gate item 8 regardless of which calendar is right.
+- **Economic calendar**: No CPI/PPI/FOMC/NFP today (next CPI Sep 11, PPI Sep 10, NFP Sep 4). Chicago Fed National Activity Index and short-bill auctions are the only US releases — not hard-block tier.
+- **Sector momentum**: Last week's close (Aug 14-21): Energy standout at +7.61-7.67%, Utilities +1.58%; Consumer Discretionary -1.41% and Materials -0.62% weakest. No fresh same-day (Monday pre-market) sector data yet. Today's oil reversal is a same-day headwind for the Energy read that hasn't shown up in a sector print yet.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $84.32-85.65 today — gap to the $90-95 floor widened back to ~$4.4-5.7 below $90 after Friday's narrowest-ever reading (~$3.5-3.8), on profit-taking ahead of new Iran sanctions headlines. A geopolitically-driven pullback right as the gap was closing is exactly the kind of fragile, headline-driven move the strategy's price-floor discipline (2026-06-12 lesson) is designed to filter out — reinforces no entry rather than weakens it.
+2. **Today's earnings reporters**: excluded by gate item 8/non-watchlist regardless of which of the two conflicting earnings calendars is accurate.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- No CPI/PPI/FOMC/NFP today — no hard timing block. Zero open positions means no direct portfolio risk regardless.
+- Nvidia earnings (Wed) is this week's most-cited catalyst and could move broad market/AI-adjacent sentiment; not actionable without a specific thesis ticker, and not a reason to chase.
+- New Iran sanctions headlines reversed the WTI/Brent rally that had been narrowing the XOM gap for ~2 weeks — a reminder that geopolitical-premium moves cut both directions quickly and shouldn't be chased in either direction without the underlying FCF-economics floor actually clearing.
+- **Runway — terminal**: Day 62, start of Week 16 (Monday). 61 consecutive trading days fully in cash since launch (May 27), zero trades in either direction. Per every research entry and weekly review since 2026-07-24 (most recently the Aug 21 weekly review, self-graded C overall), the 90-calendar-day window closes ~2026-08-25 — today and tomorrow (Aug 24-25) are the last two trading days of the window. This is now the second-to-last pre-market session of Phase 1's evaluation period with zero trades placed either direction; restating without unilateral gate change. Awaiting user decision on window closure per the Aug 21 weekly review's escalation (treat as closed on process grounds / extend window / revisit gate calibration).
+- Root-level `PAUSED.flag` (non-standard path) not re-verified this session (pre-market timing priority on market data, and per the 2026-08-21 lesson repeated re-verification of this file has not been converging); `memory/PAUSED.flag` (standard path) confirmed absent this session — no kill switch triggered.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy's gap to the $90-95 floor widened back out today (WTI $84.32-85.65, down from Friday's narrowest-ever reading) on a geopolitically-driven oil reversal, not a fundamentals catalyst; today's earnings reporters (whichever calendar is accurate) are non-watchlist/gate-8 exclusions; no CPI/PPI/FOMC/NFP today, so no hard timing block, but no qualifying candidate exists regardless. No other thesis is currently in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 21 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 21 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 16 — Day 1, Monday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-21. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 16 — Day 1, Monday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (per Aug 21 weekly review, bot 0.00% vs SPY +1.91% since launch — inside the 2% graduation tolerance, but a zero-trade artifact of SPY's path, not earned performance); no fresh same-day SPY close obtained this session (pre-market timing).
+**Active kill switches**: none.
