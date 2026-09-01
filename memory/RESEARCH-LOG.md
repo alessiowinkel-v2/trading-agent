@@ -3981,3 +3981,54 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 24 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (per Aug 21 weekly review, bot 0.00% vs SPY +1.91% since launch — inside the 2% graduation tolerance, but a zero-trade artifact of SPY's path, not earned performance); no fresh same-day SPY close obtained this session (pre-market timing).
 **Active kill switches**: none.
+
+---
+
+## 2026-09-01 — Pre-market Research (Day 68, Tuesday — Week 17)
+
+### ⚠️ Cadence gap since last entry
+Last memory commit before this session was **2026-08-25** (pre-market research). No routine ran/committed for 4 trading days (Aug 26, 27, 28, 31) — no pre-market research, no EOD snapshots, no weekly review for the week of Aug 24-28. Account itself was untouched during the gap (Alpaca `balance_asof` shows quiet rollforward to 2026-08-31, equity flat at $10,000, 0 positions, 0 orders — no drift, no missed risk event), but the documentation/audit trail is broken for that window, and the 90-day evaluation window (closed ~2026-08-25 per every prior weekly review) has now passed with the user's requested closure/extension/recalibration decision (escalated in the 2026-08-21 weekly review) still not recorded anywhere in memory. Flagging loudly per honesty requirements; notifying user this session.
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-08-31
+
+### Market context
+- **WTI / Brent**: Sharp multi-day rally on renewed US-Iran fighting / Strait of Hormuz disruption fears (Aug 25 escalation, still driving price as of today). Same-day (Sep 1) quotes cluster WTI $85.5-88.0 (Investing.com $87.99 real-time, Oilprice.com $87.03, CNBC $85.52 delayed), Brent $88.5-92.3 (Investing.com $92.27, Oilprice.com $91.54, TradingEconomics $91.27). Gap to the $90-95 XOM/Energy floor is WTI's narrowest in the ~12-week thesis history (~$2-4.5 below $90) — but per the 2026-06-12 lesson, this move is explicitly geopolitical-premium-driven (active Iran conflict, shipping/export disruption fear), not a fundamentals/demand catalyst. A repeat of the June Iran-war spike-then-reversal pattern is the base case risk. No entry — floor not cleared, and even if it were, a war-premium spike is the wrong kind of catalyst per standing lesson.
+- **S&P 500 futures**: Modestly negative, -0.4% to -0.55% (Businessinsider -0.45%, Yahoo/ES=F -0.43%).
+- **VIX**: ~14.4 (Yahoo, prior close) — calm, no stress signal.
+- **Today's catalysts**: NVIDIA/MongoDB/Snowflake earnings (last week) reinforced the AI-infra trade is intact; Jackson Hole (Warsh) reaffirmed hawkish Fed stance on price stability. This week's dominant catalyst is Friday's **August jobs report (NFP), Sep 4** — hard timing-block tier, 3 trading days out. Tesla Cybercab launch mentioned as a market-mover to watch but not a watchlist name.
+- **Earnings before open**: MDT (Medtronic), NIO — pre-market open today; DELL, PANW, AVGO — after close this week. None are watchlist/thesis tickers — excluded by gate item 8 regardless.
+- **Economic calendar**: No CPI/PPI/FOMC today (CPI Sep 11, PPI Sep 10, FOMC Sep 15). **NFP (Aug jobs report) releases Sep 4** — this week's hard-block tier event; today itself (Sep 1) carries no release-day block, but Sep 3 (day before) and Sep 4 will.
+- **Sector momentum**: Last fully-confirmed week (Aug 10-14): Energy +7.7% (leader), Utilities +1.6%, Consumer Cyclical -1.4% (weakest). No clean confirmed print for the most recent week (Aug 24-28) surfaced this session — flagging as a data gap given the 4-day cadence break; will re-verify next session.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+**Zero candidates.** Reasons:
+1. **XOM/Energy**: WTI $85.5-88.0 today — narrowest-ever gap to the $90-95 floor (~$2-4.5 below $90), but the move is a live US-Iran conflict/Hormuz-disruption risk premium, not a fundamentals clearing. Per the 2026-06-12 lesson (a near-identical Iran-war WTI spike to $93-98 in June fully reversed to $86 within days), this is exactly the fragile, headline-driven move the price-floor discipline exists to filter — reinforces no entry.
+2. **Today's earnings reporters** (MDT, NIO pre-open; DELL/PANW/AVGO after close): excluded by gate item 8, non-watchlist regardless.
+3. No other dated, company-specific fundamentals catalyst cleared gate item 6 today.
+
+### Risk factors for today
+- **NFP Friday (Sep 4)** is 3 trading days out — day-before and day-of will be hard timing blocks; not relevant today with zero positions and zero candidates.
+- Active US-Iran conflict is the dominant macro risk this week: WTI/Brent could spike further on fresh escalation headlines or reverse sharply on any de-escalation signal — same two-sided fragility flagged in June. Zero open positions means no direct portfolio exposure regardless.
+- **Cadence/process gap (critical, see banner above)**: 4 trading days of missed routine execution (Aug 26-31) and an unresolved, now-overdue 90-day window closure decision (window closed ~Aug 25, no user decision on record as of today, Sep 1 — 5 trading days past close with the decision still pending). Notifying user this session.
+- Root-level `PAUSED.flag` (non-standard path, content "test") not re-verified this session — deprioritized given the cadence-gap finding takes priority; `memory/PAUSED.flag` (standard path) confirmed absent this session via live Alpaca/file check — no kill switch triggered.
+
+### Decision
+**HOLD.** Zero candidates clear the buy-side gate: XOM/Energy's gap to the $90-95 floor narrowed to its tightest-ever reading but remains unmet, and the move is a live geopolitical (Iran/Hormuz) risk premium rather than a fundamentals catalyst — the exact pattern the 2026-06-12 lesson warns against chasing; today's earnings reporters are non-watchlist/gate-8 exclusions; NFP Friday is this week's hard block but not relevant with zero candidates regardless. No other thesis is currently in the pipeline. Separately: this session surfaced a 4-trading-day cadence gap (Aug 26-31, no routine ran) and a still-unresolved 90-day window closure decision, now 5 trading days overdue — flagged loudly, user notified.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown): $10,000 vs Aug 31 EOD $10,000 = 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 28 close, unconfirmed due to cadence gap but Alpaca equity unchanged at $10,000 throughout): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 17 — Day 1, Tuesday) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-08-31. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 17 — Day 1, Tuesday)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (per Aug 21 weekly review, bot 0.00% vs SPY +1.91% since launch); no weekly review ran during the cadence gap (week of Aug 24-28) to refresh this, and no fresh same-day SPY close obtained this session (pre-market timing) — flagging as stale pending next EOD/weekly review.
+**Active kill switches**: none.
