@@ -966,3 +966,16 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow (Aug 25): last day of 90-day paper window closes with 0 trades ever placed, 0% return
+
+---
+## 2026-09-01 19:39 UTC
+EOD 2026-09-01
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: ~-0.4-0.67% today (intraday, unconfirmed), +1.91% phase (stale, last confirmed Aug 21)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+ALERT: 4-day cadence gap (Aug 26-28, 31) - no routine ran/committed. No drift in account, but audit trail broken for that window.
+ALERT: 90-day eval window closed ~Aug 25. User decision on close/extend/recalibrate still outstanding, 5+ trading days overdue.
+Tomorrow: pre-market research; NFP Fri Sep 4 is this week's hard block.
