@@ -4032,3 +4032,59 @@ All clear. KS-1 (daily drawdown): $10,000 vs Aug 31 EOD $10,000 = 0.00% — CLEA
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (per Aug 21 weekly review, bot 0.00% vs SPY +1.91% since launch); no weekly review ran during the cadence gap (week of Aug 24-28) to refresh this, and no fresh same-day SPY close obtained this session (pre-market timing) — flagging as stale pending next EOD/weekly review.
 **Active kill switches**: none.
+
+---
+
+## 2026-09-02 — Pre-market Research (Day 69, Wednesday — Week 17)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-01
+
+### Market context
+- **WTI / Brent**: For the first time in ~12 weeks of screening the XOM/Energy $90-95 price floor is met. Most-current live quotes cluster WTI $90.2-91.7 (TradingEconomics $90.80 as of Sep 2, Oilprice.com $90.77 11-min-delay dated Sep 2, OilPriceAPI $91.71 last-updated Sep 2, Investing.com $90.25 real-time) and Brent $95.0-95.8 (TradingEconomics $95.73, Oilprice.com $95.57, Investing.com/OilPriceAPI $95.8). Older/staler quotes in the same pull show WTI as low as $83-86 (dated Aug 25-31) — disregarded as superseded. **Driver is explicitly geopolitical**: today's catalyst research and a same-day CNBC piece attribute the rise to fresh US-Iran/Middle East military action ("oil rises after new U.S. [strikes]," Aug 31) — the same Hormuz-disruption-fear pattern flagged in the 2026-06-12 lesson, where an near-identical Iran-war WTI spike to $93-98 fully reversed to $86 within days once a ceasefire signal emerged. Per that lesson, a geopolitical premium is a fragile, not structural, driver.
+- **S&P 500 futures**: Modestly negative, roughly -0.3% to -0.6% across sources (Investing.com -0.26%, Businessinsider -0.64%, Yahoo/ES=F -0.36%); one conflicting CNBC quote (+0.06%) appears mistimed/stale.
+- **VIX**: ~15.4-16.5, up from ~14.9 a few days ago but still well under the 20 stress threshold — calm.
+- **Today's catalysts**: Broadcom (AVGO) and Snowflake (SNOW) report after today's close — the week's headline earnings events, neither a watchlist/thesis name. Falling bond yields and continued AI/tech buying interest are cited as broad supports; oil/geopolitics (see above) is the other dominant theme.
+- **Earnings before open**: 13 companies before the open per Earnings Whispers (FCEL, CXM, GIII, DAKT, OLLI, BF.B/BF.A, ASHTY, COE, GASS, REX, DSG, YSG) — none are watchlist/thesis tickers, excluded by gate item 8 regardless. **XOM's own next earnings is confirmed Oct 30, 2026** — 40+ trading days out, clears gate item 8 with a wide margin.
+- **Economic calendar**: No CPI/PPI/FOMC today. ADP National Employment Report at 8:15 AM ET is a data-release-tier event (not a hard block). **NFP (Aug jobs report) releases Friday Sep 4** — 2 trading days out; tomorrow (Sep 3, day-before) and Friday (day-of) are hard timing blocks per strategy. Today itself carries no hard block.
+- **Sector momentum**: Mixed/thin evidence base this week. The one same-week, same-source snapshot obtained (Bloomberg, Aug 31 daily) shows Energy +1.54% as the day's single best-performing sector while the broader market fell -0.71% and 8 of 11 sectors were negative — i.e., Energy's "strength" that day is the direct mirror of the same oil-price geopolitical spike above, not independent multi-factor sector conviction. No clean confirmed full-week (Aug 24-28 or Aug 31-Sep 1) sector print was found distinct from that single day. Treating Energy's relative strength this week as *catalyst-driven*, not *momentum-driven*, per the 2026-08-16 lesson on pipeline breadth/mistaking narrow signal for broad conviction.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (1 candidate — first-ever gate-6 price-floor pass)
+
+1. **XOM** — price floor condition met for the first time since this thesis began screening (~12 weeks ago).
+   - **Thesis**: ExxonMobil is a large, liquid, investment-grade energy major whose earnings are directly geared to crude prices; the thesis has always been "buy when WTI clears $90-95, confirming the energy cycle supports margins," sized modestly and stopped tightly.
+   - **Catalyst**: WTI ($90.2-91.7) and Brent ($95.0-95.8) both inside the documented $90-95 floor as of today's live quotes — the specific, dated condition this thesis has waited on since ~June.
+   - **Risk — flagging loudly, this is the load-bearing concern**: the move is driven by an active US-Iran/Middle East military escalation (supply-disruption fear), not a demand/fundamentals catalyst. This is the exact pattern documented in the 2026-06-12 lesson: an Iran-war WTI spike to $93-98 (June 8-9) fully reversed to $86 within 3 trading days once a de-escalation signal hit. A repeat (ceasefire headline, diplomatic signal) could put WTI back under the floor and the thesis underwater within days. The 2026-06-12 lesson explicitly flagged (but user never adopted) requiring a *higher* floor for geopolitical-premium entries specifically because of this fragility.
+   - **Sector momentum**: With Energy, but the one clean data point available (Aug 31) shows that "momentum" is the same oil spike, not independent breadth — treat as neutral-to-fragile, not confirmed tailwind.
+   - **Stop level**: 8% below entry (mid-range of the 7-10% band), placed to respect "never within 3% of current price."
+   - **Target**: minimum 2:1 R:R — e.g., entry ~$155 (last quote), stop ~$142.60 (-8%), target ~$179 (+15.5%, >2:1 vs. the $12.40 risk).
+   - **Size**: would need a fresh quote and equity check at market open; capped at 15% of equity (~$1,500) regardless of entry price.
+   - **Exit plan**: 10% GTC trailing stop on fill per standing rule; tighten to 7% at +15%, 5% at +20%; hard exit at -7% no exceptions; also exit immediately (thesis-broken basis, not just stop-hit) on any Iran/Hormuz ceasefire or de-escalation headline, given the documented reversal precedent.
+   - **Data caveat**: Alpaca's own XOM quote this session returned `ap: 0` (no ask) with a stale timestamp (2026-09-01 20:00 UTC, i.e. yesterday's 4pm ET close) — expected outside of market hours, but means spread/liquidity has not yet been verified live. Per the Alpaca gotcha, a zero/wide spread must be re-checked at market open before any fill; do not enter on this pre-market data alone.
+
+### Risk factors for today
+- **XOM/geopolitical fragility** (see above) is the dominant risk for today's one candidate — this is a live, unresolved macro situation that could reverse before or during market-open.
+- **NFP Friday (Sep 4)** is 2 trading days out; tomorrow (Sep 3) and Friday are hard timing blocks. Not relevant to today's decision but relevant to any market-open execution window this week.
+- Broadcom/Snowflake earnings after today's close are a broad tech-sentiment catalyst, not a portfolio risk (no positions, no watchlist overlap).
+- **Root-level `PAUSED.flag`** (non-standard path, repo root, content `test`) re-verified fresh this session: `git log --all --diff-filter=A --format='%H|%ad|%s' -- PAUSED.flag` → single commit `f7e9ad5`, dated **2026-07-27**, message "pre-market research 2026-07-27"; `git ls-files PAUSED.flag` confirms it **is** tracked. (Per the 2026-08-21 lesson, this file's tracked-status/date has now been "freshly re-verified" with a different answer in nearly every session — flagging the pattern itself rather than re-asserting false confidence in this answer.) `memory/PAUSED.flag` (the standard path CLAUDE.md and KILL-SWITCHES.md actually govern) is confirmed **absent** via direct `ls` this session — no kill switch triggered.
+- **90-day window / graduation decision still outstanding**: 98 calendar days elapsed since launch (May 27), 8+ calendar days past the ~Aug 25 window close, with the user's requested closure/extension/gate-recalibration decision (escalated repeatedly since 2026-07-24, most recently 2026-09-01) still not recorded in memory. Today's XOM candidate is the first gate-6 pass in the entire window — notifying user given both the significance of a first-ever candidate and the unresolved window-decision backdrop.
+
+### Decision
+**HOLD for this pre-market session** (no trades placed in this routine per standing rule regardless). **XOM is flagged as a live, first-ever gate-6-passing candidate** for the market-open routine to validate against fresh intraday data (live bid/ask spread, confirmed WTI/Brent still above $90/$95 at open, no overnight Iran/Hormuz de-escalation headline) before any execution decision. This is a conditional plan, not an instruction to buy — per the recurring market-open documentation-gap lessons (2026-06-12 through 2026-07-03), the market-open routine must log its triggering check and decision explicitly (execute, defer, or formally decline) rather than leaving this candidate to silently expire.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 1 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 28 close — no confirmed EOD exists for that date due to the Aug 26-31 cadence gap, but Alpaca equity confirmed unchanged at $10,000 throughout via balance_asof rollforward): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 17, Day 2 of the week) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-01. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 17)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% graduation tolerance); no weekly review has run since to refresh this — flagging as stale, pending next EOD/weekly review.
+**Active kill switches**: none.
