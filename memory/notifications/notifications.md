@@ -979,3 +979,16 @@ Active kill switches: none
 ALERT: 4-day cadence gap (Aug 26-28, 31) - no routine ran/committed. No drift in account, but audit trail broken for that window.
 ALERT: 90-day eval window closed ~Aug 25. User decision on close/extend/recalibrate still outstanding, 5+ trading days overdue.
 Tomorrow: pre-market research; NFP Fri Sep 4 is this week's hard block.
+
+---
+## 2026-09-02 19:39 UTC
+EOD 2026-09-02
+Portfolio: $10,000.00 (+0.00% day, +0.00% phase)
+vs SPY: unavailable today (no confirmed close), phase unchanged
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Note: XOM cleared price-floor gate pre-market (first time ever) but no market-open routine ran to act on it — candidate expired unexecuted
+90-day window still 8+ days overdue for user decision (open since Aug 25)
+Tomorrow: pre-market research; NFP Fri Sep 4 is a hard timing block Wed-Thu
