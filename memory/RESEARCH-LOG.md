@@ -4088,3 +4088,52 @@ All clear. KS-1 (daily drawdown, vs Sep 1 EOD $10,000): 0.00% — CLEAR. KS-2 (w
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% graduation tolerance); no weekly review has run since to refresh this — flagging as stale, pending next EOD/weekly review.
 **Active kill switches**: none.
+
+---
+
+## 2026-09-03 — Pre-market Research (Day 70, Thursday — Week 17)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-02
+
+### Market context
+- **WTI / Brent**: WTI $90.1-91.7 (Oilprice.com $90.53, TradingEconomics $89.96, OilPriceAPI $90.80, Investing.com $91.17-91.74), Brent $94.4-95.8 (TradingEconomics $94.06-94.43, Investing.com $95.58-95.75, OilPriceAPI $95.27) — both still inside the $90-95 XOM/Energy floor, 2nd consecutive session (first was Sep 2). Driver remains the same active US-Iran/Hormuz geopolitical risk premium flagged yesterday, not a demand/fundamentals shift.
+- **S&P 500 futures**: Modestly positive, +0.10% to +0.55% (Investing.com +0.10%, Yahoo/ES=F +0.55%, Bloomberg ES1 ~flat). Wall Street rebounded Wednesday (Dow +295) as the 10-yr yield eased off multi-year highs and oil steadied near $95 Brent.
+- **VIX**: ~15.2-15.5 (MarketWatch 15.19-15.20, Cboe 15.23, Yahoo 15.50) — calm, no stress signal.
+- **Today's catalysts**: Tesla Cybercab launch event in Austin (production robotaxi unveil) is the day's single biggest single-stock catalyst — not a watchlist name. Initial jobless claims (8:30 AM ET) and ISM Non-Mfg Employment Index (10:00 AM ET) are today's data-release-tier events, watched as a preview for tomorrow's NFP. AVGO (beat, but slipped) and SNOW (raised outlook, jumped) earnings reactions are shaping broad tech sentiment. Oil/Iran geopolitics remains a background driver (see above).
+- **Earnings before open**: CIEN, WLY, VSXY, CPB, TTC, DOO, LE, BRC, DLTH, GCO, PSNY, DAVA, VBNK, VFS and ~5-25 others depending on source (calendars disagree 6-41 companies) — none are watchlist/thesis tickers, excluded by gate item 8 regardless. XOM's own next earnings remains Oct 30, 2026 (confirmed yesterday) — clears gate item 8 with a wide margin.
+- **Economic calendar**: No CPI/PPI/FOMC today (next CPI Sep 11). Initial jobless claims and ISM Non-Mfg Employment Idx print today but are data-release, not hard-block tier. **NFP (August jobs report) releases tomorrow, Friday Sep 4** — per strategy's "day before major release" rule, **today is a hard timing block**; tomorrow (day-of) is also blocked regardless of any candidate.
+- **Sector momentum**: Mixed/unresolved same-day snapshot (Materials +1.70% and Communication Services +1.38% led one live heatmap; Energy +1.1% led a separate live update) versus trailing-week recaps still citing Energy (+7.6-7.7%) and Utilities (+1.6-1.7%) as the multi-week leaders. Treating as contradictory same-day noise vs. a real weekly print per the 2026-08-16 pipeline-breadth lesson — not clean confirmation either way.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 executable — 1 tracked/blocked candidate)
+
+1. **XOM** — price floor condition met for a 2nd consecutive session (WTI $90.1-91.7, Brent $94.4-95.8, both inside the $90-95 floor), but **today is a hard timing block**: NFP (Aug jobs report) prints tomorrow (Fri Sep 4) and today is the "day before" hard-block per strategy, regardless of gate-6 status. No entry today or tomorrow can be placed on this thesis.
+   - **Risk (unchanged, still load-bearing)**: the price move remains an active US-Iran/Hormuz geopolitical risk premium, not a fundamentals catalyst — per the 2026-06-12 lesson, an identical June Iran-war spike to $93-98 fully reversed to $86 within 3 trading days once a de-escalation signal hit. A ceasefire/diplomatic headline before Monday could put WTI back under the floor before any entry is even possible.
+   - **Earliest possible entry**: Monday Sep 8 (first trading day after both NFP-day and NFP-eve blocks clear), strictly contingent on WTI still >$90 / Brent still >$95 at that time, a verified live bid/ask spread, and no intervening Iran/Hormuz de-escalation headline. This is a re-check requirement, not a standing order — the candidate must clear the gate fresh on Monday, not be assumed to still qualify.
+
+### Risk factors for today
+- **NFP-eve hard timing block** (today) and **NFP-day hard timing block** (tomorrow, Sep 4) — both bar any new entry regardless of candidate quality; not relevant with zero open positions.
+- **XOM/geopolitical fragility** (see above) — the dominant risk to Monday's potential entry window, not to today's holdings (none exist).
+- Tesla Cybercab event and AVGO/SNOW earnings reactions are broad sentiment/volatility drivers, not portfolio risks (no positions, no watchlist overlap).
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered. Root-level non-standard `PAUSED.flag` not re-checked this session (deprioritized; has no bearing on standard KS per repeated prior verification).
+- **90-day evaluation window / graduation decision still outstanding** (restating, no new information this session): window closed ~2026-08-25 per every weekly review since 2026-07-24; the user's requested closure/extension/gate-recalibration decision remains unrecorded in memory as of today, now ~8-9 trading days overdue. XOM's 2-session price-floor pass reinforces this is a live, real-money-relevant question, not an abstract one — but no unilateral change is made here.
+
+### Decision
+**HOLD.** Zero executable candidates: today is a hard NFP-eve timing block that bars any new entry regardless of setup quality. XOM continues to clear the $90-95 WTI/Brent price floor for a 2nd straight session, but per strategy's macro-event timing rule this changes nothing about today's action — no trades placed or planned. No other thesis is in the pipeline. XOM is carried forward as a conditional candidate for Monday Sep 8, contingent on a fresh gate check that day (price floor, live spread, no de-escalation headline) — not a standing instruction to buy.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 2 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday close — no clean confirmed Friday EOD exists due to the late-Aug cadence gap, but Alpaca equity confirmed unchanged at $10,000 throughout via `balance_asof` rollforward): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 17) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-02. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 17)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% graduation tolerance); no weekly review has run since to refresh this — flagging as stale, pending next EOD/weekly review.
+**Active kill switches**: none.
