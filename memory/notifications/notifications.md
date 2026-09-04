@@ -1004,3 +1004,14 @@ Open positions: 0
 Active kill switches: none
 Note: 90-day window (closed ~8/25) still awaiting user decision — 9+ trading days overdue
 Tomorrow: pre-market screens fresh candidates; NFP Sep 4 is a hard timing block
+
+---
+## 2026-09-04 19:39 UTC
+EOD 2026-09-04
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, 0.00% phase
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: 90-day window 10+ days overdue for user decision (extend/close/recalibrate) — still top open item

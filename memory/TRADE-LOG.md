@@ -847,3 +847,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 70, Week 17 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-02). 0 of 3 weekly trade slots used this week, 0 total trades since launch (May 27) — 70 consecutive trading days fully in cash. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard path, repo root, content "test") persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent — flagging again for user cleanup. The 90-day evaluation window (closed ~2026-08-25) remains 9+ trading days overdue for the user's closure/extension/gate-recalibration decision, escalated repeatedly since 2026-07-24 — still outstanding, now the single largest open item in this log. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-09-04 — EOD Snapshot (Day 71, Friday — end of Week 17)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (no confirmed 4:00 PM ET close at query time ~2:44 PM ET; intraday quotes conflicted and ranged -0.10% to -0.49% off previous close $773.17 — Investing.com -0.10% (full-OHLC row but volume 3.78M, a fraction of SPY's typical ~40-70M, indicating a partial-day snapshot per the 2026-08-24 lesson), MarketWatch -0.39% at 2:44 PM ET, Yahoo's headline -0.49% derived from a historical-table row that is itself a live intraday update, not a finalized close)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 71, end of Week 17 (Friday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-03). 0 of 3 weekly trade slots used this week, 0 total trades since launch (May 27) — 71 consecutive trading days fully in cash. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard path, repo root, content "test", timestamp refreshed 2026-09-04 but content unchanged) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent — flagging again for user cleanup. The 90-day evaluation window (closed ~2026-08-25) remains 10+ trading days overdue for the user's closure/extension/gate-recalibration decision, escalated repeatedly since 2026-07-24 — still the single largest open item in this log, unresolved for over two calendar weeks now. No kill switches triggered.
+**Active kill switches:** none.
