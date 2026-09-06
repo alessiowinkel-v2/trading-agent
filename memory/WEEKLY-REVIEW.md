@@ -1795,3 +1795,96 @@ No trades placed. All five sessions ran full documentation cadence with a consis
 **Graduation criteria met: 3/7**
 
 Days running counter: **61** (Day 1 = 2026-05-27; Day 61 = 2026-08-21)
+
+---
+
+## Week ending 2026-09-04
+
+> **Note**: Routine triggered Sunday 2026-09-06, not Friday. No weekly review ran for the week ending 2026-08-28 — this entry covers everything since the last filed review (2026-08-21) through Friday 2026-09-04: Day 62 (Mon Aug 24) through Day 71 (Fri Sep 4), spanning parts of Week 16 and all of Week 17. Critically, Days 63-67 (Aug 25, 26, 27, 28, and Aug 31 — five consecutive trading days) have **zero routine records of any kind**: no pre-market research, no EOD snapshot, no kill-switch check. This was first discovered and flagged by the Sep 1 pre-market/EOD entries when the routine resumed. Live Alpaca state (`balance_asof` rollforward, equity flat, 0 positions/orders throughout) confirms no undetected risk materialized, but the audit trail for that window does not exist and cannot be reconstructed.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior filed review, Aug 21 close) | $10,000.00 |
+| Ending portfolio (Sep 4 close) | $10,000.00 |
+| Period return | $0.00 (0.00%) |
+| S&P 500 period (SPY Aug 21 $765.72 → Sep 4 $770.19, confirmed closes) | +0.58% |
+| Bot vs S&P this period | -0.58% |
+| Phase P&L since launch (May 27 $751.38 → Sep 4 $770.19) | Bot 0.00% vs SPY +2.50% |
+| Max intraweek/intraperiod drawdown | 0.00% (100% cash throughout; unverifiable for Aug 25-28/31 due to the routine blackout, but Alpaca confirms no positions existed) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. Reviewing the period's process instead.
+
+**Aug 24 (Day 62, Monday)**: Pre-market + EOD filed normally. Correct HOLD — zero gate-6 candidates, XOM/Energy still price-rejected. Runway flag repeated (90-day window closing tomorrow, ~Aug 25, with zero trades ever).
+
+**Aug 25-28 and Aug 31 (Days 63-67)**: **No records exist.** No pre-market research, no EOD snapshot, no kill-switch confirmation for five consecutive trading days. This is not a documented HOLD decision — it is the complete absence of the routine itself. Cannot be graded as "correct process" because no process ran. Alpaca's `balance_asof` rollforward and flat equity confirm nothing broke silently, but that is luck of a quiet market, not verified monitoring.
+
+**Sep 1 (Day 68, Tuesday)**: Routine resumed. Correctly identified and flagged the blackout immediately and explicitly, and re-flagged the still-unresolved 90-day window decision. XOM/Energy rejected on price floor; NFP flagged as this week's hard timing block.
+
+**Sep 2 (Day 69, Wednesday)**: Pre-market identified XOM's **first-ever gate-6 (price floor) pass** in the thesis's ~13-week history (WTI $90.2-91.7, Brent $95.0-95.8), correctly conditioned on market-open re-validation. No market-open or midday routine ran to act on it — the candidate expired unexecuted. This is the long-standing "market-open documentation gap" pattern (flagged 7+ times since 2026-06-02) recurring at the exact moment it mattered most: the one time in the thesis's history the price condition actually cleared.
+- Was the thesis followed? The pre-market gate-6 pass call was correct and honestly caveated as geopolitical-premium-driven (fragile, per the 2026-06-12 lesson).
+- Was sizing appropriate? N/A — never executed.
+- Was the stop respected? N/A.
+- In hindsight, would this trade have been made? Unknowable — exactly the unfalsifiability problem flagged since June. WTI's durability past the market-open window was never checked.
+
+**Sep 3 (Day 70, Thursday) and Sep 4 (Day 71, Friday)**: Pre-market/EOD filed normally. Zero candidates; XOM/Energy still rejected. SPY close-sourcing on both days correctly rejected mislabeled/partial-volume intraday prints rather than reporting a guessed figure — good honesty discipline, consistent with the 2026-08-14/08-20 lessons.
+
+### Self-grades (be HARSH)
+- Process discipline: **D** — Five consecutive trading days (Aug 25-28, 31) with zero routine execution is a new and more severe failure mode than anything flagged before. Every prior process gap (market-open documentation, sequencing) at least left a partial record; this period left none. The days that did run were individually well-reasoned, but that does not offset a period where the process simply didn't happen.
+- Documentation quality: **D** — Same root cause. There is no audit trail for a full trading week's worth of sessions. Compounded by the Sep 2 market-open gap recurring at the single most consequential moment (the thesis's first-ever floor pass).
+- Risk management: **B-** — No losses, no drawdown, no kill-switch breach. Not an A: kill switches were not actively checked for five days, so "no breach" reflects a quiet market, not verified risk management. Confirmed via Alpaca that no exposure existed, which is the only reason this didn't matter this time.
+- Outcome (weighted least): **D** — 0.00% vs SPY +0.58% this period; -2.50% cumulative vs SPY since launch, back outside the 2% graduation tolerance (was borderline +1.91%/🟡 last review). 71 trading days, 0 trades in either direction.
+- **Overall: D** — A downgrade from the recent C-band. Individual decisions remain defensible, but the monitoring infrastructure itself demonstrated this period that it can go completely dark for a week without anyone (agent or user) noticing until it resumed on its own. That is a more serious finding than any single gate-calibration question.
+
+### What worked (3-5 bullets)
+- Alpaca account state stayed clean through the blackout (0 positions, 0 orders, flat equity) — no undetected risk materialized
+- Sep 1 routine self-identified and explicitly flagged the blackout the moment it resumed, rather than silently continuing as if nothing happened
+- SPY close-sourcing discipline (rejecting mislabeled/low-volume/partial-day prints) held up across every day that did run
+- Sep 2 correctly recognized and flagged XOM's first-ever gate-6 price-floor pass, with appropriate skepticism about its geopolitical-premium fragility
+- Root-level `PAUSED.flag` provenance finally nailed down with a single verified command this session (see Key Lessons) — resolves a multi-week open thread
+
+### What didn't work (3-5 bullets)
+- **Total cadence blackout**: zero routines of any kind for 5 straight trading days (Aug 25-28, Aug 31) — an orchestration/scheduling failure, not an agent decision failure, and outside the agent's ability to self-fix
+- The one time the XOM/Energy price floor actually cleared (Sep 2), the market-open execution gap meant it was never acted on or falsifiable — the exact failure mode escalated 7+ times since June, recurring at the worst possible moment
+- 90-day evaluation window (closed ~2026-08-25) remains without a user decision, now 10+ trading days overdue, escalated in every single weekly review since 2026-07-24 with zero resolution
+- Zero trades across 71 trading days / 100+ calendar days — the core mission (beat SPY through real agent action) remains completely untested
+- Phase P&L vs SPY (-2.50%) fell back outside the 2% graduation tolerance this period
+
+### Key lessons (added to LESSONS.md)
+- A cadence blackout (zero routine execution for multiple consecutive trading days) is categorically worse than a documentation gap and needs to be flagged as an infrastructure/scheduling risk, not a strategy issue
+- Root-level `PAUSED.flag` provenance is now conclusively resolved: `git log --follow --diff-filter=A --format='%H|%ad|%s' -- PAUSED.flag` returns exactly one commit, `5db43a1a`, dated **2026-07-30**, message "pre-market research 2026-07-30" — added incidentally, not deliberately, and it is tracked in git (contradicts the 2026-08-16 "untracked" finding, which was evidently checking a different or stale state)
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **[Escalated again, 7th+ consecutive review]** Explicitly decide: is Phase 1 concluded (mission untested after 71 trading days / 100+ calendar days, 0 trades, window closed ~10 trading days ago), or does the window extend with a new end date? No unilateral change made or possible.
+2. **New, most urgent**: Investigate why Aug 25-28 and Aug 31 had zero routine execution. This is a scheduling/orchestration issue outside agent control, and it is a bigger operational risk than any gate-calibration question — the same silent gap during an actual drawdown would mean kill-switches don't fire when they're needed most.
+3. Delete or explicitly confirm the purpose of the root-level `PAUSED.flag` (tracked since commit `5db43a1a`, 2026-07-30, content "test") — provenance is now conclusively pinned down as accidental debris, not a deliberate pause.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (downgraded from ✅ — no human intervened, but the automated cadence itself silently stopped running for 5 trading days; "no manual intervention" is true but conceals that the system also just didn't run)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat entire phase)
+- [ ] Matched or beat SPY: ❌ (bot 0.00% vs SPY +2.50% phase — back outside the 2% tolerance)
+- [ ] No uncaught kill-switch breaches: 🟡 (downgraded from ✅ — none breached, but none were actively checked for 5 trading days; cannot certify with confidence that nothing was missed during that window)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries exist to review — vacuously satisfied)
+- [ ] Memory files functional: ✅ (all files readable; `PAUSED.flag` provenance question now resolved)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced across the entire phase)
+
+**Graduation criteria met: 2/7** (down from 3/7 — two items downgraded from ✅ to 🟡 due to the cadence blackout)
+
+Days running counter: **71** (Day 1 = 2026-05-27; Day 71 = 2026-09-04; Days 63-67 undocumented due to routine blackout)
