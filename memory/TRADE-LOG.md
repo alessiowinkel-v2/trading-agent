@@ -859,3 +859,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 71, end of Week 17 (Friday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-03). 0 of 3 weekly trade slots used this week, 0 total trades since launch (May 27) — 71 consecutive trading days fully in cash. No protective stops needed (no open positions). Root-level PAUSED.flag (non-standard path, repo root, content "test", timestamp refreshed 2026-09-04 but content unchanged) persists — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent — flagging again for user cleanup. The 90-day evaluation window (closed ~2026-08-25) remains 10+ trading days overdue for the user's closure/extension/gate-recalibration decision, escalated repeatedly since 2026-07-24 — still the single largest open item in this log, unresolved for over two calendar weeks now. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-09-07 — EOD Snapshot (Day 72, Monday — Week 18, Labor Day / Market Holiday)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** N/A — US markets closed for Labor Day, no session (confirmed by today's pre-market research and by Alpaca `balance_asof` still reading 2026-09-04, unchanged over the long weekend)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 72, Week 18 (Monday). No session today — US markets closed for Labor Day. No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-04). 0 of 3 weekly trade slots used (Week 18 reset). No protective stops needed (no open positions) and none possible today. This is a placeholder continuity snapshot; next real session is Tuesday Sep 8, when the XOM/WTI-floor thesis carries forward conditionally per today's pre-market research. Root-level PAUSED.flag (non-standard path, tracked debris, content "test") persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent. The 90-day evaluation window (closed ~2026-08-25) remains overdue for the user's closure/extension/gate-recalibration decision — now 13+ trading days overdue per today's pre-market research, escalated in every routine since 2026-07-24 with zero resolution (8th+ escalation, still the single largest open item in this log). Separately flagging: `scripts/notify.sh`'s ClickUp channel remains unconfigured (no `CLICKUP_API_KEY`/`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID`), so every "notification" sent for months has only been appended to a local git-committed file rather than actually delivered to the user in real time — plausibly a root cause of why the repeated 90-day-window escalations have gone unactioned. No kill switches triggered.
+**Active kill switches:** none.
