@@ -4186,3 +4186,41 @@ All clear. KS-1 (daily drawdown, vs Sep 3 EOD $10,000): 0.00% — CLEAR. KS-2 (w
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% graduation tolerance); no weekly review has run since to refresh this — flagging as stale, pending next EOD/weekly review.
 **Active kill switches**: none.
+
+---
+
+## 2026-09-07 — Pre-market Research (Day 72, Monday — Week 18)
+
+### Market status
+**US markets CLOSED today — Labor Day, Monday Sep 7, 2026.** Confirmed live via Perplexity (NYSE/Nasdaq/FINRA holiday calendars unanimous: full closure, reopens Tuesday Sep 8). No trading session exists today — pre-market research, market-open, midday, and EOD routines are all moot for this date. Not logging fabricated "today's catalysts" for a day with no session, per honesty requirements.
+
+### Account snapshot (live Alpaca, unchanged over the weekend/holiday)
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-04 (last Friday's close, expected — no session since)
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas
+None screened today — no market session. XOM/WTI-floor thesis (documented 2026-09-02 through 2026-09-04) carries forward as the conditional candidate for the next real trading day, **Tuesday Sep 8** (the Sep 4 entry's reference to "Monday Sep 8" was a day-of-week slip — Sep 8 is actually a Tuesday, since Sep 7 is Labor Day). Must clear the gate fresh Tuesday: WTI still >$90 / Brent still >$95, verified live spread, no weekend/holiday Iran-Hormuz de-escalation headline, and no fallout from Friday's NFP print having broken the setup. Not a standing order.
+
+### Risk factors
+- No live market risk today (no session). Weekend/holiday geopolitical headline risk to the XOM thesis remains the main carry-forward item to check fresh Tuesday morning.
+- `memory/PAUSED.flag` (standard path) confirmed absent this session.
+- 90-day evaluation window / graduation decision still outstanding (restating, no new information): closed ~2026-08-25 per every weekly review since 2026-07-24, still unrecorded — now 13+ trading days overdue. Last weekly review (2026-09-04, week ending Day 71) graded the week D — see WEEKLY-REVIEW.md and LESSONS.md 2026-09-06 entries for the cadence-blackout finding, both pending user response.
+
+### Decision
+**HOLD — no session today.** No trades possible or planned; market closed for Labor Day. Full research resumes pre-market Tuesday Sep 8.
+
+### Kill switch status
+All clear (no change possible over a closed session). KS-1 (daily drawdown, vs Sep 4 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Aug 28 close): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 18) — CLEAR. Live Alpaca confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-04. `memory/PAUSED.flag` absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 18)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
+**Active kill switches**: none.
