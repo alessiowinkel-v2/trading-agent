@@ -1038,3 +1038,14 @@ Trades today: none (no session)
 Open positions: 0
 Active kill switches: none
 Tomorrow: market reopens Tue Sep 8 - XOM/WTI-floor thesis carries forward conditionally; 90-day window now 13+ trading days overdue for user decision (8th+ escalation)
+
+---
+## 2026-09-08 19:39 UTC
+EOD 2026-09-08
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today (no confirmed close), phase gap unresolved pending weekly review
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: re-screen fresh; XOM/WTI rejected today on war-premium catalyst quality despite price floor clearing. 90-day window decision still overdue for user.
