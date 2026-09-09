@@ -1049,3 +1049,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: re-screen fresh; XOM/WTI rejected today on war-premium catalyst quality despite price floor clearing. 90-day window decision still overdue for user.
+
+---
+## 2026-09-09 19:39 UTC
+EOD 2026-09-09
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today (no confirmed close), phase -1.91%+ behind (stale, pending weekly review)
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: re-screen for a non-Energy candidate; XOM/WTI-floor thesis rejected 2 sessions running on war-premium catalyst quality, not carried forward
