@@ -4271,3 +4271,50 @@ All clear. KS-1 (daily drawdown, vs Sep 4 EOD $10,000, the last confirmed balanc
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
 **Active kill switches**: none.
+
+## 2026-09-09 — Pre-market Research (Day 74, Wednesday — Week 18)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-08 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: WTI ~$93-95 (cluster $93.19-94.64), Brent ~$98-99 (cluster $97.92-99.35) — both now clearing the $90-95 XOM/Energy floor's upper bound. Driver, per oilprice.com (last_updated today): "Attacks on energy facilities in southern Saudi Arabia caused fires and temporary operational shutdowns as escalating regional tensions push oil prices toward $100 a barrel" — this is a further escalation beyond yesterday's Iran-tanker-strike thesis, now extending to reported Saudi energy-facility attacks. Same fragile war-premium pattern as the 2026-06-12 lesson (WTI $87→$93-98 reversed within days once de-escalation hit).
+- **S&P 500 futures**: Modestly negative, roughly -0.3% to -0.4% (ES ~7,686-7,690).
+- **VIX**: ~15.3-15.95, roughly flat to modestly up on the day — not the sharp +5-7% risk-off spike seen yesterday, despite the oil move continuing to extend.
+- **Today's catalysts**: Apple iPhone launch event; 10-year Treasury note auction; oil-driven inflation risk and renewed US-Iran/Saudi tension cited as an equity headwind; Fed decision Sep 16 remains the dominant macro theme. No single catalyst is thesis-relevant to any held position (none held).
+- **Earnings before open**: CHWY, SAIL, CAL, SIG, NNOX, ASO, SUNB, CNM, KFY, JILL, OCC, ODD, and others — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: No CPI/PPI/FOMC/jobs today. Employer Costs for Employee Compensation at 10:00 AM (minor, not a hard timing block). Next: PPI Thu Sep 10 8:30am ET, CPI Fri Sep 11 8:30am ET, FOMC decision Wed Sep 16.
+- **Sector momentum**: Contradictory across sources again (consistent with the 2026-08-16 pipeline-breadth/noise lesson) — one model places Energy in the "Leading" quadrant alongside Staples/Industrials/Materials, another daily read shows Tech/Industrials leading with Energy unmentioned among leaders; YTD Energy still shows the largest sector gain (+42%) but that is a stale, backward-looking figure, not a fresh weekly signal.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED again, not executed.**
+- Price condition: WTI/Brent clear the $90-95 floor more comfortably than any prior session (Brent as high as $98-99).
+- **Why still no trade**: the price move is confirmed driven by a further *escalation* of the Iran/Saudi conflict (reported attacks on Saudi energy facilities, on top of yesterday's Iran tanker strikes) — not a fundamentals/demand catalyst. This is the same fragile geopolitical-premium pattern flagged 2026-06-12 (full reversal within days once de-escalation hit) and rejected again yesterday (2026-09-08) on identical grounds. A second consecutive escalating-headline rejection reinforces, not weakens, the prior day's call — buying into an active, worsening war premium is not a "boring, fundamentals-driven" entry regardless of how far above the floor the price sits.
+- **Disposition**: per the 2026-09-08 entry, this is not being carried forward as a standing conditional candidate. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst, not a continuation of the same war-premium move. No other candidate is in the pipeline today.
+
+### Risk factors for today
+- **US-Iran/Saudi conflict escalation** (Saudi energy-facility attacks, on top of Iranian tanker strikes) is the dominant live risk factor — elevated oil, could move sharply further on any new headline in either direction. No portfolio exposure (0 positions), so no direct P&L risk.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 (restating only that it remains unresolved, no new information this session).
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh, clears the price floor more comfortably than ever, but rejected a second consecutive session on catalyst-quality grounds — the move is now driven by a *further escalation* (Saudi energy-facility attacks) of the same fragile geopolitical premium rejected yesterday. No other thesis in the pipeline. Today is not a hard macro timing block (no CPI/PPI/jobs/FOMC today), but the absence of a timing block does not manufacture a catalyst where none exists.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 8 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 4 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 18) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-08. `memory/PAUSED.flag` absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 18)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
+**Active kill switches**: none.
