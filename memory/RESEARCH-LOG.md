@@ -4318,3 +4318,52 @@ All clear. KS-1 (daily drawdown, vs Sep 8 EOD $10,000): 0.00% — CLEAR. KS-2 (w
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
 **Active kill switches**: none.
+
+## 2026-09-10 — Pre-market Research (Day 75, Thursday — Week 18)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-09 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: WTI ~$96-97.7 (cluster $96.47-97.70), Brent ~$100-101.3 (cluster $100.98-101.34) — both now clearing $100 territory on Brent, the highest levels in this thesis's history and well above the $90-95 XOM/Energy floor. Driver per oilprice.com (last_updated today): "Oil prices are closing in on $100 as escalating U.S.-Iran attacks increasingly target tankers, military bases, and regional energy infrastructure" — a further escalation beyond Sep 8 (tanker strikes) and Sep 9 (Saudi energy-facility attacks), now explicitly including military bases. Same fragile war-premium pattern as the 2026-06-12 lesson (WTI $87→$93-98 fully reversed within 3 days once de-escalation hit).
+- **S&P 500 futures**: Modestly negative premarket, roughly -0.4% to -0.5% (cluster ~7,645-7,653; one outlier CNBC print +0.1% likely stale/mistimed).
+- **VIX**: ~16.3-16.5, up modestly (~+5% vs Sep 8's 15.72 close) — an elevated but not sharply spiking risk-off read, milder than Sep 8's same-day +5-7% jump.
+- **Today's catalysts**: PPI (August) at 8:30 AM ET — a hard timing-block release. Fed policy expectations (September FOMC Sep 16) and continued AI-trade strength (Oracle backlog, Broadcom outlook) are the dominant macro/equity narratives; oil/yields cited as a live headwind on valuations. No held-position-relevant single-stock catalyst.
+- **Earnings before open**: M, MCFT, SHOE, LOVE, DBI, FLWS, VNCE (per Nasdaq's pre-market earnings topic page) — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: **PPI (Aug) 8:30 AM ET today** + Initial/Continuing Jobless Claims same time — a hard timing-block day per strategy ("day before/day of major releases... unless thesis specifically includes them"). **CPI (Aug) is tomorrow, Sep 11, 8:30 AM ET** — making today additionally the day-before-CPI block. FOMC rate decision is Sep 16 (not today).
+- **Sector momentum**: Energy leads again (+1.01% to +1.08% per Bloomberg/StockTitan latest session), Utilities second (+0.86%); Health Care (-2.55%), Financials (-1.43%) weakest. Consistent 3rd-session-running Energy leadership, but per the 2026-08-16 lesson this reflects a single-framework (XOM) pipeline, not a validated broad tailwind.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED a third consecutive session, not executed.**
+- Price condition: WTI/Brent now clear the $90-95 floor by the widest margin yet (Brent above $100 for the first time in this thesis's history).
+- **Why still no trade**: the move is confirmed driven by a *further escalation* of the Iran/Saudi conflict — reported strikes now extending to military bases and regional energy infrastructure, on top of Sep 8's tanker strikes and Sep 9's Saudi facility attacks. This is the same fragile geopolitical-premium pattern flagged 2026-06-12 (full reversal within 3 days once de-escalation hit) and rejected on identical catalyst-quality grounds for two straight prior sessions (Sep 8, Sep 9). A third consecutive escalating-headline rejection reinforces the pattern, not weakens it — the higher the price climbs on worsening war news, the more fragile (not more confirmed) the entry becomes.
+- **Additional hard block today**: even independent of catalyst quality, today is a macro timing-block day — PPI releases at 8:30 AM ET and CPI follows tomorrow morning, both squarely inside the "day of / day before major releases" no-trade rule.
+- **Disposition**: not carrying forward as a standing conditional candidate, consistent with Sep 8/9 dispositions. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst, not a continuation of the same war-premium move. No other candidate is in the pipeline today.
+
+### Risk factors for today
+- **US-Iran/Saudi conflict escalation** (now reportedly including strikes on military bases and energy infrastructure, oil approaching $100) is the dominant live risk factor — could move sharply further in either direction on any new headline, particularly a de-escalation signal that would snap the war premium as seen 2026-06-12. No portfolio exposure (0 positions), so no direct P&L risk.
+- **PPI (8:30 AM ET today) and CPI (8:30 AM ET tomorrow)** are both hard timing blocks — no new trades today or tomorrow morning regardless of any candidate quality.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 (restating only that it remains unresolved, no new information this session).
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh, clears the price floor by its widest margin yet (Brent > $100), but rejected a third consecutive session on catalyst-quality grounds — the move is now driven by a *further escalation* (strikes reportedly extending to military bases and energy infrastructure) of the same fragile geopolitical premium rejected the prior two sessions. Today is also a hard macro timing-block day (PPI today, CPI tomorrow), which would block any candidate regardless of catalyst quality. No other thesis in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 9 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 4 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 18) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-09. `memory/PAUSED.flag` absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 18)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
+**Active kill switches**: none.
