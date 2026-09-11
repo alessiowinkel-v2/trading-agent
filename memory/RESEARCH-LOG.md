@@ -4367,3 +4367,51 @@ All clear. KS-1 (daily drawdown, vs Sep 9 EOD $10,000): 0.00% — CLEAR. KS-2 (w
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
 **Active kill switches**: none.
+
+## 2026-09-11 — Pre-market Research (Day 76, Friday — Week 18)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-10 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: Highly dispersed quotes across sources ($97-104 WTI, $102-109 Brent), but the most decision-relevant signal is directional, not level: per Investing.com (last_updated today), "Crude Oil WTI Futures are sliding 2.4% today, retreating from a session high of $104.46 to close at $100.05, as fresh diplomatic signals in the US-Iran conflict begin to erode the substantial geopolitical war premium" — the first confirmed *de-escalation* signal since the escalation run began Sep 8 (tanker strikes → Sep 9 Saudi facility attacks → Sep 10 military-base strikes). Both benchmarks remain well above the $90-95 XOM/Energy floor even after the pullback.
+- **S&P 500 futures**: Roughly flat to modestly positive, cluster ~7,600-7,690 (+0.1% on the most current CNBC print); sources disagree on magnitude but agree on direction (flat/slightly up).
+- **VIX**: ~17.3-17.85 (Cboe official close 17.84, +8.4% on the day), up from Sep 8's 15.72 — elevated and rising for a third session, consistent with the ongoing war-premium buildup, not yet reflecting the diplomatic de-escalation signal in oil.
+- **Today's catalysts**: **August CPI is the dominant catalyst** (multiple sources call it the day's most important macro driver). Also: Telix Pharmaceuticals (TLX) FDA PDUFA decision, Kroger (KR) earnings, continued digestion of Oracle/Adobe results. None are watchlist/thesis-relevant (no positions).
+- **Earnings before open**: KR, HOFT, MNY, CMCM, IHT, OCCI, RENT — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: **CPI (August) 8:30 AM ET today** — a hard timing-block release per strategy ("day of major releases... unless thesis specifically includes them"). PPI already printed yesterday (Sep 10). Next FOMC decision is Sep 15-16 (not today). Next jobs report (Employment Situation) is Oct 2.
+- **Sector momentum**: Contradictory across sources again (consistent with the 2026-08-16 pipeline-breadth/noise lesson) — Technology and Energy both cited as this week's strongest, Real Estate/Utilities weakest in a live snapshot; magnitudes and rankings disagree source-to-source.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — not re-screened as a fresh candidate; today is a hard block regardless.**
+- Today is CPI day — a hard macro timing block per strategy, independent of any candidate's quality. No trade would be placed today even if a thesis cleared every other gate.
+- Separately, on catalyst quality: the oil move that has driven this thesis's price condition for four sessions now shows its first confirmed crack — diplomatic signals reportedly eroding the war premium, oil pulling back -2.4% intraday. This is consistent with the 2026-06-12 lesson (geopolitical premiums reverse fast once de-escalation signals appear) and reinforces, rather than resolves, the catalyst-quality rejection from Sep 8/9/10. A thesis built on a premium that is now visibly cracking is weaker today than on any prior session, not stronger.
+- **Disposition**: no candidate screened or carried forward. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst.
+
+### Risk factors for today
+- **CPI (8:30 AM ET today)** is a hard timing block — no new trades today regardless of candidate quality.
+- **US-Iran conflict de-escalation risk**: first diplomatic signal reported eroding the war premium after three days of escalation (tanker strikes → Saudi facility attacks → military-base strikes). Could reverse sharply further in either direction on any new headline. No portfolio exposure (0 positions), so no direct P&L risk.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls`. A root-level `PAUSED.flag` (non-standard path) exists (5 bytes, content "test", mtime Sep 4) — per the 2026-09-06 lesson this is resolved as untracked-or-incidental debris, not a deliberate pause; does not trigger the standard kill switch. Flagging once more for user cleanup, not re-litigating provenance.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. Today is CPI day — a hard macro timing block that rules out any new trade regardless of candidate quality. Independently, the XOM/WTI-floor thesis's underlying catalyst (the Iran/Saudi war premium) showed its first confirmed sign of cracking this session (diplomatic de-escalation signals, oil pulling back off session highs) — reinforcing the fragile-premium rejection from the prior three sessions rather than creating a new entry case. No other candidate in the pipeline.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 10 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 4 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 18) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-10. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 18)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
+**Active kill switches**: none.
