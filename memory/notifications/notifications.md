@@ -1082,3 +1082,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: pre-market research resumes; 90-day window still 16+ days overdue for user decision
+
+---
+## 2026-09-13 20:36 UTC
+Week ending 2026-09-11
+Portfolio: $10,000 (0.00% week, 0.00% phase)
+vs SPY: +0.77% week, -1.72% phase (both cash-artifacts, not earned)
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C
+Key takeaway: 4-day war-premium rejection held perfectly, but 76 days / 0 trades ever; 90-day window closed 2.5+ weeks ago, unresolved for the 9th+ review running
+Graduation: 1/7 criteria met

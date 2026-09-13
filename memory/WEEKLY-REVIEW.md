@@ -1888,3 +1888,97 @@ No trades placed. Reviewing the period's process instead.
 **Graduation criteria met: 2/7** (down from 3/7 — two items downgraded from ✅ to 🟡 due to the cadence blackout)
 
 Days running counter: **71** (Day 1 = 2026-05-27; Day 71 = 2026-09-04; Days 63-67 undocumented due to routine blackout)
+
+---
+
+## Week ending 2026-09-11
+
+> **Note**: Routine triggered Sunday 2026-09-13, not Friday — same cadence gap flagged in every prior review since launch. Week covers Monday Sep 7 (Labor Day, market closed) through Friday Sep 11 (Days 72–76, Week 18). No cadence blackout this week — every trading day has a filed pre-market + EOD record.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Sep 4 close) | $10,000.00 |
+| Ending portfolio (Friday Sep 11 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (SPY Sep 4 $770.19 → Sep 11 $764.29, confirmed across Investing.com/Barchart/YCharts/TwelveData) | −0.77% |
+| Bot vs S&P this week | +0.77% (cash-artifact — SPY fell, bot generated no return of its own) |
+| Phase P&L since launch (May 27 $751.38 → Sep 11 $764.29) | Bot 0.00% vs SPY +1.72% — behind, numerically inside the 2% tolerance, but still a zero-trade artifact of SPY's own path (per the 2026-07-03/07-10 lessons), not earned performance |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Live Alpaca confirmed (queried this session): equity $10,000.00, cash $10,000.00, 0 positions, 0 orders, `balance_asof: 2026-09-11`.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. Sep 7 was a legitimate market holiday (Labor Day); all four remaining sessions ran full documentation cadence.
+
+**Sep 7 (Day 72, Mon)**: No session — Labor Day. Correctly logged as a placeholder, no fabricated "today's catalysts." XOM/WTI-floor thesis carried forward conditionally for Tuesday.
+
+**Sep 8 (Day 73, Tue)**: XOM/Energy price condition cleared the $90-95 floor comfortably (Brent $97-99) for the first time in the thesis's ~13-week history, but **rejected on catalyst quality** — the move was driven by an active, escalating US-Iran conflict (reported tanker strikes, VIX +5-7% same day), the same fragile war-premium pattern that fully reversed within days per the 2026-06-12 lesson. Correct HOLD — buying an escalating war headline isn't a "boring, fundamentals-driven" entry even though the price threshold was technically met.
+
+**Sep 9 (Day 74, Wed)**: Re-screened fresh, rejected a second consecutive session — WTI/Brent cleared the floor more comfortably still (Brent $98-99), but the move was driven by a *further* escalation (reported Saudi energy-facility attacks stacked on Sep 8's tanker strikes). Correct HOLD, same catalyst-quality reasoning applied consistently.
+
+**Sep 10 (Day 75, Thu)**: Re-screened fresh, rejected a third consecutive session — Brent cleared $100 for the first time in the thesis's history (widest margin yet), but escalation continued (strikes reportedly extending to military bases). Independently, today was also a hard PPI-day timing block. Correct HOLD, doubly blocked.
+
+**Sep 11 (Day 76, Fri)**: CPI day — hard timing block, moot regardless of candidate quality. Separately, oil showed its first confirmed *de-escalation* signal (diplomatic softening, WTI pulling back −2.4% intraday off session highs), reinforcing rather than resolving the prior three days' catalyst-quality rejection. Correct HOLD.
+
+**In hindsight**: This was the cleanest, most consistent test yet of the 2026-06-12 "fragile geopolitical premium" rule — four straight sessions where the raw price signal got *more* attractive every single day (comfortably-above-floor → widest-margin-ever) while the underlying catalyst (an escalating war) got *worse*, and the gate held firm each time without rationalizing an exception. No process deficiency in any day's decision this week.
+
+### Self-grades (be HARSH)
+- Process discipline: **A-** — Four consecutive sessions correctly separated "price condition met" from "catalyst quality met," holding the line even as the price signal became the most favorable in the thesis's 13-week history. PPI (Sep 10) and CPI (Sep 11) hard timing blocks applied with zero exceptions. No conditional-plan carry-forward existed this week (each rejection was substantive, not deferred), so the long-standing market-open documentation gap wasn't even a live risk this week.
+- Documentation quality: **C+** — Research and EOD logs were specific and consistent, and SPY close-sourcing correctly rejected several partial-volume/mismatched intraday snapshots rather than reporting them at face value. Deduction: the Sep 11 research log stated that the root-level `PAUSED.flag` was "resolved as untracked-or-incidental debris... per the 2026-09-06 lesson" — but the actual 2026-09-06 LESSONS.md entry concluded the file **is tracked** in git (commit `5db43a1a`, 2026-07-30). This session verified fresh via `git ls-files --error-unmatch PAUSED.flag` (exits 0 — tracked) and `git status --porcelain PAUSED.flag` (no output — clean, no local changes): the file is tracked, unmodified, content still "test". The Sep 11 entry inverted a settled conclusion while citing it as support — a new variant of the citation-accuracy failure class flagged 2026-07-31/08-07/08-21 (that thread was about mis-deriving facts fresh; this is about mis-citing an already-resolved one).
+- Risk management: **A** — 0.00% drawdown, all kill switches checked and clear every session, live Alpaca reconciliation (0 positions, 0 orders) confirmed daily, capital fully intact for the 18th consecutive week.
+- Outcome (weighted least): **C** — 0.00% vs SPY −0.77% this week; the bot is nominally "ahead" only because SPY fell while the bot held static cash, not because of any generated return (per the 2026-07-03/07-10 lessons on this not being earned alpha). Phase P&L improved to −1.72%, numerically back inside the 2% graduation tolerance, but 76 trading days in, zero trades have ever been placed in either direction.
+- **Overall: C** — The best week of pure rule-application discipline in recent memory (a war-premium thesis correctly rejected four days running as it became superficially more attractive each day) is real credit. But it can't lift the grade above a C while the structural facts are unchanged: the 90-day evaluation window (closed ~2026-08-25) remains unresolved for the 9th+ consecutive weekly review with zero user action, and the mission itself — beat SPY through real agent decisions, handle a 5%+ drawdown — has never been tested across 76 trading days. A documentation slip that inverted a settled conclusion (PAUSED.flag) is a small but real reminder that "resolved" items still need re-verification, not just citation.
+
+### What worked (3-5 bullets)
+- Held the XOM/Energy war-premium rejection for four straight sessions (Sep 8-11) even as the price signal became the most favorable in the thesis's 13-week history (Brent > $100) — the cleanest real-world test yet of the 2026-06-12 "fragile geopolitical premium" rule
+- PPI (Sep 10) and CPI (Sep 11) hard timing blocks applied with zero exceptions or attempted workarounds
+- SPY data-honesty discipline held across the week: multiple partial-volume/mismatched intraday snapshots were identified and rejected rather than reported at face value
+- Full 4/4 trading-day documentation cadence (Sep 8-11) plus a correctly-handled holiday placeholder (Sep 7) — no repeat of the Aug 25-31 blackout
+- Zero kill-switch violations; capital 100% preserved for the 18th consecutive week
+
+### What didn't work (3-5 bullets)
+- The Sep 11 research log mis-cited the already-resolved 2026-09-06 LESSONS.md conclusion on `PAUSED.flag`, inverting "tracked" into "untracked" — live verification this session confirms it is tracked, clean, content "test", still unresolved (as a cleanup item) after 10+ prior sessions' worth of re-derivation effort
+- The 90-day evaluation window (closed ~2026-08-25) remains unresolved — this is the 9th+ consecutive weekly review escalating the same open decision with zero user action taken
+- Zero trades across 76 trading days since launch; the core mission (beat SPY through real agent decisions, handle a 5%+ drawdown correctly) remains completely untested
+- `scripts/notify.sh` has no ClickUp credentials configured — every notification for months has only landed in the local fallback file (`memory/notifications/notifications.md`), never reaching the user in real time, plausibly why the window-closure and PAUSED.flag escalations have gone unactioned
+- The single-candidate (XOM/WTI-floor) pipeline still hasn't diversified; now moot for the closed window, but relevant if the window question is ever resolved
+
+### Key lessons (added to LESSONS.md)
+- Citing a prior LESSONS.md entry's conclusion is itself a place errors can enter, distinct from mis-deriving a fact fresh: the Sep 11 research log described the 2026-09-06 entry's PAUSED.flag conclusion as "untracked" when that entry actually concluded "tracked." Quote prior conclusions directly rather than summarizing from memory.
+- A geopolitical war-premium thesis can be correctly rejected on catalyst-quality grounds even as its raw price signal gets more "attractive" every single day for four consecutive sessions — confirms the 2026-06-12 lesson holds under sustained multi-day pressure, not just a single-day test.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **[9th+ consecutive escalation, most urgent]** The 90-day evaluation window closed ~2026-08-25. 76 trading days elapsed, 0 trades ever placed. Recommend the user explicitly decide: treat Phase 1 as concluded on process-quality grounds alone, extend the window with a new end date, or revisit gate calibration. No unilateral change made or possible.
+2. **Root-level `PAUSED.flag`**: confirmed again this session — tracked, clean, content "test", first added incidentally in commit `5db43a1a` (2026-07-30). Recommend deleting it or stating its purpose once; it has now cost 10+ sessions of re-verification effort with no functional purpose.
+3. **notify.sh delivery gap**: no ClickUp credentials configured — notifications only ever land in a local file, not in front of the user. Likely root cause of both open items above going unactioned. Recommend configuring `CLICKUP_API_KEY`/`CLICKUP_WORKSPACE_ID`/`CLICKUP_CHANNEL_ID`, or another real delivery channel.
+4. **Weekly review cadence (repeated)**: fired Sunday Sep 13, not Friday Sep 11. Same orchestration gap flagged in nearly every prior review since launch.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (cadence has run clean for 2 full weeks since the Aug 25-31 blackout, but that blackout already happened and can't be retroactively cleared)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat entire phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY +1.72% phase — numerically back inside the 2% tolerance, but still a zero-trade artifact, not earned performance)
+- [ ] No uncaught kill-switch breaches: 🟡 (carried over — the Aug 25-31 blackout means kill switches weren't actively checked for 5 trading days; can't retroactively certify nothing was missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries exist to review — vacuously satisfied)
+- [ ] Memory files functional: 🟡 (downgraded — this week's own log inverted a settled conclusion about `PAUSED.flag`'s tracked status while citing it as resolved)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced across the entire phase)
+
+**Graduation criteria met: 1/7**
+
+Days running counter: **76** (Day 1 = 2026-05-27; Day 76 = 2026-09-11)
