@@ -1094,3 +1094,14 @@ Best: N/A  Worst: N/A
 Overall grade: C
 Key takeaway: 4-day war-premium rejection held perfectly, but 76 days / 0 trades ever; 90-day window closed 2.5+ weeks ago, unresolved for the 9th+ review running
 Graduation: 1/7 criteria met
+
+---
+## 2026-09-14 19:39 UTC
+EOD 2026-09-14
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, phase unavailable
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: FOMC Day 2/decision Wed - hard block; XOM/WTI thesis rejected 5x on war-premium catalyst quality; 90-day window 17+ days overdue for user decision
