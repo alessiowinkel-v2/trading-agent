@@ -4415,3 +4415,53 @@ All clear. KS-1 (daily drawdown, vs Sep 10 EOD $10,000): 0.00% — CLEAR. KS-2 (
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Aug 21 weekly review: bot 0.00% vs SPY +1.91%, outside 2% tolerance); still stale pending next weekly review.
 **Active kill switches**: none.
+
+
+## 2026-09-14 — Pre-market Research (Day 77, Monday — start of Week 19)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-11 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: Sharp renewed spike — WTI ~$100-103 (+2.8-3.0% intraday per Investing.com/Oilrate.today), Brent ~$104-108 (+2.9-3.6%), both well above the $90-95 XOM/Energy floor. Driven by fresh escalation, not de-escalation: OilPrice.com headline today reads "Houthi strikes threaten Saudi oil exports as Brent hits $105 and Middle Eastern crude soars to $120." This reverses Friday's (Sep 11) first confirmed de-escalation signal — the war premium is back up, not cracking. Separately, Topstep's weekly kickoff flags a GCC foreign ministers meeting with Iran's FM in Oman today, pushing for a temporary Hormuz shipping arrangement — a live de-escalation catalyst that could move price sharply the other way intraday.
+- **S&P 500 futures**: Mixed/contradictory across sources — most show flat-to-+0.8% premarket (~7,660-7,690), one source (TradingEconomics) shows the cash index already down -0.47% to 7,621. No clean directional signal.
+- **VIX**: ~17.3-18.0, up from Friday's confirmed close of 15.84 (+~12-14%) — elevated for essentially the first session after Friday's dip, consistent with the oil/geopolitical re-escalation above.
+- **Today's catalysts**: No major confirmed U.S. macro catalyst. **FOMC meeting Day 1 begins today** (2-day meeting, policy decision Wed Sep 16, 2:00 PM ET) — not a hard block today per strategy (only "day of" FOMC is a hard block), but positioning risk builds into Wednesday. Treasury 3-month/6-month bill auctions at 3:30 PM ET. AI-linked names (HPE record Q3 earnings + $3.5B announcement, SMCI, AMZN elevated options vol) and Moderna (healthcare conference) are single-stock movers, none watchlist-relevant.
+- **Earnings before open**: CBRL, HAIN, CODA, RFIL, CSHR — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: No CPI/PPI/jobs data today (next CPI Oct 14, PPI Oct 15, jobs report Oct 2). FOMC Day 1 today, decision Wed Sep 16 — Wednesday will be a hard "day of FOMC" block regardless of any candidate.
+- **Sector momentum**: Contradictory across sources again (consistent with the 2026-08-16 pipeline-breadth/noise lesson) — Technology cited as leading by some (AI capex momentum), Energy/Staples/Industrials/Materials cited as leading by others; Utilities and Consumer Discretionary weak across sources.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED a fifth session (non-consecutive; Friday showed a brief crack, today reverses it), not executed.**
+- Price condition: comfortably above the $90-95 floor (WTI ~$100-103, Brent ~$104-108).
+- **Why still no trade**: today's spike is confirmed driven by a *fresh escalation* — reported Houthi strikes threatening Saudi oil exports — not a fundamentals or supply-demand catalyst. This reverses Friday's first de-escalation signal within one trading session, which is itself further evidence for the 2026-06-12 lesson (geopolitical premiums are fragile and whip in both directions fast) rather than a reason to treat today's higher price as more "confirmed." A live diplomatic meeting (GCC-Iran, Oman, today) could reverse the move again intraday.
+- **Disposition**: not carrying forward as a standing conditional candidate, consistent with every Sep 8-11 disposition. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst, not a continuation of the same war-premium move. No other candidate is in the pipeline today.
+
+### Risk factors for today
+- **US-Iran/Houthi/Saudi conflict** remains the dominant live risk factor, now re-escalating after Friday's brief crack — could move sharply further in either direction on any headline, including today's GCC-Iran Oman talks. No portfolio exposure (0 positions), so no direct P&L risk.
+- **FOMC Day 1 today** (decision Wed Sep 16, 2:00 PM ET) — no hard block today, but Wednesday is a hard block regardless of candidate quality; elevated positioning risk into the meeting.
+- VIX up ~12-14% from Friday's close — modest risk-off tone building.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered. Root-level `PAUSED.flag` (non-standard path, untracked from the standard KS check) persists unchanged (mtime Sep 13, content "test") — already conclusively resolved in the 2026-09-06/09-13 LESSONS.md entries as tracked git debris (commit `5db43a1a`, 2026-07-30), not re-litigating provenance again this session.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 and the Sep 11 weekly review (1/7 graduation criteria met) — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh — clears the price floor comfortably, but rejected again on catalyst-quality grounds: today's spike is a fresh geopolitical escalation (Houthi strikes threatening Saudi exports) that reverses Friday's brief de-escalation signal within a single session, reinforcing rather than resolving the fragile-premium rejection pattern from Sep 8-11. No other candidate in the pipeline. FOMC Day 1 begins today; Wednesday's decision day will be a hard block regardless.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 11 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 11 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 19) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-11. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
+**Active kill switches**: none.
