@@ -1105,3 +1105,14 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: FOMC Day 2/decision Wed - hard block; XOM/WTI thesis rejected 5x on war-premium catalyst quality; 90-day window 17+ days overdue for user decision
+
+---
+## 2026-09-15 19:39 UTC
+EOD 2026-09-15
+Portfolio: $10,000.00 (0.00% day, 0.00% phase)
+vs SPY: unavailable today, phase unchanged
+Cash: $10,000.00 (100%)
+Trades today: none
+Open positions: 0
+Active kill switches: none
+Tomorrow: FOMC decision 2PM ET — hard block, no new trades regardless of candidates
