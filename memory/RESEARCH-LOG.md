@@ -4465,3 +4465,53 @@ All clear. KS-1 (daily drawdown, vs Sep 11 EOD $10,000): 0.00% — CLEAR. KS-2 (
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
 **Active kill switches**: none.
+
+## 2026-09-15 — Pre-market Research (Day 78, Tuesday — Week 19)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-14 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: Sharp renewed spike — WTI ~$102-104 (+2-3% intraday across Investing.com/Oilprice.com/Bloomberg), Brent ~$106-108, both well above the $90-95 XOM/Energy floor. Driven by a fresh, more serious escalation than prior sessions: Investing.com reports an attack on Saudi Arabia's East-West Crude Oil Pipeline — the kingdom's sole bypass export route since Iran's effective closure of an alternate route — a step up from the tanker-strike/Houthi-threat headlines of the past week.
+- **S&P 500 futures**: Contradictory across sources (7,620-7,700 range cited), no clean directional signal — consistent with the recurring cross-source noise pattern.
+- **VIX**: ~17.10-17.40, up from Friday's confirmed close of 15.84 (+8-10%) — modestly elevated, in the same range as Monday.
+- **Today's catalysts**: FOMC Day 2 (2-day meeting that began Monday Sep 14); the policy decision itself is tomorrow, Wed Sep 16, 2:00 PM ET — not a hard block today per strategy (only "day of" FOMC is a hard block), but positioning risk is building sharply into tomorrow. AI/semiconductor sentiment negative (Philadelphia Semiconductor Index -5.9% per one source, citing AI-development-slowdown commentary). Senate cloture vote on crypto policy at 2:15 PM ET (not equity-relevant to our universe).
+- **Earnings before open**: No major reports on the Nasdaq calendar for today; secondary sources cite TCOM, VRA, BIOX, LAES premarket — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: No CPI/PPI/jobs data today — August CPI already printed Sep 11 (+3.4% YoY, inline). FOMC decision is tomorrow (Wed Sep 16), which will be a hard "day of FOMC" block regardless of any candidate.
+- **Sector momentum**: Contradictory across sources again (consistent with the 2026-08-16 pipeline-breadth/noise lesson) — live weekly performance shows Communication Services/Health Care/Consumer Staples leading and Energy/Technology/Industrials lagging, while a separate momentum-quadrant model shows Energy/Staples/Industrials/Materials "Leading" and Tech/Communications "Lagging." Rankings disagree source-to-source; not usable as a clean signal today.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED again (6th+ session), not executed.**
+- Price condition: comfortably above the $90-95 floor (WTI ~$102-104, Brent ~$106-108) — the widest margin yet.
+- **Why still no trade**: today's spike is confirmed driven by a *fresh, more severe escalation* — a reported attack on Saudi Arabia's primary export pipeline — not a fundamentals or supply-demand catalyst. This is a step up in severity from the tanker/Houthi-threat headlines of the past week, reinforcing rather than resolving the fragile-premium rejection pattern running since Sep 8 (2026-06-12 lesson: geopolitical premiums are fragile and reverse fast in either direction). Separately, entering a new position the day before an FOMC decision (tomorrow, Wed Sep 16) adds avoidable positioning risk even if the catalyst were sound.
+- **Disposition**: not carried forward as a standing conditional candidate. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst, not a continuation of the same war-premium move. No other candidate in the pipeline today.
+
+### Risk factors for today
+- **Saudi pipeline attack / Iran-Gulf escalation** is the dominant live risk factor, more severe than prior-week headlines — could move sharply further in either direction on any new development. No portfolio exposure (0 positions), so no direct P&L risk.
+- **FOMC decision tomorrow (Wed Sep 16, 2:00 PM ET)** — today is not a hard block, but is effectively a positioning-risk buildup day; tomorrow is a hard block regardless of candidate quality.
+- VIX modestly elevated (~17.1-17.4, +8-10% vs Friday's close) — not extreme, but consistent with a risk-off tilt building into FOMC.
+- AI/semiconductor sentiment negative today (Phili Semiconductor Index -5.9% per one source) — no exposure, not watchlist-relevant.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh — clears the price floor by its widest margin yet, but rejected again on catalyst-quality grounds: today's spike is driven by a more severe fresh escalation (reported Saudi export-pipeline attack) than the past week's headlines, reinforcing the fragile-premium rejection pattern rather than resolving it. No other candidate in the pipeline. FOMC decision is tomorrow (Wed Sep 16) — a hard block regardless of any candidate.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 14 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 11 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 19) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-14. `memory/PAUSED.flag` (standard path) absent — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
+**Active kill switches**: none.
