@@ -4515,3 +4515,52 @@ All clear. KS-1 (daily drawdown, vs Sep 14 EOD $10,000): 0.00% — CLEAR. KS-2 (
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
 **Active kill switches**: none.
+
+## 2026-09-16 — Pre-market Research (Day 79, Wednesday — Week 19)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-15 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: Further spike — WTI ~$105-106 (per Bloomberg/OilPriceAPI/Oilrate.today), Brent ~$108-109, both the widest margin yet above the $90-95 XOM/Energy floor. Confirmed driven by the same escalating geopolitical premium as the last 6 sessions, not a fundamentals catalyst: continued US-Iran military exchanges, renewed Houthi strikes on Saudi energy infrastructure, and the Saudi East-West pipeline shutdown (loadings suspended at Yanbu). No new de-escalation signal.
+- **S&P 500 futures**: Down premarket — ES roughly 7,650-7,665, down ~0.4-0.5% across Yahoo/Investing.com/MarketWatch, consistent with FOMC-day positioning risk.
+- **VIX**: ~16.9-17.5, holding in the same elevated-but-not-extreme range as the last two sessions (prior Friday close 15.84).
+- **Today's catalysts**: **FOMC rate decision + press conference, 2:00 PM ET** — the dominant catalyst today, per every source. Multiple sources flag this as a live 50/50-to-hike-leaning decision (unusually high uncertainty this close to a meeting), with markets far more focused on the guidance than the decision itself. Retail sales (8:30 AM ET) and crude oil inventories (10:30 AM ET) are secondary releases today.
+- **Earnings before open**: Lennar (LEN/LENb) reports BMO; not a watchlist/thesis ticker, gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: August CPI/PPI already printed last week (Sep 10-11). Next jobs report Oct 2. **FOMC decision today, 2:00 PM ET** — hard "day of FOMC" block per strategy, applies regardless of any candidate quality.
+- **Sector momentum**: Energy clearly leading again (+2.26% latest snapshot; XLE +13% over 3 months), consistent with the oil spike. Consumer Discretionary, Utilities, and Communication Services lagging. Directionally consistent with recent sessions (unlike the contradictory readings flagged 2026-08-16).
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED a 7th consecutive session, not executed.**
+- Price condition: comfortably above the $90-95 floor (WTI ~$105-106, Brent ~$108-109) — the widest margin yet, again.
+- **Why still no trade**: today's spike is confirmed (via direct query) driven by the same escalating war-premium pattern as every session since Sep 8 — continued US-Iran conflict, fresh Houthi strikes, and the Saudi East-West pipeline shutdown — not a fundamentals or supply-demand catalyst. Per the 2026-06-12 lesson and its 2026-09-13 reaffirmation under sustained multi-day pressure, a geopolitical premium that keeps widening on worsening headlines is not more "confirmed" with each session; it remains fragile and reversible on a single diplomatic signal.
+- **Independently disqualifying today regardless of catalyst quality**: today is the FOMC decision day (2:00 PM ET) — a hard "day of FOMC" block per TRADING-STRATEGY.md's "When NOT to Trade" section. No new position would be opened today even if the oil catalyst were sound.
+- **Disposition**: not carried forward as a standing conditional candidate. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst. No other candidate in the pipeline today.
+
+### Risk factors for today
+- **FOMC decision, 2:00 PM ET** — described by multiple sources as unusually high-uncertainty (near 50/50 hike probability priced in some sources, higher in others). Elevated risk of a sharp directional move in equities post-2:00 PM regardless of positioning. No portfolio exposure (0 positions), so no direct P&L risk, but next session's (midday/EOD) risk checks should treat any post-FOMC volatility as expected, not a thesis break.
+- **US-Iran/Houthi/Saudi conflict** remains the dominant live oil-market risk factor, now at its most severe pipeline-disruption stage yet (Yanbu loadings suspended). No portfolio exposure.
+- VIX modestly elevated but stable (~17), not signaling acute stress ahead of the decision.
+- No held tickers — no thesis-break risk this session.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh and rejected a 7th consecutive session on catalyst-quality grounds — the same escalating war-premium pattern, now at its widest margin yet. Independently, today is the FOMC decision day (2:00 PM ET), a hard block per strategy regardless of any candidate. No trades planned today.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 15 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 11 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 19) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-15. `memory/PAUSED.flag` (standard path) confirmed absent via direct `ls` this session — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
+**Active kill switches**: none.
