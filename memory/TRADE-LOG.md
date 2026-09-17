@@ -955,3 +955,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** No positions, no trades, no orders (Alpaca: equity $10,000, cash $10,000, balance_asof 2026-09-15) — 79 consecutive trading days in cash, 0/3 weekly slots used. Today was FOMC decision day, a hard no-new-trades block regardless of any candidate; no protective stops needed (no open positions). Root PAUSED.flag (non-standard path) and the 90-day window decision (18+ sessions overdue) remain outstanding for user action.
 **Active kill switches:** none.
+
+---
+
+### 2026-09-17 — EOD Snapshot (Day 80, Thursday — Week 19)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (query ~2:00 PM ET, market still open; the one full-OHLC "close" row (TwelveData, $761.46, -0.23%) carries volume 490,013 — a fraction of a normal ~30-40M day, the same partial-day-snapshot signature flagged since 2026-08-24 — disregarded; other sources gave live intraday quotes only, ranging -0.45% to +1.13% off conflicting reference closes)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 80, Week 19 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-16). 0/3 weekly trade slots used, 0 total trades since launch (May 27) — 80 consecutive trading days fully in cash. No protective stops needed (no open positions). Per today's pre-market research, XOM/WTI-floor thesis rejected an 8th consecutive session — oil premium showed its first pullback (~3-4%) on post-FOMC repricing, reinforcing the fragile-war-premium rejection rather than resolving it. No other candidate in pipeline. Root-level PAUSED.flag (non-standard path, repo root, content "test") persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent. The 90-day evaluation window (closed ~2026-08-25) remains outstanding for the user's closure/extension/gate-recalibration decision, escalated in every routine since 2026-07-24 with zero resolution — now 19+ trading days overdue, still the single largest open item in this log. No kill switches triggered.
+**Active kill switches:** none.
