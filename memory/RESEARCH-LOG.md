@@ -4564,3 +4564,53 @@ All clear. KS-1 (daily drawdown, vs Sep 15 EOD $10,000): 0.00% — CLEAR. KS-2 (
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
 **Active kill switches**: none.
+
+## 2026-09-17 — Pre-market Research (Day 80, Thursday — Week 19)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-16 (confirmed live via Alpaca this session)
+
+### Market context
+- **FOMC decision (yesterday, Sep 16)**: Fed hiked 25bps to 3.75-4.00% — first hike since 2023, and signaled another increase within the year per multiple sources. Market reaction described as negative/hawkish repricing; USD surged, yields backed up. Today is the day *after* FOMC, not a hard block itself, but the post-decision volatility is the dominant live theme.
+- **WTI / Brent**: Sharp reversal overnight — WTI ~$101-102 (down ~3-4% from yesterday's ~$105-106), Brent ~$105 (down similarly). Still comfortably above the $90-95 XOM/Energy floor, but this is the first meaningful pullback after 7 consecutive sessions of a widening war premium. Direction consistent with post-Fed risk-off/dollar-strength repricing rather than a new supply/demand signal — no de-escalation headline confirmed in this session's queries.
+- **S&P 500 futures**: Modestly higher, ~7,675-7,680 (+0.25-0.31%) — mixed/muted reaction to the Fed, not a clean risk-on or risk-off signal.
+- **VIX**: ~15.96-17.05 depending on source, pulling back from yesterday's ~17.2-17.7 close — modestly lower, not signaling acute post-FOMC stress.
+- **Today's catalysts**: Post-Fed positioning is the dominant theme. Secondary releases: Initial Jobless Claims and Housing Starts/Building Permits, both 8:30 AM ET — neither is a hard-block event per TRADING-STRATEGY.md's "When NOT to Trade" list (only CPI/PPI/jobs/FOMC-day are named). AI/semiconductor and data-center power names in focus (Amazon-Qualcomm AI chip deal spillover, GNRC/BE); none are watchlist/thesis tickers.
+- **Earnings before open**: IPHA, IH, VFS, DAVA, KNDI, YRD, CYTOF, ADSE and others — none are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: CPI (Sep 11), PPI (Sep 10), jobs report (Sep 4), and FOMC (Sep 16) have all already printed/occurred — none block today. Jobless claims/housing starts today are not on the hard-block list.
+- **Sector momentum**: Contradictory across sources again (same recurring noise pattern) — one live snapshot shows Communication Services/Consumer Discretionary/Tech leading and **Energy weakest**; a separate rotation model shows Consumer Staples/Industrials/Materials/**Energy** leading and Tech/Communications/Discretionary/Financials lagging. Notably, this is the first session where any source shows Energy as the *weakest* sector rather than a leader — consistent with today's oil pullback, but not corroborated across sources.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED an 8th consecutive session, not executed.**
+- Price condition: still comfortably above the $90-95 floor (WTI ~$101-102, Brent ~$105) despite today's pullback.
+- **Why still no trade**: the entire multi-week premium this thesis has been tracking was explicitly a geopolitical war-premium move, not a fundamentals catalyst (rejected on those grounds for 7 straight sessions). Today's ~3-4% overnight pullback is the first real test of the 2026-06-12 "fragile and reversible" lesson under live conditions — the premium is now visibly cracking, on Fed/dollar repricing rather than a diplomatic resolution. This is exactly the outcome the fragile-premium rule was designed to avoid getting caught in: entering late into a war-premium spike that then reverses. No new fundamentals catalyst has emerged to replace it.
+- **Disposition**: not carried forward as a standing conditional candidate. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst. No other candidate in the pipeline today.
+
+### Risk factors for today
+- **Post-FOMC volatility** (25bps hike, hawkish guidance) is the dominant live risk factor market-wide. No portfolio exposure (0 positions), so no direct P&L risk.
+- **Oil premium reversal** — first pullback after 7 sessions of widening war premium; if this continues it retroactively validates every prior XOM rejection. No portfolio exposure.
+- VIX modestly lower (~16-17), not signaling stress.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls`. Root-level `PAUSED.flag` (non-standard path, untracked-per-lessons debris, content "test") persists unchanged — no kill switch triggered by either.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh and rejected an 8th consecutive session — the underlying war premium it was tracking showed its first real pullback (~3-4% overnight) on post-Fed repricing, reinforcing rather than resolving the fragile-premium rejection pattern. No other candidate in the pipeline. No trades planned today.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 16 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 11 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 19) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-16. `memory/PAUSED.flag` (standard path) confirmed absent via direct `ls` this session — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
+**Active kill switches**: none.
