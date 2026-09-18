@@ -967,3 +967,15 @@ No positions yet. Bot launches on the next trading day.
 
 **Notes:** Day 80, Week 19 (Thursday). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-16). 0/3 weekly trade slots used, 0 total trades since launch (May 27) — 80 consecutive trading days fully in cash. No protective stops needed (no open positions). Per today's pre-market research, XOM/WTI-floor thesis rejected an 8th consecutive session — oil premium showed its first pullback (~3-4%) on post-FOMC repricing, reinforcing the fragile-war-premium rejection rather than resolving it. No other candidate in pipeline. Root-level PAUSED.flag (non-standard path, repo root, content "test") persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent. The 90-day evaluation window (closed ~2026-08-25) remains outstanding for the user's closure/extension/gate-recalibration decision, escalated in every routine since 2026-07-24 with zero resolution — now 19+ trading days overdue, still the single largest open item in this log. No kill switches triggered.
 **Active kill switches:** none.
+
+---
+
+### 2026-09-18 — EOD Snapshot (Day 81, Friday — end of Week 19)
+**Portfolio:** $10,000.00 | **Cash:** $10,000.00 (100%) | **Day P&L:** $0.00 (0.00%) | **Phase P&L:** $0.00 (0.00%) | **SPY today:** unavailable (query mid/post-session; sources disagree -0.13% to -0.45% off conflicting reference closes, and the lowest-latency "close" prints carry volume 624,933 and 14.35M — well below a normal ~40-50M day, the same partial-day-snapshot signature flagged since 2026-08-24 — disregarded per honesty requirements)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|--------|--------|-------|-------|---------|----------------|------|
+| — | — | — | — | — | — | — |
+
+**Notes:** Day 81, end of Week 19 (Friday, triple witching). No positions, no trades, no orders (confirmed live via Alpaca — equity $10,000, cash $10,000, 0 positions, 0 orders, balance_asof 2026-09-17). 0/3 weekly trade slots used (Week 19 closes at 0 trades), 0 total trades since launch (May 27) — 81 consecutive trading days fully in cash. No protective stops needed or executed (no open positions). Per today's pre-market research, XOM/WTI-floor thesis rejected a 9th consecutive session — oil premium pulled back a second straight session and Energy flipped to weakest S&P sector two sessions running, reinforcing the fragile-war-premium rejection. No other candidate in the pipeline. Root-level PAUSED.flag (non-standard path, repo root, content "test") persists unchanged — does not trigger standard KS since memory/PAUSED.flag (standard path) confirmed absent. The 90-day evaluation window (closed ~2026-08-25) remains outstanding for the user's closure/extension/gate-recalibration decision, escalated in every routine since 2026-07-24 with zero resolution — now 20+ trading days overdue, still the single largest open item in this log. No kill switches triggered.
+**Active kill switches:** none.
