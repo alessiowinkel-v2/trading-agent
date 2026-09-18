@@ -4614,3 +4614,52 @@ All clear. KS-1 (daily drawdown, vs Sep 16 EOD $10,000): 0.00% — CLEAR. KS-2 (
 **Total drawdown**: 0.00%
 **Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
 **Active kill switches**: none.
+
+## 2026-09-18 — Pre-market Research (Day 81, Friday — end of Week 19)
+
+### Account snapshot
+- Equity: $10,000.00
+- Cash: $10,000.00 (100%)
+- Buying power: $40,000 (margin; cash-only discipline maintained)
+- Daytrade count: 0/3 (rolling 5-day; 0 trades since launch May 27)
+- Open positions: 0
+- Open orders: 0
+- balance_asof: 2026-09-17 (confirmed live via Alpaca this session)
+
+### Market context
+- **WTI / Brent**: Second consecutive pullback session — WTI ~$100-101 (down ~1-2.6% overnight per multiple sources, one outlier feed showing -6.5%), Brent ~$103-104 (down ~1-1.7%). Still comfortably above the $90-95 XOM/Energy floor, but this is now two straight sessions of retreat from the ~$105-106 peak reached Sep 16, reinforcing rather than resolving the fragile-war-premium pattern. No new de-escalation headline confirmed; move attributed to continued post-FOMC dollar/yield repricing, not a diplomatic resolution.
+- **S&P 500 futures**: Higher premarket — ES roughly 7,700-7,730, up ~0.25-1.0% across sources, consistent with continued post-Fed relief rally (Thursday cash session already closed +1.1%, best day in six weeks per one source).
+- **VIX**: ~15.0-15.5, down sharply from Thursday's mid-17s close — volatility compressing further post-FOMC, no stress signal.
+- **Today's catalysts**: Post-Fed digestion continues to dominate. **Triple witching** (stock options, index futures, and index options all expiring simultaneously) — can increase volume/intraday volatility but is not one of the named hard-block events in TRADING-STRATEGY.md's "When NOT to Trade" list. Bank of Japan rate decision (overnight) is a secondary global catalyst with limited direct read-through to any candidate. No watchlist/thesis ticker has a specific catalyst today.
+- **Earnings before open**: Trio-Tech International (TRT) essentially the only confirmed US earnings print; also some small-caps (VFS, RZLT, MPLT, ENLV, TLSA). None are watchlist/thesis tickers; gate-8 exclusion moot (no positions, no candidates).
+- **Economic calendar**: No CPI/PPI/FOMC/jobs today — all already printed (CPI Sep 11, PPI Sep 10, jobs Sep 4, FOMC Sep 16). Today's only US releases are Industrial Production/Capacity Utilization (9:15 AM ET) and prelim UMich Consumer Sentiment (10:00 AM ET) — neither on the hard-block list.
+- **Sector momentum**: Live premarket snapshot shows **Energy as the weakest sector** (-0.10%) for the second consecutive session, while Communication Services, Consumer Discretionary, and Information Technology lead (+0.9-1.15%) in a broadly risk-on tape (160 advancers vs. 61 decliners). This is the first back-to-back session where Energy has read as weakest rather than strongest since this thesis began tracking sector momentum.
+
+### Currently-held positions check
+No open positions. Nothing to monitor.
+
+### Trade ideas (0 candidates)
+
+**XOM/WTI-floor thesis — re-screened fresh, REJECTED a 9th consecutive session, not executed.**
+- Price condition: still comfortably above the $90-95 floor (WTI ~$100-101, Brent ~$103-104).
+- **Why still no trade**: this session provides a second consecutive confirmation of the pullback first flagged 2026-09-17 — WTI/Brent down again overnight, and Energy has now flipped to the weakest S&P sector two sessions running (vs. leading every session before that). The war premium this thesis was built on is visibly deflating on macro repricing, not a diplomatic resolution, which is exactly the reversal risk the 2026-06-12 and 2026-09-13 lessons warned about. Two-session confirmation strengthens the rejection rather than creating pressure to chase a "last chance" entry.
+- **Disposition**: not carried forward as a standing conditional candidate. Re-screen from scratch only on a fresh fundamentals/supply-demand catalyst. No other candidate in the pipeline today.
+
+### Risk factors for today
+- **Triple witching** — elevated volume/intraday volatility expected market-wide from simultaneous options/futures expiry. Not a hard block per strategy, but a reason for extra caution on any timing decisions today (none planned). No portfolio exposure (0 positions).
+- **Oil premium reversal, now 2 sessions running** — if this continues, it retroactively validates every prior XOM rejection this month. No portfolio exposure.
+- VIX compressing further (~15), no stress signal.
+- No held tickers — no thesis-break risk this session.
+- `memory/PAUSED.flag` (standard path) confirmed **absent** this session via direct `ls` — no kill switch triggered.
+- 90-day evaluation window / graduation decision: still outstanding per every review since 2026-07-24 — restating only that it remains unresolved, no new information this session.
+
+### Decision
+**HOLD.** Zero executable candidates. XOM/WTI-floor thesis re-screened fresh and rejected a 9th consecutive session — the underlying war premium showed a second consecutive pullback session, with Energy now the weakest S&P sector two sessions running. No other candidate in the pipeline. No trades planned today.
+
+### Kill switch status
+All clear. KS-1 (daily drawdown, vs Sep 17 EOD $10,000): 0.00% — CLEAR. KS-2 (weekly, vs prior Friday Sep 11 close $10,000): 0.00% — CLEAR. KS-3 (total, vs $10,000 start): 0.00% — CLEAR. KS-4 (position breach): no positions — CLEAR. KS-5 (activity): 0/3 trades this week (Week 19) — CLEAR. Live Alpaca check confirms 0 positions, 0 orders, equity $10,000.00, cash $10,000.00, balance_asof 2026-09-17. `memory/PAUSED.flag` (standard path) confirmed absent via direct `ls` this session — no kill switch triggers.
+
+**Weekly trade slots**: 0/3 used (Week 19)
+**Total drawdown**: 0.00%
+**Phase P&L**: unchanged from last confirmed figure (Sep 11 weekly review: bot 0.00% vs SPY +1.72% phase — both cash-artifacts, not earned performance); 1/7 graduation criteria met.
+**Active kill switches**: none.
