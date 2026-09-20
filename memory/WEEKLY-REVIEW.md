@@ -1982,3 +1982,100 @@ No trades placed. Sep 7 was a legitimate market holiday (Labor Day); all four re
 **Graduation criteria met: 1/7**
 
 Days running counter: **76** (Day 1 = 2026-05-27; Day 76 = 2026-09-11)
+
+---
+
+## Week ending 2026-09-18
+
+> **Note**: Routine triggered Sunday 2026-09-20, not Friday — same cadence gap flagged in every prior review since launch. Week covers Monday Sep 14 through Friday Sep 18 (Days 77–81, Week 19). No cadence blackout this week — every trading day has a filed pre-market + EOD record.
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting portfolio (prior Friday Sep 11 close) | $10,000.00 |
+| Ending portfolio (Friday Sep 18 close) | $10,000.00 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week (SPY Sep 11 $764.29 → Sep 18 $761.69, confirmed across stockanalysis.com/TwelveData/Investing.com/MarketWatch/ChartRow) | −0.34% |
+| Bot vs S&P this week | +0.34% (cash-artifact — SPY fell, bot generated no return of its own) |
+| Phase P&L since launch (May 27 $751.38 → Sep 18 $761.69) | Bot 0.00% vs SPY +1.37% — behind, numerically inside the 2% graduation tolerance, still a zero-trade artifact of SPY's own path (per the 2026-07-03/07-10 lessons), not earned performance |
+| Max intraweek drawdown | 0.00% (100% cash all week) |
+| Trades placed | 0 (W:0 / L:0 / open:0) |
+| Trade limit usage | 0/3 |
+| Win rate (closed trades) | N/A |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor (sum wins / \|sum losses\|) | N/A |
+
+Live Alpaca confirmed (queried this session): equity $10,000.00, cash $10,000.00, 0 positions, 0 orders, `balance_asof: 2026-09-18`.
+
+### Closed trades this week
+| Ticker | Entry | Exit | P&L | Days held | Reason for exit |
+|--------|-------|------|-----|-----------|-----------------|
+| — | — | — | — | — | No trades placed |
+
+### Open positions at week end
+| Ticker | Entry | Close | Unrealized | Stop |
+|--------|-------|-------|------------|------|
+| — | — | — | — | — |
+
+### Process review (per trade made this week)
+No trades placed. All five sessions ran full documentation cadence with the same falsifiable rejection criterion applied consistently through both a widening and a reversing oil premium.
+
+**Sep 14 (Day 77, Mon)**: XOM/Energy price condition comfortably above the $90-95 floor (WTI ~$100-103), but rejected a 5th time — a fresh Houthi/Saudi escalation reversed Friday's brief de-escalation signal within one session, reinforcing rather than resolving the fragile-premium pattern. FOMC Day 1 began today (decision Wed). Correct HOLD.
+
+**Sep 15 (Day 78, Tue)**: Rejected a 6th consecutive session — floor cleared by the widest margin yet (Brent $106-108) on a more severe escalation (reported Saudi export-pipeline attack); additionally flagged avoidable positioning risk from opening a new position the day before an FOMC decision. Correct HOLD.
+
+**Sep 16 (Day 79, Wed)**: Rejected a 7th consecutive session on catalyst-quality grounds (same war-premium pattern, widest margin yet); independently, today was the FOMC decision day (Fed hiked 25bps to 3.75-4.00%, first hike since 2023) — a hard block per strategy regardless of candidate quality. Correct HOLD, doubly blocked.
+
+**Sep 17 (Day 80, Thu)**: Rejected an 8th consecutive session. Oil showed its first real pullback (~3-4%) on post-Fed dollar/yield repricing rather than a diplomatic resolution — the first live test of whether the premium this thesis tracked was ever durable. Correctly not treated as a buy signal; no new fundamentals catalyst emerged. Correct HOLD.
+
+**Sep 18 (Day 81, Fri)**: Rejected a 9th consecutive session — a second straight pullback session, with Energy flipping to the weakest S&P sector two sessions running (vs. leading every session since Sep 8). Triple witching noted as a volatility factor, not a hard block. Correct HOLD.
+
+**In hindsight**: This week is the cleanest full-cycle test yet of the 2026-06-12 "fragile geopolitical premium" rule — the same thesis was rejected on the way up (widening war premium, price signal getting more attractive daily) and rejected again on the way down (price pulling back, Energy now weakest sector) without ever chasing either move. No process deficiency in any day's decision. No conditional plan was ever carried forward this week (each day re-screened fresh from scratch), which meant the long-standing market-open documentation gap wasn't even a live risk — a structural improvement over prior weeks, whether by design or by the absence of a qualifying candidate.
+
+### Self-grades (be HARSH)
+- Process discipline: **A-** — Nine consecutive XOM/Energy rejections spanned both a widening war premium (Sep 14-16) and its reversal (Sep 17-18) without ever chasing either direction; FOMC Day-1/decision-day handling was clean; no conditional plan was left dangling into a market-open window this week, sidestepping the recurring documentation gap entirely. Not a straight A because the pipeline is still single-candidate (flagged since 2026-08-16) and this week didn't change that.
+- Documentation quality: **B+** — All five days filed complete, consistent, falsifiable rejection reasoning; SPY same-day closes correctly withheld as "unavailable" pending confirmed 4:00 PM prints rather than guessed (2026-08-24 discipline held). No citation-inversion or arithmetic errors found this week, unlike the prior two reviews. Held below A- only because `RESEARCH-LOG.md` (4,665 lines) and `TRADE-LOG.md` (981 lines) are both growing without a rotation event ever having occurred, per the file-size clause of the "memory files functional" graduation criterion.
+- Risk management: **A** — 0.00% drawdown, all kill switches checked daily and clear, live Alpaca reconciliation (0 positions, 0 orders) confirmed every session, capital fully intact for the 19th consecutive week.
+- Outcome (weighted least): **D** — 0.00% vs SPY −0.34% this week; the bot is nominally "ahead" only because SPY fell while the bot held static cash, not because of any generated return (per the 2026-07-03/07-10 lessons on this not being earned alpha). Phase P&L improved to −1.37% (numerically inside the 2% tolerance) for the same reason. 81 trading days in, zero trades have ever been placed in either direction.
+- **Overall: C+** — The best full-cycle demonstration yet of the fragile-premium rule (held through both the spike and its reversal) is real, durable process credit. It cannot lift the grade further while the structural fact is unchanged and now more overdue than ever: the 90-day evaluation window (closed ~2026-08-25) remains unresolved for roughly the 10th consecutive weekly review with zero user action, and the core mission — beat SPY through real agent decisions, handle a 5%+ drawdown — has never been tested across 81 trading days.
+
+### What worked (3-5 bullets)
+- The fragile-geopolitical-premium rule (2026-06-12) passed its cleanest full-cycle test yet: rejected the same thesis through both a widening war premium (Sep 14-16, Brent to ~$108) and its reversal (Sep 17-18, Energy flipping to weakest sector) without chasing either move
+- FOMC Day-1 (Sep 14) and FOMC decision-day (Sep 16, first hike since 2023) handling was clean — no positioning added into the meeting, hard block applied with zero exceptions
+- No conditional trade plan was carried into any market-open window this week, sidestepping the market-open documentation gap that recurred in 7+ prior weeks
+- Full 5/5 day documentation cadence with a consistent, checkable rejection criterion cited every session — no repeat of the Aug 25-31 blackout
+- Zero kill-switch violations; capital 100% preserved for the 19th consecutive week
+
+### What didn't work (3-5 bullets)
+- The 90-day evaluation window (closed ~2026-08-25) remains unresolved — roughly the 10th consecutive weekly review escalating the same open decision with zero user action taken
+- `scripts/notify.sh` still has no ClickUp credentials configured — every notification for months has only landed in the local fallback file, never reaching the user in real time; almost certainly why the window-closure and PAUSED.flag escalations keep going unactioned
+- Root-level `PAUSED.flag` (tracked debris, content "test", conclusively resolved as accidental in the 2026-09-06 lesson) persists unresolved after 15+ prior flags
+- `RESEARCH-LOG.md` (4,665 lines) and `TRADE-LOG.md` (981 lines) have grown for 19 weeks with no rotation event ever triggered — approaching the point where "memory files under context budget" starts to be a real, not hypothetical, risk
+- Weekly review fired Sunday Sep 20, not Friday Sep 18 — same cadence misalignment flagged in nearly every review since launch
+- The single-candidate (XOM/WTI-floor) pipeline still hasn't diversified after 19+ weeks, despite being flagged repeatedly since 2026-08-16
+
+### Key lessons (added to LESSONS.md)
+- The fragile-geopolitical-premium rule now has a full-cycle real-world confirmation: correctly rejected the same thesis on the way up (widening war premium) and on the way down (reversal), not just in a single-day or one-directional test.
+- Avoiding conditional-plan carry-forward (re-screening fresh each session rather than leaving a standing "execute if X happens" plan) structurally eliminates the market-open documentation gap that recurred in 7+ prior weeks — worth preserving as a pattern even outside this specific thesis.
+- `RESEARCH-LOG.md`/`TRADE-LOG.md` file growth (4,665 / 981 lines after 19 weeks) means the "rotate to an archive file if needed" clause of the memory-functional graduation criterion is now an approaching operational concern, not just a theoretical one.
+
+### Strategy suggestions for user (DO NOT change strategy unilaterally)
+1. **[~10th consecutive escalation, most urgent]** The 90-day evaluation window closed ~2026-08-25. 81 trading days elapsed, 0 trades ever placed. Recommend the user explicitly decide: treat Phase 1 as concluded on process-quality grounds alone, extend the window with a new end date, or revisit gate calibration. No unilateral change made or possible.
+2. **notify.sh delivery gap (repeated)**: no ClickUp credentials configured — notifications only ever land in a local file, not in front of the user. Recommend configuring real delivery credentials, or another channel, since this is the likely root cause of both items above going unactioned for months.
+3. **Root-level `PAUSED.flag` (repeated, 15+ flags)**: tracked debris, content "test", conclusively resolved as accidental (2026-09-06 lesson). Recommend deleting it or stating its purpose once.
+4. **File rotation (new)**: `RESEARCH-LOG.md` (4,665 lines) and `TRADE-LOG.md` (981 lines) have never been rotated. Recommend deciding now whether/when to rotate older entries to archive files, per the pattern already defined in `LESSONS.md`'s own header, before either file becomes unwieldy.
+5. **Weekly review cadence (repeated)**: fired Sunday Sep 20, not Friday Sep 18. Same orchestration gap flagged in nearly every prior review since launch.
+
+### Graduation criteria status (from TRADING-STRATEGY.md)
+- [ ] 30+ consecutive trading days without manual intervention: 🟡 (carried over — the Aug 25-31 blackout already happened and can't be retroactively cleared; this week itself ran clean)
+- [ ] Max drawdown under 15%: ✅ (0.00% — portfolio flat entire phase)
+- [ ] Matched or beat SPY: 🟡 (bot 0.00% vs SPY +1.37% phase — numerically inside the 2% tolerance, but still a zero-trade artifact, not earned performance)
+- [ ] No uncaught kill-switch breaches: 🟡 (carried over — the Aug 25-31 blackout means kill switches weren't actively checked for 5 trading days; can't retroactively certify nothing was missed)
+- [ ] User-reviewed all trade entries: 🟡 (no trade entries exist to review — vacuously satisfied)
+- [ ] Memory files functional: 🟡 (all files readable and uncorrupted, but `RESEARCH-LOG.md`/`TRADE-LOG.md` growth with no rotation event is now flagged as an approaching risk to this criterion)
+- [ ] Handled at least one 5%+ drawdown correctly: ❌ (no drawdown experienced across the entire phase)
+
+**Graduation criteria met: 1/7**
+
+Days running counter: **81** (Day 1 = 2026-05-27; Day 81 = 2026-09-18)

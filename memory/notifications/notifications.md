@@ -1149,3 +1149,15 @@ Trades today: none
 Open positions: 0
 Active kill switches: none
 Tomorrow: Weekend — no session. Monday pre-market re-screens fresh; 90-day window decision now 20+ sessions overdue, needs user action.
+
+---
+## 2026-09-20 20:36 UTC
+Week ending 2026-09-18
+Portfolio: $10,000.00 (0.00% week, 0.00% phase)
+vs SPY: +0.34% week, -1.37% phase
+Max drawdown this week: 0.00%
+Trades: 0 (W:0 / L:0 / open:0)
+Best: N/A  Worst: N/A
+Overall grade: C+
+Key takeaway: Fragile-premium rule held through a full up/down cycle; 90-day window still closed unresolved ~10th week running
+Graduation: 1/7 criteria met

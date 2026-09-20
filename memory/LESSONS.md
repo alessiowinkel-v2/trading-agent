@@ -339,3 +339,21 @@ Currently empty. Add tickers here with reason if a stock causes repeated bad dec
 **Context**: Sep 8-11, the XOM/WTI-floor thesis's price condition cleared the $90-95 floor by a successively wider margin every single day (culminating in Brent > $100 for the first time in the thesis's 13-week history) while the underlying catalyst — an escalating US-Iran/Saudi conflict — kept getting worse, not better. The gate rejected the thesis on catalyst-quality grounds all four sessions, with zero rationalized exceptions.
 **Insight**: The 2026-06-12 lesson (geopolitical premiums are fragile and can reverse fast) was previously validated on single-day or short-window tests. A four-day stretch where the price signal gets more "attractive" daily is a stronger test of discipline than a one-off, because each additional day of favorable price movement without a corresponding trade raises the psychological pressure to rationalize an entry. The rule held.
 **Rule change**: None. Confirms existing buy-side gate item 6 and the 2026-06-12 lesson are correctly calibrated and durable under sustained pressure, not just single-session tests.
+
+## 2026-09-18 — Fragile-premium rule confirmed through a full up-and-down cycle, not just a widening move
+
+**Context**: The XOM/WTI-floor thesis was rejected on catalyst-quality grounds for 9 consecutive sessions (Sep 8-18): widening on escalation Sep 8-16 (Brent to ~$108, the widest margin in the thesis's history), then pulling back on post-FOMC repricing Sep 17-18 (Energy flipping to the weakest S&P sector two sessions running). The gate never chased the move in either direction.
+**Insight**: Prior confirmations of the 2026-06-12 "fragile geopolitical premium" lesson tested only the widening half of a cycle (price getting more attractive while the catalyst worsened). This week is the first case where the same thesis was tracked through a full reversal too — the premium it was built on visibly deflated on macro repricing, not a diplomatic resolution, retroactively validating every prior rejection rather than creating "one that got away" regret.
+**Rule change**: None. Confirms the existing rule holds across a complete cycle, not just a one-directional test.
+
+## 2026-09-18 — Not carrying forward a conditional plan structurally avoids the market-open documentation gap
+
+**Context**: For the first time in several weeks, no XOM/Energy conditional trade plan was carried into any market-open window (Sep 14-18) — each session re-screened the thesis fresh from scratch and rejected it outright, rather than deferring to a specific intraday condition check.
+**Insight**: The long-standing market-open documentation gap (flagged 7+ times since 2026-06-02) only ever fires when a conditional plan exists and no routine logs its resolution. A week with zero standing conditional plans has zero exposure to that specific failure mode by construction, independent of whether the underlying gate calibration is otherwise correct.
+**Rule change**: None. Flagging the pattern as worth preserving — a session-level HOLD without unresolved contingencies is strictly safer from a documentation-audit standpoint than a deferred conditional entry.
+
+## 2026-09-18 — Untracked-user-notification channel means repeated escalations have gone unactioned for months, likely undetected
+
+**Context**: This is roughly the 10th consecutive weekly review escalating the 90-day evaluation window closure (~2026-08-25) with zero user action, and `scripts/notify.sh` has had no ClickUp (or other real-time) delivery credentials configured for that entire span — every notification has only ever landed in `memory/notifications/notifications.md`, a file the user has no reason to check proactively.
+**Insight**: A repeated escalation that never reaches its recipient is indistinguishable, from the system's perspective, from an escalation that was seen and declined. Every prior review assumed the user was choosing not to act; it is at least as likely the user has never seen any of these messages.
+**Rule change**: None to strategy. This session is separately pushing a real-time notification through the harness's own alerting channel (outside `scripts/notify.sh`) specifically to test whether that closes the gap — worth checking in the next session whether this was the first escalation the user actually received.
