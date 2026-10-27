@@ -32,3 +32,7 @@ Health: …
 ## 2026-10-27 — Phase 1b Day 0 baseline
 **Portfolio:** $2,000.00 target after the paper reset | **Positions:** none | **Phase P&L:** $0.00
 Day 1 market-open buys the core (SPYM) to target; satellites follow from the pre-market screen.
+
+### 2026-10-27 — market-open: SKIPPED (market closed at run time)
+Preflight: exit 31 | NOW_ET=2026-10-27 16:00 | MARKET_OPEN=no | EVENT_TODAY=none | PAUSED=no. No orders placed; run fired after the close (schedule/timezone mismatch?). Core not bought today.
+Health: run 16:00 ET | preflight=31 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
