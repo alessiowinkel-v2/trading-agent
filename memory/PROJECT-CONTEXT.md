@@ -16,7 +16,7 @@ Machine-read by `scripts/ks.py` — user edits only. Keep the `- key: value` for
 - phase: 1b-paper
 - start_date: UNSET
 - start_equity: 2000
-- account_number: UNSET
+- account_number: PA3VYMP29
 
 `start_date` is set to the first trading day the routines run (YYYY-MM-DD). `account_number` is the Alpaca account number (from the dashboard or `alpaca.sh account`) — KS-9 halts trading if the API ever reports a different one. Both must be updated when switching to the live account.
 
