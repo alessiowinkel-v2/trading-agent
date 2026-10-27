@@ -36,3 +36,7 @@ Day 1 market-open buys the core (SPYM) to target; satellites follow from the pre
 ### 2026-10-27 — market-open: SKIPPED (market closed at run time)
 Preflight: exit 31 | NOW_ET=2026-10-27 16:00 | MARKET_OPEN=no | EVENT_TODAY=none | PAUSED=no. No orders placed; run fired after the close (schedule/timezone mismatch?). Core not bought today.
 Health: run 16:00 ET | preflight=31 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
+
+### 2026-10-27 — midday: SKIPPED (market closed at run time)
+- Preflight exit 31: NOW_ET 16:02, market closed (close 16:00). No orders, no maintenance.
+Health: run 16:02 ET | preflight=31 | mode=PAPER | ks=n/a | notify=ok | perplexity=n/a
