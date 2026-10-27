@@ -1,0 +1,39 @@
+# Dead-man's switch for the trading routines. Runs on GitHub, outside the
+# Claude cloud, so it still fires if the routines, their environment or the
+# subscription stop. A failed run makes GitHub email the repository owner too.
+name: watchdog
+
+on:
+  schedule:
+    - cron: "30 17 * * 1-5"   # 13:30 EDT / 12:30 EST - pre-market and market-open done?
+    - cron: "0 4 * * 2-6"     # 00:00 EDT / 23:00 EST - all four daily routines (+ Friday weekly)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "midday or nightly"
+        default: "nightly"
+
+permissions:
+  contents: read
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check routine commits
+        env:
+          NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+          NOTIFY_MENTION: ${{ secrets.NOTIFY_MENTION }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            mode="${{ github.event.inputs.mode }}"
+          elif [ "${{ github.event.schedule }}" = "30 17 * * 1-5" ]; then
+            mode=midday
+          else
+            mode=nightly
+          fi
+          bash scripts/watchdog.sh "$mode"
