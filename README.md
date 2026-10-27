@@ -36,6 +36,7 @@ memory/WATCHLIST.md          satellite universe     memory/EVENTS.md          FO
 memory/PROJECT-CONTEXT.md    phase + account block  memory/STATE.md/.json     written by ks.py
 memory/RESEARCH-LOG.md, TRADE-LOG.md, WEEKLY-REVIEW.md, LESSONS.md, notifications/YYYY-MM.md
 memory/archive/phase1-2026/  everything from Phase 1 (May-Sep 2026, zero trades)
+plans/news-sleeve/           news-signal research sleeve: PLAN.md, STATUS.md, one prompt file per phase
 ```
 
 ## Setup (in this order)
