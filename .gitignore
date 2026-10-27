@@ -3,8 +3,8 @@
 .env.*
 !env.template
 
-# Manual pause flag is local-state, not version-controlled
-memory/PAUSED.flag
+# memory/PAUSED.flag is deliberately NOT ignored: committing it is how the
+# user pauses the cloud routines (see memory/KILL-SWITCHES.md).
 
 # OS / editor noise
 .DS_Store
