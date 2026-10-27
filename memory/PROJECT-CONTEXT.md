@@ -14,7 +14,7 @@
 ## Account
 Machine-read by `scripts/ks.py` — user edits only. Keep the `- key: value` format.
 - phase: 1b-paper
-- start_date: UNSET
+- start_date: 2026-10-28
 - start_equity: 2000
 - account_number: PA3VYMP29
 
