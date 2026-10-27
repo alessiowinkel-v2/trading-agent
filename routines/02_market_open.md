@@ -27,7 +27,7 @@ If either file is missing: bash scripts/notify.sh --alert "market-open: routine 
 
 **STEP 3 — Core**: if `CORE_ACTION=BUY …` or `SELL …`, run the printed command exactly, then `bash scripts/alpaca.sh wait-fill <id> 60` (exit 4 → cancel, read `filled_qty`; midday retries). `HOLD`, `DONE_TODAY`, `DEFER` or `BLOCKED` → no order, record the reason. Core orders are never timing-blocked.
 
-**STEP 4 — Maintenance**: run any `ORPHAN` stop command from `MAINTENANCE` now (KS-10). Leave TIGHTEN/TRIM to midday.
+**STEP 4 — Maintenance**: run any `ORPHAN` stop command from `MAINTENANCE` now (KS-10). Leave TIGHTEN/TRIM to midday. If `MAINTENANCE` says `BLOCKED`, place nothing and alert.
 
 **STEP 5 — Satellites**, in the order of the research entry:
 1. If the core order in STEP 3 changed cash, or after any fill, re-run `python3 scripts/ks.py --check` for the remaining candidates — sizing and slots depend on live cash.

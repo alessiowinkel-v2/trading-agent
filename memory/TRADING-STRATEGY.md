@@ -41,7 +41,7 @@ Whole-share sizing at $2,000: one satellite is usually 1–2 shares (sizes snap 
 - Day 1 of a phase: buy core to target at the first market-open.
 
 ## Satellite entry gates
-Every candidate gets a table with every gate as PASS/FAIL **and its number**. G1–G5 and G8 come from `screen.py`; G6–G7 are yours; G0 and G8–G11 are re-checked live by `ks.py --check` at execution, which also refuses any symbol that is not a `CANDIDATE:` line in today's research entry (gate PLAN) and takes the reference price from that line.
+Every candidate gets a table with every gate as PASS/FAIL **and its number**. G1–G5 and G8 come from `screen.py`; G6–G7 are yours; G0 and G8–G11 are re-checked live by `ks.py --check` at execution, which also refuses any symbol that is not on a `CANDIDATE: … g6=PASS g7=PASS` line in today's research entry (gate PLAN), re-checks the universe and price cap (G1), and takes the reference price from that line. Several candidates in one check are sized one after another, so they can never jointly exceed slots, cash or sector caps.
 
 | # | Gate | Source |
 |---|------|--------|

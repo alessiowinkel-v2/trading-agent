@@ -23,7 +23,7 @@ If either file is missing: bash scripts/notify.sh --alert "weekly: routine files
 
 **STEP 1 — Read**: the COMMON reading list, `memory/TRADING-STRATEGY.md` (graduation section), `bash scripts/memtail.sh memory/RESEARCH-LOG.md 5`, `bash scripts/memtail.sh memory/TRADE-LOG.md 15`, `bash scripts/memtail.sh memory/WEEKLY-REVIEW.md 1`.
 
-**STEP 2 — Numbers**: `python3 scripts/ks.py --week` and `bash scripts/watchdog.sh grid <MONDAY>`. Paste both. You do not compute returns, drawdowns or win rates yourself.
+**STEP 2 — Numbers**: `python3 scripts/ks.py --week --write-state` (this is also the only place a latched KS-2 can clear) and `bash scripts/watchdog.sh grid <MONDAY>`. Paste both. You do not compute returns, drawdowns or win rates yourself.
 
 **STEP 3 — Count from this week's records** (cite dates):
 - planned orders (PLAN lines + CORE_ACTION orders) vs orders with an outcome line vs fills; stops verified in the same session / satellite fills

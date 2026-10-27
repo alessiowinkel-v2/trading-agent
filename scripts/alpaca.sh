@@ -138,7 +138,7 @@ if side == "buy":
     notional = qty * lp
     cash, equity = float(a.get("cash", 0)), float(a.get("equity", 0))
     # Alpaca's cash does not reserve working buy orders - subtract them ourselves.
-    reserved = sum(float(o.get("qty") or 0) * float(o.get("limit_price") or 0)
+    reserved = sum((float(o.get("qty") or 0) - float(o.get("filled_qty") or 0)) * float(o.get("limit_price") or 0)
                    for o in json.loads(open_orders or "[]") if o.get("side") == "buy")
     if notional > cash - reserved:
         refuse("notional $%.2f > cash $%.2f minus $%.2f reserved by open buy orders (margin is never used)"
@@ -245,10 +245,11 @@ PYEOF
         bars_get "$url"
         ;;
     orders)
-        # orders [open|closed|all] [after ISO-8601] [limit]
+        # orders [open|closed|all] [after ISO-8601] [limit] [until ISO-8601] - newest first
         status="${1:-open}"
         url="$API/orders?status=$status&limit=${3:-500}&direction=desc&nested=false"
         [[ -n "${2:-}" ]] && url="$url&after=$2"
+        [[ -n "${4:-}" ]] && url="$url&until=$4"
         req GET "$url"
         ;;
     order-get)
@@ -262,8 +263,11 @@ PYEOF
         secs="${2:-60}"
         deadline=$((SECONDS + secs))
         while :; do
-            o="$(req GET "$API/orders/$oid")"
-            st="$(py -c 'import json,sys; print(json.loads(sys.argv[1]).get("status",""))' "$o")"
+            # A failed poll is not a verdict: keep polling, report timeout (4) at the deadline.
+            o="$(req GET "$API/orders/$oid" 2>/dev/null)" || o='{"status":"unknown (poll failed)"}'
+            st="$(py -c 'import json,sys
+try: print(json.loads(sys.argv[1]).get("status",""))
+except Exception: print("unknown")' "$o")"
             case "$st" in
                 filled|canceled|expired|rejected|done_for_day|replaced)
                     echo "$o"

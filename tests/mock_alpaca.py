@@ -247,6 +247,8 @@ class H(BaseHTTPRequestHandler):
             return self.send(200, {"timestamp": iso(now()), "is_open": op, "next_open": "2026-11-02T09:30:00-05:00",
                                    "next_close": "2026-11-02T16:00:00-05:00"})
         if p == "calendar":
+            if os.environ.get("MOCK_CAL_FAIL") == "1":
+                return self.send(500, {"message": "internal error"})
             s, e = dt.date.fromisoformat(q["start"]), dt.date.fromisoformat(q["end"])
             out, d = [], s
             while d <= e:

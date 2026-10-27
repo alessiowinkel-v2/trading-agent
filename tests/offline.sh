@@ -62,6 +62,9 @@ SYM="$(grep -E '^\| 1 \|' <<<"$out" | awk -F'|' '{gsub(/ /,"",$3); print $3}')"
 echo "   top passer: ${SYM:-none}"
 out="$(py scripts/screen.py candidate NVDA 2>&1)"
 check "candidate table has G8" has "$out" "| G8 |"
+check "screen prints SCREEN_OK, never CANDIDATE" bash -c '! grep -q "^CANDIDATE:" <<<"$1"' _ "$out"
+out="$(py scripts/screen.py candidate QLD 2>&1)"
+check "screen fails G1 for an off-watchlist ticker" has "$out" "NOT A CANDIDATE: fails G1"
 
 echo "== core buy"
 out="$(py scripts/ks.py 2>&1)"
@@ -79,10 +82,15 @@ if [[ -n "$SYM" ]]; then
     ref="$(grep -E '^\| 1 \|' <<<"$(py scripts/screen.py watchlist 2>/dev/null)" | awk -F'|' '{gsub(/ /,"",$5); print $5}')"
     out="$(py scripts/ks.py --check "$SYM" 2>&1)"
     check "check refuses $SYM before it is a research CANDIDATE" has "$out" "PLAN FAIL"
-    printf '
-## %s — Pre-market Research (offline test)
-CANDIDATE: %s ref=%s stop_pct=7.0 sector=XLP
-' "$DATE" "$SYM" "$ref" >> memory/RESEARCH-LOG.md
+    printf '\n## %s - Pre-market Research (offline test)\nSCREEN_OK: %s ref=%s stop_pct=7.0 sector=XLP\n' "$DATE" "$SYM" "$ref" >> memory/RESEARCH-LOG.md
+    out="$(py scripts/ks.py --check "$SYM" 2>&1)"
+    check "a pasted SCREEN_OK line authorises nothing (G6/G7 not done)" has "$out" "PLAN FAIL"
+    printf 'CANDIDATE: %s ref=%s stop_pct=7.0 sector=XLP g6=FAIL g7=PASS\n' "$SYM" "$ref" >> memory/RESEARCH-LOG.md
+    out="$(py scripts/ks.py --check "$SYM" 2>&1)"
+    check "a CANDIDATE line with g6=FAIL authorises nothing" has "$out" "PLAN FAIL"
+    printf 'CANDIDATE: %s ref=%s stop_pct=7.0 sector=XLP g6=PASS g7=PASS\nCANDIDATE: QLD ref=100 stop_pct=7.0 sector=XLK g6=PASS g7=PASS\n' "$SYM" "$ref" >> memory/RESEARCH-LOG.md
+    out="$(py scripts/ks.py --check QLD 2>&1)"
+    check "off-watchlist QLD (2x leveraged) fails G1 even with a CANDIDATE line" has "$out" "G1 FAIL"
     out="$(py scripts/ks.py --check "$SYM" XLK 2>&1)"; grep -E 'PLAN |G[0-9]+ |VERDICT' <<<"$out"
     check "unplanned XLK is refused even if live gates pass" has "$(sed -n '/CHECK XLK/,$p' <<<"$out")" "VERDICT SKIP - fails PLAN"
     check "check verdict BUY for $SYM" has "$out" "VERDICT BUY"
@@ -110,6 +118,12 @@ CANDIDATE: %s ref=%s stop_pct=7.0 sector=XLP
     out="$(py scripts/ks.py --write-state 2>&1)"
     check "KS-10 PASS after orphan stop placed" has "$out" "KS-10 stops | PASS"
     check "KS-8 reconcile PASS" has "$out" "KS-8 reconcile | PASS"
+    lim="$(py -c "print('%.2f' % ($ref*1.01))")"
+    $A order '{"symbol":"'"$SYM"'","qty":"1","side":"buy","type":"limit","limit_price":"'"$lim"'","time_in_force":"day","client_order_id":"sat-'"$DATE"'-'"$SYM"'-extra"}' >/dev/null 2>&1
+    out="$(py scripts/ks.py 2>&1)"
+    check "partially covered position: ORPHAN asks only for the uncovered share" has "$out" "ORPHAN $SYM: 1 sh without a stop"
+    check "...and its command uses qty 1" has "$(grep "ORPHAN $SYM" <<<"$out")" '"qty":"1"'
+    check "KS-8 still reconciles after the extra fill" has "$out" "KS-8 reconcile | PASS"
 fi
 
 echo "== guards"
@@ -144,7 +158,42 @@ sed -i "s/^- account_number: .*/- account_number: PA9WRONG/" memory/PROJECT-CONT
 out="$(py scripts/ks.py 2>&1)"
 check "KS-9 FAIL on wrong account number" has "$out" "KS-9 account | FAIL"
 check "ORDERS_ALLOWED=no on KS-9" has "$out" "ORDERS_ALLOWED=no"
+check "maintenance prints no order commands while KS-9 fails" has "$(grep -A3 '^MAINTENANCE' <<<"$out")" "BLOCKED - no orders"
+out="$(NOTIFY_WEBHOOK_URL=http://127.0.0.1:$PORT/webhook/fail py scripts/ks.py --write-state 2>&1)"
+check "undelivered KS alert is reported as FAILED" has "$out" "ALERT FAILED"
+out="$(py scripts/ks.py --write-state 2>&1)"
+check "...and is retried (and delivered) on the next run" has "$out" "ALERT sent for newly failing: .*KS-9"
 sed -i "s/^- account_number: .*/- account_number: PA0TEST/" memory/PROJECT-CONTEXT.md
+sed -i "s/^- start_date: .*/- start_date: UNSET/" memory/PROJECT-CONTEXT.md
+check "UNSET start_date fails KS-9" has "$(py scripts/ks.py 2>&1)" "start_date is UNSET"
+sed -i "s/^- start_date: .*/- start_date: $DATE/" memory/PROJECT-CONTEXT.md
+
+echo "== latches"
+cp memory/STATE.json /tmp/state.bak.$$
+py -c "
+import json, sys; sys.path.insert(0, 'scripts'); import tlib
+s = json.load(open('memory/STATE.json'))
+d = tlib.et_today().isoformat()
+cfg = tlib.account_config()
+s['latch'] = {'KS-1': {'date': d, 'start_date': cfg['start_date'], 'start_equity': float(cfg['start_equity'])},
+              'KS-3': {'date': d, 'start_date': cfg['start_date'], 'start_equity': float(cfg['start_equity'])}}
+json.dump(s, open('memory/STATE.json', 'w'))"
+out="$(py scripts/ks.py 2>&1)"
+check "KS-1 stays FAILED (latched) after equity recovers" has "$out" "KS-1 daily DD | FAIL"
+check "KS-3 stays FAILED (latched)" has "$out" "KS-3 total DD | FAIL"
+check "latched KS-1/KS-3 block buys" has "$out" "BUYS_ALLOWED=no"
+check "KS-3 drives the core target to 30%" has "$out" "target 30.0% (KS-3 halt)"
+check "...but never sells core shares bought today (no day trade)" has "$out" "CORE_ACTION=DONE_TODAY"
+sed -i "s/^- start_equity: .*/- start_equity: 2001/" memory/PROJECT-CONTEXT.md
+out="$(py scripts/ks.py 2>&1)"
+check "a new start_equity (manual reset) clears the KS-3 latch" has "$out" "KS-3 total DD | PASS"
+sed -i "s/^- start_equity: .*/- start_equity: 2000/" memory/PROJECT-CONTEXT.md
+cp /tmp/state.bak.$$ memory/STATE.json
+
+echo "== misc fixes"
+check "wait-fill on a failing poll times out with exit 4 (not 1)" bash -c 'bash scripts/alpaca.sh wait-fill no-such-order 6 >/dev/null 2>&1; [ $? -eq 4 ]'
+check "parse_ts handles 5-digit fractions" py -c "import sys; sys.path.insert(0,'scripts'); import tlib; tlib.parse_ts('2026-10-27T13:23:45.12345Z')"
+check "preflight computes EARNINGS_OK_FROM from the calendar" has "$(bash scripts/preflight.sh pre-market 2>&1)" "EARNINGS_OK_FROM=20"
 
 echo "== EOD, week, notify, commits, cadence"
 out="$(MOCK_OPEN=0 py scripts/ks.py --eod --write-state 2>&1)"; grep -E '^### |\*\*Portfolio' <<<"$out"
@@ -185,6 +234,19 @@ out="$(py scripts/ks.py 2>&1)"; grep -E '^REGIME|^CORE' <<<"$out"
 check "regime risk-off in a downtrend" has "$out" "REGIME risk-off"
 check "core target drops to 30%" has "$out" "target 30.0% (risk-off)"
 check "core buys only up to 30% in risk-off" has "$out" "CORE_ACTION=BUY 7 SPYM"
+printf '\n## %s — Pre-market Research (offline test 2)\nCANDIDATE: KO ref=70.00 stop_pct=7.0 sector=XLP g6=PASS g7=PASS\nCANDIDATE: PM ref=160.00 stop_pct=7.0 sector=XLP g6=PASS g7=PASS\nCANDIDATE: WMT ref=103.00 stop_pct=7.0 sector=XLP g6=PASS g7=PASS\n' "$DATE" >> memory/RESEARCH-LOG.md
+out="$(py scripts/ks.py --check KO PM WMT 2>&1)"
+check "three same-sector candidates in one check: only two approved" test "$(grep -c 'VERDICT BUY' <<<"$out")" -eq 2
+check "...the third is refused for sector/slot room" has "$(sed -n '/CHECK WMT/,$p' <<<"$out")" "VERDICT SKIP - fails G9"
+
+echo "== calendar failure"
+kill $MOCK_PID 2>/dev/null
+sleep 0.5
+MOCK_CAL_FAIL=1 "$PY" tests/mock_alpaca.py "$PORT" &
+MOCK_PID=$!
+sleep 1.5
+out="$(bash scripts/preflight.sh market-open 2>&1)"
+check "calendar failure -> exit 40, never a SKIPPED trading day" has "$out" "PREFLIGHT_EXIT=40"
 
 echo
 echo "offline: $pass passed, $fail failed"

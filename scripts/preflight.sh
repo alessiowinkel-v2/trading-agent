@@ -59,8 +59,8 @@ if ((${#missing[@]})); then
     finish 10
 fi
 
-eval "$(py scripts/tlib.py now)"   # NOW_ET DATE WEEKDAY MONDAY DATE_MINUS_7 DATE_MINUS_14 EARNINGS_OK_FROM
-for k in NOW_ET DATE WEEKDAY MONDAY DATE_MINUS_7 DATE_MINUS_14 EARNINGS_OK_FROM; do
+eval "$(py scripts/tlib.py now)"   # NOW_ET DATE WEEKDAY MONDAY DATE_MINUS_7 DATE_MINUS_14 (+ approximate EARNINGS_OK_FROM)
+for k in NOW_ET DATE WEEKDAY MONDAY DATE_MINUS_7 DATE_MINUS_14; do
     echo "$k=${!k}"
 done
 case "$ALPACA_ENDPOINT" in
@@ -92,13 +92,22 @@ if [[ -z "$clock" ]]; then
     alert "Alpaca API unreachable after 3 tries (KS-6). No orders this run."
     finish 40
 fi
-start7="$(py scripts/tlib.py et-date-offset -240)"
-cal="$(bash scripts/alpaca.sh calendar "$start7" "$DATE" 2>/dev/null || echo '[]')"
-eval "$(py - "$clock" "$cal" "$DATE" <<'PYEOF'
+start10="$(py scripts/tlib.py et-date-offset -240)"
+end30="$(py scripts/tlib.py et-date-offset 720)"
+# A failed calendar call must never be read as "market closed" (that would commit a
+# real trading day as SKIPPED, which the watchdog treats as healthy).
+if ! cal="$(bash scripts/alpaca.sh calendar "$start10" "$end30" 2>/dev/null)"; then
+    alert "Alpaca calendar call failed - cannot tell whether today is a trading day. No orders this run."
+    finish 40
+fi
+facts="$(py - "$clock" "$cal" "$DATE" <<'PYEOF'
 import json, sys
-clock, cal, today = json.loads(sys.argv[1]), json.loads(sys.argv[2] or "[]"), sys.argv[3]
+clock, cal, today = json.loads(sys.argv[1]), json.loads(sys.argv[2]), sys.argv[3]
+if not isinstance(cal, list) or not cal:
+    sys.exit(1)
 days = [d["date"] for d in cal]
 prev = [d for d in days if d < today]
+nxt = [d for d in days if d > today]
 close = next((d["close"] for d in cal if d["date"] == today), "")
 print("MARKET_OPEN=%s" % ("yes" if clock.get("is_open") else "no"))
 print("NEXT_OPEN='%s'" % clock.get("next_open", ""))
@@ -106,9 +115,16 @@ print("NEXT_CLOSE='%s'" % clock.get("next_close", ""))
 print("TODAY_TRADING=%s" % ("yes" if today in days else "no"))
 print("TODAY_CLOSE_ET=%s" % close)
 print("PREV_TRADING_DAY=%s" % (prev[-1] if prev else ""))
+# G6: earnings must fall after the next 5 trading days (holidays included in the count)
+print("EARNINGS_OK_FROM=%s" % (nxt[5] if len(nxt) > 5 else ""))
 PYEOF
 )"
-for k in MARKET_OPEN NEXT_OPEN NEXT_CLOSE TODAY_TRADING TODAY_CLOSE_ET PREV_TRADING_DAY; do
+if [[ $? -ne 0 || -z "$facts" ]]; then
+    alert "Alpaca clock/calendar response unreadable - no orders this run."
+    finish 40
+fi
+eval "$facts"
+for k in MARKET_OPEN NEXT_OPEN NEXT_CLOSE TODAY_TRADING TODAY_CLOSE_ET PREV_TRADING_DAY EARNINGS_OK_FROM; do
     echo "$k=${!k}"
 done
 [[ -n "$TODAY_CLOSE_ET" && "$TODAY_CLOSE_ET" != "16:00" ]] && echo "EARLY_CLOSE=yes"

@@ -25,12 +25,13 @@ NOW_ET=… | EVENT_TODAY=… | PAUSED=… | MISSING_COMMITS=…
 
 ### Candidates (≥2, from ≥2 sectors)
 #### 1. SYM — Name (sector ETF, rank N)
-(paste `python3 scripts/screen.py candidate SYM` table)
-| G6 | PASS/FAIL | next earnings YYYY-MM-DD (confirmed/estimated) — source [n] |
+(paste `python3 scripts/screen.py candidate SYM` table, ending in its SCREEN_OK: line)
+| G6 | PASS/FAIL | next earnings YYYY-MM-DD (confirmed/estimated) vs EARNINGS_OK_FROM — source [n] |
 | G7 | PASS/FAIL | thesis in 2–3 sentences naming the specific driver |
 - Catalysts last 7 days: … [n]
 - Risk (what would make this wrong): …
-CANDIDATE: SYM ref=123.45 stop_pct=8.2 sector=XLK
+CANDIDATE: SYM ref=123.45 stop_pct=8.2 sector=XLK g6=PASS g7=PASS
+(only when G6 and G7 both passed — market-open can buy nothing else)
 
 ### Rejected screen passers
 - SYM: G6 (earnings 2026-11-04) / G7 (no specific driver found) — one line each

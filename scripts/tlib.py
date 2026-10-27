@@ -69,7 +69,8 @@ def parse_ts(s):
     s = s.replace("Z", "+00:00")
     m = re.match(r"(.*T\d\d:\d\d:\d\d)(\.\d+)?(.*)$", s)
     if m:
-        frac = (m.group(2) or "")[:7]
+        # Alpaca sends 0-9 fractional digits; older Pythons need exactly 6
+        frac = "." + (m.group(2) or ".")[1:].ljust(6, "0")[:6] if m.group(2) else ""
         s = m.group(1) + frac + m.group(3)
     return dt.datetime.fromisoformat(s).astimezone(UTC)
 
@@ -316,8 +317,10 @@ def events_on(d):
 
 
 def research_candidates(d):
-    """{SYM: {"ref": float, "stop_pct": float, "sector": str}} from the CANDIDATE: lines
-    of the RESEARCH-LOG entry dated d. Empty if the latest entry is not dated d."""
+    """{SYM: {"ref": float, "stop_pct": float, "sector": str}} from the final CANDIDATE: lines
+    of the RESEARCH-LOG entry dated d. Only lines that record g6=PASS and g7=PASS count
+    (screen.py prints SCREEN_OK:, which authorises nothing). Empty if the latest entry is
+    not dated d."""
     path = os.path.join(MEM, "RESEARCH-LOG.md")
     if not os.path.exists(path):
         return {}
@@ -326,8 +329,8 @@ def research_candidates(d):
     if not heads or heads[-1].group(1) != d.isoformat():
         return {}
     out = {}
-    for m in re.finditer(r"^CANDIDATE:\s+([A-Z][A-Z.]{0,5})\s+ref=([\d.]+)(?:\s+stop_pct=([\d.]+))?(?:\s+sector=(\w+))?",
-                         text[heads[-1].start():], re.M):
+    for m in re.finditer(r"^CANDIDATE:\s+([A-Z][A-Z.]{0,5})\s+ref=([\d.]+)(?:\s+stop_pct=([\d.]+))?(?:\s+sector=(\w+))?"
+                         r"\s+g6=PASS\s+g7=PASS\s*$", text[heads[-1].start():], re.M):
         out[m.group(1)] = {"ref": float(m.group(2)), "stop_pct": float(m.group(3)) if m.group(3) else None,
                            "sector": m.group(4) or ""}
     return out

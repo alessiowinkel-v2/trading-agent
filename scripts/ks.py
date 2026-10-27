@@ -27,7 +27,8 @@ import tlib  # noqa: E402
 STATE_JSON = os.path.join(tlib.MEM, "STATE.json")
 STATE_MD = os.path.join(tlib.MEM, "STATE.md")
 WORKING = {"new", "accepted", "pending_new", "partially_filled", "accepted_for_bidding", "held",
-           "pending_replace", "calculated"}
+           "pending_replace", "pending_cancel", "calculated"}
+LATCHED = ("KS-1", "KS-2", "KS-3")   # stay failed after the condition clears (see KILL-SWITCHES.md)
 
 
 def cmd_order(body):
@@ -50,7 +51,10 @@ class Ctx:
         self.mode = "PAPER" if "paper-api" in os.environ.get("ALPACA_ENDPOINT", "paper-api") else "LIVE"
         self.core = self.P["core_symbol"]
         sd = self.cfg.get("start_date", "")
-        self.start_date = dt.date.fromisoformat(sd) if sd[:4].isdigit() else self.today
+        try:
+            self.start_date, self.start_date_ok = dt.date.fromisoformat(sd), True
+        except ValueError:
+            self.start_date, self.start_date_ok = self.today, False   # KS-9 fails until it is set
         try:
             self.start_equity = float(self.cfg.get("start_equity") or 0)
         except ValueError:
@@ -60,13 +64,26 @@ class Ctx:
             with open(STATE_JSON, encoding="utf-8") as f:
                 self.state = json.load(f)
 
-    def load(self):
+    def load_book(self):
+        """Positions and orders - reloaded once by KS-8 before it declares a mismatch."""
         a = tlib.alpaca
-        self.acct = a("account")
         self.positions = a("positions") or []
         self.open_orders = a("orders", "open") or []
         after = tlib.iso(tlib.et_midnight_utc(self.start_date - dt.timedelta(days=1)))
-        self.closed_orders = a("orders", "closed", after) or []
+        closed, until = {}, ""
+        for _ in range(20):                       # page backwards, 500 at a time
+            page = a("orders", "closed", after, "500", until) or []
+            for o in page:
+                closed[o["id"]] = o
+            if len(page) < 500:
+                break
+            until = min(o["submitted_at"] for o in page)
+        self.closed_orders = list(closed.values())
+
+    def load(self):
+        a = tlib.alpaca
+        self.acct = a("account")
+        self.load_book()
         self.clock = a("clock")
         cal = a("calendar", (self.start_date - dt.timedelta(days=21)).isoformat(),
                 (self.today + dt.timedelta(days=21)).isoformat()) or []
@@ -74,7 +91,7 @@ class Ctx:
         self.equity = float(self.acct["equity"])
         self.cash = float(self.acct["cash"])
         # Alpaca's cash does not reserve working buy orders; sizing must.
-        self.reserved = sum(float(o.get("qty") or 0) * float(o.get("limit_price") or 0)
+        self.reserved = sum((float(o.get("qty") or 0) - float(o.get("filled_qty") or 0)) * float(o.get("limit_price") or 0)
                             for o in self.open_orders if o.get("side") == "buy")
         self.cash_avail = self.cash - self.reserved
         self.last_equity = float(self.acct.get("last_equity") or 0)
@@ -83,7 +100,7 @@ class Ctx:
         try:
             self.history = a("history", "3M", "1D", quiet=True) or {}
         except tlib.AlpacaError:
-            self.history = {}
+            self.history = {}   # KS-2 then falls back to the EOD equity stored in STATE.json
         syms = list({self.core, "SPY"} | {p["symbol"] for p in self.positions})
         try:
             snaps = tlib.snapshots(syms)
@@ -109,9 +126,10 @@ class Ctx:
                 continue
             seen.add(o["id"])
             q = float(o.get("filled_qty") or 0)
-            if q > 0 and o.get("filled_at"):
+            ts = o.get("filled_at") or o.get("updated_at") or o.get("submitted_at")
+            if q > 0 and ts:
                 out.append({"id": o["id"], "sym": o["symbol"], "side": o["side"], "qty": q,
-                            "px": float(o.get("filled_avg_price") or 0), "t": tlib.parse_ts(o["filled_at"]),
+                            "px": float(o.get("filled_avg_price") or 0), "t": tlib.parse_ts(ts),
                             "coid": o.get("client_order_id") or ""})
         out.sort(key=lambda f: f["t"])
         return out
@@ -198,36 +216,79 @@ def kill_switches(c):
     def add(name, ok, value, limit, warn=False):
         rows.append((name, "WARN" if (ok and warn) else ("PASS" if ok else "FAIL"), value, limit))
 
+    latch = c.state.get("latch") or {}
+    c.fail_now = {}
+
+    def latched_note(k):
+        v = latch.get(k)
+        if not v:
+            return ""
+        if k == "KS-1" and v.get("date") != c.today.isoformat():
+            return ""                                   # KS-1 resets the next trading day
+        if k == "KS-3" and (v.get("start_date"), v.get("start_equity")) != (c.start_date.isoformat(), c.start_equity):
+            return ""                                   # manual reset: user changed start_date/start_equity
+        return " - LATCHED since %s" % v.get("date")
+
     # KS-1 daily drawdown
     base, base_name = c.last_equity, "last_equity"
     lo, hi = P["ks9_equity_low"] * c.start_equity, P["ks9_equity_high"] * c.start_equity
     if c.today <= c.start_date or not (lo <= base <= hi):
         base, base_name = c.start_equity, "start_equity"
     d1 = E / base - 1 if base else 0
-    add("KS-1 daily DD", d1 > -P["ks1_daily_dd"], "%s vs %s (%s)" % (tlib.fmt_pct(d1, 2), money(base), base_name),
-        "> -%.0f%%" % (P["ks1_daily_dd"] * 100))
-    # KS-2 weekly drawdown vs prior Friday close
+    c.fail_now["KS-1"] = d1 <= -P["ks1_daily_dd"]
+    note = latched_note("KS-1")
+    add("KS-1 daily DD", not c.fail_now["KS-1"] and not note,
+        "%s vs %s (%s)%s" % (tlib.fmt_pct(d1, 2), money(base), base_name, note), "> -%.0f%%" % (P["ks1_daily_dd"] * 100))
+    # KS-2 weekly drawdown vs prior Friday close (Alpaca history, else our own EOD records)
     monday = tlib.monday_of(c.today)
-    wk_base, wk_name = c.start_equity, "start_equity"
+    wk_base, wk_name = None, ""
     h = c.history or {}
     for ts, eq in zip(h.get("timestamp") or [], h.get("equity") or []):
         d = tlib.to_et(dt.datetime.fromtimestamp(ts, tlib.UTC)).date()
         if eq and c.start_date <= d < monday:
             wk_base, wk_name = float(eq), "close %s" % d
-    c.week_base, c.week_base_name = wk_base, wk_name
-    d2 = E / wk_base - 1 if wk_base else 0
-    add("KS-2 weekly DD", d2 > -P["ks2_weekly_dd"], "%s vs %s (%s)" % (tlib.fmt_pct(d2, 2), money(wk_base), wk_name),
-        "> -%.0f%%" % (P["ks2_weekly_dd"] * 100))
+    if wk_base is None:
+        for d, v in sorted((c.state.get("eod") or {}).items()):
+            if c.start_date.isoformat() <= d < monday.isoformat():
+                wk_base, wk_name = float(v["equity"]), "EOD record %s" % d
+    if wk_base is None and c.start_date >= monday:
+        wk_base, wk_name = c.start_equity, "start_equity (phase began this week)"
+    c.week_base, c.week_base_name = wk_base or c.start_equity, wk_name or "unavailable"
+    note = latched_note("KS-2")
+    if wk_base is None:
+        c.fail_now["KS-2"] = True
+        add("KS-2 weekly DD", False, "baseline unavailable (no history, no EOD record before %s)%s" % (monday, note),
+            "> -%.0f%%" % (P["ks2_weekly_dd"] * 100))
+    else:
+        d2 = E / wk_base - 1
+        c.fail_now["KS-2"] = d2 <= -P["ks2_weekly_dd"]
+        add("KS-2 weekly DD", not c.fail_now["KS-2"] and not note,
+            "%s vs %s (%s)%s" % (tlib.fmt_pct(d2, 2), money(wk_base), wk_name, note), "> -%.0f%%" % (P["ks2_weekly_dd"] * 100))
     # KS-3 total drawdown
     d3 = E / c.start_equity - 1 if c.start_equity else 0
-    add("KS-3 total DD", d3 > -P["ks3_total_dd"], "%s vs start %s" % (tlib.fmt_pct(d3, 2), money(c.start_equity)),
-        "> -%.0f%%" % (P["ks3_total_dd"] * 100))
+    c.fail_now["KS-3"] = d3 <= -P["ks3_total_dd"]
+    note = latched_note("KS-3")
+    add("KS-3 total DD", not c.fail_now["KS-3"] and not note,
+        "%s vs start %s%s" % (tlib.fmt_pct(d3, 2), money(c.start_equity), note), "> -%.0f%%" % (P["ks3_total_dd"] * 100))
+    # Latch immediately, so a crash later in this run cannot lose the trip.
+    new_latch = dict(latch)
+    for k in LATCHED:
+        if c.fail_now.get(k) and not latched_note(k):
+            new_latch[k] = {"date": c.today.isoformat(), "start_date": c.start_date.isoformat(),
+                            "start_equity": c.start_equity}
+    if new_latch != latch:
+        c.state["latch"] = new_latch
+        save_state_field(c, "latch", new_latch)
     # KS-4 single satellite size
     big = max([(c.mv(p) / E, p["symbol"]) for p in c.sats()] or [(0, "-")])
     add("KS-4 position size", big[0] <= P["ks4_position_max"], "largest satellite %s %.1f%%" % (big[1], big[0] * 100),
         "<= %.0f%%" % (P["ks4_position_max"] * 100))
     # KS-5 activity
-    today_n, week_n = len(c.entries(c.today)), len(c.entries(monday))
+    # working satellite buys that have not filled yet still use an entry slot
+    c.pending_sat = [o for o in c.open_orders if o.get("side") == "buy"
+                     and (o.get("client_order_id") or "").startswith("sat-") and float(o.get("filled_qty") or 0) == 0]
+    today_n = len(c.entries(c.today)) + len(c.pending_sat)
+    week_n = len(c.entries(monday)) + len(c.pending_sat)
     c.entries_today, c.entries_week = today_n, week_n
     add("KS-5 activity", today_n <= P["entries_per_day"] and week_n <= P["entries_per_week"],
         "entries today %d, this week %d" % (today_n, week_n),
@@ -244,36 +305,37 @@ def kill_switches(c):
                                                                  else "%.0f" % q["age_min"]), "<= 15 min")
     # KS-8 reconciliation
     prev = c.state.get("positions")
-    if prev is None or not c.state.get("asof"):
+    if prev is None or "filled" not in c.state:
         add("KS-8 reconcile", True, "no previous STATE.json - initialising", "exact")
     else:
-        asof = tlib.parse_ts(c.state["asof"])
-        exp = collections.Counter({k: float(v) for k, v in prev.items()})
-        for f in c.fills:
-            if f["t"] > asof:
-                exp[f["sym"]] += f["qty"] if f["side"] == "buy" else -f["qty"]
-        act = {p["symbol"]: float(p["qty"]) for p in c.positions}
-        diff = {s: (exp.get(s, 0), act.get(s, 0)) for s in set(exp) | set(act)
-                if abs(exp.get(s, 0) - act.get(s, 0)) > 1e-6}
-        add("KS-8 reconcile", not diff, "matches STATE.json + fills" if not diff else
+        diff = reconcile(c, prev)
+        if diff:                                   # a fill can land between two API calls: reload once
+            c.load_book()
+            c.fills = c._fills()
+            diff = reconcile(c, prev)
+        add("KS-8 reconcile", not diff, "matches STATE.json + new fills" if not diff else
             "unexplained: " + ", ".join("%s expected %g got %g" % (s, e, a) for s, (e, a) in sorted(diff.items())),
             "exact")
     # KS-9 account identity / endpoint sanity
     num, want = c.acct.get("account_number", "?"), (c.cfg.get("account_number") or "UNSET")
     ratio = E / c.start_equity if c.start_equity else 0
     in_band = P["ks9_equity_low"] <= ratio <= P["ks9_equity_high"]
-    if want in ("", "UNSET"):
+    if not c.start_date_ok:
+        add("KS-9 account", False, "start_date is UNSET/invalid in PROJECT-CONTEXT.md (%r) - drawdowns and counts "
+            "cannot be computed" % c.cfg.get("start_date", ""), "valid YYYY-MM-DD")
+    elif want in ("", "UNSET"):
         add("KS-9 account", c.mode == "PAPER" and in_band, "%s (PROJECT-CONTEXT account_number UNSET), equity %.2fx start"
             % (num, ratio), "match, %.1f-%.1fx" % (P["ks9_equity_low"], P["ks9_equity_high"]), warn=True)
     else:
         add("KS-9 account", num == want and in_band, "%s vs expected %s, equity %.2fx start" % (num, want, ratio),
             "match, %.1f-%.1fx" % (P["ks9_equity_low"], P["ks9_equity_high"]))
     # KS-10 every satellite protected by a stop
-    unprotected = []
+    unprotected, c.uncovered = [], {}
     for p in c.sats():
         covered = sum(float(o.get("qty") or 0) - float(o.get("filled_qty") or 0) for o in c.stop_orders(p["symbol"]))
         if covered + 1e-6 < float(p["qty"]):
             unprotected.append(p["symbol"])
+            c.uncovered[p["symbol"]] = int(round(float(p["qty"]) - covered))
     c.unprotected = unprotected
     add("KS-10 stops", not unprotected, "%d satellites, unprotected: %s" % (len(c.sats()), ", ".join(unprotected) or "none"),
         "all protected")
@@ -323,8 +385,15 @@ def flags(c):
     c.sat_allowed = c.buys_allowed and not ({"KS-4", "KS-5", "KS-10", "KS-11", "PDT"} & failed)
     maxpos = c.P["sat_max_positions_riskoff"] if c.reg["state"] == "risk-off" else c.P["sat_max_positions"]
     c.maxpos = int(maxpos)
-    c.slots = max(0, min(c.maxpos - len(c.sats()), int(c.P["entries_per_day"]) - c.entries_today,
+    c.slots = max(0, min(c.maxpos - len(c.sats()) - len(c.pending_sat), int(c.P["entries_per_day"]) - c.entries_today,
                          int(c.P["entries_per_week"]) - c.entries_week)) if c.sat_allowed else 0
+    c.sim = {"slots": 0, "cash": 0.0, "sat": 0.0, "sector_n": collections.Counter(), "sector_v": collections.Counter()}
+    for o in c.pending_sat:                        # working buys count as exposure already
+        v = float(o.get("qty") or 0) * float(o.get("limit_price") or 0)
+        s = tlib.sector_of(o["symbol"])
+        c.sim["sat"] += v
+        c.sim["sector_n"][s] += 1
+        c.sim["sector_v"][s] += v
 
 
 # ====================================================================== core
@@ -334,7 +403,9 @@ def core_plan(c):
     core_qty = float(cp["qty"]) if cp else 0.0
     core_mv = c.mv(cp) if cp else 0.0
     sat = c.sat_pct()
-    if c.reg["state"] == "risk-off":
+    if "KS-3" in c.failed:
+        target, why = P["core_riskoff_target"], "KS-3 halt"
+    elif c.reg["state"] == "risk-off":
         target, why = P["core_riskoff_target"], "risk-off"
     else:
         target = min(max(P["core_target_base"] - sat, P["core_target_min"]), P["core_target_max"])
@@ -398,6 +469,10 @@ def atr_stop_pct(c, sym, price):
 def maintenance(c):
     """Orphan stops (KS-10), trailing-stop tightening, KS-4 trims, KS-3 liquidation."""
     acts = []
+    if not c.orders_allowed:
+        bad = ", ".join(sorted(c.failed & {"KS-6", "KS-8", "KS-9"})) or "account blocked"
+        return ["BLOCKED - no orders of any kind while %s fail(s); fix that first%s" % (
+            bad, " (unprotected: %s)" % ", ".join(c.unprotected) if c.unprotected else "")]
     if "KS-3" in c.failed:
         acts.append("KS-3 HALT: cancel every satellite stop, close every satellite (alpaca.sh close SYM), "
                     "sell core down to %.0f%%, alert the user. Manual reset required." % (c.P["core_riskoff_target"] * 100))
@@ -405,10 +480,10 @@ def maintenance(c):
         p = next(p for p in c.positions if p["symbol"] == sym)
         px = float(p.get("current_price") or 0)
         stop = atr_stop_pct(c, sym, px)
-        body = {"symbol": sym, "qty": str(int(float(p["qty"]))), "side": "sell", "type": "trailing_stop",
+        body = {"symbol": sym, "qty": str(c.uncovered[sym]), "side": "sell", "type": "trailing_stop",
                 "trail_percent": "%.1f" % (stop * 100), "time_in_force": "gtc",
                 "client_order_id": c.next_coid("stop-%s-%s" % (c.today, sym))}
-        acts.append("ORPHAN %s: no stop - place now -> %s" % (sym, cmd_order(body)))
+        acts.append("ORPHAN %s: %d sh without a stop - place now -> %s" % (sym, c.uncovered[sym], cmd_order(body)))
     for p in c.sats():
         sym, up = p["symbol"], float(p.get("unrealized_plpc") or 0)
         px = float(p.get("current_price") or 0)
@@ -447,6 +522,9 @@ def check(c, spec):
     out = ["CHECK %s (research ref %s)" % (sym, ref or "none")]
     gates = [("PLAN", bool(planned), "CANDIDATE line in today's research entry (G1-G7 passed pre-market)" if planned
               else "not a CANDIDATE line in today's (%s) RESEARCH-LOG entry - only planned names may be bought" % c.today)]
+    sector = tlib.sector_of(sym)
+    gates.append(("G1", sector != "UNKNOWN", "%s in WATCHLIST/sector ETFs" % sym if sector != "UNKNOWN"
+                  else "%s is not in WATCHLIST.md or the sector ETFs" % sym))
     held = any(p["symbol"] == sym for p in c.positions)
     working = [o for o in c.open_orders if o["symbol"] == sym]
     gates.append(("G0", not held and not working, "held" if held else ("open order %s" % working[0]["id"] if working
@@ -459,26 +537,32 @@ def check(c, spec):
     ask = q["ask_or_last"] if q else 0
     limit = round(ask * 1.001, 2) if ask else 0
     stop = atr_stop_pct(c, sym, ask) if ask else P["stop_max"]
-    budget = min(P["sat_max_pct"] * E, c.cash_avail - P["cash_min"] * E)
+    cash_avail = c.cash_avail - c.sim["cash"]
+    budget = min(P["sat_max_pct"] * E, cash_avail - P["cash_min"] * E)
     qty = int(math.floor(budget / limit)) if limit else 0
     size = qty * limit
     g8 = qty >= 1 and size >= P["sat_min_pct"] * E
     gates.append(("G8", g8, "qty %d @ limit %.2f = %s (%.1f%% of equity; budget %s, min %.0f%%); trailing stop %.1f%%"
                   % (qty, limit, money(size), size / E * 100 if E else 0, money(budget), P["sat_min_pct"] * 100, stop * 100)))
-    sector = tlib.sector_of(sym)
+    if ask and ask > P["sat_price_max_pct"] * E:
+        gates[1] = ("G1", False, "ask %.2f above the %.0f%%-of-equity price cap %s" % (ask, P["sat_price_max_pct"] * 100,
+                                                                                    money(P["sat_price_max_pct"] * E)))
     sec_pos = [p for p in c.sats() if tlib.sector_of(p["symbol"]) == sector]
-    sec_pct = (sum(c.mv(p) for p in sec_pos) + size) / E if E else 0
-    tot_pct = c.sat_pct() + (size / E if E else 0)
-    cash_after = c.cash_avail - size
+    sec_n = len(sec_pos) + c.sim["sector_n"][sector]
+    sec_pct = (sum(c.mv(p) for p in sec_pos) + c.sim["sector_v"][sector] + size) / E if E else 0
+    tot_pct = c.sat_pct() + (c.sim["sat"] + size) / E if E else 0
+    cash_after = cash_avail - size
+    slots = c.slots - c.sim["slots"]
     cool = sector_cooldowns(c)
     why = []
     if not c.sat_allowed:
         why.append("satellite entries blocked (%s)" % (", ".join(sorted(c.failed)) or ("paused" if c.paused else "account")))
-    if c.slots < 1:
-        why.append("no slots (positions %d/%d, today %d/%d, week %d/%d)" % (
-            len(c.sats()), c.maxpos, c.entries_today, P["entries_per_day"], c.entries_week, P["entries_per_week"]))
-    if len(sec_pos) >= P["sat_sector_max_positions"]:
-        why.append("%s already has %d satellites" % (sector, len(sec_pos)))
+    if slots < 1:
+        why.append("no slots (positions %d/%d, today %d/%d, week %d/%d, approved earlier in this check %d)" % (
+            len(c.sats()), c.maxpos, c.entries_today, P["entries_per_day"], c.entries_week, P["entries_per_week"],
+            c.sim["slots"]))
+    if sec_n >= P["sat_sector_max_positions"]:
+        why.append("%s already has %d satellites (incl. working/approved)" % (sector, sec_n))
     if sec_pct > P["sat_sector_max_pct"]:
         why.append("%s would be %.1f%% > %.0f%%" % (sector, sec_pct * 100, P["sat_sector_max_pct"] * 100))
     if tot_pct > P["sat_total_max"]:
@@ -488,7 +572,7 @@ def check(c, spec):
     if sector in cool:
         why.append("sector cooldown: " + cool[sector])
     gates.append(("G9", not why, "; ".join(why) or "slots %d, %s %d/%d sats %.1f%%, total sats %.1f%%, cash after %s"
-                  % (c.slots, sector, len(sec_pos), P["sat_sector_max_positions"], sec_pct * 100, tot_pct * 100, money(cash_after))))
+                  % (slots, sector, sec_n, P["sat_sector_max_positions"], sec_pct * 100, tot_pct * 100, money(cash_after))))
     ev = tlib.events_on(c.today)
     gates.append(("G10", not ev, "event today: %s" % ",".join(ev) if ev else "no FOMC/CPI/NFP today (EVENTS.md)"))
     if not q:
@@ -510,6 +594,11 @@ def check(c, spec):
         body = {"symbol": sym, "qty": str(qty), "side": "buy", "type": "limit", "limit_price": "%.2f" % limit,
                 "time_in_force": "day", "client_order_id": coid}
         out.append("  VERDICT BUY -> %s" % cmd_order(body))
+        c.sim["slots"] += 1                        # later candidates in this same call see the reduced room
+        c.sim["cash"] += size
+        c.sim["sat"] += size
+        c.sim["sector_n"][sector] += 1
+        c.sim["sector_v"][sector] += size
         out.append("  THEN wait-fill; on fill (use filled_qty, cancel any unfilled rest first) -> " + cmd_order(
             {"symbol": sym, "qty": "<filled_qty>", "side": "sell", "type": "trailing_stop",
              "trail_percent": "%.1f" % (stop * 100), "time_in_force": "gtc",
@@ -633,10 +722,41 @@ def week_block(c):
     return lines
 
 
-def write_state(c):
+def save_state_field(c, key, value):
+    """Persist one field immediately (used for kill-switch latches)."""
+    cur = {}
+    if os.path.exists(STATE_JSON):
+        with open(STATE_JSON, encoding="utf-8") as f:
+            cur = json.load(f)
+    cur[key] = value
+    with open(STATE_JSON, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(cur, f, indent=1, sort_keys=True)
+        f.write("\n")
+
+
+def reconcile(c, prev):
+    """Positions expected from the last snapshot plus every fill since, per order id."""
+    seen = c.state.get("filled") or {}
+    exp = collections.Counter({k: float(v) for k, v in prev.items()})
+    orders = {o["id"]: o for o in c.closed_orders + c.open_orders}
+    for oid, o in orders.items():
+        delta = float(o.get("filled_qty") or 0) - float(seen.get(oid, 0))
+        if abs(delta) > 1e-9:
+            exp[o["symbol"]] += delta if o["side"] == "buy" else -delta
+    act = {p["symbol"]: float(p["qty"]) for p in c.positions}
+    return {s: (exp.get(s, 0), act.get(s, 0)) for s in set(exp) | set(act) if abs(exp.get(s, 0) - act.get(s, 0)) > 1e-6}
+
+
+def write_state(c, weekly=False):
     prev_fail = set(c.state.get("ks_fail") or [])
     now_fail = sorted(c.failed)
+    latch = dict(c.state.get("latch") or {})
+    if weekly and "KS-2" in latch and not c.fail_now.get("KS-2"):
+        latch.pop("KS-2")                          # reset at the weekly review once recovered
+    filled = {o["id"]: float(o.get("filled_qty") or 0) for o in c.closed_orders + c.open_orders
+              if float(o.get("filled_qty") or 0) > 0}
     state = {"asof": tlib.iso(c.now), "positions": {p["symbol"]: float(p["qty"]) for p in c.positions},
+             "filled": filled, "latch": latch,
              "ks_fail": now_fail, "regime": c.reg["state"], "eod": getattr(c, "eod_hist", c.state.get("eod") or {})}
     with open(STATE_JSON, "w", encoding="utf-8", newline="\n") as f:
         json.dump(state, f, indent=1, sort_keys=True)
@@ -665,9 +785,16 @@ def write_state(c):
     new = [k for k in now_fail if k not in prev_fail]
     if new:
         detail = "; ".join("%s %s" % (r[0], r[2]) for r in c.ks_rows if r[0].split()[0] in new)
-        subprocess.run([tlib._bash(), os.path.join(tlib.ROOT, "scripts", "notify.sh"), "--alert",
-                        "Kill switch newly FAILING: %s" % detail])
-    return new
+        rc = subprocess.run([tlib._bash(), os.path.join(tlib.ROOT, "scripts", "notify.sh"), "--alert",
+                             "Kill switch newly FAILING: %s" % detail]).returncode
+        if rc != 0:
+            # not delivered: forget these so the next run alerts again
+            state["ks_fail"] = [k for k in now_fail if k not in new]
+            with open(STATE_JSON, "w", encoding="utf-8", newline="\n") as f:
+                json.dump(state, f, indent=1, sort_keys=True)
+                f.write("\n")
+            return new, False
+    return new, True
 
 
 def main():
@@ -727,10 +854,11 @@ def main():
         print()
         print("\n".join(week_block(c)))
     if args.write_state:
-        new = write_state(c)
+        new, delivered = write_state(c, weekly=args.week)
         print()
         print("STATE written (memory/STATE.json, memory/STATE.md)%s" % (
-            "; ALERT sent for newly failing: " + ", ".join(new) if new else ""))
+            "" if not new else ("; ALERT sent for newly failing: " if delivered
+                                else "; ALERT FAILED (webhook) for newly failing: ") + ", ".join(new)))
 
 
 if __name__ == "__main__":

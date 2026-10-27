@@ -27,11 +27,12 @@ if [[ "${GIT_PUSH_DISABLED:-}" == 1 ]]; then
     exit 0
 fi
 
-for attempt in 1 2 3; do
+for attempt in 1 2 3 4; do
     if git push --quiet origin HEAD:main 2>/dev/null; then
         echo "[gitpush] pushed: $subject"
         exit 0
     fi
+    ((attempt == 4)) && break
     sleep $((attempt * 5))
     git fetch --quiet origin main || true
     if ! git rebase --quiet origin/main; then
@@ -41,5 +42,5 @@ for attempt in 1 2 3; do
 done
 
 git diff --stat origin/main >&2 || true
-bash scripts/notify.sh --alert "push failed after 3 attempts: $subject - this run's records are NOT saved" || true
+bash scripts/notify.sh --alert "push failed after 4 attempts: $subject - this run's records are NOT saved" || true
 exit 1

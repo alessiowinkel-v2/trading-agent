@@ -32,14 +32,15 @@ If either file is missing: bash scripts/notify.sh --alert "pre-market: routine f
 **STEP 5 — Candidates** (aim: ≥2 passing candidates from ≥2 different sectors):
 1. Take names from the top-10 table in rank order (skip a second name from a sector you already have until you have two sectors). If the table has fewer than 2 sectors, add the #1-ranked sector ETF from STEP 2 if it passes.
 2. One call for your shortlist (up to 5 names): `python3 scripts/screen.py candidate SYM SYM …`. Paste each table.
-3. For each name that printed a `CANDIDATE:` line:
+3. For each name that printed a `SCREEN_OK:` line (this authorises nothing yet):
    - **G6 earnings**: `bash scripts/perplexity.sh -r week --text "What is the date of <SYM> (<Name>)'s next quarterly earnings report? Reply as YYYY-MM-DD and say whether it is confirmed or estimated. Use only sources updated after <DATE_MINUS_14>."`
      PASS if the date is on or after `EARNINGS_OK_FROM`, or the last report was less than 45 days ago and no date is announced. FAIL otherwise. Quote the source.
    - **Catalysts**: `bash scripts/perplexity.sh -r week --text "News and catalysts for <SYM> (<Name>) since <DATE_MINUS_7>. Cite dates. Ignore anything older."`
    - If perplexity.sh exits 3 or errors, use WebSearch for the same questions and set `perplexity=fallback`.
    - **G7 thesis**: 2–3 sentences naming the specific driver for the next 1–3 months. Trend leadership in a top-3 sector is an acceptable driver. Write the main risk in one line.
 4. Keep going through the top-10 until you have 2 candidates from 2 sectors or have checked them all. Every rejected name gets one line with its failing gate. **No narrative vetoes**: a name that passes every gate is a candidate; a concern no gate captures goes to the Friday review as a rule suggestion.
-5. For each accepted candidate, copy the `CANDIDATE: SYM ref=… stop_pct=… sector=…` line exactly — market-open executes only these lines.
+5. For each candidate that passed G6 **and** G7, write the final line exactly as screen.py suggested:
+   `CANDIDATE: SYM ref=… stop_pct=… sector=… g6=PASS g7=PASS` (values copied from its `SCREEN_OK:` line). Market-open can only buy symbols with this exact line in today's entry; never write it for a name that failed or was not checked.
 
 **STEP 6 — Yesterday's candidates**: one line each from yesterday's TRADE-LOG records: FILLED / not filled: reason / dropped: gate.
 

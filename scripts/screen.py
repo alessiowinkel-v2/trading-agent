@@ -63,8 +63,11 @@ def evaluate(sym, sector, bars, spy_bars, ranks, equity, P, feed):
                rs21=rs21, rs63=rs63, vs_high=last / hi52 - 1, adv=adv, date=bars[-1]["t"][:10])
     g = res["gates"]
     price_cap = P["sat_price_max_pct"] * equity
-    g["G1"] = (last <= price_cap, "close %s vs cap %s (%.0f%% of equity)"
-               % (tlib.fmt_usd(last), tlib.fmt_usd(price_cap), P["sat_price_max_pct"] * 100))
+    if sector == "UNKNOWN":
+        g["G1"] = (False, "%s is not in WATCHLIST.md or the sector ETFs" % sym)
+    else:
+        g["G1"] = (last <= price_cap, "close %s vs cap %s (%.0f%% of equity)"
+                   % (tlib.fmt_usd(last), tlib.fmt_usd(price_cap), P["sat_price_max_pct"] * 100))
     if feed == "iex":
         g["G2"] = (True, "SKIPPED - IEX-only volume (SIP unavailable); watchlist names are pre-vetted large caps")
     else:
@@ -177,9 +180,11 @@ def main():
             for k in ("G1", "G2", "G3", "G4", "G5", "G8"):
                 ok, why = r["gates"][k]
                 print("| %s | %s | %s |" % (k, "PASS" if ok else "FAIL", why))
-            print("G6 (earnings) and G7 (thesis) are yours: see routine STEP 5.")
             if r["ok"]:
-                print("CANDIDATE: %s ref=%.2f stop_pct=%.1f sector=%s" % (r["sym"], r["close"], r["stop"] * 100, r["sector"]))
+                print("SCREEN_OK: %s ref=%.2f stop_pct=%.1f sector=%s" % (r["sym"], r["close"], r["stop"] * 100, r["sector"]))
+                print("Next: G6 (earnings) and G7 (thesis). Only if both pass, write the final line "
+                      "'CANDIDATE: %s ref=%.2f stop_pct=%.1f sector=%s g6=PASS g7=PASS'."
+                      % (r["sym"], r["close"], r["stop"] * 100, r["sector"]))
             else:
                 print("NOT A CANDIDATE: fails %s" % ",".join(k for k, v in r["gates"].items() if not v[0]))
             print()

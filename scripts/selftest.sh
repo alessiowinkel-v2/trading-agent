@@ -98,7 +98,7 @@ fi
 # --- notifications and research ---------------------------------------------------------------
 if [[ "$want_notify" == 1 ]]; then
     bash scripts/notify.sh "selftest $NOW_ET ET - if you can read this, alerts work" >/dev/null 2>&1 && ok "notify.sh delivered" || ko "notify.sh delivery failed"
-    NOTIFY_WEBHOOK_URL="https://discord.com/api/webhooks/0/invalid" bash scripts/notify.sh "selftest bad url" >/dev/null 2>&1
+    NOTIFY_WEBHOOK_URL="http://127.0.0.1:9/unreachable" bash scripts/notify.sh "selftest bad url" >/dev/null 2>&1
     [[ $? -eq 2 ]] && ok "notify.sh exits 2 on a bad webhook" || ko "notify.sh did not report the bad webhook"
     git checkout -- memory/notifications 2>/dev/null || true
 fi
