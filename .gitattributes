@@ -1,0 +1,5 @@
+# Scripts must keep LF line endings on every platform (bash breaks on CRLF).
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
