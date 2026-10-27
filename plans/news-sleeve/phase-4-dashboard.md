@@ -5,7 +5,7 @@
 You are a development session for alessiowinkel-v2/trading-agent, authorised by the user to implement Phase 4 of the news sleeve.
 1. Read CLAUDE.md, plans/news-sleeve/PLAN.md, plans/news-sleeve/STATUS.md, plans/news-sleeve/phase-4-dashboard.md. PLAN.md §1 and §11 bind you.
 2. Load the dataviz skill before writing any chart code.
-3. Work on branch claude/news-sleeve-phase-4. Never push to main. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 4: dashboard".
+3. Work on branch claude/news-sleeve-phase-4. Never push to main. First action: create a scheduled task bound to this session (create_trigger, cron "0 */4 * * *", initiation human_request) whose prompt says "resume Phase 4 of plans/news-sleeve from STATUS.md; if the phase is done and its PR is open, disable this task" — this is how the work survives Claude usage limits. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 4: dashboard".
 ```
 
 ## Goal

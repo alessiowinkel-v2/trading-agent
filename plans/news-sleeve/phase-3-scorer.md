@@ -4,7 +4,7 @@
 ```
 You are a development session for alessiowinkel-v2/trading-agent, authorised by the user to implement Phase 3 of the news sleeve.
 1. Read CLAUDE.md, plans/news-sleeve/PLAN.md, plans/news-sleeve/STATUS.md (Phase 1–2 notes), plans/news-sleeve/phase-3-scorer.md. PLAN.md §5–§6 are the specification and may not be reinterpreted; §11 binds you.
-2. Work on branch claude/news-sleeve-phase-3. Never push to main. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 3: scorer".
+2. Work on branch claude/news-sleeve-phase-3. Never push to main. First action: create a scheduled task bound to this session (create_trigger, cron "0 */4 * * *", initiation human_request) whose prompt says "resume Phase 3 of plans/news-sleeve from STATUS.md; if the phase is done and its PR is open, disable this task" — this is how the work survives Claude usage limits. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 3: scorer".
 ```
 
 ## Goal

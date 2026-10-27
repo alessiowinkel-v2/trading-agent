@@ -9,6 +9,7 @@ Not financial advice. Not a backtested strategy. No guarantee of returns.
 - Four weekday routines + a Friday review run in Anthropic's cloud. Each run clones this repo, follows `routines/COMMON.md` + its routine file, appends a dated record under `memory/`, and commits to `main`. Git is the memory.
 - **Scripts compute, the model judges.** `scripts/preflight.sh` (dates, market clock, holidays, events, pause, cadence), `scripts/screen.py` (indicators and entry gates), `scripts/ks.py` (kill switches, core sizing, satellite slots, P&L vs SPY, ready-to-run order commands).
 - **Order guards live in code**: `scripts/alpaca.sh` refuses fractional shares, market buys, buys beyond cash (never margin), shorts, options, orders without an idempotent `client_order_id`, buys while paused, and any live order without `LIVE_TRADING_CONFIRMED=yes`.
+- **A news-signal research sleeve** (`plans/news-sleeve/PLAN.md`) scans headlines 24/7 in GitHub Actions, scores whether they predicted anything after costs, and places no orders until a pre-registered gate is met.
 - **Alerts reach a human**: `scripts/notify.sh` posts to a Discord or Slack webhook. A GitHub Actions watchdog (`.github/workflows/watchdog.yml`) alerts — and makes GitHub email you — if any routine fails to report, even if the whole Claude setup is gone.
 
 | Routine | ET time | File |
@@ -31,6 +32,8 @@ scripts/notify.sh         webhook alerts                   scripts/perplexity.sh
 scripts/gitpush.sh        commit + push to main            scripts/memtail.sh    read the tail of a log
 scripts/watchdog.sh       cadence check (GitHub Actions)   scripts/selftest.sh   end-to-end self-test
 scripts/tlib.py           shared library (ET time, indicators, params)
+scripts/newsscan.sh/.py   news-sleeve scanner (GitHub Actions, every 15 min)   scripts/newslib.py  news helpers
+memory/NEWS-UNIVERSE.md   news-sleeve universe   memory/news/        raw headlines, signals, scanner state
 memory/TRADING-STRATEGY.md   rules + params block   memory/KILL-SWITCHES.md   halts
 memory/WATCHLIST.md          satellite universe     memory/EVENTS.md          FOMC/CPI/NFP days
 memory/PROJECT-CONTEXT.md    phase + account block  memory/STATE.md/.json     written by ks.py

@@ -5,7 +5,7 @@
 You are a development session for alessiowinkel-v2/trading-agent, authorised by the user to implement Phase 2 of the news sleeve.
 1. Read CLAUDE.md, plans/news-sleeve/PLAN.md, plans/news-sleeve/STATUS.md (Phase 1 handoff note), plans/news-sleeve/phase-2-classifier.md. PLAN.md §0, §3, §4, §9 and §11 bind you.
 2. Before writing any Claude API code, load the claude-api skill (structured outputs, current model ids, no temperature parameter, fallbacks).
-3. Work on branch claude/news-sleeve-phase-2. Never push to main. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 2: classifier".
+3. Work on branch claude/news-sleeve-phase-2. Never push to main. First action: create a scheduled task bound to this session (create_trigger, cron "0 */4 * * *", initiation human_request) whose prompt says "resume Phase 2 of plans/news-sleeve from STATUS.md; if the phase is done and its PR is open, disable this task" — this is how the work survives Claude usage limits. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 2: classifier".
 ```
 
 ## Goal

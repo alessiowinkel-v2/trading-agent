@@ -83,7 +83,7 @@ fi
 
 # ---- git history must be deep enough for the cadence check ------------------
 if [[ "$(git rev-parse --is-shallow-repository 2>/dev/null)" == true ]]; then
-    git fetch --quiet --deepen=400 origin main 2>/dev/null || true
+    git fetch --quiet --deepen=1500 origin main 2>/dev/null || true
 fi
 git fetch --quiet origin main 2>/dev/null || true
 
@@ -161,7 +161,7 @@ fi
 
 # ---- cadence: did the earlier routines commit? ------------------------------------
 # Commit subjects: "<routine> <DATE>: OK|SKIPPED|ABORTED - <summary>"
-subjects="$(git log -n 400 --format=%s origin/main 2>/dev/null || git log -n 400 --format=%s)"
+subjects="$(git log -n 1500 --format=%s origin/main 2>/dev/null || git log -n 1500 --format=%s)"
 has() { grep -Eq "^$1 $2: (OK|SKIPPED)" <<<"$subjects"; }
 expect=()
 if [[ "$TODAY_TRADING" == yes ]]; then

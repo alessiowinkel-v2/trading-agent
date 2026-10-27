@@ -7,7 +7,7 @@
 You are a development session for alessiowinkel-v2/trading-agent, authorised by the user to implement Phase 5 of the news sleeve.
 1. Read CLAUDE.md, plans/news-sleeve/PLAN.md (§6, §7 especially), plans/news-sleeve/STATUS.md, plans/news-sleeve/phase-5-execution.md, memory/TRADING-STRATEGY.md (news sleeve section + params), memory/KILL-SWITCHES.md, memory/NEWS-SCORECARD.md.
 2. Verify the two preconditions in the phase file. If either fails, write that in STATUS.md and stop.
-3. Work on branch claude/news-sleeve-phase-5. Never push to main. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 5: paper execution".
+3. Work on branch claude/news-sleeve-phase-5. Never push to main. First action: create a scheduled task bound to this session (create_trigger, cron "0 */4 * * *", initiation human_request) whose prompt says "resume Phase 5 of plans/news-sleeve from STATUS.md; if the phase is done and its PR is open, disable this task" — this is how the work survives Claude usage limits. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 5: paper execution".
 ```
 
 ## Read first

@@ -18,6 +18,9 @@ Not a daily-profit machine. The honest base case is "no robust edge after costs"
 | D8 | **Buckets and thresholds are fixed now (§6). No re-bucketing after seeing data** except via a dated amendment to this file plus a fresh out-of-sample window. | Otherwise the scorecard becomes p-hacking. |
 | D9 | **Nothing in Phases 1–4 touches Phase 1b trading.** New scripts, new memory files, new workflows; existing routines get at most a read-only STEP. | Phase 1b graduation must stay clean. |
 | D10 | Each phase ships on its own branch + PR; the user merges before the next phase starts. Routine agents keep pushing to `main` as today. | Review per phase, token-light handoff. |
+| D11 | **Phase 0 choices (taken by the agent, 2026-10-27, user delegated):** `CLASSIFIER_MODEL=claude-sonnet-5-5`; Discord budget 5 signal alerts/day; crypto pairs BTC/USD, ETH/USD, SOL/USD. | Sonnet: the whole experiment rests on classification quality and it costs ≈ $7/month. Haiku stays as the documented fallback. |
+| D12 | **Heartbeat commits.** The scanner commits when it has new rows, or when its last commit is older than 2 h (`0 new (heartbeat)`). The watchdog alerts when `memory/news/state.json` is older than 3 h. | Quiet weekend nights must not look like a dead scanner, and a dead scanner must not look like a quiet night. |
+| D13 | **Pushes by GitHub Actions do not trigger `on: push` workflows.** The dashboard build therefore runs on push (routine commits) **and** on a 30-minute schedule. | GitHub limitation with `GITHUB_TOKEN`. |
 
 ## 1. Architecture
 
@@ -114,7 +117,7 @@ If no bucket passes after 10 weeks: the sleeve stays research-only, the scanner 
 | GitHub Actions | $0 | public repo; ~2,900 scanner runs × ~40 s |
 | GitHub Pages | $0 | static site, no secrets |
 | Alpaca data + news | $0 | Basic plan, 200 req/min |
-| Classifier, ~100 headlines/day batched (~60k in / 10k out tokens per day) | Haiku 5.5 ≈ $0.35 · Sonnet 5.5 ≈ $6.60 · Opus 5.5 ≈ $13 | Anthropic API billing, separate from the Claude subscription. User chooses in Phase 0. |
+| Classifier, measured ≈ 300 headlines/day batched (~80k in / 15k out tokens per day) | Haiku 5.5 ≈ $0.50 · **Sonnet 5.5 ≈ $9** · Opus 5.5 ≈ $19 | Anthropic API billing, separate from the Claude subscription. User chooses in Phase 0. |
 | Claude Code sessions | unchanged | 5 routines/day + one session per phase |
 
 ## 9. Risks and how the plan handles them
@@ -139,7 +142,7 @@ If no bucket passes after 10 weeks: the sleeve stays research-only, the scanner 
 | 5 | Paper execution (only after the §6 gate **and** the user's strategy amendment) | Opus 5.5 / xhigh | first news trade with stop verified in the same run |
 | 6 | Optional: 15-minute crypto lane in Actions (script-only) | decide only with data | — |
 
-Phases 1–4 can run in any order after 1, but 1 → 2 → 3 → 4 keeps each session smallest. Start Phase 4 early if you want the dashboard for Phase 1b itself: its first version needs only `memory/` data that already exists.
+Phases 1–4 were started in the planning session itself (user: "do everything for me"); see STATUS.md for what each phase still needs. The per-phase session prompts remain valid for follow-up work. Start Phase 4 early if you want the dashboard for Phase 1b itself: its first version needs only `memory/` data that already exists.
 
 ## 11. Handoff protocol (every phase session)
 
@@ -148,6 +151,7 @@ Phases 1–4 can run in any order after 1, but 1 → 2 → 3 → 4 keeps each se
 3. Work on branch `claude/news-sleeve-phase-N`, never on `main`. Keep the diff to the phase. Run `bash tests/offline.sh` and the phase's own tests before every push.
 4. Finish by updating `STATUS.md` (done / deviations / how the user verifies / open questions / what the next phase must know), then open a PR titled `News sleeve — Phase N: <title>` with the verification steps in the body.
 5. Honesty rules from `CLAUDE.md` apply: failed commands are reported as failed; nothing is marked done that was not run.
+6. **Usage limits never end the plan.** As its first action every phase session creates a scheduled task bound to itself (`create_trigger`, cron `0 */4 * * *`, prompt: "resume Phase N from STATUS.md; if the phase is done and its PR is open, disable this task"). A session that is cut off by a Claude usage limit is then re-woken after the reset and continues; the task is disabled by the session itself when the phase is done. The planning session's own task is `trig_01YBS4D637u1C9xvs2VjU8w7`.
 
 ## Amendments
 - (none yet — add dated entries here; §6 changes need a fresh out-of-sample window)

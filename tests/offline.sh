@@ -5,6 +5,12 @@
 
 set -uo pipefail
 
+# This test must never reach a real endpoint or webhook: scripts/env.sh lets an exported
+# variable win over .env, so drop anything the shell inherited before pointing at the mock.
+unset ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT ALPACA_DATA_ENDPOINT ALPACA_DATA_FEED \
+      NOTIFY_WEBHOOK_URL NOTIFY_MENTION PERPLEXITY_API_KEY PERPLEXITY_AUTH ALPACA_AUTH \
+      ANTHROPIC_API_KEY LIVE_TRADING_CONFIRMED ALPACA_DRY_RUN
+
 SRC="$(cd "$(dirname "$0")/.." && pwd)"
 PY="$(command -v python3 || command -v python)"
 py() { "$PY" "$@" | tr -d '\r'; }
@@ -216,6 +222,46 @@ check "...and nothing reaches the webhook" test "$(wc -l < "$W/webhook.log")" -e
 check "watchdog grid shows OK for market-open" has "$(bash scripts/watchdog.sh grid "$MONDAY")" "| $DATE | OK | OK | MISSING"
 check "memtail returns the latest dated entry" has "$(bash scripts/memtail.sh memory/LESSONS.md 1)" "Phase 1b reset"
 check "webhook received messages" test -s "$W/webhook.log"
+
+echo "== news sleeve: scanner plumbing"
+rm -rf memory/news
+out="$($A news NVDA,BTCUSD,SPY 2>&1)"
+check "alpaca.sh news returns articles" has "$out" '"headline"'
+out="$($A crypto-price BTC/USD 2>&1)"
+check "alpaca.sh crypto-price prints a status line" has "$out" "BTC/USD bid=.*status=OK"
+out="$($A crypto-bars BTC/USD 3 15Min 2>&1)"
+check "alpaca.sh crypto-bars returns 15Min bars" has "$out" '"BTC/USD"'
+out="$($A bars-intraday SPY 1Min "$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib,datetime as d; print(tlib.iso(tlib.utc_now()-d.timedelta(minutes=30)))')" "$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.iso(tlib.utc_now()))')" 2>&1)"
+check "alpaca.sh bars-intraday returns minute bars" test "$(py -c 'import json,sys; print(len(json.loads(sys.argv[1])["bars"]))' "$out")" -ge 20
+check "news universe parses 74 symbols" has "$(py scripts/newslib.py universe)" "74 symbols"
+out="$(py scripts/newsscan.py --lookback-hours 3 --no-classify 2>&1)"; echo "   $out"
+check "first scan keeps 3 universe headlines (drops off-universe + duplicate id)" has "$out" "NEWSSCAN ok new=3"
+raw="memory/news/raw/$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.et_today().strftime("%Y-%m"))').jsonl"
+check "raw jsonl written" test "$(wc -l < "$raw")" -eq 3
+check "NVDA headline keeps NVDA as primary ticker (named in headline)" has "$(grep 62600001 "$raw")" '"ticker":"NVDA"'
+check "5-symbol Fed story maps to SPY" has "$(grep 62600004 "$raw")" '"ticker":"SPY"'
+check "crypto row carries a crypto price snapshot" has "$(grep 62600002 "$raw")" '"feed":"crypto-us"'
+check "stock row carries a price snapshot" has "$(grep 62600001 "$raw")" '"feed":"iex"'
+out="$(py scripts/newsscan.py --no-classify 2>&1)"
+check "second scan adds nothing (cursor + dedup)" has "$out" "NEWSSCAN ok new=0"
+check "state.json has a cursor and last_ok" bash -c 'grep -q cursor_updated_at memory/news/state.json && grep -q last_ok_utc memory/news/state.json'
+check "gitpush accepts a newsscan subject" bash -c 'bash scripts/gitpush.sh "newsscan 2026-10-27 21:00Z: OK - 3 new headlines" >/dev/null 2>&1'
+check "gitpush still rejects a bad subject" bash -c '! bash scripts/gitpush.sh "scanner 2026-10-27: OK - x" >/dev/null 2>&1'
+py scripts/newslib.py mark-commit
+out="$(bash scripts/newsscan.sh --no-classify 2>&1)"
+check "newsscan.sh: nothing new and heartbeat not due -> no commit" has "$out" "no commit"
+py -c "
+import json; s=json.load(open('memory/news/state.json')); s['last_commit_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
+out="$(bash scripts/newsscan.sh --no-classify 2>&1)"
+check "newsscan.sh: heartbeat commit when the last commit is old" has "$out" "0 new (heartbeat)"
+out="$(ALPACA_DATA_ENDPOINT=http://127.0.0.1:1/data/v2 py scripts/newsscan.py 2>&1)"
+check "scanner aborts loudly when the API is unreachable" has "$out" "NEWSSCAN ABORTED"
+check "...and records the error in state.json" has "$(cat memory/news/state.json)" '"last_error": "AlpacaError'
+check "watchdog sees a fresh scanner as healthy" bash -c '! bash scripts/watchdog.sh nightly 2>&1 | grep -q "newsscan=STALE"'
+py -c "
+import json; s=json.load(open('memory/news/state.json')); s['last_ok_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
+check "watchdog flags a stale scanner" bash -c 'bash scripts/watchdog.sh nightly 2>&1 | grep -q "newsscan=STALE"'
+rm -rf memory/news
 
 echo "== SIP refused -> IEX fallback"
 kill $MOCK_PID 2>/dev/null

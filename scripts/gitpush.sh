@@ -11,8 +11,9 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 subject="${1:?usage: gitpush.sh \"<routine> <DATE>: OK|SKIPPED|ABORTED - <summary>\"}"
 
-if ! grep -Eq '^(pre-market|market-open|midday|eod|weekly) [0-9]{4}-[0-9]{2}-[0-9]{2}: (OK|SKIPPED|ABORTED)' <<<"$subject"; then
-    echo "[gitpush] subject must look like '<routine> <YYYY-MM-DD>: OK|SKIPPED|ABORTED - summary'" >&2
+if ! grep -Eq '^(pre-market|market-open|midday|eod|weekly|newsscore) [0-9]{4}-[0-9]{2}-[0-9]{2}: (OK|SKIPPED|ABORTED)' <<<"$subject" \
+   && ! grep -Eq '^newsscan [0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}Z: (OK|ABORTED)' <<<"$subject"; then
+    echo "[gitpush] subject must look like '<routine> <YYYY-MM-DD>: OK|SKIPPED|ABORTED - summary' (or 'newsscan <DATE> <HH:MM>Z: OK|ABORTED - …')" >&2
     exit 2
 fi
 
