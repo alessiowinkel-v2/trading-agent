@@ -1,0 +1,44 @@
+# Dashboard: static GitHub Pages site built from memory/ by scripts/dashboard.py.
+# No secrets, no API calls. Runs on routine pushes and every 30 min (pushes made by the
+# scanner's GITHUB_TOKEN do not trigger `push`, see plans/news-sleeve/PLAN.md D13).
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths: ["memory/**", "site/**", "scripts/dashboard.py", "scripts/newslib.py", "scripts/tlib.py", ".github/workflows/pages.yml"]
+  schedule:
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Build site
+        run: python3 scripts/dashboard.py --out _site
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

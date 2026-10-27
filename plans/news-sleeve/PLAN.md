@@ -142,7 +142,7 @@ If no bucket passes after 10 weeks: the sleeve stays research-only, the scanner 
 | 5 | Paper execution (only after the §6 gate **and** the user's strategy amendment) | Opus 5.5 / xhigh | first news trade with stop verified in the same run |
 | 6 | Optional: 15-minute crypto lane in Actions (script-only) | decide only with data | — |
 
-Phases 1–4 were started in the planning session itself (user: "do everything for me"); see STATUS.md for what each phase still needs. The per-phase session prompts remain valid for follow-up work. Start Phase 4 early if you want the dashboard for Phase 1b itself: its first version needs only `memory/` data that already exists.
+Phases 1–4 were built in the planning session itself at the user's request ("do everything for me except the keys"); see STATUS.md. The per-phase session prompts remain valid for follow-up work and for Phase 5. Start Phase 4 early if you want the dashboard for Phase 1b itself: its first version needs only `memory/` data that already exists.
 
 ## 11. Handoff protocol (every phase session)
 

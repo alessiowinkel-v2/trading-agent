@@ -458,8 +458,8 @@ def main():
     changed, scored, unscorable = 0, 0, 0
     for s in todo:
         before = json.dumps(s.get("outcomes"), sort_keys=True), s.get("status")
-        if args.rescore:
-            s.pop("entries", None), s.pop("outcomes", None)
+        if args.rescore or args.explain:
+            s.pop("entries", None), s.pop("outcomes", None)   # explain always recomputes (and never saves)
             s["status"] = "open"
         lines = score_signal(s, data, explain=bool(args.explain))
         if args.explain:

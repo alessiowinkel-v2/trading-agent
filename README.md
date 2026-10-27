@@ -10,6 +10,7 @@ Not financial advice. Not a backtested strategy. No guarantee of returns.
 - **Scripts compute, the model judges.** `scripts/preflight.sh` (dates, market clock, holidays, events, pause, cadence), `scripts/screen.py` (indicators and entry gates), `scripts/ks.py` (kill switches, core sizing, satellite slots, P&L vs SPY, ready-to-run order commands).
 - **Order guards live in code**: `scripts/alpaca.sh` refuses fractional shares, market buys, buys beyond cash (never margin), shorts, options, orders without an idempotent `client_order_id`, buys while paused, and any live order without `LIVE_TRADING_CONFIRMED=yes`.
 - **A news-signal research sleeve** (`plans/news-sleeve/PLAN.md`) scans headlines 24/7 in GitHub Actions, scores whether they predicted anything after costs, and places no orders until a pre-registered gate is met.
+- **A dashboard** at https://alessiowinkel-v2.github.io/trading-agent/ (GitHub Pages, rebuilt from `memory/` on every push and every 30 minutes) shows equity vs SPY, drawdown, positions, routine cadence, the graduation checklist and the news-sleeve scorecard.
 - **Alerts reach a human**: `scripts/notify.sh` posts to a Discord or Slack webhook. A GitHub Actions watchdog (`.github/workflows/watchdog.yml`) alerts — and makes GitHub email you — if any routine fails to report, even if the whole Claude setup is gone.
 
 | Routine | ET time | File |
@@ -35,6 +36,8 @@ scripts/tlib.py           shared library (ET time, indicators, params)
 scripts/newsscan.sh/.py   news-sleeve scanner (GitHub Actions, every 15 min)   scripts/newslib.py  news helpers
 scripts/newsclassify.py   headline -> signal (Claude API, strict JSON)     scripts/claude.sh   Messages API wrapper
 scripts/newsfeed.sh       recent signals for the routines (read-only)      scripts/prompts/    classifier prompt + schema
+scripts/newsscore.py      nightly outcome scoring + NEWS-SCORECARD.md    scripts/dashboard.py builds the GitHub Pages site from memory/
+site/                     dashboard page (vanilla JS, no secrets)           memory/NEWS-SCORECARD.md  gate status + buckets
 memory/NEWS-UNIVERSE.md   news-sleeve universe   memory/news/        raw headlines, signals, scanner state
 memory/TRADING-STRATEGY.md   rules + params block   memory/KILL-SWITCHES.md   halts
 memory/WATCHLIST.md          satellite universe     memory/EVENTS.md          FOMC/CPI/NFP days

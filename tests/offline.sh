@@ -337,8 +337,16 @@ out="$(py scripts/newsscore.py 2>&1)"; echo "   $out"
 check "scorer resolves the backdated signals" has "$out" "NEWSSCORE ok touched=5 changed=5 scored_total=5"
 check "scorecard json + md written" bash -c 'test -f memory/news/scorecard.json && test -f memory/NEWS-SCORECARD.md'
 check "gate is NOT MET with a tiny sample (and says why)" has "$out" "gate=NOT MET (only .* weeks scanned; only 5 of 150"
-check "flat prices: bull net excess equals minus the stock cost" bash -c "grep 62600001 '$sigf' | py -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.001) < 1e-9 else 1)'"
-check "flat prices: crypto bear net excess equals minus the crypto cost" bash -c "grep 62600002 '$sigf' | py -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.006) < 1e-9 else 1)'"
+check "stock bull: net_excess = ret - SPY ret - 0.10% (benchmark and cost applied)" bash -c "grep '\"id\":62600001,' '$sigf' | $PY -c '
+import json,sys; s=json.loads(sys.stdin.read()); o=s[\"outcomes\"][\"routine\"][\"d3\"]
+ok = abs(o[\"excess\"]-(o[\"ret\"]-o[\"bench\"]))<2e-6 and abs(o[\"net_excess\"]-(o[\"excess\"]-0.001))<2e-6 and o[\"bench\"]!=0
+sys.exit(0 if ok else 1)'"
+check "flat crypto prices: bear net excess equals minus the 0.60% crypto cost" bash -c "grep 62600002 '$sigf' | $PY -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.006) < 1e-9 else 1)'"
+check "stock bear: net_excess = -(excess) - cost (sign convention)" bash -c "grep 62600004 '$sigf' | $PY -c '
+import json,sys; s=json.loads(sys.stdin.read()); o=s[\"outcomes\"][\"routine\"][\"d3\"]
+sys.exit(0 if abs(o[\"net_excess\"]-(-o[\"excess\"]-0.001))<1e-6 else 1)'"
+check "h1 diagnostic recorded for an in-hours stock headline" has "$(grep 62600001 "$sigf")" '"h1":{'
+check "SPY as ticker has no benchmark (bench 0)" bash -c "grep 62600004 '$sigf' | grep -q '\"bench\":0.0'"
 check "crypto signal also has the 15-minute lane entry" has "$(grep 62600002 "$sigf")" '"crypto-15m":{'
 check "entry slot recorded at a routine time" bash -c "grep 62600001 '$sigf' | grep -qE '\"routine\":\{[^}]*\"ts\":\"[0-9T:-]*(15:12|18:07|14:12|17:07):00Z'"
 out="$(py scripts/newsscore.py --explain 62600001 2>&1)"
@@ -346,6 +354,17 @@ check "--explain prints the bars used" has "$out" "routine d3: NVDA"
 check "memtail reads the scorecard entry" has "$(bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1)" "GATE: NOT MET"
 out="$(py scripts/newsscore.py 2>&1)"
 check "re-run is idempotent (nothing changes)" has "$out" "touched=0 changed=0"
+echo "== news sleeve: dashboard"
+out="$(py scripts/dashboard.py --check 2>&1)"; echo "   $out"
+check "dashboard data builds and validates" has "$out" "DASHBOARD ok"
+check "...with the mock EOD snapshot and the mock signals" has "$out" "eod_days=1 .*signals=7"
+out="$(py scripts/dashboard.py --out "$W/_site" 2>&1)"
+check "dashboard site built" has "$out" "DASHBOARD built"
+check "site has index, app, style, data" bash -c "test -f '$W/_site/index.html' && test -f '$W/_site/app.js' && test -f '$W/_site/style.css' && test -f '$W/_site/data.json'"
+check "data.json carries equity series, cadence and news feed" "$PY" -c "
+import json,sys; d=json.load(open(sys.argv[1]))
+assert d['account']['series']['dates'] and d['cadence'] and d['news']['feed'] and 'gate' in d['news']['scorecard']" "$W/_site/data.json"
+check "data.json contains no API keys" bash -c "! grep -qiE 'APCA|secret|sk-ant' '$W/_site/data.json'"
 rm -rf memory/news memory/NEWS-SCORECARD.md
 
 echo "== SIP refused -> IEX fallback"

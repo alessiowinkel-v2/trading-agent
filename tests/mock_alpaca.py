@@ -259,17 +259,28 @@ class H(BaseHTTPRequestHandler):
             for s in pairs:
                 base = self.CRYPTO.get(s, 1.0)
                 bars = []
-                end = now().replace(second=0, microsecond=0)
-                end -= dt.timedelta(minutes=end.minute % step)
-                for i in range(n):
-                    tt = end - dt.timedelta(minutes=step * i)
-                    px = base * (1 + 0.0004 * ((i % 7) - 3))
-                    bars.append({"t": iso(tt), "o": round(px, 3), "h": round(px * 1.001, 3), "l": round(px * 0.999, 3),
-                                 "c": round(px, 3), "v": 1.0, "n": 5, "vw": round(px, 3)})
                 if q.get("start"):
-                    bars = [b for b in bars if b["t"] >= q["start"] and b["t"] <= q.get("end", "9999")]
-                if q.get("sort") != "desc":
-                    bars = list(reversed(bars))
+                    # forward from start (flat price): the scorer's windows can be weeks old
+                    t0 = dt.datetime.fromisoformat(q["start"].replace("Z", "+00:00")).astimezone(UTC).replace(second=0, microsecond=0)
+                    t0 -= dt.timedelta(minutes=t0.minute % step)
+                    t1 = dt.datetime.fromisoformat(q.get("end", iso(now())).replace("Z", "+00:00")).astimezone(UTC)
+                    t1 = min(t1, now())
+                    tt = t0
+                    while tt <= t1 and len(bars) < n:
+                        bars.append({"t": iso(tt), "o": base, "h": base, "l": base, "c": base, "v": 1.0, "n": 5, "vw": base})
+                        tt += dt.timedelta(minutes=step)
+                    if q.get("sort") == "desc":
+                        bars = list(reversed(bars))
+                else:
+                    end = now().replace(second=0, microsecond=0)
+                    end -= dt.timedelta(minutes=end.minute % step)
+                    for i in range(n):
+                        tt = end - dt.timedelta(minutes=step * i)
+                        px = base * (1 + 0.0004 * ((i % 7) - 3))
+                        bars.append({"t": iso(tt), "o": round(px, 3), "h": round(px * 1.001, 3), "l": round(px * 0.999, 3),
+                                     "c": round(px, 3), "v": 1.0, "n": 5, "vw": round(px, 3)})
+                    if q.get("sort") != "desc":
+                        bars = list(reversed(bars))
                 out[s] = bars
             return self.send(200, {"bars": out, "next_page_token": None})
         self.send(404, {"message": "no crypto route %s" % p})
