@@ -34,6 +34,7 @@ If either file is missing: bash scripts/notify.sh --alert "midday: routine files
 
 **STEP 4 — Gap exits and thesis breaks** (satellites only):
 - `bash scripts/alpaca.sh positions`: for any satellite whose price is below its stop level while its stop order is missing or unfilled → cancel the stop if any, `bash scripts/alpaca.sh close <SYM>`, record.
+- `bash scripts/newsfeed.sh --since 6 --symbols <held satellites>`: a `bear` signal with confidence ≥ 0.7 on a held satellite is a reason to run the thesis check below — never a reason to sell on its own.
 - For a satellite down ≥4% today (`change_today` ≤ -0.04): one `perplexity.sh -r day --text` news check. Close only on a concrete thesis break (fraud, guidance withdrawn, failed deal, regulatory action) — never on price alone; the stop handles price.
 
 **STEP 5 — Retries** (only what was planned today):

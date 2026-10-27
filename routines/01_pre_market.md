@@ -36,6 +36,7 @@ If either file is missing: bash scripts/notify.sh --alert "pre-market: routine f
    - **G6 earnings**: `bash scripts/perplexity.sh -r week --text "What is the date of <SYM> (<Name>)'s next quarterly earnings report? Reply as YYYY-MM-DD and say whether it is confirmed or estimated. Use only sources updated after <DATE_MINUS_14>."`
      PASS if the date is on or after `EARNINGS_OK_FROM`, or the last report was less than 45 days ago and no date is announced. FAIL otherwise. Quote the source.
    - **Catalysts**: `bash scripts/perplexity.sh -r week --text "News and catalysts for <SYM> (<Name>) since <DATE_MINUS_7>. Cite dates. Ignore anything older."`
+   - **News feed** (input to G7, never a gate): `bash scripts/newsfeed.sh --since 48 --symbols <SYM>` — timestamped signals from the news sleeve; cite the headline time if you use one. `(none)` or a missing file is fine.
    - If perplexity.sh exits 3 or errors, use WebSearch for the same questions and set `perplexity=fallback`.
    - **G7 thesis**: 2–3 sentences naming the specific driver for the next 1–3 months. Trend leadership in a top-3 sector is an acceptable driver. Write the main risk in one line.
 4. Keep going through the top-10 until you have 2 candidates from 2 sectors or have checked them all. Every rejected name gets one line with its failing gate. **No narrative vetoes**: a name that passes every gate is a candidate; a concern no gate captures goes to the Friday review as a rule suggestion.

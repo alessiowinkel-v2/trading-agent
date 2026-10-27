@@ -33,6 +33,8 @@ scripts/gitpush.sh        commit + push to main            scripts/memtail.sh   
 scripts/watchdog.sh       cadence check (GitHub Actions)   scripts/selftest.sh   end-to-end self-test
 scripts/tlib.py           shared library (ET time, indicators, params)
 scripts/newsscan.sh/.py   news-sleeve scanner (GitHub Actions, every 15 min)   scripts/newslib.py  news helpers
+scripts/newsclassify.py   headline -> signal (Claude API, strict JSON)     scripts/claude.sh   Messages API wrapper
+scripts/newsfeed.sh       recent signals for the routines (read-only)      scripts/prompts/    classifier prompt + schema
 memory/NEWS-UNIVERSE.md   news-sleeve universe   memory/news/        raw headlines, signals, scanner state
 memory/TRADING-STRATEGY.md   rules + params block   memory/KILL-SWITCHES.md   halts
 memory/WATCHLIST.md          satellite universe     memory/EVENTS.md          FOMC/CPI/NFP days
