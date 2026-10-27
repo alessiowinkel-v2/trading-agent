@@ -22,6 +22,9 @@ Phase 1 reviews: `memory/archive/phase1-2026/WEEKLY-REVIEW.md`.
 - Research days with ≥2 candidates from ≥2 sectors (or every rejection's gate listed): N/5
 - Timing blocks cited outside EVENTS.md: N (must be 0)
 
+### News sleeve
+(paste the GATE line, counts and tradeable buckets from `bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1`, or "scorer not yet running")
+
 ### Grade: <A–F>
 Caps applied: none / "PASS candidate with free slots but 0 entries → max C" / "invested < 70% on ≥2 EODs → max C−" / "planned order without outcome → max D"
 One honest sentence on why.

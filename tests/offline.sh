@@ -309,7 +309,44 @@ check "the held-position alert is flagged" has "$(tail -n 1 "$W/webhook.log")" "
 out="$(bash scripts/newsfeed.sh --since 24 2>&1)"; echo "$out" | head -n 4
 check "newsfeed lists open signals" has "$out" "| NVDA | bull | 2 | 0.85 | guidance |"
 check "newsfeed filters by symbol" has "$(bash scripts/newsfeed.sh --since 24 --symbols SPY)" "1 signals for SPY"
-rm -rf memory/news
+
+echo "== news sleeve: scorer"
+# slot rules are pure functions of the calendar: Friday 15:00 ET -> Monday 10:12; Tuesday 11:00 -> 13:07 same day
+out="$(py scripts/newsscore.py --slot-of 2026-11-06T20:00:00Z SPY)"      # Fri 15:00 EST
+check "Friday afternoon headline -> Monday 10:12 ET routine slot" has "$out" "routine_slot=2026-11-09T15:12:00Z"
+check "...crypto 15m slot is the next quarter hour >= +15 min" has "$out" "crypto_15m=2026-11-06T20:15:00Z"
+out="$(py scripts/newsscore.py --slot-of 2026-11-10T16:00:00Z NVDA)"     # Tue 11:00 EST
+check "Tuesday 11:00 ET headline -> 13:07 same day" has "$out" "routine_slot=2026-11-10T18:07:00Z"
+out="$(py scripts/newsscore.py --slot-of 2026-11-10T14:30:00Z NVDA)"     # Tue 09:30 EST
+check "Tuesday 09:30 ET headline -> 10:12 same day" has "$out" "routine_slot=2026-11-10T15:12:00Z"
+# backdate the three mock signals 8 trading days so every horizon resolves against the flat mock prices
+py - <<'PYEOF'
+import json, sys, datetime as d
+sys.path.insert(0, 'scripts'); import tlib, newslib
+rows = newslib.recent_rows('signals', 2)
+old = tlib.utc_now() - d.timedelta(days=12)
+old = old.replace(hour=15, minute=0, second=0, microsecond=0)   # 10:00/11:00 ET on a weekday or earlier
+while tlib.to_et(old).weekday() >= 5:
+    old -= d.timedelta(days=1)
+for r in rows:
+    if r.get('status') == 'open':
+        r['ts_news'] = tlib.iso(old)
+newslib.rewrite_jsonl(newslib.month_file(tlib.et_today(), 'signals'), rows)
+PYEOF
+out="$(py scripts/newsscore.py 2>&1)"; echo "   $out"
+check "scorer resolves the backdated signals" has "$out" "NEWSSCORE ok touched=5 changed=5 scored_total=5"
+check "scorecard json + md written" bash -c 'test -f memory/news/scorecard.json && test -f memory/NEWS-SCORECARD.md'
+check "gate is NOT MET with a tiny sample (and says why)" has "$out" "gate=NOT MET (only .* weeks scanned; only 5 of 150"
+check "flat prices: bull net excess equals minus the stock cost" bash -c "grep 62600001 '$sigf' | py -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.001) < 1e-9 else 1)'"
+check "flat prices: crypto bear net excess equals minus the crypto cost" bash -c "grep 62600002 '$sigf' | py -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.006) < 1e-9 else 1)'"
+check "crypto signal also has the 15-minute lane entry" has "$(grep 62600002 "$sigf")" '"crypto-15m":{'
+check "entry slot recorded at a routine time" bash -c "grep 62600001 '$sigf' | grep -qE '\"routine\":\{[^}]*\"ts\":\"[0-9T:-]*(15:12|18:07|14:12|17:07):00Z'"
+out="$(py scripts/newsscore.py --explain 62600001 2>&1)"
+check "--explain prints the bars used" has "$out" "routine d3: NVDA"
+check "memtail reads the scorecard entry" has "$(bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1)" "GATE: NOT MET"
+out="$(py scripts/newsscore.py 2>&1)"
+check "re-run is idempotent (nothing changes)" has "$out" "touched=0 changed=0"
+rm -rf memory/news memory/NEWS-SCORECARD.md
 
 echo "== SIP refused -> IEX fallback"
 kill $MOCK_PID 2>/dev/null

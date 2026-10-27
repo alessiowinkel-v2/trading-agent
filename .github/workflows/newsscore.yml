@@ -1,0 +1,50 @@
+# News-sleeve scorer: nightly outcome resolution + scorecard (plans/news-sleeve/PLAN.md §5-§6).
+# 07:00 UTC = 02:00 EST / 03:00 EDT. Read-only market data; never places orders.
+name: newsscore
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newsscan
+  cancel-in-progress: false
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ALPACA_ENDPOINT: https://paper-api.alpaca.markets/v2
+      ALPACA_DATA_ENDPOINT: https://data.alpaca.markets/v2
+      ALPACA_DATA_FEED: iex
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+      NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+      NOTIFY_MENTION: ${{ secrets.NOTIFY_MENTION }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Score and commit
+        run: |
+          if [ -z "$ALPACA_API_KEY" ]; then
+            echo "::warning::Alpaca secrets missing - scorer skipped"; exit 0
+          fi
+          git config user.name "news-scanner"
+          git config user.email "news-scanner@users.noreply.github.com"
+          eval "$(python3 scripts/tlib.py now)"
+          out="$(python3 scripts/newsscore.py 2>&1)"; rc=$?
+          echo "$out"
+          line="$(grep -E '^NEWSSCORE ' <<<"$out" | tail -n 1 | cut -c1-150)"
+          if [ $rc -ne 0 ]; then
+            bash scripts/notify.sh --alert "newsscore: $line" || true
+            bash scripts/gitpush.sh "newsscore $DATE: ABORTED - ${line#NEWSSCORE ABORTED }"
+          else
+            bash scripts/gitpush.sh "newsscore $DATE: OK - ${line#NEWSSCORE ok }"
+          fi

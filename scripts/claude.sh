@@ -68,7 +68,10 @@ PYEOF
 beta=()
 [[ "${CLAUDE_FALLBACKS:-1}" != 0 ]] && beta=(-H "anthropic-beta: server-side-fallback-2026-07-01")
 if [[ "${CLAUDE_DRY:-}" == 1 ]]; then   # print the request instead of sending it (inspection / tests)
-    py -c 'import json,sys; print(json.dumps(json.loads(sys.argv[1]), indent=1)[:3000])' "$payload"
+    py -c 'import json,sys
+b=json.loads(sys.argv[1])
+if "system" in b: b["system"]=b["system"][:160]+"…(%d chars)" % len(b["system"])
+print(json.dumps(b, indent=1))' "$payload"
     exit 0
 fi
 

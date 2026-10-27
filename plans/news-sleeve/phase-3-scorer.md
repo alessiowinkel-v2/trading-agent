@@ -7,6 +7,9 @@ You are a development session for alessiowinkel-v2/trading-agent, authorised by 
 2. Work on branch claude/news-sleeve-phase-3. Never push to main. First action: create a scheduled task bound to this session (create_trigger, cron "0 */4 * * *", initiation human_request) whose prompt says "resume Phase 3 of plans/news-sleeve from STATUS.md; if the phase is done and its PR is open, disable this task" — this is how the work survives Claude usage limits. Finish with STATUS.md updated and a PR titled "News sleeve — Phase 3: scorer".
 ```
 
+## Start here
+A draft already exists on `claude/affectionate-bohr-jrfyok` (see the Phase 3 note in `STATUS.md`). Continue from it — do not rewrite from scratch. Branch `claude/news-sleeve-phase-3` from that branch.
+
 ## Goal
 Nightly, every open signal whose horizons have elapsed gets slot-entry prices, outcomes, benchmark and cost-adjusted excess returns exactly as PLAN §5 defines; the scorecard reports every PLAN §6 bucket and says in one line whether the trading gate is met.
 
