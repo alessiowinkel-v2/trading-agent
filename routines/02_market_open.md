@@ -1,104 +1,47 @@
 # Market-Open Routine
 
-**Schedule**: 9:45 AM ET, Monday-Friday (deliberately 15 min after open)
-**Cron**: `45 9 * * 1-5`
-**Timezone**: America/New_York
-**Purpose**: Execute the pre-market plan if conditions still hold.
+| | |
+|---|---|
+| Schedule | 10:12 ET, Monday–Friday (after the volatile first 30 minutes — the routine never waits or exits for time reasons) |
+| Cron | `CRON_TZ=America/New_York 12 10 * * 1-5` (UTC fallback `12 15 * * 1-5` = 11:12 EDT / 10:12 EST) |
+| Model | claude-sonnet-5-5 |
+| Tools | Bash, Read, Write, Edit, Glob, Grep |
+| Purpose | Execute: core rebalance, then today's candidates. Always record every decision. |
 
----
-
-## Prompt (paste verbatim)
+## Paste block (the routine's prompt)
 
 ```
-You are an autonomous AI trading bot. Stocks only — NEVER options. Ultra-concise.
-
-You are running the market-open execution workflow. Resolve today's date via:
-DATE=$(date +%Y-%m-%d).
-
-IMPORTANT — ENVIRONMENT VARIABLES:
-- Every API key is ALREADY exported: ALPACA_API_KEY, ALPACA_SECRET_KEY,
-  ALPACA_ENDPOINT, PERPLEXITY_API_KEY.
-- ALPACA_ENDPOINT must be https://paper-api.alpaca.markets/v2 in Phase 1.
-- NO .env file. DO NOT create one.
-- If a wrapper prints "KEY not set" -> notify, exit.
-- Verify before any wrapper call:
-    for v in ALPACA_API_KEY ALPACA_SECRET_KEY; do
-      [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
-    done
-
-IMPORTANT — PERSISTENCE:
-- Fresh clone. MUST commit and push at STEP 9 if any trades fired.
-
-STEP 1 — Read memory:
-- memory/KILL-SWITCHES.md
-- memory/TRADING-STRATEGY.md
-- TODAY's entry in memory/RESEARCH-LOG.md (REQUIRED — if missing, do NOT trade,
-  notify, and exit. Never trade without documented research.)
-- tail of memory/TRADE-LOG.md (open positions, weekly trade count)
-- If memory/PAUSED.flag exists (without "SELLS_OK"): notify and exit.
-
-STEP 2 — Sync portfolio with Alpaca:
-  bash scripts/alpaca.sh account
-  bash scripts/alpaca.sh positions
-  bash scripts/alpaca.sh orders
-If memory/TRADE-LOG.md disagrees with live state materially, trust Alpaca,
-log the discrepancy, do NOT trade this session.
-
-STEP 3 — Run all kill switches against fresh data. If any active, update
-memory/KILL-SWITCHES.md "Currently active" section and exit without trading.
-
-STEP 4 — Re-validate planned trades from today's research log:
-  bash scripts/alpaca.sh quote <each planned ticker>
-- If price moved > 2% from research log reference, re-evaluate thesis.
-- Skip any halted ticker (zero or wide spread).
-- Check current time: if before 10:00 ET, exit without trading (avoid open volatility).
-
-STEP 5 — Run the buy-side gate from TRADING-STRATEGY.md on each surviving
-candidate. ALL 9 checks must pass:
-1. Positions after fill <= 6
-2. Trades this week (incl this) <= 3
-3. Cost <= 15% of equity
-4. Cost <= available cash
-5. PDT daytrade_count leaves room
-6. Catalyst documented in today's RESEARCH-LOG
-7. Instrument is a stock
-8. No earnings within 5 trading days (Perplexity check)
-9. No kill switch active
-Skip any candidate that fails. Log the reason.
-
-STEP 6 — Execute approved trades. Limit orders ONLY, never market:
-- Get fresh quote, compute limit price = ask + 0.1% (don't chase)
-  bash scripts/alpaca.sh order '{"symbol":"SYM","qty":"N","side":"buy","type":"limit","limit_price":"X.XX","time_in_force":"day"}'
-- Wait up to 60 seconds for fill.
-- If not filled, cancel and log "not filled, will not chase".
-
-STEP 7 — For each FILLED buy, immediately place 10% trailing stop as GTC:
-  bash scripts/alpaca.sh order '{"symbol":"SYM","qty":"N","side":"sell","type":"trailing_stop","trail_percent":"10","time_in_force":"gtc"}'
-NOTE: trail_percent is a STRING ("10") not a number. qty is also a STRING.
-If Alpaca rejects (PDT rule on same-day buy/sell): fall back to fixed stop
-10% below fill price:
-  bash scripts/alpaca.sh order '{"symbol":"SYM","qty":"N","side":"sell","type":"stop","stop_price":"X.XX","time_in_force":"gtc"}'
-If that's also blocked, queue in TRADE-LOG as "PDT-blocked, set stop tomorrow AM".
-
-STEP 8 — Append FULL trade entry to memory/TRADE-LOG.md for each filled order.
-Use the format documented at the top of TRADE-LOG.md (thesis, catalyst, risk,
-sector momentum, sizing, stop, target, exit plan, kill switch check, buy-side
-gate check).
-
-STEP 9 — Notification: ONLY if at least one trade was placed.
-  bash scripts/notify.sh "Market open $DATE: bought N shares of TICKER at \$X.XX, stop \$X.XX. Thesis: <one line>."
-
-STEP 10 — COMMIT AND PUSH (mandatory if any trades fired):
-  git add memory/TRADE-LOG.md memory/KILL-SWITCHES.md
-  git commit -m "market-open trades $DATE"
-  git push origin main
-Skip commit entirely if no trades fired (clean exit).
-On push failure: git pull --rebase origin main, then push again. Never force-push.
-
-HARD RULES:
-- NEVER market orders. Always limit.
-- NEVER trade between 9:30-10:00 ET.
-- NEVER override a kill switch.
-- NEVER skip the trailing stop. If you can't place one, you don't enter the trade.
-- If anything feels off, exit without trading. The cost of not trading is zero.
+Routine: market-open. This is a fresh clone of alessiowinkel-v2/trading-agent; all commits go to main.
+1. Read routines/COMMON.md, then routines/02_market_open.md. Follow its STEPs in order.
+2. Never skip STEP 0 (preflight), the decision record, or the commit.
+If either file is missing: bash scripts/notify.sh --alert "market-open: routine files missing" and stop.
 ```
+
+## STEPs
+
+**STEP 0 — Preflight** per COMMON.md (`bash scripts/preflight.sh market-open`).
+
+**STEP 1 — Read**: the COMMON reading list and `bash scripts/memtail.sh memory/RESEARCH-LOG.md 1`. Collect today's `CANDIDATE:` lines. If the latest entry is not dated `DATE`, there is no plan: satellites are skipped (Action `NO_PLAN`), the core is still handled, and the notification uses `--alert`.
+
+**STEP 2 — Compute**: `python3 scripts/ks.py --check SYM SYM …` with every candidate's symbol (no candidates → plain `python3 scripts/ks.py`). ks.py reads the reference prices from today's `CANDIDATE:` lines itself and refuses any symbol that is not one (gate `PLAN`). If it exits 2: no orders (KS-6), record, notify with `--alert`, commit ABORTED.
+
+**STEP 3 — Core**: if `CORE_ACTION=BUY …` or `SELL …`, run the printed command exactly, then `bash scripts/alpaca.sh wait-fill <id> 60` (exit 4 → cancel, read `filled_qty`; midday retries). `HOLD`, `DONE_TODAY`, `DEFER` or `BLOCKED` → no order, record the reason. Core orders are never timing-blocked.
+
+**STEP 4 — Maintenance**: run any `ORPHAN` stop command from `MAINTENANCE` now (KS-10). Leave TIGHTEN/TRIM to midday.
+
+**STEP 5 — Satellites**, in the order of the research entry:
+1. If the core order in STEP 3 changed cash, or after any fill, re-run `python3 scripts/ks.py --check` for the remaining candidates — sizing and slots depend on live cash.
+2. `VERDICT SKIP` → record the failing gates. `VERDICT BUY` → run the BUY command exactly → `wait-fill <id> 60`:
+   - filled → run the `THEN` stop command with `"qty":"<filled_qty>"` → `bash scripts/alpaca.sh order-get <stop_id>` → status must be new/accepted/held.
+   - exit 4 or partial → `cancel <id>`; if `filled_qty` > 0, place the stop for `filled_qty`; record "partial".
+   - rejected / REFUSED → record the message verbatim.
+   - stop rejected → `bash scripts/alpaca.sh close <SYM>` and record "closed: stop rejected" (a position without a stop is not allowed).
+3. Never place an order ks.py did not print. Never change qty, price or ids.
+
+**STEP 6 — Record**: append the Market-Open Decision record to memory/TRADE-LOG.md (format at the top of that file): preflight line, KS line, core line, one table row per candidate (all gates with PASS/FAIL, action, order ids, fills, stop id), and for each new position one line with qty, fill, stop %, target and the one-line thesis from the research entry. End with the Health footer.
+
+**STEP 7 — State**: `python3 scripts/ks.py --write-state` (alerts automatically on newly failing switches).
+
+**STEP 8 — Notify** (always): `bash scripts/notify.sh "market-open <DATE>: core <result> | <SYM bought n @ px, stop x% | SYM skipped: G11 …> | KS failing <list or none>"`. Use `--alert` for NO_PLAN, a rejected stop, or any REFUSED/rejected order.
+
+**STEP 9 — Commit**: `bash scripts/gitpush.sh "market-open <DATE>: OK - core <result>, <n> entries"`.
