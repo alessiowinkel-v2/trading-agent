@@ -25,7 +25,14 @@ source "$ROOT/scripts/env.sh"
 
 PY="$(command -v python3 || command -v python || true)"
 py() { "$PY" "$@" | tr -d '\r'; }   # tr: Windows Python writes CRLF
-alert() { bash "$ROOT/scripts/notify.sh" --alert "$routine preflight: $*" >&2 || true; }
+alert() {
+    # PREFLIGHT_NO_ALERT=1 is for local self-tests only (refused in the cloud below)
+    if [[ "$LOCAL" == 1 && "${PREFLIGHT_NO_ALERT:-}" == 1 ]]; then
+        echo "ALERT (suppressed, local test): $*" >&2
+        return 0
+    fi
+    bash "$ROOT/scripts/notify.sh" --alert "$routine preflight: $*" >&2 || true
+}
 finish() {
     echo "PREFLIGHT_EXIT=$1"
     exit "$1"
@@ -50,8 +57,8 @@ if [[ "$routine" == pre-market || "$routine" == weekly ]]; then
         echo "WARN=PERPLEXITY_API_KEY missing - research must fall back to WebSearch"
     fi
 fi
-if [[ "$LOCAL" == 0 && ( -n "${ALPACA_DRY_RUN:-}" || -n "${PREFLIGHT_FORCE_EXIT:-}" ) ]]; then
-    missing+=("ALPACA_DRY_RUN/PREFLIGHT_FORCE_EXIT set in the cloud environment (test-only variables)")
+if [[ "$LOCAL" == 0 && ( -n "${ALPACA_DRY_RUN:-}" || -n "${PREFLIGHT_FORCE_EXIT:-}" || -n "${PREFLIGHT_NO_ALERT:-}" ) ]]; then
+    missing+=("ALPACA_DRY_RUN/PREFLIGHT_FORCE_EXIT/PREFLIGHT_NO_ALERT set in the cloud environment (test-only variables)")
 fi
 if ((${#missing[@]})); then
     echo "MISSING=${missing[*]}"
@@ -172,12 +179,13 @@ if [[ "$routine" == pre-market && -n "$PREV_TRADING_DAY" ]]; then
         expect+=("weekly $lastfri")
     fi
 fi
-# Before the first ever run of a routine there is nothing to expect.
+# Before the first ever run of a routine there is nothing to expect. Only commits in
+# the Phase 1b convention count as "deployed" - Phase 1 subjects looked similar.
 missing_commits=()
 for e in "${expect[@]}"; do
     name="${e% *}"
     d="${e##* }"
-    if grep -Eq "^$name [0-9]{4}-" <<<"$subjects" && ! has "$name" "$d"; then
+    if grep -Eq "^$name [0-9]{4}-[0-9]{2}-[0-9]{2}: (OK|SKIPPED|ABORTED)" <<<"$subjects" && ! has "$name" "$d"; then
         missing_commits+=("$e")
     fi
 done

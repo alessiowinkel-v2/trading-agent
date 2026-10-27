@@ -32,6 +32,13 @@ for a in "$@"; do
 done
 
 eval "$(py scripts/tlib.py now)"
+export PREFLIGHT_NO_ALERT=1   # preflight's cadence alerts are for real runs, not this test
+# notify.sh logs to memory/notifications/<month>.md - restore it afterwards
+NLOG="memory/notifications/${DATE:0:7}.md"
+NBAK="$(mktemp)"
+[[ -f "$NLOG" ]] && cp "$NLOG" "$NBAK" || rm -f "$NBAK"
+restore_log() { if [[ -f "$NBAK" ]]; then mv "$NBAK" "$NLOG"; else rm -f "$NLOG"; rmdir memory/notifications 2>/dev/null; fi; }
+trap restore_log EXIT
 CORE="$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.params()["core_symbol"])')"
 echo "selftest $NOW_ET ET  endpoint=${ALPACA_ENDPOINT:-unset}  core=$CORE"
 
@@ -100,7 +107,6 @@ if [[ "$want_notify" == 1 ]]; then
     bash scripts/notify.sh "selftest $NOW_ET ET - if you can read this, alerts work" >/dev/null 2>&1 && ok "notify.sh delivered" || ko "notify.sh delivery failed"
     NOTIFY_WEBHOOK_URL="http://127.0.0.1:9/unreachable" bash scripts/notify.sh "selftest bad url" >/dev/null 2>&1
     [[ $? -eq 2 ]] && ok "notify.sh exits 2 on a bad webhook" || ko "notify.sh did not report the bad webhook"
-    git checkout -- memory/notifications 2>/dev/null || true
 fi
 if out="$(bash scripts/perplexity.sh -r week --text "What was the S&P 500's most recent closing level? One sentence with the date." 2>&1)"; then
     ok "perplexity.sh (-r week --text)"; echo "      ${out:0:160}"
