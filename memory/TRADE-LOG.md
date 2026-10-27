@@ -40,3 +40,17 @@ Health: run 16:00 ET | preflight=31 | mode=PAPER | ks=n/a | notify=n/a | perplex
 ### 2026-10-27 — midday: SKIPPED (market closed at run time)
 - Preflight exit 31: NOW_ET 16:02, market closed (close 16:00). No orders, no maintenance.
 Health: run 16:02 ET | preflight=31 | mode=PAPER | ks=n/a | notify=ok | perplexity=n/a
+
+### 2026-10-27 - EOD Snapshot (Day 0, Tuesday)
+**Portfolio:** $2,000.00 | **Cash:** $2,000.00 (100.0%) | **Invested:** 0.0% (floor 70%, days below: 1) | **Day P&L:** $0.00 (+0.00%) | **Phase P&L:** $0.00 (+0.00%) | **SPY today:** +0.56% | **SPY phase:** +0.00% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| - | - | - | - | - | - | - | - | - |
+
+**Fills today:** none
+
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** No positions; market-open and midday both ran after the close and skipped, so the core SPYM was not bought today (ks.py: BUY 17 SPYM, target 75%). SPY +0.56% vs flat account. Tomorrow 2026-10-28 is FOMC (blocks new satellites; core buy still allowed).
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
