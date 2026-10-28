@@ -262,6 +262,24 @@ py -c "
 import json; s=json.load(open('memory/news/state.json')); s['last_ok_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
 check "watchdog flags a stale scanner" bash -c 'bash scripts/watchdog.sh nightly 2>&1 | grep -q "newsscan=STALE"'
 
+echo "== watchdog: late GitHub cron runs"
+out="$(TRADING_NOW_UTC=2026-11-04T10:16:00Z bash scripts/watchdog.sh nightly 2>&1)"      # Wed 05:16 EST, 6 h late
+check "a nightly run before 18:00 ET checks yesterday, not today" has "$out" "checking 2026-11-03"
+out="$(TRADING_NOW_UTC=2026-11-04T23:30:00Z bash scripts/watchdog.sh nightly 2>&1)"      # Wed 18:30 EST
+check "a nightly run after 18:00 ET checks today" has "$out" "checking 2026-11-04"
+out="$(TRADING_NOW_UTC=2026-11-04T14:00:00Z bash scripts/watchdog.sh midday 2>&1)"       # Wed 09:00 EST
+check "a midday run before 10:45 ET checks nothing and passes" bash -c 'grep -q "too early" <<<"$1" && ! grep -q ALERT <<<"$1"' _ "$out"
+out="$(TRADING_NOW_UTC=2026-11-07T15:00:00Z bash scripts/watchdog.sh nightly 2>&1)"      # Sat 10:00 EST -> Friday incl. weekly
+check "a Saturday-morning nightly run checks Friday incl. weekly" has "$out" "weekly 2026-11-06: MISSING"
+
+echo "== news sleeve: loop"
+out="$(NEWSLOOP_MINUTES=0 NEWSLOOP_NO_PULL=1 NEWSLOOP_SCORE=always bash scripts/newsloop.sh 2>&1)"
+check "newsloop runs one scan iteration when its window is 0" has "$out" "iteration 1 .*"
+check "...the scan inside it succeeds" has "$out" "NEWSSCAN ok"
+check "...and the forced nightly score commits" has "$out" "NEWSSCORE ok"
+check "...and the loop ends cleanly" has "$out" "done after 1 iterations"
+check "score-due is false right after an attempt" bash -c '! '"$PY"' scripts/newslib.py score-due'
+
 echo "== news sleeve: classifier (mock)"
 rm -rf memory/news
 out="$(py scripts/newsclassify.py 2>&1)"
