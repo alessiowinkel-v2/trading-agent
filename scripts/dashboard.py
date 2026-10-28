@@ -85,7 +85,8 @@ def account_block(state, cfg):
         "regime": latest.get("regime") or state.get("regime"), "ks_fail": state.get("ks_fail") or [],
         "paused": bool(tlib.paused()),
         "phase_return": (last_eq / start_eq - 1) if (last_eq and start_eq) else None,
-        "spy_phase_return": (spy[-1] / spy[base_i] - 1) if (base_i is not None and spy and spy[-1]) else None,
+        # needs two distinct SPY closes; with one, "+0.00%" would be invented, not measured
+        "spy_phase_return": (spy[-1] / spy[base_i] - 1) if (base_i is not None and spy and spy[-1] and base_i < len(spy) - 1) else None,
         "day_return": (equity[-1] / equity[-2] - 1) if len(equity) >= 2 and equity[-1] and equity[-2] else None,
         "max_dd": eq_mdd, "spy_max_dd": spy_mdd, "days": len(dates),
         "series": {"dates": dates, "equity": equity, "spy_close": spy, "equity_idx": eq_idx, "spy_idx": spy_idx,

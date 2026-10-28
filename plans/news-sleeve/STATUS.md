@@ -4,12 +4,12 @@ Every phase session reads this first and updates it last. Keep entries short; th
 
 | Phase | Branch | PR | State | Merged |
 |-------|--------|----|-------|--------|
-| 0 prerequisites | — | — | 🟡 agent did the amendments; 3 user-only items left (see phase-0) | — |
-| 1 scanner plumbing | `claude/affectionate-bohr-jrfyok` | — | ✅ built + tested (offline and live), awaiting PR merge | — |
-| 2 classifier | `claude/affectionate-bohr-jrfyok` | — | ✅ built + mock-tested; live run needs ANTHROPIC_API_KEY (user) | — |
-| 3 scorer | `claude/affectionate-bohr-jrfyok` | — | ✅ built + mock-tested; first live run happens the night after the first classified signal | — |
-| 4 dashboard | `claude/affectionate-bohr-jrfyok` | — | ✅ built + tested + screenshotted; goes live on the first `pages` run after merge | — |
-| 5 paper execution | `claude/news-sleeve-phase-5` | — | ☐ blocked by PLAN §6 gate + strategy amendment | — |
+| 0 prerequisites | — | — | ✅ done (secrets, Anthropic key, Pages) 2026-10-28 | — |
+| 1 scanner plumbing | `claude/affectionate-bohr-jrfyok` | #1, #2 | ✅ live in Actions since 2026-10-28 | 2026-10-28 |
+| 2 classifier | `claude/affectionate-bohr-jrfyok` | #1 | ✅ live since 2026-10-28 (Sonnet 5.5) | 2026-10-28 |
+| 3 scorer | `claude/affectionate-bohr-jrfyok` | #1, #2 | ✅ live, nightly inside the scanner loop | 2026-10-28 |
+| 4 dashboard | `claude/affectionate-bohr-jrfyok` | #1, #2 | ✅ live at https://alessiowinkel-v2.github.io/trading-agent/ | 2026-10-28 |
+| 5 paper execution | `claude/news-sleeve-phase-5` | — | ☐ blocked: PLAN §6 gate (earliest ≈ 6 weeks of data) + strategy amendment | — |
 | 6 crypto fast lane | — | — | ☐ optional, decide with data | — |
 
 States: `not started` · `in progress (session <date>)` · `PR open` · `merged` · `blocked: <why>`.
