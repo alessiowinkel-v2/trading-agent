@@ -1,0 +1,330 @@
+{
+ "asof": "2026-10-28T22:06:38Z",
+ "buckets": [
+  {
+   "asset": "stock",
+   "category": "other",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.03009,
+     "mean": 0.01161,
+     "median": 0.03009,
+     "n": 3,
+     "pos_rate": 0.667,
+     "sd": 0.032,
+     "second_half_mean": 0.00237,
+     "t": 0.63
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "crypto",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00178,
+     "median": 0.00178,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00178,
+     "t": 99.0
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00591,
+     "median": -0.00591,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00591,
+     "t": -99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "other",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.02334,
+     "mean": 0.02334,
+     "median": 0.02334,
+     "n": 2,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.02334,
+     "t": 99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "other",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": -0.01412,
+     "median": -0.01412,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.01412,
+     "t": -99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "legal",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": -0.0053,
+     "median": -0.0053,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.0053,
+     "t": -99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "all",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.00237,
+     "mean": 0.00308,
+     "median": -0.0053,
+     "n": 5,
+     "pos_rate": 0.4,
+     "sd": 0.02565,
+     "second_half_mean": 0.00356,
+     "t": 0.27
+    }
+   },
+   "level": "conf",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "crypto",
+   "category": "all",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00178,
+     "median": 0.00178,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00178,
+     "t": 99.0
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00591,
+     "median": -0.00591,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00591,
+     "t": -99.0
+    }
+   },
+   "level": "conf",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "all",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.02334,
+     "mean": 0.02334,
+     "median": 0.02334,
+     "n": 2,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.02334,
+     "t": 99.0
+    }
+   },
+   "level": "conf",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "all",
+   "conf": "all",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.00237,
+     "mean": 0.00308,
+     "median": -0.0053,
+     "n": 5,
+     "pos_rate": 0.4,
+     "sd": 0.02565,
+     "second_half_mean": 0.00356,
+     "t": 0.27
+    }
+   },
+   "level": "asset",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "crypto",
+   "category": "all",
+   "conf": "all",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00178,
+     "median": 0.00178,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00178,
+     "t": 99.0
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00591,
+     "median": -0.00591,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00591,
+     "t": -99.0
+    }
+   },
+   "level": "asset",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "all",
+   "conf": "all",
+   "direction": "bear",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.02334,
+     "mean": 0.02334,
+     "median": 0.02334,
+     "n": 2,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.02334,
+     "t": 99.0
+    }
+   },
+   "level": "asset",
+   "mag": "all",
+   "tradeable": false
+  }
+ ],
+ "counts": {
+  "bear": 2,
+  "bull": 6,
+  "duplicate": 0,
+  "none": 52,
+  "open": 8,
+  "raw": 544,
+  "scored": 0,
+  "signals": 60,
+  "unscorable": 0
+ },
+ "crypto_15m": [
+  {
+   "asset": "crypto",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.0098,
+     "median": 0.0098,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.0098,
+     "t": 99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable_15m": false
+  }
+ ],
+ "gate": {
+  "costs": {
+   "crypto": 0.006,
+   "etf": 0.001,
+   "index": 0.001,
+   "stock": 0.001
+  },
+  "met": false,
+  "params": {
+   "n_min": 40,
+   "scored_min": 150,
+   "slots_per_day": 96,
+   "t_min": 2.0,
+   "uptime_min": 0.95,
+   "weeks_min": 6
+  },
+  "reasons": [
+   "only 0.1 of 6 weeks scanned",
+   "only 0 of 150 signals scored at d3",
+   "scanner uptime 3% < 95%",
+   "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
+  ],
+  "scored_d3": 0,
+  "tradeable": [],
+  "uptime_28d": 0.031,
+  "weeks": 0.1
+ },
+ "prompt_versions": [
+  "classify-v1"
+ ]
+}
