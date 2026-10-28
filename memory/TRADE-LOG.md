@@ -72,3 +72,17 @@ KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=2 | fa
 Core: CORE_ACTION=DONE_TODAY (core-2026-10-28 filled) | Satellites held: none (no gap exits, no thesis checks)
 Exits: none | Retries: XLE, JNJ, KO dropped for today (EVENT_TODAY=FOMC, G10 FAIL); refs re-screened next non-event session. No orders placed.
 Health: run 13:11 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=n/a | perplexity=n/a
+
+### 2026-10-28 - EOD Snapshot (Day 1, Wednesday)
+**Portfolio:** $1,998.98 | **Cash:** $457.93 (22.9%) | **Invested:** 77.1% (floor 70%, days below: 0) | **Day P&L:** $-1.02 (-0.05%) | **Phase P&L:** $-1.02 (-0.05%) | **SPY today:** +0.34% | **SPY phase:** +0.34% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 17 | 90.71 | 90.65 | +0.1% | $-1.02 (-0.1%) | 77.1% | - |
+
+**Fills today:** buy 17 SPYM @ 90.71 (core-2026-10-28)
+
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Core SPYM bought (17 sh); satellites blocked by FOMC, no orders otherwise. Trailing SPY by 0.39pp on the day (core filled at the 10:26 ET limit, 25% cash). Tomorrow: no blocking event (next is NFP 2026-11-06); XLE/JNJ/KO need re-screening.
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
