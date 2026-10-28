@@ -20,6 +20,7 @@ Not a daily-profit machine. The honest base case is "no robust edge after costs"
 | D10 | Each phase ships on its own branch + PR; the user merges before the next phase starts. Routine agents keep pushing to `main` as today. | Review per phase, token-light handoff. |
 | D11 | **Phase 0 choices (taken by the agent, 2026-10-27, user delegated):** `CLASSIFIER_MODEL=claude-sonnet-5-5`; Discord budget 5 signal alerts/day; crypto pairs BTC/USD, ETH/USD, SOL/USD. | Sonnet: the whole experiment rests on classification quality and it costs ≈ $7/month. Haiku stays as the documented fallback. |
 | D12 | **Heartbeat commits.** The scanner commits when it has new rows, or when its last commit is older than 2 h (`0 new (heartbeat)`). The watchdog alerts when `memory/news/state.json` is older than 3 h. | Quiet weekend nights must not look like a dead scanner, and a dead scanner must not look like a quiet night. |
+| D14 | **(2026-10-28) GitHub cron is not a clock.** Observed on day 1: `*/15` scanner fired 2× in 14 h; watchdog crons ran 4–6 h late. The scanner is therefore one ~5.5 h job looping every 15 min (`scripts/newsloop.sh`), restarted by an hourly cron with one pending run queued; the nightly scorer runs inside that loop (no race on the signal files; `newsscore.yml` removed). The watchdog derives the date to check from the ET clock at run time, and checks the scanner heartbeat only once a `newsscan` commit exists. | Two false alarms on 2026-10-28 (routines "MISSING" from a 6 h-late nightly run; scanner "STALE" while it was waiting for its secrets). |
 | D13 | **Pushes by GitHub Actions do not trigger `on: push` workflows.** The dashboard build therefore runs on push (routine commits) **and** on a 30-minute schedule. | GitHub limitation with `GITHUB_TOKEN`. |
 
 ## 1. Architecture
@@ -27,13 +28,13 @@ Not a daily-profit machine. The honest base case is "no robust edge after costs"
 ```
 GitHub Actions (public repo, free)            Claude Code cloud routines (unchanged, 5/day)
 ┌──────────────────────────────────────┐       ┌──────────────────────────────────────────┐
-│ newsscan.yml  every 15 min           │       │ pre-market   reads news feed (catalysts) │
+│ newsscan.yml  5.5 h loop, scan /15min│       │ pre-market   reads news feed (catalysts) │
 │   scripts/newsscan.py                │       │ midday/eod   reads risk alerts on holds  │
 │   ├ alpaca.sh news  (headlines)      │       │ weekly       pastes scorecard summary    │
 │   ├ alpaca.sh price / crypto-price   │       │ Phase 5+: ks.py --news-check + orders    │
 │   ├ claude.sh classify (JSON)        │       └──────────────────────────────────────────┘
 │   └ memory/news/*.jsonl + commit     │                        ▲ reads memory/
-│ newsscore.yml nightly 02:00 ET       │                        │
+│   + nightly scorer inside the loop   │                        │
 │   scripts/newsscore.py → SCORECARD   │       ┌────────────────┴─────────────────────────┐
 │ pages.yml on push to main            │       │ GitHub Pages dashboard (static, no keys) │
 │   scripts/dashboard.py → site/       │──────▶│ alessiowinkel-v2.github.io/trading-agent │
@@ -137,7 +138,7 @@ If no bucket passes after 10 weeks: the sleeve stays research-only, the scanner 
 | 0 | User prerequisites: secrets, API key, Pages, amendments | user, no session | checklist in `phase-0-prereqs.md` ticked |
 | 1 | Scanner plumbing: `alpaca.sh news/crypto-price/crypto-bars`, `newsscan.py` ingest + snapshots (no LLM), universe file, `newsscan.yml`, mock + offline tests, watchdog heartbeat | Opus 5.5 / high | 24 h of raw headlines committed by Actions, zero failed runs |
 | 2 | Classifier: `claude.sh`, prompt + schema, signals file, novelty/dedup, Discord rules | Opus 5.5 / xhigh | 3 days of signals, schema failure rate < 2%, alerts ≤ 5/day |
-| 3 | Scorer: `newsscore.py`, outcomes, scorecard MD+JSON, `newsscore.yml`, weekly-review STEP | Opus 5.5 / xhigh | scorecard reproduces by hand for 5 sampled signals |
+| 3 | Scorer: `newsscore.py`, outcomes, scorecard MD+JSON, nightly run inside the scanner loop, weekly-review STEP | Opus 5.5 / xhigh | scorecard reproduces by hand for 5 sampled signals |
 | 4 | Dashboard: `dashboard.py`, static site, `pages.yml` | Opus 5.5 / high | live URL shows equity vs SPY, cadence, signals, scorecard, heartbeat |
 | 5 | Paper execution (only after the §6 gate **and** the user's strategy amendment) | Opus 5.5 / xhigh | first news trade with stop verified in the same run |
 | 6 | Optional: 15-minute crypto lane in Actions (script-only) | decide only with data | — |

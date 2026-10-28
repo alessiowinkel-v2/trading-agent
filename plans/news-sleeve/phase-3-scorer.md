@@ -24,7 +24,7 @@ Nightly, every open signal whose horizons have elapsed gets slot-entry prices, o
    - idempotent: already-scored signals are never recomputed unless `--rescore` is given.
    - `--explain ID` prints every price used with its bar timestamp (this is how the user audits 5 signals by hand).
 2. **Scorecard**: `memory/news/scorecard.json` (machine) + `memory/NEWS-SCORECARD.md` (human): bucket table per PLAN §6 (n, mean, median, t, first/second-half sign, tradeable yes/no) at d3, plus the same at h1/d1/d5 for information; a header block with weeks scanned, signals total/scored/unscorable, uptime % of 15-minute slots (from scan commits), and `GATE: MET|NOT MET — <which condition fails>`. Confidence intervals, no p-value theatre.
-3. **`.github/workflows/newsscore.yml`** — nightly 02:00 ET (`0 7 * * *` UTC, with a comment on DST), `workflow_dispatch`; commits with `newsscore <DATE>: OK - scored n, gate <MET|NOT MET>`.
+3. *(Superseded 2026-10-28 by PLAN D14: the nightly score now runs inside `scripts/newsloop.sh`; the separate workflow was removed.)* **`.github/workflows/newsscore.yml`** — nightly 02:00 ET (`0 7 * * *` UTC, with a comment on DST), `workflow_dispatch`; commits with `newsscore <DATE>: OK - scored n, gate <MET|NOT MET>`.
 4. **Weekly routine**: add STEP 2b to `routines/05_weekly_review.md`: `bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1` → paste the header block and the tradeable rows (or "none") into a `### News sleeve` section of the review; no grading impact in Phases 1–4.
 5. **Tests**: mock bars for one stock and one crypto signal with known prices; assert slot, horizons, bench, cost math to the cent; assert a weekend headline resolves to Monday 10:12; assert bear sign convention; assert idempotency.
 

@@ -33,7 +33,7 @@ scripts/notify.sh         webhook alerts                   scripts/perplexity.sh
 scripts/gitpush.sh        commit + push to main            scripts/memtail.sh    read the tail of a log
 scripts/watchdog.sh       cadence check (GitHub Actions)   scripts/selftest.sh   end-to-end self-test
 scripts/tlib.py           shared library (ET time, indicators, params)
-scripts/newsscan.sh/.py   news-sleeve scanner (GitHub Actions, every 15 min)   scripts/newslib.py  news helpers
+scripts/newsscan.sh/.py   news-sleeve scanner (run every 15 min by newsloop.sh in Actions)   scripts/newslib.py  news helpers
 scripts/newsclassify.py   headline -> signal (Claude API, strict JSON)     scripts/claude.sh   Messages API wrapper
 scripts/newsfeed.sh       recent signals for the routines (read-only)      scripts/prompts/    classifier prompt + schema
 scripts/newsscore.py      nightly outcome scoring + NEWS-SCORECARD.md    scripts/dashboard.py builds the GitHub Pages site from memory/

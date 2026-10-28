@@ -166,10 +166,20 @@ if __name__ == "__main__":
         s = load_state()
         s["last_commit_utc"] = tlib.iso(tlib.utc_now())
         save_state(s)
+    elif cmd == "score-due":
+        # exit 0 when the nightly score should run: ET time >= 02:00 and no attempt yet on this ET date
+        n = tlib.et_now()
+        last = load_state().get("last_score_attempt_utc")
+        last_d = tlib.to_et(tlib.parse_ts(last)).date() if last else None
+        sys.exit(0 if n.hour >= 2 and last_d != n.date() else 1)
+    elif cmd == "mark-score-attempt":
+        s = load_state()
+        s["last_score_attempt_utc"] = tlib.iso(tlib.utc_now())
+        save_state(s)
     elif cmd == "heartbeat-due":
         # exit 0 when the last scanner commit is older than N hours (default 2)
         h = float(sys.argv[2]) if len(sys.argv) > 2 else 2.0
         a = age_hours(load_state().get("last_commit_utc"))
         sys.exit(0 if a is None or a >= h else 1)
     else:
-        raise SystemExit("usage: newslib.py universe|state|mark-commit|heartbeat-due [hours]")
+        raise SystemExit("usage: newslib.py universe|state|mark-commit|heartbeat-due [hours]|score-due|mark-score-attempt")

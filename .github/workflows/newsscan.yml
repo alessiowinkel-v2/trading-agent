@@ -1,11 +1,14 @@
-# News-sleeve scanner: every 15 minutes, 24/7 (plans/news-sleeve/PLAN.md §1, §4).
+# News-sleeve scanner: scans every 15 minutes, 24/7 (plans/news-sleeve/PLAN.md §1, §4, D14).
+# GitHub delays/drops frequent cron triggers, so each run is a ~5.5 h loop
+# (scripts/newsloop.sh) and the hourly cron only keeps one successor queued
+# (concurrency: one running + one pending). The loop also runs the nightly scorer.
 # Reads the Alpaca News API, snapshots prices, classifies headlines, commits to main.
 # It never places orders. Skips quietly until the Alpaca secrets exist.
 name: newsscan
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -18,7 +21,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 350
     env:
       ALPACA_ENDPOINT: https://paper-api.alpaca.markets/v2
       ALPACA_DATA_ENDPOINT: https://data.alpaca.markets/v2
@@ -34,7 +37,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Scan, classify, commit
+      - name: Scan, classify, score, commit (loop)
         run: |
           if [ -z "$ALPACA_API_KEY" ] || [ -z "$ALPACA_SECRET_KEY" ]; then
             echo "::warning::ALPACA_API_KEY / ALPACA_SECRET_KEY secrets are not set - scanner skipped (plans/news-sleeve/phase-0-prereqs.md)"
@@ -42,4 +45,4 @@ jobs:
           fi
           git config user.name "news-scanner"
           git config user.email "news-scanner@users.noreply.github.com"
-          bash scripts/newsscan.sh
+          bash scripts/newsloop.sh
