@@ -154,3 +154,62 @@ CANDIDATE: NUE ref=257.35 stop_pct=7.0 sector=XLB g6=PASS g7=PASS
 Core: BUY 17 SPYM (limit 90.83) per CORE_ACTION — market-open/next executes. Satellites: KO (XLP), JNJ (XLV), NUE (XLB) planned, 3 sectors; EVENT_TODAY=none so entries allowed. Sizing/slots (2 today) decided by ks.py --check. Late run flagged: pre-market executed 15:37 ET, same session as market open.
 
 Health: run 15:37 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
+
+## 2026-10-28 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-10-28 07:18 | EVENT_TODAY=FOMC | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-05
+
+### Regime and sectors
+REGIME risk-on | SPY 769.66 vs SMA200 727.76 (+5.8%) | 61 consecutive closes above
+Top sectors (bars through 2026-10-27): 1 XLE (+10.05) | 2 XLV (+3.18) | 3 XLK (+2.56) | 4 XLY | 5 XLP | 6 XLB | 7 XLU
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=2
+REGIME risk-on
+CORE SPYM: 0 sh = $0.00 (0.0%) | target 75.0% | band +/-5pp
+CORE_ACTION=BUY 17 SPYM limit 90.68 ($1,541.56) -> bash scripts/alpaca.sh order '{"symbol":"SPYM","qty":"17","side":"buy","type":"limit","limit_price":"90.68","time_in_force":"day","client_order_id":"core-2026-10-28"}'
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 9
+Top: PLTR (XLK), XLE, XOM (XLE), ABBV (XLV), XLV, KO (XLP), PM (XLP), XLP, JNJ (XLV)
+Near misses: NVDA G3; ORCL G3; ANET G3; AMZN G3; TJX G3; CMG G3; CVX G4; COP G4; EOG G4; SLB G4; PG G8; CEG G3
+
+### Yesterday's candidates
+- KO: not filled: market-open/midday ran after the close (preflight 31), no entries. Re-screened today, passes.
+- JNJ: not filled: same reason. Re-screened today, passes.
+- NUE: not filled: same reason. Not in today's top-9 (G3/G4/G5 re-screen); dropped from today's list.
+
+### Candidates
+#### Rejected
+- PLTR (XLK): G6 FAIL — earnings 2026-11-02 confirmed (< 2026-11-05) [yesterday's perplexity check, unchanged]
+- ABBV (XLV): G6 FAIL — earnings 2026-10-30 confirmed (< 2026-11-05) [yesterday's check, unchanged]
+- XOM (XLE): G6 FAIL — Q3 earnings 2026-10-30 confirmed, company-announced [perplexity: simplywall.st, 247wallst]
+- XLV (XLV): not checked — same sector as JNJ; JNJ covers XLV
+- PM (XLP): not checked — KO covers XLP
+
+#### 1. XLE — Energy Select Sector SPDR (XLE, rank 1)
+G1 PASS $68.21 vs cap $300 | G2 PASS ADV20 $2117M | G3 PASS 68.21 > SMA50 64.61 > SMA200 58.40 | G4 PASS R5 +0.4%, close 68.21 vs 69.10 | G5 PASS rank 1, RS63 +10.8% | G8 PASS stop 7.0% (~63.44), target 77.76, qty 4 = $272.84 (13.6%)
+G6 PASS — sector ETF, no single earnings report of its own; largest holding XOM reports 2026-10-30 (noted as risk, not a gate: G6 applies to single-company reports).
+G7 PASS — Oil leadership: WTI >$100 and Brent >$117 on Middle East supply risk (Oct 23), SPR at lowest since 1982 (Oct 26); XLE #1 sector, record high Oct 23, above SMA50>SMA200. Risk: ceasefire / reduced Middle East tension removes the crude premium; XOM earnings 10-30.
+News feed: (none) for XLE-held names checked (XOM none).
+CANDIDATE: XLE ref=68.21 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+#### 2. JNJ — Johnson & Johnson (XLV, rank 2)
+G1 PASS $268.73 vs cap $300 | G2 PASS ADV20 $2030M | G3 PASS 268.73 > SMA50 265.45 > SMA200 246.10 | G4 PASS R5 +3.6%, close 268.73 vs 273.23 | G5 PASS rank 2, RS63 -4.3% | G8 PASS stop 7.0% (~249.92), target 306.35, qty 1 = $268.73 (13.4%)
+G6 PASS — next earnings 2027-01-20 (estimated) >= 2026-11-05; last report October (<45d) [perplexity: theearningsmadness.com/company/JNJ]
+G7 PASS — Oncology pipeline momentum (JNJ-6143 12/16 responses, ERLEADA perioperative −62% recurrence/death, RYBREVANT FASPRO 77% ORR; possible approval by YE2026) in XLV (rank 2, Leading), price above SMA50>SMA200. Risk: 2027 EPS dilution ($1.36) from deals, MedTech growth, talc settlement; R63 vs SPY negative.
+News feed: (none)
+CANDIDATE: JNJ ref=268.73 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 3. KO — Coca-Cola (XLP, rank 5)
+G1 PASS $91.18 vs cap $300 | G2 PASS ADV20 $1546M | G3 PASS 91.18 > SMA50 89.29 > SMA200 81.81 | G4 PASS R5 -2.5%, close 91.18 vs 93.52 | G5 PASS rank 5, RS63 -3.2% | G8 PASS stop 7.0% (~84.80), target 103.95, qty 3 = $273.54 (13.7%)
+G6 PASS — reported Q3 2026-10-27; next report 2027-02 (Q4 results, 2027 guidance) >= 2026-11-05; last report <45d [perplexity: fidelity/cnbc 2026-10-27]
+G7 PASS — Q3 beat (EPS $0.91 vs $0.88, rev $13.4B +7%), FY26 EPS growth guide raised to >=11%, KFC US fountain win from early 2027; XLP rank 5, above SMA50>SMA200. Risk: North America volume flat, logistics costs, post-earnings "sell the news".
+CANDIDATE: KO ref=91.18 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=FOMC: market-open will NOT open new satellites today (G10). Core is not blocked: market-open buys 17 SPYM per CORE_ACTION (Day-1 core still unbought). Candidates XLE (XLE), JNJ (XLV), KO (XLP) = 3 sectors recorded for the next non-event session; refs must be re-screened then (ks.py takes ref from today's line only on today's entry).
+
+Health: run 07:18 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
