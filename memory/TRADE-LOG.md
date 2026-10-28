@@ -54,3 +54,15 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** No positions; market-open and midday both ran after the close and skipped, so the core SPYM was not bought today (ks.py: BUY 17 SPYM, target 75%). SPY +0.56% vs flat account. Tomorrow 2026-10-28 is FOMC (blocks new satellites; core buy still allowed).
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-10-28 — Market-Open Decision (run 10:26 ET)
+Preflight: exit 0 | EVENT_TODAY=FOMC | PAUSED=no (run fired 14:26 UTC, scheduled 14:12)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=2 | failing: none
+Core: CORE_ACTION=BUY 17 SPYM limit 90.80 → order 2b8a256f-a8c9-429c-b8fc-c9ddd0282816 (core-2026-10-28) filled, 17 @ 90.71
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| XLE | 68.21 | PASS | PASS | PASS | FAIL (FOMC) | PASS | SKIP | - | - | - |
+| JNJ | 268.73 | PASS | PASS | PASS | FAIL (FOMC) | FAIL (spread 3.45%, ask +3.0%) | SKIP | - | - | - |
+| KO | 91.18 | PASS | PASS | PASS | FAIL (FOMC) | PASS | SKIP | - | - | - |
+New positions: none (satellites blocked by FOMC; carried to next non-event session, refs must be re-screened).
+Health: run 10:26 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a

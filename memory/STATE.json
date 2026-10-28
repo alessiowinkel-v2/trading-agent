@@ -1,14 +1,18 @@
 {
- "asof": "2026-10-27T20:37:42Z",
+ "asof": "2026-10-28T14:27:05Z",
  "eod": {
   "2026-10-27": {
    "equity": 2000.0,
    "invested": 0.0
   }
  },
- "filled": {},
+ "filled": {
+  "2b8a256f-a8c9-429c-b8fc-c9ddd0282816": 17.0
+ },
  "ks_fail": [],
  "latch": {},
- "positions": {},
+ "positions": {
+  "SPYM": 17.0
+ },
  "regime": "risk-on"
 }
