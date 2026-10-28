@@ -34,7 +34,7 @@ section.card h2 { font-size: 14px; font-weight: 600; margin: 0 0 10px; color: va
 .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; min-height: 76px; }
 .tile .label { color: var(--ink-2); font-size: 12px; }
 .tile .value { font-size: 22px; font-weight: 600; line-height: 1.2; margin-top: 2px; overflow-wrap: anywhere; }
-.tile.hero .value { font-size: 32px; overflow-wrap: anywhere; }
+.tile.hero .value { font-size: clamp(22px, 2.6vw, 32px); white-space: nowrap; }
 .tile .delta { font-size: 12px; color: var(--ink-2); margin-top: 2px; }
 .pos { color: var(--up); } .neg { color: var(--critical); }
 .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
@@ -60,7 +60,7 @@ svg.chart:focus-visible { box-shadow: 0 0 0 2px var(--s1); border-radius: 6px; }
 ul.plain { margin: 0; padding-left: 18px; font-size: 13px; }
 ul.plain li { margin: 2px 0; }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-@media (max-width: 760px) { .two { grid-template-columns: 1fr; } .tile.hero .value { font-size: 32px; } }
+@media (max-width: 760px) { .two { grid-template-columns: 1fr; } .tile.hero .value { font-size: 26px; } }
 .gate { font-weight: 600; }
 .small { font-size: 12px; color: var(--ink-2); }
 footer { color: var(--muted); font-size: 12px; padding: 12px 4px 24px; }

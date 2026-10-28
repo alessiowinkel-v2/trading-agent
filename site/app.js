@@ -68,7 +68,7 @@
       const v = lo + (hi - lo) * (k / 4);
       svg.appendChild(g("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: "var(--grid)", "stroke-width": 1 }));
       const t = g("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--muted)", style: "font-variant-numeric: tabular-nums" });
-      t.textContent = opts.fmt ? opts.fmt(v) : v.toFixed(1); svg.appendChild(t);
+      t.textContent = opts.fmt ? opts.fmt(v, hi - lo) : v.toFixed(1); svg.appendChild(t);
     }
     if (opts.zero) svg.appendChild(g("line", { x1: m.l, x2: W - m.r, y1: y(0), y2: y(0), stroke: "var(--axis)", "stroke-width": 1 }));
     // x labels: first, middle, last
@@ -131,10 +131,10 @@
     lineChart($("eq-wrap"), s.dates, [
       { name: "Bot equity", color: c1, values: s.equity_idx, extra: (i) => usd(s.equity[i]) },
       { name: "SPY", color: c2, values: s.spy_idx, extra: (i) => s.spy_close[i] == null ? "" : s.spy_close[i].toFixed(2) }],
-      { fmt: (v) => v.toFixed(1), label: "Bot equity and SPY indexed to 100", emptyText: s.dates.length ? "One snapshot so far (" + s.dates[0] + ", " + usd(s.equity[0]) + "). The line starts with the second EOD." : "No EOD snapshot yet." });
+      { fmt: (v, span) => v.toFixed(span != null && span < 2 ? 2 : 1), label: "Bot equity and SPY indexed to 100", emptyText: s.dates.length ? "One snapshot so far (" + s.dates[0] + ", " + usd(s.equity[0]) + "). The line starts with the second EOD." : "No EOD snapshot yet." });
     lineChart($("dd-wrap"), s.dates, [
       { name: "Bot", color: c1, values: s.drawdown }, { name: "SPY", color: c2, values: s.spy_drawdown }],
-      { fmt: (v) => (v * 100).toFixed(1) + "%", height: 150, zero: true, label: "Drawdown from peak", emptyText: "Drawdown appears with the second EOD." });
+      { fmt: (v, span) => (v * 100).toFixed(span != null && span < 0.02 ? 2 : 1) + "%", height: 150, zero: true, label: "Drawdown from peak", emptyText: "Drawdown appears with the second EOD." });
     $("eq-table").textContent = "";
     $("eq-table").appendChild(table(["Date", "Equity", "Equity idx", "SPY close", "SPY idx", "Invested", "Drawdown"],
       s.dates.map((d, i) => [d, usd(s.equity[i]), s.equity_idx[i] == null ? "-" : s.equity_idx[i].toFixed(2), s.spy_close[i] == null ? "-" : s.spy_close[i].toFixed(2), s.spy_idx[i] == null ? "-" : s.spy_idx[i].toFixed(2), pctAbs(s.invested[i]), pct(s.drawdown[i])]).reverse(),
@@ -174,7 +174,7 @@
     const tr = $("tradeable"); tr.textContent = "";
     if (g && g.tradeable && g.tradeable.length) tr.appendChild(table(["asset", "conf", "mag", "category", "n", "mean", "t"], g.tradeable.map((b) => [b.asset, b.conf, b.mag, b.category, b.n, pct(b.mean), b.t]), [0, 0, 0, 0, 1, 1, 1]));
     else tr.appendChild(el("div", "empty", "none yet"));
-    const fmtSt = (h) => !h || !h.n ? "n=0" : `n=${h.n} · ${pct(h.mean)} · med ${pct(h.median)} · t ${h.t}`;
+    const fmtSt = (h) => !h || !h.n ? "n=0" : `n=${h.n} · ${pct(h.mean)} · med ${pct(h.median)} · t ${h.t == null ? "–" : h.t}`;
     const bk = $("buckets"); bk.textContent = "";
     if (!(sc.asset || []).length) bk.appendChild(el("div", "empty", "No scored signals yet. First rows appear the night after the first signal's d1 close."));
     else bk.appendChild(table(["asset", "dir", "h1 (diag.)", "d1", "d3", "d5"], sc.asset.slice().sort((p, q) => (p.asset + p.direction).localeCompare(q.asset + q.direction)).map((b) => [b.asset, b.direction, fmtSt(b.horizons.h1), fmtSt(b.horizons.d1), fmtSt(b.horizons.d3), fmtSt(b.horizons.d5)])));

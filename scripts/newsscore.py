@@ -294,11 +294,14 @@ def stats(vals):
     mean = sum(vals) / n
     med = statistics.median(vals)
     sd = statistics.stdev(vals) if n >= 2 else 0.0
-    t = (mean / (sd / math.sqrt(n))) if sd > 0 else (99.0 if mean > 0 else (-99.0 if mean < 0 else 0.0))
-    t = max(-99.0, min(99.0, t))
+    if n < 2:
+        t = None   # undefined for a single observation
+    else:
+        t = (mean / (sd / math.sqrt(n))) if sd > 0 else (99.0 if mean > 0 else (-99.0 if mean < 0 else 0.0))
+        t = max(-99.0, min(99.0, t))
     h = n // 2
     first, second = vals[:h], vals[h:]
-    return {"n": n, "mean": round(mean, 5), "median": round(med, 5), "sd": round(sd, 5), "t": round(t, 2),
+    return {"n": n, "mean": round(mean, 5), "median": round(med, 5), "sd": round(sd, 5), "t": None if t is None else round(t, 2),
             "first_half_mean": round(sum(first) / len(first), 5) if first else None,
             "second_half_mean": round(sum(second) / len(second), 5) if second else None,
             "pos_rate": round(sum(1 for v in vals if v > 0) / n, 3)}
@@ -306,7 +309,7 @@ def stats(vals):
 
 def tradeable(st, direction):
     return bool(direction == "bull" and st.get("n", 0) >= GATE["n_min"] and st.get("mean", 0) > 0 and st.get("median", 0) > 0
-                and st.get("t", 0) >= GATE["t_min"] and (st.get("first_half_mean") or 0) > 0 and (st.get("second_half_mean") or 0) > 0)
+                and (st.get("t") or 0) >= GATE["t_min"] and (st.get("first_half_mean") or 0) > 0 and (st.get("second_half_mean") or 0) > 0)
 
 
 def build_scorecard(all_sigs, raw_rows, state, now):
@@ -376,8 +379,8 @@ def build_scorecard(all_sigs, raw_rows, state, now):
 def fmt_st(st):
     if not st or not st.get("n"):
         return "n=0"
-    return "n=%d mean=%+.2f%% med=%+.2f%% t=%.1f halves=%s/%s" % (
-        st["n"], st["mean"] * 100, st["median"] * 100, st["t"],
+    return "n=%d mean=%+.2f%% med=%+.2f%% t=%s halves=%s/%s" % (
+        st["n"], st["mean"] * 100, st["median"] * 100, "-" if st["t"] is None else "%.1f" % st["t"],
         "+" if (st.get("first_half_mean") or 0) > 0 else "-", "+" if (st.get("second_half_mean") or 0) > 0 else "-")
 
 

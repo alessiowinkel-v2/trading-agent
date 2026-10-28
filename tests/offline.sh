@@ -382,7 +382,7 @@ check "site has index, app, style, data" bash -c "test -f '$W/_site/index.html' 
 check "data.json carries equity series, cadence and news feed" "$PY" -c "
 import json,sys; d=json.load(open(sys.argv[1]))
 assert d['account']['series']['dates'] and d['cadence'] and d['news']['feed'] and 'gate' in d['news']['scorecard']" "$W/_site/data.json"
-check "data.json contains no API keys" bash -c "! grep -qiE 'APCA|secret|sk-ant' '$W/_site/data.json'"
+check "data.json contains no API keys (key formats, not the word)" bash -c "! grep -qE 'APCA-API|sk-ant-[A-Za-z0-9_-]{8}|PK[A-Z0-9]{18}|https://discord(app)?\.com/api/webhooks' '$W/_site/data.json'"
 rm -rf memory/news memory/NEWS-SCORECARD.md
 
 echo "== SIP refused -> IEX fallback"
