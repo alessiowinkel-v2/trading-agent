@@ -12,7 +12,7 @@ cd "$ROOT"
 PY="$(command -v python3 || command -v python)"
 py() { "$PY" "$@" | tr -d '\r'; }
 mode="${1:?usage: watchdog.sh <midday|nightly|grid MONDAY>}"
-subjects="$(git log -n 600 --format=%s)"
+subjects="$(git log -n 2000 --format=%s)"
 
 status_of() {  # status_of <routine> <date> -> OK|SKIPPED|ABORTED|MISSING
     local s
@@ -50,12 +50,26 @@ for r in "${routines[@]}"; do
     [[ "$st" == OK || "$st" == SKIPPED ]] || problems+=("$r=$st")
 done
 
+# News-sleeve scanner heartbeat (GitHub Actions, every 15 min; commits at least every 2 h).
+# Only checked once the scanner has ever run (state file present), see plans/news-sleeve/PLAN.md D12.
+if [[ -f memory/news/state.json ]]; then
+    age="$(py -c 'import json,sys,datetime as d
+s=json.load(open("memory/news/state.json")); t=s.get("last_ok_utc") or s.get("last_run_utc")
+print("none" if not t else round((d.datetime.now(d.timezone.utc)-d.datetime.fromisoformat(t.replace("Z","+00:00"))).total_seconds()/3600,1))')"
+    if [[ "$age" == none ]] || py -c "import sys; sys.exit(0 if float('$age') > 3 else 1)"; then
+        echo "newsscan: last OK run ${age}h ago"
+        problems+=("newsscan=STALE(${age}h)")
+    else
+        echo "newsscan: last OK run ${age}h ago"
+    fi
+fi
+
 if ((${#problems[@]} == 0)); then
     echo "all routines reported for $date_et"
     exit 0
 fi
 
-msg="ALERT - watchdog ($mode): trading routines for $date_et not healthy: ${problems[*]}. Check claude.ai/code/routines (routine paused? environment deleted? usage limit? GitHub connection?)."
+msg="ALERT - watchdog ($mode): trading routines for $date_et not healthy: ${problems[*]}. Check claude.ai/code/routines (routine paused? environment deleted? usage limit? GitHub connection?) or, for newsscan, the Actions tab of the repository."
 echo "$msg"
 if [[ -n "${NOTIFY_WEBHOOK_URL:-}" ]]; then
     payload="$(py -c 'import json,sys

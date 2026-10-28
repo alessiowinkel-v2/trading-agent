@@ -5,6 +5,12 @@
 
 set -uo pipefail
 
+# This test must never reach a real endpoint or webhook: scripts/env.sh lets an exported
+# variable win over .env, so drop anything the shell inherited before pointing at the mock.
+unset ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT ALPACA_DATA_ENDPOINT ALPACA_DATA_FEED \
+      NOTIFY_WEBHOOK_URL NOTIFY_MENTION PERPLEXITY_API_KEY PERPLEXITY_AUTH ALPACA_AUTH \
+      ANTHROPIC_API_KEY LIVE_TRADING_CONFIRMED ALPACA_DRY_RUN
+
 SRC="$(cd "$(dirname "$0")/.." && pwd)"
 PY="$(command -v python3 || command -v python)"
 py() { "$PY" "$@" | tr -d '\r'; }
@@ -216,6 +222,150 @@ check "...and nothing reaches the webhook" test "$(wc -l < "$W/webhook.log")" -e
 check "watchdog grid shows OK for market-open" has "$(bash scripts/watchdog.sh grid "$MONDAY")" "| $DATE | OK | OK | MISSING"
 check "memtail returns the latest dated entry" has "$(bash scripts/memtail.sh memory/LESSONS.md 1)" "Phase 1b reset"
 check "webhook received messages" test -s "$W/webhook.log"
+
+echo "== news sleeve: scanner plumbing"
+rm -rf memory/news
+out="$($A news NVDA,BTCUSD,SPY 2>&1)"
+check "alpaca.sh news returns articles" has "$out" '"headline"'
+out="$($A crypto-price BTC/USD 2>&1)"
+check "alpaca.sh crypto-price prints a status line" has "$out" "BTC/USD bid=.*status=OK"
+out="$($A crypto-bars BTC/USD 3 15Min 2>&1)"
+check "alpaca.sh crypto-bars returns 15Min bars" has "$out" '"BTC/USD"'
+out="$($A bars-intraday SPY 1Min "$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib,datetime as d; print(tlib.iso(tlib.utc_now()-d.timedelta(minutes=30)))')" "$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.iso(tlib.utc_now()))')" 2>&1)"
+check "alpaca.sh bars-intraday returns minute bars" test "$(py -c 'import json,sys; print(len(json.loads(sys.argv[1])["bars"]))' "$out")" -ge 20
+check "news universe parses 74 symbols" has "$(py scripts/newslib.py universe)" "74 symbols"
+out="$(py scripts/newsscan.py --lookback-hours 3 --no-classify 2>&1)"; echo "   $out"
+check "first scan keeps 3 universe headlines (drops off-universe + duplicate id)" has "$out" "NEWSSCAN ok new=3"
+raw="memory/news/raw/$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.et_today().strftime("%Y-%m"))').jsonl"
+check "raw jsonl written" test "$(wc -l < "$raw")" -eq 3
+check "NVDA headline keeps NVDA as primary ticker (named in headline)" has "$(grep 62600001 "$raw")" '"ticker":"NVDA"'
+check "5-symbol Fed story maps to SPY" has "$(grep 62600004 "$raw")" '"ticker":"SPY"'
+check "crypto row carries a crypto price snapshot" has "$(grep 62600002 "$raw")" '"feed":"crypto-us"'
+check "stock row carries a price snapshot" has "$(grep 62600001 "$raw")" '"feed":"iex"'
+out="$(py scripts/newsscan.py --no-classify 2>&1)"
+check "second scan adds nothing (cursor + dedup)" has "$out" "NEWSSCAN ok new=0"
+check "state.json has a cursor and last_ok" bash -c 'grep -q cursor_updated_at memory/news/state.json && grep -q last_ok_utc memory/news/state.json'
+check "gitpush accepts a newsscan subject" bash -c 'bash scripts/gitpush.sh "newsscan 2026-10-27 21:00Z: OK - 3 new headlines" >/dev/null 2>&1'
+check "gitpush still rejects a bad subject" bash -c '! bash scripts/gitpush.sh "scanner 2026-10-27: OK - x" >/dev/null 2>&1'
+py scripts/newslib.py mark-commit
+out="$(bash scripts/newsscan.sh --no-classify 2>&1)"
+check "newsscan.sh: nothing new and heartbeat not due -> no commit" has "$out" "no commit"
+py -c "
+import json; s=json.load(open('memory/news/state.json')); s['last_commit_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
+out="$(bash scripts/newsscan.sh --no-classify 2>&1)"
+check "newsscan.sh: heartbeat commit when the last commit is old" has "$out" "0 new (heartbeat)"
+out="$(ALPACA_DATA_ENDPOINT=http://127.0.0.1:1/data/v2 py scripts/newsscan.py 2>&1)"
+check "scanner aborts loudly when the API is unreachable" has "$out" "NEWSSCAN ABORTED"
+check "...and records the error in state.json" has "$(cat memory/news/state.json)" '"last_error": "AlpacaError'
+check "watchdog sees a fresh scanner as healthy" bash -c '! bash scripts/watchdog.sh nightly 2>&1 | grep -q "newsscan=STALE"'
+py -c "
+import json; s=json.load(open('memory/news/state.json')); s['last_ok_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
+check "watchdog flags a stale scanner" bash -c 'bash scripts/watchdog.sh nightly 2>&1 | grep -q "newsscan=STALE"'
+
+echo "== news sleeve: classifier (mock)"
+rm -rf memory/news
+out="$(py scripts/newsclassify.py 2>&1)"
+check "classifier with nothing pending is a no-op" has "$out" "NEWSCLASSIFY ok classified=0"
+out="$(printf '[{"id":1,"ticker":"KO","tickers":[],"asset":"stock","headline":"x","summary":"","ts_news":"t"}]' | CLAUDE_DRY=1 ANTHROPIC_API_KEY=dry bash scripts/claude.sh json scripts/prompts/classify-schema.json --system scripts/prompts/classify-v1.md 2>&1)"
+check "claude.sh dry run builds a structured-output request" bash -c 'grep -q "\"output_config\"" <<<"$1" && grep -q "\"type\": \"json_schema\"" <<<"$1" && grep -q "\"fallbacks\": \"default\"" <<<"$1"' _ "$out"
+check "...with no sampling parameters" bash -c '! grep -q temperature <<<"$1"' _ "$out"
+out="$(py scripts/newsscan.py --lookback-hours 3 2>&1)"   # ANTHROPIC_API_KEY was unset above
+check "without an API key the classifier skips and the scan still succeeds" has "$out" "NEWSCLASSIFY skipped.*reason=no_api_key"
+check "...and the scan line reports 0 signals" has "$out" "NEWSSCAN ok new=3.*signals=0"
+check "...pending headlines are recorded in state" has "$(cat memory/news/state.json)" "ANTHROPIC_API_KEY missing - 3 headlines pending"
+before="$(wc -l < "$W/webhook.log")"
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"; echo "   $out"
+check "mock classifier classifies the 3 pending rows" has "$out" "NEWSCLASSIFY ok classified=3 signals=3"
+sigf="memory/news/signals/$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.et_today().strftime("%Y-%m"))').jsonl"
+check "signals file has 3 rows" test "$(wc -l < "$sigf")" -eq 3
+check "NVDA guidance -> bull guidance 0.85" has "$(grep 62600001 "$sigf")" '"direction":"bull".*"status":"open"'
+check "classifier model + prompt version recorded" has "$(grep 62600001 "$sigf")" '"prompt_version":"classify-v1"'
+check "Fed story stays on SPY" has "$(grep 62600004 "$sigf")" '"ticker":"SPY"'
+check "token usage and cost accounted" has "$(cat memory/news/state.json)" '"cost_usd"'
+check "one strong new signal alerted (NVDA 0.85 m2), weaker ones not" test "$(( $(wc -l < "$W/webhook.log") - before ))" -eq 1
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
+check "second classify run finds nothing pending" has "$out" "classified=0 signals=0"
+# near-duplicate: same ticker, almost the same words, within 24 h -> no API call
+NOWISO="$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.iso(tlib.utc_now()))')"
+printf '{"id":62600099,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Nvidia Raises Its Full-Year Guidance On Strong Data Center Demand","summary":"","symbols":["NVDA"],"tickers":[{"ticker":"NVDA","asset":"stock"}],"ticker":"NVDA","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
+check "near-duplicate headline is tagged without an API call" has "$out" "dup=1 unscorable=0 calls=0"
+check "...as duplicate_of the original id" has "$(grep 62600099 "$sigf")" '"novelty":"duplicate_of:62600001"'
+# coverage failure: the model omits an item -> unscorable, never a guess
+printf '{"id":62600098,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"BADJSON Coca-Cola Announces Recall Of Bottled Water","summary":"","symbols":["KO"],"tickers":[{"ticker":"KO","asset":"stock"}],"ticker":"KO","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
+check "an item missing from the model response becomes unscorable" has "$out" "unscorable=1"
+check "...with the reason recorded" has "$(grep 62600098 "$sigf")" '"status":"unscorable"'
+# alert budget + held-symbol bear rule
+before="$(wc -l < "$W/webhook.log")"
+printf '{"id":62600097,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Regulators Open Probe Into Walmart Pricing Practices","summary":"","symbols":["WMT"],"tickers":[{"ticker":"WMT","asset":"stock"}],"ticker":"WMT","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n{"id":62600096,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Microsoft To Acquire Cloud Security Startup","summary":"","symbols":["MSFT"],"tickers":[{"ticker":"MSFT","asset":"stock"}],"ticker":"MSFT","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
+py -c "
+import json; s=json.load(open('memory/STATE.json')) if __import__('os').path.exists('memory/STATE.json') else {}
+s['positions']={'WMT':1.0}; json.dump(s, open('memory/STATE.json','w'))"
+out="$(CLAUDE_MOCK=1 ALERT_BUDGET=1 py scripts/newsclassify.py 2>&1)"
+check "held-symbol bear alerts even when the daily budget is spent" test "$(( $(wc -l < "$W/webhook.log") - before ))" -eq 1
+check "...and the MSFT deal (0.9 m3) was held back by the budget" has "$out" "alerts=1"
+check "the held-position alert is flagged" has "$(tail -n 1 "$W/webhook.log")" "HELD POSITION"
+out="$(bash scripts/newsfeed.sh --since 24 2>&1)"; echo "$out" | head -n 4
+check "newsfeed lists open signals" has "$out" "| NVDA | bull | 2 | 0.85 | guidance |"
+check "newsfeed filters by symbol" has "$(bash scripts/newsfeed.sh --since 24 --symbols SPY)" "1 signals for SPY"
+
+echo "== news sleeve: scorer"
+# slot rules are pure functions of the calendar: Friday 15:00 ET -> Monday 10:12; Tuesday 11:00 -> 13:07 same day
+out="$(py scripts/newsscore.py --slot-of 2026-11-06T20:00:00Z SPY)"      # Fri 15:00 EST
+check "Friday afternoon headline -> Monday 10:12 ET routine slot" has "$out" "routine_slot=2026-11-09T15:12:00Z"
+check "...crypto 15m slot is the next quarter hour >= +15 min" has "$out" "crypto_15m=2026-11-06T20:15:00Z"
+out="$(py scripts/newsscore.py --slot-of 2026-11-10T16:00:00Z NVDA)"     # Tue 11:00 EST
+check "Tuesday 11:00 ET headline -> 13:07 same day" has "$out" "routine_slot=2026-11-10T18:07:00Z"
+out="$(py scripts/newsscore.py --slot-of 2026-11-10T14:30:00Z NVDA)"     # Tue 09:30 EST
+check "Tuesday 09:30 ET headline -> 10:12 same day" has "$out" "routine_slot=2026-11-10T15:12:00Z"
+# backdate the three mock signals 8 trading days so every horizon resolves against the flat mock prices
+py - <<'PYEOF'
+import json, sys, datetime as d
+sys.path.insert(0, 'scripts'); import tlib, newslib
+rows = newslib.recent_rows('signals', 2)
+old = tlib.utc_now() - d.timedelta(days=12)
+old = old.replace(hour=15, minute=0, second=0, microsecond=0)   # 10:00/11:00 ET on a weekday or earlier
+while tlib.to_et(old).weekday() >= 5:
+    old -= d.timedelta(days=1)
+for r in rows:
+    if r.get('status') == 'open':
+        r['ts_news'] = tlib.iso(old)
+newslib.rewrite_jsonl(newslib.month_file(tlib.et_today(), 'signals'), rows)
+PYEOF
+out="$(py scripts/newsscore.py 2>&1)"; echo "   $out"
+check "scorer resolves the backdated signals" has "$out" "NEWSSCORE ok touched=5 changed=5 scored_total=5"
+check "scorecard json + md written" bash -c 'test -f memory/news/scorecard.json && test -f memory/NEWS-SCORECARD.md'
+check "gate is NOT MET with a tiny sample (and says why)" has "$out" "gate=NOT MET (only .* weeks scanned; only 5 of 150"
+check "stock bull: net_excess = ret - SPY ret - 0.10% (benchmark and cost applied)" bash -c "grep '\"id\":62600001,' '$sigf' | $PY -c '
+import json,sys; s=json.loads(sys.stdin.read()); o=s[\"outcomes\"][\"routine\"][\"d3\"]
+ok = abs(o[\"excess\"]-(o[\"ret\"]-o[\"bench\"]))<2e-6 and abs(o[\"net_excess\"]-(o[\"excess\"]-0.001))<2e-6 and o[\"bench\"]!=0
+sys.exit(0 if ok else 1)'"
+check "flat crypto prices: bear net excess equals minus the 0.60% crypto cost" bash -c "grep 62600002 '$sigf' | $PY -c 'import json,sys; s=json.loads(sys.stdin.read()); sys.exit(0 if abs(s[\"outcomes\"][\"routine\"][\"d3\"][\"net_excess\"] + 0.006) < 1e-9 else 1)'"
+check "stock bear: net_excess = -(excess) - cost (sign convention)" bash -c "grep 62600004 '$sigf' | $PY -c '
+import json,sys; s=json.loads(sys.stdin.read()); o=s[\"outcomes\"][\"routine\"][\"d3\"]
+sys.exit(0 if abs(o[\"net_excess\"]-(-o[\"excess\"]-0.001))<1e-6 else 1)'"
+check "h1 diagnostic recorded for an in-hours stock headline" has "$(grep 62600001 "$sigf")" '"h1":{'
+check "SPY as ticker has no benchmark (bench 0)" bash -c "grep 62600004 '$sigf' | grep -q '\"bench\":0.0'"
+check "crypto signal also has the 15-minute lane entry" has "$(grep 62600002 "$sigf")" '"crypto-15m":{'
+check "entry slot recorded at a routine time" bash -c "grep 62600001 '$sigf' | grep -qE '\"routine\":\{[^}]*\"ts\":\"[0-9T:-]*(15:12|18:07|14:12|17:07):00Z'"
+out="$(py scripts/newsscore.py --explain 62600001 2>&1)"
+check "--explain prints the bars used" has "$out" "routine d3: NVDA"
+check "memtail reads the scorecard entry" has "$(bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1)" "GATE: NOT MET"
+out="$(py scripts/newsscore.py 2>&1)"
+check "re-run is idempotent (nothing changes)" has "$out" "touched=0 changed=0"
+echo "== news sleeve: dashboard"
+out="$(py scripts/dashboard.py --check 2>&1)"; echo "   $out"
+check "dashboard data builds and validates" has "$out" "DASHBOARD ok"
+check "...with the mock EOD snapshot and the mock signals" has "$out" "eod_days=1 .*signals=7"
+out="$(py scripts/dashboard.py --out "$W/_site" 2>&1)"
+check "dashboard site built" has "$out" "DASHBOARD built"
+check "site has index, app, style, data" bash -c "test -f '$W/_site/index.html' && test -f '$W/_site/app.js' && test -f '$W/_site/style.css' && test -f '$W/_site/data.json'"
+check "data.json carries equity series, cadence and news feed" "$PY" -c "
+import json,sys; d=json.load(open(sys.argv[1]))
+assert d['account']['series']['dates'] and d['cadence'] and d['news']['feed'] and 'gate' in d['news']['scorecard']" "$W/_site/data.json"
+check "data.json contains no API keys" bash -c "! grep -qiE 'APCA|secret|sk-ant' '$W/_site/data.json'"
+rm -rf memory/news memory/NEWS-SCORECARD.md
 
 echo "== SIP refused -> IEX fallback"
 kill $MOCK_PID 2>/dev/null

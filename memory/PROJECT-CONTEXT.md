@@ -34,5 +34,6 @@ Machine-read by `scripts/ks.py` — user edits only. Keep the `- key: value` for
 - The agent never edits TRADING-STRATEGY.md, KILL-SWITCHES.md, WATCHLIST.md, EVENTS.md or this file.
 
 ## Out of scope
-- Day trading, options, futures, crypto, leverage, short selling
+- Day trading, options, futures, leverage, short selling
+- Crypto **trading** (crypto news is scanned and scored by the news sleeve from its Phase 1 — see `plans/news-sleeve/PLAN.md`; crypto orders only after its §6 gate and a strategy amendment)
 - Discretionary macro calls (the regime filter is a rule, not a call)

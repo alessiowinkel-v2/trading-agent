@@ -1,0 +1,45 @@
+# News-sleeve scanner: every 15 minutes, 24/7 (plans/news-sleeve/PLAN.md §1, §4).
+# Reads the Alpaca News API, snapshots prices, classifies headlines, commits to main.
+# It never places orders. Skips quietly until the Alpaca secrets exist.
+name: newsscan
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newsscan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    env:
+      ALPACA_ENDPOINT: https://paper-api.alpaca.markets/v2
+      ALPACA_DATA_ENDPOINT: https://data.alpaca.markets/v2
+      ALPACA_DATA_FEED: iex
+      ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+      ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      CLASSIFIER_MODEL: ${{ vars.CLASSIFIER_MODEL || 'claude-sonnet-5-5' }}
+      NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
+      NOTIFY_MENTION: ${{ secrets.NOTIFY_MENTION }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Scan, classify, commit
+        run: |
+          if [ -z "$ALPACA_API_KEY" ] || [ -z "$ALPACA_SECRET_KEY" ]; then
+            echo "::warning::ALPACA_API_KEY / ALPACA_SECRET_KEY secrets are not set - scanner skipped (plans/news-sleeve/phase-0-prereqs.md)"
+            exit 0
+          fi
+          git config user.name "news-scanner"
+          git config user.email "news-scanner@users.noreply.github.com"
+          bash scripts/newsscan.sh

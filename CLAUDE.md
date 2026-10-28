@@ -3,6 +3,7 @@
 Autonomous trading agent on Alpaca. **Phase 1b: $2,000 PAPER account**, core + satellite strategy. Goal: beat SPY with lower max drawdown, through a process the user can audit line by line. Real money only after the graduation criteria in `memory/TRADING-STRATEGY.md` and explicit user sign-off.
 
 Stocks and ETFs only — NEVER options. Ultra-concise: short bullets, no preamble.
+A news-signal research sleeve runs beside the routines (GitHub Actions scanner, `plans/news-sleeve/PLAN.md`). It places no orders until its Phase 5; routines only read its feed (`scripts/newsfeed.sh`).
 
 ## Where things are
 - Running a routine: `routines/COMMON.md`, then your routine file in `routines/`. Follow the STEPs exactly.

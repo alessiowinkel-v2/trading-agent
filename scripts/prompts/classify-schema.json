@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["results"],
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "ticker", "direction", "magnitude", "horizon", "category", "novelty", "confidence", "rationale"],
+        "properties": {
+          "id": {"type": "integer"},
+          "ticker": {"type": "string"},
+          "direction": {"type": "string", "enum": ["bull", "bear", "none"]},
+          "magnitude": {"type": "integer", "enum": [1, 2, 3]},
+          "horizon": {"type": "string", "enum": ["hours", "days", "weeks"]},
+          "category": {"type": "string", "enum": ["earnings", "guidance", "m_and_a", "regulatory", "legal", "product", "macro", "analyst", "insider", "rumor", "other"]},
+          "novelty": {"type": "string", "enum": ["new", "follow_up"]},
+          "confidence": {"type": "number"},
+          "rationale": {"type": "string"}
+        }
+      }
+    }
+  }
+}

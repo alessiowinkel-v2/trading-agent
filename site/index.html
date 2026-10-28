@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Agent</title>
+<meta name="description" content="Paper trading agent dashboard: equity vs SPY, routine cadence, graduation checklist and the news-sleeve scorecard, built from the repository's memory files.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<script>(function(){try{var t=localStorage.getItem('ta_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div><h1>Trading Agent — Phase 1b paper</h1><div class="sub" id="sub">loading…</div></div>
+    <div><button class="ghost" id="theme">theme</button> <a class="ghost" style="text-decoration:none;display:inline-block" id="repo" href="#">repo</a></div>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>Equity vs SPY (indexed to 100 at the first snapshot)</h2>
+    <div class="legend"><span><i class="key" style="border-color:var(--s1)"></i>Bot equity</span><span><i class="key" style="border-color:var(--s2)"></i>SPY</span></div>
+    <div class="chart-wrap" id="eq-wrap"></div>
+    <h2 style="margin-top:14px">Drawdown from peak</h2>
+    <div class="chart-wrap" id="dd-wrap"></div>
+    <details><summary>Table view</summary><div class="scroll" id="eq-table"></div></details>
+  </section>
+
+  <div class="two">
+    <section class="card"><h2>Positions</h2><div class="scroll" id="positions"></div></section>
+    <section class="card"><h2>Routine cadence (commit subjects on main)</h2><div class="scroll grid-cad" id="cadence"></div></section>
+  </div>
+
+  <section class="card"><h2>Graduation checklist <span class="small" id="grad-meta"></span></h2><div id="graduation"></div></section>
+
+  <section class="card">
+    <h2>News sleeve</h2>
+    <div class="tiles" id="news-tiles"></div>
+    <p class="gate" id="gate"></p>
+    <div class="two">
+      <div><h2>Scanner runs per day (of 96 slots)</h2><div id="uptime"></div></div>
+      <div><h2>Tradeable buckets (bull, d3)</h2><div class="scroll" id="tradeable"></div></div>
+    </div>
+    <h2 style="margin-top:14px">Net excess return after costs, by asset × direction (routine slot)</h2>
+    <div class="scroll" id="buckets"></div>
+    <details style="margin-top:8px"><summary>Fine buckets with d3 data (pre-registered)</summary><div class="scroll" id="fine"></div></details>
+    <h2 style="margin-top:14px">Latest signals</h2>
+    <div class="scroll" id="feed"></div>
+  </section>
+
+  <div class="two">
+    <section class="card"><h2>Plan tracker</h2><div id="plan"></div></section>
+    <section class="card"><h2>Alerts sent (last 7 days)</h2><div id="notes"></div></section>
+  </div>
+
+  <footer id="foot">Numbers come from scripts/ks.py, scripts/newsscan.py and scripts/newsscore.py; this page only displays them.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

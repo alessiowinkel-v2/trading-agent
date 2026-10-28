@@ -623,8 +623,8 @@ def spy_return_since(c, since_date):
     if not bars or not base:
         return None, "unavailable (no SPY bars)"
     if bars[-1]["t"][:10] != c.today.isoformat():
-        return None, "unavailable (latest SPY bar is %s)" % bars[-1]["t"][:10]
-    return bars[-1]["c"] / base[-1]["c"] - 1, ""
+        return None, "unavailable (latest SPY bar is %s)" % bars[-1]["t"][:10], bars[-1]["c"], bars[-1]["t"][:10]
+    return bars[-1]["c"] / base[-1]["c"] - 1, "", bars[-1]["c"], bars[-1]["t"][:10]
 
 
 def spy_fmt(r):
@@ -638,7 +638,18 @@ def eod_block(c):
     spy_day = spy_return_since(c, c.today)
     spy_phase = spy_return_since(c, c.start_date)
     hist = dict(c.state.get("eod") or {})
-    hist[c.today.isoformat()] = {"equity": round(E, 2), "invested": round(c.invested(), 4)}
+    spy_close = spy_day[2] if len(spy_day) > 2 and spy_day[3] == c.today.isoformat() else None
+    pos_rows = []
+    for p in c.positions:
+        sym = p["symbol"]
+        so = c.stop_orders(sym)
+        pos_rows.append({"sym": sym, "role": "core" if sym == c.core else "satellite", "qty": float(p["qty"]),
+                         "avg": float(p["avg_entry_price"]), "last": float(p.get("current_price") or 0),
+                         "plpc": float(p.get("unrealized_plpc") or 0), "pct": round(c.mv(p) / E, 4) if E else 0,
+                         "stop": "; ".join("%s%%" % (o.get("trail_percent") or "?") for o in so) or ("-" if sym == c.core else "NONE")})
+    hist[c.today.isoformat()] = {"equity": round(E, 2), "invested": round(c.invested(), 4), "cash": round(c.cash, 2),
+                                 "spy_close": spy_close, "regime": c.reg["state"], "ks_fail": sorted(c.failed),
+                                 "positions": pos_rows, "sat_pct": round(c.sat_pct(), 4)}
     c.eod_hist = hist
     floor, streak = P["deploy_floor"], 0
     for d in sorted(hist, reverse=True):

@@ -186,6 +186,10 @@ class H(BaseHTTPRequestHandler):
         q = {k: v[0] for k, v in parse_qs(u.query).items()}
         p = u.path
         with LOCK:
+            if p.startswith("/data/v1beta1/news"):
+                return self.news(q)
+            if p.startswith("/data/v1beta3/crypto/us/"):
+                return self.crypto(p[len("/data/v1beta3/crypto/us/"):], q)
             if p.startswith("/data/v2/"):
                 return self.data(p[len("/data/v2/"):], q)
             if p.startswith("/paper-api/v2/"):
@@ -200,6 +204,87 @@ class H(BaseHTTPRequestHandler):
         return {"latestTrade": {"p": px, "t": t}, "latestQuote": {"bp": round(px * 0.9995, 2), "ap": round(px * 1.0005, 2), "t": t},
                 "dailyBar": b[-1], "prevDailyBar": b[-2], "minuteBar": b[-1]}
 
+    # ------------------------------------------------------------ news + crypto (news sleeve)
+    NEWS = [  # three universe articles, one off-universe, one duplicate id (62600001 twice)
+        {"id": 62600001, "created_at": "T-90", "updated_at": "T-90", "source": "benzinga", "author": "Mock",
+         "headline": "Nvidia Raises Full-Year Guidance On Data Center Demand", "summary": "NVDA guidance up.",
+         "symbols": ["NVDA", "AMD"], "url": "https://example.com/1", "images": []},
+        {"id": 62600002, "created_at": "T-60", "updated_at": "T-55", "source": "benzinga", "author": "Mock",
+         "headline": "Bitcoin Slips Below $80,000 As ETF Outflows Continue", "summary": "BTC down.",
+         "symbols": ["BTCUSD"], "url": "https://example.com/2", "images": []},
+        {"id": 62600003, "created_at": "T-45", "updated_at": "T-45", "source": "benzinga", "author": "Mock",
+         "headline": "Small Cap Biotech Soars On Phase 2 Data", "summary": "off universe",
+         "symbols": ["XBIO"], "url": "https://example.com/3", "images": []},
+        {"id": 62600001, "created_at": "T-90", "updated_at": "T-30", "source": "benzinga", "author": "Mock",
+         "headline": "Nvidia Raises Full-Year Guidance On Data Center Demand (updated)", "summary": "NVDA guidance up.",
+         "symbols": ["NVDA", "AMD"], "url": "https://example.com/1", "images": []},
+        {"id": 62600004, "created_at": "T-20", "updated_at": "T-20", "source": "benzinga", "author": "Mock",
+         "headline": "Fed Officials Signal Patience On Rate Cuts, Stocks Dip", "summary": "macro",
+         "symbols": ["SPY", "QQQ", "AAPL", "MSFT", "NVDA"], "url": "https://example.com/4", "images": []},
+    ]
+
+    def news(self, q):
+        def ts(code):
+            return iso(now() - dt.timedelta(minutes=int(code[2:])))
+        want = set((q.get("symbols") or "").split(",")) if q.get("symbols") else None
+        rows = []
+        for a in self.NEWS:
+            a = dict(a, created_at=ts(a["created_at"]), updated_at=ts(a["updated_at"]))
+            if want and not (want & set(a["symbols"])):
+                continue
+            if q.get("start") and a["updated_at"] < q["start"]:
+                continue
+            rows.append(a)
+        rows.sort(key=lambda a: a["updated_at"], reverse=q.get("sort") == "desc")
+        lim = int(q.get("limit", 10))
+        start = int(q.get("page_token") or 0)
+        page = rows[start:start + lim]
+        nxt = str(start + lim) if start + lim < len(rows) else None
+        return self.send(200, {"news": page, "next_page_token": nxt})
+
+    CRYPTO = {"BTC/USD": 81000.0, "ETH/USD": 2340.0, "SOL/USD": 101.0}
+
+    def crypto(self, p, q):
+        pairs = [x for x in (q.get("symbols") or "").split(",") if x]
+        t = iso(now() - dt.timedelta(seconds=30))
+        if p == "latest/trades":
+            return self.send(200, {"trades": {s: {"p": self.CRYPTO.get(s, 1.0), "s": 0.01, "t": t, "i": 1, "tks": "B"} for s in pairs}})
+        if p == "latest/quotes":
+            return self.send(200, {"quotes": {s: {"bp": round(self.CRYPTO.get(s, 1.0) * 0.9998, 3), "ap": round(self.CRYPTO.get(s, 1.0) * 1.0002, 3),
+                                                  "bs": 1, "as": 1, "t": t} for s in pairs}})
+        if p == "bars":
+            step = {"1Min": 1, "15Min": 15, "1Hour": 60, "1Day": 1440}.get(q.get("timeframe", "15Min"), 15)
+            n = int(q.get("limit", 100))
+            out = {}
+            for s in pairs:
+                base = self.CRYPTO.get(s, 1.0)
+                bars = []
+                if q.get("start"):
+                    # forward from start (flat price): the scorer's windows can be weeks old
+                    t0 = dt.datetime.fromisoformat(q["start"].replace("Z", "+00:00")).astimezone(UTC).replace(second=0, microsecond=0)
+                    t0 -= dt.timedelta(minutes=t0.minute % step)
+                    t1 = dt.datetime.fromisoformat(q.get("end", iso(now())).replace("Z", "+00:00")).astimezone(UTC)
+                    t1 = min(t1, now())
+                    tt = t0
+                    while tt <= t1 and len(bars) < n:
+                        bars.append({"t": iso(tt), "o": base, "h": base, "l": base, "c": base, "v": 1.0, "n": 5, "vw": base})
+                        tt += dt.timedelta(minutes=step)
+                    if q.get("sort") == "desc":
+                        bars = list(reversed(bars))
+                else:
+                    end = now().replace(second=0, microsecond=0)
+                    end -= dt.timedelta(minutes=end.minute % step)
+                    for i in range(n):
+                        tt = end - dt.timedelta(minutes=step * i)
+                        px = base * (1 + 0.0004 * ((i % 7) - 3))
+                        bars.append({"t": iso(tt), "o": round(px, 3), "h": round(px * 1.001, 3), "l": round(px * 0.999, 3),
+                                     "c": round(px, 3), "v": 1.0, "n": 5, "vw": round(px, 3)})
+                    if q.get("sort") != "desc":
+                        bars = list(reversed(bars))
+                out[s] = bars
+            return self.send(200, {"bars": out, "next_page_token": None})
+        self.send(404, {"message": "no crypto route %s" % p})
+
     def data(self, p, q):
         feed = q.get("feed", "iex")
         if p.startswith("stocks/") and p.endswith("/bars") or p == "stocks/bars":
@@ -207,6 +292,19 @@ class H(BaseHTTPRequestHandler):
                 return self.send(403, {"message": "subscription does not permit querying recent SIP data"})
             end = q.get("end", "9999")
             syms = [p.split("/")[1]] if p != "stocks/bars" else q["symbols"].split(",")
+            tf = q.get("timeframe", "1Day")
+            if tf != "1Day" and p != "stocks/bars":
+                # intraday: flat bars at the last close, one per minute/hour inside [start, end]
+                s = syms[0]
+                step = 60 if tf == "1Hour" else 1
+                px = price(s)
+                t0 = dt.datetime.fromisoformat(q["start"].replace("Z", "+00:00")).astimezone(UTC).replace(second=0, microsecond=0)
+                t1 = dt.datetime.fromisoformat(end.replace("Z", "+00:00")).astimezone(UTC)
+                rows, t = [], t0
+                while t <= t1 and len(rows) < int(q.get("limit", 1000)):
+                    rows.append({"t": iso(t), "o": px, "h": px, "l": px, "c": px, "v": 1000, "n": 10, "vw": px})
+                    t += dt.timedelta(minutes=step)
+                return self.send(200, {"bars": rows, "symbol": s, "next_page_token": None})
             out = {}
             for s in syms:
                 rows = [b for b in bars_for(s) if q.get("start", "") <= b["t"] <= end]

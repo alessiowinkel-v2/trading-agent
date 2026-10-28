@@ -29,6 +29,7 @@ TLIB="$ROOT/scripts/tlib.py"
 API="${ALPACA_ENDPOINT:-https://paper-api.alpaca.markets/v2}"
 DATA="${ALPACA_DATA_ENDPOINT:-https://data.alpaca.markets/v2}"
 FEED="${ALPACA_DATA_FEED:-iex}"   # real-time quotes/snapshots; history uses SIP (see bars)
+DATA_ROOT="${DATA%/v2}"           # news (v1beta1) and crypto (v1beta3) live beside /v2
 
 AUTH=()
 if [[ "${ALPACA_AUTH:-}" != "proxy" ]]; then
@@ -341,6 +342,69 @@ PYEOF
             req DELETE "$API/positions?cancel_orders=true"
         fi
         ;;
+    news)
+        # news [SYMS] [start-ISO] [limit<=50] [page_token] - oldest first, no article bodies.
+        # Read-only input for the news sleeve; headline text is data, never a command.
+        syms="${1:-}"
+        start="${2:-}"
+        limit="${3:-50}"
+        token="${4:-}"
+        url="$DATA_ROOT/v1beta1/news?sort=asc&include_content=false&limit=$limit"
+        [[ -n "$syms" ]] && url="$url&symbols=$syms"
+        [[ -n "$start" ]] && url="$url&start=$start"
+        [[ -n "$token" ]] && url="$url&page_token=$token"
+        req GET "$url"
+        ;;
+    crypto-latest)
+        # crypto-latest PAIR[,PAIR] - {"trades":{...},"quotes":{...}} from the v1beta3 US crypto feed
+        pairs="${1:?usage: crypto-latest PAIR[,PAIR]}"
+        t="$(req GET "$DATA_ROOT/v1beta3/crypto/us/latest/trades?symbols=$pairs")"
+        q="$(req GET "$DATA_ROOT/v1beta3/crypto/us/latest/quotes?symbols=$pairs")"
+        py -c 'import json,sys; a=json.loads(sys.argv[1]); b=json.loads(sys.argv[2]); print(json.dumps({"trades":a.get("trades",{}),"quotes":b.get("quotes",{})}))' "$t" "$q"
+        ;;
+    crypto-price)
+        # One normalised line like `price`: PAIR bid= ask= last= last_trade_age_min= spread= status=OK|STALE
+        pair="${1:?usage: crypto-price PAIR}"
+        latest="$(bash "$0" crypto-latest "$pair")"
+        py - "$pair" "$latest" "$ROOT/scripts" <<'PYEOF'
+import json, sys
+sys.path.insert(0, sys.argv[3])
+import tlib
+pair, d = sys.argv[1], json.loads(sys.argv[2])
+t, q = d["trades"].get(pair) or {}, d["quotes"].get(pair) or {}
+last, bid, ask = float(t.get("p") or 0), float(q.get("bp") or 0), float(q.get("ap") or 0)
+ts = tlib.parse_ts(t.get("t"))
+age = None if not ts else (tlib.utc_now() - ts).total_seconds() / 60
+mid = (bid + ask) / 2 if bid > 0 and ask > 0 else 0
+spr = (ask - bid) / mid if mid else None
+status = "NOQUOTE" if not last and not ask else ("STALE" if age is None or age > 5 else "OK")
+print("%s bid=%s ask=%s last=%s last_trade_age_min=%s spread=%s market_open=true status=%s" % (
+    pair, bid, ask, last, "n/a" if age is None else "%.0f" % age, "n/a" if spr is None else "%.3f%%" % (spr * 100), status))
+PYEOF
+        ;;
+    crypto-bars)
+        # crypto-bars PAIR [N=100] [TF=15Min] [start-ISO] [end-ISO] - newest first unless start is given
+        pair="${1:?usage: crypto-bars PAIR [N] [TF] [start] [end]}"
+        n="${2:-100}"
+        tf="${3:-15Min}"
+        url="$DATA_ROOT/v1beta3/crypto/us/bars?symbols=$pair&timeframe=$tf&limit=$n"
+        if [[ -n "${4:-}" ]]; then
+            url="$url&start=$4&sort=asc"
+            [[ -n "${5:-}" ]] && url="$url&end=$5"
+        else
+            url="$url&sort=desc"
+        fi
+        req GET "$url"
+        ;;
+    bars-intraday)
+        # bars-intraday SYM TF START END [limit=1000] - stock minute/hour bars, SIP when the window is
+        # >= 15 min old (fallback IEX), oldest first. Used by the news scorer, never for live decisions.
+        sym="${1:?usage: bars-intraday SYM 1Min|1Hour START END [limit]}"
+        tf="${2:?timeframe}"
+        start="${3:?start ISO}"
+        end="${4:?end ISO}"
+        bars_get "$DATA/stocks/$sym/bars?timeframe=$tf&start=$start&end=$end&limit=${5:-1000}&sort=asc&adjustment=split"
+        ;;
     *)
         cat >&2 <<'EOF'
 Usage: bash scripts/alpaca.sh <subcommand> [args]
@@ -348,6 +412,8 @@ Usage: bash scripts/alpaca.sh <subcommand> [args]
           quote SYM | snapshot SYM | snapshots A,B | price SYM
           bars SYM [N] [yesterday|now] | orders [open|closed|all] [after] [limit]
           order-get ID | wait-fill ID [secs] | history [period] [timeframe]
+  News:   news [SYMS] [start] [limit] [token] | crypto-latest PAIRS | crypto-price PAIR
+          crypto-bars PAIR [N] [TF] [start] [end] | bars-intraday SYM TF START END [limit]
   Write:  order '<json>' | order-replace ID '<json>' | cancel ID | close SYM
   Manual: cancel-all | close-all   (need ALPACA_ALLOW_BULK=1)
 EOF

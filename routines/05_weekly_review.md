@@ -25,6 +25,8 @@ If either file is missing: bash scripts/notify.sh --alert "weekly: routine files
 
 **STEP 2 — Numbers**: `python3 scripts/ks.py --week --write-state` (this is also the only place a latched KS-2 can clear) and `bash scripts/watchdog.sh grid <MONDAY>`. Paste both. You do not compute returns, drawdowns or win rates yourself.
 
+**STEP 2b — News sleeve** (read-only): `bash scripts/memtail.sh memory/NEWS-SCORECARD.md 1`. Paste its header block (GATE line, counts) and the "Tradeable buckets" table (or `none`) into a `### News sleeve` section of the review. `(no memory/NEWS-SCORECARD.md)` is fine before the scorer has run. It does not affect the grade until Phase 5 of `plans/news-sleeve/PLAN.md`.
+
 **STEP 3 — Count from this week's records** (cite dates):
 - planned orders (PLAN lines + CORE_ACTION orders) vs orders with an outcome line vs fills; stops verified in the same session / satellite fills
 - research days with ≥2 candidates from ≥2 sectors, or with every rejection's failing gate listed
