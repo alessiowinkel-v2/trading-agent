@@ -66,3 +66,9 @@ Core: CORE_ACTION=BUY 17 SPYM limit 90.80 → order 2b8a256f-a8c9-429c-b8fc-c9dd
 | KO | 91.18 | PASS | PASS | PASS | FAIL (FOMC) | PASS | SKIP | - | - | - |
 New positions: none (satellites blocked by FOMC; carried to next non-event session, refs must be re-screened).
 Health: run 10:26 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-10-28 — Midday (run 13:11 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=2 | failing: none | Maintenance: none
+Core: CORE_ACTION=DONE_TODAY (core-2026-10-28 filled) | Satellites held: none (no gap exits, no thesis checks)
+Exits: none | Retries: XLE, JNJ, KO dropped for today (EVENT_TODAY=FOMC, G10 FAIL); refs re-screened next non-event session. No orders placed.
+Health: run 13:11 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=n/a | perplexity=n/a
