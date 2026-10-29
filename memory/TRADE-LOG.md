@@ -107,3 +107,18 @@ Anomaly: 2 unplanned open buy orders found, created 07:59 UTC (pre-routine, not 
 Gap/thesis: XLE $68.395 vs stop 64.07235 (trailing 7%, f301574d status new); change_today -0.0008; newsfeed XLE none. No gap exit.
 Exits: none | Retries: none (core DONE_TODAY; JNJ/KO/NUE dropped at open, SAT_SLOTS=0)
 Health: run 13:13 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-10-29 - EOD Snapshot (Day 2, Thursday)
+**Portfolio:** $1,992.64 | **Cash:** $523.22 (26.3%) | **Invested:** 73.7% (floor 70%, days below: 0) | **Day P&L:** $-10.58 (-0.53%) | **Phase P&L:** $-7.36 (-0.37%) | **SPY today:** -0.38% | **SPY phase:** -0.04% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 14 | 90.71 | 90.16 | -0.8% | $-7.70 (-0.6%) | 63.3% | - |
+| XLE | satellite | 3 | 68.78 | 69.06 | +0.9% | $0.85 (+0.4%) | 10.4% | trailing_stop 7%/hwm 68.895 (f301574d) |
+
+**Fills today:** buy 3 XLE @ 68.78 (sat-2026-10-29-XLE); sell 3 SPYM @ 90.54 (core-2026-10-29)
+
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Lagged SPY on the day (-0.53% vs -0.38%) mostly from the core sale at a lower price and SPYM -0.8%; XLE +0.9% with stop live. Midday anomaly (2 unplanned pre-routine buy orders, cancelled) remains unexplained — user to check. Tomorrow: no EVENTS.md entry, no blocking event; XOM earnings 10-30 is an XLE risk, not a block.
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
