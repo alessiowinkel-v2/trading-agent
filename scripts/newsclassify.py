@@ -10,7 +10,8 @@ memory/news/signals/YYYY-MM.jsonl, sends the few Discord alerts PLAN §4 allows 
 accounts tokens/cost in memory/news/state.json.  Exit 0 always except a crash (2);
 without ANTHROPIC_API_KEY it prints "skipped" and leaves the rows pending.
 
-stdout last line: NEWSCLASSIFY ok classified=N signals=S none=K dup=D unscorable=U calls=C alerts=A cost=$X
+stdout last line: NEWSCLASSIFY ok classified=N signals=S none=K dup=D unscorable=U retry=R calls=C alerts=A cost=$X
+Items the model leaves out of its answer are retried on later runs (MAX_ATTEMPTS) before they are marked unscorable.
 """
 
 import argparse
@@ -28,6 +29,7 @@ PROMPT = os.path.join(tlib.ROOT, "scripts", "prompts", "classify-v1.md")
 SCHEMA = os.path.join(tlib.ROOT, "scripts", "prompts", "classify-schema.json")
 PROMPT_VERSION = "classify-v1"
 PENDING_H = 48
+MAX_ATTEMPTS = 3   # an item the model leaves out (or a failed call) is retried on later runs, then marked unscorable
 DUP_JACCARD = 0.6
 DUP_WINDOW_H = 24
 ALERT_MIN_CONF, ALERT_MIN_MAG = 0.8, 2
@@ -126,8 +128,9 @@ def main():
             todo.append(r)
 
     # 2. classifier batches
-    calls, classified, unscorable, usage_in, usage_out, skipped_nokey = 0, 0, 0, 0, 0, False
+    calls, classified, unscorable, retry, usage_in, usage_out, skipped_nokey = 0, 0, 0, 0, 0, 0, False
     served_model = model
+    attempts = {str(k): int(v) for k, v in (newslib.load_state().get("classify_attempts") or {}).items()}
     for i in range(0, len(todo), args.batch):
         if calls >= args.max_calls:
             break
@@ -151,11 +154,19 @@ def main():
             res = by_id.get(row["id"])
             clean, verr = (None, err or "missing from response") if res is None else valid(res, row)
             if clean is None:
+                key = str(row["id"])
+                attempts[key] = attempts.get(key, 0) + 1
+                if attempts[key] < MAX_ATTEMPTS:
+                    retry += 1          # no row written: it stays pending and is sent again next run
+                    continue
                 unscorable += 1
+                attempts.pop(key, None)
                 out_rows.append(dict(row, direction=None, magnitude=None, horizon=None, category=None, novelty=None,
-                                     confidence=None, rationale=None, status="unscorable", notes=verr,
+                                     confidence=None, rationale=None, status="unscorable",
+                                     notes="%s (after %d attempts)" % (verr, MAX_ATTEMPTS),
                                      classifier={"model": served_model, "prompt_version": PROMPT_VERSION}))
                 continue
+            attempts.pop(str(row["id"]), None)
             classified += 1
             px = row.get("px") if clean["ticker"] == row["ticker"] else None
             out_rows.append(dict(row, ticker=clean["ticker"], px=px, direction=clean["direction"], magnitude=clean["magnitude"],
@@ -220,13 +231,15 @@ def main():
         tot["signals"] = tot.get("signals", 0) + sig_count
         tot["classified"] = tot.get("classified", 0) + classified
         state["pending_after_run"] = max(0, len(todo) - classified - unscorable)
+        live = {str(r["id"]) for r in pending}
+        state["classify_attempts"] = {k: v for k, v in attempts.items() if k in live}
         if skipped_nokey:
             state["classifier_note"] = "ANTHROPIC_API_KEY missing - %d headlines pending" % len(todo)
         else:
             state.pop("classifier_note", None)
         newslib.save_state(state)
-    print("NEWSCLASSIFY %s classified=%d signals=%d none=%d dup=%d unscorable=%d calls=%d alerts=%d cost=$%.4f pending=%d%s" % (
-        "skipped" if skipped_nokey else "ok", classified, sig_count, none_count, dup, unscorable, calls, n_alerts, cost,
+    print("NEWSCLASSIFY %s classified=%d signals=%d none=%d dup=%d unscorable=%d retry=%d calls=%d alerts=%d cost=$%.4f pending=%d%s" % (
+        "skipped" if skipped_nokey else "ok", classified, sig_count, none_count, dup, unscorable, retry, calls, n_alerts, cost,
         max(0, len(todo) - classified - unscorable), " reason=no_api_key" if skipped_nokey else ""))
 
 

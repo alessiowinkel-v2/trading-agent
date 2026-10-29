@@ -254,6 +254,7 @@ py -c "
 import json; s=json.load(open('memory/news/state.json')); s['last_commit_utc']='2026-01-01T00:00:00Z'; json.dump(s, open('memory/news/state.json','w'))"
 out="$(bash scripts/newsscan.sh --no-classify 2>&1)"
 check "newsscan.sh: heartbeat commit when the last commit is old" has "$out" "0 new (heartbeat)"
+check "...its subject carries the UTC date and time" has "$(git log -1 --format=%s)" "^newsscan $(date -u +%Y-%m-%d) [0-9][0-9]:[0-9][0-9]Z: OK"
 out="$(ALPACA_DATA_ENDPOINT=http://127.0.0.1:1/data/v2 py scripts/newsscan.py 2>&1)"
 check "scanner aborts loudly when the API is unreachable" has "$out" "NEWSSCAN ABORTED"
 check "...and records the error in state.json" has "$(cat memory/news/state.json)" '"last_error": "AlpacaError'
@@ -307,13 +308,19 @@ check "second classify run finds nothing pending" has "$out" "classified=0 signa
 NOWISO="$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.iso(tlib.utc_now()))')"
 printf '{"id":62600099,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Nvidia Raises Its Full-Year Guidance On Strong Data Center Demand","summary":"","symbols":["NVDA"],"tickers":[{"ticker":"NVDA","asset":"stock"}],"ticker":"NVDA","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
 out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
-check "near-duplicate headline is tagged without an API call" has "$out" "dup=1 unscorable=0 calls=0"
+check "near-duplicate headline is tagged without an API call" has "$out" "dup=1 unscorable=0 retry=0 calls=0"
 check "...as duplicate_of the original id" has "$(grep 62600099 "$sigf")" '"novelty":"duplicate_of:62600001"'
 # coverage failure: the model omits an item -> unscorable, never a guess
 printf '{"id":62600098,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"BADJSON Coca-Cola Announces Recall Of Bottled Water","summary":"","symbols":["KO"],"tickers":[{"ticker":"KO","asset":"stock"}],"ticker":"KO","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
 out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
-check "an item missing from the model response becomes unscorable" has "$out" "unscorable=1"
-check "...with the reason recorded" has "$(grep 62600098 "$sigf")" '"status":"unscorable"'
+check "an item missing from the model response is retried, not written" has "$out" "unscorable=0 retry=1"
+check "...it has no signal row yet" bash -c "! grep -q 62600098 '$sigf'"
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
+check "...second miss: still retrying" has "$out" "unscorable=0 retry=1"
+out="$(CLAUDE_MOCK=1 py scripts/newsclassify.py 2>&1)"
+check "...third miss: marked unscorable" has "$out" "unscorable=1 retry=0"
+check "...with the reason and attempt count recorded" has "$(grep 62600098 "$sigf")" 'missing from response (after 3 attempts)'
+check "...and its retry counter is cleared" bash -c "! grep -q 62600098 memory/news/state.json"
 # alert budget + held-symbol bear rule
 before="$(wc -l < "$W/webhook.log")"
 printf '{"id":62600097,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Regulators Open Probe Into Walmart Pricing Practices","summary":"","symbols":["WMT"],"tickers":[{"ticker":"WMT","asset":"stock"}],"ticker":"WMT","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n{"id":62600096,"ts_news":"%s","ts_updated":"%s","ts_ingest":"%s","source":"benzinga","url":"u","headline":"Microsoft To Acquire Cloud Security Startup","summary":"","symbols":["MSFT"],"tickers":[{"ticker":"MSFT","asset":"stock"}],"ticker":"MSFT","asset":"stock","benchmark":"SPY","px":null,"status":"raw"}\n' "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" "$NOWISO" >> "$raw"
