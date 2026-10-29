@@ -100,3 +100,10 @@ Core: first check CORE_ACTION=HOLD (77.1% vs target 75.0%). After the XLE fill t
 New positions: XLE 3 sh @ 68.776667, trailing stop 7.0% (f301574d, status new), target $78.03, thesis: rank-1 sector, oil leadership (WTI >$101), above SMA50>SMA200. Risk: XOM earnings 10-30.
 Note: KO/JNJ/NUE skipped on slots/sizing after XLE; slots were 1 (week 2/3, today 2/2 incl. core buy).
 Health: run 10:22 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-10-29 — Midday (run 13:13 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none (ks.py MAINTENANCE=none)
+Anomaly: 2 unplanned open buy orders found, created 07:59 UTC (pre-routine, not in any plan): `test-2026-10-29-dup` (buy 1 SPYM limit $1, id faad1776-f400-4a1d-bab6-ea1ac1b7a9c1) and `sat-2026-10-29-WMT-extra` (buy 1 WMT limit $104.03, id 3c39e7ea-40e1-4651-b053-432371df8bd2; a fill would be an unplanned satellite with no stop). Both cancelled, order-get status `canceled`. Source unknown — user to check.
+Gap/thesis: XLE $68.395 vs stop 64.07235 (trailing 7%, f301574d status new); change_today -0.0008; newsfeed XLE none. No gap exit.
+Exits: none | Retries: none (core DONE_TODAY; JNJ/KO/NUE dropped at open, SAT_SLOTS=0)
+Health: run 13:13 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
