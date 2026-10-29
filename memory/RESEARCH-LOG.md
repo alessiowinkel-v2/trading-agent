@@ -213,3 +213,73 @@ CANDIDATE: KO ref=91.18 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
 EVENT_TODAY=FOMC: market-open will NOT open new satellites today (G10). Core is not blocked: market-open buys 17 SPYM per CORE_ACTION (Day-1 core still unbought). Candidates XLE (XLE), JNJ (XLV), KO (XLP) = 3 sectors recorded for the next non-event session; refs must be re-screened then (ks.py takes ref from today's line only on today's entry).
 
 Health: run 07:18 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
+
+## 2026-10-29 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-10-29 07:11 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-06
+
+### Regime and sectors
+REGIME risk-on | SPY 772.31 vs SMA200 728.15 (+6.1%) | 61 consecutive closes above
+Top sectors (bars through 2026-10-28): 1 XLE (+11.07) | 2 XLV (+4.99) | 3 XLY (+1.54) | 4 XLP (+1.25) | 5 XLK (+0.85) | 6 XLB (+0.43) | 7 XLF (-1.40)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=1 (positions 0/3, today 1/2, week 1/3)
+REGIME risk-on (SPY 772.31 vs SMA200 728.15; 61 consecutive closes above)
+CORE SPYM: 17 sh = $1,542.24 (77.1%) | target 75.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+Note: ks.py counts "entries today 1 / week 1" (the 10-28 core buy); it leaves SAT_SLOTS=1, so market-open can fill at most one satellite today.
+
+### Screen
+Screened 68 (0 no data) | ALL 11
+Top: PLTR (XLK), XLE, ABBV (XLV), NUE (XLB), XLV, PM (XLP), XLK, JNJ (XLV), KO (XLP), XLP
+Near misses: NVDA G3; ORCL G3; ANET G3; AMZN G3; TJX G3; CMG G3; BAC G3; SCHW G3; RTX G5; XOM G4; CVX G4; COP G4
+
+### Yesterday's candidates
+- XLE: not filled: FOMC (G10) blocked satellites 10-28. Re-screened today, passes.
+- JNJ: not filled: FOMC (G10) + G11 spread 3.45%. Re-screened today, passes.
+- KO: not filled: FOMC (G10). Re-screened today, passes.
+
+### Candidates
+#### Rejected
+- PLTR (XLK): G6 FAIL — earnings 2026-11-02 confirmed (< 2026-11-06) [carried from 10-28 check]
+- ABBV (XLV): G6 FAIL — earnings 2026-10-30 confirmed (< 2026-11-06) [carried from 10-28 check]
+- XLV, XLK, XLP, PM: not checked in full — XLV covered by JNJ, XLP by KO, XLK's lone pass-through (PLTR) failed G6; PM screened OK but KO already covers XLP (backup only)
+
+#### 1. XLE — Energy Select Sector SPDR (XLE, rank 1)
+G1 PASS $68.45 vs cap $300.02 | G2 PASS ADV20 $2138M | G3 PASS 68.45 > SMA50 64.70 > SMA200 58.51 | G4 PASS R5 +0.4%, close 68.45 vs 69.26 | G5 PASS rank 1, RS63 +12.0% | G8 PASS stop 7.0% (~63.66), target 78.03, qty 4 = $273.80 (13.7%)
+G6 PASS — sector ETF has no earnings report of its own (same treatment as 10-28). Risk noted, not a gate: largest holding XOM reports 2026-10-30 (confirmed) [perplexity: simplywall.st, yahoo finance].
+G7 PASS — Oil leadership: WTI >$101 (Oct 28) on Iran/Houthi supply risk, XLE record high Oct 23, rank 1 sector, above SMA50>SMA200. Risk: de-escalation removes the crude premium; XOM+CVX ≈39% of fund with XOM earnings tomorrow.
+News feed: (none)
+SCREEN_OK: XLE ref=68.45 stop_pct=7.0 sector=XLE
+CANDIDATE: XLE ref=68.45 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+#### 2. JNJ — Johnson & Johnson (XLV, rank 2)
+G1 PASS $271.04 vs cap $300.02 | G2 PASS ADV20 $2032M | G3 PASS 271.04 > SMA50 265.45 > SMA200 246.40 | G4 PASS R5 +5.1%, close 271.04 vs 273.83 | G5 PASS rank 2, RS63 +1.8% | G8 PASS stop 7.0% (~252.07), target 308.99, qty 1 = $271.04 (13.6%)
+G6 PASS — next report January 2027 (estimated, date unconfirmed) >= 2026-11-06; last report October (<45d) [perplexity: trefis 2026-10-27, marketbeat 2026-10-26]
+G7 PASS — Oncology pipeline momentum (JNJ-6143 75% response, ERLEADA PROTEUS −62% recurrence/death, RYBREVANT FASPRO >75% ORR; FDA decision possible by YE2026; Dec 8 business review) in XLV (rank 2), above SMA50>SMA200. Risk: deal dilution, MedTech growth, talc litigation; spread was wide at the 10-28 open.
+News feed: (none)
+SCREEN_OK: JNJ ref=271.04 stop_pct=7.0 sector=XLV
+CANDIDATE: JNJ ref=271.04 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 3. KO — Coca-Cola (XLP, rank 4)
+G1 PASS $91.73 vs cap $300.02 | G2 PASS ADV20 $1538M | G3 PASS 91.73 > SMA50 89.34 > SMA200 81.92 | G4 PASS R5 -1.0%, close 91.73 vs 93.74 | G5 PASS rank 4, RS63 -0.5% | G8 PASS stop 7.0% (~85.31), target 104.57, qty 3 = $275.19 (13.8%)
+G6 PASS — reported Q3 2026-10-27; next report 2027-02-16 (estimated) >= 2026-11-06; last report <45d [perplexity: investing.com, cnbc 2026-10-27]
+G7 PASS — Q3 beat (EPS $0.91 vs $0.88, rev $13.4B +7%), FY26 EPS growth guide raised to >=11%, KFC US win from Jan 2027, Citi/Piper PT $103; XLP rank 4, above SMA50>SMA200. Risk: North America volume flat, "sell the beat" reaction, 2027 FX headwind.
+News feed: 10-27 12:00 ET KO bull m2 conf 0.65 earnings "Coca-Cola Raises Profit Outlook…" (consistent with thesis)
+SCREEN_OK: KO ref=91.73 stop_pct=7.0 sector=XLP
+CANDIDATE: KO ref=91.73 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+#### 4. NUE — Nucor (XLB, rank 6)
+G1 PASS $271.79 vs cap $300.02 | G2 PASS ADV20 $329M | G3 PASS 271.79 > SMA50 252.59 > SMA200 222.96 | G4 PASS R5 +2.7%, close 271.79 vs 272.50 | G5 PASS rank 6, RS63 +1.6% | G8 PASS stop 7.0% (~252.76), target 309.84, qty 1 = $271.79 (13.6%)
+G6 PASS — reported Q3 2026-10-26; next report 2027-01-27 (estimated) >= 2026-11-06; last report <45d [perplexity: simplywall.st, marketbeat]
+G7 PASS — Steel prices at highest since spring 2022, record shipments 7.2M tons, Q4 guided in line/above Q3, towers-and-structures backlog doubled into 2028, capex moderating. Risk: $124M startup costs persisting into 2027, EPS slight miss, G4 close to upper band (271.79 vs 272.50).
+News feed: (none)
+SCREEN_OK: NUE ref=271.79 stop_pct=7.0 sector=XLB
+CANDIDATE: NUE ref=271.79 stop_pct=7.0 sector=XLB g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none: satellites allowed. SAT_SLOTS=1 → market-open fills at most one; rank order XLE (XLE), JNJ (XLV), KO (XLP), NUE (XLB). 4 candidates / 4 sectors. Core HOLD (in band), no core order.
+
+Health: run 07:11 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
