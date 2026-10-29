@@ -13,8 +13,8 @@ source "$ROOT/scripts/env.sh"
 PY="$(command -v python3 || command -v python)"
 py() { "$PY" "$@" | tr -d '\r'; }
 
-eval "$(py scripts/tlib.py now)"   # DATE (ET)
-stamp="$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.utc_now().strftime("%H:%MZ"))')"
+# UTC date + UTC time in the subject (an ET date with a UTC time read as the wrong day after 20:00 ET)
+stamp="$(py -c 'import sys; sys.path.insert(0,"scripts"); import tlib; print(tlib.utc_now().strftime("%Y-%m-%d %H:%MZ"))')"
 
 out="$(py scripts/newsscan.py "$@" 2>&1)"
 rc=$?
@@ -25,11 +25,11 @@ sig="$(grep -oE 'signals=[0-9]+' <<<"$line" | head -n 1 | cut -d= -f2)"
 
 if [[ $rc -ne 0 ]]; then
     err="$(sed -E 's/^NEWSSCAN ABORTED error=//' <<<"$line" | cut -c1-120)"
-    subject="newsscan $DATE $stamp: ABORTED - ${err:-unknown error}"
+    subject="newsscan $stamp: ABORTED - ${err:-unknown error}"
 elif [[ "${new:-0}" -gt 0 ]]; then
-    subject="newsscan $DATE $stamp: OK - $new new headlines, ${sig:-0} signals"
+    subject="newsscan $stamp: OK - $new new headlines, ${sig:-0} signals"
 elif py scripts/newslib.py heartbeat-due 2; then
-    subject="newsscan $DATE $stamp: OK - 0 new (heartbeat)"
+    subject="newsscan $stamp: OK - 0 new (heartbeat)"
 else
     echo "[newsscan] nothing new, heartbeat not due - no commit"
     exit 0
