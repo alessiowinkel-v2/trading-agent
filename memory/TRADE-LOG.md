@@ -86,3 +86,17 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** Core SPYM bought (17 sh); satellites blocked by FOMC, no orders otherwise. Trailing SPY by 0.39pp on the day (core filled at the 10:26 ET limit, 25% cash). Tomorrow: no blocking event (next is NFP 2026-11-06); XLE/JNJ/KO need re-screening.
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-10-29 — Market-Open Decision (run 10:22 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=1 | failing: none
+Core: first check CORE_ACTION=HOLD (77.1% vs target 75.0%). After the XLE fill the target fell to 64.7% (77.1% outside band), ks.py re-check printed SELL 3 SPYM → order 51c94cea-0115-4174-812d-c214dc13ce5f (core-2026-10-29) filled 3 @ 90.543333. Core now 14 sh (63.5%), DONE_TODAY.
+| Candidate | Ref | G1 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| XLE | 68.45 | PASS | PASS | PASS | PASS | PASS | BUY 3 | 2724744a-fcc2-4fdb-9d4c-c5fa8273b556 | 3 @ 68.776667 | f301574d-382b-4e97-82d7-8c73cbbc8d85 (new) |
+| JNJ | 271.04 | PASS | FAIL (qty 0) | FAIL (no slot) | PASS | FAIL (spread 4.54%) | SKIP | - | - | - |
+| KO | 91.73 | PASS | FAIL (qty 0) | FAIL (no slot) | PASS | PASS | SKIP | - | - | - |
+| NUE | 271.79 | PASS | FAIL (qty 0) | FAIL (no slot) | PASS | FAIL (spread 5.09%) | SKIP | - | - | - |
+New positions: XLE 3 sh @ 68.776667, trailing stop 7.0% (f301574d, status new), target $78.03, thesis: rank-1 sector, oil leadership (WTI >$101), above SMA50>SMA200. Risk: XOM earnings 10-30.
+Note: KO/JNJ/NUE skipped on slots/sizing after XLE; slots were 1 (week 2/3, today 2/2 incl. core buy).
+Health: run 10:22 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
