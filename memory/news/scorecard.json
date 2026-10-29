@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-28T22:06:38Z",
+ "asof": "2026-10-29T06:06:16Z",
  "buckets": [
   {
    "asset": "stock",
@@ -8,14 +8,24 @@
    "direction": "bull",
    "horizons": {
     "d1": {
-     "first_half_mean": 0.03009,
-     "mean": 0.01161,
-     "median": 0.03009,
-     "n": 3,
-     "pos_rate": 0.667,
-     "sd": 0.032,
-     "second_half_mean": 0.00237,
-     "t": 0.63
+     "first_half_mean": 0.00237,
+     "mean": 0.0081,
+     "median": 0.01383,
+     "n": 4,
+     "pos_rate": 0.5,
+     "sd": 0.02705,
+     "second_half_mean": 0.01383,
+     "t": 0.6
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00755,
+     "median": -0.00755,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00755,
+     "t": null
     }
    },
    "level": "fine",
@@ -36,7 +46,7 @@
      "pos_rate": 1.0,
      "sd": 0.0,
      "second_half_mean": 0.00178,
-     "t": 99.0
+     "t": null
     },
     "h1": {
      "first_half_mean": null,
@@ -46,7 +56,7 @@
      "pos_rate": 0.0,
      "sd": 0.0,
      "second_half_mean": -0.00591,
-     "t": -99.0
+     "t": null
     }
    },
    "level": "fine",
@@ -81,14 +91,24 @@
    "direction": "bull",
    "horizons": {
     "d1": {
-     "first_half_mean": null,
-     "mean": -0.01412,
+     "first_half_mean": -0.01412,
+     "mean": -0.00198,
      "median": -0.01412,
-     "n": 1,
-     "pos_rate": 0.0,
-     "sd": 0.0,
-     "second_half_mean": -0.01412,
-     "t": -99.0
+     "n": 3,
+     "pos_rate": 0.333,
+     "sd": 0.02812,
+     "second_half_mean": 0.00409,
+     "t": -0.12
+    },
+    "h1": {
+     "first_half_mean": -0.00132,
+     "mean": -0.00146,
+     "median": -0.00134,
+     "n": 5,
+     "pos_rate": 0.2,
+     "sd": 0.00235,
+     "second_half_mean": -0.00155,
+     "t": -1.38
     }
    },
    "level": "fine",
@@ -102,14 +122,430 @@
    "direction": "bull",
    "horizons": {
     "d1": {
-     "first_half_mean": null,
+     "first_half_mean": -0.0053,
      "mean": -0.0053,
      "median": -0.0053,
-     "n": 1,
+     "n": 2,
      "pos_rate": 0.0,
      "sd": 0.0,
      "second_half_mean": -0.0053,
      "t": -99.0
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "m_and_a",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.02534,
+     "mean": 0.00241,
+     "median": 0.00241,
+     "n": 2,
+     "pos_rate": 0.5,
+     "sd": 0.03925,
+     "second_half_mean": 0.03017,
+     "t": 0.09
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.01171,
+     "median": 0.01171,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.01171,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "earnings",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.01133,
+     "mean": -0.00857,
+     "median": -0.01369,
+     "n": 6,
+     "pos_rate": 0.333,
+     "sd": 0.02206,
+     "second_half_mean": -0.0058,
+     "t": -0.95
+    },
+    "h1": {
+     "first_half_mean": 0.00426,
+     "mean": 0.00028,
+     "median": 0.00028,
+     "n": 2,
+     "pos_rate": 0.5,
+     "sd": 0.00563,
+     "second_half_mean": -0.0037,
+     "t": 0.07
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "guidance",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.02199,
+     "mean": -0.02451,
+     "median": -0.02199,
+     "n": 3,
+     "pos_rate": 0.0,
+     "sd": 0.00437,
+     "second_half_mean": -0.02577,
+     "t": -9.72
+    },
+    "h1": {
+     "first_half_mean": -0.00659,
+     "mean": 0.01108,
+     "median": 0.01003,
+     "n": 4,
+     "pos_rate": 0.5,
+     "sd": 0.02066,
+     "second_half_mean": 0.02874,
+     "t": 1.07
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "product",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.03009,
+     "mean": 0.05747,
+     "median": 0.04508,
+     "n": 3,
+     "pos_rate": 1.0,
+     "sd": 0.03525,
+     "second_half_mean": 0.07116,
+     "t": 2.82
+    },
+    "h1": {
+     "first_half_mean": 0.00154,
+     "mean": 0.00563,
+     "median": 0.00154,
+     "n": 3,
+     "pos_rate": 0.667,
+     "sd": 0.01081,
+     "second_half_mean": 0.00767,
+     "t": 0.9
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "guidance",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.00601,
+     "mean": 0.00576,
+     "median": 0.01754,
+     "n": 4,
+     "pos_rate": 0.75,
+     "sd": 0.02354,
+     "second_half_mean": 0.01754,
+     "t": 0.49
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "analyst",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.01932,
+     "mean": 0.00538,
+     "median": 0.00538,
+     "n": 2,
+     "pos_rate": 0.5,
+     "sd": 0.03494,
+     "second_half_mean": 0.03009,
+     "t": 0.22
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.00763,
+     "mean": -0.00763,
+     "median": -0.00763,
+     "n": 2,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00763,
+     "t": -99.0
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.004,
+     "median": 0.004,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.004,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "macro",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00745,
+     "median": 0.00745,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00745,
+     "t": null
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.00332,
+     "median": 0.00332,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00332,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "other",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.0149,
+     "median": 0.0149,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.0149,
+     "t": null
+    },
+    "h1": {
+     "first_half_mean": -0.00536,
+     "mean": -0.00166,
+     "median": -0.00166,
+     "n": 2,
+     "pos_rate": 0.5,
+     "sd": 0.00524,
+     "second_half_mean": 0.00204,
+     "t": -0.45
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "product",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": 0.09724,
+     "mean": 0.09724,
+     "median": 0.09724,
+     "n": 5,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.09724,
+     "t": 99.0
+    },
+    "h1": {
+     "first_half_mean": -0.00103,
+     "mean": -0.00065,
+     "median": -0.00022,
+     "n": 8,
+     "pos_rate": 0.375,
+     "sd": 0.00196,
+     "second_half_mean": -0.00027,
+     "t": -0.94
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "earnings",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00573,
+     "median": -0.00573,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00573,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.00397,
+     "median": 0.00397,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00397,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "analyst",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00113,
+     "median": -0.00113,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00113,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "stock",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": -0.00348,
+     "mean": 0.00276,
+     "median": 0.00315,
+     "n": 3,
+     "pos_rate": 0.667,
+     "sd": 0.00606,
+     "second_half_mean": 0.00588,
+     "t": 0.79
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "macro",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": -0.00192,
+     "mean": -0.00115,
+     "median": -0.00152,
+     "n": 3,
+     "pos_rate": 0.0,
+     "sd": 0.00101,
+     "second_half_mean": -0.00076,
+     "t": -1.98
+    }
+   },
+   "level": "fine",
+   "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "macro",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00261,
+     "median": -0.00261,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00261,
+     "t": null
     }
    },
    "level": "fine",
@@ -123,14 +559,24 @@
    "direction": "bull",
    "horizons": {
     "d1": {
-     "first_half_mean": 0.00237,
-     "mean": 0.00308,
-     "median": -0.0053,
-     "n": 5,
-     "pos_rate": 0.4,
-     "sd": 0.02565,
-     "second_half_mean": 0.00356,
-     "t": 0.27
+     "first_half_mean": -0.00512,
+     "mean": 0.01592,
+     "median": 0.00755,
+     "n": 36,
+     "pos_rate": 0.5,
+     "sd": 0.0428,
+     "second_half_mean": 0.03695,
+     "t": 2.23
+    },
+    "h1": {
+     "first_half_mean": -0.00019,
+     "mean": 0.00206,
+     "median": -0.00022,
+     "n": 27,
+     "pos_rate": 0.444,
+     "sd": 0.00948,
+     "second_half_mean": 0.00415,
+     "t": 1.13
     }
    },
    "level": "conf",
@@ -151,7 +597,7 @@
      "pos_rate": 1.0,
      "sd": 0.0,
      "second_half_mean": 0.00178,
-     "t": 99.0
+     "t": null
     },
     "h1": {
      "first_half_mean": null,
@@ -161,7 +607,7 @@
      "pos_rate": 0.0,
      "sd": 0.0,
      "second_half_mean": -0.00591,
-     "t": -99.0
+     "t": null
     }
    },
    "level": "conf",
@@ -176,13 +622,75 @@
    "horizons": {
     "d1": {
      "first_half_mean": 0.02334,
-     "mean": 0.02334,
+     "mean": 0.02053,
      "median": 0.02334,
-     "n": 2,
+     "n": 3,
+     "pos_rate": 1.0,
+     "sd": 0.00487,
+     "second_half_mean": 0.01912,
+     "t": 7.3
+    },
+    "h1": {
+     "first_half_mean": -0.00332,
+     "mean": 0.00064,
+     "median": 0.00046,
+     "n": 6,
+     "pos_rate": 0.5,
+     "sd": 0.00506,
+     "second_half_mean": 0.0046,
+     "t": 0.31
+    }
+   },
+   "level": "conf",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "all",
+   "conf": "lo",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00745,
+     "median": 0.00745,
+     "n": 1,
      "pos_rate": 1.0,
      "sd": 0.0,
-     "second_half_mean": 0.02334,
-     "t": 99.0
+     "second_half_mean": 0.00745,
+     "t": null
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.00332,
+     "median": 0.00332,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00332,
+     "t": null
+    }
+   },
+   "level": "conf",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "all",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": -0.00227,
+     "mean": -0.00151,
+     "median": -0.00172,
+     "n": 4,
+     "pos_rate": 0.0,
+     "sd": 0.0011,
+     "second_half_mean": -0.00076,
+     "t": -2.75
     }
    },
    "level": "conf",
@@ -196,14 +704,24 @@
    "direction": "bull",
    "horizons": {
     "d1": {
-     "first_half_mean": 0.00237,
-     "mean": 0.00308,
-     "median": -0.0053,
-     "n": 5,
-     "pos_rate": 0.4,
-     "sd": 0.02565,
-     "second_half_mean": 0.00356,
-     "t": 0.27
+     "first_half_mean": -0.00512,
+     "mean": 0.01592,
+     "median": 0.00755,
+     "n": 36,
+     "pos_rate": 0.5,
+     "sd": 0.0428,
+     "second_half_mean": 0.03695,
+     "t": 2.23
+    },
+    "h1": {
+     "first_half_mean": -0.00019,
+     "mean": 0.00206,
+     "median": -0.00022,
+     "n": 27,
+     "pos_rate": 0.444,
+     "sd": 0.00948,
+     "second_half_mean": 0.00415,
+     "t": 1.13
     }
    },
    "level": "asset",
@@ -224,7 +742,7 @@
      "pos_rate": 1.0,
      "sd": 0.0,
      "second_half_mean": 0.00178,
-     "t": 99.0
+     "t": null
     },
     "h1": {
      "first_half_mean": null,
@@ -234,7 +752,7 @@
      "pos_rate": 0.0,
      "sd": 0.0,
      "second_half_mean": -0.00591,
-     "t": -99.0
+     "t": null
     }
    },
    "level": "asset",
@@ -249,13 +767,75 @@
    "horizons": {
     "d1": {
      "first_half_mean": 0.02334,
-     "mean": 0.02334,
+     "mean": 0.02053,
      "median": 0.02334,
-     "n": 2,
+     "n": 3,
+     "pos_rate": 1.0,
+     "sd": 0.00487,
+     "second_half_mean": 0.01912,
+     "t": 7.3
+    },
+    "h1": {
+     "first_half_mean": -0.00332,
+     "mean": 0.00064,
+     "median": 0.00046,
+     "n": 6,
+     "pos_rate": 0.5,
+     "sd": 0.00506,
+     "second_half_mean": 0.0046,
+     "t": 0.31
+    }
+   },
+   "level": "asset",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "all",
+   "conf": "all",
+   "direction": "bull",
+   "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": 0.00745,
+     "median": 0.00745,
+     "n": 1,
      "pos_rate": 1.0,
      "sd": 0.0,
-     "second_half_mean": 0.02334,
-     "t": 99.0
+     "second_half_mean": 0.00745,
+     "t": null
+    },
+    "h1": {
+     "first_half_mean": null,
+     "mean": 0.00332,
+     "median": 0.00332,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.00332,
+     "t": null
+    }
+   },
+   "level": "asset",
+   "mag": "all",
+   "tradeable": false
+  },
+  {
+   "asset": "index",
+   "category": "all",
+   "conf": "all",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": -0.00227,
+     "mean": -0.00151,
+     "median": -0.00172,
+     "n": 4,
+     "pos_rate": 0.0,
+     "sd": 0.0011,
+     "second_half_mean": -0.00076,
+     "t": -2.75
     }
    },
    "level": "asset",
@@ -264,15 +844,15 @@
   }
  ],
  "counts": {
-  "bear": 2,
-  "bull": 6,
-  "duplicate": 0,
-  "none": 52,
-  "open": 8,
-  "raw": 544,
+  "bear": 25,
+  "bull": 97,
+  "duplicate": 7,
+  "none": 506,
+  "open": 122,
+  "raw": 674,
   "scored": 0,
-  "signals": 60,
-  "unscorable": 0
+  "signals": 674,
+  "unscorable": 39
  },
  "crypto_15m": [
   {
@@ -289,7 +869,7 @@
      "pos_rate": 1.0,
      "sd": 0.0,
      "second_half_mean": 0.0098,
-     "t": 99.0
+     "t": null
     }
    },
    "level": "fine",
@@ -314,15 +894,15 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 0.1 of 6 weeks scanned",
+   "only 0.2 of 6 weeks scanned",
    "only 0 of 150 signals scored at d3",
-   "scanner uptime 3% < 95%",
+   "scanner uptime 19% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 0,
   "tradeable": [],
-  "uptime_28d": 0.031,
-  "weeks": 0.1
+  "uptime_28d": 0.188,
+  "weeks": 0.2
  },
  "prompt_versions": [
   "classify-v1"
