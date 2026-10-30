@@ -283,3 +283,67 @@ CANDIDATE: NUE ref=271.79 stop_pct=7.0 sector=XLB g6=PASS g7=PASS
 EVENT_TODAY=none: satellites allowed. SAT_SLOTS=1 → market-open fills at most one; rank order XLE (XLE), JNJ (XLV), KO (XLP), NUE (XLB). 4 candidates / 4 sectors. Core HOLD (in band), no core order.
 
 Health: run 07:11 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
+
+## 2026-10-30 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-10-30 07:13 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-09
+
+### Regime and sectors
+REGIME risk-on | SPY 769.36 vs SMA200 728.53 (+5.6%) | 61 consecutive closes above
+Top sectors (bars through 2026-10-29): 1 XLE (+11.62) | 2 XLV (+9.31) | 3 XLP (+4.61) | 4 XLB (+4.08) | 5 XLY (+1.49) | 6 XLU (+1.39) | 7 XLF (+1.38)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=2 (positions 1/3, today 0/2, week 1/3)
+REGIME risk-on (SPY 769.36 vs SMA200 728.53; 61 consecutive closes above)
+CORE SPYM: 14 sh = $1,255.66 (63.2%) | target 64.5% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 7
+Top: PLTR (XLK), ABBV (XLV), XLE (held), PG (XLP), PM (XLP), KO (XLP), XLP
+Near misses: AMZN G3; TJX G3; CMG G3; BAC G3; SCHW G3; JNJ G4; XOM G4; CVX G4; EOG G4; SLB G4; NEE G3; CEG G3
+
+### Yesterday's candidates
+- XLE: FILLED 3 @ 68.78, stop f301574d live.
+- JNJ: dropped: G8 qty 0 / no slot / G11 spread 4.54%; today fails G4.
+- KO: not filled: no slot after XLE; re-screened today, passes.
+- NUE: dropped: no slot / G11 spread 5.09%; absent from today's pass list.
+
+### Candidates
+#### Rejected
+- PLTR (XLK): G6 FAIL — earnings 2026-11-02 (estimated, not confirmed) < 2026-11-09 [perplexity: marketbeat]
+- ABBV (XLV): G6 FAIL — earnings 2026-10-30 confirmed (today) [perplexity: AbbVie]
+- XLE: G0 FAIL — already held
+- XLV: G4 FAIL — close 184.04 vs SMA20+2xATR 181.06
+- XLP (ETF): screen OK; not checked further — single-stock XLP names cover the sector (backup only)
+
+#### 1. PG — Procter & Gamble (XLP, rank 3)
+G1 PASS $160.59 vs cap $298.16 | G2 PASS ADV20 $1555M | G3 PASS 160.59 > SMA50 149.62 > SMA200 148.85 | G4 PASS R5 -3.0%, close 160.59 vs 161.82 | G5 PASS rank 3, RS63 +8.2% | G8 PASS stop 7.0% (~149.35), target 183.07, qty 1 = $160.59 (8.1%)
+G6 PASS — reported Q1 FY27 ~2026-10-24; next 2027-01-20 (estimated) >= 2026-11-09; last report <45d [perplexity: stockrow, yahoo finance]
+G7 PASS — Q1 beat (adj EPS $2.00, organic sales +4%), Freedom Broker upgrade to Buy, BNP PT $189; XLP rank 3, above SMA50>SMA200. Risk: input-cost/FX headwind raised to ~11% of core EPS, Health Care volume -2.9%.
+News feed: (none)
+SCREEN_OK: PG ref=160.59 stop_pct=7.0 sector=XLP
+CANDIDATE: PG ref=160.59 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+#### 2. PM — Philip Morris International (XLP, rank 3)
+G1 PASS $208.50 vs cap $298.16 | G2 PASS ADV20 $914M | G3 PASS 208.50 > SMA50 193.80 > SMA200 181.69 | G4 PASS R5 +3.4%, close 208.50 vs 210.55 | G5 PASS rank 3, RS63 +6.3% | G8 PASS stop 7.0% (~193.91), target 237.69, qty 1 = $208.50 (10.5%)
+G6 PASS — reported Q3 2026-10-23; next 2027-02-04 (estimated) >= 2026-11-09; last report <45d [perplexity: investbamboo]
+G7 PASS — Q3 beat (adj EPS $2.36 vs +$0.06), smoke-free growth (IQOS/ZYN), dividend +8.8%, Argus PT $220; XLP rank 3, above SMA50>SMA200. Risk: US ZYN investment/pricing pressure on Q4 operating income, Ukraine disruption.
+News feed: (none)
+SCREEN_OK: PM ref=208.50 stop_pct=7.0 sector=XLP
+CANDIDATE: PM ref=208.50 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+#### 3. KO — Coca-Cola (XLP, rank 3)
+G1 PASS $92.82 vs cap $298.16 | G2 PASS ADV20 $1531M | G3 PASS 92.82 > SMA50 89.39 > SMA200 82.02 | G4 PASS R5 -2.6%, close 92.82 vs 94.12 | G5 PASS rank 3, RS63 +3.0% | G8 PASS stop 7.0% (~86.32), target 105.81, qty 3 = $278.46 (14.0%)
+G6 PASS — reported Q3 2026-10-27; next 2027-02-12 (estimated) >= 2026-11-09; last report <45d [perplexity: investors.coca-colacompany.com, cnbc 2026-10-27]
+G7 PASS — Q3 beat (EPS $0.91 vs $0.88, rev $13.4B), FY26 comp EPS growth guide raised to >=11%, FCF guide >=$13.0B, KFC US win from Jan 2027. Risk: 2027 FX headwind, Africa bottler sale dilution, post-rally "sell the beat".
+News feed: 10-28 17:32 ET KO bull m1 conf 0.50 earnings "Files Q3 2026 Quarterly Report" (neutral/consistent)
+SCREEN_OK: KO ref=92.82 stop_pct=7.0 sector=XLP
+CANDIDATE: KO ref=92.82 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none: satellites allowed. SAT_SLOTS=2; rank order PG, PM, KO (all XLP; sector cap 2 positions / 25% applies). Pipeline minimum NOT met on sectors: 3 candidates but only 1 sector (XLP). Every other screen passer rejected above with its failing gate (PLTR G6, ABBV G6, XLE G0, XLV G4); no other name passed the screen. Core HOLD (in band), no core order.
+
+Health: run 07:13 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
