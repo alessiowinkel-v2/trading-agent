@@ -122,3 +122,17 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** Lagged SPY on the day (-0.53% vs -0.38%) mostly from the core sale at a lower price and SPYM -0.8%; XLE +0.9% with stop live. Midday anomaly (2 unplanned pre-routine buy orders, cancelled) remains unexplained — user to check. Tomorrow: no EVENTS.md entry, no blocking event; XOM earnings 10-30 is an XLE risk, not a block.
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-10-30 — Market-Open Decision (run 10:18 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=2 | failing: none
+Core: initial CORE_ACTION=HOLD (in band). After PG+KO fills, satellites 28.4% → target 55.0% vs 63.0% held (out of band) → CORE_ACTION=SELL 2 SPYM → order 461b52fd-f67c-46fa-97a4-c0b271f79f8b (core-2026-10-30) filled 2 @ 89.26
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| PG | 160.59 | PASS | PASS | PASS | PASS | PASS (spread 0.06%) | BUY | 7b15bf39-3352-44d9-8a64-087666749451 | 1 @ 163.28 | 440e2534-a313-404b-b1ca-2616ac32b092 (new) |
+| PM | 208.50 | PASS | PASS | PASS | PASS | FAIL (spread 5.06%) | SKIP | - | - | - |
+| KO | 92.82 | PASS | PASS | PASS | PASS | PASS (spread 0.02%) | BUY | a3f3d4e9-8f0e-4693-b3df-592de9b6144e | 2 @ 94.525 | 47621c1f-34bb-4218-8573-47070c831607 (new) |
+New positions: PG 1 sh @ 163.28, trailing stop 7.0% (440e2534, new), target $183.07, thesis: Q1 beat, broker upgrades, XLP rank 3 above SMA50>SMA200.
+New positions: KO 2 sh @ 94.525, trailing stop 7.0% (47621c1f, new), target $105.81, thesis: Q3 beat, FY26 EPS guide raised, XLP rank 3.
+Note: sector XLP now 2 satellites; SPYM trimmed 14→12 to rebalance core to the satellite-adjusted target.
+Health: run 10:18 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
