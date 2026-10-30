@@ -59,3 +59,8 @@ Currently empty. Add a ticker with a reason only after repeated bad decisions on
 **Context**: Phase 1 placed zero trades in 81 days; root causes listed under "Standing lessons". The system was rebuilt: deterministic scripts for every number, a core index sleeve that is always held, a closed list of timing blocks, real-time alerts, a GitHub watchdog, and a $2,000 paper account that mirrors the planned live size.
 **Insight**: The failure was structural, not a bad call. Judge Phase 1b on execution fidelity first: did every plan produce an outcome, every fill a stop, every run a commit?
 **Suggested rule change**: none.
+
+## 2026-10-30 — Unplanned orders need a source
+**Context**: 10-29 midday found two open buys created 07:59 UTC, before any routine ran (`test-2026-10-29-dup`, `sat-2026-10-29-WMT-extra`); both cancelled, origin unknown. A WMT fill would have been a satellite with no stop.
+**Insight**: Midday's open-order sweep caught it. Anything unplanned in the order book is a possible stop-less position, so it stays flagged until the user explains it.
+**Suggested rule change**: none.
