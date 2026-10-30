@@ -142,3 +142,20 @@ KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | fa
 Stops: KO 47621c1f, PG 440e2534, XLE f301574d all live; no price below stop level. Newsfeed 6h (KO,PG,XLE): 0 signals. No satellite down ≥4% (KO +1.9%, PG +1.6%, XLE +1.5%).
 Exits: none | Retries: core DONE_TODAY (core-2026-10-30 filled); PM re-checked → VERDICT SKIP (G9 no slots/XLP cap, G11 spread 4.25%), dropped for today.
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=n/a | perplexity=n/a
+
+### 2026-10-30 - EOD Snapshot (Day 3, Friday)
+**Portfolio:** $1,976.76 | **Cash:** $349.39 (17.7%) | **Invested:** 82.3% (floor 70%, days below: 0) | **Day P&L:** $-20.83 (-1.04%) | **Phase P&L:** $-23.24 (-1.16%) | **SPY today:** -1.77% | **SPY phase:** -1.81% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 88.97 | -1.8% | $-20.94 (-1.9%) | 54.0% | - |
+| XLE | satellite | 3 | 68.78 | 69.98 | +1.9% | $3.62 (+1.8%) | 10.6% | trailing_stop 7%/hwm 70.151 (f301574d) |
+| KO | satellite | 2 | 94.53 | 94.27 | +1.6% | $-0.51 (-0.3%) | 9.5% | trailing_stop 7%/hwm 94.6399 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 161.30 | +0.4% | $-1.98 (-1.2%) | 8.2% | trailing_stop 7%/hwm 163.66 (440e2534) |
+
+**Fills today:** buy 1 PG @ 163.28 (sat-2026-10-30-PG); buy 2 KO @ 94.53 (sat-2026-10-30-KO); sell 2 SPYM @ 89.26 (core-2026-10-30)
+
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Equity -1.04% on the day vs SPY -1.77%; phase -1.16% vs SPY -1.81%, with satellites (XLE/KO/PG) cushioning the core drop. All 3 satellites carry live 7% trailing stops, no orphans. Monday 2026-11-02: no blocking event (next is NFP 2026-11-06); satellite slots are 0/3 so no new entries until a slot frees.
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
