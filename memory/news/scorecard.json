@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-31T06:13:07Z",
+ "asof": "2026-11-01T07:06:48Z",
  "buckets": [
   {
    "asset": "stock",
@@ -1059,15 +1059,25 @@
    "conf": "lo",
    "direction": "bear",
    "horizons": {
+    "d1": {
+     "first_half_mean": -0.01589,
+     "mean": -0.01275,
+     "median": -0.01275,
+     "n": 4,
+     "pos_rate": 0.0,
+     "sd": 0.00363,
+     "second_half_mean": -0.00961,
+     "t": -7.03
+    },
     "h1": {
-     "first_half_mean": -0.00924,
-     "mean": -0.00594,
-     "median": -0.00583,
-     "n": 7,
-     "pos_rate": 0.143,
-     "sd": 0.00541,
-     "second_half_mean": -0.00346,
-     "t": -2.9
+     "first_half_mean": -0.00757,
+     "mean": -0.00604,
+     "median": -0.00614,
+     "n": 8,
+     "pos_rate": 0.125,
+     "sd": 0.00502,
+     "second_half_mean": -0.00451,
+     "t": -3.4
     }
    },
    "level": "fine",
@@ -1093,6 +1103,27 @@
    },
    "level": "fine",
    "mag": "m2+",
+   "tradeable": false
+  },
+  {
+   "asset": "crypto",
+   "category": "other",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "h1": {
+     "first_half_mean": null,
+     "mean": -0.00466,
+     "median": -0.00466,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.00466,
+     "t": null
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
    "tradeable": false
   },
   {
@@ -1317,15 +1348,25 @@
    "conf": "lo",
    "direction": "bear",
    "horizons": {
+    "d1": {
+     "first_half_mean": -0.01589,
+     "mean": -0.01275,
+     "median": -0.01275,
+     "n": 4,
+     "pos_rate": 0.0,
+     "sd": 0.00363,
+     "second_half_mean": -0.00961,
+     "t": -7.03
+    },
     "h1": {
-     "first_half_mean": -0.00924,
-     "mean": -0.00594,
+     "first_half_mean": -0.00757,
+     "mean": -0.00589,
      "median": -0.00583,
-     "n": 7,
-     "pos_rate": 0.143,
-     "sd": 0.00541,
-     "second_half_mean": -0.00346,
-     "t": -2.9
+     "n": 9,
+     "pos_rate": 0.111,
+     "sd": 0.00472,
+     "second_half_mean": -0.00454,
+     "t": -3.74
     }
    },
    "level": "conf",
@@ -1533,15 +1574,25 @@
    "conf": "all",
    "direction": "bear",
    "horizons": {
+    "d1": {
+     "first_half_mean": -0.01589,
+     "mean": -0.01275,
+     "median": -0.01275,
+     "n": 4,
+     "pos_rate": 0.0,
+     "sd": 0.00363,
+     "second_half_mean": -0.00961,
+     "t": -7.03
+    },
     "h1": {
-     "first_half_mean": -0.00924,
-     "mean": -0.00594,
+     "first_half_mean": -0.00757,
+     "mean": -0.00589,
      "median": -0.00583,
-     "n": 7,
-     "pos_rate": 0.143,
-     "sd": 0.00541,
-     "second_half_mean": -0.00346,
-     "t": -2.9
+     "n": 9,
+     "pos_rate": 0.111,
+     "sd": 0.00472,
+     "second_half_mean": -0.00454,
+     "t": -3.74
     }
    },
    "level": "asset",
@@ -1550,14 +1601,14 @@
   }
  ],
  "counts": {
-  "bear": 71,
+  "bear": 75,
   "bull": 173,
   "duplicate": 51,
-  "none": 990,
-  "open": 244,
-  "raw": 1324,
+  "none": 1014,
+  "open": 248,
+  "raw": 1352,
   "scored": 0,
-  "signals": 1324,
+  "signals": 1352,
   "unscorable": 39
  },
  "crypto_15m": [
@@ -1586,6 +1637,16 @@
      "sd": 0.0,
      "second_half_mean": -0.02361,
      "t": null
+    },
+    "d5": {
+     "first_half_mean": null,
+     "mean": -0.02988,
+     "median": -0.02988,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.02988,
+     "t": null
     }
    },
    "level": "fine",
@@ -1599,14 +1660,14 @@
    "direction": "bear",
    "horizons": {
     "d1": {
-     "first_half_mean": null,
-     "mean": 0.00511,
-     "median": 0.00511,
-     "n": 1,
-     "pos_rate": 1.0,
-     "sd": 0.0,
-     "second_half_mean": 0.00511,
-     "t": null
+     "first_half_mean": -0.00281,
+     "mean": -0.00887,
+     "median": -0.00953,
+     "n": 7,
+     "pos_rate": 0.143,
+     "sd": 0.00725,
+     "second_half_mean": -0.01342,
+     "t": -3.24
     }
    },
    "level": "fine",
@@ -1631,15 +1692,15 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 0.5 of 6 weeks scanned",
+   "only 0.6 of 6 weeks scanned",
    "only 41 of 150 signals scored at d3",
-   "scanner uptime 57% < 95%",
+   "scanner uptime 64% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 41,
   "tradeable": [],
-  "uptime_28d": 0.568,
-  "weeks": 0.5
+  "uptime_28d": 0.637,
+  "weeks": 0.6
  },
  "prompt_versions": [
   "classify-v1"
