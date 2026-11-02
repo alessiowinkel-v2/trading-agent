@@ -159,3 +159,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** Equity -1.04% on the day vs SPY -1.77%; phase -1.16% vs SPY -1.81%, with satellites (XLE/KO/PG) cushioning the core drop. All 3 satellites carry live 7% trailing stops, no orphans. Monday 2026-11-02: no blocking event (next is NFP 2026-11-06); satellite slots are 0/3 so no new entries until a slot frees.
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=n/a
+
+### 2026-11-02 — Market-Open Decision (run 10:48 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no | note: fired 10:48 ET vs 10:12 schedule (~36 min late)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (in band) - SPYM 12 sh = $1,077.00 (54.2%), target 55.0%; no order
+Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 294.89 | PASS | FAIL (qty 0, budget $250.10) | FAIL (no slots 3/3) | PASS | FAIL (ask -2.0% ok; spread 1.40%) | SKIP | - | - | - |
+| NUE | 273.87 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (ask +4.7%) | SKIP | - | - | - |
+| JNJ | 273.20 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
+New positions: none. Outcome: all 3 candidates skipped, no slot (XLE, KO, PG held with stops).
+Health: run 10:48 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
