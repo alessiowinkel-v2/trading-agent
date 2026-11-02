@@ -179,3 +179,19 @@ Core: CORE_ACTION=HOLD (in band) - SPYM 12 sh = $1,071.60 (54.1%), target 55.0%
 Stops: KO, PG, XLE all have live trailing stops (STATE.md). Positions: XLE change_today -3.36% (above -4% threshold, no news check); no satellite below stop; newsfeed 0 signals (KO, PG, XLE).
 Exits: none | Retries: ABBV, NUE, JNJ re-checked via ks.py --check: SKIP (G8 qty 0, G9 no slots 3/3; ABBV/NUE also G11). Dropped for today. PM was dropped in pre-market.
 Health: run 13:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-02 - EOD Snapshot (Day 4, Monday)
+**Portfolio:** $1,970.24 | **Cash:** $349.37 (17.7%) | **Invested:** 82.3% (floor 70%, days below: 0) | **Day P&L:** $-6.32 (-0.32%) | **Phase P&L:** $-29.76 (-1.49%) | **SPY today:** -0.48% | **SPY phase:** -2.28% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 88.62 | -0.4% | $-25.08 (-2.3%) | 54.0% | - |
+| XLE | satellite | 3 | 68.78 | 67.38 | -3.8% | $-4.19 (-2.0%) | 10.3% | trailing_stop 7%/hwm 70.151 (f301574d) |
+| KO | satellite | 2 | 94.53 | 95.87 | +1.9% | $2.68 (+1.4%) | 9.7% | trailing_stop 7%/hwm 96.255 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 163.56 | +1.2% | $0.28 (+0.2%) | 8.3% | trailing_stop 7%/hwm 164.355 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Flat day, no fills; equity -0.32% vs SPY -0.48%, phase -1.49% vs SPY -2.28%. All 3 satellites stopped, no orphans. Tomorrow: no blocking event (NFP is 2026-11-06).
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
