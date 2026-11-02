@@ -347,3 +347,62 @@ CANDIDATE: KO ref=92.82 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
 EVENT_TODAY=none: satellites allowed. SAT_SLOTS=2; rank order PG, PM, KO (all XLP; sector cap 2 positions / 25% applies). Pipeline minimum NOT met on sectors: 3 candidates but only 1 sector (XLP). Every other screen passer rejected above with its failing gate (PLTR G6, ABBV G6, XLE G0, XLV G4); no other name passed the screen. Core HOLD (in band), no core order.
 
 Health: run 07:13 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
+
+## 2026-11-02 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-02 07:30 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-10
+
+### Regime and sectors
+REGIME risk-on | SPY 755.72 vs SMA200 728.85 (+3.7%) | 61 consecutive closes above
+Top sectors (bars through 2026-10-30): 1 XLE (+16.06) | 2 XLV (+13.26) | 3 XLP (+9.01) | 4 XLB (+6.69) | 5 XLU (+4.35) | 6 XLF (+2.76) | 7 XLY (+2.49)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 755.72 vs SMA200 728.85; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,071.96 (54.2%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 7
+Top: ABBV (XLV), PG (XLP, held), PM (XLP), KO (XLP, held), NUE (XLB), JNJ (XLV), XLF
+Near misses: PLTR G3; AMZN G3; TJX G3; BAC G3; SCHW G3; XOM G4; CVX G4; EOG G4; SLB G4; CEG G3; VST G3; FCX G3
+
+### Yesterday's candidates (10-30 plan)
+- PG: FILLED 1 @ 163.28, stop 440e2534 live.
+- KO: FILLED 2 @ 94.525, stop 47621c1f live.
+- PM: not filled: G11 spread 5.06% at open; re-check midday G9 no slots/XLP cap. Dropped.
+
+### Candidates
+(Screen tables: all G1-G5, G8 PASS for each; see screen.py candidate output 2026-11-02.)
+#### Rejected / not used
+- PG, KO: G0 FAIL — already held
+- PM (XLP): screen OK but XLP sector cap (2 positions) reached; not checked further for G6/G7
+- XLF (ETF): screen OK; backup only, not checked further (3 stock candidates from 2 sectors found)
+
+#### 1. ABBV — AbbVie (XLV, rank 2)
+G1 PASS $294.89 vs cap $296.82 | G2 PASS ADV20 $1488M | G3 PASS 294.89 > SMA50 269.29 > SMA200 237.10 | G4 PASS R5 +3.2%, close 294.89 vs 295.44 | G5 PASS rank 2, RS63 +20.6% | G8 PASS stop 7.0% (~274.25), target 336.17, qty 1 = $294.89 (14.9%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-11-10; Q3 reported 2026-10-30 [perplexity: theearningsmadness]
+G7 PASS — Q3 beat (adj EPS $3.82, rev $17.4B), FY26 EPS outlook raised, Skyrizi +22.9%, Breakthrough designations, Apogee acquisition closed; XLV rank 2 above SMA50>SMA200. Risk: post-earnings run at 52w high (-1.3%), price near the G1 cap.
+News feed: (none)
+CANDIDATE: ABBV ref=294.89 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 2. NUE — Nucor (XLB, rank 4)
+G1 PASS $273.87 vs cap $296.82 | G2 PASS ADV20 $338M | G3 PASS 273.87 > SMA50 253.79 > SMA200 223.99 | G4 PASS R5 +6.1%, close 273.87 vs 276.06 | G5 PASS rank 4, RS63 +5.1% | G8 PASS stop 7.0% (~254.70), target 312.21, qty 1 = $273.87 (13.8%)
+G6 PASS — next report 2027-01-26 (estimated) >= 2026-11-10; Q3 reported 2026-10-26 [perplexity: fiscal.ai]
+G7 PASS — Q3 EPS $5.80, record shipments, ASP +18.7% y/y, Q4 guided in line/above Q3, backlog extended into 2028, PT raises (Barclays $320). Risk: commissioning costs/startup margin headwind into 2027; prior spread issues at open (5.09% on 10-30).
+News feed: (none)
+CANDIDATE: NUE ref=273.87 stop_pct=7.0 sector=XLB g6=PASS g7=PASS
+
+#### 3. JNJ — Johnson & Johnson (XLV, rank 2)
+G1 PASS $273.20 vs cap $296.82 | G2 PASS ADV20 $1990M | G3 PASS 273.20 > SMA50 265.60 > SMA200 246.99 | G4 PASS R5 +3.6%, close 273.20 vs 276.27 | G5 PASS rank 2, RS63 +7.6% | G8 PASS stop 7.0% (~254.08), target 311.45, qty 1 = $273.20 (13.8%)
+G6 PASS — next report 2027-01-26 (estimated) >= 2026-11-10; last report <45d [perplexity: barrons]
+G7 PASS — Q3 rev $25.4B, 2026 guidance raised, oncology data (amivantamab SC, Erleada PROTEUS), new 12-month high; XLV rank 2 above SMA50>SMA200. Risk: near highs after a run; sector concentration with ABBV (XLV cap 2).
+News feed: (none)
+CANDIDATE: JNJ ref=273.20 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none, but SAT_SLOTS=0 (3/3 positions: XLE, KO, PG): no new satellite entries unless a slot frees (stop-out). Pipeline minimum met: 3 candidates, 2 sectors (XLV, XLB). Core HOLD (in band), no core order. Next: NFP 2026-11-06 blocks entries.
+
+Health: run 07:30 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
