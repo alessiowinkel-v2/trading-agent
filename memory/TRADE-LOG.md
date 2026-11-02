@@ -172,3 +172,10 @@ Maintenance: none
 | JNJ | 273.20 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
 New positions: none. Outcome: all 3 candidates skipped, no slot (XLE, KO, PG held with stops).
 Health: run 10:48 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-02 — Midday (run 13:15 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none
+Core: CORE_ACTION=HOLD (in band) - SPYM 12 sh = $1,071.60 (54.1%), target 55.0%
+Stops: KO, PG, XLE all have live trailing stops (STATE.md). Positions: XLE change_today -3.36% (above -4% threshold, no news check); no satellite below stop; newsfeed 0 signals (KO, PG, XLE).
+Exits: none | Retries: ABBV, NUE, JNJ re-checked via ks.py --check: SKIP (G8 qty 0, G9 no slots 3/3; ABBV/NUE also G11). Dropped for today. PM was dropped in pre-market.
+Health: run 13:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
