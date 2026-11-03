@@ -213,3 +213,19 @@ Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=
 KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none (all 3 satellites have stops; no tighten/trim)
 Exits: none (no satellite below stop; none down ≥4% today; newsfeed 0 signals KO/PG/XLE) | Retries: core HOLD (54.2%, in band). ABBV, NUE, JNJ re-checked: SKIP again (G8 qty 0, budget $250.79; G9 no slots 3/3); G11 now PASS. Dropped for today.
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-03 - EOD Snapshot (Day 5, Tuesday)
+**Portfolio:** $1,966.92 | **Cash:** $349.37 (17.8%) | **Invested:** 82.2% (floor 70%, days below: 0) | **Day P&L:** $-1.66 (-0.08%) | **Phase P&L:** $-33.08 (-1.65%) | **SPY today:** +0.30% | **SPY phase:** -1.99% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 88.92 | +0.4% | $-21.51 (-2.0%) | 54.2% | - |
+| XLE | satellite | 3 | 68.78 | 66.57 | -1.0% | $-6.62 (-3.2%) | 10.2% | trailing_stop 7%/hwm 70.151 (f301574d) |
+| KO | satellite | 2 | 94.53 | 94.66 | -1.2% | $0.27 (+0.1%) | 9.6% | trailing_stop 7%/hwm 96.255 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 161.51 | -1.3% | $-1.77 (-1.1%) | 8.2% | trailing_stop 7%/hwm 164.355 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** No trades; core HOLD in band (54.2% vs 55% target), all 3 satellites stopped. Day -0.08% vs SPY +0.30%; phase -1.65% vs SPY -1.99% (still ahead). Tomorrow 11-04: no blocking event (NFP is 11-06).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a

@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-03T18:09:10Z",
+ "asof": "2026-11-03T21:38:39Z",
  "eod": {
   "2026-10-27": {
    "equity": 2000.0,
@@ -158,6 +158,57 @@
    "regime": "risk-on",
    "sat_pct": 0.2829,
    "spy_close": 752.1
+  },
+  "2026-11-03": {
+   "cash": 349.37,
+   "equity": 1966.92,
+   "invested": 0.8224,
+   "ks_fail": [],
+   "positions": [
+    {
+     "avg": 94.525,
+     "last": 94.66,
+     "pct": 0.0963,
+     "plpc": 0.00143,
+     "qty": 2.0,
+     "role": "satellite",
+     "stop": "7%",
+     "sym": "KO"
+    },
+    {
+     "avg": 163.28,
+     "last": 161.51,
+     "pct": 0.0821,
+     "plpc": -0.01084,
+     "qty": 1.0,
+     "role": "satellite",
+     "stop": "7%",
+     "sym": "PG"
+    },
+    {
+     "avg": 90.71,
+     "last": 88.9172,
+     "pct": 0.5425,
+     "plpc": -0.01976,
+     "qty": 12.0,
+     "role": "core",
+     "stop": "-",
+     "sym": "SPYM"
+    },
+    {
+     "avg": 68.776667,
+     "last": 66.5706,
+     "pct": 0.1015,
+     "plpc": -0.03208,
+     "qty": 3.0,
+     "role": "satellite",
+     "stop": "7%",
+     "sym": "XLE"
+    }
+   ],
+   "regime": "risk-on",
+   "sat_pct": 0.2799,
+   "spy_close": 754.35
   }
  },
  "filled": {
