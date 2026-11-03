@@ -195,3 +195,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** Flat day, no fills; equity -0.32% vs SPY -0.48%, phase -1.49% vs SPY -2.28%. All 3 satellites stopped, no orphans. Tomorrow: no blocking event (NFP is 2026-11-06).
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-03 — Market-Open Decision (run 10:13 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (in band; SPYM 12 sh = 54.2% vs target 55.0%, band +/-5pp) - no order. MAINTENANCE=none.
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 288.84 | PASS | FAIL (qty 0, budget $251.07) | FAIL (no slots 3/3) | PASS | FAIL (spread 1.79%) | SKIP | - | - | - |
+| NUE | 277.65 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (spread 3.99%) | SKIP | - | - | - |
+| JNJ | 270.56 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (ask +3.2% vs ref; spread 3.69%) | SKIP | - | - | - |
+| COP (checked, not planned) | none | PASS | FAIL | FAIL | PASS | FAIL | SKIP | - | - | - |
+New positions: none. Slots 3/3 (XLE, KO, PG), as the pre-market plan anticipated.
+Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
