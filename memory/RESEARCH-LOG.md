@@ -406,3 +406,58 @@ CANDIDATE: JNJ ref=273.20 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
 EVENT_TODAY=none, but SAT_SLOTS=0 (3/3 positions: XLE, KO, PG): no new satellite entries unless a slot frees (stop-out). Pipeline minimum met: 3 candidates, 2 sectors (XLV, XLB). Core HOLD (in band), no core order. Next: NFP 2026-11-06 blocks entries.
 
 Health: run 07:30 ET | preflight=0 | mode=PAPER | ks=0 failing | notify=ok | perplexity=ok
+
+## 2026-11-03 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-03 07:10 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-11
+
+### Regime and sectors
+REGIME risk-on | SPY 752.10 vs SMA200 729.15 (+3.1%) | 61 consecutive closes above
+Top sectors (bars through 2026-11-02): 1 XLV (+14.87) | 2 XLE (+13.37) | 3 XLP (+11.98) | 4 XLB (+8.91) | 5 XLU (+6.71) | 6 XLY (+6.02) | 7 XLF (+5.91)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 752.10 vs SMA200 729.15; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,060.30 (53.9%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 11
+Top: COP (XLE), CVX (XLE), ABBV (XLV), XOM (XLE), XLE (held), PM (XLP), PG (held), EOG (XLE), NUE (XLB), JNJ (XLV)
+Near misses: PLTR G3; AMZN G3; TJX G3; BAC G3; SCHW G3; SLB G3; KO G4; CEG G3; VST G3; FCX G3; NEM G3; AMT G3
+
+### Candidates
+(screen.py candidate tables 2026-11-03: G1-G5, G8 PASS for COP, ABBV, NUE, JNJ, PM.)
+#### Rejected / not used
+- COP (XLE): G6 FAIL — earnings 2026-11-05 confirmed < EARNINGS_OK_FROM 2026-11-11 [simplywall.st / alphastreet]
+- CVX, XOM, EOG (XLE): not checked — XLE already held; COP covered the sector and failed G6
+- PM (XLP): screen OK; XLP holds 2 (KO, PG) = sector cap; not checked further
+- PG, XLE: G0 FAIL — held
+
+#### 1. ABBV — AbbVie (XLV, rank 1)
+G1 PASS $288.84 vs cap $294.87 | G2 PASS ADV20 $1516M | G3 PASS 288.84 > 269.77 > 237.46 | G4 PASS R5 +0.7%, close 288.84 vs 296.45 | G5 PASS rank 1, RS63 +21.0% | G8 PASS stop 7.0% (~268.62), target 329.28, qty 1 = $288.84 (14.7%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-11-11; Q3 reported 2026-10-30 [perplexity: theearningsmadness]
+G7 PASS — Q3 beat (adj EPS $3.82, rev $17.4B), FY26 EPS outlook raised to $13.95–13.99, Skyrizi/Rinvoq growth, etentamig BLA accepted (10-29), Barclays PT $325 (11-02). XLV rank 1, trend intact. Risk: near 52w high and near the G1 price cap.
+News feed: (none)
+CANDIDATE: ABBV ref=288.84 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 2. NUE — Nucor (XLB, rank 4)
+G1 PASS $277.65 vs cap $294.87 | G2 PASS ADV20 $343M | G3 PASS 277.65 > 254.47 > 224.51 | G4 PASS R5 +7.9%, close 277.65 vs 278.86 | G5 PASS rank 4, RS63 +3.8% (rank <=7) | G8 PASS stop 7.0% (~258.21), target 316.52, qty 1 = $277.65 (14.1%)
+G6 PASS — next report 2027-01-25 (estimated) >= 2026-11-11; Q3 reported 2026-10-27 [perplexity: zacks]
+G7 PASS — Strongest quarter in 3+ yrs (EPS $5.80, record shipments), Q4 guided flat to higher, towers/structures backlog into 2028, new mills shipping, PT raises (Barclays $320, BofA $300). Risk: startup costs ($124M) and close to G4 chase limit (close 277.65 vs 278.86).
+News feed: 11-02 14:01 ET bull — Nucor Secures Automotive Steel Contract with General Motors (conf 0.55).
+CANDIDATE: NUE ref=277.65 stop_pct=7.0 sector=XLB g6=PASS g7=PASS
+
+#### 3. JNJ — Johnson & Johnson (XLV, rank 1)
+G1 PASS $270.56 vs cap $294.87 | G2 PASS ADV20 $1975M | G3 PASS 270.56 > 265.61 > 247.24 | G4 PASS R5 +1.6%, close 270.56 vs 275.32 | G5 PASS rank 1, RS63 +8.6% | G8 PASS stop 7.0% (~251.62), target 308.44, qty 1 = $270.56 (13.8%)
+G6 PASS — next report 2027-01-26 (estimated) >= 2026-11-11; last report 2026-10-27 (<45d) [perplexity: barrons]
+G7 PASS — Q3 beat, FY26 guidance reaffirmed; oncology (amivantamab SC, Erleada), icotrokinra Ph2b UC hit (11-02), MedTech data; 12-month high; Enterprise Business Review 2026-12-08. Risk: XLV concentration with ABBV (sector cap 2), Stelara erosion.
+News feed: (none)
+CANDIDATE: JNJ ref=270.56 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none, but SAT_SLOTS=0 (3/3: XLE, KO, PG): no new satellite entries unless a slot frees (stop-out). Pipeline minimum met: 3 candidates, 2 sectors (XLV, XLB). Core HOLD (in band), no core order. NFP 2026-11-06 blocks entries.
+
+Health: run 07:10 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
