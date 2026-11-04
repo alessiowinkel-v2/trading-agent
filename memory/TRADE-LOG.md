@@ -250,3 +250,19 @@ Stops verified: ABBV a306f4a4 (new, 7%), KO 47621c1f (new, 7%), PG 440e2534 (new
 Exits: XLE 3 sh stopped out by trailing stop at 64.67 (filled 2026-11-04 14:33 UTC = 09:33 ET, stop-2026-10-29-XLE; before market-open's run, explains the 2/3 positions and KS-11 loser). No exit placed by midday. Gap check: no satellite below its stop; none down ≥4% today; newsfeed 6h: 0 signals on ABBV/KO/PG.
 Retries: no core retry (HOLD). CVX/JNJ/XOM `--check` → SKIP again (G8 qty 0, G9 no slots 3/3; XOM also G11 ask -5.3% vs ref) — dropped for today.
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-04 - EOD Snapshot (Day 6, Wednesday)
+**Portfolio:** $1,996.38 | **Cash:** $258.60 (13.0%) | **Invested:** 87.0% (floor 70%, days below: 0) | **Day P&L:** $29.95 (+1.52%) | **Phase P&L:** $-3.62 (-0.18%) | **SPY today:** +1.65% | **SPY phase:** -0.37% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 90.39 | +1.8% | $-3.84 (-0.4%) | 54.3% | - |
+| ABBV | satellite | 1 | 284.78 | 294.49 | +3.0% | $9.71 (+3.4%) | 14.8% | trailing_stop 7%/hwm 295.4 (a306f4a4) |
+| KO | satellite | 2 | 94.53 | 95.82 | +1.1% | $2.58 (+1.4%) | 9.6% | trailing_stop 7%/hwm 96.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 166.98 | +3.0% | $3.70 (+2.3%) | 8.4% | trailing_stop 7%/hwm 168.17 (440e2534) |
+
+**Fills today:** sell 3 XLE @ 64.67 (stop-2026-10-29-XLE); buy 1 ABBV @ 284.78 (sat-2026-11-04-ABBV)
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** XLE stopped out at open (09:33 ET), ABBV bought as replacement with stop set; all 3 satellites protected, core in band (HOLD). Day +1.52% trailed SPY +1.65%; phase -0.18% vs SPY -0.37%. Tomorrow 11-05: no blocking event (NFP is Fri 11-06).
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
