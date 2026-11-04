@@ -67,13 +67,13 @@
   }
  },
  "classify_attempts": {},
- "cursor_updated_at": "2026-11-04T03:16:16Z",
+ "cursor_updated_at": "2026-11-04T03:36:14Z",
  "gate_met": false,
- "last_commit_utc": "2026-11-04T03:22:02Z",
+ "last_commit_utc": "2026-11-04T03:52:00Z",
  "last_error": "",
- "last_new": 2,
- "last_ok_utc": "2026-11-04T03:21:59Z",
- "last_run_utc": "2026-11-04T03:21:59Z",
+ "last_new": 1,
+ "last_ok_utc": "2026-11-04T03:52:00Z",
+ "last_run_utc": "2026-11-04T03:52:00Z",
  "last_score_attempt_utc": "2026-11-03T07:07:30Z",
  "last_score_utc": "2026-11-03T07:07:30Z",
  "more_pending": false,
@@ -87,11 +87,11 @@
   "2026-10-31": 85,
   "2026-11-01": 94,
   "2026-11-02": 70,
-  "2026-11-03": 72
+  "2026-11-03": 74
  },
  "totals": {
   "classified": 1887,
-  "raw": 1992,
+  "raw": 1993,
   "signals": 346
  }
 }
