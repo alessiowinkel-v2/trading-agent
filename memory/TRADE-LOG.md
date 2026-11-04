@@ -229,3 +229,17 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** No trades; core HOLD in band (54.2% vs 55% target), all 3 satellites stopped. Day -0.08% vs SPY +0.30%; phase -1.65% vs SPY -1.99% (still ahead). Tomorrow 11-04: no blocking event (NFP is 11-06).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-04 — Market-Open Decision (run 10:14 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=1 (pre-order) → 0 (post) | failing: none
+Core: CORE_ACTION=HOLD (SPYM 54.7%, in band) → no order
+Note: positions were 2/3 at run time (STATE.md showed 3/3 from 11-03 EOD); KS-11 shows a loser on 2026-11-04 — an earlier position closed today. Not investigated here; midday to review.
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 286.00 | PASS | PASS | PASS | PASS | PASS | BUY | 20a64454-b4d4-4203-903d-9fe47bbffc3e (sat-2026-11-04-ABBV) | 1 @ 284.78 | a306f4a4-4a63-4755-a963-dde7219f0007 (new) |
+| CVX | 225.27 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
+| JNJ | 266.17 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
+| XOM | 177.46 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (spread 1.59%) | SKIP | - | - | - |
+New positions: ABBV 1 sh @ 284.78, trailing stop 7.0% (a306f4a4-4a63-4755-a963-dde7219f0007, status new), target $326.04, thesis: Q3 beat, FY26 guidance raised, XLV rank 1, trend intact.
+Health: run 10:14 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
