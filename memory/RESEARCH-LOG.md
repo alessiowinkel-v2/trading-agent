@@ -461,3 +461,69 @@ CANDIDATE: JNJ ref=270.56 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
 EVENT_TODAY=none, but SAT_SLOTS=0 (3/3: XLE, KO, PG): no new satellite entries unless a slot frees (stop-out). Pipeline minimum met: 3 candidates, 2 sectors (XLV, XLB). Core HOLD (in band), no core order. NFP 2026-11-06 blocks entries.
 
 Health: run 07:10 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-04 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-04 07:13 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-12
+
+### Regime and sectors
+REGIME risk-on | SPY 754.35 vs SMA200 729.47 (+3.4%) | 61 consecutive closes above
+Top sectors (bars through 2026-11-03): 1 XLV (+13.35) | 2 XLE (+13.04) | 3 XLP (+9.33) | 4 XLU (+6.37) | 5 XLB (+5.40) | 6 XLY (+4.90) | 7 XLF (+4.70)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 754.35 vs SMA200 729.47; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,074.48 (54.3%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 11
+Top: COP (XLE), CVX (XLE), XOM (XLE), ABBV (XLV), XLE (held), PG (held), PM (XLP), KO (held), XLP, JNJ (XLV)
+Near misses: PLTR G3; AMZN G3; EOG G8; SLB G3; SO G3; CEG G3; VST G3; FCX G3; NEM G3
+
+### Candidates
+(screen.py candidate tables 2026-11-04: G1-G5, G8 PASS for ABBV, CVX, XOM, JNJ, COP.)
+#### Rejected / not used
+- COP (XLE): G6 FAIL — earnings 2026-11-05 confirmed (< EARNINGS_OK_FROM 2026-11-12) [simplywall.st / alphastreet, per 11-03 check]
+- PG, XLE, KO: G0 FAIL — held. PM, XLP: XLP holds 2 (KO, PG) = sector cap; not checked further.
+
+#### 1. ABBV — AbbVie (XLV, rank 1)
+G1 PASS $286.00 vs cap $296.92 | G2 PASS ADV20 $1533M | G3 PASS 286.00 > 270.20 > 237.81 | G4 PASS R5 -0.1%, close 286.00 vs 296.79 | G5 PASS rank 1, RS63 +18.2% | G8 PASS stop 7.0% (~265.98), target 326.04, qty 1 = $286.00 (14.4%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-11-12; Q3 reported 2026-10-30 [perplexity: theearningsmadness / marketbeat]
+G7 PASS — Q3 beat, FY26 EPS guidance raised, Skyrizi/Rinvoq growth, etentamig BLA accepted; XLV rank 1 and trend intact (carried from 11-03 research). Risk: near 52w high and near the G1 price cap.
+News feed: (none)
+CANDIDATE: ABBV ref=286.00 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 2. CVX — Chevron (XLE, rank 2)
+G1 PASS $225.27 vs cap $296.92 | G2 PASS ADV20 $1729M | G3 PASS 225.27 > 214.04 > 193.94 | G4 PASS R5 -1.3%, close 225.27 vs 233.57 | G5 PASS rank 2, RS63 +22.9% | G8 PASS stop 7.0% (~209.50), target 256.81, qty 1 = $225.27 (11.4%)
+G6 PASS — next report 2027-01-29 (estimated) >= 2026-11-12; Q3 reported 2026-10-30 [perplexity: theearningsmadness, source updated 2026-11-03]
+G7 PASS — Q3 beat (adj EPS $5.28 vs $4.89), downstream earnings $3.58B, net debt -$7.8B, William Blair upgrade to Buy (10-28), Venezuela and Iraq West Qurna-2 growth. Sector XLE rank 2, strong trend. Risk: oil-price sensitivity; Middle East security headlines (execs cancelled ADIPEC travel 11-03).
+News feed: 11-03 09:32 ET bull — Iraq Reaches Agreement with Chevron on West Qurna-2 Oilfield (conf 0.55).
+CANDIDATE: CVX ref=225.27 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+#### 3. JNJ — Johnson & Johnson (XLV, rank 1)
+G1 PASS $266.17 vs cap $296.92 | G2 PASS ADV20 $1990M | G3 PASS 266.17 > 265.47 > 247.48 | G4 PASS R5 -1.0%, close 266.17 vs 275.94 | G5 PASS rank 1, RS63 +5.3% | G8 PASS stop 7.0% (~247.54), target 303.43, qty 1 = $266.17 (13.4%)
+G6 PASS — next report 2027-01-26 (estimated) >= 2026-11-12; last report 2026-10-27 (<45d) [perplexity: barrons, updated 2026-11-01]
+G7 PASS — Q3 beat, FY26 guidance reaffirmed; oncology and icotrokinra Ph2b UC data (11-02); XLV rank 1 (carried from 11-03). Risk: thin margin over SMA50 (266.17 vs 265.47); XLV concentration with ABBV; Stelara erosion.
+News feed: (none)
+CANDIDATE: JNJ ref=266.17 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 4. XOM — Exxon Mobil (XLE, rank 2)
+G1 PASS $177.46 vs cap $296.92 | G2 PASS ADV20 $2199M | G3 PASS 177.46 > 168.32 > 155.09 | G4 PASS R5 -1.4%, close 177.46 vs 186.34 | G5 PASS rank 2, RS63 +19.0% | G8 PASS stop 7.0% (~165.04), target 202.30, qty 1 = $177.46 (9.0%)
+G6 PASS — next report 2027-01-29 (estimated) >= 2026-11-12; Q3 reported 2026-10-30 [perplexity: theearningsmadness, updated 2026-11-04]
+G7 PASS — Q3 beat ($15.4B, refining-led), $20B 2027 buyback, dividend +3.9%, Rovuma/Papua LNG stake increases, Kashagan claim dismissed; XLE rank 2. Risk: oil sensitivity; DZ Bank downgrade to Sell (11-04 06:31 ET).
+News feed: 11-04 06:31 ET bear — DZ Bank Downgrades Exxon Mobil to Sell (conf 0.52); 11-02 07:31 ET bull — Rovuma/Papua LNG stakes (conf 0.55). Input to G7 only, not a gate.
+CANDIDATE: XOM ref=177.46 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+### Yesterday's candidates (11-03)
+- ABBV: not filled — G8 qty 0 (budget), G9 no slots 3/3
+- NUE: not filled — G8 qty 0, G9 no slots; not in today's top-10
+- JNJ: not filled — G8 qty 0, G9 no slots
+- COP: dropped — G6 (earnings 11-05)
+
+### Decision
+EVENT_TODAY=none. Pipeline minimum met: 4 candidates, 2 sectors (XLV, XLE). SAT_SLOTS=0 (3/3: XLE, KO, PG), so no new entries unless a slot frees; also cash $349.37 vs ~$250 budget after reserve makes qty 0 likely (as on 11-03). Core HOLD (54.3%, in band), no core order. NFP 2026-11-06 blocks entries.
+
+Health: run 07:13 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
