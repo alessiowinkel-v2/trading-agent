@@ -243,3 +243,10 @@ Note: positions were 2/3 at run time (STATE.md showed 3/3 from 11-03 EOD); KS-11
 | XOM | 177.46 | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (spread 1.59%) | SKIP | - | - | - |
 New positions: ABBV 1 sh @ 284.78, trailing stop 7.0% (a306f4a4-4a63-4755-a963-dde7219f0007, status new), target $326.04, thesis: Q3 beat, FY26 guidance raised, XLV rank 1, trend intact.
 Health: run 10:14 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-04 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 (3/3) | failing: none | Maintenance: none (CORE_ACTION=HOLD, SPYM 54.5%)
+Stops verified: ABBV a306f4a4 (new, 7%), KO 47621c1f (new, 7%), PG 440e2534 (new, 7%). No orphans, no open buys.
+Exits: XLE 3 sh stopped out by trailing stop at 64.67 (filled 2026-11-04 14:33 UTC = 09:33 ET, stop-2026-10-29-XLE; before market-open's run, explains the 2/3 positions and KS-11 loser). No exit placed by midday. Gap check: no satellite below its stop; none down ≥4% today; newsfeed 6h: 0 signals on ABBV/KO/PG.
+Retries: no core retry (HOLD). CVX/JNJ/XOM `--check` → SKIP again (G8 qty 0, G9 no slots 3/3; XOM also G11 ask -5.3% vs ref) — dropped for today.
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
