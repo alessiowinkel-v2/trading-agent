@@ -266,3 +266,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** XLE stopped out at open (09:33 ET), ABBV bought as replacement with stop set; all 3 satellites protected, core in band (HOLD). Day +1.52% trailed SPY +1.65%; phase -0.18% vs SPY -0.37%. Tomorrow 11-05: no blocking event (NFP is Fri 11-06).
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-05 — Market-Open Decision (run 10:15 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 (positions 3/3, today 0/2, week 1/3) | failing: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,059.96, 53.4% vs target 55.0%, in band) - no order. MAINTENANCE=none.
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| JNJ | 276.32 | PASS | FAIL (qty 0, budget $159.32) | FAIL (no slots 3/3) | PASS | FAIL (spread 4.40%, ask +6.2%) | SKIP | - | - | - |
+| PM | 211.28 | PASS | FAIL (qty 0) | FAIL (no slots; XLP has 2) | PASS | FAIL (spread 6.19%) | SKIP | - | - | - |
+| CVX | 216.96 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | PASS | SKIP | - | - | - |
+| XOM | 169.27 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | PASS | SKIP | - | - | - |
+New positions: none.
+Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
