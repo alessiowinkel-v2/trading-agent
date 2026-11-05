@@ -279,3 +279,10 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,059.96, 53.4% vs target 55.0%, in band) 
 | XOM | 169.27 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | PASS | SKIP | - | - | - |
 New positions: none.
 Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-05 — Midday (run 13:09 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 (3/3) | failing: none | Maintenance: none (MAINTENANCE=none; no ORPHAN/TIGHTEN/TRIM)
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,039.44, 53.3% vs target 55.0%, in band). SPYM change_today -0.04 (core, no stop, no action).
+Satellites: ABBV -0.14%, KO +0.07%, PG +0.13% today; all stops present (KS-10 PASS). None down ≥4%; newsfeed 6h: 0 signals for ABBV,KO,PG.
+Exits: none | Retries: none (core in band; JNJ/PM/CVX/XOM all blocked at open by G8 qty 0 / G9 no slots 3/3, dropped for today)
+Health: run 13:09 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
