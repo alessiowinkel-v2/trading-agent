@@ -286,3 +286,19 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,039.44, 53.3% vs target 55.0%, in band).
 Satellites: ABBV -0.14%, KO +0.07%, PG +0.13% today; all stops present (KS-10 PASS). None down ≥4%; newsfeed 6h: 0 signals for ABBV,KO,PG.
 Exits: none | Retries: none (core in band; JNJ/PM/CVX/XOM all blocked at open by G8 qty 0 / G9 no slots 3/3, dropped for today)
 Health: run 13:09 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-05 - EOD Snapshot (Day 7, Thursday)
+**Portfolio:** $1,940.52 | **Cash:** $258.58 (13.3%) | **Invested:** 86.7% (floor 70%, days below: 0) | **Day P&L:** $-54.81 (-2.75%) | **Phase P&L:** $-59.48 (-2.97%) | **SPY today:** -4.41% | **SPY phase:** -4.76% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 86.20 | -4.5% | $-54.12 (-5.0%) | 53.3% | - |
+| ABBV | satellite | 1 | 284.78 | 289.00 | -2.0% | $4.22 (+1.5%) | 14.9% | trailing_stop 7%/hwm 302.93 (a306f4a4) |
+| KO | satellite | 2 | 94.53 | 95.80 | +0.0% | $2.55 (+1.3%) | 9.9% | trailing_stop 7%/hwm 97.39 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 166.94 | -0.2% | $3.66 (+2.2%) | 8.6% | trailing_stop 7%/hwm 170.52 (440e2534) |
+
+**Fills today:** none
+KS failing: none (KS-1 daily DD -2.75% vs -3% limit, close call)
+MISSING_COMMITS: none
+**Notes:** SPY fell -4.41% today; SPYM -4.5% drove the day loss, satellites held (ABBV -2.0%, KO/PG flat). Portfolio -2.75% vs SPY -4.41%, ahead of SPY by 1.66pp on the day and 1.79pp on the phase. Tomorrow 2026-11-06 is NFP: blocks new satellite entries (no slots free anyway); core in band, HOLD.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
