@@ -302,3 +302,17 @@ KS failing: none (KS-1 daily DD -2.75% vs -3% limit, close call)
 MISSING_COMMITS: none
 **Notes:** SPY fell -4.41% today; SPYM -4.5% drove the day loss, satellites held (ABBV -2.0%, KO/PG flat). Portfolio -2.75% vs SPY -4.41%, ahead of SPY by 1.66pp on the day and 1.79pp on the phase. Tomorrow 2026-11-06 is NFP: blocks new satellite entries (no slots free anyway); core in band, HOLD.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-06 — Market-Open Decision (run 10:15 ET)
+Preflight: exit 0 | EVENT_TODAY=NFP | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=1 | failing: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,046.82, 53.9%, in band) → no order
+Note: ABBV trailing stop (a306f4a4, stop-2026-11-04-ABBV) filled 1 sh @ 281.43 at 14:34 UTC (09:34 ET), before this run; entry 284.78 → loss; KS-11 shows 2 consecutive losers (limit <3). Positions now KO, PG, SPYM (slots 1).
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 245.43 | PASS | PASS | PASS | FAIL (NFP) | FAIL (spread 6.33%, ask +3.2%) | SKIP | - | - | - |
+| NEM | 119.71 | PASS | PASS | PASS | FAIL (NFP) | FAIL (spread 4.70%, ask +4.9%) | SKIP | - | - | - |
+| JNJ | 272.32 | PASS | PASS | PASS | FAIL (NFP) | FAIL (spread 3.32%) | SKIP | - | - | - |
+| PM | 201.50 | PASS | PASS | FAIL (XLP cap) | FAIL (NFP) | FAIL (spread 10.60%, ask +4.3%) | SKIP | - | - | - |
+New positions: none.
+Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
