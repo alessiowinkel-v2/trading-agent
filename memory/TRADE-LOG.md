@@ -326,3 +326,18 @@ Newsfeed (6h, KO/PG): 0 signals.
 Retries (--check): WELL SKIP (G10 NFP, G11 spread 10.54%, ask +4.5%) | NEM SKIP (G10 NFP; G11 passes) | JNJ SKIP (G10 NFP, G11 spread 4.13%, ask +5.2%) | PM SKIP (G9 XLP cap, G10, G11 spread 10.60%) → all dropped for today.
 Orders placed/replaced/cancelled: none. Notification: none (no action).
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-06 - EOD Snapshot (Day 8, Friday)
+**Portfolio:** $1,935.60 | **Cash:** $540.01 (27.9%) | **Invested:** 72.1% (floor 70%, days below: 0) | **Day P&L:** $-5.38 (-0.28%) | **Phase P&L:** $-64.40 (-3.22%) | **SPY today:** +0.31% | **SPY phase:** -4.47% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 86.56 | +0.3% | $-49.77 (-4.6%) | 53.7% | - |
+| KO | satellite | 2 | 94.53 | 95.72 | -0.0% | $2.39 (+1.3%) | 9.9% | trailing_stop 7%/hwm 97.39 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 165.40 | -1.0% | $2.12 (+1.3%) | 8.5% | trailing_stop 7%/hwm 170.52 (440e2534) |
+
+**Fills today:** sell 1 ABBV @ 281.43 (stop-2026-11-04-ABBV)
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** ABBV stopped out at 09:34 ET (loss; KS-11 streak 2, limit <3). Equity -0.28% vs SPY +0.31% on the day; phase -3.22% vs SPY -4.47%. No NFP-day entries (all candidates failed G10/G11). Next: Monday 11-09 has no blocking event; CPI is Tue 11-10 (blocks entries).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
