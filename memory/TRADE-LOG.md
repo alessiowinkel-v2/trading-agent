@@ -316,3 +316,13 @@ Note: ABBV trailing stop (a306f4a4, stop-2026-11-04-ABBV) filled 1 sh @ 281.43 a
 | PM | 201.50 | PASS | PASS | FAIL (XLP cap) | FAIL (NFP) | FAIL (spread 10.60%, ask +4.3%) | SKIP | - | - | - |
 New positions: none.
 Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-06 — Midday Record (run 13:08 ET)
+Preflight: exit 0 | EVENT_TODAY=NFP | PAUSED=no
+KS: all 12 PASS | ORDERS_ALLOWED=yes | SAT_SLOTS=1 | equity $1,939.83
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,041.30, 53.7%, in band) → no retry
+Maintenance: none | Positions: KO 2 (+1.77%), PG 1 (+1.75%), SPYM 12; both stops `new`, no gap exits; no satellite ≤ -4% today.
+Newsfeed (6h, KO/PG): 0 signals.
+Retries (--check): WELL SKIP (G10 NFP, G11 spread 10.54%, ask +4.5%) | NEM SKIP (G10 NFP; G11 passes) | JNJ SKIP (G10 NFP, G11 spread 4.13%, ask +5.2%) | PM SKIP (G9 XLP cap, G10, G11 spread 10.60%) → all dropped for today.
+Orders placed/replaced/cancelled: none. Notification: none (no action).
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
