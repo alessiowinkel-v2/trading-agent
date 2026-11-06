@@ -594,3 +594,69 @@ CANDIDATE: XOM ref=169.27 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
 EVENT_TODAY=none (NFP is 2026-11-06, not today). Pipeline minimum met: 4 candidates, 3 sectors (XLV, XLP, XLE). SAT_SLOTS=0 (3/3: ABBV, KO, PG), cash $258.58 vs reserve — no new entries unless a slot frees; XLP is also at the 2-position sector cap, so PM cannot be bought regardless. Core HOLD (54.2%, in band), no core order.
 
 Health: run 07:10 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-06 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-06 07:11 | EVENT_TODAY=NFP | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-16
+
+### Regime and sectors
+REGIME risk-on | SPY 733.00 vs SMA200 730.15 (+0.4%) | 61 consecutive closes above | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-05): 1 XLV (+16.02) | 2 XLP (+14.89) | 3 XLRE (+9.29) | 4 XLF (+8.85) | 5 XLB (+8.37) | 6 XLU (+7.70) | 7 XLE (+7.67)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 1/3)
+REGIME risk-on (SPY 733.00 vs SMA200 730.15; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,038.81 (53.8%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 8
+Top: ABBV (held), XLV, KO (held), WELL (XLRE), NEM (XLB), PM (XLP), JNJ (XLV), XLF
+Near misses: AMZN G5; BAC G3; SCHW G3; XOM G3; CVX G3; COP G3; EOG G3; SLB G3; PG G4; SO G3; CEG G3; VST G3
+
+### Candidates (screen.py candidate tables 2026-11-06: G1-G5, G8 PASS for WELL, NEM, PM, JNJ, XLF)
+#### Rejected / not used
+- ABBV, KO: G0 FAIL — held.
+- XLV, XLF: screen passes (XLF ref 57.50) but G6/G7 not checked — four candidates already complete.
+- CVX, XOM, COP (XLE): dropped — G3 FAIL today (close fell below SMA50).
+
+#### 1. WELL — Welltower (XLRE, rank 3)
+G1 PASS $245.43 vs cap $289.85 | G2 PASS ADV20 $719M | G3 PASS 245.43 > 233.68 > 219.58 | G4 PASS R5 +5.3%, close 245.43 vs 248.49 | G5 PASS rank 3, RS63 +8.8% | G8 PASS stop 7.0% (~228.25), target 279.79, qty 1 = $245.43 (12.7%)
+G6 PASS — next report 2027-02-08 (estimated) >= 2026-11-16 [perplexity: morningstar]
+G7 PASS — XLRE rank 3; Q3 same-store NOI +15.8%, FFO guidance midpoint raised $0.10 to $6.50 (11-05), Evercore PT 265. Risk: close only 1.2% under G4 ceiling; rate sensitivity.
+News feed: (none)
+CANDIDATE: WELL ref=245.43 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. NEM — Newmont (XLB, rank 5)
+G1 PASS $119.71 | G2 PASS ADV20 $760M | G3 PASS 119.71 > 119.12 > 112.38 | G4 PASS R5 +7.1%, close 119.71 vs 123.41 | G5 PASS rank 5, RS63 +11.2% | G8 PASS stop 7.8% (~110.37), target 138.40, qty 2 = $239.42 (12.4%)
+G6 PASS — next report 2027-01-27 (estimated); last report 2026-10-22 (<45 days) [perplexity: simplywall.st/yahoo]
+G7 PASS — XLB rank 5, realised gold prices >20% y/y, 2026 production guidance maintained (5.26Moz), Q4 higher-grade ramp-ups. Risk: thin margin over SMA50 (0.5%), gold-price sensitivity, Lihir drought.
+News feed: (none)
+CANDIDATE: NEM ref=119.71 stop_pct=7.8 sector=XLB g6=PASS g7=PASS
+
+#### 3. JNJ — Johnson & Johnson (XLV, rank 1)
+G1 PASS $272.32 | G2 PASS ADV20 $2103M | G3 PASS 272.32 > 265.58 > 248.04 | G4 PASS R5 -1.0%, close 272.32 vs 278.68 | G5 PASS rank 1, RS63 +10.3% | G8 PASS stop 7.0% (~253.26), target 310.44, qty 1 = $272.32 (14.1%)
+G6 PASS — next report 2027-01-26 (estimated) [perplexity: tradytics/barrons]
+G7 PASS — XLV rank 1; Q3 revenue ~+6%, FY guidance raised despite ~$7B talc/deal charge; Tremfya/Darzalex/Rybrevant growth, PROTEUS Erleada data. Risk: talc settlement, Stelara erosion, XLV overlap with held ABBV.
+News feed: 11-05 17:36 ET bull — FDA Grants Accelerated Approval To Rybrevant Faspro (conf 0.60).
+CANDIDATE: JNJ ref=272.32 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 4. PM — Philip Morris International (XLP, rank 2)
+G1 PASS $201.50 | G2 PASS ADV20 $973M | G3 PASS 201.50 > 195.37 > 182.62 | G4 PASS R5 -3.4%, close 201.50 vs 214.69 | G5 PASS rank 2, RS63 +11.5% | G8 PASS stop 7.0% (~187.39), target 229.71, qty 1 = $201.50 (10.4%)
+G6 PASS — next report 2027-02-05 (estimated) [perplexity: tradytics]
+G7 PASS — XLP rank 2; Q3 beat (organic rev +7.1%, op income +10.5%), dividend +8.8%, IQOS/ZYN growth, Stifel Buy. Risk: ZYN 20-pouch pricing margin pressure; XLP already holds KO + PG (sector cap 2 blocks at execution).
+News feed: (none)
+CANDIDATE: PM ref=201.50 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+### Yesterday's candidates (11-05)
+- JNJ: not filled — G8 qty 0, G9 no slots 3/3, G11 spread 4.40%
+- PM: not filled — G8 qty 0, G9 no slots / XLP cap, G11 spread 6.19%
+- CVX: not filled — G8 qty 0, G9 no slots 3/3
+- XOM: not filled — G8 qty 0, G9 no slots 3/3
+
+### Decision
+EVENT_TODAY=NFP: market-open will not open new satellites today (G10); candidates recorded for the next session. Pipeline minimum met: 4 candidates, 4 sectors (XLRE, XLB, XLV, XLP). SAT_SLOTS=0 (3/3) so no entries possible even without the block. Core HOLD (53.8%, in band), no core order.
+
+Health: run 07:12 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
