@@ -64,3 +64,13 @@ Currently empty. Add a ticker with a reason only after repeated bad decisions on
 **Context**: 10-29 midday found two open buys created 07:59 UTC, before any routine ran (`test-2026-10-29-dup`, `sat-2026-10-29-WMT-extra`); both cancelled, origin unknown. A WMT fill would have been a satellite with no stop.
 **Insight**: Midday's open-order sweep caught it. Anything unplanned in the order book is a possible stop-less position, so it stays flagged until the user explains it.
 **Suggested rule change**: none.
+
+## 2026-11-06 — The core band can leave freed satellite cash idle
+**Context**: ABBV stopped out 11-06 at 09:34 ET; EOD invested fell 86.7% → 72.1% (cash $540, 27.9%) while CORE_ACTION stayed HOLD (SPYM 53.7% vs target 56.6%, inside the ±5pp band) and NFP blocked re-entry.
+**Insight**: With an empty satellite slot, the ±5pp core band plus an event block can park ~28% in cash for days, against "deployed > idle".
+**Suggested rule change**: Consider core_band ±3pp, or a core top-up when a slot is empty and cash exceeds cash_min by a set amount.
+
+## 2026-11-06 — Trailing stops fire in the opening minutes
+**Context**: Both stop-outs this week (XLE 11-04 09:33 ET, ABBV 11-06 09:34 ET) filled within 4 minutes of the open, after prior-day selloffs (SPY -4.41% on 11-05).
+**Insight**: 7% trailing stops are most exposed to the first minutes after a down day; the loss is the cost of the stop design, not an execution error. KS-11 is now at 2 of 3.
+**Suggested rule change**: none (watch the pattern for another week before proposing).
