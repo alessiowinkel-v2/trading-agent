@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-07T07:10:49Z",
+ "asof": "2026-11-08T07:06:33Z",
  "buckets": [
   {
    "asset": "stock",
@@ -1590,14 +1590,14 @@
      "t": -2.35
     },
     "d5": {
-     "first_half_mean": -0.02742,
-     "mean": -0.0379,
-     "median": -0.0379,
-     "n": 4,
-     "pos_rate": 0.0,
-     "sd": 0.01211,
-     "second_half_mean": -0.04839,
-     "t": -6.26
+     "first_half_mean": -0.0379,
+     "mean": -0.00863,
+     "median": -0.00339,
+     "n": 8,
+     "pos_rate": 0.5,
+     "sd": 0.03228,
+     "second_half_mean": 0.02064,
+     "t": -0.76
     },
     "h1": {
      "first_half_mean": -0.00757,
@@ -1814,15 +1814,25 @@
      "second_half_mean": 0.01773,
      "t": -0.2
     },
+    "d5": {
+     "first_half_mean": null,
+     "mean": 0.01622,
+     "median": 0.01622,
+     "n": 1,
+     "pos_rate": 1.0,
+     "sd": 0.0,
+     "second_half_mean": 0.01622,
+     "t": null
+    },
     "h1": {
-     "first_half_mean": -0.00466,
-     "mean": 0.00129,
-     "median": -0.00466,
-     "n": 3,
-     "pos_rate": 0.333,
-     "sd": 0.01055,
-     "second_half_mean": 0.00426,
-     "t": 0.21
+     "first_half_mean": -0.0048,
+     "mean": -0.00125,
+     "median": -0.0048,
+     "n": 4,
+     "pos_rate": 0.25,
+     "sd": 0.01,
+     "second_half_mean": 0.0023,
+     "t": -0.25
     }
    },
    "level": "fine",
@@ -1884,6 +1894,16 @@
      "pos_rate": 0.0,
      "sd": 0.0,
      "second_half_mean": -0.0024,
+     "t": null
+    },
+    "d5": {
+     "first_half_mean": null,
+     "mean": -0.03264,
+     "median": -0.03264,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.03264,
      "t": null
     },
     "h1": {
@@ -2042,6 +2062,16 @@
    "conf": "lo",
    "direction": "bear",
    "horizons": {
+    "d1": {
+     "first_half_mean": null,
+     "mean": -0.01474,
+     "median": -0.01474,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.01474,
+     "t": null
+    },
     "h1": {
      "first_half_mean": null,
      "mean": -0.00601,
@@ -2063,6 +2093,16 @@
    "conf": "lo",
    "direction": "bear",
    "horizons": {
+    "d1": {
+     "first_half_mean": -0.01474,
+     "mean": -0.01474,
+     "median": -0.01474,
+     "n": 2,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.01474,
+     "t": -99.0
+    },
     "h1": {
      "first_half_mean": -0.00742,
      "mean": -0.00252,
@@ -2157,13 +2197,13 @@
     },
     "d5": {
      "first_half_mean": -0.03215,
-     "mean": -0.03789,
-     "median": -0.03789,
-     "n": 2,
+     "mean": -0.03614,
+     "median": -0.03264,
+     "n": 3,
      "pos_rate": 0.0,
-     "sd": 0.00811,
-     "second_half_mean": -0.04362,
-     "t": -6.6
+     "sd": 0.00649,
+     "second_half_mean": -0.03813,
+     "t": -9.65
     },
     "h1": {
      "first_half_mean": -0.00591,
@@ -2381,14 +2421,14 @@
    "direction": "bear",
    "horizons": {
     "d1": {
-     "first_half_mean": -0.00764,
-     "mean": -0.00771,
-     "median": -0.00545,
-     "n": 12,
-     "pos_rate": 0.417,
-     "sd": 0.01412,
-     "second_half_mean": -0.00777,
-     "t": -1.89
+     "first_half_mean": -0.00618,
+     "mean": -0.00912,
+     "median": -0.00961,
+     "n": 15,
+     "pos_rate": 0.333,
+     "sd": 0.01285,
+     "second_half_mean": -0.01168,
+     "t": -2.75
     },
     "d3": {
      "first_half_mean": -0.0137,
@@ -2401,24 +2441,24 @@
      "t": -1.87
     },
     "d5": {
-     "first_half_mean": -0.02742,
-     "mean": -0.0379,
-     "median": -0.0379,
-     "n": 4,
-     "pos_rate": 0.0,
-     "sd": 0.01211,
-     "second_half_mean": -0.04839,
-     "t": -6.26
+     "first_half_mean": -0.0379,
+     "mean": -0.00587,
+     "median": 0.01622,
+     "n": 9,
+     "pos_rate": 0.556,
+     "sd": 0.03131,
+     "second_half_mean": 0.01976,
+     "t": -0.56
     },
     "h1": {
-     "first_half_mean": -0.00594,
-     "mean": -0.00416,
-     "median": -0.00583,
-     "n": 15,
-     "pos_rate": 0.2,
-     "sd": 0.00644,
-     "second_half_mean": -0.0026,
-     "t": -2.5
+     "first_half_mean": -0.00578,
+     "mean": -0.00445,
+     "median": -0.00592,
+     "n": 16,
+     "pos_rate": 0.188,
+     "sd": 0.00633,
+     "second_half_mean": -0.00313,
+     "t": -2.81
     }
    },
    "level": "conf",
@@ -2504,13 +2544,13 @@
     },
     "d5": {
      "first_half_mean": -0.03215,
-     "mean": -0.03789,
-     "median": -0.03789,
-     "n": 2,
+     "mean": -0.03614,
+     "median": -0.03264,
+     "n": 3,
      "pos_rate": 0.0,
-     "sd": 0.00811,
-     "second_half_mean": -0.04362,
-     "t": -6.6
+     "sd": 0.00649,
+     "second_half_mean": -0.03813,
+     "t": -9.65
     },
     "h1": {
      "first_half_mean": -0.00591,
@@ -2687,14 +2727,14 @@
    "direction": "bear",
    "horizons": {
     "d1": {
-     "first_half_mean": -0.00764,
-     "mean": -0.00771,
-     "median": -0.00545,
-     "n": 12,
-     "pos_rate": 0.417,
-     "sd": 0.01412,
-     "second_half_mean": -0.00777,
-     "t": -1.89
+     "first_half_mean": -0.00618,
+     "mean": -0.00912,
+     "median": -0.00961,
+     "n": 15,
+     "pos_rate": 0.333,
+     "sd": 0.01285,
+     "second_half_mean": -0.01168,
+     "t": -2.75
     },
     "d3": {
      "first_half_mean": -0.0137,
@@ -2707,24 +2747,24 @@
      "t": -1.87
     },
     "d5": {
-     "first_half_mean": -0.02742,
-     "mean": -0.0379,
-     "median": -0.0379,
-     "n": 4,
-     "pos_rate": 0.0,
-     "sd": 0.01211,
-     "second_half_mean": -0.04839,
-     "t": -6.26
+     "first_half_mean": -0.0379,
+     "mean": -0.00587,
+     "median": 0.01622,
+     "n": 9,
+     "pos_rate": 0.556,
+     "sd": 0.03131,
+     "second_half_mean": 0.01976,
+     "t": -0.56
     },
     "h1": {
-     "first_half_mean": -0.00594,
-     "mean": -0.00416,
-     "median": -0.00583,
-     "n": 15,
-     "pos_rate": 0.2,
-     "sd": 0.00644,
-     "second_half_mean": -0.0026,
-     "t": -2.5
+     "first_half_mean": -0.00578,
+     "mean": -0.00445,
+     "median": -0.00592,
+     "n": 16,
+     "pos_rate": 0.188,
+     "sd": 0.00633,
+     "second_half_mean": -0.00313,
+     "t": -2.81
     }
    },
    "level": "asset",
@@ -2733,14 +2773,14 @@
   }
  ],
  "counts": {
-  "bear": 143,
-  "bull": 312,
+  "bear": 146,
+  "bull": 315,
   "duplicate": 90,
-  "none": 2157,
+  "none": 2178,
   "open": 229,
-  "raw": 2741,
-  "scored": 226,
-  "signals": 2741,
+  "raw": 2768,
+  "scored": 232,
+  "signals": 2768,
   "unscorable": 39
  },
  "crypto_15m": [
@@ -2853,14 +2893,14 @@
      "t": -0.55
     },
     "d5": {
-     "first_half_mean": null,
-     "mean": -0.06664,
-     "median": -0.06664,
-     "n": 1,
-     "pos_rate": 0.0,
-     "sd": 0.0,
-     "second_half_mean": -0.06664,
-     "t": null
+     "first_half_mean": -0.06664,
+     "mean": -0.0285,
+     "median": -0.0285,
+     "n": 2,
+     "pos_rate": 0.5,
+     "sd": 0.05394,
+     "second_half_mean": 0.00964,
+     "t": -0.75
     }
    },
    "level": "fine",
@@ -2892,6 +2932,16 @@
      "sd": 0.0,
      "second_half_mean": 0.01424,
      "t": null
+    },
+    "d5": {
+     "first_half_mean": null,
+     "mean": -0.03048,
+     "median": -0.03048,
+     "n": 1,
+     "pos_rate": 0.0,
+     "sd": 0.0,
+     "second_half_mean": -0.03048,
+     "t": null
     }
    },
    "level": "fine",
@@ -2918,6 +2968,27 @@
    "level": "fine",
    "mag": "m1",
    "tradeable_15m": false
+  },
+  {
+   "asset": "crypto",
+   "category": "regulatory",
+   "conf": "lo",
+   "direction": "bear",
+   "horizons": {
+    "d1": {
+     "first_half_mean": -0.00438,
+     "mean": -0.00721,
+     "median": -0.00721,
+     "n": 2,
+     "pos_rate": 0.0,
+     "sd": 0.004,
+     "second_half_mean": -0.01004,
+     "t": -2.55
+    }
+   },
+   "level": "fine",
+   "mag": "m1",
+   "tradeable_15m": false
   }
  ],
  "gate": {
@@ -2937,14 +3008,14 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 1.5 of 6 weeks scanned",
-   "scanner uptime 73% < 95%",
+   "only 1.6 of 6 weeks scanned",
+   "scanner uptime 75% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 327,
   "tradeable": [],
-  "uptime_28d": 0.733,
-  "weeks": 1.5
+  "uptime_28d": 0.747,
+  "weeks": 1.6
  },
  "prompt_versions": [
   "classify-v1"
