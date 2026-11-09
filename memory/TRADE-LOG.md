@@ -354,3 +354,7 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,057.80, 54.1% vs target 56.8%, in band) 
 | NEM | 120.91 | PASS | FAIL | FAIL (no slots; sats 38.9% > 35%) | PASS | FAIL (spread 4.97%, ask +4.3%) | SKIP | - | - | - |
 New positions: JNJ 1 sh @ 277.04, trailing stop 7.0% (e322b867, status new), target $314.89, thesis: XLV rank 1; FY26 guidance raised, OTTAVA FDA authorization, positive Ph3 data.
 Health: run 10:17 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+KS failing: none
+MISSING_COMMITS: midday 2026-11-09
+**Notes:** Midday routine missed today (no commit). JNJ bought at open and stopped; equity +1.71% vs SPY +2.37% on the day (lag from 13% cash); phase -1.57% vs SPY -2.20%. Tomorrow 11-10 is CPI (blocks new satellite entries).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
