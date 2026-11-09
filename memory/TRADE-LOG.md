@@ -341,3 +341,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** ABBV stopped out at 09:34 ET (loss; KS-11 streak 2, limit <3). Equity -0.28% vs SPY +0.31% on the day; phase -3.22% vs SPY -4.47%. No NFP-day entries (all candidates failed G10/G11). Next: Monday 11-09 has no blocking event; CPI is Tue 11-10 (blocks entries).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-09 — Market-Open Decision (run 10:17 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=1 | failing: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,057.80, 54.1% vs target 56.8%, in band) → no order
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 291.31 | PASS | PASS | PASS | PASS | FAIL (spread 4.74%) | SKIP | - | - | - |
+| JNJ | 276.22 | PASS | PASS | PASS | PASS | PASS (spread 0.38%, ask +0.6%) | BUY | 47034bd2-73bd-48cd-93a3-7bf25af5c4ba (sat-2026-11-09-JNJ) | 1 @ 277.04 | e322b867-b33e-4c65-b1ef-ecdf4e288919 (new) |
+| WELL | 245.01 | PASS | FAIL (qty 0) | FAIL (no slots after JNJ) | PASS | PASS | SKIP | - | - | - |
+| NEM | 120.91 | PASS | FAIL | FAIL (no slots; sats 38.9% > 35%) | PASS | FAIL (spread 4.97%, ask +4.3%) | SKIP | - | - | - |
+New positions: JNJ 1 sh @ 277.04, trailing stop 7.0% (e322b867, status new), target $314.89, thesis: XLV rank 1; FY26 guidance raised, OTTAVA FDA authorization, positive Ph3 data.
+Health: run 10:17 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
