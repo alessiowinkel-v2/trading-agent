@@ -358,3 +358,16 @@ KS failing: none
 MISSING_COMMITS: midday 2026-11-09
 **Notes:** Midday routine missed today (no commit). JNJ bought at open and stopped; equity +1.71% vs SPY +2.37% on the day (lag from 13% cash); phase -1.57% vs SPY -2.20%. Tomorrow 11-10 is CPI (blocks new satellite entries).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-10 — Market-Open Decision (run 10:18 ET)
+Preflight: exit 0 | EVENT_TODAY=CPI | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = 54.0%, target 55.0%, in band) - no order. MAINTENANCE=none.
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 293.30 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | FAIL (CPI) | PASS | SKIP | - | - | - |
+| WELL | 247.35 | PASS | FAIL (qty 0) | FAIL (no slots) | FAIL (CPI) | FAIL (spread 5.32%, ask +3.9%) | SKIP | - | - | - |
+| AMZN | 266.93 | PASS | FAIL (qty 0) | FAIL (no slots) | FAIL (CPI) | PASS | SKIP | - | - | - |
+| XLF | 57.99 | PASS | FAIL (qty 2 = 5.9% < 8%) | FAIL (no slots; sats 38.6% > 35%) | FAIL (CPI) | PASS | SKIP | - | - | - |
+New positions: none. Cash $262.94 (13.3%) idle - same band/cash issue as the 11-06 lesson.
+Health: run 10:18 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
