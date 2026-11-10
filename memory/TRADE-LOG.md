@@ -371,3 +371,10 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = 54.0%, target 55.0%, in band) - no order. M
 | XLF | 57.99 | PASS | FAIL (qty 2 = 5.9% < 8%) | FAIL (no slots; sats 38.6% > 35%) | FAIL (CPI) | PASS | SKIP | - | - | - |
 New positions: none. Cash $262.94 (13.3%) idle - same band/cash issue as the 11-06 lesson.
 Health: run 10:18 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-10 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none (all 3 satellites hold trailing stops; no TIGHTEN/ORPHAN/TRIM)
+Core: CORE_ACTION=HOLD (SPYM 12 sh = 53.7%, target 55.0%, in band) - no order.
+Exits: none (JNJ +1.5%, KO +2.3%, PG +3.8% vs entry; none down >=4% today; newsfeed: 2 bull JNJ signals, no bear) | Retries: none (no CORE_ACTION; today's candidates ABBV/WELL/AMZN/XLF were SKIP at open - CPI G10 block, SAT_SLOTS=0; dropped for today)
+Equity $1,960.49 | cash $262.94 | invested 86.6%. No notification (no orders).
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
