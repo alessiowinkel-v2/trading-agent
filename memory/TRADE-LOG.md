@@ -394,3 +394,17 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** CPI day, no orders; slots full (3/3), core HOLD in band. Equity -0.07% vs SPY -0.37% on the day; phase -1.65% vs SPY -2.56%. Tomorrow: no blocking event in EVENTS.md.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-11 — Market-Open Decision (run 10:15 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (in band; SPYM 54.3% vs target 55.0%, band ±5pp) | MAINTENANCE=none
+| Candidate | Ref | G0 | G1 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 293.89 | PASS | FAIL (ask 306.81 > cap 295.02) | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | FAIL (spread 10.67%, ask +4.4%) | SKIP | - | - | - |
+| WELL | 247.66 | PASS | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
+| AMZN | 270.87 | PASS | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | PASS | SKIP | - | - | - |
+| XLF | 58.29 | PASS | PASS | FAIL (qty 2 = 5.9% < min 8%) | FAIL (no slots; sats 38.3% > 35%) | PASS | PASS | SKIP | - | - | - |
+| AMT | 190.37 | PASS | PASS | FAIL (qty 0) | FAIL (no slots) | PASS | FAIL (spread 4.99%) | SKIP | - | - | - |
+No new positions. Slots 3/3 (JNJ, KO, PG); cash $262.94 idle (13.4%) — same band/cash pattern as the 11-06 lesson.
+Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
