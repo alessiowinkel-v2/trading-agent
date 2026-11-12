@@ -450,3 +450,19 @@ KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | fa
 Core: CORE_ACTION=HOLD (SPYM 54.1% vs target 55.0%, in band)
 Exits: none (no satellite below stop; change_today JNJ +1.59%, KO +0.56%, PG +0.65%; news feed 0 signals 6h) | Retries: none — open candidates ABBV/WELL/COP/XLF dropped for today, slots 3/3 (G9)
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-12 - EOD Snapshot (Day 12, Thursday)
+**Portfolio:** $1,979.62 | **Cash:** $262.94 (13.3%) | **Invested:** 86.7% (floor 70%, days below: 0) | **Day P&L:** $0.42 (+0.02%) | **Phase P&L:** $-20.38 (-1.02%) | **SPY today:** -0.35% | **SPY phase:** -1.63% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 89.20 | -0.2% | $-18.12 (-1.7%) | 54.1% | - |
+| JNJ | satellite | 1 | 277.04 | 283.35 | +1.0% | $6.31 (+2.3%) | 14.3% | trailing_stop 7%/hwm 286.08 (e322b867) |
+| KO | satellite | 2 | 94.53 | 97.45 | -0.1% | $5.85 (+3.1%) | 9.8% | trailing_stop 7%/hwm 98.38 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 168.03 | +0.2% | $4.75 (+2.9%) | 8.5% | trailing_stop 7%/hwm 170.52 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Flat day (+0.02%) vs SPY -0.35%; phase -1.02% vs SPY -1.63%. No orders; slots 3/3, no orphan stops. Tomorrow (Fri 11-13): no blocking event in EVENTS.md; weekly review follows.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
