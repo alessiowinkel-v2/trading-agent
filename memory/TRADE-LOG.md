@@ -431,3 +431,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** No trades; slots 3/3, core in band (54.2% vs 55.0%). Day +0.70% vs SPY +1.32% (lagged); phase -1.04% vs SPY -1.28% (ahead). Tomorrow 2026-11-12: no blocking event in EVENTS.md.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-12 — Market-Open Decision (run 10:15 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (SPYM 54.0% vs target 55.0%, in band) | Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 294.98 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | FAIL (spread 4.19%) | SKIP | - | - | - |
+| WELL | 247.35 | PASS | FAIL (qty 0) | FAIL (no slots 3/3) | PASS | FAIL (spread 5.25%) | SKIP | - | - | - |
+| COP | 137.86 | PASS | FAIL (qty 1, 7.4% < 8%) | FAIL (no slots; sats 40.1% > 35%) | PASS | FAIL (ask +6.2%, spread 6.00%) | SKIP | - | - | - |
+| XLF | 58.63 | PASS | FAIL (qty 2, 5.9% < 8%) | FAIL (no slots; sats 38.6% > 35%) | PASS | PASS | SKIP | - | - | - |
+New positions: none. Cash $262.94 (13.3%) idle; slots full (JNJ, KO, PG) — same band/cash issue as 11-06 lesson.
+Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
