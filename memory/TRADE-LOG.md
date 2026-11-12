@@ -444,3 +444,9 @@ Core: CORE_ACTION=HOLD (SPYM 54.0% vs target 55.0%, in band) | Maintenance: none
 | XLF | 58.63 | PASS | FAIL (qty 2, 5.9% < 8%) | FAIL (no slots; sats 38.6% > 35%) | PASS | PASS | SKIP | - | - | - |
 New positions: none. Cash $262.94 (13.3%) idle; slots full (JNJ, KO, PG) — same band/cash issue as 11-06 lesson.
 Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-12 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none (no ORPHAN/TIGHTEN/TRIM; JNJ, KO, PG each have a trailing stop)
+Core: CORE_ACTION=HOLD (SPYM 54.1% vs target 55.0%, in band)
+Exits: none (no satellite below stop; change_today JNJ +1.59%, KO +0.56%, PG +0.65%; news feed 0 signals 6h) | Retries: none — open candidates ABBV/WELL/COP/XLF dropped for today, slots 3/3 (G9)
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
