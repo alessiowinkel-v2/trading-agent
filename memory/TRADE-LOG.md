@@ -487,3 +487,19 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = 53.6%, target 55.0%, in band)
 Stops: JNJ, KO, PG all protected (KS-10 PASS). Gap exits: none (no satellite below stop level; all up today). News feed 6h: 0 signals for JNJ/KO/PG. No satellite down >=4%.
 Exits: none | Retries: ABBV/WELL/COP/XLF checked, all SKIP (G8 qty/min size, G9 no slots 3/3 and sats cap; WELL also G11 spread 10.38%). Dropped for today.
 Health: run 13:09 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-13 - EOD Snapshot (Day 13, Friday)
+**Portfolio:** $1,976.70 | **Cash:** $262.94 (13.3%) | **Invested:** 86.7% (floor 70%, days below: 0) | **Day P&L:** $-2.23 (-0.11%) | **Phase P&L:** $-23.30 (-1.16%) | **SPY today:** -0.36% | **SPY phase:** -1.99% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 88.30 | -0.9% | $-28.89 (-2.7%) | 53.6% | - |
+| JNJ | satellite | 1 | 277.04 | 286.02 | +0.9% | $8.98 (+3.2%) | 14.5% | trailing_stop 7%/hwm 288.11 (e322b867) |
+| KO | satellite | 2 | 94.53 | 99.14 | +1.7% | $9.22 (+4.9%) | 10.0% | trailing_stop 7%/hwm 99.3 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 169.83 | +1.1% | $6.55 (+4.0%) | 8.6% | trailing_stop 7%/hwm 170.73 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** No trades; defensive satellites rose while SPYM fell, so the day beat SPY (-0.11% vs -0.36%) and the phase is ahead (-1.16% vs -1.99%). All slots full, MAINTENANCE none. Next trading day is Mon 2026-11-16; no blocking event in EVENTS.md.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
