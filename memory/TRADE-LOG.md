@@ -480,3 +480,10 @@ Maintenance: none
 | XLF | 58.21 | PASS | FAIL (qty 2, 5.9% < 8%) | FAIL (no slots; sats 39.1% > 35%) | PASS | PASS | SKIP | - | - | - |
 No new positions. Cash $262.94 idle (13.3%); all slots held by JNJ/KO/PG.
 Health: run 10:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-13 — Midday (run 13:09 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = 53.6%, target 55.0%, in band)
+Stops: JNJ, KO, PG all protected (KS-10 PASS). Gap exits: none (no satellite below stop level; all up today). News feed 6h: 0 signals for JNJ/KO/PG. No satellite down >=4%.
+Exits: none | Retries: ABBV/WELL/COP/XLF checked, all SKIP (G8 qty/min size, G9 no slots 3/3 and sats cap; WELL also G11 spread 10.38%). Dropped for today.
+Health: run 13:09 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
