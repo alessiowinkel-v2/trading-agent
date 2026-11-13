@@ -74,3 +74,8 @@ Currently empty. Add a ticker with a reason only after repeated bad decisions on
 **Context**: Both stop-outs this week (XLE 11-04 09:33 ET, ABBV 11-06 09:34 ET) filled within 4 minutes of the open, after prior-day selloffs (SPY -4.41% on 11-05).
 **Insight**: 7% trailing stops are most exposed to the first minutes after a down day; the loss is the cost of the stop design, not an execution error. KS-11 is now at 2 of 3.
 **Suggested rule change**: none (watch the pattern for another week before proposing).
+
+## 2026-11-13 — Full slots plus min-size gate strand ~13% cash
+**Context**: Week of 11-09: slots 3/3 from 11-09 open; cash $262.94 (13.3%) idle on all 5 EODs while every candidate failed G8 (qty 0 or qty 1-2 < 8% min) or G9. Core stayed HOLD (53.6% vs 55.0% target, inside ±5pp band). Bot -0.43pp vs SPY on the week.
+**Insight**: With three small defensive satellites and a ~$263 budget, the system cannot deploy the last ~13% by either route; this is structural, repeating the 11-06 lesson.
+**Suggested rule change**: Top up the core when slots are full and cash exceeds cash_min by a set amount, or narrow core_band to ±3pp.

@@ -222,3 +222,92 @@ Didn't:
 11. ❌ STRESS_TEST.md not present in the repo; Day-1 mechanics test cannot be evidenced.
 
 Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)
+
+---
+
+## Week ending 2026-11-13
+
+### Stats
+| Metric | Value |
+|---|---|
+| Start (close 2026-11-06) | $1,935.45 |
+| End | $1,977.42 |
+| Week return | +2.17% |
+| SPY week | +2.59% |
+| Bot vs SPY (week) | -0.43% |
+| Phase return / SPY phase | -1.13% / -1.99% |
+| Max intraweek DD (daily closes) | +0.00% |
+| Max DD since start | -3.38% |
+| Entries this week | 1 (cap 3) |
+| Closed round trips | 0 (W:0 / L:0) |
+| Profit factor | n/a |
+| Avg invested at EOD | 86.7% |
+| EODs below 70% floor | 0 of 5 |
+
+### Cadence
+| Day | pre-market | market-open | midday | eod |
+|---|---|---|---|---|
+| 2026-11-09 | OK | OK | MISSING | OK |
+| 2026-11-10 | OK | OK | OK | OK |
+| 2026-11-11 | OK | OK | OK | OK |
+| 2026-11-12 | OK | OK | OK | OK |
+| 2026-11-13 | OK | OK | OK | OK |
+
+Note: 11-09 midday never ran/committed (flagged by MISSING_COMMITS in the 11-09 EOD record). Cause unknown from the repo; no order depended on it (JNJ stop was set at open).
+
+### Execution
+- Planned orders: 1 | with an outcome line: 1 | filled: 1 | stops verified same session: 1/1
+- Plan: JNJ buy 11-09 (sat-2026-11-09-JNJ, 1 @ 277.04, trailing stop e322b867 status `new`). No CORE_ACTION orders (HOLD in band all week). Every other candidate each day has a skip line with failing gates (11-09 ABBV G11, WELL G8/G9, NEM G8/G9/G11; 11-10..11-13 G8 qty/min size, G9 no slots 3/3 or sats cap, G10 CPI on 11-10, G11 spreads).
+- No trades closed this week. KS-11 streak stays 2 (last loser 11-06).
+
+### Pipeline
+- Research days with ≥2 candidates from ≥2 sectors (or every rejection's gate listed): 5/5 (11-09 XLV/XLRE/XLB; 11-10 XLV/XLRE/XLY/XLF; 11-11 5 names, 4 sectors; 11-12 XLV/XLRE/XLE/XLF; 11-13 XLV/XLRE/XLE/XLF)
+- Timing blocks cited outside EVENTS.md: 0 (11-10 CPI block is in EVENTS.md; "no slots 3/3", G8 qty, G11 spread are gates)
+- Slots were 3/3 from 11-09 open onward, so no candidate had a free slot after JNJ filled. Cash $262.94 (13.3%) sat idle all week.
+
+### News sleeve
+**GATE: NOT MET** — only 2.3 of 6 weeks scanned; scanner uptime 75% < 95%; no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)
+- weeks scanned: 2.3 (need 6) | signals scored at d3: 508 (need 150) | scanner uptime 28d: 75% (need 95%)
+- raw headlines 3871 | signals 3871 (bull 411, bear 269, none 3035, duplicate 117, unscorable 39) | open 273, scored 407
+Tradeable buckets: none
+
+### Grade: C
+Caps applied: cadence cell MISSING (11-09 midday) → max C. No other cap: invested ≥70% on 5/5 EODs (86.7%), the one entry had a same-session stop, no planned order lacks an outcome, and no eligible day had a free slot with a PASS candidate after 11-09.
+Process was otherwise clean, but a missed routine is unverifiable by design and the grade is capped accordingly.
+
+### What worked (≤3) / What didn't (≤3)
+Worked:
+- 19/20 cadence cells OK; every skip line lists its failing gate; zero out-of-list timing blocks.
+- JNJ entered at the first open with a free slot (11-09) with a verified stop; no narrative vetoes.
+- Phase return -1.13% vs SPY -1.99% (+0.86pp) with all KS PASS; invested 86.7% every EOD.
+Didn't:
+- Midday 11-09 missed entirely.
+- Lagged SPY on the week (-0.43pp) with 13% idle cash; core held in band (53.6% vs 55.0% target) while cash sat unused.
+- Max DD since start -3.38% (11-05/11-06 period); graduation needs ≤ SPY DD + 1pp, not yet evidenced.
+
+### Lessons (also appended to LESSONS.md)
+- 2026-11-13 — Full slots plus min-size gate strand ~13% cash
+
+### Suggestions for the user (never applied by the agent)
+- Idle cash (repeat of 11-06 lesson): 13.3% cash ($262.94) for 5 straight EODs, core HOLD inside ±5pp band, slots 3/3. Consider core_band ±3pp or a core top-up when cash > cash_min + a set amount. Data: core 53.6% vs target 55.0%.
+- G8 min size: ABBV/WELL/COP/XLF all fail G8 (qty 0, or qty 1-2 below sat_min_pct 8%) on a ~$263 budget; most watchlist names priced >$150 are structurally unbuyable at $2,000. Consider price-capped watchlist additions (≤5/month) or revisiting sat_min_pct.
+- G11 spreads: IEX spreads of 3-10% on liquid large caps (ABBV 10.67%, WELL 10.38%) recur; likely IEX-not-NBBO artifact. Consider a SIP-based check.
+- Midday 11-09 miss: check the scheduler/run logs for that slot.
+- KS-11 at 2 of 3 consecutive losers; the next stop-out loser pauses entries 5 days.
+- EVENTS.md runway: last date 2027-12-10, well over 8 weeks. No warning.
+- Watchlist: no changes proposed.
+
+### Graduation checklist (TRADING-STRATEGY.md)
+1. 🟡 13 trading days with all four routines OK/SKIPPED since 10-28 (11-09 midday MISSING breaks that day); need ≥15.
+2. 🟡 Core bought 10-28; later core SELLs 10-29/10-30 filled; no later core BUY rebalance yet.
+3. ✅ 5 satellite entries filled (XLE, PG, KO, ABBV, JNJ), 2 closed (XLE, ABBV), each with a same-session stop.
+4. ✅ Invested ≥70% on every EOD this and last week; phase-to-date ~1 of 14 EODs below floor (Day 0/1), ≈93%.
+5. 🟡 5/5 research days compliant this week; every planned order has an outcome; 10-30 was one sector but gates listed.
+6. ✅ Zero timing blocks outside the closed list (weeks 1-3).
+7. 🟡 Max DD -3.38% (≤8%); SPY phase DD not printed by scripts, only 3 weeks of data.
+8. ✅ Phase -1.13% vs SPY -1.99% (+0.86pp), within -3pp; short sample.
+9. ✅ ks.py in every EOD record; no breach the scripts missed.
+10. ❌ No `Reviewed:` line under any weekly review yet.
+11. ❌ Day-1 mechanics test not evidenced in memory/ (STRESS_TEST.md at repo root has procedure only, no recorded pass).
+
+Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)
