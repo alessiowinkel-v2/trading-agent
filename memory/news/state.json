@@ -166,22 +166,22 @@
    "unscorable": 0
   },
   "2026-11-15": {
-   "calls": 1,
-   "cost_usd": 0.0048,
-   "input_tokens": 1722,
+   "calls": 2,
+   "cost_usd": 0.0095,
+   "input_tokens": 3476,
    "model": "claude-sonnet-5-5",
-   "output_tokens": 134,
+   "output_tokens": 257,
    "unscorable": 0
   }
  },
  "classify_attempts": {},
- "cursor_updated_at": "2026-11-15T06:14:59Z",
+ "cursor_updated_at": "2026-11-15T06:46:49Z",
  "gate_met": false,
- "last_commit_utc": "2026-11-15T06:30:54Z",
+ "last_commit_utc": "2026-11-15T07:01:00Z",
  "last_error": "",
  "last_new": 1,
- "last_ok_utc": "2026-11-15T06:30:51Z",
- "last_run_utc": "2026-11-15T06:30:51Z",
+ "last_ok_utc": "2026-11-15T07:00:51Z",
+ "last_run_utc": "2026-11-15T07:00:51Z",
  "last_score_attempt_utc": "2026-11-14T07:08:42Z",
  "last_score_utc": "2026-11-14T07:08:42Z",
  "more_pending": false,
@@ -207,11 +207,11 @@
   "2026-11-12": 69,
   "2026-11-13": 73,
   "2026-11-14": 79,
-  "2026-11-15": 7
+  "2026-11-15": 9
  },
  "totals": {
-  "classified": 3969,
-  "raw": 4126,
+  "classified": 3970,
+  "raw": 4127,
   "signals": 730
  }
 }
