@@ -522,3 +522,19 @@ KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | fa
 Stops: JNJ, KO, PG all protected (KS-10 PASS). change_today: JNJ -0.32%, KO +0.07%, PG +1.96% — none ≤ -4%. Newsfeed 6h: 2 bull JNJ (conf 0.55), no bear signals.
 Exits: none | Retries: none (market-open candidates ABBV, WELL, COP, AMT all SKIP, slots 3/3; not re-run — slots unchanged)
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=n/a | perplexity=n/a
+
+### 2026-11-16 - EOD Snapshot (Day 14, Monday)
+**Portfolio:** $1,964.05 | **Cash:** $262.94 (13.4%) | **Invested:** 86.6% (floor 70%, days below: 0) | **Day P&L:** $-18.18 (-0.92%) | **Phase P&L:** $-35.95 (-1.80%) | **SPY today:** -1.91% | **SPY phase:** -3.86% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 87.13 | -1.8% | $-42.96 (-3.9%) | 53.2% | - |
+| JNJ | satellite | 1 | 277.04 | 283.02 | -1.0% | $5.98 (+2.2%) | 14.4% | trailing_stop 7%/hwm 290.2495 (e322b867) |
+| KO | satellite | 2 | 94.53 | 99.65 | +0.4% | $10.25 (+5.4%) | 10.1% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 173.23 | +2.0% | $9.95 (+6.1%) | 8.8% | trailing_stop 7%/hwm 173.57 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** Flat day for orders; SPY -1.91% vs bot -0.92%, so bot is ahead of SPY on the day (+0.99pp) and the phase (-1.80% vs -3.86%). Slots 3/3, cash 13.4% idle (structural, see 11-13 lesson). Tomorrow 11-17: no blocking event in EVENTS.md.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
