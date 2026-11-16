@@ -982,3 +982,66 @@ CANDIDATE: XLF ref=58.21 stop_pct=7.0 sector=XLF g6=PASS g7=PASS
 EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 32.7%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (54.1%, in band). Pipeline minimum met: 4 candidates, 4 sectors (XLV, XLRE, XLE, XLF). Cash $262.94 (13.3%) idle; same band/cash issue as the 11-06 lesson (suggest core_band/top-up rule in Friday review). No orders in this routine.
 
 Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-16 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-16 07:11 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-24
+
+### Regime and sectors
+REGIME risk-on | SPY 754.37 vs SMA200 731.92 (+3.1%) | 61 consecutive closes above | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-13): 1 XLV (+12.13) | 2 XLP (+10.11) | 3 XLY (+6.59) | 4 XLF (+6.35) | 5 XLU (+5.02) | 6 XLRE (+4.63) | 7 XLB (+3.95) | 8 XLE (+3.01, Lagging)
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 754.37 vs SMA200 731.92; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,058.72 (53.4%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 13
+Top-10: PG (held), ABBV (XLV), XLV, JNJ (held), AMT (XLRE), XLP, COP (XLE), CVX (XLE), PM (XLP), WELL (XLRE)
+Near misses: TJX G3; BAC G3; SCHW G3; EOG G8; WMT G3; KO G4; NEE G3; SO G3; CEG G3; VST G3; FCX G3; NEM G3
+
+### Yesterday's candidates (11-13 plan; TRADE-LOG)
+- ABBV: not filled — G8 qty 0, G9 no slots 3/3
+- WELL: not filled — G8 qty 0, G9 no slots, G11 ask +3.0%/spread
+- COP: not filled — G8 qty 1 (7.4% < 8%), G9 no slots, sats cap, G11
+- XLF: not filled — G8 qty 2 (5.9% < 8%), G9 no slots, sats cap
+
+### Candidates (screen.py candidate: G1-G5, G8 PASS for ABBV, AMT, COP, WELL)
+Rejected/not used: PG, JNJ: G0 held. XLV: same sector as ABBV (ABBV preferred). XLP: sector at 2-position cap (G9). CVX: same sector as COP, not run. PM: not run (XLP cap).
+
+#### 1. ABBV — AbbVie (XLV, rank 1)
+G1 PASS $295.03 vs cap $297.25 | G2 PASS ADV20 $1495M | G3 PASS 295.03 > 275.50 > 240.79 | G4 PASS R5 +1.3%, close vs 304.50 | G5 PASS rank 1, RS63 +20.2% | G8 PASS stop 7.0% (~274.38), target 336.33, qty 1 = $295.03 (14.9%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-11-24 [perplexity: pretickt, macronotebook]
+G7 PASS — XLV rank 1; raised FY26 revenue outlook ~$67.8B, QULIPTA Ph3 positive (11-10), etentamig BLA filed (11-10), Nxera migraine license (11-14/15). Risk: price only $2.22 under G1 cap; Humira erosion; ABBV stopped out 11-06.
+News feed: 0 signals (48h).
+CANDIDATE: ABBV ref=295.03 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 2. WELL — Welltower (XLRE, rank 6)
+G1 PASS $244.46 | G2 PASS ADV20 $717M | G3 PASS 244.46 > 234.54 > 221.46 | G4 PASS R5 -0.2%, close vs 252.60 | G5 PASS rank 6, RS63 +6.3% | G8 PASS stop 7.0% (~227.35), target 278.68, qty 1 = $244.46 (12.3%)
+G6 PASS — next report 2027-02-09 (estimated) >= 2026-11-24 [perplexity: pretickt]
+G7 PASS — XLRE rank 6; 2026 normalized FFO guide raised $0.10 to $6.50 (11-13), RBC sees mid-teens FFO growth 2027-28, UBS PT $289 (11-11), acquisitions. Risk: rate sensitivity; $1.3B Integra asset sale impact undisclosed.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=244.46 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 3. COP — ConocoPhillips (XLE, rank 8)
+G1 PASS $142.28 | G2 PASS ADV20 $996M | G3 PASS 142.28 > 137.29 > 123.32 | G4 PASS R5 +4.4%, close vs 152.38 | G5 PASS rank 8 fails, RS63 +13.9% override | G8 PASS stop 7.0% (~132.32), target 162.20, qty 2 = $284.56 (14.4%)
+G6 PASS — next report 2027-02-04 (estimated); last report <45d [perplexity: arincen, benzinga]
+G7 PASS — RS63 +13.9% vs SPY; strong Q3 ($3.9B adj. earnings, dividend +11%, $2.4B buybacks), lower 2027 capex with low-single-digit production growth. Risk: Freedom Broker (11-11) and Bernstein (11-12) downgrades; US-Iran easing could lower crude; OPEC+ meeting 11-29; thin G3 margin.
+News feed: 0 signals (48h).
+CANDIDATE: COP ref=142.28 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+#### 4. AMT — American Tower (XLRE, rank 6; same sector as WELL)
+G1 PASS $191.64 | G2 PASS ADV20 $605M | G3 PASS 191.64 > 178.73 > 177.96 | G4 PASS R5 +1.5%, close vs 196.85 | G5 PASS rank 6, RS63 +13.6% | G8 PASS stop 7.0% (~178.23), target 218.47, qty 1 = $191.64 (9.7%)
+G6 PASS — next report 2027-02-23 (estimated) >= 2026-11-24 [perplexity: pretickt]
+G7 PASS — XLRE rank 6, RS63 +13.6%; Q3 FFO/revenue beat, FY FFO guide $11.04-11.16, data-center (CoreSite) growth outlook 16%. Risk: soft US tower leasing, added fixed-rate debt ($1.5B notes 11-09), thin SMA50-SMA200 gap.
+News feed: 0 signals (48h).
+CANDIDATE: AMT ref=191.64 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 33.3%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.4%, in band). Pipeline minimum met: 4 candidates, 3 sectors (XLV, XLRE, XLE). Cash $262.94 (13.3%) idle; same structural issue as the 11-13 lesson (core_band / top-up rule — Friday review). No orders in this routine.
+
+Health: run 07:25 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
