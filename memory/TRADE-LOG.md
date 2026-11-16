@@ -503,3 +503,16 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** No trades; defensive satellites rose while SPYM fell, so the day beat SPY (-0.11% vs -0.36%) and the phase is ahead (-1.16% vs -1.99%). All slots full, MAINTENANCE none. Next trading day is Mon 2026-11-16; no blocking event in EVENTS.md.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-16 — Market-Open Decision (run 10:13 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (SPYM 53.3% vs target 55.0%, in ±5pp band) | MAINTENANCE=none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ABBV | 295.03 | PASS | FAIL (qty 0) | FAIL (3/3) | PASS | PASS | SKIP (also G1 FAIL ask 298.88 > cap 296.42) | - | - | - |
+| WELL | 244.46 | PASS | FAIL (qty 0) | FAIL (3/3) | PASS | FAIL (spread 6.28%, ask +7.4%) | SKIP | - | - | - |
+| COP | 142.28 | PASS | FAIL (qty 1, 7.4% < 8%) | FAIL (3/3; sats 40.9% > 35%) | PASS | FAIL (spread 5.42%, ask +3.3%) | SKIP | - | - | - |
+| AMT | 191.64 | PASS | FAIL (qty 0) | FAIL (3/3) | PASS | FAIL (spread 10.67%, ask +6.3%) | SKIP | - | - | - |
+New positions: none. No orders placed. Cash $262.94 idle (13.3%) — structural slots-full issue per 11-13 lesson; Friday review.
+Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
