@@ -552,3 +552,10 @@ Maintenance: none
 | XLF | 58.18 | PASS | FAIL (qty 2 = 5.9% < 8%) | FAIL (slots; sats 39.2% > 35%) | PASS | PASS | SKIP | - | - | - |
 New positions: none. Cash $262.94 idle (budget $165.14); structural issue per 11-13 lesson.
 Health: run 10:14 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-17 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none (stops on JNJ, KO, PG intact; KS-10 PASS)
+Core: HOLD (in band) — SPYM 12 sh = $1,033.74 (53.1%) vs target 55.0%
+Exits: none (no satellite below stop, none down ≥4%; newsfeed 6h: 0 signals JNJ/KO/PG) | Retries: XLV, AMT, COP, XLF re-checked — all SKIP (G8, G9; AMT also G11); dropped for today
+Equity $1,948.06 | cash $262.94 idle (structural, see 11-13 lesson)
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
