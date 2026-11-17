@@ -559,3 +559,19 @@ Core: HOLD (in band) — SPYM 12 sh = $1,033.74 (53.1%) vs target 55.0%
 Exits: none (no satellite below stop, none down ≥4%; newsfeed 6h: 0 signals JNJ/KO/PG) | Retries: XLV, AMT, COP, XLF re-checked — all SKIP (G8, G9; AMT also G11); dropped for today
 Equity $1,948.06 | cash $262.94 idle (structural, see 11-13 lesson)
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-17 - EOD Snapshot (Day 15, Tuesday)
+**Portfolio:** $1,946.37 | **Cash:** $262.94 (13.5%) | **Invested:** 86.5% (floor 70%, days below: 0) | **Day P&L:** $-16.30 (-0.83%) | **Phase P&L:** $-53.63 (-2.68%) | **SPY today:** -1.01% | **SPY phase:** -4.84% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 86.41 | -0.8% | $-51.60 (-4.7%) | 53.3% | - |
+| JNJ | satellite | 1 | 277.04 | 278.45 | -1.5% | $1.41 (+0.5%) | 14.3% | trailing_stop 7%/hwm 290.2495 (e322b867) |
+| KO | satellite | 2 | 94.53 | 98.53 | -1.0% | $8.01 (+4.2%) | 10.1% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 171.00 | -1.2% | $7.72 (+4.7%) | 8.8% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: none
+**Notes:** No trades; core HOLD in band, all 3 satellites stopped. Bot -0.83% vs SPY -1.01% on the day; phase -2.68% vs SPY -4.84%. Tomorrow (11-18): no EVENTS.md entry, no blocking event.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
