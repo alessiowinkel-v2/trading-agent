@@ -538,3 +538,17 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** Flat day for orders; SPY -1.91% vs bot -0.92%, so bot is ahead of SPY on the day (+0.99pp) and the phase (-1.80% vs -3.86%). Slots 3/3, cash 13.4% idle (structural, see 11-13 lesson). Tomorrow 11-17: no blocking event in EVENTS.md.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-17 — Market-Open Decision (run 10:14 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none
+Core: CORE_ACTION=HOLD (in band) — SPYM 12 sh = $1,041.12 (53.2%) vs target 55.0%, band ±5pp
+Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| XLV | 187.88 | PASS | FAIL (qty 0) | FAIL (slots 3/3) | PASS | PASS | SKIP | - | - | - |
+| AMT | 190.74 | PASS | FAIL (qty 0) | FAIL (slots 3/3) | PASS | FAIL (spread 10.89%, ask +5.5%) | SKIP | - | - | - |
+| COP | 140.52 | PASS | FAIL (qty 1 = 7.3% < 8%) | FAIL (slots; sats 40.6% > 35%) | PASS | FAIL (spread 6.17%) | SKIP | - | - | - |
+| XLF | 58.18 | PASS | FAIL (qty 2 = 5.9% < 8%) | FAIL (slots; sats 39.2% > 35%) | PASS | PASS | SKIP | - | - | - |
+New positions: none. Cash $262.94 idle (budget $165.14); structural issue per 11-13 lesson.
+Health: run 10:14 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
