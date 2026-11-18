@@ -582,3 +582,19 @@ FLAG: preflight MISSING_COMMITS=market-open 2026-11-18 — no market-open record
 Core: CORE_ACTION=HOLD (53.3% vs 55.0%, in band). All 3 satellites (JNJ, KO, PG) have trailing stops; none below stop level; none down ≥4% today (JNJ -0.97%, KO -0.86%, PG -0.59%). Newsfeed: KO bull 0.55 (analyst initiation) only — no bear signals.
 Exits: none | Retries: none (no planned candidates today without a market-open record; SAT_SLOTS=0 so no buys possible)
 Health: run 13:10 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-18 - EOD Snapshot (Day 16, Wednesday)
+**Portfolio:** $1,934.52 | **Cash:** $262.94 (13.6%) | **Invested:** 86.4% (floor 70%, days below: 0) | **Day P&L:** $-11.06 (-0.57%) | **Phase P&L:** $-65.48 (-3.27%) | **SPY today:** -0.31% | **SPY phase:** -5.13% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 86.05 | -0.2% | $-55.92 (-5.1%) | 53.4% | - |
+| JNJ | satellite | 1 | 277.04 | 272.49 | -2.2% | $-4.55 (-1.6%) | 14.1% | trailing_stop 7%/hwm 290.2495 (e322b867) |
+| KO | satellite | 2 | 94.53 | 98.10 | -0.7% | $7.15 (+3.8%) | 10.1% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 170.29 | -0.8% | $7.01 (+4.3%) | 8.8% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: market-open 2026-11-18
+**Notes:** No trades; core HOLD in band (53.4% vs 55.0%), all 3 satellites stopped. Bot -0.57% vs SPY -0.31% on the day; phase -3.27% vs SPY -5.13%. Tomorrow (11-19): no EVENTS.md entry, no blocking event. The market-open routine for today left no commit (flagged, not reconstructed).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
