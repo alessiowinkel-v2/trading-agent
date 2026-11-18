@@ -575,3 +575,10 @@ KS failing: none
 MISSING_COMMITS: none
 **Notes:** No trades; core HOLD in band, all 3 satellites stopped. Bot -0.83% vs SPY -1.01% on the day; phase -2.68% vs SPY -4.84%. Tomorrow (11-18): no EVENTS.md entry, no blocking event.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-18 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 | failing: none | Maintenance: none
+FLAG: preflight MISSING_COMMITS=market-open 2026-11-18 — no market-open record exists in TRADE-LOG for today. Not reconstructed.
+Core: CORE_ACTION=HOLD (53.3% vs 55.0%, in band). All 3 satellites (JNJ, KO, PG) have trailing stops; none below stop level; none down ≥4% today (JNJ -0.97%, KO -0.86%, PG -0.59%). Newsfeed: KO bull 0.55 (analyst initiation) only — no bear signals.
+Exits: none | Retries: none (no planned candidates today without a market-open record; SAT_SLOTS=0 so no buys possible)
+Health: run 13:10 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
