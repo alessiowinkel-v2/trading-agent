@@ -1108,3 +1108,74 @@ CANDIDATE: XLF ref=58.18 stop_pct=7.0 sector=XLF g6=PASS g7=PASS
 EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 33.2%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.4%, in band). Pipeline minimum met: 4 candidates, 4 sectors (XLV, XLRE, XLE, XLF). Cash $262.94 (13.4%) idle; same structural issue as the 11-13 lesson (Friday review). No orders in this routine.
 
 Health: run 07:55 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-18 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-18 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-27
+
+### Regime and sectors
+REGIME risk-on | SPY 732.44 vs SMA200 732.34 (+0.0%) | 61 consecutive closes above | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-17): 1 XLV (+10.05) | 2 XLP (+9.88) | 3 XLU (+6.41) | 4 XLF (+6.07) | 5 XLRE (+5.35) | 6 XLY (+5.13) | 7 XLB (+2.89) | 8 XLE (+1.15, Lagging) | 9 XLC | 10 XLI | 11 XLK (-7.05)
+Note: SPY is 0.01 above its SMA200 — a close below it starts the 3-close flip count.
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 732.44 vs SMA200 732.34; 61 consecutive closes above)
+CORE SPYM: 12 sh = $1,037.16 (53.4%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 10
+Top-10: KO (held), XLV, XLP, WELL, JNJ (held), AMT, COP, CVX, XLF, AMZN
+Near misses: TJX G3; BAC G3; SCHW G3; XOM G3; EOG G8; WMT G3; PG G4; PM G3; NEE G3; SO G3; CEG G3; VST G3
+
+### Yesterday's candidates (11-17 plan; TRADE-LOG market-open/midday)
+- XLV: not filled — G8 qty 0, G9 slots 3/3
+- AMT: not filled — G8 qty 0, G9 slots, G11 spread 10.89%
+- COP: not filled — G8 qty 1 (7.3% < 8%), G9 slots/sats cap, G11 spread 6.17%
+- XLF: not filled — G8 qty 2 (5.9% < 8%), G9 slots/sats cap
+
+### Candidates (screen.py candidate: G1-G5, G8 PASS for XLV, WELL, COP, XLF, AMT)
+Rejected/not used: KO, JNJ: G0 held. XLP: sector at 2-position cap (G9, KO+PG). CVX: same sector as COP, ranked lower. AMZN: not run (lowest rank).
+
+#### 1. XLV — Health Care Select Sector SPDR (XLV, rank 1)
+G1 PASS $185.24 vs cap $291.59 | G2 PASS ADV20 $2125M | G3 PASS 185.24 > 175.74 > 160.52 | G4 PASS R5 -1.9%, close vs 192.07 | G5 PASS rank 1, RS63 +10.2% | G8 PASS stop 7.0% (~172.27), target 211.17, qty 1 = $185.24 (9.5%)
+G6 PASS — sector ETF, no earnings report of its own (n/a).
+G7 PASS — #1 sector, RS63 +10.2%, close 3.7% below 52w high; trend leadership in a top-3 sector. Risk: sector overlap with held JNJ (XLV 1/2 positions).
+News feed: 0 signals (48h).
+CANDIDATE: XLV ref=185.24 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 2. WELL — Welltower (XLRE, rank 5)
+G1 PASS $245.76 vs cap $291.59 | G2 PASS ADV20 $742M | G3 PASS 245.76 > 234.88 > 222.03 | G4 PASS R5 -0.8%, close vs 250.76 | G5 PASS rank 5, RS63 +9.0% | G8 PASS stop 7.0% (~228.56), target 280.17, qty 1 = $245.76 (12.6%)
+G6 PASS — next report 2027-02-09 (estimated) >= 2026-11-27 [perplexity: pretickt.com, updated 2026-11-17].
+G7 PASS — Raised 2026 normalized FFO guidance +$0.10 to $6.50 on senior-housing rent growth (11-12); target raises from Baird, Wells Fargo, Mizuho (11-13..11-16); RBC sees mid-teens FFO growth 2027-28 (11-17). Risk: ~$1.3B nursing-home divestiture/acquisition churn; REIT rate sensitivity.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=245.76 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 3. COP — ConocoPhillips (XLE, rank 8)
+G1 PASS $139.48 | G2 PASS ADV20 $1046M | G3 PASS 139.48 > 137.50 > 123.69 | G4 PASS R5 +2.9%, close vs 151.99 | G5 PASS rank 8 fails, RS63 +11.6% override | G8 PASS stop 7.0% (~129.72), target 159.01, qty 2 = $278.96 (14.4%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-11-27 [perplexity: gngresearch.com, updated 2026-11-17].
+G7 PASS — RS63 +11.6% vs SPY; Q3 adj. earnings $3.9B, dividend +11% (11-05), lower 2027 capex with low-single-digit production growth, Barclays PT raised to $165 (11-13). Risk: Freedom (11-11) and Bernstein (11-12) downgrades; US-Iran de-escalation could lower crude; thin G3 margin.
+News feed: 0 signals (48h).
+CANDIDATE: COP ref=139.48 stop_pct=7.0 sector=XLE g6=PASS g7=PASS
+
+#### 4. XLF — Financial Select Sector SPDR (XLF, rank 4)
+G1 PASS $57.07 | G2 PASS ADV20 $2013M | G3 PASS 57.07 > 55.96 > 53.99 | G4 PASS R5 -2.1%, close vs 59.46 | G5 PASS rank 4, RS63 +4.0% | G8 PASS stop 7.0% (~53.08), target 65.06, qty 5 = $285.35 (14.7%)
+G6 PASS — sector ETF, no earnings report of its own (n/a).
+G7 PASS — #4 sector (Leading), RS21 +8.1%, close 4.9% below 52w high; trend leadership. Risk: RS63 only +4.0%, bank earnings not until January.
+News feed: 0 signals (48h).
+CANDIDATE: XLF ref=57.07 stop_pct=7.0 sector=XLF g6=PASS g7=PASS
+
+#### 5. AMT — American Tower (XLRE, rank 5)
+G1 PASS $183.18 | G2 PASS ADV20 $586M | G3 PASS 183.18 > 179.18 > 178.06 | G4 PASS R5 -3.8%, close vs 196.79 | G5 PASS rank 5, RS63 +9.7% | G8 PASS stop 7.0% (~170.36), target 208.83, qty 1 = $183.18 (9.4%)
+G6 PASS — next report 2027-02-23 (estimated) >= 2026-11-27 [perplexity: pretickt.com, updated 2026-11-17].
+G7 PASS — XLRE rank 5, RS63 +9.7%; Deutsche Bank initiated Buy PT $222 (11-17); $1.5B (11-13) and EUR1.2B (11-16) notes reduce near-term refinancing risk. Risk: higher coupons (5.3-5.75%), thin SMA50-SMA200 gap, 5-day -3.8%.
+News feed: 0 signals (48h).
+CANDIDATE: AMT ref=183.18 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 33.1%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.4%, in band). Pipeline minimum met: 5 candidates, 4 sectors (XLV, XLRE, XLE, XLF). Cash $262.94 (13.5%) idle; same structural issue as the 11-13 lesson (Friday review). SPY sits 0.01 above SMA200 — watch for regime flip (risk-off: core target 30%, 2 slots). No orders in this routine.
+
+Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
