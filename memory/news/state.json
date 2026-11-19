@@ -204,11 +204,11 @@
  "classify_attempts": {},
  "cursor_updated_at": "2026-11-19T03:02:43Z",
  "gate_met": false,
- "last_commit_utc": "2026-11-19T05:22:10Z",
+ "last_commit_utc": "2026-11-19T07:22:11Z",
  "last_error": "",
  "last_new": 0,
- "last_ok_utc": "2026-11-19T07:07:10Z",
- "last_run_utc": "2026-11-19T07:07:10Z",
+ "last_ok_utc": "2026-11-19T07:22:10Z",
+ "last_run_utc": "2026-11-19T07:22:10Z",
  "last_score_attempt_utc": "2026-11-19T07:07:11Z",
  "last_score_utc": "2026-11-19T07:07:11Z",
  "more_pending": false,
@@ -238,7 +238,7 @@
   "2026-11-16": 63,
   "2026-11-17": 47,
   "2026-11-18": 55,
-  "2026-11-19": 9
+  "2026-11-19": 10
  },
  "totals": {
   "classified": 4418,
