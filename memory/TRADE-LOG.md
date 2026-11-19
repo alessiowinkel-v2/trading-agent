@@ -619,3 +619,18 @@ Core: CORE_ACTION=HOLD (53.3% vs target 56.1%, in band)
 Exits: none (KO -2.0%, PG -1.0% today; no satellite ≤ -4%, none below stop level) | Newsfeed KO/PG 6h: 0 signals
 Retries: none - WELL/ABBV/ANET skipped at open (KS-11 blocks entries; ABBV also XLV cooldown); still blocked. Dropped for today.
 Health: run 13:07 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
+
+### 2026-11-19 - EOD Snapshot (Day 17, Thursday)
+**Portfolio:** $1,900.93 | **Cash:** $532.24 (28.0%) | **Invested:** 72.0% (floor 70%, days below: 0) | **Day P&L:** $-32.82 (-1.70%) | **Phase P&L:** $-99.07 (-4.95%) | **SPY today:** -1.96% | **SPY phase:** -6.99% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 84.05 | -2.2% | $-79.92 (-7.3%) | 53.1% | - |
+| KO | satellite | 2 | 94.53 | 96.12 | -2.0% | $3.19 (+1.7%) | 10.1% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 167.85 | -1.4% | $4.57 (+2.8%) | 8.8% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** sell 1 JNJ @ 269.30 (stop-2026-11-09-JNJ)
+KS failing: KS-11 (3 consecutive losers, last 2026-11-19; satellite entries blocked, XLV cooldown 10 trading days)
+MISSING_COMMITS: none
+**Notes:** JNJ stopped out (third straight loser) -> KS-11 blocks new satellites. Bot -1.70% vs SPY -1.96% on the day; phase -4.95% vs SPY -6.99%. Tomorrow (Fri 11-20): no blocking event in EVENTS.md; weekly review day.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
