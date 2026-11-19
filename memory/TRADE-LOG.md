@@ -612,3 +612,10 @@ Event: JNJ trailing stop (stop-2026-11-09-JNJ, e322b867) filled 1 @ 269.30 at 14
 New positions: none.
 Note: pre-market research listed SAT_SLOTS=0 (3/3); the JNJ stop-out after open changed slots, but KS-11 blocks entries regardless. Also no market-open record exists for 11-18 (flagged pre-market).
 Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-19 — Midday (run 13:07 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers) | Maintenance: none (both satellites KO, PG stopped)
+Core: CORE_ACTION=HOLD (53.3% vs target 56.1%, in band)
+Exits: none (KO -2.0%, PG -1.0% today; no satellite ≤ -4%, none below stop level) | Newsfeed KO/PG 6h: 0 signals
+Retries: none - WELL/ABBV/ANET skipped at open (KS-11 blocks entries; ABBV also XLV cooldown); still blocked. Dropped for today.
+Health: run 13:07 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
