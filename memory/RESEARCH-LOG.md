@@ -1179,3 +1179,57 @@ CANDIDATE: AMT ref=183.18 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
 EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 33.1%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.4%, in band). Pipeline minimum met: 5 candidates, 4 sectors (XLV, XLRE, XLE, XLF). Cash $262.94 (13.5%) idle; same structural issue as the 11-13 lesson (Friday review). SPY sits 0.01 above SMA200 — watch for regime flip (risk-off: core target 30%, 2 slots). No orders in this routine.
 
 Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-19 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-19 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-11-30
+
+### Regime and sectors
+REGIME risk-on | SPY 730.20 vs SMA200 732.55 (-0.3%) | 1 consecutive closes below | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-18): 1 XLP (+10.04) | 2 XLV (+7.57) | 3 XLY (+7.33) | 4 XLU (+6.39) | 5 XLF (+4.81) | 6 XLRE (+4.49) | 7 XLB (+2.03) | 8 XLC | 9 XLI | 10 XLE (Lagging) | 11 XLK (-6.45, Lagging)
+Note: SPY closed below SMA200 on 11-18 — flip count at 1 of 3. Two more closes below = risk-off (core target 30%, 2 slots).
+
+### Kill switches and core
+All 12 switches PASS. ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 3/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 730.20 vs SMA200 732.55; 1 consecutive closes below)
+CORE SPYM: 12 sh = $1,044.14 (53.8%) | target 55.0% | band +/-5pp
+CORE_ACTION=HOLD (in band)
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | ALL 11
+Top-10: PG (held), KO (held), ANET, XLP, ABBV, WELL, AMT, XLV, JNJ (held), AMZN
+Near misses: TJX, BAC, SCHW, WMT, PM, NEE, SO, CEG, VST, FCX, NEM, NUE (all G3)
+
+### Yesterday's candidates (11-18 plan)
+- XLV, WELL, COP, XLF, AMT: no outcome line — TRADE-LOG has no market-open record for 11-18 (MISSING_COMMITS flagged at midday). Not reconstructed. SAT_SLOTS was 0 all day, so none could have filled.
+
+### Candidates (screen.py candidate: G1-G5, G8 PASS for ANET, ABBV, WELL, AMT, XLV)
+Rejected/not used: PG, KO, JNJ: G0 held. XLP: sector at 2-position cap (G9, KO+PG). AMT: same sector as WELL, G6 not checked (no 2nd XLRE needed). XLV: same sector as ABBV, not G6-checked. AMZN: not run.
+
+#### 1. WELL — Welltower (XLRE, rank 6)
+G1 PASS $247.25 vs cap $291.09 | G2 PASS ADV20 $776M | G3 PASS 247.25 > 235.10 > 222.33 | G4 PASS R5 -0.0%, close vs 251.19 | G5 PASS rank 6, RS63 +8.4% | G8 PASS stop 7.0% (~229.94), target 281.87, qty 1 = $247.25 (12.7%)
+G6 PASS — next report 2027-02-09 (estimated) >= 2026-11-30 [perplexity: finkut.com, updated 2026-11-18].
+G7 PASS — Raised 2026 normalized FFO guidance +$0.10 to $6.50 on senior-housing rent growth; Q3 normalized FFO +24.6% y/y; Wells Fargo PT $283 (11-16), Mizuho PT $270 and top healthcare-REIT pick (11-16). Risk: acquisition/divestiture reports come from secondary aggregators; REIT rate sensitivity.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=247.25 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. ABBV — AbbVie (XLV, rank 2)
+G1 PASS $286.01 vs cap $291.09 | G2 PASS ADV20 $1506M | G3 PASS 286.01 > 277.85 > 241.78 | G4 PASS R5 -3.0%, close vs 305.38 | G5 PASS rank 2, RS63 +13.5% | G8 PASS stop 7.0% (~265.99), target 326.05, qty 1 = $286.01 (14.7%)
+G6 PASS — next report 2027-01-29 (estimated; Feb 2 per another source) >= 2026-11-30 [perplexity: ploutos-ai.com, updated 2026-11-18].
+G7 PASS — #2 sector, RS63 +13.5%; positive Phase 3 QULIPTA data (11-12), DISCO oncology collaboration (11-17), Barclays PT $335 on Skyrizi/Rinvoq growth (11-16). Risk: Vraylar IRA price cut from 2027; CCO sold ~$11.9M of shares (11-18); price is close to the $291.09 cap; sector overlap with held JNJ (XLV 1/2).
+News feed: 1 signal — 11-19 06:31 ET bull 0.55 m_and_a, DISCO collaboration (input only).
+CANDIDATE: ABBV ref=286.01 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+#### 3. ANET — Arista Networks (XLK, rank 11)
+G1 PASS $193.94 vs cap $291.09 | G2 PASS ADV20 $1580M | G3 PASS 193.94 > 192.64 > 168.09 | G4 PASS R5 -1.4%, close vs 209.44 | G5 PASS rank 11 fails, RS63 +9.8% override | G8 PASS stop 10.0% (~174.55), target 232.73, qty 1 = $193.94 (10.0%)
+G6 PASS — next report 2027-02-11 (estimated, not confirmed) >= 2026-11-30 [perplexity: verostocks.com]; last report was Q3 (early Nov), < 45 days.
+G7 PASS — RS63 +9.8% vs SPY despite lagging sector; AI-networking demand (2027 revenue outlook ~$18.5B incl. ~$7B AI fabric), Etherlink R4 launch (11-17). Risk: Q4 gross-margin guide 63-64% under supply/cost pressure; $11.4B purchase commitments; thin G3 margin (close only 0.7% above SMA50); XLK is the weakest sector.
+News feed: 0 signals (48h).
+CANDIDATE: ANET ref=193.94 stop_pct=10.0 sector=XLK g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 32.6%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.8%, in band). Pipeline minimum met: 3 candidates, 3 sectors (XLRE, XLV, XLK). Cash $262.94 (13.5%) idle — same structural issue as the 11-13 lesson (Friday review). SPY closed below SMA200 on 11-18 (1 of 3 closes to flip risk-off). Process flag: no market-open record exists for 11-18. No orders in this routine.
+
+Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
