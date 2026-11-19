@@ -598,3 +598,17 @@ KS failing: none
 MISSING_COMMITS: market-open 2026-11-18
 **Notes:** No trades; core HOLD in band (53.4% vs 55.0%), all 3 satellites stopped. Bot -0.57% vs SPY -0.31% on the day; phase -3.27% vs SPY -5.13%. Tomorrow (11-19): no EVENTS.md entry, no blocking event. The market-open routine for today left no commit (flagged, not reconstructed).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-19 — Market-Open Decision (run 10:12 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19)
+Core: CORE_ACTION=HOLD (in band; 12 SPYM = $1,038.36, 53.8% vs target 56.4%) - no order
+Event: JNJ trailing stop (stop-2026-11-09-JNJ, e322b867) filled 1 @ 269.30 at 14:32 UTC (entry 277.04) - third consecutive loser; XLV sector cooldown (10 trading days). Positions now 2/3 (KO, PG), both stopped. Cash $532.24.
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 247.25 | PASS | PASS | FAIL (KS-11) | PASS | FAIL (spread 5.39%) | SKIP | - | - | - |
+| ABBV | 286.01 | PASS | PASS | FAIL (KS-11, XLV cooldown) | PASS | PASS | SKIP | - | - | - |
+| ANET | 193.94 | PASS | PASS | FAIL (KS-11) | PASS | PASS | SKIP | - | - | - |
+New positions: none.
+Note: pre-market research listed SAT_SLOTS=0 (3/3); the JNJ stop-out after open changed slots, but KS-11 blocks entries regardless. Also no market-open record exists for 11-18 (flagged pre-market).
+Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
