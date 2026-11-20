@@ -1233,3 +1233,61 @@ CANDIDATE: ANET ref=193.94 stop_pct=10.0 sector=XLK g6=PASS g7=PASS
 EVENT_TODAY=none. SAT_SLOTS=0 (3/3: JNJ, KO, PG; satellites 32.6%) — no satellite can be bought unless a stop fires and frees a slot. Core HOLD (53.8%, in band). Pipeline minimum met: 3 candidates, 3 sectors (XLRE, XLV, XLK). Cash $262.94 (13.5%) idle — same structural issue as the 11-13 lesson (Friday review). SPY closed below SMA200 on 11-18 (1 of 3 closes to flip risk-off). Process flag: no market-open record exists for 11-18. No orders in this routine.
 
 Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
+
+## 2026-11-20 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-20 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-12-01
+
+### Regime and sectors
+REGIME risk-on | SPY 715.87 vs SMA200 732.69 (-2.3%) | 2 consecutive closes below | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-19): 1 XLP (+10.78) | 2 XLU (+8.44) | 3 XLV (+7.36) | 4 XLY (+6.20) | 5 XLRE (+5.49) | 6 XLF (+4.89) | 7 XLB (+1.26) | 8 XLC | 9 XLI | 10 XLE | 11 XLK (-6.60, Lagging)
+Note: 2 of 3 closes below SMA200. One more close below (today's) = risk-off at next run: core target 30%, 2 slots.
+
+### Kill switches and core
+KS-11 FAIL: 3 consecutive losers (last 2026-11-19) < 3 (else 5-day pause)
+ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=no | SAT_SLOTS=0 (positions 2/3, today 0/2, week 0/3)
+REGIME risk-on (SPY 715.87 vs SMA200 732.69; 2 consecutive closes below)
+CORE SPYM: 12 sh = $1,003.20 (52.8%) | target 55.8% (risk-on: 75% - satellites 19.2%, clamped 55-80%) | band +/-5pp
+CORE_ACTION=HOLD (in band)
+SECTOR_COOLDOWNS=XLV: 2 losers in a row, last 2026-11-19 - 9 trading days left
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | pass G1 45 | G2 68 | G3 13 | G4 67 | G5 47 | G8 43 | ALL 8
+Top-10 (8 passers): PG (held), KO (held), ABBV, XLP, AMT, WELL, XLV, AMZN
+Near misses (one gate): ANET G3; TJX, BAC, SCHW, JNJ, CVX, COP, WMT, PM, NEE, SO, CEG all G3
+
+### Yesterday's candidates (11-19 plan)
+- WELL: not filled: KS-11 (G9) + spread 5.39% (G11) at open; dropped for the day
+- ABBV: not filled: KS-11 + XLV cooldown (G9)
+- ANET: not filled: KS-11 (G9); now fails G3 (near miss)
+
+### Candidates (screen.py: G1-G5, G8 PASS for WELL, AMZN, ABBV, AMT)
+Not used: PG, KO: G0 held. XLP: XLP at 2-position cap (G9; KO+PG). XLV: same sector as ABBV, in cooldown. AMT: same sector as WELL, G6 not checked.
+
+#### 1. WELL — Welltower (XLRE, rank 5)
+G1 PASS $243.19 vs cap $285.03 | G2 PASS ADV20 $789M | G3 PASS 243.19 > 235.25 > 222.62 | G4 PASS R5 -0.7%, close vs 251.21 | G5 PASS rank 5, RS63 +8.2% | G8 PASS stop 7.0% (~226.17), target 277.24, qty 1 = $243.19 (12.8%)
+G6 PASS — next report 2027-02-09 (estimated) >= 2026-12-01 [perplexity: finkut.com]; Q3 reported Oct 26.
+G7 PASS — Senior-housing rent growth and raised 2026 FFO guidance; analyst PT raises (Wells Fargo $283, Mizuho $270 on 11-16; Baird $248 on 11-13); active portfolio reshaping (~$1.3B divestiture, $386M acquisition, 11-14, secondary sources). Risk: REIT rate sensitivity; thin primary-source detail on transactions.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=243.19 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. AMZN — Amazon (XLY, rank 4)
+G1 PASS $257.37 vs cap $285.03 | G2 PASS ADV20 $12973M | G3 PASS 257.37 > 255.23 > 245.03 | G4 PASS R5 -3.8%, close vs 279.88 | G5 PASS rank 4, RS63 +6.0% | G8 PASS stop 8.7% (~234.97), target 302.18, qty 1 = $257.37 (13.5%)
+G6 PASS — next report 2027-02-04 (estimated, not confirmed) >= 2026-12-01 [perplexity: finkut.com]; last report Q3 (late Oct), < 45 days.
+G7 PASS — AWS +39% y/y to $46B with $578B backlog; Q4 guide 12-16% sales growth and ~$33.5B operating income; holiday ads and Black Friday event 11-19 to 11-30. Risk: heavy AI capex/negative FCF; thin G3 margin (0.8% above SMA50); Leo launch setback (11-18).
+News feed: 0 signals (48h).
+CANDIDATE: AMZN ref=257.37 stop_pct=8.7 sector=XLY g6=PASS g7=PASS
+
+#### 3. ABBV — AbbVie (XLV, rank 3) — blocked at execution by XLV cooldown (G9)
+G1 PASS $283.54 vs cap $285.03 | G2 PASS ADV20 $1490M | G3 PASS 283.54 > 278.42 > 242.12 | G4 PASS R5 -3.7%, close vs 305.04 | G5 PASS rank 3, RS63 +13.5% | G8 PASS stop 7.0% (~263.69), target 323.24, qty 1 = $283.54 (14.9%)
+G6 PASS — next report 2027-02-03 (estimated) >= 2026-12-01 [perplexity: finkut.com].
+G7 PASS — Skyrizi/Rinvoq growth offsetting Humira erosion; DISCO oncology collaboration (11-19) and Nxera migraine licensing (11-17); Barclays PT $335 (11-16). Risk: CCO sold ~$11.9M of shares (11-19); price just under the $285.03 cap.
+News feed: 1 signal — 11-19 06:31 ET bull 0.55 m_and_a, DISCO collaboration (input only).
+CANDIDATE: ABBV ref=283.54 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none (no timing block). SAT_SLOTS=0 and SAT_ENTRIES_ALLOWED=no: KS-11 (3 consecutive losers) blocks all new satellites; ABBV additionally in XLV cooldown. Candidates are planned (3 candidates, 3 sectors: XLRE, XLY, XLV) so market-open can act if KS-11 clears; expect no entries. Core HOLD (52.8% vs 55.8%, in band). Cash $532.22 (28.0%) idle; invested 72.0%. Regime flip risk: one more close below SMA200 flips to risk-off. Friday weekly review today. No orders in this routine.
+
+Health: run 07:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
