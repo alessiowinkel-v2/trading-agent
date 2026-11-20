@@ -646,3 +646,11 @@ Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,009.32, 52.9% vs target 55.8%, in ±5pp 
 | ABBV | 283.54 | PASS | FAIL (qty 0; G1 ask 293.40 > cap 286.05) | FAIL (KS-11, no slots, XLV cooldown) | PASS | FAIL (ask +3.5%, spread 1.24%) | SKIP | - | - | - |
 New positions: none. Maintenance: none. Cash $532.22 idle (28%); regime flip risk: one more close below SMA200 → risk-off.
 Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-20 — Midday (run 13:12 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19) | Maintenance: none
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $988.92, 52.4% vs target 55.6%, in ±5pp band)
+Gap exits/thesis: none. KO +1.58%, PG +1.36% today, both stops live; newsfeed 0 signals (6h) for KO, PG. No satellite down ≥4%.
+Exits: none | Retries: WELL not re-checked (market-open SKIP, KS-11); AMZN SKIP (G9 KS-11, no slots); ABBV SKIP (G1, G8, G9, G11). All dropped for today.
+Equity $1,886.51 (-0.89% day, -5.67% vs start). Cash $532.22 idle; regime risk-on, one more close below SMA200 flips to risk-off.
+Health: run 13:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
