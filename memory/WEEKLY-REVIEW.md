@@ -311,3 +311,96 @@ Didn't:
 11. ❌ Day-1 mechanics test not evidenced in memory/ (STRESS_TEST.md at repo root has procedure only, no recorded pass).
 
 Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)
+
+---
+
+## Week ending 2026-11-20
+
+### Stats
+| Metric | Value |
+|---|---|
+| Start (close 2026-11-13) | $1,982.23 |
+| End | $1,880.39 |
+| Week return | -5.14% |
+| SPY week | -8.56% |
+| Bot vs SPY (week) | +3.42% |
+| Phase return / SPY phase | -5.98% / -10.37% |
+| Max intraweek DD (daily closes) | -5.14% |
+| Max DD since start | -6.13% |
+| Entries this week | 0 (cap 3) |
+| Closed round trips | 1 (W:0 / L:1) |
+| Profit factor | 0.00 |
+| Avg invested at EOD | 80.6% |
+| EODs below 70% floor | 0 of 5 |
+
+Closed: JNJ 1 sh 277.04 -> 269.30 = $-7.74 (-2.8%).
+
+### Cadence
+| Day | pre-market | market-open | midday | eod |
+|---|---|---|---|---|
+| 2026-11-16 | OK | OK | OK | OK |
+| 2026-11-17 | OK | OK | OK | OK |
+| 2026-11-18 | OK | MISSING | OK | OK |
+| 2026-11-19 | OK | OK | OK | OK |
+| 2026-11-20 | OK | OK | OK | OK |
+
+Note: 11-18 market-open never committed (flagged by preflight in midday/EOD, not reconstructed). Cause unknown from the repo. No order depended on it: slots were 3/3 that day.
+
+### Execution
+- Planned orders: 0 | with an outcome line: n/a | filled: 0 | stops verified same session: n/a (no satellite fills)
+- No PLAN buys all week; no CORE_ACTION orders (HOLD in band every day). 11-16, 11-17, 11-19, 11-20 market-open records list every candidate with failing gates (G8/G9/G11, KS-11). 11-18 candidates (XLV/WELL/COP/XLF/AMT) have no market-open outcome line; slots 3/3, so nothing was buyable.
+- JNJ (11-19, stop fill 269.30 at 09:32 ET): stop honoured, sized per G8, loss -2.8%. Third consecutive loser (XLE, ABBV, JNJ) -> KS-11 FAIL, new satellites blocked, XLV cooldown 9 trading days.
+- Midday 11-20 record initially said WELL "not re-checked"; corrected in the same session (c75f069).
+
+### Pipeline
+- Research days with ≥2 candidates from ≥2 sectors (or every rejection's gate listed): 5/5 (11-16 ABBV/WELL/COP/AMT; 11-17 XLV/AMT/COP/XLF; 11-18 XLV/WELL/COP/XLF/AMT; 11-19 WELL/ABBV/ANET; 11-20 WELL/AMZN/ABBV)
+- Timing blocks cited outside EVENTS.md: 0 (KS-11, G8, G9, G11 are gates/switches, not timing blocks)
+- 11-19/11-20 had a free slot (JNJ closed) and PASS candidates (ANET, AMZN, WELL on G8/G10/G11) but KS-11 forbids entries, so this is not a missed entry.
+
+### News sleeve
+**GATE: NOT MET** — only 3.3 of 6 weeks scanned; scanner uptime 73% < 95%; no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)
+- weeks scanned: 3.3 (need 6) | signals scored at d3: 768 (need 150) | scanner uptime 28d: 73% (need 95%)
+- raw headlines 4660 | signals 4660 (bull 479, bear 351, none 3666, duplicate 125, unscorable 39) | open 166, scored 664
+Tradeable buckets: none
+
+### Grade: C
+Caps applied: cadence cell MISSING (11-18 market-open) -> max C. No other cap: no eligible day with a free slot and a PASS candidate (KS-11 blocked 11-19/20), invested ≥70% on 5/5 EODs, no planned order without an outcome, no unprotected satellite.
+Process was otherwise clean and the bot lost 3.4pp less than SPY in a -8.6% week, but a second missed routine in two weeks is unverifiable and caps the grade.
+
+### What worked (≤3) / What didn't (≤3)
+Worked:
+- Bot -5.14% vs SPY -8.56% (+3.42pp); phase -5.98% vs -10.37%. Max DD -6.13%, inside the 8% graduation limit.
+- JNJ stop executed as designed; KO and PG stops live and unbreached through the selloff; KS-10 PASS.
+- Every skip line cites its failing gate; zero out-of-list timing blocks; the 11-18 gap was flagged, not papered over.
+Didn't:
+- Missed market-open 11-18 (second missed routine in two weeks; 11-09 midday last week).
+- Three stop-outs in a row (XLE, ABBV, JNJ), all 7% trailing stops; KS-11 now blocks entries and cash is 28.4%.
+- Weekly DD hit -5.14% against the -7% KS-2 limit; invested ended at 71.6%, 1.6pp above the 70% floor.
+
+### Lessons (also appended to LESSONS.md)
+- 2026-11-20 — A loss-streak switch plus a market selloff idles the satellites
+- 2026-11-20 — Missed routines are recurring, not one-offs
+
+### Suggestions for the user (never applied by the agent)
+- Scheduler: two missed routine runs in two weeks (11-09 midday, 11-18 market-open). Check the scheduler/run history for those slots; consider a watchdog re-fire for a missing market-open.
+- Regime: ks.py shows SPY 715.87 vs SMA200 732.69 with 2 consecutive closes below; `regime_confirm_days` is 3, so one more close below flips to risk-off (core target 30%, satellites capped at 2). The core is 12 SPYM; a third close below SMA200 would flip the regime and trigger a core SELL on the next run. Review that this is intended in a -8.6% week.
+- KS-11: three stop-outs in 10 trading days (-6.0%, -1.2%, -2.8%). The 5-day pause fires after all three were small-to-moderate losses; consider whether the streak should reset on a trade closed within -3% (data: 2 of 3 losers were ≤ -2.8%).
+- Idle cash (carry-over): $532 (28.4%) with the core in band at 52.4% vs 55.7%. Core band ±3pp or a top-up rule would have bought more SPYM, which lost 10% this week; flag that this suggestion cuts both ways in a falling market.
+- G8/G11 (carry-over): price-capped watchlist names and a SIP-based spread check remain open.
+- Watchlist: no changes proposed (≤5/month).
+- EVENTS.md runway: last date 2027-12-10, well over 8 weeks. No warning.
+
+### Graduation checklist (TRADING-STRATEGY.md)
+1. ✅ ~17 trading days with all four routines OK/SKIPPED since 10-28 (11-09 and 11-18 excluded), need ≥15.
+2. 🟡 Core bought 10-28; later core SELLs 10-29/10-30 filled; no later core rebalance BUY yet.
+3. ✅ 5 satellite entries filled (XLE, PG, KO, ABBV, JNJ), 3 closed (XLE, ABBV, JNJ), each with a same-session stop.
+4. ✅ 0 of 5 EODs below 70% this week; phase-to-date ≈95% above the floor (lowest 71.6% on 11-20).
+5. 🟡 5/5 research days compliant; every planned order has an outcome, but 11-18 candidates lack a market-open outcome line (no order was possible).
+6. ✅ Zero timing blocks outside the closed list (weeks 1-4).
+7. 🟡 Max DD -6.13% (≤8%) and below SPY's -10.37% phase move; the 8% limit has only 2pp of room.
+8. ✅ Phase -5.98% vs SPY -10.37% (+4.39pp).
+9. ✅ ks.py in every EOD record; no breach missed by the scripts (KS-2 -5.14% vs -7% limit passed).
+10. ❌ No `Reviewed:` line under any weekly review yet.
+11. ❌ Day-1 mechanics test not evidenced in memory/.
+
+Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)

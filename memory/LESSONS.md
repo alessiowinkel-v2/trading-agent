@@ -79,3 +79,13 @@ Currently empty. Add a ticker with a reason only after repeated bad decisions on
 **Context**: Week of 11-09: slots 3/3 from 11-09 open; cash $262.94 (13.3%) idle on all 5 EODs while every candidate failed G8 (qty 0 or qty 1-2 < 8% min) or G9. Core stayed HOLD (53.6% vs 55.0% target, inside ±5pp band). Bot -0.43pp vs SPY on the week.
 **Insight**: With three small defensive satellites and a ~$263 budget, the system cannot deploy the last ~13% by either route; this is structural, repeating the 11-06 lesson.
 **Suggested rule change**: Top up the core when slots are full and cash exceeds cash_min by a set amount, or narrow core_band to ±3pp.
+
+## 2026-11-20 — A loss-streak switch plus a market selloff idles the satellites
+**Context**: JNJ stopped out 11-19 (third straight loser: XLE -6.0%, ABBV -1.2%, JNJ -2.8%). KS-11 then blocked entries on 11-19 and 11-20 although a slot was free and WELL/AMZN/ANET passed G8/G10/G11. Cash is 28.4% (invested 71.6%, floor 70%); SPY fell 8.56% this week, the bot 5.14%.
+**Insight**: Idle cash and a blocked slot helped this week (the selloff made new entries a bad bet), but the invested floor is 1.6pp from breaking while KS-11 holds entries off for 5 days. The rule is working as written; the exposure is mostly the core.
+**Suggested rule change**: none yet. User to judge whether KS-11 should ignore losses under ~3% (see weekly review).
+
+## 2026-11-20 — Missed routines are recurring, not one-offs
+**Context**: 11-09 midday and 11-18 market-open never committed; both were caught only by MISSING_COMMITS in later routines. Cadence caps the weekly grade at C each time.
+**Insight**: Two misses in 10 trading days is a pattern. A missed market-open can cost an entry or a stop review; so far no order depended on either.
+**Suggested rule change**: none to the strategy; ask the user to check scheduler history and consider a re-fire for a missing market-open.
