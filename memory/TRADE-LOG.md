@@ -654,3 +654,18 @@ Gap exits/thesis: none. KO +1.58%, PG +1.36% today, both stops live; newsfeed 0 
 Exits: none | Retries: WELL SKIP (G9 KS-11, no slots; G11 PASS) - earlier line of this record wrongly said "not re-checked"; AMZN SKIP (G9 KS-11, no slots); ABBV SKIP (G1, G8, G9, G11). All dropped for today.
 Equity $1,886.51 (-0.89% day, -5.67% vs start). Cash $532.22 idle; regime risk-on, one more close below SMA200 flips to risk-off.
 Health: run 13:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
+
+### 2026-11-20 - EOD Snapshot (Day 18, Friday)
+**Portfolio:** $1,874.81 | **Cash:** $532.22 (28.4%) | **Invested:** 71.6% (floor 70%, days below: 0) | **Day P&L:** $-28.56 (-1.50%) | **Phase P&L:** $-125.19 (-6.26%) | **SPY today:** -3.64% | **SPY phase:** -10.37% | **Regime:** risk-on
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 12 | 90.71 | 81.65 | -3.1% | $-108.75 (-10.0%) | 52.3% | - |
+| KO | satellite | 2 | 94.53 | 96.91 | +0.9% | $4.77 (+2.5%) | 10.3% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 169.00 | +0.7% | $5.72 (+3.5%) | 9.0% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** none
+KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
+MISSING_COMMITS: none
+**Notes:** No trades; both satellites green with stops live, core SPYM -3.1% on a -3.64% SPY day, so the bot lost 1.50% vs SPY -3.64%. Regime still risk-on (2 closes below SMA200 per ks.py). Tomorrow (Mon 11-23): no blocking event in EVENTS.md; satellite entries stay off while KS-11 fails.
+Health: run 16:40 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
