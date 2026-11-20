@@ -651,6 +651,6 @@ Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=
 KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19) | Maintenance: none
 Core: CORE_ACTION=HOLD (SPYM 12 sh = $988.92, 52.4% vs target 55.6%, in ±5pp band)
 Gap exits/thesis: none. KO +1.58%, PG +1.36% today, both stops live; newsfeed 0 signals (6h) for KO, PG. No satellite down ≥4%.
-Exits: none | Retries: WELL not re-checked (market-open SKIP, KS-11); AMZN SKIP (G9 KS-11, no slots); ABBV SKIP (G1, G8, G9, G11). All dropped for today.
+Exits: none | Retries: WELL SKIP (G9 KS-11, no slots; G11 PASS) - earlier line of this record wrongly said "not re-checked"; AMZN SKIP (G9 KS-11, no slots); ABBV SKIP (G1, G8, G9, G11). All dropped for today.
 Equity $1,886.51 (-0.89% day, -5.67% vs start). Cash $532.22 idle; regime risk-on, one more close below SMA200 flips to risk-off.
 Health: run 13:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
