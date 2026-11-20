@@ -634,3 +634,15 @@ KS failing: KS-11 (3 consecutive losers, last 2026-11-19; satellite entries bloc
 MISSING_COMMITS: none
 **Notes:** JNJ stopped out (third straight loser) -> KS-11 blocks new satellites. Bot -1.70% vs SPY -1.96% on the day; phase -4.95% vs SPY -6.99%. Tomorrow (Fri 11-20): no blocking event in EVENTS.md; weekly review day.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-20 — Market-Open Decision (run 10:13 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19)
+Core: CORE_ACTION=HOLD (SPYM 12 sh = $1,009.32, 52.9% vs target 55.8%, in ±5pp band) - no order
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 243.19 | PASS | PASS (qty 1) | FAIL (KS-11, no slots) | PASS | PASS (+0.7%) | SKIP | - | - | - |
+| AMZN | 257.37 | PASS | PASS (qty 1) | FAIL (KS-11, no slots) | PASS | PASS (-0.1%) | SKIP | - | - | - |
+| ABBV | 283.54 | PASS | FAIL (qty 0; G1 ask 293.40 > cap 286.05) | FAIL (KS-11, no slots, XLV cooldown) | PASS | FAIL (ask +3.5%, spread 1.24%) | SKIP | - | - | - |
+New positions: none. Maintenance: none. Cash $532.22 idle (28%); regime flip risk: one more close below SMA200 → risk-off.
+Health: run 10:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
