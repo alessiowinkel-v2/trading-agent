@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-21T09:32:28Z",
+ "asof": "2026-11-22T07:00:01Z",
  "buckets": [
   {
    "asset": "stock",
@@ -2253,14 +2253,14 @@
      "t": 1.89
     },
     "d5": {
-     "first_half_mean": null,
-     "mean": 0.01671,
-     "median": 0.01671,
-     "n": 1,
+     "first_half_mean": 0.01671,
+     "mean": 0.04378,
+     "median": 0.04378,
+     "n": 2,
      "pos_rate": 1.0,
-     "sd": 0.0,
-     "second_half_mean": 0.01671,
-     "t": null
+     "sd": 0.03828,
+     "second_half_mean": 0.07085,
+     "t": 1.62
     },
     "h1": {
      "first_half_mean": -0.00601,
@@ -3061,13 +3061,13 @@
     },
     "d5": {
      "first_half_mean": -0.00419,
-     "mean": 0.0288,
-     "median": 0.01867,
-     "n": 20,
-     "pos_rate": 0.8,
-     "sd": 0.05313,
-     "second_half_mean": 0.06179,
-     "t": 2.42
+     "mean": 0.0308,
+     "median": 0.02064,
+     "n": 21,
+     "pos_rate": 0.81,
+     "sd": 0.05259,
+     "second_half_mean": 0.06262,
+     "t": 2.68
     },
     "h1": {
      "first_half_mean": -0.00589,
@@ -3418,13 +3418,13 @@
     },
     "d5": {
      "first_half_mean": -0.00419,
-     "mean": 0.0288,
-     "median": 0.01867,
-     "n": 20,
-     "pos_rate": 0.8,
-     "sd": 0.05313,
-     "second_half_mean": 0.06179,
-     "t": 2.42
+     "mean": 0.0308,
+     "median": 0.02064,
+     "n": 21,
+     "pos_rate": 0.81,
+     "sd": 0.05259,
+     "second_half_mean": 0.06262,
+     "t": 2.68
     },
     "h1": {
      "first_half_mean": -0.00589,
@@ -3443,14 +3443,14 @@
   }
  ],
  "counts": {
-  "bear": 360,
-  "bull": 487,
+  "bear": 361,
+  "bull": 488,
   "duplicate": 125,
-  "none": 3725,
-  "open": 133,
-  "raw": 4736,
-  "scored": 714,
-  "signals": 4736,
+  "none": 3737,
+  "open": 134,
+  "raw": 4750,
+  "scored": 715,
+  "signals": 4750,
   "unscorable": 39
  },
  "crypto_15m": [
@@ -3645,14 +3645,14 @@
      "t": 1.64
     },
     "d5": {
-     "first_half_mean": null,
-     "mean": 0.02766,
-     "median": 0.02766,
-     "n": 1,
+     "first_half_mean": 0.02766,
+     "mean": 0.05399,
+     "median": 0.06698,
+     "n": 3,
      "pos_rate": 1.0,
-     "sd": 0.0,
-     "second_half_mean": 0.02766,
-     "t": null
+     "sd": 0.02281,
+     "second_half_mean": 0.06716,
+     "t": 4.1
     }
    },
    "level": "fine",
@@ -3800,14 +3800,14 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 3.5 of 6 weeks scanned",
-   "scanner uptime 73% < 95%",
+   "only 3.6 of 6 weeks scanned",
+   "scanner uptime 72% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 790,
   "tradeable": [],
-  "uptime_28d": 0.728,
-  "weeks": 3.5
+  "uptime_28d": 0.725,
+  "weeks": 3.6
  },
  "prompt_versions": [
   "classify-v1"
