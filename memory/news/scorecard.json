@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-22T07:00:01Z",
+ "asof": "2026-11-23T08:51:48Z",
  "buckets": [
   {
    "asset": "stock",
@@ -2254,13 +2254,13 @@
     },
     "d5": {
      "first_half_mean": 0.01671,
-     "mean": 0.04378,
-     "median": 0.04378,
-     "n": 2,
+     "mean": 0.0465,
+     "median": 0.05195,
+     "n": 3,
      "pos_rate": 1.0,
-     "sd": 0.03828,
-     "second_half_mean": 0.07085,
-     "t": 1.62
+     "sd": 0.02748,
+     "second_half_mean": 0.0614,
+     "t": 2.93
     },
     "h1": {
      "first_half_mean": -0.00601,
@@ -3060,14 +3060,14 @@
      "t": 1.94
     },
     "d5": {
-     "first_half_mean": -0.00419,
-     "mean": 0.0308,
+     "first_half_mean": -0.00281,
+     "mean": 0.03176,
      "median": 0.02064,
-     "n": 21,
-     "pos_rate": 0.81,
-     "sd": 0.05259,
-     "second_half_mean": 0.06262,
-     "t": 2.68
+     "n": 22,
+     "pos_rate": 0.818,
+     "sd": 0.05152,
+     "second_half_mean": 0.06634,
+     "t": 2.89
     },
     "h1": {
      "first_half_mean": -0.00589,
@@ -3417,14 +3417,14 @@
      "t": 1.94
     },
     "d5": {
-     "first_half_mean": -0.00419,
-     "mean": 0.0308,
+     "first_half_mean": -0.00281,
+     "mean": 0.03176,
      "median": 0.02064,
-     "n": 21,
-     "pos_rate": 0.81,
-     "sd": 0.05259,
-     "second_half_mean": 0.06262,
-     "t": 2.68
+     "n": 22,
+     "pos_rate": 0.818,
+     "sd": 0.05152,
+     "second_half_mean": 0.06634,
+     "t": 2.89
     },
     "h1": {
      "first_half_mean": -0.00589,
@@ -3443,14 +3443,14 @@
   }
  ],
  "counts": {
-  "bear": 361,
-  "bull": 488,
+  "bear": 362,
+  "bull": 489,
   "duplicate": 125,
-  "none": 3737,
-  "open": 134,
-  "raw": 4750,
-  "scored": 715,
-  "signals": 4750,
+  "none": 3745,
+  "open": 135,
+  "raw": 4760,
+  "scored": 716,
+  "signals": 4760,
   "unscorable": 39
  },
  "crypto_15m": [
@@ -3800,14 +3800,14 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 3.6 of 6 weeks scanned",
+   "only 3.8 of 6 weeks scanned",
    "scanner uptime 72% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 790,
   "tradeable": [],
-  "uptime_28d": 0.725,
-  "weeks": 3.6
+  "uptime_28d": 0.72,
+  "weeks": 3.8
  },
  "prompt_versions": [
   "classify-v1"
