@@ -686,3 +686,18 @@ Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=
 KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 | Maintenance: none
 Exits: none (KO -1.15%, PG +0.51% today; both stops active; no gap exits; newsfeed 0 signals KO,PG 6h) | Retries: none (core DONE_TODAY; WELL/AMT/XLP not eligible: KS-11, no slots)
 Health: run 13:07 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
+
+### 2026-11-23 - EOD Snapshot (Day 19, Monday)
+**Portfolio:** $1,914.96 | **Cash:** $957.27 (50.0%) | **Invested:** 50.0% (floor 70%, days below: 1) | **Day P&L:** $44.15 (+2.36%) | **Phase P&L:** $-85.04 (-4.25%) | **SPY today:** +4.71% | **SPY phase:** -6.15% | **Regime:** risk-off
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 7 | 90.71 | 85.13 | +4.8% | $-39.06 (-6.2%) | 31.1% | - |
+| KO | satellite | 2 | 94.53 | 96.09 | -0.9% | $3.13 (+1.7%) | 10.0% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 169.60 | +0.1% | $6.32 (+3.9%) | 8.9% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** sell 5 SPYM @ 85.01 (core-2026-11-23)
+KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
+MISSING_COMMITS: none
+**Notes:** Bot +2.36% vs SPY +4.71% on the day: the risk-off core cut (7 SPYM, 31.1%) lagged a sharp rebound; phase -4.25% vs SPY -6.15%. Invested 50.0% (floor 70%, day 1 below) is a consequence of the risk-off core target. Tomorrow: no blocking event in EVENTS.md; KS-11 still holds satellite entries.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
