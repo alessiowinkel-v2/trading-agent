@@ -669,3 +669,15 @@ KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
 MISSING_COMMITS: none
 **Notes:** No trades; both satellites green with stops live, core SPYM -3.1% on a -3.64% SPY day, so the bot lost 1.50% vs SPY -3.64%. Regime still risk-on (2 closes below SMA200 per ks.py). Tomorrow (Mon 11-23): no blocking event in EVENTS.md; satellite entries stay off while KS-11 fails.
 Health: run 16:40 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-23 — Market-Open Decision (run 10:13 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19)
+Core: CORE_ACTION=SELL 5 SPYM limit 84.92 (regime risk-off, target 30%) → order 585f61a0-a32b-4e89-b940-c1b472ff3350 (core-2026-11-23) filled 5 @ 85.01. After: 7 sh = 31.1%, invested 50.0% (below 70% floor — expected consequence of risk-off core target, flagged for weekly review).
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 240.34 | PASS | PASS | FAIL (KS-11, no slots) | PASS | FAIL (ask +4.9%, spread 10.29%) | SKIP | - | - | - |
+| AMT | 184.21 | PASS | PASS | FAIL (KS-11, no slots) | PASS | PASS (post-core re-check: FAIL, ask +3.6%) | SKIP | - | - | - |
+| XLP | 90.46 | PASS | PASS | FAIL (KS-11, no slots, sector cap 33% > 25%) | PASS | PASS | SKIP | - | - | - |
+New positions: none. Maintenance: none.
+Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
