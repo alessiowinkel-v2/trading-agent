@@ -1291,3 +1291,60 @@ CANDIDATE: ABBV ref=283.54 stop_pct=7.0 sector=XLV g6=PASS g7=PASS
 EVENT_TODAY=none (no timing block). SAT_SLOTS=0 and SAT_ENTRIES_ALLOWED=no: KS-11 (3 consecutive losers) blocks all new satellites; ABBV additionally in XLV cooldown. Candidates are planned (3 candidates, 3 sectors: XLRE, XLY, XLV) so market-open can act if KS-11 clears; expect no entries. Core HOLD (52.8% vs 55.8%, in band). Cash $532.22 (28.0%) idle; invested 72.0%. Regime flip risk: one more close below SMA200 flips to risk-off. Friday weekly review today. No orders in this routine.
 
 Health: run 07:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
+
+## 2026-11-23 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-23 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-12-02
+
+### Regime and sectors
+REGIME risk-off | SPY 689.81 vs SMA200 732.76 (-5.9%) | 3 consecutive closes below | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-20): 1 XLP (+11.66) | 2 XLV (+9.28) | 3 XLU (+8.85) | 4 XLRE (+6.44) | 5 XLY (+6.10) | 6 XLF (+4.71) | 7 XLE (+2.39) | 8 XLB | 9 XLC | 10 XLI | 11 XLK (-8.08, Lagging)
+
+### Kill switches and core
+KS-11 FAIL: 3 consecutive losers (last 2026-11-19) < 3 (else 5-day pause)
+ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=no | SAT_SLOTS=0 (positions 2/2, today 0/2, week 0/3)
+REGIME risk-off (SPY 689.81 vs SMA200 732.76; 3 consecutive closes below)
+CORE SPYM: 12 sh = $1,001.40 (52.8%) | target 30.0% (risk-off) | band +/-5pp
+CORE_ACTION=SELL 5 SPYM limit 78.89 ($394.45) -> bash scripts/alpaca.sh order '{"symbol":"SPYM","qty":"5","side":"sell","type":"limit","limit_price":"78.89","time_in_force":"day","client_order_id":"core-2026-11-23"}'
+SECTOR_COOLDOWNS=XLV: 2 losers in a row, last 2026-11-19 - 8 trading days left
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | pass G1 44 | G2 68 | G3 12 | G4 67 | G5 46 | G8 41 | ALL 7
+Top-7 (7 passers): PG (held), KO (held), AMT, XLP, WELL, XLV, JNJ
+Near misses (one gate, all G3): AMZN, TJX, CMG, BAC, SCHW, XOM, CVX, COP, SLB, WMT, PM, NEE
+
+### Yesterday's candidates (11-20 plan)
+- WELL: not filled: KS-11 (G9), no slots
+- AMZN: not filled: KS-11 (G9); now fails G3 (near miss)
+- ABBV: not filled: KS-11 + XLV cooldown; G1/G8/G11 also failed at open
+
+### Candidates (screen.py G1-G5, G8 PASS for AMT, WELL, XLP, XLV, JNJ)
+Not used: PG, KO: G0 held. XLV, JNJ: XLV cooldown (G9), G6 not checked.
+
+#### 1. WELL — Welltower (XLRE, rank 4)
+G1 PASS $240.34 vs cap $284.60 | G2 PASS ADV20 $804M | G3 PASS 240.34 > 235.35 > 222.86 | G4 PASS R5 -1.7% | G5 PASS rank 4, RS63 +9.8% | G8 PASS stop 7.0% (~223.52), target 273.99, qty 1 = $240.34 (12.7%)
+G6 PASS — next report 2027-02-09 (estimated, not confirmed) >= 2026-12-02 [perplexity: tradytics.com]; Q3 reported ~Oct 26.
+G7 PASS — Senior-housing occupancy/rate growth, Q3 normalized FFO $1.67 (+25% y/y), raised full-year outlook; RBC sees mid-teens FFO growth 2027-28; Mizuho top healthcare REIT pick (11-20). Risk: REIT rate sensitivity.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=240.34 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. XLP — Consumer Staples Select Sector SPDR (XLP, rank 1)
+G1 PASS $90.46 | G2 PASS ADV20 $1897M | G3 PASS 90.46 > 86.40 > 85.03 | G4 PASS R5 -2.0% | G5 PASS rank 1, RS63 +13.1% | G8 PASS stop 7.0% (~84.13), target 103.12, qty 3 = $271.38 (14.3%)
+G6 PASS — ETF, no earnings report [perplexity].
+G7 PASS — #1-ranked sector (defensive leader) in risk-off tape; RS63 +13.1% vs SPY. Risk: already hold KO+PG (same sector; 2-position cap).
+News feed: 0 signals (48h).
+CANDIDATE: XLP ref=90.46 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+#### 3. AMT — American Tower (XLRE, rank 4)
+G1 PASS $184.21 | G2 PASS ADV20 $531M | G3 PASS 184.21 > 179.65 > 178.21 | G4 PASS R5 -3.9% | G5 PASS rank 4, RS63 +12.9% | G8 PASS stop 7.0% (~171.32), target 210.00, qty 1 = $184.21 (9.7%)
+G6 PASS — next report 2027-02-23 (estimated) >= 2026-12-02 [perplexity: finkut.com].
+G7 PASS — Guidance raised third time in 2026, CoreSite revenue +17.4%, $2.0B added buyback (11-17), Deutsche Bank Buy (11-17), Dish $525M settlement (11-21). Risk: leverage/new debt; same sector as WELL.
+News feed: 0 signals (48h).
+CANDIDATE: AMT ref=184.21 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none (no timing block). Regime flipped to RISK-OFF: core target 30%, CORE_ACTION=SELL 5 SPYM limit 78.89 — market-open recomputes and executes (core order never blocked). SAT_ENTRIES_ALLOWED=no (KS-11; also positions 2/2 at the risk-off cap, SAT_SLOTS=0): expect no satellite entries. Candidates planned (WELL, AMT: XLRE; XLP: XLP) so market-open can act if gates clear. Selling the core will drop invested % below the 70% floor — expected consequence of the rule, flagged for the weekly review.
+
+Health: run 07:20 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
