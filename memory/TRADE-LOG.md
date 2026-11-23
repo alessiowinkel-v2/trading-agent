@@ -681,3 +681,8 @@ Core: CORE_ACTION=SELL 5 SPYM limit 84.92 (regime risk-off, target 30%) → orde
 | XLP | 90.46 | PASS | PASS | FAIL (KS-11, no slots, sector cap 33% > 25%) | PASS | PASS | SKIP | - | - | - |
 New positions: none. Maintenance: none.
 Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-23 — Midday (run 13:07 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 | Maintenance: none
+Exits: none (KO -1.15%, PG +0.51% today; both stops active; no gap exits; newsfeed 0 signals KO,PG 6h) | Retries: none (core DONE_TODAY; WELL/AMT/XLP not eligible: KS-11, no slots)
+Health: run 13:07 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
