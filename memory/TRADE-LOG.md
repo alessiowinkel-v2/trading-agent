@@ -722,3 +722,18 @@ Gap/thesis check: KO +2.2%, PG +1.7% today, both stops active (KS-10 PASS); news
 Exits: none | Retries (ks.py --check): WELL SKIP (G9 KS-11/no slots; G11 ask +6.1%, spread 4.69%) | AMZN SKIP (G9 KS-11/no slots; G11 PASS) | XLP SKIP (G9 KS-11/no slots/sector cap 33.6% > 25%). All dropped for today.
 Orders placed/replaced/cancelled: none
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
+
+### 2026-11-24 - EOD Snapshot (Day 20, Tuesday)
+**Portfolio:** $1,916.71 | **Cash:** $957.25 (49.9%) | **Invested:** 50.1% (floor 70%, days below: 2) | **Day P&L:** $2.82 (+0.15%) | **Phase P&L:** $-83.29 (-4.16%) | **SPY today:** -0.49% | **SPY phase:** -6.61% | **Regime:** risk-off
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 7 | 90.71 | 84.53 | -0.6% | $-43.26 (-6.8%) | 30.9% | - |
+| KO | satellite | 2 | 94.53 | 97.64 | +1.8% | $6.23 (+3.3%) | 10.2% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 172.47 | +1.7% | $9.19 (+5.6%) | 9.0% | trailing_stop 7%/hwm 173.59 (440e2534) |
+
+**Fills today:** none
+KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
+MISSING_COMMITS: none
+**Notes:** Flat day, no orders; bot +0.15% vs SPY -0.49%, phase -4.16% vs SPY -6.61%. Invested 50.1%, below the 70% floor for 2 days (core at its risk-off 30% target, KS-11 blocks satellite entries). Tomorrow: no blocking event (next: NFP 2026-12-04).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
