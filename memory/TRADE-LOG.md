@@ -701,3 +701,16 @@ KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
 MISSING_COMMITS: none
 **Notes:** Bot +2.36% vs SPY +4.71% on the day: the risk-off core cut (7 SPYM, 31.1%) lagged a sharp rebound; phase -4.25% vs SPY -6.15%. Invested 50.0% (floor 70%, day 1 below) is a consequence of the risk-off core target. Tomorrow: no blocking event in EVENTS.md; KS-11 still holds satellite entries.
 Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-24 — Market-Open Decision (run 10:13 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19)
+Core: CORE_ACTION=HOLD (SPYM 7 sh = $592.06, 30.9% vs target 30.0% risk-off, in band)
+Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 240.93 | PASS | PASS (qty 1 @ 244.60) | FAIL (KS-11; no slots 2/2) | PASS | PASS (ask +1.4%) | SKIP | - | - | - |
+| AMZN | 255.39 | PASS | PASS (qty 1 @ 255.57) | FAIL (KS-11; no slots 2/2) | PASS | PASS (ask -0.0%) | SKIP | - | - | - |
+| XLP | 90.38 | PASS | PASS (qty 3 @ 92.07) | FAIL (KS-11; no slots; sector cap 33.6% > 25%) | PASS | PASS (ask +1.8%) | SKIP | - | - | - |
+New positions: none.
+Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
