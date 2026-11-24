@@ -714,3 +714,11 @@ Maintenance: none
 | XLP | 90.38 | PASS | PASS (qty 3 @ 92.07) | FAIL (KS-11; no slots; sector cap 33.6% > 25%) | PASS | PASS (ask +1.8%) | SKIP | - | - | - |
 New positions: none.
 Health: run 10:13 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-24 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19) | Maintenance: none
+Core: CORE_ACTION=HOLD (SPYM 7 sh = $591.85, 30.9% vs target 30.0%, in band)
+Gap/thesis check: KO +2.2%, PG +1.7% today, both stops active (KS-10 PASS); newsfeed 0 signals (6h); no position down >=4%.
+Exits: none | Retries (ks.py --check): WELL SKIP (G9 KS-11/no slots; G11 ask +6.1%, spread 4.69%) | AMZN SKIP (G9 KS-11/no slots; G11 PASS) | XLP SKIP (G9 KS-11/no slots/sector cap 33.6% > 25%). All dropped for today.
+Orders placed/replaced/cancelled: none
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
