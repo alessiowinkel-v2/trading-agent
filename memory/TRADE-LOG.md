@@ -756,3 +756,19 @@ KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | fai
 Core: CORE_ACTION=HOLD (SPYM 7 sh = $585.90, 30.6% vs 30.0% target, in band). Stops: KO, PG protected (KS-10 PASS).
 Exits: none (KO +0.83%, PG +0.85% today; no satellite ≤ -4%; newsfeed 0 signals) | Retries: none (market-open candidates WELL/XLF/AMT/XLP blocked by KS-11 and no slots 2/2; not retried).
 Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
+
+### 2026-11-25 - EOD Snapshot (Day 21, Wednesday)
+**Portfolio:** $1,916.86 | **Cash:** $957.25 (49.9%) | **Invested:** 50.1% (floor 70%, days below: 3) | **Day P&L:** $-0.37 (-0.02%) | **Phase P&L:** $-83.14 (-4.16%) | **SPY today:** -0.29% | **SPY phase:** -6.88% | **Regime:** risk-off
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 7 | 90.71 | 84.34 | -0.3% | $-44.59 (-7.0%) | 30.8% | - |
+| KO | satellite | 2 | 94.53 | 97.78 | +0.2% | $6.51 (+3.4%) | 10.2% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 173.67 | +0.7% | $10.39 (+6.4%) | 9.1% | trailing_stop 7%/hwm 174.56 (440e2534) |
+
+**Fills today:** none
+
+KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
+MISSING_COMMITS: none
+**Notes:** No orders today; KS-11 blocked satellite entries, core held in band (30.8% vs 30.0% risk-off target). Bot -4.16% vs SPY -6.88% since start; day -0.02% vs SPY -0.29%. Tomorrow 11-26 is Thanksgiving (market closed); no blocking event; next is NFP 12-04. Invested 50.1% is below the 70% floor for 3 days (risk-off core target + KS-11).
+Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
