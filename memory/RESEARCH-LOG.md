@@ -1402,3 +1402,63 @@ CANDIDATE: XLP ref=90.38 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
 EVENT_TODAY=none (no timing block). Regime risk-off, core HOLD in band (30.9% vs 30.0%). SAT_ENTRIES_ALLOWED=no (KS-11; positions 2/2 at risk-off cap, SAT_SLOTS=0): expect no satellite entries. Candidates planned (WELL: XLRE; AMZN: XLY; XLP) so market-open can act if gates clear. Invested ~50% (below 70% floor) is a consequence of the risk-off core target — flagged for weekly review.
 
 Health: run 07:15 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
+
+## 2026-11-25 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-25 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-12-04
+
+### Regime and sectors
+REGIME risk-off | SPY 718.78 vs SMA200 733.04 (-1.9%) | 5 consecutive closes below | flip needs 3 consecutive closes on the other side
+Top sectors (bars through 2026-11-24): 1 XLP (+11.61) | 2 XLV (+10.87) | 3 XLY (+7.88) | 4 XLU (+7.00) | 5 XLRE (+5.09) | 6 XLF (+4.37) | 7 XLC (+2.80) | 8 XLB | 9 XLI | 10 XLE | 11 XLK (-8.75)
+
+### Kill switches and core
+KS-11 FAIL: 3 consecutive losers (last 2026-11-19) < 3 (else 5-day pause)
+ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=no | SAT_SLOTS=0 (positions 2/2, today 0/2, week 0/3)
+REGIME risk-off (SPY 718.78 vs SMA200 733.04; 5 consecutive closes below)
+CORE SPYM: 7 sh = $580.45 (30.4%) | target 30.0% (risk-off) | band +/-5pp
+CORE_ACTION=HOLD (in band)
+SECTOR_COOLDOWNS=XLV: 2 losers in a row, last 2026-11-19 - 6 trading days left
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | pass G1 44 | G2 68 | G3 15 | G4 68 | G5 47 | G8 42 | ALL 8
+Top-8: PG (held), KO (held), XLP, XLV, JNJ, AMT, WELL, XLF
+Near misses (one gate, all G3): GOOGL, NFLX, TMUS, AMZN, CMG, BAC, SCHW, XOM, CVX, COP, WMT, PM
+
+### Yesterday's candidates (11-24 plan)
+- WELL: not filled: KS-11 (G9), no slots 2/2 (G11 pass at open)
+- AMZN: not filled: KS-11 (G9), no slots. Dropped today: G3 (no longer passes; near miss)
+- XLP: not filled: KS-11, no slots, sector cap 33.6% > 25%
+
+### Candidates
+Not used: PG, KO (G0 held). XLV, JNJ: XLV sector cooldown (G9), not G6/G7-checked.
+
+#### 1. WELL — Welltower (XLRE, rank 5)
+G1-G5, G8 PASS (close 245.14 > 235.73 > 223.33, R5 -0.3%, RS63 +7.7%, stop 7.0% ~227.98, target 279.46, qty 1 = $245.14, 12.8%)
+G6 PASS — next report 2027-02-16 (estimated, source updated 2026-11-20) >= 2026-12-04 [perplexity: tipranks.com]
+G7 PASS — Senior-housing occupancy/pricing growth; Q3 FFO beat and raised 2026 outlook; Mizuho Outperform PT $270 (11-18); IBD Stock of the Day near buy point (11-20). Risk: REIT rate sensitivity.
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=245.14 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. XLF — Financial Select Sector SPDR (XLF, rank 6)
+G1-G5, G8 PASS (close 56.11 > 55.83 > 54.03, R5 -1.7%, RS63 +2.5% rank 6 OK, stop 7.0% ~52.18, target 63.97, qty 5 = $280.55, 14.7%)
+G6 PASS — ETF, no earnings.
+G7 PASS — Rank-6 sector ETF in a confirmed uptrend (above SMA50 > SMA200); fallback-eligible diversifier outside staples/healthcare/REIT. Risk: thin G3 margin ($0.28 over SMA50).
+CANDIDATE: XLF ref=56.11 stop_pct=7.0 sector=XLF g6=PASS g7=PASS
+
+#### 3. AMT — American Tower (XLRE, rank 5)
+G1-G5, G8 PASS (close 182.83 > 179.80 > 178.29, R5 -0.2%, RS63 +10.2%, stop 7.0% ~170.03, target 208.43, qty 1 = $182.83, 9.6%)
+G6 PASS — next report 2027-02-23 (estimated, source updated 2026-11-22) >= 2026-12-04 [perplexity: zacks.com]
+G7 PASS — $525M DISH/EchoStar settlement cash by 12-31 (8-K 11-23); Deutsche Bank Buy, top tower pick (11-18/19). Risk: rate sensitivity; same sector as WELL.
+News feed: 0 signals (48h).
+CANDIDATE: AMT ref=182.83 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 4. XLP — Consumer Staples Select Sector SPDR (XLP, rank 1)
+G1-G5, G8 PASS (close 91.88 > 86.68 > 85.06, R5 +0.5%, RS63 +12.7%, stop 7.0% ~85.45, qty 3 = $275.64, 14.4%). G6 PASS — ETF. G7 PASS — #1 sector, defensive leader in risk-off tape. Risk: sector already held via KO+PG (sector cap at execution).
+CANDIDATE: XLP ref=91.88 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
+
+### Decision
+EVENT_TODAY=none (no timing block). Regime risk-off, core HOLD in band (30.4% vs 30.0%). SAT_ENTRIES_ALLOWED=no (KS-11; positions 2/2 at risk-off cap, SAT_SLOTS=0): expect no satellite entries today. Candidates planned (WELL XLRE; XLF; AMT XLRE; XLP) so market-open can act if gates clear. Invested ~50% (below 70% floor) is a consequence of the risk-off core target and KS-11; flagged for weekly review.
+
+Health: run 07:30 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
