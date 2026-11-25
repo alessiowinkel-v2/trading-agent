@@ -750,3 +750,9 @@ Core: CORE_ACTION=HOLD (SPYM 7 sh = $579.04, 30.4% vs target 30.0% risk-off, in 
 | XLP | 91.88 | PASS | PASS | FAIL (KS-11; no slots; XLP 33.9% > 25%) | PASS | PASS (ask +0.4%) | SKIP | - | - | - |
 New positions: none. Invested 49.7% (below 70% floor) from risk-off core target + KS-11; flagged for weekly review.
 Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-25 — Midday (run 13:08 ET)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19) | Maintenance: none
+Core: CORE_ACTION=HOLD (SPYM 7 sh = $585.90, 30.6% vs 30.0% target, in band). Stops: KO, PG protected (KS-10 PASS).
+Exits: none (KO +0.83%, PG +0.85% today; no satellite ≤ -4%; newsfeed 0 signals) | Retries: none (market-open candidates WELL/XLF/AMT/XLP blocked by KS-11 and no slots 2/2; not retried).
+Health: run 13:08 ET | preflight=0 | mode=PAPER | ks=1 | notify=n/a | perplexity=n/a
