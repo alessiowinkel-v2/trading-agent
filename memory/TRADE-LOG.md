@@ -737,3 +737,16 @@ KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
 MISSING_COMMITS: none
 **Notes:** Flat day, no orders; bot +0.15% vs SPY -0.49%, phase -4.16% vs SPY -6.61%. Invested 50.1%, below the 70% floor for 2 days (core at its risk-off 30% target, KS-11 blocks satellite entries). Tomorrow: no blocking event (next: NFP 2026-12-04).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-25 — Market-Open Decision (run 10:12 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=no SAT_SLOTS=0 | failing: KS-11 (3 consecutive losers, last 2026-11-19)
+Core: CORE_ACTION=HOLD (SPYM 7 sh = $579.04, 30.4% vs target 30.0% risk-off, in band) | Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 245.14 | PASS | PASS | FAIL (KS-11; no slots 2/2) | PASS | PASS (ask -0.1%) | SKIP | - | - | - |
+| XLF | 56.11 | PASS | PASS | FAIL (KS-11; no slots 2/2) | PASS | PASS (ask -1.0%) | SKIP | - | - | - |
+| AMT | 182.83 | PASS | PASS | FAIL (KS-11; no slots 2/2) | PASS | PASS (ask +0.9%) | SKIP | - | - | - |
+| XLP | 91.88 | PASS | PASS | FAIL (KS-11; no slots; XLP 33.9% > 25%) | PASS | PASS (ask +0.4%) | SKIP | - | - | - |
+New positions: none. Invested 49.7% (below 70% floor) from risk-off core target + KS-11; flagged for weekly review.
+Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
