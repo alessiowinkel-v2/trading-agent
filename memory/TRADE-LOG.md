@@ -779,3 +779,7 @@ Health: run 10:12 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplex
 
 ### 2026-11-26 — midday: SKIPPED (market closed)
 Health: run 13:08 ET | preflight=30 | mode=PAPER | ks=n/a | notify=ok | perplexity=n/a
+
+### 2026-11-26 — eod: SKIPPED (market closed)
+- Not a trading day (Thanksgiving). Next open 2026-11-27 09:30 ET (early close 13:00).
+Health: run 16:37 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
