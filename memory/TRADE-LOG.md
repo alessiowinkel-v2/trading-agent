@@ -772,3 +772,7 @@ KS failing: KS-11 (3 consecutive losers, last 2026-11-19)
 MISSING_COMMITS: none
 **Notes:** No orders today; KS-11 blocked satellite entries, core held in band (30.8% vs 30.0% risk-off target). Bot -4.16% vs SPY -6.88% since start; day -0.02% vs SPY -0.29%. Tomorrow 11-26 is Thanksgiving (market closed); no blocking event; next is NFP 12-04. Invested 50.1% is below the 70% floor for 3 days (risk-off core target + KS-11).
 Health: run 16:38 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=n/a
+
+### 2026-11-26 — market-open: SKIPPED (market closed)
+Preflight exit 30 (not a trading day; Thanksgiving). Next open 2026-11-27 09:30 ET (early close 13:00).
+Health: run 10:12 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
