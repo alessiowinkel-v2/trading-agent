@@ -1462,3 +1462,7 @@ CANDIDATE: XLP ref=91.88 stop_pct=7.0 sector=XLP g6=PASS g7=PASS
 EVENT_TODAY=none (no timing block). Regime risk-off, core HOLD in band (30.4% vs 30.0%). SAT_ENTRIES_ALLOWED=no (KS-11; positions 2/2 at risk-off cap, SAT_SLOTS=0): expect no satellite entries today. Candidates planned (WELL XLRE; XLF; AMT XLRE; XLP) so market-open can act if gates clear. Invested ~50% (below 70% floor) is a consequence of the risk-off core target and KS-11; flagged for weekly review.
 
 Health: run 07:30 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=ok
+
+### 2026-11-26 — pre-market: SKIPPED (market closed)
+- Preflight exit 30: not a trading day (Thanksgiving). Next open 2026-11-27 09:30 ET (early close 13:00).
+Health: run 07:08 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
