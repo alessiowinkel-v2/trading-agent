@@ -795,3 +795,18 @@ Core: CORE_ACTION=HOLD (SPYM 7 sh = $594.93, 31.0% vs target 30.0% risk-off, in 
 | AMT | 184.59 | PASS | PASS | FAIL (no slots 2/2) | PASS | FAIL (spread 6.08%, ask +5.8%) | SKIP | - | - | - |
 New positions: none.
 Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
+
+### 2026-11-27 - EOD Snapshot (Day 22, Friday)
+**Portfolio:** $1,928.20 | **Cash:** $957.25 (49.6%) | **Invested:** 50.4% (floor 70%, days below: 4) | **Day P&L:** $11.95 (+0.62%) | **Phase P&L:** $-71.80 (-3.59%) | **SPY today:** +1.62% | **SPY phase:** -5.37% | **Regime:** risk-off
+
+| Ticker | Role | Shares | Entry | Last | Day chg | Unrealized | % of equity | Stop |
+|---|---|---|---|---|---|---|---|---|
+| SPYM | core | 7 | 90.71 | 86.02 | +2.0% | $-32.83 (-5.2%) | 31.2% | - |
+| KO | satellite | 2 | 94.53 | 97.75 | +0.2% | $6.45 (+3.4%) | 10.1% | trailing_stop 7%/hwm 100.56 (47621c1f) |
+| PG | satellite | 1 | 163.28 | 173.31 | +0.0% | $10.03 (+6.1%) | 9.0% | trailing_stop 7%/hwm 174.56 (440e2534) |
+
+**Fills today:** none
+KS failing: none
+MISSING_COMMITS: midday 2026-11-27
+**Notes:** Early-close day, no fills; +0.62% vs SPY +1.62%, phase -3.59% vs SPY -5.37%. Invested 50.4% is below the 70% floor for 4 days (risk-off core target 30%, satellites 2/2). Next: Monday 11-30 no blocking event; NFP 12-04.
+Health: run 16:37 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
