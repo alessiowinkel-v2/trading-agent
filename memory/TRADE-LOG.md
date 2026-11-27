@@ -783,3 +783,15 @@ Health: run 13:08 ET | preflight=30 | mode=PAPER | ks=n/a | notify=ok | perplexi
 ### 2026-11-26 — eod: SKIPPED (market closed)
 - Not a trading day (Thanksgiving). Next open 2026-11-27 09:30 ET (early close 13:00).
 Health: run 16:37 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
+
+### 2026-11-27 — Market-Open Decision (run 10:12 ET)
+Preflight: exit 0 | EVENT_TODAY=none | PAUSED=no | early close 13:00 ET (not a block)
+KS: ORDERS_ALLOWED=yes BUYS_ALLOWED=yes SAT_ENTRIES_ALLOWED=yes SAT_SLOTS=0 (positions 2/2) | failing: none
+Core: CORE_ACTION=HOLD (SPYM 7 sh = $594.93, 31.0% vs target 30.0% risk-off, in band) | Maintenance: none
+| Candidate | Ref | G0 | G8 | G9 | G10 | G11 | Action | Buy order | Fill | Stop order |
+|---|---|---|---|---|---|---|---|---|---|---|
+| WELL | 246.18 | PASS | PASS | FAIL (no slots 2/2) | PASS | PASS (ask +1.0%) | SKIP | - | - | - |
+| XLF | 56.51 | PASS | PASS | FAIL (no slots 2/2) | PASS | PASS (ask +0.9%) | SKIP | - | - | - |
+| AMT | 184.59 | PASS | PASS | FAIL (no slots 2/2) | PASS | FAIL (spread 6.08%, ask +5.8%) | SKIP | - | - | - |
+New positions: none.
+Health: run 10:12 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=n/a
