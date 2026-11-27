@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-26T07:07:42Z",
+ "asof": "2026-11-27T07:57:55Z",
  "buckets": [
   {
    "asset": "stock",
@@ -3463,14 +3463,14 @@
   }
  ],
  "counts": {
-  "bear": 374,
-  "bull": 508,
+  "bear": 378,
+  "bull": 510,
   "duplicate": 128,
-  "none": 3900,
-  "open": 78,
-  "raw": 4949,
+  "none": 3935,
+  "open": 84,
+  "raw": 4990,
   "scored": 804,
-  "signals": 4949,
+  "signals": 4990,
   "unscorable": 39
  },
  "crypto_15m": [
@@ -3820,14 +3820,14 @@
    "weeks_min": 6
   },
   "reasons": [
-   "only 4.2 of 6 weeks scanned",
-   "scanner uptime 73% < 95%",
+   "only 4.3 of 6 weeks scanned",
+   "scanner uptime 71% < 95%",
    "no bucket passes (n>=40, mean>0, median>0, t>=2.0, both halves>0, bull)"
   ],
   "scored_d3": 839,
   "tradeable": [],
-  "uptime_28d": 0.733,
-  "weeks": 4.2
+  "uptime_28d": 0.713,
+  "weeks": 4.3
  },
  "prompt_versions": [
   "classify-v1"
