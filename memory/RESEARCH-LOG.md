@@ -1466,3 +1466,59 @@ Health: run 07:30 ET | preflight=0 | mode=PAPER | ks=1 | notify=ok | perplexity=
 ### 2026-11-26 — pre-market: SKIPPED (market closed)
 - Preflight exit 30: not a trading day (Thanksgiving). Next open 2026-11-27 09:30 ET (early close 13:00).
 Health: run 07:08 ET | preflight=30 | mode=PAPER | ks=n/a | notify=n/a | perplexity=n/a
+
+## 2026-11-27 — Pre-market Research
+
+### Preflight
+NOW_ET=2026-11-27 07:08 | EVENT_TODAY=none | PAUSED=no | MISSING_COMMITS=none | PREFLIGHT_EXIT=0 | EARNINGS_OK_FROM=2026-12-07 | EARLY_CLOSE=yes (13:00 ET)
+
+### Regime and sectors
+REGIME risk-off | SPY 716.70 vs SMA200 733.16 (-2.2%) | 6 consecutive closes below | flip needs 3 consecutive closes on the other side
+Top: 1 XLP (+14.17) · 2 XLV (+11.75) · 3 XLY (+8.55) · 4 XLU (+8.35) · 5 XLRE (+7.75) · 6 XLF (+6.35) · 7 XLC (+5.13) · … · 11 XLK (-10.62)
+
+### Kill switches and core
+All 12 switches PASS (KS-11 now PASS: 3 losers, last 2026-11-19, cooldown elapsed).
+ORDERS_ALLOWED=yes | BUYS_ALLOWED=yes | SAT_ENTRIES_ALLOWED=yes | SAT_SLOTS=0 (positions 2/2, today 0/2, week 0/3)
+REGIME risk-off (SPY 716.70 vs SMA200 733.16; 6 consecutive closes below)
+CORE SPYM: 7 sh = $599.34 (31.2%) | target 30.0% (risk-off) | band +/-5pp
+CORE_ACTION=HOLD (in band)
+SECTOR_COOLDOWNS=XLV: 2 losers in a row, last 2026-11-19 - 5 trading days left
+MAINTENANCE=none
+
+### Screen
+Screened 68 (0 no data) | pass G1 44 | G2 68 | G3 15 | G4 68 | G5 48 | G8 41 | ALL 8
+Top 8: PG(XLP) · KO(XLP) · XLP · XLV · WELL(XLRE) · AMT(XLRE) · JNJ(XLV) · XLF — scores +35.91 / +23.59 / +21.94 / +18.80 / +17.53 / +16.69 / +14.54 / +8.69
+
+### Candidates
+- PG, KO: held (G0). XLP: XLP sector already 33.9% > 25% cap. XLV, JNJ: XLV sector cooldown (5 days left).
+
+#### 1. WELL — Welltower (XLRE, rank 5)
+G1-G5, G8 PASS (close 246.18 > 235.96 > 223.55, R5 -0.4%, RS63 +9.8%, stop 7.0% ~228.95, target 280.65, qty 1 = $246.18, 12.8%)
+G6 PASS — next report 2027-02-09 (estimated) >= 2026-12-07 [perplexity: seekingalpha.com/funkfolio]
+G7 PASS — Q3 beat (normalized FFO $1.67, occupancy 88.3%) with raised FY guidance (11-24/26); seniors-housing demographics drive NOI growth. Risk: rate sensitivity; pension fund trimmed stake (11-25).
+News feed: 0 signals (48h).
+CANDIDATE: WELL ref=246.18 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+#### 2. XLF — Financial Select Sector SPDR (XLF, rank 6)
+G1-G5, G8 PASS (close 56.51 > 55.84 > 54.05, R5 +0.2%, RS63 +4.7% rank 6 OK, stop 7.0% ~52.55, target 64.42, qty 5 = $282.55, 14.7%)
+G6 PASS — ETF, no earnings.
+G7 PASS — Rank-6 sector ETF in confirmed uptrend; diversifier outside staples/healthcare/REIT. Risk: thin G3 margin ($0.67 over SMA50).
+CANDIDATE: XLF ref=56.51 stop_pct=7.0 sector=XLF g6=PASS g7=PASS
+
+#### 3. AMT — American Tower (XLRE, rank 5)
+G1-G5, G8 PASS (close 184.59 > 179.97 > 178.32, R5 -0.1%, RS63 +13.0%, stop 7.0% ~171.67, target 210.43, qty 1 = $184.59, 9.6%)
+G6 PASS — next report 2027-02-23 (estimated) >= 2026-12-07 [perplexity: zacks.com]
+G7 PASS — $525M DISH/EchoStar settlement cash by 12-31 (8-K 11-23); Q3 AFFO $2.87 with raised 2026 outlook (11-26). Risk: rate sensitivity, DISH churn; same sector as WELL.
+News feed: 0 signals (48h).
+CANDIDATE: AMT ref=184.59 stop_pct=7.0 sector=XLRE g6=PASS g7=PASS
+
+### Yesterday's candidates (2026-11-25 plan; 11-26 holiday)
+- WELL: not filled: KS-11 and no slots (2/2)
+- XLF: not filled: KS-11 and no slots (2/2)
+- AMT: not filled: KS-11 and no slots (2/2)
+- XLP: not filled: KS-11, no slots, XLP 33.9% > 25% sector cap
+
+### Decision
+EVENT_TODAY=none (no timing block). Regime risk-off, core HOLD in band (31.2% vs 30.0%). KS-11 cleared, but SAT_SLOTS=0 (positions 2/2 at risk-off cap): expect no satellite entries today unless a slot frees. Candidates planned (WELL, XLF, AMT; 2 sectors). Early close 13:00 ET is not a block. Invested ~50% is structural to risk-off core target 30%; flagged for weekly review.
+
+Health: run 07:15 ET | preflight=0 | mode=PAPER | ks=0 | notify=ok | perplexity=ok
