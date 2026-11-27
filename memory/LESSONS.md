@@ -89,3 +89,13 @@ Currently empty. Add a ticker with a reason only after repeated bad decisions on
 **Context**: 11-09 midday and 11-18 market-open never committed; both were caught only by MISSING_COMMITS in later routines. Cadence caps the weekly grade at C each time.
 **Insight**: Two misses in 10 trading days is a pattern. A missed market-open can cost an entry or a stop review; so far no order depended on either.
 **Suggested rule change**: none to the strategy; ask the user to check scheduler history and consider a re-fire for a missing market-open.
+
+## 2026-11-27 — Risk-off targets and the 70% floor contradict each other
+**Context**: Week of 11-23: core 30% (risk-off) plus 2 satellites (~19%) left invested at 50.0-50.4% on all 4 EODs, under the 70% deploy_floor. Cash $957 (49.6%) idle; no free slot for satellites.
+**Insight**: Rules obeyed exactly, yet the floor metric and graduation item 4 cannot be met while the regime is risk-off. The conflict is structural, not an execution miss.
+**Suggested rule change**: Exempt risk-off days from the floor, or raise core_riskoff_target / sat_max_positions_riskoff.
+
+## 2026-11-27 — The regime flip sold the core into the rebound
+**Context**: 11-23 CORE_ACTION cut SPYM from 12 to 7 sh (sold 5 @ 85.01) after 3 closes below SMA200; SPY gained +4.71% that day and +5.58% for the week, bot +2.98%.
+**Insight**: A short confirmation window sells after the drop and can miss the bounce; one week is thin evidence, and the cut also limited exposure on 11-24/25.
+**Suggested rule change**: Review regime_confirm_days (3) against a longer window once more flips are on record.

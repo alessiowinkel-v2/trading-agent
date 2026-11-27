@@ -404,3 +404,94 @@ Didn't:
 11. ❌ Day-1 mechanics test not evidenced in memory/.
 
 Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)
+
+---
+
+## Week ending 2026-11-27
+
+### Stats
+| Metric | Value |
+|---|---|
+| Start (close 2026-11-20) | $1,870.81 |
+| End | $1,926.60 |
+| Week return | +2.98% |
+| SPY week | +5.58% |
+| Bot vs SPY (week) | -2.60% |
+| Phase return / SPY phase | -3.67% / -5.37% |
+| Max intraweek DD (daily closes) | +0.00% |
+| Max DD since start | -6.61% |
+| Entries this week | 0 (cap 3) |
+| Closed round trips | 0 (W:0 / L:0) |
+| Profit factor | n/a |
+| Avg invested at EOD | 50.1% |
+| EODs below 70% floor | 4 of 4 |
+
+KS report 11-27 18:08 ET: all 12 switches PASS, ORDERS_ALLOWED=yes, SAT_SLOTS=0 (positions 2/2), regime risk-off (SPY 716.70 vs SMA200 733.16; 6 closes below), CORE_ACTION=HOLD (SPYM 31.2% vs 30.0% target).
+
+### Cadence
+| Day | pre-market | market-open | midday | eod |
+|---|---|---|---|---|
+| 2026-11-23 | OK | OK | OK | OK |
+| 2026-11-24 | OK | OK | OK | OK |
+| 2026-11-25 | OK | OK | OK | OK |
+| 2026-11-26 | SKIPPED | SKIPPED | SKIPPED | SKIPPED |
+| 2026-11-27 | OK | OK | MISSING | OK |
+
+11-27 midday never committed (early-close day, close 13:00 ET; the run would have fired after the close and should have logged SKIPPED). Third missed routine in three weeks (11-09 midday, 11-18 market-open, 11-27 midday).
+
+### Execution
+- Planned orders: 1 | with an outcome line: 1 | filled: 1 | stops verified same session: n/a (0 satellite fills)
+- Core SELL 5 SPYM limit 84.92, 11-23 (regime flip to risk-off, target 30%), filled 5 @ 85.01 (core-2026-11-23). No satellite orders; no closed trades.
+- Satellites KO and PG held with live 7% trailing stops all week (KS-10 PASS each EOD).
+- Skip reasons all gates: 11-23/24/25 G9 (KS-11 and/or no slots 2/2, XLP sector cap), 11-27 G9 (no slots 2/2) and AMT G11 (spread 6.08%).
+
+### Pipeline
+- Research days with ≥2 candidates from ≥2 sectors (or every rejection's gate listed): 4/4 trading days (11-23 WELL/AMT/XLP, 11-24 WELL/AMZN/XLP, 11-25 WELL/XLF/AMT/XLP, 11-27 WELL/XLF/AMT; counted from the market-open tables); 11-26 holiday.
+- Timing blocks cited outside EVENTS.md: 0 (must be 0)
+
+### News sleeve
+GATE: NOT MET — only 4.3 of 6 weeks scanned; scanner uptime 71% < 95%; no bucket passes.
+- weeks scanned 4.3 (need 6) | signals scored at d3: 839 (need 150) | scanner uptime 28d: 71% (need 95%)
+- raw headlines 4990 | bull 510, bear 378, none 3935, duplicate 128, unscorable 39 | open 84, scored 804 | classify-v1
+- Tradeable buckets: none
+
+### Grade: C−
+Caps applied: invested < 70% on 4 of 4 EODs → max C−; cadence cell MISSING (11-27 midday) → max C. No "PASS candidate with free slots" cap (slots 2/2 all week); no planned order without an outcome; no unprotected satellite.
+Process was clean apart from one missing run, but the book sat at ~50% invested all week because the risk-off rules (core 30%, 2 satellite slots) cannot reach the 70% floor, so the floor cap decides the grade.
+
+### What worked (≤3) / What didn't (≤3)
+Worked:
+- Phase -3.67% vs SPY -5.37% (+1.70pp); max DD -6.61% (limit 8%); all 12 switches PASS.
+- KO and PG stops live all week; the one core order was filled and logged the same session.
+- Every skip cites its failing gate; zero out-of-list timing blocks.
+Didn't:
+- Week +2.98% vs SPY +5.58% (-2.60pp): the core was cut 12→7 SPYM at 85.01 on 11-23, the day SPY rebounded +4.71%.
+- Invested 50% on all 4 EODs: the risk-off targets (core 30% + 2 satellites ≈ 20%) sum to about 50%, below the 70% floor by design.
+- Midday 11-27 missing; third missed routine in three weeks.
+
+### Lessons (also appended to LESSONS.md)
+- 2026-11-27 — Risk-off targets and the 70% floor contradict each other
+- 2026-11-27 — The regime flip sold the core into the rebound
+
+### Suggestions for the user (never applied by the agent)
+- Scheduler: three missed runs in three weeks (11-09 midday, 11-18 market-open, 11-27 midday). Check run history; for early-close days make sure the midday routine fires before 13:00 ET or logs SKIPPED.
+- Floor vs regime: with risk-off (core 30%, 2 satellite slots, satellites ≤ ~20%), invested cannot exceed ~50%, so graduation item 4 and the deploy_floor cannot be met while risk-off lasts. Decide whether the floor should be waived in risk-off or the risk-off core target raised. Data: 4/4 EODs at 50.0-50.4%.
+- Regime whipsaw: the flip sold 5 SPYM at 85.01 (11-23); SPYM closed 11-27 at 86.02 and SPY gained +5.58% on the week. One week of data; regime_confirm_days 3 may be short in a volatile tape. Cuts both ways: the same cut avoided losses on 11-24/25.
+- KS-11 now PASS (cooldown over), but no slot is free (2/2 in risk-off), so entries stay at zero until a stop-out or a regime flip back.
+- Watchlist: no changes proposed (≤5/month).
+- EVENTS.md runway: last date 2027-12-10, well over 8 weeks. No warning.
+
+### Graduation checklist (TRADING-STRATEGY.md)
+1. ✅ ~20 trading days with all four routines OK/SKIPPED since 10-28 (11-09, 11-18, 11-27 excluded), need ≥15.
+2. 🟡 Core bought 10-28; later core SELLs filled (10-29, 10-30, 11-23); no later core rebalance BUY yet.
+3. ✅ 5 satellite entries filled (XLE, PG, KO, ABBV, JNJ), 3 closed (XLE, ABBV, JNJ), each with a same-session stop (no new entries this week).
+4. ❌ Below the 70% floor on 5 EODs so far (1 in week 1, 4 this week) out of ~23, about 78% compliant vs 90% needed; the risk-off structure keeps adding misses (approximate count from weekly stats).
+5. 🟡 4/4 research days compliant this week; every planned order has an outcome; 11-18 gap from an earlier week still stands.
+6. ✅ Zero timing blocks outside the closed list (weeks 1-5).
+7. 🟡 Max DD -6.61% (≤8%, 1.4pp of room); SPY's phase low was worse (-10.37% on 11-20 per last review).
+8. ✅ Phase -3.67% vs SPY -5.37% (+1.70pp).
+9. ✅ ks.py in every EOD record; no breach missed by the scripts.
+10. ❌ No `Reviewed:` line under any weekly review yet.
+11. ❌ Day-1 mechanics test not evidenced in memory/.
+
+Reviewed: (the user adds "Reviewed: YYYY-MM-DD" here)
