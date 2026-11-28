@@ -301,11 +301,11 @@
  },
  "cursor_updated_at": "2026-11-28T14:01:39Z",
  "gate_met": false,
- "last_commit_utc": "2026-11-28T14:07:37Z",
+ "last_commit_utc": "2026-11-28T18:46:40Z",
  "last_error": "",
- "last_new": 3,
- "last_ok_utc": "2026-11-28T14:07:36Z",
- "last_run_utc": "2026-11-28T14:07:36Z",
+ "last_new": 0,
+ "last_ok_utc": "2026-11-28T18:46:40Z",
+ "last_run_utc": "2026-11-28T18:46:40Z",
  "last_score_attempt_utc": "2026-11-28T10:07:37Z",
  "last_score_utc": "2026-11-28T10:07:37Z",
  "more_pending": false,
@@ -344,7 +344,7 @@
   "2026-11-25": 47,
   "2026-11-26": 50,
   "2026-11-27": 56,
-  "2026-11-28": 19
+  "2026-11-28": 20
  },
  "totals": {
   "classified": 4848,
