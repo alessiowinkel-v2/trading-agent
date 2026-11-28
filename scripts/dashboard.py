@@ -62,6 +62,11 @@ def drawdown(series):
     return out, round(mdd, 5)
 
 
+def floor_today(regime):
+    P = tlib.params()
+    return P.get("deploy_floor_riskoff", P["deploy_floor"]) if regime == "risk-off" else P["deploy_floor"]
+
+
 def account_block(state, cfg):
     eod = state.get("eod") or {}
     dates = sorted(eod)
@@ -83,6 +88,7 @@ def account_block(state, cfg):
         "account_tail": (cfg.get("account_number") or "")[-4:], "asof": state.get("asof"),
         "equity": last_eq, "cash": latest.get("cash"), "invested": latest.get("invested"), "sat_pct": latest.get("sat_pct"),
         "regime": latest.get("regime") or state.get("regime"), "ks_fail": state.get("ks_fail") or [],
+        "floor": floor_today(latest.get("regime") or state.get("regime")),
         "paused": bool(tlib.paused()),
         "phase_return": (last_eq / start_eq - 1) if (last_eq and start_eq) else None,
         # needs two distinct SPY closes; with one, "+0.00%" would be invented, not measured

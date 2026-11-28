@@ -1,7 +1,8 @@
 # News-sleeve scanner: scans every 15 minutes, 24/7 (plans/news-sleeve/PLAN.md §1, §4, D14).
 # GitHub delays/drops frequent cron triggers, so each run is a ~5.5 h loop
-# (scripts/newsloop.sh) and the hourly cron only keeps one successor queued
-# (concurrency: one running + one pending). The loop also runs the nightly scorer.
+# (scripts/newsloop.sh) that dispatches its own successor when it finishes (PLAN D15);
+# the hourly cron is only the backup that restarts the chain if a run dies.
+# Concurrency: one running + one pending. The loop also runs the nightly scorer.
 # Reads the Alpaca News API, snapshots prices, classifies headlines, commits to main.
 # It never places orders. Skips quietly until the Alpaca secrets exist.
 name: newsscan
@@ -13,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  actions: write     # newsloop.sh dispatches the next run of this workflow
 
 concurrency:
   group: newsscan
@@ -32,6 +34,8 @@ jobs:
       CLASSIFIER_MODEL: ${{ vars.CLASSIFIER_MODEL || 'claude-sonnet-5-5' }}
       NOTIFY_WEBHOOK_URL: ${{ secrets.NOTIFY_WEBHOOK_URL }}
       NOTIFY_MENTION: ${{ secrets.NOTIFY_MENTION }}
+      GH_TOKEN: ${{ github.token }}
+      NEWSLOOP_CHAIN: "1"
     steps:
       - uses: actions/checkout@v4
         with:

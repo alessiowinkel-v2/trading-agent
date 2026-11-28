@@ -122,7 +122,8 @@
     tiles.appendChild(tile("Equity", usd(a.equity), a.day_return == null ? "day change n/a" : "day " + pct(a.day_return), "", true));
     tiles.appendChild(tile("Phase return", pct(a.phase_return), "SPY " + pct(a.spy_phase_return) + (a.phase_return != null && a.spy_phase_return != null ? " · diff " + pct(a.phase_return - a.spy_phase_return) : ""), signCls(a.phase_return)));
     tiles.appendChild(tile("Max drawdown", pctAbs(a.max_dd), "SPY " + pctAbs(a.spy_max_dd) + " · limit 8%", a.max_dd != null && a.max_dd <= -0.08 ? "neg" : ""));
-    tiles.appendChild(tile("Invested", pctAbs(a.invested), "floor 70% · satellites " + pctAbs(a.sat_pct), a.invested != null && a.invested < 0.70 ? "neg" : ""));
+    const fl = a.floor == null ? 0.70 : a.floor;
+    tiles.appendChild(tile("Invested", pctAbs(a.invested), (a.regime || "") + " floor " + pctAbs(fl, 0) + " · satellites " + pctAbs(a.sat_pct), a.invested != null && a.invested < fl ? "neg" : ""));
     tiles.appendChild(tile("Cash", usd(a.cash), "regime " + (a.regime || "n/a")));
     const ks = a.ks_fail && a.ks_fail.length ? a.ks_fail.join(", ") : "none";
     tiles.appendChild(tile("Kill switches failing", ks, a.paused ? "PAUSED flag present" : "not paused", ks === "none" ? "" : "neg"));

@@ -6,6 +6,9 @@
 # and scorer can never race on memory/news/signals).
 # Env: NEWSLOOP_MINUTES (330) NEWSLOOP_EVERY_SEC (900) NEWSLOOP_NO_PULL=1 (tests)
 #      NEWSLOOP_SCORE=auto|always|never (auto)
+#      NEWSLOOP_CHAIN=1 + GH_TOKEN + GITHUB_REPOSITORY (Actions only): when the loop has run its
+#      full window it starts its own successor (workflow_dispatch), so coverage no longer depends
+#      on GitHub firing the hourly cron (observed ~50% of 15-min slots in Nov 2026, PLAN D15).
 # Usage: bash scripts/newsloop.sh
 
 set -uo pipefail
@@ -37,6 +40,20 @@ score() {
     fi
 }
 
+chain_next() {
+    # Only after a full window: a run that dies early must not spawn runs in a tight loop.
+    [[ "${NEWSLOOP_CHAIN:-}" == 1 && -n "${GH_TOKEN:-}" && -n "${GITHUB_REPOSITORY:-}" ]] || return 0
+    local need=$((minutes * 60 - 30 * 60))
+    ((need < 3600)) && need=3600   # never chain a run shorter than an hour
+    ((SECONDS >= need)) || { echo "[newsloop] ended early (${SECONDS}s) - not chaining (hourly cron is the backup)"; return 0; }
+    local code
+    code="$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 -X POST \
+        -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+        "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/newsscan.yml/dispatches" \
+        -d '{"ref":"main"}')" || code=000
+    echo "[newsloop] successor dispatched: HTTP $code (204 = queued)"
+}
+
 while :; do
     i=$((i + 1))
     start=$SECONDS
@@ -55,6 +72,7 @@ while :; do
     next=$((start + every))
     if ((next + 60 > end)); then
         echo "[newsloop] done after $i iterations"
+        chain_next
         break
     fi
     wait_s=$((next - SECONDS))

@@ -220,6 +220,11 @@ out="$(PREFLIGHT_NO_ALERT=1 bash scripts/preflight.sh eod 2>&1)"
 check "PREFLIGHT_NO_ALERT (local only) suppresses the alert" has "$out" "ALERT (suppressed, local test)"
 check "...and nothing reaches the webhook" test "$(wc -l < "$W/webhook.log")" -eq "$before"
 check "watchdog grid shows OK for market-open" has "$(bash scripts/watchdog.sh grid "$MONDAY")" "| $DATE | OK | OK | MISSING"
+check "already_ran: market-open committed OK today -> yes" has "$(bash scripts/already_ran.sh market-open)" "ALREADY_RAN=yes"
+check "already_ran: eod not committed today -> no" has "$(bash scripts/already_ran.sh eod)" "ALREADY_RAN=no"
+git commit -q --allow-empty -m "eod $DATE: ABORTED - offline test"
+check "already_ran: an ABORTED run does not count (backup retries)" has "$(bash scripts/already_ran.sh eod)" "ALREADY_RAN=no"
+check "already_ran: rejects an unknown routine" bash -c '! bash scripts/already_ran.sh lunch >/dev/null 2>&1'
 check "memtail returns the latest dated entry" has "$(bash scripts/memtail.sh memory/LESSONS.md 1)" "Phase 1b reset"
 check "webhook received messages" test -s "$W/webhook.log"
 
@@ -274,7 +279,8 @@ out="$(TRADING_NOW_UTC=2026-11-07T15:00:00Z bash scripts/watchdog.sh nightly 2>&
 check "a Saturday-morning nightly run checks Friday incl. weekly" has "$out" "weekly 2026-11-06: MISSING"
 
 echo "== news sleeve: loop"
-out="$(NEWSLOOP_MINUTES=0 NEWSLOOP_NO_PULL=1 NEWSLOOP_SCORE=always bash scripts/newsloop.sh 2>&1)"
+out="$(NEWSLOOP_MINUTES=0 NEWSLOOP_NO_PULL=1 NEWSLOOP_SCORE=always NEWSLOOP_CHAIN=1 GH_TOKEN=x GITHUB_REPOSITORY=none/none bash scripts/newsloop.sh 2>&1)"
+check "a loop that ends before its full window never chains a successor" bash -c '! grep -q "successor dispatched" <<<"$1"' _ "$out"
 check "newsloop runs one scan iteration when its window is 0" has "$out" "iteration 1 .*"
 check "...the scan inside it succeeds" has "$out" "NEWSSCAN ok"
 check "...and the forced nightly score commits" has "$out" "NEWSSCORE ok"

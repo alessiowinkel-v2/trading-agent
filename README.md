@@ -21,6 +21,8 @@ Not financial advice. Not a backtested strategy. No guarantee of returns.
 | EOD snapshot | 16:37 Mon–Fri | `routines/04_daily_summary.md` |
 | Weekly review | 18:07 Friday | `routines/05_weekly_review.md` |
 
+Each routine also has a **backup firing** two hours later (pre-market 09:07, market-open 12:12, midday 15:07, eod 18:37, weekly 20:07 ET). Its first command, `scripts/already_ran.sh`, ends the run at once when the routine already committed OK/SKIPPED that day, so the backup only does work when the first run never started (e.g. Claude usage limit) or ABORTED.
+
 ## Layout
 
 ```
