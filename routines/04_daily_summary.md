@@ -23,7 +23,7 @@ If either file is missing: bash scripts/notify.sh --alert "eod: routine files mi
 
 **STEP 1 — Read**: the COMMON reading list and `bash scripts/memtail.sh memory/TRADE-LOG.md 2`.
 
-**STEP 2 — Compute**: `python3 scripts/ks.py --eod --write-state`. It prints the KS table, the full EOD snapshot block (equity, cash, invested % vs the 70% floor and days below it, day and phase P&L, SPY day and phase return, positions with stops, today's fills) and writes STATE. Exit 2 → record ABORTED with the error, alert, commit.
+**STEP 2 — Compute**: `python3 scripts/ks.py --eod --write-state`. It prints the KS table, the full EOD snapshot block (equity, cash, invested % vs the deployment floor of the current regime and days below it, day and phase P&L, SPY day and phase return, positions with stops, today's fills) and writes STATE. Exit 2 → record ABORTED with the error, alert, commit.
 
 **STEP 3 — Protect**: if `MAINTENANCE` lists an `ORPHAN`, place that stop now (GTC — it activates at tomorrow's open). No other orders.
 
@@ -33,12 +33,12 @@ If either file is missing: bash scripts/notify.sh --alert "eod: routine files mi
 ```
 bash scripts/notify.sh "EOD <DATE>
 Equity $X (day ±X%, phase ±X%) | SPY day ±X%, phase ±X%
-Invested X% (floor 70%) | cash $X | regime <state>
+Invested X% (<regime> floor X% as ks.py prints it) | cash $X | regime <state>
 Fills today: <list or none>
 Positions: SYM ±X% (stop x%), …
 KS failing: <list or none> | missed routines: <MISSING_COMMITS>
 Tomorrow: <EVENTS.md entry or 'no blocking event'>"
 ```
-Use `--alert` if any switch fails, invested < 70% for 2+ days, or `MISSING_COMMITS` is not none.
+Use `--alert` if any switch fails, `days below` the floor is 2 or more, or `MISSING_COMMITS` is not none.
 
 **STEP 6 — Commit**: `bash scripts/gitpush.sh "eod <DATE>: OK - equity $X, day ±X%, SPY ±X%"`.

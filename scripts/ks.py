@@ -5,7 +5,7 @@ Alpaca data, never estimated. Prints ready-to-run order commands.
   python3 scripts/ks.py                       KS table, core action, slots, stop maintenance
   python3 scripts/ks.py --check SYM ...       execution gates PLAN/G0/G8-G11 per candidate (ref from
                                               today's CANDIDATE: lines in RESEARCH-LOG.md)
-  python3 scripts/ks.py --eod                 + EOD snapshot block (P&L vs SPY, invested, floor streak)
+  python3 scripts/ks.py --eod                 + EOD snapshot block (P&L vs SPY, invested, regime floor streak)
   python3 scripts/ks.py --week                + weekly statistics for the Friday review
   --write-state  update memory/STATE.json + STATE.md and alert on newly failing switches
 
@@ -631,6 +631,15 @@ def spy_fmt(r):
     return tlib.fmt_pct(r[0], 2) if r[0] is not None else r[1]
 
 
+def floor_for(P, regime):
+    """Deployment floor for one EOD. `deploy_floor` applies in risk-on; in risk-off the optional
+    `deploy_floor_riskoff` param applies if TRADING-STRATEGY.md defines it, else `deploy_floor`.
+    EODs recorded before the regime was stored count as risk-on."""
+    if regime == "risk-off":
+        return P.get("deploy_floor_riskoff", P["deploy_floor"])
+    return P["deploy_floor"]
+
+
 def eod_block(c):
     E, P = c.equity, c.P
     day = E - c.last_equity if c.last_equity else 0
@@ -651,17 +660,17 @@ def eod_block(c):
                                  "spy_close": spy_close, "regime": c.reg["state"], "ks_fail": sorted(c.failed),
                                  "positions": pos_rows, "sat_pct": round(c.sat_pct(), 4)}
     c.eod_hist = hist
-    floor, streak = P["deploy_floor"], 0
+    floor, streak = floor_for(P, c.reg["state"]), 0
     for d in sorted(hist, reverse=True):
-        if hist[d]["invested"] < floor:
+        if hist[d]["invested"] < floor_for(P, hist[d].get("regime")):
             streak += 1
         else:
             break
     n_day = sum(1 for d in c.trading_days if c.start_date <= d <= c.today)
     lines = ["### %s - EOD Snapshot (Day %d, %s)" % (c.today, n_day, c.today.strftime("%A")),
-             "**Portfolio:** %s | **Cash:** %s (%.1f%%) | **Invested:** %.1f%% (floor %.0f%%, days below: %d) | "
+             "**Portfolio:** %s | **Cash:** %s (%.1f%%) | **Invested:** %.1f%% (%s floor %.0f%%, days below: %d) | "
              "**Day P&L:** %s (%s) | **Phase P&L:** %s (%s) | **SPY today:** %s | **SPY phase:** %s | **Regime:** %s"
-             % (money(E), money(c.cash), c.cash / E * 100, c.invested() * 100, floor * 100, streak,
+             % (money(E), money(c.cash), c.cash / E * 100, c.invested() * 100, c.reg["state"], floor * 100, streak,
                 money(day), tlib.fmt_pct(day / c.last_equity if c.last_equity else 0, 2), money(phase),
                 tlib.fmt_pct(phase / c.start_equity if c.start_equity else 0, 2),
                 spy_fmt(spy_day), spy_fmt(spy_phase), c.reg["state"]),
@@ -711,7 +720,7 @@ def week_block(c):
     eod = c.state.get("eod") or {}
     wk_eod = {d: v for d, v in eod.items() if d >= monday.isoformat()}
     avg_inv = sum(v["invested"] for v in wk_eod.values()) / len(wk_eod) if wk_eod else None
-    below = sum(1 for v in wk_eod.values() if v["invested"] < c.P["deploy_floor"])
+    below = sum(1 for v in wk_eod.values() if v["invested"] < floor_for(c.P, v.get("regime")))
     lines = ["WEEK STATS (week of %s)" % monday,
              "| Metric | Value |", "|---|---|",
              "| Start (%s) | %s |" % (c.week_base_name, money(c.week_base)),
@@ -726,7 +735,8 @@ def week_block(c):
              "| Closed round trips | %d (W:%d / L:%d) |" % (len(trips), len(wins), len(losses)),
              "| Profit factor | %s |" % ("n/a" if pf is None else "%.2f" % pf),
              "| Avg invested at EOD | %s |" % ("n/a" if avg_inv is None else "%.1f%%" % (avg_inv * 100)),
-             "| EODs below %.0f%% floor | %d of %d |" % (c.P["deploy_floor"] * 100, below, len(wk_eod))]
+             "| EODs below their regime floor (risk-on %.0f%% / risk-off %.0f%%) | %d of %d |" % (
+                 c.P["deploy_floor"] * 100, floor_for(c.P, "risk-off") * 100, below, len(wk_eod))]
     for t in trips:
         lines.append("  closed %s %g sh: %.2f -> %.2f = %s (%s)" % (t["sym"], t["qty"], t["entry"], t["exit"],
                                                                   money(t["pnl"]), tlib.fmt_pct(t["pnl_pct"])))

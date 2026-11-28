@@ -34,7 +34,7 @@ If either file is missing: bash scripts/notify.sh --alert "weekly: routine files
 
 **STEP 4 — Grade** one letter, A–F, and apply the caps:
 - a PASS candidate existed on an eligible day with free slots, yet 0 entries this week → at most C
-- invested < 70% on ≥2 EOD snapshots → at most C−
+- `EODs below their regime floor` (WEEK STATS) is 2 or more → at most C−
 - any planned order without an outcome line, or any satellite without a same-session stop → at most D
 - a cadence cell that is MISSING or ABORTED → at most C
 Grade the process the user can verify, not the P&L. One honest sentence why.
