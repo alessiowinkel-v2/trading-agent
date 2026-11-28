@@ -12,6 +12,12 @@ unset ALPACA_API_KEY ALPACA_SECRET_KEY ALPACA_ENDPOINT ALPACA_DATA_ENDPOINT ALPA
       ANTHROPIC_API_KEY LIVE_TRADING_CONFIRMED ALPACA_DRY_RUN
 
 SRC="$(cd "$(dirname "$0")/.." && pwd)"
+# A git worktree's .git is only a pointer to the shared repository: the copy below would then
+# share its config, and `git remote remove origin` would delete the REAL remote. Refuse.
+if [[ -f "$SRC/.git" ]]; then
+    echo "offline.sh: $SRC is a git worktree (.git is a file) - run it from a normal checkout" >&2
+    exit 2
+fi
 PY="$(command -v python3 || command -v python)"
 py() { "$PY" "$@" | tr -d '\r'; }
 PORT="${PORT:-8765}"
